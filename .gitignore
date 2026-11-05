@@ -1,0 +1,15 @@
+# SolidWorks temp/lock files
+~$*
+*.SLDBAK
+
+# Unvalidated build output
+projects/*/.staging/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
