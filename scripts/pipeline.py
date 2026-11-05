@@ -145,6 +145,12 @@ def run(project, overrides):
         native = staging / f"{project.name}.SLDPRT"
         save_as(app, model, native)
         m = measure(model)
+        # SolidWorks has been seen to report success while writing a 0-byte part.
+        size = native.stat().st_size if native.exists() else 0
+        checks.append({"id": "export.native", "category": "export_integrity",
+                       "status": "pass" if size > 1000 else "fail", "measured": size,
+                       "expected": "> 1000 bytes", "message": "" if size > 1000 else
+                       f"native part file is {size} bytes"})
 
         # 2. Validate geometry against the spec
         check(checks, "solid_bodies", "solid_validity", m["solid_bodies"],

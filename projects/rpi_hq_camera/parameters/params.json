@@ -1,0 +1,22 @@
+{
+  "pcb": 38,
+  "pcb_t": 1.0,
+  "pcb_r": 1.0,
+  "hole_d": 2.7,
+  "hole_inset": 4,
+  "sensor": 11,
+  "sensor_h": 1.0,
+  "glass_l": 7.9,
+  "glass_w": 6.1,
+  "glass_h": 0.3,
+  "bore": 25.4,
+  "base_od": 34,
+  "base_h": 3,
+  "lock_od": 37,
+  "lock_h": 4,
+  "knurl_depth": 0.6,
+  "knurl_teeth": 40,
+  "tube_od": 31,
+  "tube_h": 3,
+  "ffc": {"y": 3.5, "l": 21, "w": 5.5, "h": 2.5}
+}

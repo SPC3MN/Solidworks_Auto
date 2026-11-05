@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "project": "encoder_ec11",
+  "timestamp": "20261105T184111",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\encoder_ec11\\.staging\\20261105T184111\\encoder_ec11.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "body": {
+      "l": 12.0,
+      "w": 12.5,
+      "h": 6.5
+    },
+    "bushing": {
+      "d": 7.0,
+      "h": 7.0
+    },
+    "shaft": {
+      "d": 6.0,
+      "len": 20.0
+    },
+    "flat": {
+      "depth": 1.5,
+      "len": 10.0
+    },
+    "pins": {
+      "n_enc": 3,
+      "n_sw": 2,
+      "pitch": 2.5,
+      "w": 0.8,
+      "t": 0.3,
+      "len": 5.0,
+      "inset": 1.0
+    },
+    "tabs": {
+      "w": 2.0,
+      "t": 0.5,
+      "len": 4.5,
+      "inset": 0.5
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        12.0,
+        12.5,
+        31.5
+      ],
+      "volume": 1571.681,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 116766,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 12.0,
+      "expected": 12,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 12.5,
+      "expected": 12.5,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 31.5,
+      "expected": 31.5,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1571.681,
+      "expected": 1571.681,
+      "tolerance": 1.571681,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1571.681,
+      "expected": 1571.681,
+      "tolerance": 1.571681,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1569.137,
+      "expected": 1571.681,
+      "tolerance": 15.71681,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "496 triangles"
+    }
+  ]
+}

@@ -16,6 +16,9 @@ layout.json keys (all optional except "board"):
   cyls:      [{ref, x, y, d, h, z0, bore_d?, bore_depth?}]  vertical cylinders (shafts, mounts);
              the bore is cut down from the top, bore_depth deep (default: all the way)
   side_cyls: [{ref, x, z, d, len, bore_d?}]     cylinders along -y from y = 0 (jack noses)
+  cuts:      [{ref, axis, at, a, b, l, w, depth}] rectangular blind cuts toward -axis from the
+             plane axis = at; (a, b) is the rect centre in that plane's coordinates (as in
+             details.py). Each must lie fully inside material (e.g. heatsink fin grooves).
 
 expected(lay) returns the volume and bounding box of exactly these primitives,
 worked out without SolidWorks, for requirements.md and spec.json.
@@ -78,6 +81,11 @@ def build(app, lay):
         for n, s in enumerate(s for s in lay.get("side_cyls", []) if s.get("bore_d")):
             part.cut(f"SideBore{n}_{s['ref']}", [circle(s["x"], s["z"], s["bore_d"])],
                      depth=s["len"], z=0, down=True, axis="y")
+        cgroups = {}
+        for c in lay.get("cuts", []):
+            cgroups.setdefault((c["axis"], c["at"], c["depth"]), []).append(rect(c["a"], c["b"], c["l"], c["w"]))
+        for n, ((axis, at, depth), profs) in enumerate(sorted(cgroups.items())):
+            part.cut(f"Cut{n:02d}", profs, depth=depth, z=at, down=True, axis=axis)
         holes = [circle(h["x"], h["y"], h["d"]) for h in lay.get("holes", [])]
         holes += [circle(x, y, g["d"]) for g in lay.get("thru", []) for x, y in _thru_points(g)]
         if holes:  # through the PCB only, so parts lying over a hole stay whole
@@ -101,6 +109,7 @@ def expected(lay):
     v["blocks"] = sum(b["l"] * b["w"] * b["h"] for b in lay.get("blocks", []))
     v["cyls"] = sum(disc(c["d"]) * c["h"] - disc(c.get("bore_d", 0)) * c.get("bore_depth", c["h"])
                     for c in lay.get("cyls", []))
+    v["cuts"] = -sum(c["l"] * c["w"] * c["depth"] for c in lay.get("cuts", []))
     v["side_cyls"] = sum((disc(s["d"]) - disc(s.get("bore_d", 0))) * s["len"] for s in lay.get("side_cyls", []))
     # Bounding box from every primitive's extent (parts use their footprint and height)
     xs, ys, zs = [0, L], [0, W], [0, T]
