@@ -4,7 +4,7 @@
   "bbox.x": {"expected": 65, "tol": 0.05, "param": "pcb_l"},
   "bbox.y": {"expected": 65.5, "tol": 0.05, "param": "rca_barrel_out"},
   "bbox.z": {"expected": 13.6, "tol": 0.05, "param": "rca_h"},
-  "volume": {"expected": 10853.68, "rel_tol": 0.001},
+  "volume": {"expected": 10896.17, "rel_tol": 0.001},
   "export.step": {"rel_tol": 0.001},
   "export.stl": {"rel_tol": 0.01}
 }

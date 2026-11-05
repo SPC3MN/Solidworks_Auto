@@ -3,6 +3,7 @@
 Axes: x along the 65 mm edge, y = 0 at the connector edge, z up from the PCB
 bottom. Order: board, then all added components, then all cuts.
 """
+import json
 import pathlib
 import sys
 
@@ -25,7 +26,19 @@ def build(app, p):
 
         # Chips (estimated)
         part.extrude("IC_DAC", [rect(26, 30, 8, 4.5)], 1.5, z=T)
-        part.extrude("IC_Small", [rect(40, 40, 4, 4), rect(50, 30, 3, 3)], 1.0, z=T)
+
+        # Small parts from smd_layout.json, one extrude per package height
+        lay = json.loads((pathlib.Path(__file__).parents[1] / "parameters" / "smd_layout.json").read_text())
+        groups = {}
+        for c in lay["parts"]:
+            k = lay["packages"][c["pkg"]]
+            l, w = (k["w"], k["l"]) if c.get("rot") == 90 else (k["l"], k["w"])
+            groups.setdefault(k["h"], []).append(rect(c["x"], c["y"], l, w))
+        for h, profs in sorted(groups.items()):
+            part.extrude(f"SMD_h{h:g}".replace(".", "_"), profs, h, z=T)
+        tp = lay["test_pads"]
+        part.extrude("Test_Pads", [circle(tp["x0"] + i * tp["pitch"], tp["y0"] + j * tp["pitch"], tp["d"])
+                                   for i in range(tp["cols"]) for j in range(tp["rows"])], tp["h"], z=T)
 
         # RCA sockets: housing on the board, flange + barrel past the edge (-y)
         xs = (p["rca_x1"], p["rca_x2"])

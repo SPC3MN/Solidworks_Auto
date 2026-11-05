@@ -21,14 +21,20 @@ of its own.
 | RCA sockets (×2) | housing 10 × 12 × 12 mm on the board; front flange 11 × 1.5 × 12 mm; barrel Ø8, sticking out 9 mm past the board edge; socket bore Ø5 × 9 mm deep; axis 6 mm above the board | estimated |
 | RCA positions | centres at x = 34 and x = 46 mm, on the edge opposite the header | estimated |
 | 3.5 mm jack | body 7 × 12 × 6 mm at x = 56; nose Ø5 sticking out 2.5 mm; bore Ø3.5; axis 3 mm above the board | estimated |
-| Chips | DAC 8 × 4.5 × 1.5 at (26, 30); two small ICs 4 × 4 × 1 at (40, 40) and 3 × 3 × 1 at (50, 30) | estimated |
+| DAC chip | 8 × 4.5 × 1.5 at (26, 30) | estimated |
+| Small parts | 3 small ICs, 1 SOT-23, 30 × 0603, 7 × 0805, 6 × 0402, a 2 × 4 grid of test pads; layout in `parameters/smd_layout.json` | estimated |
+
+Positions come from a photo-to-board mapping fitted to the four mounting holes
+(the photo hole centres are about (285,305), (515,185), (335,85) and (100,190) px).
+The two small ICs moved to (46.1, 38.4) and (51.8, 27.0), and the DAC came out at
+(25.3, 29.9), which confirms the first estimate. The passives are placed by
+cluster, near where the photo shows them; individual positions are not exact.
 
 Axes: x runs along the 65 mm edge and y along the 56.5 mm edge, with y = 0 at the
 connector edge. Height is z, with the bottom of the PCB at z = 0. Everything is
 fused into one solid.
 
-Left out: the small passives, the solder pins under the board, the pogo pads,
-silkscreen and colours.
+Left out: the solder pins under the board, silkscreen and colours.
 
 ## Expected values, worked out by hand
 
@@ -38,6 +44,10 @@ silkscreen and colours.
   past the flange), minus a bore π·2.5²·9 = 176.71 (cut through flange and
   barrel) = 1838.28. Two of them: 3676.56.
 - Jack: body 504 + nose π·2.5²·2.5 = 49.09 − bore π·1.75²·2.5 = 24.05 → 529.03
-- Chips: 54 + 16 + 9 = 79
-- **Total volume ≈ 10853.68 mm³**
+- Chips: DAC 54 + U2 16 + U3 9 = 79
+- Small parts: U4 3·3·0.9 = 8.1; SOT-23 2.9·1.3·1.1 = 4.147; 30 × 0603 (0.576 each) = 17.28;
+  7 × 0805 (1.5) = 10.5; 6 × 0402 (0.175) = 1.05; 8 pads π·0.75²·0.1 = 1.414 → 42.49
+- **Total volume ≈ 10896.17 mm³** (10853.68 before the small parts). The small
+  parts never touch each other or the other components, so their volumes simply
+  add up.
 - **Bounding box**: x 65 (board), y 56.5 + 9 = 65.5 (RCA barrels), z 1.6 + 12 = 13.6 (RCA housing).
