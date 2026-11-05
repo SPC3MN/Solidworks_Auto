@@ -1,0 +1,19 @@
+{
+  "pcb_l": 85,
+  "pcb_w": 56,
+  "pcb_t": 1.6,
+  "pcb_r": 3,
+  "hole_d": 2.7,
+  "hole_x1": 3.5,
+  "hole_x2": 61.5,
+  "hole_y1": 3.5,
+  "hole_y2": 52.5,
+  "hdr_pitch": 2.54,
+  "hdr_block_h": 2.5,
+  "hdr_pin": 0.64,
+  "hdr_pin_h": 6,
+  "gpio_x": 32.5,
+  "gpio_y": 52.5,
+  "poe_x": 61.3,
+  "poe_y": 9.3
+}

@@ -15,25 +15,43 @@ def to_mm(m, px, py):
     return (m["x0_mm"] + (px - m["x0_px"]) * m["sx"], m["y0_mm"] + (m["y0_px"] - py) * m["sy"])
 
 
+def part_geom(lay, c):
+    """(x, y, l, w, h, rot) in mm for one part entry. Entries give either a 'pkg'
+    or explicit l/w/h, and either photo px/py or board x/y."""
+    k = lay.get("packages", {}).get(c.get("pkg"), c)
+    l, w, h = k["l"], k["w"], c.get("h", k["h"])
+    rot = c.get("rot", 0)
+    if rot == 90:
+        l, w = w, l
+    x, y = (c["x"], c["y"]) if "x" in c else to_mm(lay["px_to_mm"], c["px"], c["py"])
+    return x, y, l, w, h, rot
+
+
 def boxes(lay):
-    """[(ref, x0, y0, x1, y1, height)] for parts, circles approximated by their square."""
-    m, out = lay["px_to_mm"], []
+    """[(ref, x0, y0, x1, y1, height, kind, overhang)]; rotated parts use their bounding square."""
+    out = []
     for c in lay["parts"]:
-        k = lay["packages"][c["pkg"]]
-        l, w = (k["w"], k["l"]) if c.get("rot") == 90 else (k["l"], k["w"])
-        x, y = to_mm(m, c["px"], c["py"])
-        out.append((c["ref"], x - l / 2, y - w / 2, x + l / 2, y + w / 2, k["h"], "box"))
-    for g in lay["pads"]:
+        x, y, l, w, h, rot = part_geom(lay, c)
+        if rot == 45:
+            hx = hy = (l + w) / 2 / math.sqrt(2)
+        else:
+            hx, hy = l / 2, w / 2
+        b = (c["ref"], x - hx, y - hy, x + hx, y + hy, h, "box", c.get("overhang", False))
+        out.append(b if rot != 45 else b[:6] + ("rot45", b[7], l * w * h))
+    m = lay.get("px_to_mm")
+    for g in lay.get("pads", []):
         for px in g["px"]:
             for py in g["py"]:
                 x, y = to_mm(m, px, py)
                 r = g["d"] / 2
-                out.append((g["ref"], x - r, y - r, x + r, y + r, lay["pad_h"], "disc"))
+                out.append((g["ref"], x - r, y - r, x + r, y + r, lay["pad_h"], "disc", False))
     return out
 
 
 def volume(b):
-    _, x0, y0, x1, y1, h, kind = b
+    _, x0, y0, x1, y1, h, kind = b[:7]
+    if kind == "rot45":
+        return b[8]
     return math.pi * ((x1 - x0) / 2) ** 2 * h if kind == "disc" else (x1 - x0) * (y1 - y0) * h
 
 
@@ -50,7 +68,8 @@ def main(project, gap=0.15):
     keepouts = json.loads((project / "parameters" / "keepouts.json").read_text()) \
         if (project / "parameters" / "keepouts.json").exists() else []
     bs = boxes(lay)
-    ko = [(k["ref"], k["x0"], k["y0"], k["x1"], k["y1"], 0, "box") for k in keepouts]
+    ko = [(k["ref"], k["x0"], k["y0"], k["x1"], k["y1"], 0, "box", False) for k in keepouts]
+    bl, bw = lay.get("board", {"l": 65, "w": 56.5}).values()
     bad = []
     for a, b in itertools.combinations(bs, 2):
         if a[0] == b[0] and a[6] == "disc":
@@ -64,7 +83,7 @@ def main(project, gap=0.15):
             if c < gap:
                 bad.append((a[0], k[0], round(c, 3)))
     for a in bs:
-        if a[1] < 0.3 or a[2] < 0.3 or a[3] > 64.7 or a[4] > 56.2:
+        if not a[7] and (a[1] < 0.3 or a[2] < 0.3 or a[3] > bl - 0.3 or a[4] > bw - 0.3):
             bad.append((a[0], "board edge", None))
     total = sum(volume(b) for b in bs)
     print(f"{len(bs)} items, component volume {total:.3f} mm^3")
