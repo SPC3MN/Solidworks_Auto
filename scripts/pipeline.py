@@ -1,0 +1,184 @@
+"""Build -> validate -> export -> reopen -> promote, for one project.
+
+Usage:
+  .venv\\Scripts\\python scripts\\pipeline.py projects\\example_box
+  .venv\\Scripts\\python scripts\\pipeline.py projects\\example_box --override outer_length=118
+
+--override changes a parameter for this run only (to inject an error, test 7).
+Every run writes a report to validation/history/. Outputs are copied out of
+.staging/ into design/ and exports/ only when every check passes.
+"""
+import argparse
+import datetime as dt
+import importlib.util
+import json
+import pathlib
+import shutil
+import struct
+
+import pythoncom
+import win32com.client
+from win32com.client import VARIANT
+
+NOTHING = VARIANT(pythoncom.VT_DISPATCH, None)
+SW_INPUT_DIM_VAL_ON_CREATE = 10
+SW_SOLID_BODY = 0
+
+
+def connect():
+    try:
+        return win32com.client.GetActiveObject("SldWorks.Application")
+    except pythoncom.com_error:
+        app = win32com.client.Dispatch("SldWorks.Application")
+        app.Visible = True
+        return app
+
+
+def load_model_script(project):
+    spec = importlib.util.spec_from_file_location("model", project / "design" / "model.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def measure(model):
+    b = [v * 1000 for v in model.GetPartBox(True)]
+    bodies = model.GetBodies2(SW_SOLID_BODY, False) or ()
+    return {
+        "bbox": [round(b[3] - b[0], 4), round(b[4] - b[1], 4), round(b[5] - b[2], 4)],
+        "volume": round(model.Extension.CreateMassProperty.Volume * 1e9, 3),
+        "solid_bodies": len(bodies),
+    }
+
+
+def save_as(app, model, path):
+    app.CloseDoc(str(path))
+    e = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    w = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    ok = model.Extension.SaveAs3(str(path), 0, 1, NOTHING, NOTHING, e, w)
+    return bool(ok) and path.exists()
+
+
+def stl_volume(path):
+    """Volume (mm^3) and watertightness of a binary STL, independent of SolidWorks."""
+    data = path.read_bytes()
+    n = struct.unpack_from("<I", data, 80)[0]
+    vol, edges = 0.0, {}
+    for i in range(n):
+        v = struct.unpack_from("<12f", data, 84 + i * 50)[3:]
+        a, b, c = v[0:3], v[3:6], v[6:9]
+        vol += (a[0] * (b[1] * c[2] - b[2] * c[1]) - a[1] * (b[0] * c[2] - b[2] * c[0])
+                + a[2] * (b[0] * c[1] - b[1] * c[0])) / 6
+        for p, q in ((a, b), (b, c), (c, a)):
+            key = tuple(sorted((tuple(round(x, 5) for x in p), tuple(round(x, 5) for x in q))))
+            edges[key] = edges.get(key, 0) + 1
+    closed = all(k == 2 for k in edges.values())
+    return abs(vol), closed, n
+
+
+def reopen_step(app, path):
+    e = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    doc = app.LoadFile4(str(path), "r", NOTHING, e)
+    if doc is None:
+        return None
+    m = measure(doc)
+    app.CloseDoc(doc.GetTitle)
+    return m
+
+
+def check(checks, cid, category, measured, expected, tol, hint=None, rel=False):
+    lim = tol * abs(expected) if rel else tol
+    ok = measured is not None and abs(measured - expected) <= lim
+    checks.append({
+        "id": cid, "category": category, "status": "pass" if ok else "fail",
+        "measured": measured, "expected": expected, "tolerance": lim,
+        "message": "" if ok else f"{cid}: measured {measured}, expected {expected} ± {lim:g}",
+        **({"hint": hint} if hint and not ok else {}),
+    })
+
+
+def run(project, overrides):
+    params = json.loads((project / "parameters" / "params.json").read_text())
+    params.update(overrides)
+    spec = json.loads((project / "validation" / "spec.json").read_text())
+    staging = project / ".staging"
+    shutil.rmtree(staging, ignore_errors=True)
+    staging.mkdir(parents=True)
+
+    app = connect()
+    prev = app.GetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE)
+    app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, False)
+    checks = []
+    try:
+        # 1. Build
+        model = load_model_script(project).build(app, params)
+        native = staging / f"{project.name}.SLDPRT"
+        save_as(app, model, native)
+        m = measure(model)
+
+        # 2. Validate geometry against the spec
+        check(checks, "solid_bodies", "solid_validity", m["solid_bodies"],
+              spec["solid_bodies"]["expected"], 0)
+        for i, axis in enumerate("xyz"):
+            s = spec[f"bbox.{axis}"]
+            check(checks, f"bbox.{axis}", "bounding_dimensions", m["bbox"][i],
+                  s["expected"], s["tol"], hint={"param": s.get("param")})
+        check(checks, "volume", "bounding_dimensions", m["volume"],
+              spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
+
+        # 3. Export, then reopen and compare against the native model
+        step, stl = staging / f"{project.name}.step", staging / f"{project.name}.stl"
+        step_ok, stl_ok = save_as(app, model, step), save_as(app, model, stl)
+        app.CloseDoc(model.GetTitle)
+        r = reopen_step(app, step) if step_ok else None
+        check(checks, "export.step.volume", "export_integrity", r and r["volume"],
+              m["volume"], spec["export.step"]["rel_tol"], rel=True)
+        if stl_ok:
+            vol, closed, tris = stl_volume(stl)
+            check(checks, "export.stl.volume", "export_integrity", round(vol, 3),
+                  m["volume"], spec["export.stl"]["rel_tol"], rel=True)
+            checks.append({"id": "export.stl.watertight", "category": "export_integrity",
+                           "status": "pass" if closed else "fail", "measured": closed,
+                           "expected": True, "message": f"{tris} triangles"})
+        else:
+            check(checks, "export.stl.volume", "export_integrity", None, m["volume"], 0)
+    finally:
+        app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, prev)
+
+    failed = sum(c["status"] == "fail" for c in checks)
+    status = "fail" if failed else "pass"
+    stamp = dt.datetime.now().strftime("%Y%m%dT%H%M%S")
+    report = {
+        "schema_version": "1.0", "project": project.name, "timestamp": stamp,
+        "model_file": str(native), "status": status, "params_used": params,
+        "summary": {"passed": len(checks) - failed, "failed": failed, "warnings": 0},
+        "components": {"Body": m}, "checks": checks,
+    }
+    hist = project / "validation" / "history"
+    hist.mkdir(parents=True, exist_ok=True)
+    (hist / f"{stamp}_{status}.json").write_text(json.dumps(report, indent=2))
+
+    # 4. Promote only on pass; otherwise last validated outputs stay untouched.
+    if status == "pass":
+        (project / "exports").mkdir(exist_ok=True)
+        shutil.copy2(native, project / "design" / native.name)
+        shutil.copy2(step, project / "exports" / step.name)
+        shutil.copy2(stl, project / "exports" / stl.name)
+    return report
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("project", type=pathlib.Path)
+    ap.add_argument("--override", action="append", default=[], help="name=value (mm)")
+    a = ap.parse_args()
+    overrides = {k: float(v) for k, v in (o.split("=", 1) for o in a.override)}
+    report = run(a.project.resolve(), overrides)
+    for c in report["checks"]:
+        print(f'{c["status"].upper():4}  {c["id"]:24} {c.get("measured")}  {c.get("message", "")}')
+    print(f'\n{report["status"].upper()}: {report["summary"]}'
+          f'{"  -> promoted" if report["status"] == "pass" else "  -> not promoted"}')
+
+
+if __name__ == "__main__":
+    main()

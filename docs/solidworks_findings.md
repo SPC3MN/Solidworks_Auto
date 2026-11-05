@@ -49,6 +49,26 @@ Gotchas:
 - `SaveAs3` fails silently if another open document holds the target path. Call
   `CloseDoc(path)` first.
 
+## Example pipeline (tests 1, 2, 6, 7)
+
+[scripts/pipeline.py](../scripts/pipeline.py) runs `projects/<name>/design/model.py`
+into `.staging/` and checks the result against `validation/spec.json`: solid body
+count, bounding box and volume. It exports STEP and STL, then checks them
+independently. The STEP file is reopened in SolidWorks and its volume compared
+with the native model. The STL volume and watertightness are computed in pure
+Python. A report goes to `validation/history/`, and files are promoted to
+`design/` and `exports/` only on a pass.
+
+Results on `projects/example_box`:
+- Normal run: 8/8 checks pass, and the files are promoted.
+- `--override outer_length=118`: `bbox.x` and `volume` fail. The `bbox.x` failure
+  carries `hint.param = outer_length` for autocorrection. Nothing is promoted
+  (the hash of the promoted STEP is unchanged).
+
+Notes: `SaveAs3` picks the export format from the file extension. `LoadFile4`
+imports STEP without opening a dialog. Body validity (`IBody2.Check`) isn't
+checked yet; only the solid body count is.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and
