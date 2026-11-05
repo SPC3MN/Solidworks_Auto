@@ -46,8 +46,11 @@ Never claim success without a passing pipeline report in `validation/history/`.
 
 ## Library limits (extend swlib.py when a photo needs more)
 
-- Planar extrudes and cuts parallel to the Front Plane only. No revolve, sweep,
-  loft, or sketches on side faces yet.
+- Extrudes and cuts on planes normal to Z (`axis="z"`, profile coords (x, y)) or
+  normal to Y (`axis="y"`, profile coords (x, z)), e.g. connectors that stick out
+  sideways. No X-normal planes, revolve, sweep or loft yet.
+- Keep profile edges from partly overlapping existing model edges. SolidWorks
+  rejects such sketches (see findings).
 - Swept-in sketches aren't dimensioned. Only extrusion depths and shell thickness
   are linked to global variables, so editing them in the GUI rebuilds the model.
   Other changes need a rerun of `model.py`.

@@ -31,41 +31,59 @@ def connect():
 
 # ---------------------------------------------------------------- profiles
 # A profile is a callable that draws closed geometry into the active sketch.
+# Profile coordinates are MODEL coordinates on the sketch plane: (x, y) for
+# axis="z" planes and (x, z) for axis="y" planes. _TF maps them to sketch
+# coordinates (in metres); _TF_SIGN is -1 when that map mirrors (arcs flip).
+_TF = [lambda a, b: (a * MM, b * MM)]
+_TF_SIGN = [1]
+
+# Sketch-space map per plane family (verified via bounding boxes, see findings doc).
+PLANE_FAMILIES = {
+    "z": ("Front Plane", lambda a, b: (a * MM, b * MM), 1),   # (x, y) -> sketch (x, y)
+    "y": ("Top Plane", lambda a, b: (a * MM, -b * MM), -1),   # (x, z) -> sketch (x, -z)
+}
+
+
+def _p(a, b):
+    return _TF[0](a, b)
+
 
 def rect(cx, cy, w, h, r=0.0):
     """Rectangle centred at (cx, cy), optional corner radius r (drawn in the sketch)."""
     def draw(sm):
-        x0, x1, y0, y1 = (cx - w / 2) * MM, (cx + w / 2) * MM, (cy - h / 2) * MM, (cy + h / 2) * MM
+        x0, x1, y0, y1 = cx - w / 2, cx + w / 2, cy - h / 2, cy + h / 2
         if r <= 0:
-            sm.CreateCornerRectangle(x0, y0, 0, x1, y1, 0)
+            (ax, ay), (bx, by) = _p(x0, y0), _p(x1, y1)
+            sm.CreateCornerRectangle(ax, ay, 0, bx, by, 0)
             return
-        rr = r * MM
-        sm.CreateLine(x0 + rr, y0, 0, x1 - rr, y0, 0)
-        sm.CreateLine(x1, y0 + rr, 0, x1, y1 - rr, 0)
-        sm.CreateLine(x1 - rr, y1, 0, x0 + rr, y1, 0)
-        sm.CreateLine(x0, y1 - rr, 0, x0, y0 + rr, 0)
-        for (ax, ay), (sx, sy), (ex, ey) in (
-            ((x1 - rr, y0 + rr), (x1 - rr, y0), (x1, y0 + rr)),
-            ((x1 - rr, y1 - rr), (x1, y1 - rr), (x1 - rr, y1)),
-            ((x0 + rr, y1 - rr), (x0 + rr, y1), (x0, y1 - rr)),
-            ((x0 + rr, y0 + rr), (x0, y0 + rr), (x0 + rr, y0)),
+        for (xa, ya), (xb, yb) in (((x0 + r, y0), (x1 - r, y0)), ((x1, y0 + r), (x1, y1 - r)),
+                                   ((x1 - r, y1), (x0 + r, y1)), ((x0, y1 - r), (x0, y0 + r))):
+            (a1, b1), (a2, b2) = _p(xa, ya), _p(xb, yb)
+            sm.CreateLine(a1, b1, 0, a2, b2, 0)
+        for c, s, e in (
+            ((x1 - r, y0 + r), (x1 - r, y0), (x1, y0 + r)),
+            ((x1 - r, y1 - r), (x1, y1 - r), (x1 - r, y1)),
+            ((x0 + r, y1 - r), (x0 + r, y1), (x0, y1 - r)),
+            ((x0 + r, y0 + r), (x0, y0 + r), (x0 + r, y0)),
         ):
-            sm.CreateArc(ax, ay, 0, sx, sy, 0, ex, ey, 0, 1)  # 1 = counter-clockwise
+            (ca, cb), (sa, sb), (ea, eb) = _p(*c), _p(*s), _p(*e)
+            sm.CreateArc(ca, cb, 0, sa, sb, 0, ea, eb, 0, _TF_SIGN[0])  # 1 = counter-clockwise
     return draw
 
 
 def circle(cx, cy, d):
     def draw(sm):
-        sm.CreateCircleByRadius(cx * MM, cy * MM, 0, d / 2 * MM)
+        a, b = _p(cx, cy)
+        sm.CreateCircleByRadius(a, b, 0, d / 2 * MM)
     return draw
 
 
 def polygon(points):
     """Closed polyline through [(x, y), ...]."""
     def draw(sm):
-        pts = list(points) + [points[0]]
+        pts = [_p(*q) for q in list(points) + [points[0]]]
         for (xa, ya), (xb, yb) in zip(pts, pts[1:]):
-            sm.CreateLine(xa * MM, ya * MM, 0, xb * MM, yb * MM, 0)
+            sm.CreateLine(xa, ya, 0, xb, yb, 0)
     return draw
 
 
@@ -75,9 +93,8 @@ def slot(cx, cy, length, width, angle_deg=0.0):
         a = math.radians(angle_deg)
         half = (length - width) / 2
         dx, dy = half * math.cos(a), half * math.sin(a)
-        sm.CreateSketchSlot(0, 0, width * MM,
-                            (cx - dx) * MM, (cy - dy) * MM, 0,
-                            (cx + dx) * MM, (cy + dy) * MM, 0, 0, 0, 0, 1, False)
+        (a1, b1), (a2, b2) = _p(cx - dx, cy - dy), _p(cx + dx, cy + dy)
+        sm.CreateSketchSlot(0, 0, width * MM, a1, b1, 0, a2, b2, 0, 0, 0, 0, 1, False)
     return draw
 
 
@@ -107,6 +124,15 @@ def render(doc, out_dir, views=("isometric", "top", "front", "right"), size=None
     out_dir.mkdir(parents=True, exist_ok=True)
     app = win32com.client.GetActiveObject("SldWorks.Application")
     mu = app.GetMathUtility
+    # Hide reference planes: they show in renders and zoom-to-fit frames them, not the part.
+    f = doc.FirstFeature
+    while f is not None:
+        if f.GetTypeName2 == "RefPlane":
+            doc.ClearSelection2(True)
+            f.Select2(False, 0)
+            _invoke(doc, "BlankRefGeom")
+        f = f.GetNextFeature
+    doc.ClearSelection2(True)
     written = []
     for name in views:
         r, u, d = Z_UP_VIEWS[name]
@@ -114,8 +140,8 @@ def render(doc, out_dir, views=("isometric", "top", "front", "right"), size=None
         t = win32com.client.Dispatch(_invoke(
             mu, "CreateTransform", VARIANT(pythoncom.VT_ARRAY | pythoncom.VT_R8, m + [0.0, 0, 0, 1, 0, 0, 0])))
         doc.ActiveView.Orientation3 = t
-        doc.ViewZoomtofit2
-        doc.GraphicsRedraw2
+        _invoke(doc, "ViewZoomtofit2")  # property-style access does not run it
+        _invoke(doc, "GraphicsRedraw2")
         png = out_dir / f"{name}.png"
         e = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
         w = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
@@ -136,35 +162,40 @@ class Part:
         if self.doc is None:
             raise RuntimeError(f"NewDocument failed ({tpl})")
         self.fm, self.sm, self.ext = self.doc.FeatureManager, self.doc.SketchManager, self.doc.Extension
-        self._planes = {0.0: "Front Plane"}
+        self._planes = {("z", 0.0): "Front Plane", ("y", 0.0): "Top Plane"}
 
     def close_prefs(self):
         self.app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, self._prev)
 
     # -- planes
-    def plane_at(self, z):
-        """Name of a plane parallel to Front at height z (mm), creating it if needed."""
-        z = round(float(z), 6)
-        if z in self._planes:
-            return self._planes[z]
+    def plane_at(self, at, axis="z"):
+        """Name of a plane normal to `axis` at offset `at` (mm), creating it if needed.
+        axis="z": parallel to Front Plane; axis="y": parallel to Top Plane."""
+        key = (axis, round(float(at), 6))
+        if key in self._planes:
+            return self._planes[key]
         self.doc.ClearSelection2(True)
-        self.ext.SelectByID2("Front Plane", "PLANE", 0, 0, 0, False, 0, NOTHING, 0)
-        # 8 = swRefPlaneReferenceConstraint_Distance; 264 adds _OptionFlip for negative z.
-        flags = 8 | (256 if z < 0 else 0)
-        plane = self.fm.InsertRefPlane(flags, abs(z) * MM, 0, 0, 0, 0)
+        self.ext.SelectByID2(PLANE_FAMILIES[axis][0], "PLANE", 0, 0, 0, False, 0, NOTHING, 0)
+        # 8 = swRefPlaneReferenceConstraint_Distance; +256 (_OptionFlip) for negative offsets.
+        flags = 8 | (256 if at < 0 else 0)
+        plane = self.fm.InsertRefPlane(flags, abs(at) * MM, 0, 0, 0, 0)
         if plane is None:
-            raise RuntimeError(f"could not create plane at z={z}")
-        plane.Name = f"Plane_z{z:g}".replace(".", "_").replace("-", "m")
-        self._planes[z] = plane.Name
+            raise RuntimeError(f"could not create plane {axis}={at}")
+        plane.Name = f"Plane_{axis}{at:g}".replace(".", "_").replace("-", "m")
+        self._planes[key] = plane.Name
         return plane.Name
 
-    def _sketch(self, z, profiles):
+    def _sketch(self, at, profiles, axis="z"):
         self.doc.ClearSelection2(True)
-        self.ext.SelectByID2(self.plane_at(z), "PLANE", 0, 0, 0, False, 0, NOTHING, 0)
+        self.ext.SelectByID2(self.plane_at(at, axis), "PLANE", 0, 0, 0, False, 0, NOTHING, 0)
         self.sm.InsertSketch(True)
         self.sm.AddToDB = True  # no snapping/inference while drawing
-        for p in profiles:
-            p(self.sm)
+        _, _TF[0], _TF_SIGN[0] = PLANE_FAMILIES[axis]
+        try:
+            for p in profiles:
+                p(self.sm)
+        finally:
+            _, _TF[0], _TF_SIGN[0] = PLANE_FAMILIES["z"]
         self.sm.AddToDB = False
         self.sm.InsertSketch(True)
 
@@ -175,20 +206,22 @@ class Part:
         return feat
 
     # -- features
-    def extrude(self, name, profiles, depth, z=0.0, down=False):
-        """Add material: sketch at height z, extrude `depth` up (or down)."""
-        self._sketch(z, profiles)
+    def extrude(self, name, profiles, depth, z=0.0, down=False, axis="z"):
+        """Add material: sketch on the plane at offset z along `axis`, extrude `depth`
+        toward +axis (or -axis with down=True)."""
+        self._sketch(z, profiles, axis)
+        # FeatureExtrusion3 args: Sd, Flip, Dir (reverse direction), T1, T2, D1, ...
         f = self.fm.FeatureExtrusion3(
-            True, down, False, END_BLIND, 0, depth * MM, 0, False, False, False, False,
+            True, False, down, END_BLIND, 0, depth * MM, 0, False, False, False, False,
             0, 0, False, False, False, False, True, True, True, 0, 0, False)
         return self._name(f, name, "extrude")
 
-    def cut(self, name, profiles, depth=None, z=0.0, down=True):
-        """Remove material: sketch at height z, cut `depth` down (default) or up.
-        depth=None cuts through everything in that direction."""
+    def cut(self, name, profiles, depth=None, z=0.0, down=True, axis="z"):
+        """Remove material: sketch on the plane at offset z along `axis`, cut `depth`
+        toward -axis (default) or +axis. depth=None cuts through everything both ways."""
         # FeatureCut4 args: Sd, Flip (= cut OUTSIDE the profile, keep False), Dir (reverse
         # direction), T1, T2, D1, D2, ... Through-all cuts go both ways so the side doesn't matter.
-        self._sketch(z, profiles)
+        self._sketch(z, profiles, axis)
         if depth is None:
             sd, rev, t1, t2, d1 = False, False, END_THROUGH_ALL, END_THROUGH_ALL, 0
         else:

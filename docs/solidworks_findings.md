@@ -87,6 +87,19 @@ and all 8 checks pass.
   `_oleobj_.Invoke(..., DISPATCH_METHOD, ...)` because late binding treats it
   as a property.
 
+## Sideways features (first photo model: projects/rpi_dac_hat)
+
+- Sketches on the Top Plane (normal +Y) map model (x, z) to sketch (x, −z).
+  This was confirmed with bounding boxes. In `FeatureExtrusion3`, the third
+  argument (`Dir`) reverses the direction; `down=True` goes toward −Y.
+- **A sketch is rejected when its lines partly overlap existing model edges.**
+  Example: an 11 mm wide flange whose top and bottom lines lay on the edges of
+  a 10 mm housing. The feature returns `None`. Fix: offset the profile so its
+  edges either match an edge exactly or stay clear of it.
+- `ViewZoomtofit2`, `GraphicsRedraw2` and `BlankRefGeom` do nothing when accessed
+  as properties. Call them with `_invoke` (`DISPATCH_METHOD`). Hide reference
+  planes before rendering, or zoom-to-fit frames the planes.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and
