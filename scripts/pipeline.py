@@ -56,6 +56,9 @@ def measure(model):
 def save_as(app, model, path):
     app.CloseDoc(str(path))
     e = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    # STL (and other mesh) export writes the ACTIVE document, whichever object
+    # SaveAs3 is called on; make sure that is this model.
+    app.ActivateDoc3(model.GetTitle, False, 0, e)
     w = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
     ok = model.Extension.SaveAs3(str(path), 0, 1, NOTHING, NOTHING, e, w)
     return bool(ok) and path.exists()
@@ -103,11 +106,18 @@ def run(project, overrides):
     params = json.loads((project / "parameters" / "params.json").read_text())
     params.update(overrides)
     spec = json.loads((project / "validation" / "spec.json").read_text())
-    staging = project / ".staging"
-    shutil.rmtree(staging, ignore_errors=True)
+    app = connect()
+    # Each run gets its own staging folder: SolidWorks can keep a file lock on a
+    # closed document, which would block clearing a shared folder. Old run folders
+    # are removed when they are no longer locked.
+    stamp = dt.datetime.now().strftime("%Y%m%dT%H%M%S")
+    root = project / ".staging"
+    for old in root.glob("*") if root.exists() else ():
+        shutil.rmtree(old, ignore_errors=True) if old.is_dir() else old.unlink(missing_ok=True) \
+            if not old.name.endswith(".SLDPRT") else None
+    staging = root / stamp
     staging.mkdir(parents=True)
 
-    app = connect()
     prev = app.GetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE)
     app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, False)
     checks = []
@@ -152,7 +162,6 @@ def run(project, overrides):
 
     failed = sum(c["status"] == "fail" for c in checks)
     status = "fail" if failed else "pass"
-    stamp = dt.datetime.now().strftime("%Y%m%dT%H%M%S")
     report = {
         "schema_version": "1.0", "project": project.name, "timestamp": stamp,
         "model_file": str(native), "status": status, "params_used": params,
