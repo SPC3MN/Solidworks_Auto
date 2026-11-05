@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "project": "example_box",
+  "timestamp": "20261105T172635",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\example_box\\.staging\\example_box.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "outer_length": 100,
+    "outer_width": 60,
+    "height": 30
+  },
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        100.0,
+        60.0,
+        30.0
+      ],
+      "volume": 180000.0,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 100.0,
+      "expected": 100,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 60.0,
+      "expected": 60,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 30.0,
+      "expected": 30,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 180000.0,
+      "expected": 180000,
+      "tolerance": 180.0,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 180000.0,
+      "expected": 180000.0,
+      "tolerance": 180.0,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 180000.0,
+      "expected": 180000.0,
+      "tolerance": 1800.0,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "12 triangles"
+    }
+  ]
+}

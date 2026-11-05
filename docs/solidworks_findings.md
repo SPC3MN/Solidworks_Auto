@@ -69,6 +69,24 @@ Notes: `SaveAs3` picks the export format from the file extension. `LoadFile4`
 imports STEP without opening a dialog. Body validity (`IBody2.Check`) isn't
 checked yet; only the solid body count is.
 
+## Feature library and renders
+
+[scripts/swlib.py](../scripts/swlib.py) is verified on `projects/example_tray`
+(extrude with a rounded-rectangle profile, a shell open at the top, and four
+through holes). The volume came out at 19070.99 mm³ against 19070.98 by hand,
+and all 8 checks pass.
+
+- `InsertFeatureShell` is a method of `ModelDoc2`, not of `FeatureManager`.
+- In `FeatureCut4`, `Flip` means "cut outside the profile" and `Dir` reverses the
+  direction. Through-all cuts use both directions, so the side doesn't matter.
+- Renders: the named views (`*Isometric` etc.) assume Y is up. Our models use Z
+  as height, so `render()` sets `ActiveView.Orientation3` from a MathTransform
+  whose 3×3 rotation is column-major (screen-right, screen-up, toward-viewer as
+  columns). `SaveAs3` to `.png` saves the zoomed view; `SaveBMP` didn't zoom.
+- `GetMathUtility.CreateTransform` has to be called through
+  `_oleobj_.Invoke(..., DISPATCH_METHOD, ...)` because late binding treats it
+  as a property.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and

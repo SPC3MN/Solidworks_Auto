@@ -20,6 +20,8 @@ import pythoncom
 import win32com.client
 from win32com.client import VARIANT
 
+import swlib
+
 NOTHING = VARIANT(pythoncom.VT_DISPATCH, None)
 SW_INPUT_DIM_VAL_ON_CREATE = 10
 SW_SOLID_BODY = 0
@@ -126,6 +128,9 @@ def run(project, overrides):
         check(checks, "volume", "bounding_dimensions", m["volume"],
               spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
 
+        # Renders, so the result can be compared visually with the brief / photo
+        renders = swlib.render(model, staging / "renders")
+
         # 3. Export, then reopen and compare against the native model
         step, stl = staging / f"{project.name}.step", staging / f"{project.name}.stl"
         step_ok, stl_ok = save_as(app, model, step), save_as(app, model, stl)
@@ -164,6 +169,8 @@ def run(project, overrides):
         shutil.copy2(native, project / "design" / native.name)
         shutil.copy2(step, project / "exports" / step.name)
         shutil.copy2(stl, project / "exports" / stl.name)
+        shutil.copytree(staging / "renders", project / "renders", dirs_exist_ok=True)
+    report["renders"] = [str(p) for p in renders]
     return report
 
 
@@ -176,6 +183,7 @@ def main():
     report = run(a.project.resolve(), overrides)
     for c in report["checks"]:
         print(f'{c["status"].upper():4}  {c["id"]:24} {c.get("measured")}  {c.get("message", "")}')
+    print("renders:", *report["renders"], sep="\n  ")
     print(f'\n{report["status"].upper()}: {report["summary"]}'
           f'{"  -> promoted" if report["status"] == "pass" else "  -> not promoted"}')
 

@@ -1,0 +1,56 @@
+# Solidworks_Auto: notes for Claude
+
+SolidWorks 2025 driven over COM from Python (`.venv`, pywin32). Read
+`docs/architecture.md` for the principles and `docs/solidworks_findings.md` for
+verified API behaviour and gotchas before changing scripts.
+
+Run Python as `.venv\Scripts\python`. Git is at `C:\Program Files\Git\cmd\git.exe`
+(it may not be on PATH in older shells).
+
+## Photo → model workflow
+
+When the user sends a picture of an object to model:
+
+1. **Read the picture.** Identify the object, its main shapes (block, tray, plate,
+   cylinder, bracket) and features (holes, slots, cut-outs, fillets, bosses, lids).
+2. **Get scale.** Dimensions from a photo are estimates unless something of known
+   size is in the frame (ruler, coin, credit card 85.6 × 54 mm, a known part) or
+   the user gives at least one real dimension. Ask for one key dimension if none
+   is available and the design depends on fit. Otherwise estimate, and label every
+   estimated value as such.
+3. **Ask only what would change the design materially**: what it is for, what it
+   mates with, the material and process (default PLA/FDM), and any features hidden
+   in the photo. Write the rest down as assumptions.
+4. **Create `projects/<name>/`** following `projects/example_tray`:
+   - `requirements.md`: dimensions (marked *measured*, *given* or *estimated*),
+     features, material, assumptions, and the expected volume worked out by hand
+     where practical.
+   - `parameters/params.json`: every driving value in mm.
+   - `validation/spec.json`: expected values taken from the requirements,
+     not copied from params.
+   - `design/model.py`: `build(app, params)` using `scripts/swlib.py`
+     (`Part.extrude / cut / shell / fillet`, profiles `rect / circle / polygon / slot`).
+     Order: add material first, then shell, then all cuts. Height is +Z; the
+     base sketch is the Front Plane at z = 0.
+5. **Run** `.venv\Scripts\python scripts\pipeline.py projects\<name>`.
+6. **Look at the renders** in `projects/<name>/.staging/renders/` (isometric, top,
+   front, right) next to the photo. Fix proportions or features that don't match.
+7. **Autocorrect** failed checks: adjust the parameter named in `hint.param`, or
+   fix `model.py`. Make at most 5 attempts per issue, and report anything left
+   unresolved.
+8. **Report** to the user: the renders (send them with SendUserFile), which
+   dimensions are estimates, the check results, and the export paths
+   (`design/*.SLDPRT`, `exports/*.step|.stl`).
+
+Never claim success without a passing pipeline report in `validation/history/`.
+
+## Library limits (extend swlib.py when a photo needs more)
+
+- Planar extrudes and cuts parallel to the Front Plane only. No revolve, sweep,
+  loft, or sketches on side faces yet.
+- Swept-in sketches aren't dimensioned. Only extrusion depths and shell thickness
+  are linked to global variables, so editing them in the GUI rebuilds the model.
+  Other changes need a rerun of `model.py`.
+- Faces and edges for shell and fillet are picked by a point on them. Choose
+  points well away from other edges.
+- There are no checks yet for holes, wall thickness or interference (tests 3 to 5).

@@ -1,0 +1,10 @@
+{
+  "length": 80,
+  "width": 50,
+  "height": 25,
+  "corner_radius": 6,
+  "wall": 2,
+  "hole_d": 3.2,
+  "hole_dx": 30,
+  "hole_dy": 17
+}
