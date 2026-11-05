@@ -193,7 +193,7 @@ KINDS = {"plain": plain, "passive": passive, "sot23": sot23, "sod323": sod323,
 def layout_ops(lay, T, detail=True):
     """All ops for a layout's parts (pads handled separately by the caller)."""
     ops = []
-    for c in lay["parts"]:
+    for c in lay.get("parts", []):
         x, y, l, w, h, rot = part_geom(lay, c)
         kind = c.get("kind") or lay.get("packages", {}).get(c.get("pkg"), {}).get("kind", "plain")
         ops += KINDS[kind if detail else "plain"](x, y, l, w, h, rot, T, c)

@@ -16,6 +16,7 @@ layout.json keys (all optional except "board"):
   cyls:      [{ref, x, y, d, h, z0, bore_d?, bore_depth?}]  vertical cylinders (shafts, mounts);
              the bore is cut down from the top, bore_depth deep (default: all the way)
   side_cyls: [{ref, x, z, d, len, bore_d?}]     cylinders along -y from y = 0 (jack noses)
+  under:     [{ref, x, y, l, w, h}]              boxes hanging below the board (from z = 0 down)
   cuts:      [{ref, axis, at, a, b, l, w, depth}] rectangular blind cuts toward -axis from the
              plane axis = at; (a, b) is the rect centre in that plane's coordinates (as in
              details.py). Each must lie fully inside material (e.g. heatsink fin grooves).
@@ -70,6 +71,11 @@ def build(app, lay):
             groups.setdefault((c["z0"], c["h"]), []).append(circle(c["x"], c["y"], c["d"]))
         for n, ((z0, h), profs) in enumerate(sorted(groups.items())):
             part.extrude(f"Body{n:02d}", profs, h, z=z0)
+        ugroups = {}
+        for u in lay.get("under", []):
+            ugroups.setdefault(u["h"], []).append(rect(u["x"], u["y"], u["l"], u["w"]))
+        for n, (h, profs) in enumerate(sorted(ugroups.items())):
+            part.extrude(f"Under{n:02d}", profs, h, z=0, down=True)
         for n, s in enumerate(lay.get("side_cyls", [])):
             part.extrude(f"Side{n}_{s['ref']}", [circle(s["x"], s["z"], s["d"])], s["len"],
                          z=0, down=True, axis="y")
@@ -109,6 +115,7 @@ def expected(lay):
     v["blocks"] = sum(b["l"] * b["w"] * b["h"] for b in lay.get("blocks", []))
     v["cyls"] = sum(disc(c["d"]) * c["h"] - disc(c.get("bore_d", 0)) * c.get("bore_depth", c["h"])
                     for c in lay.get("cyls", []))
+    v["under"] = sum(u["l"] * u["w"] * u["h"] for u in lay.get("under", []))
     v["cuts"] = -sum(c["l"] * c["w"] * c["depth"] for c in lay.get("cuts", []))
     v["side_cyls"] = sum((disc(s["d"]) - disc(s.get("bore_d", 0))) * s["len"] for s in lay.get("side_cyls", []))
     # Bounding box from every primitive's extent (parts use their footprint and height)
@@ -126,6 +133,9 @@ def expected(lay):
     for c in lay.get("cyls", []):
         xs += [c["x"] - c["d"] / 2, c["x"] + c["d"] / 2]; ys += [c["y"] - c["d"] / 2, c["y"] + c["d"] / 2]
         zs += [c["z0"], c["z0"] + c["h"]]
+    for u in lay.get("under", []):
+        xs += [u["x"] - u["l"] / 2, u["x"] + u["l"] / 2]; ys += [u["y"] - u["w"] / 2, u["y"] + u["w"] / 2]
+        zs.append(-u["h"])
     for s in lay.get("side_cyls", []):
         xs += [s["x"] - s["d"] / 2, s["x"] + s["d"] / 2]; ys.append(-s["len"]); zs += [s["z"] - s["d"] / 2, s["z"] + s["d"] / 2]
     bbox = [round(max(xs) - min(xs), 3), round(max(ys) - min(ys), 3), round(max(zs) - min(zs), 3)]
