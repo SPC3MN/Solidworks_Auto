@@ -1,0 +1,28 @@
+{
+ "_comment": "Expected values from requirements.md (primitive sums by scripts/board_build.expected, not from SolidWorks).",
+ "solid_bodies": {
+  "expected": 1
+ },
+ "bbox.x": {
+  "expected": 65,
+  "tol": 0.05
+ },
+ "bbox.y": {
+  "expected": 58.5,
+  "tol": 0.05
+ },
+ "bbox.z": {
+  "expected": 21.1,
+  "tol": 0.05
+ },
+ "volume": {
+  "expected": 12809.304,
+  "rel_tol": 0.001
+ },
+ "export.step": {
+  "rel_tol": 0.001
+ },
+ "export.stl": {
+  "rel_tol": 0.01
+ }
+}

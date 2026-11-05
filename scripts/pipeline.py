@@ -36,6 +36,14 @@ def connect():
         return app
 
 
+def open_titles(app):
+    out, d = [], app.GetFirstDocument
+    while d is not None:
+        out.append(d.GetTitle)
+        d = d.GetNext
+    return out
+
+
 def load_model_script(project):
     spec = importlib.util.spec_from_file_location("model", project / "design" / "model.py")
     mod = importlib.util.module_from_spec(spec)
@@ -122,8 +130,18 @@ def run(project, overrides):
     app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, False)
     checks = []
     try:
-        # 1. Build
-        model = load_model_script(project).build(app, params)
+        # 1. Build. On failure, save the partial part into this run's staging folder
+        # (for debugging) and close it, so failed builds don't pile up as open tabs.
+        before = set(open_titles(app))
+        try:
+            model = load_model_script(project).build(app, params)
+        except Exception:
+            for t in set(open_titles(app)) - before:
+                d = app.GetOpenDocumentByName(t) or app.ActiveDoc
+                if d is not None:
+                    save_as(app, d, staging / "failed_build.SLDPRT")
+                    app.CloseDoc(d.GetTitle)
+            raise
         native = staging / f"{project.name}.SLDPRT"
         save_as(app, model, native)
         m = measure(model)

@@ -100,6 +100,28 @@ and all 8 checks pass.
   as properties. Call them with `_invoke` (`DISPATCH_METHOD`). Hide reference
   planes before rendering, or zoom-to-fit frames the planes.
 
+## Package detail (scripts/details.py)
+
+All three board models get leads, end caps, QFN pads and pin-1 dimples, a
+lidded SoC, moulded BGAs and real connector openings from one module. Every
+detail op carries its exact volume, and the build matched that arithmetic on
+all three boards (DAC+ 10889.666 vs 10889.67; DAC Pro 13368.682 vs 13368.68;
+Pi 5 18047.383 vs 18047.38).
+
+- **Blind cuts default to going against the plane normal**, the opposite of
+  extrudes. A cut toward −axis therefore needs `Dir = False` (verified with a probe).
+- Right Plane sketches map model (y, z) to sketch (−z, y), and extrudes go toward +X.
+- **Select the new sketch explicitly before each feature call.** Otherwise
+  `FeatureExtrusion3` sometimes fails or builds from a stale selection. That gave
+  6 bodies and a 63.6 mm³ volume deficit before it was fixed.
+- A body extruded onto the top faces of lead or pad features merges with them
+  (face contact is enough).
+- STL export writes the *active* document, so the pipeline activates the model first.
+- `ViewZoomTo2` doesn't take model coordinates. For close-ups, select faces and
+  call `ViewZoomToSelection` (pick points must land on part tops, not the PCB).
+- `CloseAllDocuments` is off-limits (it discards work). Save each document,
+  then close it with `CloseDoc`.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and

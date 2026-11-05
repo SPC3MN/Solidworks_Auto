@@ -9,6 +9,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "scripts"))
+import details  # noqa: E402
 from layout_check import to_mm  # noqa: E402
 from swlib import Part, circle, rect  # noqa: E402
 
@@ -31,14 +32,10 @@ def build(app, p):
         pins += [rect(p["p7_x"], p["p7_y"] + (k - (n7 - 1) / 2) * pitch, pin, pin) for k in range(n7)]
         part.extrude("Header_Pins", pins, ph, z=T + bh)
 
-        # Small parts from the photo layout, one extrude per package height
-        m, groups = lay["px_to_mm"], {}
-        for c in lay["parts"]:
-            k = lay["packages"][c["pkg"]]
-            l, w = (k["w"], k["l"]) if c.get("rot") == 90 else (k["l"], k["w"])
-            groups.setdefault(k["h"], []).append(rect(*to_mm(m, c["px"], c["py"]), l, w))
-        for h, profs in sorted(groups.items()):
-            part.extrude(f"SMD_h{h:g}".replace(".", "_"), profs, h, z=T)
+        # Small parts from the photo layout, with package detail (scripts/details.py)
+        m = lay["px_to_mm"]
+        ops = details.layout_ops(lay, T)
+        details.apply(part, ops, "SMD", "add")
         pads = [circle(*to_mm(m, px, py), g["d"]) for g in lay["pads"] for px in g["px"] for py in g["py"]]
         part.extrude("Pads", pads, lay["pad_h"], z=T)
 
@@ -63,6 +60,7 @@ def build(app, p):
                      z=0, down=True, axis="y")
 
         # Cuts last
+        details.apply(part, ops, "SMD", "cut")
         part.cut("RCA_Bores", [circle(x, az, p["rca_bore_d"]) for x in bxs],
                  depth=p["rca_barrel_out"], z=0, down=True, axis="y")
         part.cut("Jack_Bore", [circle(jx, jz, p["jack_bore_d"])],

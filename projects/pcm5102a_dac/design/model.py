@@ -1,0 +1,12 @@
+"""GY-PCM5102 DAC board, built from parameters/layout.json by scripts/board_build.py."""
+import json
+import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3] / "scripts"))
+import board_build  # noqa: E402
+
+
+def build(app, params):
+    lay = json.loads((pathlib.Path(__file__).parents[1] / "parameters" / "layout.json").read_text())
+    return board_build.build(app, lay)

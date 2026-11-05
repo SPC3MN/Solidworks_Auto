@@ -8,6 +8,7 @@ Every dimension a helper creates is linked to a global variable when the
 caller passes `params` names, so GUI edits rebuild correctly (see sw_params.py).
 """
 import math
+import time
 
 import pythoncom
 import win32com.client
@@ -41,6 +42,7 @@ _TF_SIGN = [1]
 PLANE_FAMILIES = {
     "z": ("Front Plane", lambda a, b: (a * MM, b * MM), 1),   # (x, y) -> sketch (x, y)
     "y": ("Top Plane", lambda a, b: (a * MM, -b * MM), -1),   # (x, z) -> sketch (x, -z)
+    "x": ("Right Plane", lambda a, b: (-b * MM, a * MM), 1),  # (y, z) -> sketch (-z, y), extrude +X
 }
 
 
@@ -161,8 +163,18 @@ class Part:
         self.doc = self.app.NewDocument(tpl, 0, 0, 0)
         if self.doc is None:
             raise RuntimeError(f"NewDocument failed ({tpl})")
-        self.fm, self.sm, self.ext = self.doc.FeatureManager, self.doc.SketchManager, self.doc.Extension
-        self._planes = {("z", 0.0): "Front Plane", ("y", 0.0): "Top Plane"}
+        # A freshly created document occasionally isn't ready yet (its managers
+        # aren't reachable for a moment); wait briefly and retry.
+        for attempt in range(10):
+            try:
+                self.fm, self.sm, self.ext = self.doc.FeatureManager, self.doc.SketchManager, self.doc.Extension
+                break
+            except AttributeError:
+                if attempt == 9:
+                    raise
+                time.sleep(0.5)
+        self._planes = {("z", 0.0): "Front Plane", ("y", 0.0): "Top Plane", ("x", 0.0): "Right Plane"}
+        self._last_sketch = None
 
     def close_prefs(self):
         self.app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, self._prev)
@@ -198,6 +210,23 @@ class Part:
             _, _TF[0], _TF_SIGN[0] = PLANE_FAMILIES["z"]
         self.sm.AddToDB = False
         self.sm.InsertSketch(True)
+        self._last_sketch = self.doc.FeatureByPositionReverse(0)
+        self._select_sketch()
+
+    def _select_sketch(self):
+        """Select exactly the sketch just drawn, so the feature can't pick up a stale selection."""
+        self.doc.ClearSelection2(True)
+        if self._last_sketch is not None:
+            self._last_sketch.Select2(False, 0)
+
+    def _feature(self, make):
+        """Run a feature call; if SolidWorks returns nothing, reselect the sketch and retry once."""
+        f = make()
+        if f is None:
+            time.sleep(0.3)
+            self._select_sketch()
+            f = make()
+        return f
 
     def _name(self, feat, name, what):
         if feat is None:
@@ -211,9 +240,9 @@ class Part:
         toward +axis (or -axis with down=True)."""
         self._sketch(z, profiles, axis)
         # FeatureExtrusion3 args: Sd, Flip, Dir (reverse direction), T1, T2, D1, ...
-        f = self.fm.FeatureExtrusion3(
+        f = self._feature(lambda: self.fm.FeatureExtrusion3(
             True, False, down, END_BLIND, 0, depth * MM, 0, False, False, False, False,
-            0, 0, False, False, False, False, True, True, True, 0, 0, False)
+            0, 0, False, False, False, False, True, True, True, 0, 0, False))
         return self._name(f, name, "extrude")
 
     def cut(self, name, profiles, depth=None, z=0.0, down=True, axis="z"):
@@ -225,11 +254,13 @@ class Part:
         if depth is None:
             sd, rev, t1, t2, d1 = False, False, END_THROUGH_ALL, END_THROUGH_ALL, 0
         else:
-            sd, rev, t1, t2, d1 = True, down, END_BLIND, 0, depth * MM
-        f = self.fm.FeatureCut4(
+            # Blind cuts default to going AGAINST the plane normal (opposite to
+            # extrudes; verified with a probe), so "down" means Dir = False.
+            sd, rev, t1, t2, d1 = True, not down, END_BLIND, 0, depth * MM
+        f = self._feature(lambda: self.fm.FeatureCut4(
             sd, False, rev, t1, t2, d1, 0, False, False, False, False,
             0, 0, False, False, False, False, False, True, True, False, False, False,
-            0, 0, False, False)
+            0, 0, False, False))
         return self._name(f, name, "cut")
 
     def shell(self, name, thickness, open_face_points=()):

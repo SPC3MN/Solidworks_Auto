@@ -8,6 +8,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3] / "scripts"))
+import details  # noqa: E402
 from swlib import Part, circle, rect  # noqa: E402
 
 
@@ -25,17 +26,11 @@ def build(app, p):
         part.extrude("Header_Pins", pins, p["hdr_pin_h"], z=T + p["hdr_block_h"])
 
         # Chips (estimated)
-        part.extrude("IC_DAC", [rect(26, 30, 8, 4.5)], 1.5, z=T)
-
-        # Small parts from smd_layout.json, one extrude per package height
+        # All chips and passives from smd_layout.json, with package detail
+        # (leads, end caps, pin-1 dimples) from scripts/details.py
         lay = json.loads((pathlib.Path(__file__).parents[1] / "parameters" / "smd_layout.json").read_text())
-        groups = {}
-        for c in lay["parts"]:
-            k = lay["packages"][c["pkg"]]
-            l, w = (k["w"], k["l"]) if c.get("rot") == 90 else (k["l"], k["w"])
-            groups.setdefault(k["h"], []).append(rect(c["x"], c["y"], l, w))
-        for h, profs in sorted(groups.items()):
-            part.extrude(f"SMD_h{h:g}".replace(".", "_"), profs, h, z=T)
+        ops = details.layout_ops(lay, T)
+        details.apply(part, ops, "SMD", "add")
         tp = lay["test_pads"]
         part.extrude("Test_Pads", [circle(tp["x0"] + i * tp["pitch"], tp["y0"] + j * tp["pitch"], tp["d"])
                                    for i in range(tp["cols"]) for j in range(tp["rows"])], tp["h"], z=T)
@@ -59,7 +54,8 @@ def build(app, p):
         part.extrude("Jack_Nose", [circle(jx, jz, p["jack_nose_d"])], p["jack_nose_out"],
                      z=0, down=True, axis="y")
 
-        # Cuts last: socket bores, then mounting holes
+        # Cuts last: package details, socket bores, then mounting holes
+        details.apply(part, ops, "SMD", "cut")
         part.cut("RCA_Bores", [circle(x, axis_z, p["rca_bore_d"]) for x in xs],
                  depth=p["rca_barrel_out"], z=0, down=True, axis="y")
         part.cut("Jack_Bore", [circle(jx, jz, p["jack_bore_d"])],

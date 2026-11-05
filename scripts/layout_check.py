@@ -27,8 +27,16 @@ def part_geom(lay, c):
     return x, y, l, w, h, rot
 
 
-def boxes(lay):
-    """[(ref, x0, y0, x1, y1, height, kind, overhang)]; rotated parts use their bounding square."""
+LEAD_MARGIN = {"sot23": 0.5, "sod323": 0.4, "tssop": 0.6, "qfn": 0.25}  # detail beyond the body
+
+
+def kind_of(lay, c):
+    return c.get("kind") or lay.get("packages", {}).get(c.get("pkg"), {}).get("kind", "plain")
+
+
+def boxes(lay, with_leads=True):
+    """[(ref, x0, y0, x1, y1, height, kind, overhang)]; rotated parts use their bounding square.
+    with_leads grows each box by its package's lead/pad reach (for the clearance check)."""
     out = []
     for c in lay["parts"]:
         x, y, l, w, h, rot = part_geom(lay, c)
@@ -36,6 +44,9 @@ def boxes(lay):
             hx = hy = (l + w) / 2 / math.sqrt(2)
         else:
             hx, hy = l / 2, w / 2
+        if with_leads:
+            m = LEAD_MARGIN.get(kind_of(lay, c), 0)
+            hx, hy = hx + m, hy + m
         b = (c["ref"], x - hx, y - hy, x + hx, y + hy, h, "box", c.get("overhang", False))
         out.append(b if rot != 45 else b[:6] + ("rot45", b[7], l * w * h))
     m = lay.get("px_to_mm")
@@ -64,7 +75,8 @@ def clearance(a, b):
 
 
 def main(project, gap=0.15):
-    lay = json.loads((project / "parameters" / "layout.json").read_text())
+    f = project / "parameters" / "layout.json"
+    lay = json.loads((f if f.exists() else project / "parameters" / "smd_layout.json").read_text())
     keepouts = json.loads((project / "parameters" / "keepouts.json").read_text()) \
         if (project / "parameters" / "keepouts.json").exists() else []
     bs = boxes(lay)
@@ -85,8 +97,16 @@ def main(project, gap=0.15):
     for a in bs:
         if not a[7] and (a[1] < 0.3 or a[2] < 0.3 or a[3] > bl - 0.3 or a[4] > bw - 0.3):
             bad.append((a[0], "board edge", None))
-    total = sum(volume(b) for b in bs)
-    print(f"{len(bs)} items, component volume {total:.3f} mm^3")
+    total = sum(volume(b) for b in boxes(lay, with_leads=False))
+    print(f"{len(bs)} items, plain component volume {total:.3f} mm^3")
+    try:
+        import details
+        ops = details.layout_ops(lay, 1.6)
+        pads = sum(volume(b) for b in bs if b[6] == "disc")
+        print(f"detailed component volume {details.total_volume(ops) + pads:.3f} mm^3"
+              f" ({len(ops)} ops, pads {pads:.3f})")
+    except Exception as e:  # noqa: BLE001
+        print("detail volume unavailable:", e)
     for x in bad:
         print("CONFLICT", x)
     return bad, total

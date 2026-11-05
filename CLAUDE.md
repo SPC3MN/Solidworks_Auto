@@ -7,6 +7,15 @@ verified API behaviour and gotchas before changing scripts.
 Run Python as `.venv\Scripts\python`. Git is at `C:\Program Files\Git\cmd\git.exe`
 (it may not be on PATH in older shells).
 
+## Keep SolidWorks tidy
+
+The user does not want lots of open tabs. Close every document a script opens
+once it is no longer needed. Save it first: projects go to their own folders,
+and scratch or probe parts go to the session scratchpad. The pipeline closes
+its model, the reopened STEP and any failed build. One-off diagnostic scripts
+must close their parts too. Never close or discard documents the user opened
+without asking.
+
 ## Photo → model workflow
 
 When the user sends a picture of an object to model:

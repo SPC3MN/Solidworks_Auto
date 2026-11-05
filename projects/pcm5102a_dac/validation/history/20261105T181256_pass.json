@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "project": "pcm5102a_dac",
+  "timestamp": "20261105T181256",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\pcm5102a_dac\\.staging\\20261105T181256\\pcm5102a_dac.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "pcb_t": 1.6
+  },
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        32.0,
+        19.0,
+        6.6
+      ],
+      "volume": 1275.473,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 32.0,
+      "expected": 32,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 19.0,
+      "expected": 19.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 6.6,
+      "expected": 6.6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1275.473,
+      "expected": 1274.507,
+      "tolerance": 1.274507,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1275.473,
+      "expected": 1275.473,
+      "tolerance": 1.275473,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1275.463,
+      "expected": 1275.473,
+      "tolerance": 12.75473,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "5438 triangles"
+    }
+  ]
+}

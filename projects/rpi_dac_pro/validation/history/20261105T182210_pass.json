@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "project": "rpi_dac_pro",
+  "timestamp": "20261105T182210",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_dac_pro\\.staging\\20261105T182210\\rpi_dac_pro.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "pcb_l": 65,
+    "pcb_w": 56.5,
+    "pcb_t": 1.6,
+    "pcb_r": 3,
+    "hole_d": 2.75,
+    "hole_inset": 3.5,
+    "hdr_pitch": 2.54,
+    "hdr_block_h": 2.5,
+    "hdr_pin": 0.64,
+    "hdr_pin_h": 6,
+    "p7_x": 2.8,
+    "p7_y": 32.8,
+    "p7_n": 6,
+    "rca_x0": 12.0,
+    "rca_x1": 39.6,
+    "rca_d": 14,
+    "rca_h": 13,
+    "rca_plate_extra": 0.5,
+    "rca_plate_t": 1.5,
+    "rca_axis_h": 6.5,
+    "rca_bx1": 18.36,
+    "rca_bx2": 32.98,
+    "rca_barrel_d": 8,
+    "rca_barrel_out": 9,
+    "rca_bore_d": 5,
+    "jack_x": 51.8,
+    "jack_w": 8,
+    "jack_d": 12,
+    "jack_h": 6,
+    "jack_nose_d": 5,
+    "jack_nose_out": 2.5,
+    "jack_bore_d": 3.5
+  },
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        65.0,
+        65.5,
+        14.6
+      ],
+      "volume": 13368.682,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 65.0,
+      "expected": 65,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 65.5,
+      "expected": 65.5,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 14.6,
+      "expected": 14.6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 13368.682,
+      "expected": 13368.68,
+      "tolerance": 13.368680000000001,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 13368.682,
+      "expected": 13368.682,
+      "tolerance": 13.368682000000002,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 13366.623,
+      "expected": 13368.682,
+      "tolerance": 133.68682,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "13420 triangles"
+    }
+  ]
+}
