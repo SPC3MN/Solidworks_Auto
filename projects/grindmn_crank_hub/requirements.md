@@ -8,3 +8,5 @@ Expected: volume 3801.494 mm³, bounding box 18.0 × 18.0 × 19.0 mm.
 
 Left out on purpose: thread form (threads at nominal diameter), knurls, 0.3 edge chamfers, lead-ins, etching.
 Tapped holes are at tap-drill size (M4 Ø3.3, M3 Ø2.5).
+
+Changed from the note: arm slot 14 wide (not 6) so the 14 wide crank arm seats in it (owner, 2026-11-06).

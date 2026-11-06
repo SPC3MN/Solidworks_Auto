@@ -1,0 +1,50 @@
+{
+ "assembly": "grindmn_exploded",
+ "time": "2026-11-06T15:13:34",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 29,
+   "actual": 29
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 228.8,
+   "actual": 228.8
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 120.4,
+   "actual": 120.4
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 564.9,
+   "actual": 564.9
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  228.8,
+  120.4,
+  564.9
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn_exploded\\grindmn_exploded.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn_exploded\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn_exploded\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn_exploded\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn_exploded\\renders\\wireframe\\front.png"
+ ]
+}

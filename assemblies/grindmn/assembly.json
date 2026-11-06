@@ -292,7 +292,7 @@
   }
  ],
  "expected": {
-  "_comment": "x: cup -34 .. knob 85+10 = 95; y: burr-screw heads at 90/270 reach 32 + 2.2 = 34.2 each side; z: cup base -50.5 .. shoulder screw head 181 + 3.5 = 184.5. Allowed interference: thread engagement (nominal threads in tap-drill holes: dial/tube 828 mm3, M4s/tube, M3s/hub, shoulder/arm), bridge screw tip 1 mm past its groove floor, O-ring squeeze in the cup, plunger ball in the dial grooves, and crank arm 14 wide vs hub slot 6 wide (open question in the requirements).",
+  "_comment": "x: cup -34 .. knob 85+10 = 95; y: burr-screw heads at 90/270 reach 32 + 2.2 = 34.2 each side; z: cup base -50.5 .. shoulder screw head 181 + 3.5 = 184.5. Allowed interference: thread engagement (nominal threads in tap-drill holes: dial/tube 828 mm3, M4s/tube, M3s/hub, shoulder/arm), bridge screw tip 1 mm past its groove floor, O-ring squeeze in the cup and plunger ball in the dial grooves.",
   "bbox": [
    129.0,
    68.4,
@@ -302,10 +302,6 @@
    [
     "grindmn_dial",
     "grindmn_tube"
-   ],
-   [
-    "grindmn_crank_arm",
-    "grindmn_crank_hub"
    ],
    [
     "grindmn_catch_cup",
