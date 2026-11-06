@@ -1,0 +1,86 @@
+{
+ "part": "rpi_dac_hat",
+ "time": "2026-11-06T10:02:25",
+ "pass": false,
+ "scale": 2,
+ "bbox": [
+  65.0,
+  65.5,
+  13.6
+ ],
+ "dims": [
+  {
+   "label": "PCB length",
+   "view": "top",
+   "expected": 65.0,
+   "actual": 65.0,
+   "pass": true
+  },
+  {
+   "label": "PCB width",
+   "view": "top",
+   "expected": 56.5,
+   "actual": 56.5,
+   "pass": true
+  },
+  {
+   "label": "hole pitch x",
+   "view": "top",
+   "expected": 58.0,
+   "actual": 58.0,
+   "pass": true
+  },
+  {
+   "label": "hole pitch y",
+   "view": "top",
+   "expected": 49.0,
+   "actual": 49.0,
+   "pass": true
+  },
+  {
+   "label": "hole dia (4x)",
+   "view": "top",
+   "expected": 2.75,
+   "actual": 2.75,
+   "pass": true
+  },
+  {
+   "label": "RCA spacing",
+   "view": "front",
+   "expected": 12.0,
+   "actual": 12.0,
+   "pass": true
+  },
+  {
+   "label": "RCA barrel dia",
+   "view": "front",
+   "expected": 8.0,
+   "actual": 8.0,
+   "pass": true
+  },
+  {
+   "label": "RCA axis height",
+   "view": "front",
+   "expected": 7.6,
+   "actual": 7.6,
+   "pass": true
+  },
+  {
+   "label": "overall height",
+   "view": "front",
+   "expected": 13.6,
+   "actual": 13.6,
+   "pass": true
+  },
+  {
+   "label": "RCA reach past edge",
+   "pass": false,
+   "error": "no edge at pick [46, -9, 11.6]"
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_dac_hat\\drawing\\rpi_dac_hat.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_dac_hat\\drawing\\rpi_dac_hat.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_dac_hat\\drawing\\rpi_dac_hat.png"
+ ]
+}

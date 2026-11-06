@@ -1,0 +1,11 @@
+{
+  "title": "M2.5 x 11 hex standoff",
+  "source": "requirements.md",
+  "dims": [
+    {"label": "across flats", "view": "top", "pick": [[0, -2.5, 11], [0, 2.5, 11]], "side": "right", "expect": 5.0},
+    {"label": "thread bore", "view": "top", "pick": [[1.25, 0, 11]], "expect": 2.5},
+    {"label": "across corners", "view": "front", "pick": [[-2.8868, 0, 5.5], [2.8868, 0, 5.5]], "kind": "h", "side": "below", "expect": 5.7735},
+    {"label": "length", "view": "front", "pick": [[0, -2.5, 11], [0, -2.5, 0]], "side": "left", "expect": 11.0}
+  ],
+  "notes": ["All dimensions in mm", "Thread M2.5 both ends, through (shown plain)", "Material: brass or nylon"]
+}

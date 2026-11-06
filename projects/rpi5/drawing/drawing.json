@@ -1,0 +1,16 @@
+{
+  "title": "Raspberry Pi 5 - envelope",
+  "source": "RPi 4/5 mechanical drawing + photo (see requirements.md)",
+  "_comment": "Picks are points ON edges, chosen where no connector hides the edge: the right edge at y 38 (gap between the USB stacks), the top edge at x 75, the bottom edge at x 50. Expected values come from requirements.md.",
+  "dims": [
+    {"label": "PCB length", "view": "top", "pick": [[0, 40, 1.6], [85, 38, 1.6]], "kind": "h", "side": "above", "expect": 85.0},
+    {"label": "PCB width", "view": "top", "pick": [[50, 0, 1.6], [75, 56, 1.6]], "kind": "v", "side": "left", "expect": 56.0},
+    {"label": "hole pitch x", "view": "top", "pick": [[4.85, 3.5, 1.6], [62.85, 3.5, 1.6]], "kind": "h", "side": "above", "expect": 58.0},
+    {"label": "hole pitch y", "view": "top", "pick": [[3.5, 4.85, 1.6], [3.5, 51.15, 1.6]], "kind": "v", "side": "left", "expect": 49.0},
+    {"label": "hole from left edge", "view": "top", "pick": [[0, 40, 1.6], [4.85, 52.5, 1.6]], "kind": "h", "side": "above", "expect": 3.5},
+    {"label": "hole dia (4x)", "view": "top", "pick": [[4.85, 52.5, 1.6]], "expect": 2.7},
+    {"label": "overall height (USB)", "view": "front", "pick": [[50, 0, 0], [79.4, 21.6, 17.6]], "kind": "v", "side": "left", "expect": 17.6},
+    {"label": "PCB thickness", "view": "front", "pick": [[50, 0, 0], [50, 0, 1.6]], "kind": "v", "side": "left", "expect": 1.6}
+  ],
+  "notes": ["All dimensions in mm", "Board outline and holes: given (RPi mechanical drawing)", "Component heights: estimated from photos"]
+}

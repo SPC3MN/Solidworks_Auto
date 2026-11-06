@@ -1,0 +1,17 @@
+{
+  "title": "Raspberry Pi HQ Camera (CS mount)",
+  "source": "photos, published board size (see requirements.md)",
+  "_comment": "Board edges are picked near the corners (y = 2, x = 10), clear of the knurled ring, which reaches within 0.5 mm of the edge. Lens axis at (19, 19). Diameter picks sit at different angles on each circle (hole 45, tube 135, bore 225 deg) so their labels leave the view in different directions; the knurled lock ring is a polygon, so it is not dimensioned as a diameter.",
+  "dims": [
+    {"label": "board size x", "view": "top", "pick": [[0, 2, 1.0], [38, 2, 1.0]], "kind": "h", "side": "above", "expect": 38.0},
+    {"label": "board size y", "view": "top", "pick": [[10, 0, 1.0], [10, 38, 1.0]], "kind": "v", "side": "left", "expect": 38.0},
+    {"label": "hole pitch x", "view": "top", "pick": [[5.35, 4, 1.0], [35.35, 4, 1.0]], "kind": "h", "side": "above", "expect": 30.0},
+    {"label": "hole pitch y", "view": "top", "pick": [[34, 5.35, 1.0], [34, 35.35, 1.0]], "kind": "v", "side": "right", "expect": 30.0},
+    {"label": "hole dia (4x)", "view": "top", "pick": [[35.35, 34, 1.0]], "expect": 2.7},
+    {"label": "CS tube OD", "view": "top", "pick": [[8.04, 29.96, 11]], "expect": 31.0},
+    {"label": "bore", "view": "top", "pick": [[10.02, 10.02, 11]], "expect": 25.4},
+    {"label": "tube top above board", "view": "front", "pick": [[3, 0, 1.0], [19, 3.5, 11]], "kind": "v", "side": "left", "expect": 10.0},
+    {"label": "overall height", "view": "front", "pick": [[19, 0.75, -2.5], [19, 3.5, 11]], "kind": "v", "side": "left", "expect": 13.5}
+  ],
+  "notes": ["All dimensions in mm", "Board 38 x 38: given; other values estimated from photos", "Thread 1in-32 UN (shown plain)"]
+}

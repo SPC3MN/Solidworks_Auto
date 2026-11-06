@@ -1,0 +1,46 @@
+{
+ "part": "standoff_m25",
+ "time": "2026-11-06T10:05:31",
+ "pass": true,
+ "scale": 10,
+ "bbox": [
+  5.774,
+  5.0,
+  11.0
+ ],
+ "dims": [
+  {
+   "label": "across flats",
+   "view": "top",
+   "expected": 5.0,
+   "actual": 5.0,
+   "pass": true
+  },
+  {
+   "label": "thread bore",
+   "view": "top",
+   "expected": 2.5,
+   "actual": 2.5,
+   "pass": true
+  },
+  {
+   "label": "across corners",
+   "view": "front",
+   "expected": 5.7735,
+   "actual": 5.7735,
+   "pass": true
+  },
+  {
+   "label": "length",
+   "view": "front",
+   "expected": 11.0,
+   "actual": 11.0,
+   "pass": true
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\standoff_m25\\drawing\\standoff_m25.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\standoff_m25\\drawing\\standoff_m25.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\standoff_m25\\drawing\\standoff_m25.png"
+ ]
+}

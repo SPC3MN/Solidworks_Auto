@@ -1,0 +1,74 @@
+{
+ "part": "rpi5",
+ "time": "2026-11-06T10:00:22",
+ "pass": true,
+ "scale": 2,
+ "bbox": [
+  89.6,
+  57.0,
+  17.6
+ ],
+ "dims": [
+  {
+   "label": "PCB length",
+   "view": "top",
+   "expected": 85.0,
+   "actual": 85.0,
+   "pass": true
+  },
+  {
+   "label": "PCB width",
+   "view": "top",
+   "expected": 56.0,
+   "actual": 56.0,
+   "pass": true
+  },
+  {
+   "label": "hole pitch x",
+   "view": "top",
+   "expected": 58.0,
+   "actual": 58.0,
+   "pass": true
+  },
+  {
+   "label": "hole pitch y",
+   "view": "top",
+   "expected": 49.0,
+   "actual": 49.0,
+   "pass": true
+  },
+  {
+   "label": "hole from left edge",
+   "view": "top",
+   "expected": 3.5,
+   "actual": 3.5,
+   "pass": true
+  },
+  {
+   "label": "hole dia (4x)",
+   "view": "top",
+   "expected": 2.7,
+   "actual": 2.7,
+   "pass": true
+  },
+  {
+   "label": "overall height (USB)",
+   "view": "front",
+   "expected": 17.6,
+   "actual": 17.6,
+   "pass": true
+  },
+  {
+   "label": "PCB thickness",
+   "view": "front",
+   "expected": 1.6,
+   "actual": 1.6,
+   "pass": true
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi5\\drawing\\rpi5.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi5\\drawing\\rpi5.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi5\\drawing\\rpi5.png"
+ ]
+}

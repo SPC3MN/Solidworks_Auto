@@ -170,6 +170,25 @@ It saves the assembly and a STEP export, renders it, and writes a report to
 - There's no type info on the live object (`GetTypeInfo` gives "Invalid index"). Read the
   signatures from `sldworks.tlb` with `pythoncom.LoadTypeLib` instead.
 
+## Drawings (scripts/drawing.py)
+
+- The drawing template is user preference 10 (`Drawing.drwdot`). Pass paper size 12 (user-defined) to `NewDocument`, then call `Sheet.SetSize`.
+- **The first view auto-scales the sheet** (it went to 10:1). Call `Sheet.SetScale(1, 1, False, False)`
+  after placing the views, otherwise the sheet sketch and notes come out 10× too big.
+- `CreateDrawViewFromModelView3(path, "Z_front", x, y, 0)` uses named views saved in the part
+  (`Orientation3`, then `NameView`), so the drawing views are Z-up.
+  Set each view's scale with `UseSheetScale = False` and `ScaleDecimal`.
+- To sketch the border on the sheet, call `_invoke(doc, "EditSheet")` and `ActivateSheet` first.
+  Without them the lines go into the last view's sketch.
+- `MathUtility.CreatePoint` and `MathPoint.MultiplyTransform` need `_invoke`, and their raw
+  results need `win32com.client.Dispatch`. `View.ModelToViewTransform` maps model metres to sheet metres.
+- `SelectByID2("", "EDGE", sx, sy, ...)` on a drawing picks the nearest edge.
+  - Then use `AddDimension2`, `AddHorizontalDimension2` or `AddVerticalDimension2`.
+  - Read the result back with `GetDimension2(0).SystemValue` (in metres).
+  - `GetSystemValue3` returns None here.
+- Circles seen edge-on can't be selected (the type falls back to 12, the drawing view itself).
+- PNG export of a drawing is screen resolution; call `ViewZoomtofit2` first. The PDF is vector.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and

@@ -1,0 +1,81 @@
+{
+ "part": "rpi_hq_camera",
+ "time": "2026-11-06T10:01:33",
+ "pass": false,
+ "scale": 2,
+ "bbox": [
+  38.0,
+  38.0,
+  13.5
+ ],
+ "dims": [
+  {
+   "label": "board size x",
+   "view": "top",
+   "expected": 38.0,
+   "actual": 33.5307,
+   "pass": false
+  },
+  {
+   "label": "board size y",
+   "view": "top",
+   "expected": 38.0,
+   "actual": 33.5307,
+   "pass": false
+  },
+  {
+   "label": "hole pitch x",
+   "view": "top",
+   "expected": 30.0,
+   "actual": 30.0,
+   "pass": true
+  },
+  {
+   "label": "hole pitch y",
+   "view": "top",
+   "expected": 30.0,
+   "actual": 30.0,
+   "pass": true
+  },
+  {
+   "label": "hole dia (4x)",
+   "view": "top",
+   "expected": 2.7,
+   "actual": 2.7,
+   "pass": true
+  },
+  {
+   "label": "CS tube OD",
+   "view": "top",
+   "expected": 31.0,
+   "actual": 31.0,
+   "pass": true
+  },
+  {
+   "label": "bore",
+   "view": "top",
+   "expected": 25.4,
+   "actual": 25.4,
+   "pass": true
+  },
+  {
+   "label": "height to tube top",
+   "view": "front",
+   "expected": 11.0,
+   "actual": 10.0,
+   "pass": false
+  },
+  {
+   "label": "FFC connector depth",
+   "view": "front",
+   "expected": 2.5,
+   "actual": 3.5,
+   "pass": false
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_hq_camera\\drawing\\rpi_hq_camera.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_hq_camera\\drawing\\rpi_hq_camera.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_hq_camera\\drawing\\rpi_hq_camera.png"
+ ]
+}
