@@ -29,6 +29,7 @@ import math
 import pathlib
 
 import details
+import tracks
 from swlib import Part, circle, rect
 
 
@@ -57,6 +58,7 @@ def build(app, lay):
     part = Part(app)
     try:
         part.extrude("PCB", [rect(L / 2, W / 2, L, W, R)], T)
+        tracks.apply(part, lay, T)
         for n, h in enumerate(lay.get("headers", [])):
             block, pins = _header_geom(h)
             part.extrude(f"Header{n}_Block", [rect(*block)], h["block_h"], z=T)
@@ -107,6 +109,7 @@ def expected(lay):
     L, W, T, R = _board(lay)
     disc = lambda d: math.pi * d * d / 4  # noqa: E731
     v = {"pcb": (L * W - (4 - math.pi) * R * R) * T}
+    v["tracks"] = tracks.track_volume(lay)
     v["holes"] = -sum(disc(h["d"]) * T for h in lay.get("holes", []))
     v["thru"] = -sum(disc(g["d"]) * T * len(_thru_points(g)) for g in lay.get("thru", []))
     v["headers"] = sum(h["cols"] * h["pitch"] * h["rows"] * h["pitch"] * h["block_h"]

@@ -161,6 +161,21 @@ def run(project, overrides):
                   s["expected"], s["tol"], hint={"param": s.get("param")})
         check(checks, "volume", "bounding_dimensions", m["volume"],
               spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
+        # Features too small for the total-volume tolerance (e.g. copper tracks):
+        # suppress each one, measure what it contributed, then restore it.
+        for fname, fs in spec.get("features", {}).items():
+            got = None
+            if model.Extension.SelectByID2(fname, "BODYFEATURE", 0, 0, 0, False, 0, NOTHING, 0):
+                swlib._invoke(model, "EditSuppress2")
+                model.ForceRebuild3(False)
+                got = round(m["volume"] - measure(model)["volume"], 4)
+                model.ClearSelection2(True)
+                model.Extension.SelectByID2(fname, "BODYFEATURE", 0, 0, 0, False, 0, NOTHING, 0)
+                swlib._invoke(model, "EditUnsuppress2")
+                model.ForceRebuild3(False)
+                model.ClearSelection2(True)
+            check(checks, f"feature.{fname}.volume", "feature_volume", got,
+                  fs["expected"], fs["rel_tol"], rel=True)
 
         # Renders, so the result can be compared visually with the brief / photo
         renders = swlib.render(model, staging / "renders")

@@ -122,6 +122,20 @@ Pi 5 18047.383 vs 18047.38).
 - `CloseAllDocuments` is off-limits (it discards work). Save each document,
   then close it with `CloseDoc`.
 
+## PCB tracks (scripts/tracks.py), generated rather than real
+
+The real copper routing isn't known, so the tracks are generated. A 0.5 mm
+grid router runs from each passive end and each IC to the nearest part or
+connector, keeping clear of parts, holes, headers and other tracks. Tracks are
+0.3 × 0.035 mm, with mitred corners, so each track's volume is exactly length × width × thickness.
+
+- Tracks add only 0.2 to 2.6 mm³ per board, below the 0.1 % total-volume
+  tolerance. So the spec has a `features.Tracks` entry: the pipeline
+  suppresses the feature, measures the volume it contributed and restores it.
+  All 7 boards matched to within 1 %.
+- Re-run `scripts/tracks.py` after any layout change. `tpa3255_4ch/design/gen_layout.py`
+  regenerates the layout without tracks.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and

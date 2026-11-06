@@ -1,10 +1,35 @@
 {
   "_comment": "Expected values come from requirements.md, not from params.json.",
-  "solid_bodies": {"expected": 1},
-  "bbox.x": {"expected": 108, "tol": 0.05},
-  "bbox.y": {"expected": 94, "tol": 0.05},
-  "bbox.z": {"expected": 24.8, "tol": 0.05},
-  "volume": {"expected": 83412.191, "rel_tol": 0.001},
-  "export.step": {"rel_tol": 0.001},
-  "export.stl": {"rel_tol": 0.01}
+  "solid_bodies": {
+    "expected": 1
+  },
+  "bbox.x": {
+    "expected": 108,
+    "tol": 0.05
+  },
+  "bbox.y": {
+    "expected": 94,
+    "tol": 0.05
+  },
+  "bbox.z": {
+    "expected": 24.8,
+    "tol": 0.05
+  },
+  "volume": {
+    "expected": 83413.461,
+    "rel_tol": 0.001
+  },
+  "export.step": {
+    "rel_tol": 0.001
+  },
+  "export.stl": {
+    "rel_tol": 0.01
+  },
+  "features": {
+    "Tracks": {
+      "expected": 1.2705,
+      "rel_tol": 0.01
+    }
+  },
+  "_tracks": "Tracks are generated (scripts/tracks.py), illustrative only; volume = length x 0.3 x 0.035."
 }

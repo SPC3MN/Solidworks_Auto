@@ -1,28 +1,35 @@
 {
- "_comment": "Expected values from requirements.md (primitive sums by scripts/board_build.expected, not from SolidWorks).",
- "solid_bodies": {
-  "expected": 1
- },
- "bbox.x": {
-  "expected": 32,
-  "tol": 0.05
- },
- "bbox.y": {
-  "expected": 19.0,
-  "tol": 0.05
- },
- "bbox.z": {
-  "expected": 6.6,
-  "tol": 0.05
- },
- "volume": {
-  "expected": 1274.507,
-  "rel_tol": 0.001
- },
- "export.step": {
-  "rel_tol": 0.001
- },
- "export.stl": {
-  "rel_tol": 0.01
- }
+  "_comment": "Expected values from requirements.md (primitive sums by scripts/board_build.expected, not from SolidWorks).",
+  "solid_bodies": {
+    "expected": 1
+  },
+  "bbox.x": {
+    "expected": 32,
+    "tol": 0.05
+  },
+  "bbox.y": {
+    "expected": 19.0,
+    "tol": 0.05
+  },
+  "bbox.z": {
+    "expected": 6.6,
+    "tol": 0.05
+  },
+  "volume": {
+    "expected": 1274.712,
+    "rel_tol": 0.001
+  },
+  "export.step": {
+    "rel_tol": 0.001
+  },
+  "export.stl": {
+    "rel_tol": 0.01
+  },
+  "features": {
+    "Tracks": {
+      "expected": 0.2048,
+      "rel_tol": 0.01
+    }
+  },
+  "_tracks": "Tracks are generated (scripts/tracks.py), illustrative only; volume = length x 0.3 x 0.035."
 }

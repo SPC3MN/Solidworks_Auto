@@ -9,6 +9,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3] / "scripts"))
 import details  # noqa: E402
+import tracks  # noqa: E402
 from swlib import Part, circle, rect  # noqa: E402
 
 
@@ -17,6 +18,8 @@ def build(app, p):
     try:
         L, W, T = p["pcb_l"], p["pcb_w"], p["pcb_t"]
         part.extrude("PCB", [rect(L / 2, W / 2, L, W, p["pcb_r"])], T)
+        lay = json.loads((pathlib.Path(__file__).parents[1] / "parameters" / "smd_layout.json").read_text())
+        tracks.apply(part, lay, T)  # generated, illustrative copper (scripts/tracks.py)
 
         # 40-pin header on the hole line along the far edge
         hy, pitch = W - p["hole_inset"], p["hdr_pitch"]

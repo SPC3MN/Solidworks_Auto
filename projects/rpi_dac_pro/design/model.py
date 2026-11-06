@@ -10,6 +10,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "scripts"))
 import details  # noqa: E402
+import tracks  # noqa: E402
 from layout_check import to_mm  # noqa: E402
 from swlib import Part, circle, rect  # noqa: E402
 
@@ -21,6 +22,7 @@ def build(app, p):
         L, W, T = p["pcb_l"], p["pcb_w"], p["pcb_t"]
         pitch, bh, pin, ph = p["hdr_pitch"], p["hdr_block_h"], p["hdr_pin"], p["hdr_pin_h"]
         part.extrude("PCB", [rect(L / 2, W / 2, L, W, p["pcb_r"])], T)
+        tracks.apply(part, lay, T)  # generated, illustrative copper (scripts/tracks.py)
 
         # J1 (40-pin) and P7 (balanced out) headers
         hy = W - p["hole_inset"]
