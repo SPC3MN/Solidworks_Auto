@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_crank_arm",
+  "timestamp": "20261106T135419",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_arm\\.staging\\20261106T135419\\grindmn_crank_arm.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "t": 6.0,
+    "w_hub": 14.0,
+    "w_knob": 12.0,
+    "hub_end_x": -2.0,
+    "knob_x": 85.0,
+    "screw_pitch": 12.0,
+    "screw_hole": 3.4
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        100.0,
+        14.0,
+        6.0
+      ],
+      "volume": 7426.266,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 125384,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 14.0,
+      "expected": 14.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 6.0,
+      "expected": 6.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 7426.266,
+      "expected": 7426.266,
+      "tolerance": 7.426266,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 7426.266,
+      "expected": 7426.266,
+      "tolerance": 7.426266,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 7427.019,
+      "expected": 7426.266,
+      "tolerance": 74.26266,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "856 triangles"
+    }
+  ]
+}

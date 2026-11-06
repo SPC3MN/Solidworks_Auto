@@ -1,0 +1,24 @@
+{
+  "h": 34.5,
+  "flange_d": 63.4,
+  "z_thread0": 6.0,
+  "thread_d": 58.0,
+  "z_thread1": 15.0,
+  "relief_d": 56.5,
+  "z_pilot0": 16.5,
+  "pilot_d": 56.0,
+  "bore_d": 50.0,
+  "hub_d": 30.0,
+  "hub_h": 10.0,
+  "lip_hole_d": 18.5,
+  "spoke_w": 5.0,
+  "spoke_angles": [
+    0,
+    120,
+    240
+  ],
+  "seat_d": 22.0,
+  "seat_depth": 7.0,
+  "grooves": 60,
+  "groove_depth": 0.5
+}

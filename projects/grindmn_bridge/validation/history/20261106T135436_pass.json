@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_bridge",
+  "timestamp": "20261106T135436",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bridge\\.staging\\20261106T135436\\grindmn_bridge.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "t": 8.0,
+    "od": 44.0,
+    "ring_id": 38.0,
+    "hub_d": 30.0,
+    "lip_hole_d": 18.5,
+    "spoke_w": 5.0,
+    "spoke_angles": [
+      60,
+      180,
+      300
+    ],
+    "seat_d": 22.0,
+    "seat_depth": 7.0,
+    "groove_depth": 1.0,
+    "groove_arc": 15.0,
+    "groove_w": 2.0,
+    "groove_from_top": 4.0
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        44.0,
+        44.0,
+        8.0
+      ],
+      "volume": 6286.975,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 124323,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 44.0,
+      "expected": 44.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 44.0,
+      "expected": 44.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 8.0,
+      "expected": 8.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 6286.975,
+      "expected": 6286.975,
+      "tolerance": 6.286975000000001,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 6286.975,
+      "expected": 6286.975,
+      "tolerance": 6.286975000000001,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 6278.453,
+      "expected": 6286.975,
+      "tolerance": 62.86975,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1104 triangles"
+    }
+  ]
+}

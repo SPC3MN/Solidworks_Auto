@@ -1,0 +1,26 @@
+{
+  "length": 122.0,
+  "od": 64.0,
+  "lip_d": 40.0,
+  "bridge_seat_d": 44.0,
+  "z_bridge_shoulder": 119.0,
+  "hopper_d": 50.0,
+  "z_hopper_top": 111.0,
+  "burr_seat_d": 54.0,
+  "z_burr_shoulder": 50.0,
+  "pilot_d": 56.0,
+  "z_pilot_top": 30.0,
+  "thread_minor_d": 56.92,
+  "z_thread_top": 10.0,
+  "relief_d": 59.0,
+  "relief_h": 2.0,
+  "oring_groove": {
+    "z0": 14.65,
+    "w": 2.7,
+    "floor_d": 60.9
+  },
+  "z_burr_screws": 40.0,
+  "z_bridge_screw": 115.0,
+  "z_plunger": 22.0,
+  "plunger_d": 5.0
+}

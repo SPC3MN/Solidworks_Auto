@@ -66,7 +66,13 @@ def save_as(app, model, path):
     e = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
     # STL (and other mesh) export writes the ACTIVE document, whichever object
     # SaveAs3 is called on; make sure that is this model.
-    app.ActivateDoc3(model.GetTitle, False, 0, e)
+    # Activate by full path when saved: activating by title can silently fail
+    # (seen after a crashed run left a same-named doc behind).
+    app.ActivateDoc3(model.GetPathName or model.GetTitle, False, 0, e)
+    active = app.ActiveDoc
+    if active is None or active.GetTitle != model.GetTitle:
+        print(f"could not activate {model.GetTitle} for mesh export (another doc took focus)")
+        return False
     w = VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
     ok = model.Extension.SaveAs3(str(path), 0, 1, NOTHING, NOTHING, e, w)
     return bool(ok) and path.exists()

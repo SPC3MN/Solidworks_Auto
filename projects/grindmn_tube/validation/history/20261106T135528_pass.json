@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_tube",
+  "timestamp": "20261106T135528",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_tube\\.staging\\20261106T135528\\grindmn_tube.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "length": 122.0,
+    "od": 64.0,
+    "lip_d": 40.0,
+    "bridge_seat_d": 44.0,
+    "z_bridge_shoulder": 119.0,
+    "hopper_d": 50.0,
+    "z_hopper_top": 111.0,
+    "burr_seat_d": 54.0,
+    "z_burr_shoulder": 50.0,
+    "pilot_d": 56.0,
+    "z_pilot_top": 30.0,
+    "thread_minor_d": 56.92,
+    "z_thread_top": 10.0,
+    "relief_d": 59.0,
+    "relief_h": 2.0,
+    "oring_groove": {
+      "z0": 14.65,
+      "w": 2.7,
+      "floor_d": 60.9
+    },
+    "z_burr_screws": 40.0,
+    "z_bridge_screw": 115.0,
+    "z_plunger": 22.0,
+    "plunger_d": 5.0
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        64.0,
+        64.0,
+        122.0
+      ],
+      "volume": 134642.186,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 188451,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 64.0,
+      "expected": 64.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 64.0,
+      "expected": 64.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 122.0,
+      "expected": 122.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 134642.186,
+      "expected": 134642.174,
+      "tolerance": 134.642174,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 134642.203,
+      "expected": 134642.186,
+      "tolerance": 134.64218599999998,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 134460.496,
+      "expected": 134642.186,
+      "tolerance": 1346.42186,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "2384 triangles"
+    }
+  ]
+}

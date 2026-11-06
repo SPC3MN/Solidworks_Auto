@@ -1,0 +1,12 @@
+{
+  "od": 54.0,
+  "h": 20.0,
+  "flange_h": 6.0,
+  "flats": 50.0,
+  "bore_top": 45.0,
+  "bore_low": 49.0,
+  "bore_step_z": 10.0,
+  "teeth": 20,
+  "tooth_r": 24.5,
+  "tooth_hw": 2.0
+}

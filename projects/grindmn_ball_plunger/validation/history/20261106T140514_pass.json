@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_ball_plunger",
+  "timestamp": "20261106T140514",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_ball_plunger\\.staging\\20261106T140514\\grindmn_ball_plunger.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "sleeve_d": 5.0,
+    "sleeve_l": 4.0,
+    "nose_d": 3.0,
+    "nose_h": 1.0,
+    "nose_round": 0.9
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        5.0,
+        5.0,
+        5.0
+      ],
+      "volume": 84.19,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 77628,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 5.0,
+      "expected": 5.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 5.0,
+      "expected": 5.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 5.0,
+      "expected": 5.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 84.19,
+      "expected": 84.19,
+      "tolerance": 0.08419,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 84.19,
+      "expected": 84.19,
+      "tolerance": 0.08419,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 83.998,
+      "expected": 84.19,
+      "tolerance": 0.8419,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1952 triangles"
+    }
+  ]
+}

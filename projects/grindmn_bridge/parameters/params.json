@@ -1,0 +1,19 @@
+{
+  "t": 8.0,
+  "od": 44.0,
+  "ring_id": 38.0,
+  "hub_d": 30.0,
+  "lip_hole_d": 18.5,
+  "spoke_w": 5.0,
+  "spoke_angles": [
+    60,
+    180,
+    300
+  ],
+  "seat_d": 22.0,
+  "seat_depth": 7.0,
+  "groove_depth": 1.0,
+  "groove_arc": 15.0,
+  "groove_w": 2.0,
+  "groove_from_top": 4.0
+}
