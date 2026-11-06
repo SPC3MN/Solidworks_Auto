@@ -52,23 +52,45 @@ def transform(math_util, at, rot_z):
     return _invoke(math_util, "CreateTransform", VARIANT(pythoncom.VT_ARRAY | pythoncom.VT_R8, data))
 
 
-def build(app, spec):
+def explode_lines(app, spec, folder):
+    """Build the explode-line part: thin rods (spec["lines"]["d"] mm) from (x, y, z0) to z1,
+    in assembly coordinates. These are annotation geometry, not hardware."""
+    ln = spec["lines"]
+    part = swlib.Part(app)
+    try:
+        groups = {}
+        for x, y, z0, z1 in ln["rods"]:
+            groups.setdefault((z0, z1), []).append(swlib.circle(x, y, ln["d"]))
+        for i, ((z0, z1), profs) in enumerate(sorted(groups.items())):
+            part.extrude(f"Line_{i + 1}", profs, z1 - z0, z=z0)
+    finally:
+        part.close_prefs()
+    path = folder / "explode_lines.SLDPRT"
+    part.doc.Extension.SaveAs3(str(path), 0, 1, swlib.NOTHING, swlib.NOTHING, byref(), byref())
+    app.CloseDoc(part.doc.GetTitle)
+    return path
+
+
+def build(app, spec, folder):
+    extra = []
+    if "lines" in spec:
+        extra = [{"file": str(explode_lines(app, spec, folder)), "label": "explode_lines"}]
     template = app.GetUserPreferenceStringValue(9)  # swDefaultTemplateAssembly
     doc = app.NewDocument(template, 0, 0, 0)
     asm = doc
     mu = app.GetMathUtility
     opened, comps = [], []
-    for c in spec["components"]:
-        path = ROOT / "projects" / c["part"] / "design" / f"{c['part']}.SLDPRT"
+    for c in spec["components"] + extra:
+        path = pathlib.Path(c["file"]) if "file" in c else ROOT / "projects" / c["part"] / "design" / f"{c['part']}.SLDPRT"
         if str(path) not in opened:
             app.OpenDoc6(str(path), 1, 1, "", byref(), byref())
             opened.append(str(path))
         app.ActivateDoc3(doc.GetTitle, False, 0, byref())
         comp = asm.AddComponent5(str(path), 0, "", False, "", 0, 0, 0)
         if comp is None:
-            raise RuntimeError(f"could not insert {c['part']}")
+            raise RuntimeError(f"could not insert {path.name}")
         comp.Transform2 = transform(mu, c.get("at", (0, 0, 0)), c.get("rot_z", 0))
-        comps.append((c.get("label", c["part"]), comp))
+        comps.append((c.get("label") or c["part"], comp))
     # Fix every component so nothing floats, then rebuild
     doc.ClearSelection2(True)
     for _, comp in comps:
@@ -115,14 +137,15 @@ def open_titles(app):
 
 
 def _run(app, folder, spec, exp):
-    doc, comps = build(app, spec)
+    doc, comps = build(app, spec, folder)
     name = folder.name
     checks = []
 
     def check(cid, ok, **kw):
         checks.append({"id": cid, "pass": bool(ok), **kw})
 
-    check("components", len(comps) == len(spec["components"]), expected=len(spec["components"]), actual=len(comps))
+    n_exp = len(spec["components"]) + ("lines" in spec)
+    check("components", len(comps) == n_exp, expected=n_exp, actual=len(comps))
     box = doc.GetBox(0)
     size = [round((box[i + 3] - box[i]) / MM, 3) for i in range(3)]
     for ax, e, a in zip("xyz", exp.get("bbox", []), size):

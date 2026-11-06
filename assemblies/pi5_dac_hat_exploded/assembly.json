@@ -1,0 +1,24 @@
+{
+  "_comment": "Exploded view of pi5_dac_hat: the same parts moved up along z (standoffs +14, socket +24, HAT +32). Thin rods (explode lines) run through the 4 mounting-hole axes and the two end GPIO pin axes to show where each part attaches.",
+  "components": [
+    {"part": "rpi5"},
+    {"part": "standoff_m25", "label": "standoff_1", "at": [3.5, 3.5, 15.6]},
+    {"part": "standoff_m25", "label": "standoff_2", "at": [61.5, 3.5, 15.6]},
+    {"part": "standoff_m25", "label": "standoff_3", "at": [3.5, 52.5, 15.6]},
+    {"part": "standoff_m25", "label": "standoff_4", "at": [61.5, 52.5, 15.6]},
+    {"part": "header_2x20_female", "at": [0, 0, 24]},
+    {"part": "rpi_dac_hat", "at": [0, 0, 44.6]}
+  ],
+  "lines": {
+    "d": 0.3,
+    "rods": [
+      [3.5, 3.5, 0, 46.2], [61.5, 3.5, 0, 46.2], [3.5, 52.5, 0, 46.2], [61.5, 52.5, 0, 46.2],
+      [8.37, 51.23, 10.1, 44.6], [56.63, 53.77, 10.1, 44.6]
+    ]
+  },
+  "expected": {
+    "_comment": "x 89.6 and y 65.5 as assembled; z: HAT bottom 44.6 + 13.6 = 58.2",
+    "bbox": [89.6, 65.5, 58.2],
+    "allowed_interference": []
+  }
+}
