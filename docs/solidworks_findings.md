@@ -15,8 +15,8 @@ Probed on 2026-11-05 with [scripts/sw_probe.py](../scripts/sw_probe.py).
 ## Verified
 
 - **Test 1 passes.** Attached to a running SolidWorks with `GetActiveObject`,
-  built a 100×60×30 mm box (sketch on Front Plane, then `FeatureExtrusion3`) and
-  read back a bounding box of 100.0×60.0×30.0 mm and a volume of 180000 mm³.
+  built a 100Ã—60Ã—30 mm box (sketch on Front Plane, then `FeatureExtrusion3`) and
+  read back a bounding box of 100.0Ã—60.0Ã—30.0 mm and a volume of 180000 mmÂ³.
   Saved as `.SLDPRT`.
 - Licence and API automation work (open question 1).
 - Python + pywin32 with late binding is good enough as the integration route for
@@ -33,7 +33,7 @@ API). Verified with [scripts/sw_params.py](../scripts/sw_params.py), which reads
 - The sketch reports `GetConstrainedStatus == 3` (fully constrained) once the
   corner is made coincident with the origin and both sides are dimensioned.
 - **Test 2 passes:** changing `outer_length` from 100 to 120 inside the model and
-  rebuilding gives a bounding box of 120×60×30.
+  rebuilding gives a bounding box of 120Ã—60Ã—30.
 
 Gotchas:
 - `Dimension.FullName` returns `D1@Sketch1@Part3.Part`. Equations need the
@@ -73,7 +73,7 @@ checked yet; only the solid body count is.
 
 [scripts/swlib.py](../scripts/swlib.py) is verified on `projects/example_tray`
 (extrude with a rounded-rectangle profile, a shell open at the top, and four
-through holes). The volume came out at 19070.99 mm³ against 19070.98 by hand,
+through holes). The volume came out at 19070.99 mmÂ³ against 19070.98 by hand,
 and all 8 checks pass.
 
 - `InsertFeatureShell` is a method of `ModelDoc2`, not of `FeatureManager`.
@@ -81,7 +81,7 @@ and all 8 checks pass.
   direction. Through-all cuts use both directions, so the side doesn't matter.
 - Renders: the named views (`*Isometric` etc.) assume Y is up. Our models use Z
   as height, so `render()` sets `ActiveView.Orientation3` from a MathTransform
-  whose 3×3 rotation is column-major (screen-right, screen-up, toward-viewer as
+  whose 3Ã—3 rotation is column-major (screen-right, screen-up, toward-viewer as
   columns). `SaveAs3` to `.png` saves the zoomed view; `SaveBMP` didn't zoom.
 - `GetMathUtility.CreateTransform` has to be called through
   `_oleobj_.Invoke(..., DISPATCH_METHOD, ...)` because late binding treats it
@@ -89,9 +89,9 @@ and all 8 checks pass.
 
 ## Sideways features (first photo model: projects/rpi_dac_hat)
 
-- Sketches on the Top Plane (normal +Y) map model (x, z) to sketch (x, −z).
+- Sketches on the Top Plane (normal +Y) map model (x, z) to sketch (x, âˆ’z).
   This was confirmed with bounding boxes. In `FeatureExtrusion3`, the third
-  argument (`Dir`) reverses the direction; `down=True` goes toward −Y.
+  argument (`Dir`) reverses the direction; `down=True` goes toward âˆ’Y.
 - **A sketch is rejected when its lines partly overlap existing model edges.**
   Example: an 11 mm wide flange whose top and bottom lines lay on the edges of
   a 10 mm housing. The feature returns `None`. Fix: offset the profile so its
@@ -109,11 +109,11 @@ all three boards (DAC+ 10889.666 vs 10889.67; DAC Pro 13368.682 vs 13368.68;
 Pi 5 18047.383 vs 18047.38).
 
 - **Blind cuts default to going against the plane normal**, the opposite of
-  extrudes. A cut toward −axis therefore needs `Dir = False` (verified with a probe).
-- Right Plane sketches map model (y, z) to sketch (−z, y), and extrudes go toward +X.
+  extrudes. A cut toward âˆ’axis therefore needs `Dir = False` (verified with a probe).
+- Right Plane sketches map model (y, z) to sketch (âˆ’z, y), and extrudes go toward +X.
 - **Select the new sketch explicitly before each feature call.** Otherwise
   `FeatureExtrusion3` sometimes fails or builds from a stale selection. That gave
-  6 bodies and a 63.6 mm³ volume deficit before it was fixed.
+  6 bodies and a 63.6 mmÂ³ volume deficit before it was fixed.
 - A body extruded onto the top faces of lead or pad features merges with them
   (face contact is enough).
 - STL export writes the *active* document, so the pipeline activates the model first.
@@ -131,9 +131,9 @@ and the pipeline's `features` check remain for future use.
 The real copper routing isn't known, so the tracks are generated. A 0.5 mm
 grid router runs from each passive end and each IC to the nearest part or
 connector, keeping clear of parts, holes, headers and other tracks. Tracks are
-0.3 × 0.035 mm, with mitred corners, so each track's volume is exactly length × width × thickness.
+0.3 Ã— 0.035 mm, with mitred corners, so each track's volume is exactly length Ã— width Ã— thickness.
 
-- Tracks add only 0.2 to 2.6 mm³ per board, below the 0.1 % total-volume
+- Tracks add only 0.2 to 2.6 mmÂ³ per board, below the 0.1 % total-volume
   tolerance. So the spec has a `features.Tracks` entry: the pipeline
   suppresses the feature, measures the volume it contributed and restores it.
   All 7 boards matched to within 1 %.
@@ -151,14 +151,14 @@ It saves the assembly and a STEP export, renders it, and writes a report to
 - `AddComponent5` needs the part already open (`OpenDoc6`). The part's own tab
   can be closed afterwards while the assembly keeps it loaded.
 - Placement: `comp.Transform2 = CreateTransform([c, s, 0, -s, c, 0, 0, 0, 1, tx, ty, tz, 1, 0, 0, 0])`,
-  translation in metres. Verified with bounding boxes: rot_z −90 maps local (x, y) to (y, −x).
+  translation in metres. Verified with bounding boxes: rot_z âˆ’90 maps local (x, y) to (y, âˆ’x).
 - `Select4` and `SaveAs3` need `NOTHING` (`VARIANT(VT_DISPATCH, None)`), not Python `None`.
 - `InterferenceDetectionManager` with `TreatCoincidenceAsInterference = False`:
   touching faces don't count. A probe with the HAT lowered to z = 8 reported
   the expected socket, standoff and pin collisions, so a run that finds none is meaningful.
-- The HAT model had its far hole line at y = 53 instead of 52.5 (58 × 49 pattern). Fixed with `hole_pitch_y`.
-- Wireframe renders are recoloured to off-white on charcoal (`recolor()`).
-  Grey values of 190 and above are SolidWorks' background gradient and become flat charcoal.
+- The HAT model had its far hole line at y = 53 instead of 52.5 (58 Ã— 49 pattern). Fixed with `hole_pitch_y`.
+- Wireframe renders are recoloured to charcoal lines on off-white (`recolor()`).
+  Grey values of 190 and above are SolidWorks' background gradient and become the flat off-white background.
 
 ## pywin32 late-binding quirks
 

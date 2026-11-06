@@ -29,7 +29,7 @@ from swlib import _invoke  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 MM = 0.001
-BG, FG = (40, 42, 46), (238, 234, 222)  # charcoal background, off-white lines
+BG, FG = (245, 242, 234), (44, 46, 50)  # off-white background, charcoal lines
 
 
 def byref():
