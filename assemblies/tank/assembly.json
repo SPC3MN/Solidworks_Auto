@@ -2432,7 +2432,7 @@
    ]
   },
   {
-   "part": "x8020_plate_m1003",
+   "file": "assemblies\\tank\\kept_parts\\M-1003 SQR MTG PLATE.SLDPRT",
    "label": "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
    "xform": [
     0.707106781,
@@ -2444,9 +2444,9 @@
     -0.707106781,
     -0.707106781,
     0.0,
-    339.5664,
-    -2332.6921,
-    672.537
+    436.3234,
+    -2433.9392,
+    1233.537
    ]
   },
   {
@@ -2954,7 +2954,7 @@
    ]
   },
   {
-   "part": "x8020_plate_m1003",
+   "file": "assemblies\\tank\\kept_parts\\M-1003 SQR MTG PLATE.SLDPRT",
    "label": "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
    "xform": [
     -0.707106781,
@@ -2966,9 +2966,9 @@
     -0.707106781,
     0.707106781,
     0.0,
-    537.3264,
-    -1590.1699,
-    672.537
+    436.0793,
+    -1686.9269,
+    1233.537
    ]
   },
   {
@@ -3494,7 +3494,7 @@
    ]
   },
   {
-   "part": "x8020_plate_m1003",
+   "file": "assemblies\\tank\\kept_parts\\M-1003 SQR MTG PLATE.SLDPRT",
    "label": "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
    "xform": [
     -0.707106781,
@@ -3506,9 +3506,9 @@
     0.707106781,
     0.707106781,
     0.0,
-    1283.6545,
-    -1788.6773,
-    672.537
+    1186.8975,
+    -1687.4303,
+    1233.537
    ]
   },
   {
@@ -3962,7 +3962,7 @@
    ]
   },
   {
-   "part": "x8020_plate_m1003",
+   "file": "assemblies\\tank\\kept_parts\\M-1003 SQR MTG PLATE.SLDPRT",
    "label": "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
    "xform": [
     0.707106781,
@@ -3974,9 +3974,9 @@
     0.707106781,
     -0.707106781,
     0.0,
-    1087.9256,
-    -2535.3813,
-    672.537
+    1189.1727,
+    -2438.6244,
+    1233.537
    ]
   },
   {
@@ -5915,10 +5915,6 @@
     [
      "x8020_fastener",
      "x8020_30"
-    ],
-    [
-     "x8020_fastener",
-     "x8020_plate"
     ],
     [
      "3214",

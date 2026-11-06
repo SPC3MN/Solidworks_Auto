@@ -108,65 +108,6 @@
    "shank_d": 5.0,
    "shank_l": 13.38
   },
-  "m1003": {
-   "_title": "Pump mounting plate (M-1003), outline only",
-   "_notes": "Outline plus the 24 pump holes (d 26, 3 x 8 grid at 112 pitch) and 6 fixing holes (d 8.74), measured on the source plate; the rest of the hole grid is left out.",
-   "l": 280.02,
-   "w": 1122.0,
-   "t": 4.76,
-   "hole_grids": [
-    {
-     "d": 26.0,
-     "x": [
-      28.01,
-      140.01,
-      252.01
-     ],
-     "y": [
-      169,
-      281,
-      393,
-      505,
-      617,
-      729,
-      841,
-      953
-     ]
-    }
-   ],
-   "holes": [
-    [
-     44.05999999999999,
-     19.049999999999955,
-     8.74
-    ],
-    [
-     44.05999999999999,
-     1102.95,
-     8.74
-    ],
-    [
-     140.01,
-     19.049999999999955,
-     8.74
-    ],
-    [
-     140.01,
-     1102.95,
-     8.74
-    ],
-    [
-     235.95999999999998,
-     19.049999999999955,
-     8.74
-    ],
-    [
-     235.95999999999998,
-     1102.95,
-     8.74
-    ]
-   ]
-  },
   "6523": {
    "_title": "Linear bearing (80/20 6523), collapsed",
    "_notes": "U channel: base plate and two side walls (estimated); pads and screws left out.",
@@ -358,8 +299,7 @@
    "type": "anchor"
   },
   "M-1003 SQR MTG PLATE.SLDPRT": {
-   "kind": "plate",
-   "type": "m1003"
+   "keep": true
   },
   "6523.SLDASM": {
    "kind": "bearing",
@@ -455,10 +395,6 @@
    [
     "x8020_fastener",
     "x8020_30"
-   ],
-   [
-    "x8020_fastener",
-    "x8020_plate"
    ],
    [
     "3214",
