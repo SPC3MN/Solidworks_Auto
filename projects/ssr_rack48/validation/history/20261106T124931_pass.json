@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "project": "ssr_rack48",
+  "timestamp": "20261106T124931",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\ssr_rack48\\.staging\\20261106T124931\\ssr_rack48.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "pcb_t": 1.6
+  },
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        431.8,
+        114.3,
+        38.1
+      ],
+      "volume": 931280.005,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 818356,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 431.8,
+      "expected": 431.8,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 114.3,
+      "expected": 114.3,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 38.1,
+      "expected": 38.1,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 931280.005,
+      "expected": 931280.01,
+      "tolerance": 931.2800100000001,
+      "message": ""
+    },
+    {
+      "id": "feature.RoundTop*.volume",
+      "category": "feature_volume",
+      "status": "pass",
+      "measured": -98.229,
+      "expected": -98.229,
+      "tolerance": 0.98229,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 931280.005,
+      "expected": 931280.005,
+      "tolerance": 931.2800050000001,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 931277.358,
+      "expected": 931280.005,
+      "tolerance": 9312.80005,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "53302 triangles"
+    }
+  ]
+}

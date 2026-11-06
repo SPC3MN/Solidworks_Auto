@@ -31,10 +31,10 @@ def build_layout():
         x = round(x, 3)
         blocks.append({"ref": f"SSR{i}", "x": x, "y": MOD_Y, "l": MOD_L, "w": MOD_W, "h": round(MOD_H, 3), "z0": T})
         for dx in (-6, 6):
-            for dy in (-24, -14):  # LED cluster toward the terminal end
+            for dy in (14, 24):  # LED cluster at the header/IC end (user panel photo, clearest view)
                 cyls.append({"ref": f"SSR{i}_LED", "x": x + dx, "y": MOD_Y + dy, "d": 3.0, "h": DOT_H, "z0": z_top,
                              "round_top": LED_R})
-        cyls.append({"ref": f"SSR{i}_screw", "x": x, "y": MOD_Y + 26, "d": 5.0, "h": SCREW_H, "z0": z_top})
+        cyls.append({"ref": f"SSR{i}_screw", "x": x, "y": MOD_Y - 26, "d": 5.0, "h": SCREW_H, "z0": z_top})
     for gi, g in enumerate(GROUPS, 1):
         blocks.append({"ref": f"TB{gi}", "x": round(g, 3), "y": TB_Y, "l": round(TB_N * TB_P, 3), "w": TB_W,
                        "h": TB_H, "z0": T})

@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "project": "acrylic_panel",
+  "timestamp": "20261106T124610",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\acrylic_panel\\.staging\\20261106T124610\\acrylic_panel.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "l": 340.0,
+    "w": 600.0,
+    "t": 6.35,
+    "holes": [
+      {
+        "x": 183.95,
+        "y": 80.9,
+        "d": 3.0
+      },
+      {
+        "x": 79.25,
+        "y": 80.9,
+        "d": 3.0
+      },
+      {
+        "x": 183.95,
+        "y": 220.033,
+        "d": 3.0
+      },
+      {
+        "x": 79.25,
+        "y": 220.033,
+        "d": 3.0
+      },
+      {
+        "x": 183.95,
+        "y": 363.967,
+        "d": 3.0
+      },
+      {
+        "x": 79.25,
+        "y": 363.967,
+        "d": 3.0
+      },
+      {
+        "x": 183.95,
+        "y": 503.1,
+        "d": 3.0
+      },
+      {
+        "x": 79.25,
+        "y": 503.1,
+        "d": 3.0
+      }
+    ]
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        340.0,
+        600.0,
+        6.35
+      ],
+      "volume": 1295040.916,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 48842,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 340.0,
+      "expected": 340.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 600.0,
+      "expected": 600.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 6.35,
+      "expected": 6.35,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1295040.916,
+      "expected": 1295040.916,
+      "tolerance": 1295.040916,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1295040.916,
+      "expected": 1295040.916,
+      "tolerance": 1295.040916,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1295042.596,
+      "expected": 1295040.916,
+      "tolerance": 12950.40916,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1324 triangles"
+    }
+  ]
+}

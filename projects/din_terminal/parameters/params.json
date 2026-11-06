@@ -1,0 +1,14 @@
+{
+ "pitch": 8.2,
+ "w_base": 50.0,
+ "w_mid": 36.0,
+ "w_top": 16.0,
+ "z_base": 20.0,
+ "z_mid": 32.0,
+ "h": 42.0,
+ "screw_d": 3.6,
+ "screw_depth": 6.0,
+ "wire": 4.0,
+ "wire_z": 10.0,
+ "wire_depth": 8.0
+}

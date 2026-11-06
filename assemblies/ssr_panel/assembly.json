@@ -1,0 +1,570 @@
+{
+ "_comment": "Generate the SSR panel: the part projects (panel, DIN rail, terminal, two PSUs) and assemblies/ssr_panel/assembly.json. Electronics only, no wiring.  Layout from the user's two photos. Scale: the SSR-RACK48 is 431.8 mm long (measured by the user) and spans 1230 px, so about 0.351 mm/px in the panel plane. Every position and size below is ESTIMATED except the rack itself. Assembly axes: the panel in the XY plane, x to the right, y up (as hung), z out of the panel toward the viewer, origin at the panel's bottom-left corner.",
+ "components": [
+  {
+   "part": "acrylic_panel"
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_1",
+   "at": [
+    183.95,
+    80.9,
+    6.35
+   ]
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_2",
+   "at": [
+    79.25,
+    80.9,
+    6.35
+   ]
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_3",
+   "at": [
+    183.95,
+    220.033,
+    6.35
+   ]
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_4",
+   "at": [
+    79.25,
+    220.033,
+    6.35
+   ]
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_5",
+   "at": [
+    183.95,
+    363.967,
+    6.35
+   ]
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_6",
+   "at": [
+    79.25,
+    363.967,
+    6.35
+   ]
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_7",
+   "at": [
+    183.95,
+    503.1,
+    6.35
+   ]
+  },
+  {
+   "part": "standoff_m25",
+   "label": "standoff_8",
+   "at": [
+    79.25,
+    503.1,
+    6.35
+   ]
+  },
+  {
+   "part": "ssr_rack48",
+   "at": [
+    188.75,
+    76.1,
+    17.35
+   ],
+   "rot_z": 90
+  },
+  {
+   "part": "din_rail_ts35",
+   "at": [
+    36.0,
+    79.0,
+    6.35
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_1",
+   "at": [
+    36.0,
+    521.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_2",
+   "at": [
+    36.0,
+    513.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_3",
+   "at": [
+    36.0,
+    505.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_4",
+   "at": [
+    36.0,
+    497.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_5",
+   "at": [
+    36.0,
+    489.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_6",
+   "at": [
+    36.0,
+    480.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_7",
+   "at": [
+    36.0,
+    472.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_8",
+   "at": [
+    36.0,
+    464.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_9",
+   "at": [
+    36.0,
+    456.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_10",
+   "at": [
+    36.0,
+    448.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_11",
+   "at": [
+    36.0,
+    439.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_12",
+   "at": [
+    36.0,
+    431.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_13",
+   "at": [
+    36.0,
+    423.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_14",
+   "at": [
+    36.0,
+    415.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_15",
+   "at": [
+    36.0,
+    407.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb1_16",
+   "at": [
+    36.0,
+    398.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_1",
+   "at": [
+    36.0,
+    366.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_2",
+   "at": [
+    36.0,
+    358.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_3",
+   "at": [
+    36.0,
+    350.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_4",
+   "at": [
+    36.0,
+    342.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_5",
+   "at": [
+    36.0,
+    334.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_6",
+   "at": [
+    36.0,
+    325.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_7",
+   "at": [
+    36.0,
+    317.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_8",
+   "at": [
+    36.0,
+    309.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_9",
+   "at": [
+    36.0,
+    301.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_10",
+   "at": [
+    36.0,
+    293.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_11",
+   "at": [
+    36.0,
+    284.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_12",
+   "at": [
+    36.0,
+    276.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_13",
+   "at": [
+    36.0,
+    268.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_14",
+   "at": [
+    36.0,
+    260.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_15",
+   "at": [
+    36.0,
+    252.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb2_16",
+   "at": [
+    36.0,
+    243.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_1",
+   "at": [
+    36.0,
+    211.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_2",
+   "at": [
+    36.0,
+    203.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_3",
+   "at": [
+    36.0,
+    195.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_4",
+   "at": [
+    36.0,
+    187.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_5",
+   "at": [
+    36.0,
+    179.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_6",
+   "at": [
+    36.0,
+    170.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_7",
+   "at": [
+    36.0,
+    162.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_8",
+   "at": [
+    36.0,
+    154.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_9",
+   "at": [
+    36.0,
+    146.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_10",
+   "at": [
+    36.0,
+    138.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_11",
+   "at": [
+    36.0,
+    129.8,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_12",
+   "at": [
+    36.0,
+    121.6,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_13",
+   "at": [
+    36.0,
+    113.4,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_14",
+   "at": [
+    36.0,
+    105.2,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_15",
+   "at": [
+    36.0,
+    97.0,
+    13.85
+   ]
+  },
+  {
+   "part": "din_terminal",
+   "label": "tb3_16",
+   "at": [
+    36.0,
+    88.8,
+    13.85
+   ]
+  },
+  {
+   "part": "psu_lrs350",
+   "label": "psu_lrs350_375",
+   "at": [
+    311.0,
+    375.0,
+    6.35
+   ]
+  },
+  {
+   "part": "psu_lrs150",
+   "label": "psu_lrs150_211",
+   "at": [
+    311.0,
+    211.0,
+    6.35
+   ]
+  },
+  {
+   "part": "psu_lrs150",
+   "label": "psu_lrs150_31",
+   "at": [
+    311.0,
+    31.0,
+    6.35
+   ]
+  }
+ ],
+ "expected": {
+  "_comment": "panel 340 x 600; z from the panel back to the tallest part (LRS-350, 6.35 + 115)",
+  "bbox": [
+   340.0,
+   600.0,
+   121.35
+  ],
+  "views": [
+   "isometric",
+   "top",
+   "front"
+  ],
+  "allowed_interference": []
+ }
+}
