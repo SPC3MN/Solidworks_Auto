@@ -13,7 +13,8 @@ layout.json keys (all optional except "board"):
   headers:   [{x, y, cols, rows, pitch, block_h, pin, pin_h}]  pin headers on top
   packages/parts: as rpi_dac_pro (kinds from scripts/details.py), x/y in mm
   blocks:    [{ref, x, y, l, w, h, z0}]         plain boxes starting at height z0
-  cyls:      [{ref, x, y, d, h, z0, bore_d?, bore_depth?}]  vertical cylinders (shafts, mounts);
+  cyls:      [{ref, x, y, d, h, z0, bore_d?, bore_depth?, round_top?}]  vertical cylinders (shafts, mounts,
+             LED domes); round_top = fillet radius on the top edge (< h and <= d/2), for rounded bumps;
              the bore is cut down from the top, bore_depth deep (default: all the way)
   side_cyls: [{ref, x, z, d, len, bore_d?}]     cylinders along -y from y = 0 (jack noses)
   under:     [{ref, x, y, l, w, h}]              boxes hanging below the board (from z = 0 down)
@@ -30,7 +31,7 @@ import pathlib
 
 import details
 import tracks
-from swlib import Part, circle, rect
+from swlib import NOTHING, Part, _invoke, circle, rect
 
 
 def _board(lay):
@@ -98,6 +99,34 @@ def build(app, lay):
         holes += [circle(x, y, g["d"]) for g in lay.get("thru", []) for x, y in _thru_points(g)]
         if holes:  # through the PCB only, so parts lying over a hole stay whole
             part.cut("Holes", holes, depth=T, z=T, down=True)
+        # Rounded tops last: one fillet feature per radius, edges picked on the top circle
+        rgroups = {}
+        for c in lay.get("cyls", []):
+            if c.get("round_top"):
+                # pick the flat top FACE at its centre: filleting a face rounds its edges, here
+                # just the top circle. Picking the small circle edges by point rounded only
+                # 12 of 48 domes on the SSR-RACK48.
+                rgroups.setdefault(c["round_top"], []).append((c["x"], c["y"], c["z0"] + c["h"]))
+        if rgroups:
+            # Point picks are resolved along the view direction; in a slanted view a pick can
+            # hit a neighbouring dome first (46 of 48). Look straight down -Z (the Front plane view).
+            part.doc.ShowNamedView2("*Front", 1)
+            _invoke(part.doc, "ViewZoomtofit2")
+        for n, (r, pts) in enumerate(sorted(rgroups.items())):
+            part.fillet(f"RoundTop{n}", r, pts, kind="FACE")
+            # Verify: a face picked at a dome's centre that still has the full top area wasn't
+            # rounded (2 of 48 on the SSR-RACK48, cause unknown). Round those one at a time.
+            d = next(c["d"] for c in lay["cyls"] if c.get("round_top") == r)
+            full = math.pi * (d / 2) ** 2
+            missed = []
+            for p in pts:
+                part.doc.ClearSelection2(True)
+                if part.ext.SelectByID2("", "FACE", p[0] / 1000, p[1] / 1000, p[2] / 1000, False, 0, NOTHING, 0):
+                    a = part.doc.SelectionManager.GetSelectedObject6(1, -1).GetArea * 1e6
+                    if abs(a - full) < 0.01 * full:
+                        missed.append(p)
+            for k, p in enumerate(missed):
+                part.fillet(f"RoundTop{n}_fix{k}", r, [p], kind="FACE")
         part.link({"pcb_t": T}, {"D1@PCB": "pcb_t"})
     finally:
         part.close_prefs()
@@ -118,6 +147,10 @@ def expected(lay):
     v["blocks"] = sum(b["l"] * b["w"] * b["h"] for b in lay.get("blocks", []))
     v["cyls"] = sum(disc(c["d"]) * c["h"] - disc(c.get("bore_d", 0)) * c.get("bore_depth", c["h"])
                     for c in lay.get("cyls", []))
+    # a top-edge fillet of radius r removes a spandrel r^2 (1 - pi/4) swept round the axis at its
+    # centroid, (R - r) + 2r / (3 (4 - pi)) from the axis (Pappus)
+    v["round_tops"] = -sum(r * r * (1 - math.pi / 4) * 2 * math.pi * (c["d"] / 2 - r + 2 * r / (3 * (4 - math.pi)))
+                           for c in lay.get("cyls", []) if (r := c.get("round_top")))
     v["under"] = sum(u["l"] * u["w"] * u["h"] for u in lay.get("under", []))
     v["cuts"] = -sum(c["l"] * c["w"] * c["depth"] for c in lay.get("cuts", []))
     v["side_cyls"] = sum((disc(s["d"]) - disc(s.get("bore_d", 0))) * s["len"] for s in lay.get("side_cyls", []))

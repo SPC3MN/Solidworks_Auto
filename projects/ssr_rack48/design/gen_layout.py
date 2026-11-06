@@ -13,8 +13,10 @@ P = pathlib.Path(__file__).resolve().parents[1]
 L, W, T = 431.8, 114.3, 1.6
 H_TOP = 38.1                     # given: 1.5 in overall with relays
 MOD_L, MOD_W = 30.0, 64.0        # quad module footprint (x by y), estimated
-DOT_H = 0.5                      # LED dome / screw head height above the module top
-MOD_H = H_TOP - T - DOT_H        # module body, so the LEDs top out at 38.1
+DOT_H = 1.2                      # LED dome height above the module top
+LED_R = 1.1                      # LED dome: top-edge round on a 3 mm cylinder
+SCREW_H = 0.5                    # hold-down screw head height
+MOD_H = H_TOP - T - DOT_H        # module body, so the LED domes top out at 38.1
 MOD_Y = 48.0                     # module centre y (modules span y 16..80)
 PITCH = 34.5                     # module pitch inside a group of 4
 GROUPS = [L / 6, L / 2, 5 * L / 6]
@@ -30,8 +32,9 @@ def build_layout():
         blocks.append({"ref": f"SSR{i}", "x": x, "y": MOD_Y, "l": MOD_L, "w": MOD_W, "h": round(MOD_H, 3), "z0": T})
         for dx in (-6, 6):
             for dy in (-24, -14):  # LED cluster toward the terminal end
-                cyls.append({"ref": f"SSR{i}_LED", "x": x + dx, "y": MOD_Y + dy, "d": 3.0, "h": DOT_H, "z0": z_top})
-        cyls.append({"ref": f"SSR{i}_screw", "x": x, "y": MOD_Y + 26, "d": 5.0, "h": DOT_H, "z0": z_top})
+                cyls.append({"ref": f"SSR{i}_LED", "x": x + dx, "y": MOD_Y + dy, "d": 3.0, "h": DOT_H, "z0": z_top,
+                             "round_top": LED_R})
+        cyls.append({"ref": f"SSR{i}_screw", "x": x, "y": MOD_Y + 26, "d": 5.0, "h": SCREW_H, "z0": z_top})
     for gi, g in enumerate(GROUPS, 1):
         blocks.append({"ref": f"TB{gi}", "x": round(g, 3), "y": TB_Y, "l": round(TB_N * TB_P, 3), "w": TB_W,
                        "h": TB_H, "z0": T})

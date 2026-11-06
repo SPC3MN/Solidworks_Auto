@@ -314,11 +314,13 @@ class Part:
         f.Name = name
         return f
 
-    def fillet(self, name, radius, edge_points):
-        """Constant-radius fillet on edges found at the given (x, y, z) mm points."""
+    def fillet(self, name, radius, edge_points, kind="EDGE"):
+        """Constant-radius fillet on the edges (kind="EDGE") or on all edges of the faces
+        (kind="FACE") found at the given (x, y, z) mm points. Face picks are more reliable for
+        small features: a face is a bigger target than its edge."""
         self.doc.ClearSelection2(True)
         for i, (x, y, z) in enumerate(edge_points):
-            self.ext.SelectByID2("", "EDGE", x * MM, y * MM, z * MM, i > 0, 1, NOTHING, 0)
+            self.ext.SelectByID2("", kind, x * MM, y * MM, z * MM, i > 0, 1, NOTHING, 0)
         f = self.fm.FeatureFillet3(195, radius * MM, 0, 0, 0, 0, 0, NOTHING, NOTHING, NOTHING,
                                    NOTHING, NOTHING, NOTHING, NOTHING)
         return self._name(f, name, "fillet")

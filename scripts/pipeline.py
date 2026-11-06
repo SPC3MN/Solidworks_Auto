@@ -163,14 +163,27 @@ def run(project, overrides):
               spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
         # Features too small for the total-volume tolerance (e.g. copper tracks):
         # suppress each one, measure what it contributed, then restore it.
+        # A name ending in "*" covers every feature with that prefix (e.g. "RoundTop*" for a
+        # fillet plus its follow-up fixes); they are suppressed together.
+        def select_features(fname):
+            names = [fname]
+            if fname.endswith("*"):
+                names, f = [], model.FirstFeature
+                while f is not None:
+                    if f.Name.startswith(fname[:-1]):
+                        names.append(f.Name)
+                    f = f.GetNextFeature
+            model.ClearSelection2(True)
+            return names and all(model.Extension.SelectByID2(n, "BODYFEATURE", 0, 0, 0, i > 0, 0, NOTHING, 0)
+                                 for i, n in enumerate(names))
+
         for fname, fs in spec.get("features", {}).items():
             got = None
-            if model.Extension.SelectByID2(fname, "BODYFEATURE", 0, 0, 0, False, 0, NOTHING, 0):
+            if select_features(fname):
                 swlib._invoke(model, "EditSuppress2")
                 model.ForceRebuild3(False)
                 got = round(m["volume"] - measure(model)["volume"], 4)
-                model.ClearSelection2(True)
-                model.Extension.SelectByID2(fname, "BODYFEATURE", 0, 0, 0, False, 0, NOTHING, 0)
+                select_features(fname)
                 swlib._invoke(model, "EditUnsuppress2")
                 model.ForceRebuild3(False)
                 model.ClearSelection2(True)

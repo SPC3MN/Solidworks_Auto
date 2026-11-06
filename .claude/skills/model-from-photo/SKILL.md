@@ -91,6 +91,12 @@ For a new port type (micro-USB, DC barrel, audio jack, SD slot):
 2. Make sure every cut lies inside solid material.
 3. Add a row here.
 
+**Rounded bumps** (LED domes, button caps): give a `cyls` entry `"round_top": r` (r < h and r <= d/2).
+The builder rounds the top edges by picking each flat top face, checks every face, and rounds any it
+missed again in a `_fix` feature. Rounds this small fall inside the total-volume tolerance, so add
+`"features": {"RoundTop*": {"expected": <minus the sum>, "rel_tol": 0.01}}` to spec.json. Each round
+removes r^2 (1 - pi/4) * 2 pi (R - r + 2r / (3 (4 - pi))), where R = d/2.
+
 Do not add PCB tracks. The user removed them. `scripts/tracks.py` stays unused unless the user asks for tracks.
 
 ## 4. Write the project (`projects/<snake_name>/`)
@@ -156,9 +162,10 @@ Never claim success without a passing report.
 
 Stack HATs on 11 mm standoffs (`standoff_m25`) with `header_2x20_female`.
 
-## 7b. Drawing (when asked)
+## 7b. Drawing: only when the user asks
 
-Use the `dimensioned-drawing` skill. For photo or part-number parts, dimension only the general
+Don't make a drawing by default, and don't treat it as a step of this workflow. Make one only when
+the user asks for it, using the `dimensioned-drawing` skill. For photo or part-number parts, dimension only the general
 size, the thickness and the mounting holes, which is what fastener and enclosure design needs.
 Never dimension ports (RCA, USB-C, HDMI and so on).
 

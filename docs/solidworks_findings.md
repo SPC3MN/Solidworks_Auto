@@ -218,3 +218,10 @@ Every script run leaves its part open in SolidWorks (Part1, Part2 and so on).
 ## Drawing picks on large sheets (SSR-RACK48, 2026-11-06)
 
 `SelectByID2` on a drawing uses a screen-pixel tolerance. With a whole A2 sheet in the window, a Ø3.5 hole at 1:2 was about 1.5 px wide, so picks on it chose the board edge 3 mm away. The result was wrong values or angles (1570.8 = 90°). `drawing.py` now calls `ViewZoomTo2` on a ±8 mm box of the sheet, which works in sheet coordinates for drawings, before each pick, and `ViewZoomtofit2` before saving.
+
+## Rounded tops on small cylinders (SSR-RACK48 LED domes, 2026-11-06)
+
+- Fillet edges picked by points on 48 Ø3 circle edges: only 12 were rounded, whether the pick was at 0° or 45°.
+- Picking each flat top face at its centre and filleting the faces: 46 of 48 were rounded. Looking down −Z first didn't change that. The 2 misses (SSR7) have no obvious cause.
+- `board_build` now checks each top face's area after the fillet and rounds any still at full size in a `_fix` feature. The pipeline's feature check takes a prefix (`RoundTop*`) and suppresses those features together. That result was exact: −98.229 mm³.
+- The total-volume check can't see this. The rounds are 0.01 % of the volume, under the 0.1 % tolerance, and the first build passed all 9 checks with no rounds at all. Small features need a `features` check.
