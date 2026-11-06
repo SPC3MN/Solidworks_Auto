@@ -1,0 +1,51 @@
+{
+ "assembly": "ssr_panel",
+ "time": "2026-11-06T13:11:28",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 62,
+   "actual": 62
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 340.0,
+   "actual": 340.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 600.0,
+   "actual": 600.0
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 121.35,
+   "actual": 121.35
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  340.0,
+  600.0,
+  121.35
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\ssr_panel\\ssr_panel.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\ssr_panel\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\ssr_panel\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\ssr_panel\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\ssr_panel\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\ssr_panel\\renders\\wireframe\\top.png"
+ ]
+}

@@ -10,7 +10,7 @@ straight-on photo, so about 0.351 mm/px. Everything except the rack is **estimat
 | Item | Part | Placement (panel x right, y up, z out) |
 |---|---|---|
 | Acrylic panel, 340 x 600 x 6.35 | `acrylic_panel` | origin at the bottom-left corner |
-| SSR-RACK48 | `ssr_rack48` | turned 90° (length vertical, terminals facing right); centre (131.6, 292), on 8 standoffs |
+| SSR-RACK48 | `ssr_rack48` | turned 90° (length vertical, terminals facing right); centre (170, 292): centred across the panel width (user), on 8 standoffs |
 | Standoffs, M2.5 x 11 | `standoff_m25` x 8 | on the rack's hole pattern; matching Ø3 holes in the panel |
 | TS35 DIN rail, 469 long | `din_rail_ts35` | centre line x = 36, from y = 79 |
 | Screw terminals, 8.2 pitch | `din_terminal` x 48 | 3 groups of 16 (given by the user), tops at y = 530, 375, 220 |
