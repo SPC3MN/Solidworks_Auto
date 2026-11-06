@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "project": "usbc_power_cable",
+  "timestamp": "20261105T214159",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\usbc_power_cable\\.staging\\20261105T214159\\usbc_power_cable.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "_comment": "Local: y = 0 is the face of the Pi 5 USB-C receptacle; the plug overmould butts against it (the receptacle is modelled solid, so the plug tongue is left out). Sizes ESTIMATED (official 27 W supply lead).",
+    "segments": [
+      {
+        "name": "Overmould",
+        "shape": "rect",
+        "w": 11,
+        "h": 6,
+        "y0": 0,
+        "len": 20
+      },
+      {
+        "name": "Strain_relief",
+        "shape": "circle",
+        "d": 4.5,
+        "y0": -20,
+        "len": 8
+      },
+      {
+        "name": "Cable",
+        "shape": "circle",
+        "d": 3.5,
+        "y0": -28,
+        "len": 42
+      }
+    ]
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        11.0,
+        70.0,
+        6.0
+      ],
+      "volume": 1851.322,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 55685,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 11.0,
+      "expected": 11,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 70.0,
+      "expected": 70,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 6.0,
+      "expected": 6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1851.322,
+      "expected": 1851.3,
+      "tolerance": 1.8513,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1851.322,
+      "expected": 1851.322,
+      "tolerance": 1.851322,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1848.772,
+      "expected": 1851.322,
+      "tolerance": 18.51322,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "310 triangles"
+    }
+  ]
+}

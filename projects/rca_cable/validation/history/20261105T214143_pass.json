@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "project": "rca_cable",
+  "timestamp": "20261105T214143",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rca_cable\\.staging\\20261105T214143\\rca_cable.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "_comment": "Local: y = 0 is the HAT RCA barrel tip, the cable runs toward -y. All sizes ESTIMATED (typical moulded RCA lead).",
+    "segments": [
+      {
+        "name": "Handle",
+        "shape": "circle",
+        "d": 11,
+        "y0": 0,
+        "len": 20
+      },
+      {
+        "name": "Sleeve",
+        "shape": "ring",
+        "od": 10,
+        "id": 8,
+        "y0": 0,
+        "len": 7,
+        "fwd": true
+      },
+      {
+        "name": "Centre_pin",
+        "shape": "circle",
+        "d": 1.5,
+        "y0": 0,
+        "len": 7,
+        "fwd": true
+      },
+      {
+        "name": "Strain_relief",
+        "shape": "circle",
+        "d": 7,
+        "y0": -20,
+        "len": 10
+      },
+      {
+        "name": "Cable",
+        "shape": "circle",
+        "d": 5,
+        "y0": -30,
+        "len": 30
+      }
+    ],
+    "drop": {
+      "d": 5,
+      "y": -60,
+      "len": 40
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        11.0,
+        69.5,
+        45.5
+      ],
+      "volume": 3877.671,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 83308,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 11.0,
+      "expected": 11,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 69.5,
+      "expected": 69.5,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 45.5,
+      "expected": 45.5,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 3877.671,
+      "expected": 3877.7,
+      "tolerance": 3.8777,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 3877.652,
+      "expected": 3877.671,
+      "tolerance": 3.877671,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 3860.552,
+      "expected": 3877.671,
+      "tolerance": 38.77671,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1132 triangles"
+    }
+  ]
+}

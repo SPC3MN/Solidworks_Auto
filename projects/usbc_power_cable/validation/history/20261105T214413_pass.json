@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "project": "usbc_power_cable",
+  "timestamp": "20261105T214413",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\usbc_power_cable\\.staging\\20261105T214413\\usbc_power_cable.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "_comment": "Local: y = 0 is the face of the Pi 5 USB-C receptacle; the overmould butts against it. The lead curves round toward -x along the table plane. Sizes ESTIMATED (official 27 W supply lead). Path coords are (x, y) on the z = 0 plane.",
+    "segments": [
+      {
+        "name": "Overmould",
+        "shape": "rect",
+        "w": 11,
+        "h": 6,
+        "y0": 0,
+        "len": 20
+      },
+      {
+        "name": "Strain_relief",
+        "shape": "circle",
+        "d": 4.5,
+        "y0": -20,
+        "len": 8
+      }
+    ],
+    "lead": {
+      "d": 3.5,
+      "axis": "z",
+      "at": 0,
+      "path": [
+        [
+          "line",
+          [
+            0,
+            -28
+          ],
+          [
+            0,
+            -33
+          ]
+        ],
+        [
+          "arc",
+          [
+            -30,
+            -33
+          ],
+          [
+            0,
+            -33
+          ],
+          [
+            -30,
+            -63
+          ]
+        ],
+        [
+          "line",
+          [
+            -30,
+            -63
+          ],
+          [
+            -70,
+            -63
+          ]
+        ]
+      ]
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        75.5,
+        64.75,
+        6.0
+      ],
+      "volume": 2333.57,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 74955,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 75.5,
+      "expected": 75.5,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 64.75,
+      "expected": 64.75,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 6.0,
+      "expected": 6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 2333.57,
+      "expected": 2333.58,
+      "tolerance": 2.33358,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 2333.57,
+      "expected": 2333.57,
+      "tolerance": 2.3335700000000004,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 2328.825,
+      "expected": 2333.57,
+      "tolerance": 23.335700000000003,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "2090 triangles"
+    }
+  ]
+}

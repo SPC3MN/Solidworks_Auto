@@ -162,9 +162,10 @@ def _run(app, folder, spec, exp):
     doc.Extension.SaveAs3(str(path), 0, 1, swlib.NOTHING, swlib.NOTHING, e, byref())
     (folder / "exports").mkdir(exist_ok=True)
     doc.Extension.SaveAs3(str(folder / "exports" / f"{name}.step"), 0, 1, swlib.NOTHING, swlib.NOTHING, byref(), byref())
-    renders = swlib.render(doc, folder / "renders")
+    views = tuple(exp.get("views", ("isometric", "top", "front", "right")))
+    renders = swlib.render(doc, folder / "renders", views=views)
     _invoke(doc, "ViewDisplayWireframe")
-    wf = swlib.render(doc, folder / "renders" / "wireframe", views=("isometric", "front"))
+    wf = swlib.render(doc, folder / "renders" / "wireframe", views=views[:2] if len(views) > 1 else views)
     for png in wf:
         recolor(png)
     _invoke(doc, "ViewDisplayShaded")

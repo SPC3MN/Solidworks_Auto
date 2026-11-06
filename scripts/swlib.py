@@ -100,6 +100,35 @@ def slot(cx, cy, length, width, angle_deg=0.0):
     return draw
 
 
+def path(segments):
+    """Open sketch path for a sweep: ["line", (a, b), (a, b)] or ["arc", centre, start, end]
+    (arcs under 180 degrees; direction worked out from the points)."""
+    def draw(sm):
+        for seg in segments:
+            if seg[0] == "line":
+                (a1, b1), (a2, b2) = _p(*seg[1]), _p(*seg[2])
+                sm.CreateLine(a1, b1, 0, a2, b2, 0)
+            else:
+                (ca, cb), (sa, sb), (ea, eb) = (_p(*q) for q in seg[1:])
+                ccw = (sa - ca) * (eb - cb) - (sb - cb) * (ea - ca) > 0
+                sm.CreateArc(ca, cb, 0, sa, sb, 0, ea, eb, 0, 1 if ccw else -1)
+    return draw
+
+
+def path_length(segments):
+    total = 0.0
+    for seg in segments:
+        if seg[0] == "line":
+            total += math.dist(seg[1], seg[2])
+        else:
+            c, s, e = seg[1:]
+            r = math.dist(c, s)
+            a = abs(math.atan2((s[0] - c[0]) * (e[1] - c[1]) - (s[1] - c[1]) * (e[0] - c[0]),
+                               (s[0] - c[0]) * (e[0] - c[0]) + (s[1] - c[1]) * (e[1] - c[1])))
+            total += r * a
+    return total
+
+
 # ---------------------------------------------------------------- render
 
 # SolidWorks' named views assume +Y is up; our models use +Z as height, so build
@@ -244,6 +273,16 @@ class Part:
             True, False, down, END_BLIND, 0, depth * MM, 0, False, False, False, False,
             0, 0, False, False, False, False, True, True, True, 0, 0, False))
         return self._name(f, name, "extrude")
+
+    def sweep(self, name, d, segments, at=0.0, axis="x"):
+        """Solid round bar of diameter d along an open path (see path()) drawn on the plane
+        at offset `at` normal to `axis`. Uses the built-in circular profile, so no profile sketch."""
+        self._sketch(at, [path(segments)], axis)
+        self.doc.ClearSelection2(True)
+        self._last_sketch.Select2(False, 4)  # mark 4 = sweep path
+        f = self.fm.InsertProtrusionSwept4(False, False, 0, False, False, 0, 0, False, 0, 0, 0, 0,
+                                           True, True, True, 0, True, True, d * MM, 0)
+        return self._name(f, name, "sweep")
 
     def cut(self, name, profiles, depth=None, z=0.0, down=True, axis="z"):
         """Remove material: sketch on the plane at offset z along `axis`, cut `depth`

@@ -160,6 +160,16 @@ It saves the assembly and a STEP export, renders it, and writes a report to
 - Wireframe renders are recoloured to charcoal lines on off-white (`recolor()`).
   Grey values of 190 and above are SolidWorks' background gradient and become the flat off-white background.
 
+## Sweeps (swlib.Part.sweep)
+
+- `InsertProtrusionSwept4` has a built-in circular profile: pass `CircularProfile=True` and
+  `CircularProfileDiameter`, then only the path sketch is needed, selected with mark 4.
+  Arguments: `(False, False, 0, False, False, 0, 0, False, 0, 0, 0, 0, True, True, True, 0, True, True, d, 0)`.
+- The path is built from lines and tangent arcs (`swlib.path`), so its length is exact. The volume is
+  πr² × length whenever the bend radius is larger than r, and the cable parts matched it to 0.1 %.
+- There's no type info on the live object (`GetTypeInfo` gives "Invalid index"). Read the
+  signatures from `sldworks.tlb` with `pythoncom.LoadTypeLib` instead.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and

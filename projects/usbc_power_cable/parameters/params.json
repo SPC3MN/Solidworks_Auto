@@ -1,0 +1,12 @@
+{
+  "_comment": "Local: y = 0 is the face of the Pi 5 USB-C receptacle; the overmould butts against it. The lead curves round toward -x along the table plane. Sizes ESTIMATED (official 27 W supply lead). Path coords are (x, y) on the z = 0 plane.",
+  "segments": [
+    {"name": "Overmould", "shape": "rect", "w": 11, "h": 6, "y0": 0, "len": 20},
+    {"name": "Strain_relief", "shape": "circle", "d": 4.5, "y0": -20, "len": 8}
+  ],
+  "lead": {"d": 3.5, "axis": "z", "at": 0, "path": [
+    ["line", [0, -28], [0, -33]],
+    ["arc", [-30, -33], [0, -33], [-30, -63]],
+    ["line", [-30, -63], [-70, -63]]
+  ]}
+}

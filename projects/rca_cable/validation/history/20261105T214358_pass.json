@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "project": "rca_cable",
+  "timestamp": "20261105T214358",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rca_cable\\.staging\\20261105T214358\\rca_cable.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "_comment": "Local: y = 0 is the HAT RCA barrel tip, the plug runs toward -y. The lead bends down to a table 70.2 mm below the socket axis (the exploded HAT's RCA axis is at z 70.2) and runs on along it. Sizes ESTIMATED (typical moulded RCA lead). Path coords are (y, z) on the x = 0 plane.",
+    "segments": [
+      {
+        "name": "Handle",
+        "shape": "circle",
+        "d": 11,
+        "y0": 0,
+        "len": 20
+      },
+      {
+        "name": "Sleeve",
+        "shape": "ring",
+        "od": 10,
+        "id": 8,
+        "y0": 0,
+        "len": 7,
+        "fwd": true
+      },
+      {
+        "name": "Centre_pin",
+        "shape": "circle",
+        "d": 1.5,
+        "y0": 0,
+        "len": 7,
+        "fwd": true
+      },
+      {
+        "name": "Strain_relief",
+        "shape": "circle",
+        "d": 7,
+        "y0": -20,
+        "len": 10
+      }
+    ],
+    "lead": {
+      "d": 5,
+      "axis": "x",
+      "at": 0,
+      "path": [
+        [
+          "line",
+          [
+            -30,
+            0
+          ],
+          [
+            -35,
+            0
+          ]
+        ],
+        [
+          "arc",
+          [
+            -35,
+            -20
+          ],
+          [
+            -35,
+            0
+          ],
+          [
+            -55,
+            -20
+          ]
+        ],
+        [
+          "line",
+          [
+            -55,
+            -20
+          ],
+          [
+            -55,
+            -52.7
+          ]
+        ],
+        [
+          "arc",
+          [
+            -70,
+            -52.7
+          ],
+          [
+            -55,
+            -52.7
+          ],
+          [
+            -70,
+            -67.7
+          ]
+        ],
+        [
+          "line",
+          [
+            -70,
+            -67.7
+          ],
+          [
+            -110,
+            -67.7
+          ]
+        ]
+      ]
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        11.0,
+        117.0,
+        75.7
+      ],
+      "volume": 5100.923,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 83361,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 11.0,
+      "expected": 11,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 117.0,
+      "expected": 117,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 75.7,
+      "expected": 75.7,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 5100.923,
+      "expected": 5100.93,
+      "tolerance": 5.10093,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 5100.923,
+      "expected": 5100.923,
+      "tolerance": 5.100923,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 5077.535,
+      "expected": 5100.923,
+      "tolerance": 51.00923,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "3350 triangles"
+    }
+  ]
+}

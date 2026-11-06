@@ -1,0 +1,1 @@
+{"_comment": "Expected values come from requirements.md.", "solid_bodies": {"expected": 1}, "bbox.x": {"expected": 75.5, "tol": 0.05}, "bbox.y": {"expected": 64.75, "tol": 0.05}, "bbox.z": {"expected": 6, "tol": 0.05}, "volume": {"expected": 2333.58, "rel_tol": 0.001}, "export.step": {"rel_tol": 0.001}, "export.stl": {"rel_tol": 0.01}}

@@ -1,0 +1,48 @@
+{
+ "assembly": "pi5_dac_hat_exploded",
+ "time": "2026-11-05T21:45:18",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 11,
+   "actual": 11
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 147.6,
+   "actual": 147.6
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 175.5,
+   "actual": 175.5
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 76.2,
+   "actual": 76.2
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  147.6,
+  175.5,
+  76.2
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat_exploded\\pi5_dac_hat_exploded.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat_exploded\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat_exploded\\renders\\wireframe\\isometric.png"
+ ]
+}
