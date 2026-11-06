@@ -15,13 +15,13 @@ be promoted (`design/<name>.SLDPRT`, with a passing pipeline report). Run Python
 ## What the script does for you
 
 - **Views.** It saves Z-up named views (`Z_front`, `Z_top`, `Z_right`, `Z_isometric`) into the part,
-  because the stock SolidWorks views assume Y is up. They are laid out in third angle:
-  - the front elevation looks along +y, with x to the right and z up;
-  - the top (plan) view sits above it;
-  - the right view (looking along −x, y to the right) sits to the right of the front view;
-  - the isometric view goes top right, at half scale if needed.
-- **Scale and sheet.** The scale is the largest standard one that fits the views and room for
-  dimensions on an A3 sheet (`"sheet": [420, 297]`): 10, 5, 4, 2 or 1 to 1, or 1:2, 1:4, 1:5 or 1:10.
+  because the stock SolidWorks views assume Y is up. The template, chosen by the user, is:
+  - a left column with the top (plan) view stacked above the front elevation (looking along +y, x right,
+    z up), aligned in third angle and at one scale;
+  - a large isometric view filling the right side above the title block, at its own (usually larger) scale;
+  - room reserved above and to the left of the column for the dimension rows the spec puts there.
+- **Scale and sheet.** The column's scale is the largest standard one that fits in about 55 % of the sheet width
+  on an A3 sheet (`"sheet": [420, 297]`): 10, 5, 4, 2 or 1 to 1, or 1:2, 1:4, 1:5 or 1:10.
   The sheet itself stays at 1:1. It draws the border and title block (title, project, source,
   scale, units, projection, date) and the notes.
 - **Picking edges.** It selects each picked edge by mapping its model point (mm) through
@@ -82,9 +82,9 @@ That usually comes to 5 to 8 dimensions.
   and say so in `_comment`.
 - **Pick each diameter at a different angle on its circle** (45°, 135°, 225°, ...). Each label
   leaves the view in the direction of its pick, so labels picked at the same angle collide.
-- **Never use a side whose gap another view shares:** `top/below`, `front/above`, `front/right`
-  and `right/left`. The script refuses to run if you do. Put front-view dimensions on the left or
-  below, and top-view dimensions above, left or right.
+- **Never use the gap the two stacked views share:** `top/below` and `front/above`. The script refuses
+  to run if you do. Put top-view dimensions above, left or right, and front-view dimensions left,
+  below or right. Use only the top and front views; there is no separate right view in this template.
 - Within a side, the script stacks shorter dimensions nearer the part.
 
 ## Loop

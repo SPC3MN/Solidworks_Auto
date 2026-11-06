@@ -1,0 +1,74 @@
+{
+ "part": "rpi_hq_camera",
+ "time": "2026-11-06T10:17:25",
+ "pass": true,
+ "scale": 2,
+ "bbox": [
+  38.0,
+  38.0,
+  13.5
+ ],
+ "dims": [
+  {
+   "label": "board size x",
+   "view": "top",
+   "expected": 38.0,
+   "actual": 38.0,
+   "pass": true
+  },
+  {
+   "label": "board size y",
+   "view": "top",
+   "expected": 38.0,
+   "actual": 38.0,
+   "pass": true
+  },
+  {
+   "label": "hole pitch x",
+   "view": "top",
+   "expected": 30.0,
+   "actual": 30.0,
+   "pass": true
+  },
+  {
+   "label": "hole pitch y",
+   "view": "top",
+   "expected": 30.0,
+   "actual": 30.0,
+   "pass": true
+  },
+  {
+   "label": "hole from left edge",
+   "view": "top",
+   "expected": 4.0,
+   "actual": 4.0,
+   "pass": true
+  },
+  {
+   "label": "hole dia (4x)",
+   "view": "top",
+   "expected": 2.7,
+   "actual": 2.7,
+   "pass": true
+  },
+  {
+   "label": "board thickness",
+   "view": "front",
+   "expected": 1.0,
+   "actual": 1.0,
+   "pass": true
+  },
+  {
+   "label": "overall height",
+   "view": "front",
+   "expected": 13.5,
+   "actual": 13.5,
+   "pass": true
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_hq_camera\\drawing\\rpi_hq_camera.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_hq_camera\\drawing\\rpi_hq_camera.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi_hq_camera\\drawing\\rpi_hq_camera.png"
+ ]
+}

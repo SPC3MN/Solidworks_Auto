@@ -15,7 +15,7 @@ drawing.json:
 {
   "title": "...", "sheet": [420, 297],            (mm; default A3 landscape)
   "scale": 2,                                      (optional; otherwise automatic)
-  "views": ["front", "top", "right", "isometric"],
+  "views": ["front", "top", "isometric"],          (template: top over front on the left, big iso right)
   "dims": [
     {"view": "top", "pick": [[x, y, z], [x, y, z]], "kind": "auto|h|v",
      "side": "left|right|above|below", "expect": 85.0, "tol": 0.01, "label": "PCB length"},
@@ -77,33 +77,45 @@ def footprints(bb):
     return {"front": (lx, lz), "top": (lx, ly), "right": (ly, lz), "isometric": (iso_w, iso_h)}
 
 
-def layout(bb, sheet, scale=None):
-    """Pick a scale and the sheet centre (mm) of each view (third angle: top above front, right of it)."""
+ISO_SCALES = [10, 8, 6, 5, 4, 3, 2.5, 2, 1.5, 1, 0.75, 1 / 2, 1 / 3, 1 / 4, 1 / 5, 1 / 10]
+GAP_ISO = 20  # sheet mm between the left column (and its right-side dimensions) and the isometric
+LEFT_MAX = 0.55  # the left column may take at most this share of the usable sheet width
+
+
+def layout(bb, sheet, scale=None, n_above=1, n_left=1):
+    """Sheet template: the top view stacked above the front elevation in a left column (third-angle
+    aligned, one scale), and a large isometric filling the right side above the title block, at its
+    own scale. Returns (scale, iso_scale, {view: sheet centre in mm})."""
     W, H = sheet
     fp = footprints(bb)
+    usable_w = W - 2 * MARGIN
+    top_room = 14 + 9 * n_above  # dimension rows stacked above the top view
+    left_room = 14 + 9 * n_left  # and to the left of the column
+    left_h_max = H - 2 * MARGIN - TB_H - GAP - 10 - top_room  # bottom band holds the notes
     for s in ([scale] if scale else SCALES):
         fw, fh = fp["front"][0] * s, fp["front"][1] * s
         tw, th = fp["top"][0] * s, fp["top"][1] * s
-        rw, rh = fp["right"][0] * s, fp["right"][1] * s
-        iso_s = s
-        iw, ih = fp["isometric"][0] * s, fp["isometric"][1] * s
-        if iw > 0.8 * max(rw, 60) or ih > th + GAP:  # shrink the isometric if it crowds the corner
-            iso_s = s / 2
-            iw, ih = iw / 2, ih / 2
-        col2 = max(rw, iw)
-        need_w = MARGIN * 2 + GAP * 3 + fw + col2
-        need_h = MARGIN * 2 + TB_H + GAP * 3 + fh + th
-        if need_w <= W and need_h <= H or scale:
-            x1 = MARGIN + GAP + fw / 2 + max(0, (W - need_w) / 2)  # centre the group across the sheet
-            y1 = MARGIN + TB_H + GAP + fh / 2
-            x2 = x1 + fw / 2 + GAP + col2 / 2
-            y2 = y1 + fh / 2 + GAP + th / 2
-            return s, iso_s, {"front": (x1, y1), "top": (x1, y2), "right": (x2, y1), "isometric": (x2, y2)}
-    raise RuntimeError("part does not fit the sheet at 1:10")
+        col = max(fw, tw)
+        if scale or (left_room + col <= LEFT_MAX * usable_w and fh + th <= left_h_max):
+            break
+    else:
+        raise RuntimeError("part does not fit the sheet at 1:10")
+    x1 = MARGIN + left_room + col / 2
+    # hang the stack from the top border, leaving room for the dimension rows above the top view
+    y_top = H - MARGIN - top_room - th / 2
+    y_front = y_top - th / 2 - GAP - fh / 2
+    # isometric: largest scale that fills the region right of the column, above the title block
+    rx0, rx1 = MARGIN + left_room + col + GAP_ISO, W - MARGIN - 10
+    ry0, ry1 = MARGIN + TB_H + 10, H - MARGIN - 10
+    iw0, ih0 = fp["isometric"]
+    iso_s = next((k for k in ISO_SCALES if iw0 * k <= rx1 - rx0 and ih0 * k <= ry1 - ry0), ISO_SCALES[-1])
+    return s, iso_s, {"front": (x1, y_front), "top": (x1, y_top),
+                      "isometric": ((rx0 + rx1) / 2, (ry0 + ry1) / 2)}
 
 
-# Gaps between views are shared, so these sides would put two views' dimensions on top of each other
-SHARED_GAPS = {("top", "below"), ("front", "above"), ("front", "right"), ("right", "left")}
+# The gap between the stacked views is shared, so these sides would put both views' dimensions
+# on top of each other; the right side faces the isometric across GAP_ISO and is fine.
+SHARED_GAPS = {("top", "below"), ("front", "above")}
 
 
 def scale_text(s):
@@ -125,9 +137,11 @@ class Drawing:
         self.doc = app.NewDocument(app.GetUserPreferenceStringValue(10), 12, self.sheet[0] * MM, self.sheet[1] * MM)
         self.doc.GetCurrentSheet.SetSize(12, self.sheet[0] * MM, self.sheet[1] * MM)
         self.doc.GetCurrentSheet.SetScale(1, 1, False, False)  # sheet sketch and notes at 1:1
-        self.scale, self.iso_scale, centres = layout(self.bb, self.sheet, spec.get("scale"))
+        n_above = sum(1 for d in spec["dims"] if d["view"] == "top" and d.get("side") == "above")
+        n_left = max(sum(1 for d in spec["dims"] if d["view"] == v and d.get("side") == "left") for v in ("top", "front"))
+        self.scale, self.iso_scale, centres = layout(self.bb, self.sheet, spec.get("scale"), max(1, n_above), max(1, n_left))
         self.views = {}
-        for name in spec.get("views", ["front", "top", "right", "isometric"]):
+        for name in spec.get("views", ["front", "top", "isometric"]):
             cx, cy = centres[name]
             v = self.doc.CreateDrawViewFromModelView3(self.part_path, "Z_" + name, cx * MM, cy * MM, 0)
             if v is None:
