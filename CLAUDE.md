@@ -18,6 +18,10 @@ without asking.
 
 ## Photo → model workflow
 
+The full, refined process (photos *and* part numbers, builder choice, detail
+levels, assemblies) is the project skill `.claude/skills/model-from-photo`
+(`/model-from-photo`). The summary below still applies.
+
 When the user sends a picture of an object to model:
 
 1. **Read the picture.** Identify the object, its main shapes (block, tray, plate,
@@ -57,7 +61,7 @@ Never claim success without a passing pipeline report in `validation/history/`.
 
 - Extrudes and cuts on planes normal to Z (`axis="z"`, profile coords (x, y)) or
   normal to Y (`axis="y"`, profile coords (x, z)), e.g. connectors that stick out
-  sideways. No X-normal planes, revolve, sweep or loft yet.
+  sideways. X-normal planes work too (profile coords (y, z)). `Part.sweep` makes round bars along line/arc paths (cables). No revolve or loft yet.
 - Keep profile edges from partly overlapping existing model edges. SolidWorks
   rejects such sketches (see findings).
 - Swept-in sketches aren't dimensioned. Only extrusion depths and shell thickness
