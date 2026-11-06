@@ -157,8 +157,8 @@ It saves the assembly and a STEP export, renders it, and writes a report to
   touching faces don't count. A probe with the HAT lowered to z = 8 reported
   the expected socket, standoff and pin collisions, so a run that finds none is meaningful.
 - The HAT model had its far hole line at y = 53 instead of 52.5 (58 Ã— 49 pattern). Fixed with `hole_pitch_y`.
-- Wireframe renders are recoloured to charcoal lines on off-white (`recolor()`).
-  Grey values of 190 and above are SolidWorks' background gradient and become the flat off-white background.
+- Wireframe renders are recoloured to off-white lines on charcoal (`recolor()`).
+  Grey values of 190 and above are SolidWorks' background gradient and become the flat charcoal background.
 
 ## Sweeps (swlib.Part.sweep)
 
