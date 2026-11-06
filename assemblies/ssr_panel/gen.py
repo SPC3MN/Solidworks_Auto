@@ -27,7 +27,7 @@ TERM = {"pitch": 8.2, "w_base": 50.0, "w_mid": 36.0, "w_top": 16.0, "z_base": 20
 GROUPS = [(530.0, 16), (375.0, 16), (220.0, 16)]  # (top y, terminal count): 3 groups of 16 (user)
 PSU_X = 311.0
 PSUS = [  # (project, length, outward height, bottom y)
-    ("psu_lrs350", 215.0, 115.0, 375.0),
+    ("psu_lrs150", 159.0, 97.0, 391.0),   # all three the same size (user)
     ("psu_lrs150", 159.0, 97.0, 211.0),
     ("psu_lrs150", 159.0, 97.0, 31.0),
 ]
@@ -138,7 +138,7 @@ All detail sizes are **estimated**.
     top = max(T + STANDOFF + 38.1, T + RAIL["h"] + TERM["h"], max(T + H for _, _, H, _ in PSUS))
     asm = {"_comment": __doc__.strip().replace("\n", " "),
            "components": comps,
-           "expected": {"_comment": "panel 340 x 600; z from the panel back to the tallest part (LRS-350, 6.35 + 115)",
+           "expected": {"_comment": "panel 340 x 600; z from the panel back to the tallest part (the supplies, 6.35 + 97)",
                         "bbox": [PANEL["l"], PANEL["w"], round(top, 3)], "views": ["isometric", "top", "front"],
                         "allowed_interference": []}}
     out = pathlib.Path(__file__).parent / "assembly.json"

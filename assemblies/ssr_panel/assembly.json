@@ -526,11 +526,11 @@
    ]
   },
   {
-   "part": "psu_lrs350",
-   "label": "psu_lrs350_375",
+   "part": "psu_lrs150",
+   "label": "psu_lrs150_391",
    "at": [
     311.0,
-    375.0,
+    391.0,
     6.35
    ]
   },
@@ -554,11 +554,11 @@
   }
  ],
  "expected": {
-  "_comment": "panel 340 x 600; z from the panel back to the tallest part (LRS-350, 6.35 + 115)",
+  "_comment": "panel 340 x 600; z from the panel back to the tallest part (the supplies, 6.35 + 97)",
   "bbox": [
    340.0,
    600.0,
-   121.35
+   103.35
   ],
   "views": [
    "isometric",
