@@ -1,0 +1,133 @@
+{
+ "title": "grindmn crank knob (part 7) - machining",
+ "source": "requirements.md 5.7, length 28.4",
+ "section": true,
+ "views": [
+  "front",
+  "top",
+  "isometric"
+ ],
+ "_comment": "Front is section A-A through the axis (y = 0); picks lie on section-face edges at (x, 0, z). Axial steps on the -x side from the bottom face. Single picks in the top view are diameters of circles seen from above.",
+ "dims": [
+  {
+   "label": "bottom bore depth",
+   "view": "front",
+   "pick": [
+    [
+     -7,
+     0,
+     0
+    ],
+    [
+     -4,
+     0,
+     4
+    ]
+   ],
+   "expect": 4.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "length",
+   "view": "front",
+   "pick": [
+    [
+     -7,
+     0,
+     0
+    ],
+    [
+     -7,
+     0,
+     28.4
+    ]
+   ],
+   "expect": 28.4,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "top bore depth",
+   "view": "front",
+   "pick": [
+    [
+     -4,
+     0,
+     24.4
+    ],
+    [
+     -7,
+     0,
+     28.4
+    ]
+   ],
+   "expect": 4.0,
+   "kind": "v",
+   "side": "right"
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "pick": [
+    [
+     -10,
+     0,
+     14
+    ],
+    [
+     10,
+     0,
+     14
+    ]
+   ],
+   "expect": 20.0,
+   "kind": "h",
+   "side": "below",
+   "suffix": " before knurl"
+  },
+  {
+   "label": "bearing bores",
+   "view": "front",
+   "pick": [
+    [
+     -5,
+     0,
+     2
+    ],
+    [
+     5,
+     0,
+     2
+    ]
+   ],
+   "expect": 10.0,
+   "kind": "h",
+   "side": "below",
+   "suffix": " H7 both ends"
+  },
+  {
+   "label": "through",
+   "view": "front",
+   "pick": [
+    [
+     -3,
+     0,
+     14
+    ],
+    [
+     3,
+     0,
+     14
+    ]
+   ],
+   "expect": 6.0,
+   "kind": "h",
+   "side": "below"
+  }
+ ],
+ "notes": [
+  "6061-T6, diamond knurl 0.8 pitch on the grip, clear anodise. Two MF105ZZ flanged bearings, one in each end bore.",
+  "General tolerance ISO 2768-mK, linear +-0.1, angles +-0.5 deg; all edges 0.3x45; Ra 1.6 on fits, 3.2 elsewhere."
+ ]
+}

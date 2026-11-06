@@ -1,0 +1,114 @@
+{
+ "part": "grindmn_dial",
+ "time": "2026-11-06T15:47:32",
+ "pass": true,
+ "scale": 1,
+ "bbox": [
+  63.4,
+  63.4,
+  34.5
+ ],
+ "dims": [
+  {
+   "label": "flange height",
+   "view": "front",
+   "expected": 6.0,
+   "actual": 6.0,
+   "pass": true
+  },
+  {
+   "label": "thread end",
+   "view": "front",
+   "expected": 15.0,
+   "actual": 15.0,
+   "pass": true
+  },
+  {
+   "label": "pilot start",
+   "view": "front",
+   "expected": 16.5,
+   "actual": 16.5,
+   "pass": true
+  },
+  {
+   "label": "hub bottom",
+   "view": "front",
+   "expected": 24.5,
+   "actual": 24.5,
+   "pass": true
+  },
+  {
+   "label": "bearing lip",
+   "view": "front",
+   "expected": 27.5,
+   "actual": 27.5,
+   "pass": true
+  },
+  {
+   "label": "overall height",
+   "view": "front",
+   "expected": 34.5,
+   "actual": 34.5,
+   "pass": true
+  },
+  {
+   "label": "flange",
+   "view": "front",
+   "expected": 63.4,
+   "actual": 63.4,
+   "pass": true
+  },
+  {
+   "label": "thread",
+   "view": "front",
+   "expected": 58.0,
+   "actual": 58.0,
+   "pass": true
+  },
+  {
+   "label": "relief",
+   "view": "front",
+   "expected": 56.5,
+   "actual": 56.5,
+   "pass": true
+  },
+  {
+   "label": "groove root",
+   "view": "front",
+   "expected": 55.0,
+   "actual": 55.0,
+   "pass": true
+  },
+  {
+   "label": "ring bore",
+   "view": "front",
+   "expected": 50.0,
+   "actual": 50.0,
+   "pass": true
+  },
+  {
+   "label": "bearing seat",
+   "view": "top",
+   "expected": 22.0,
+   "actual": 22.0,
+   "pass": true
+  },
+  {
+   "label": "bearing lip hole",
+   "view": "top",
+   "expected": 18.5,
+   "actual": 18.5,
+   "pass": true
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_dial\\drawing\\grindmn_dial.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_dial\\drawing\\grindmn_dial.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_dial\\drawing\\grindmn_dial.png"
+ ]
+}

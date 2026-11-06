@@ -1,0 +1,58 @@
+{
+ "part": "grindmn_lid",
+ "time": "2026-11-06T15:45:13",
+ "pass": true,
+ "scale": 2,
+ "bbox": [
+  64.0,
+  64.0,
+  6.0
+ ],
+ "dims": [
+  {
+   "label": "spigot height",
+   "view": "front",
+   "expected": 2.0,
+   "actual": 2.0,
+   "pass": true
+  },
+  {
+   "label": "overall",
+   "view": "front",
+   "expected": 6.0,
+   "actual": 6.0,
+   "pass": true
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "expected": 64.0,
+   "actual": 64.0,
+   "pass": true
+  },
+  {
+   "label": "spigot",
+   "view": "front",
+   "expected": 39.9,
+   "actual": 39.9,
+   "pass": true
+  },
+  {
+   "label": "centre hole",
+   "view": "front",
+   "expected": 10.0,
+   "actual": 10.0,
+   "pass": true
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_lid\\drawing\\grindmn_lid.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_lid\\drawing\\grindmn_lid.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_lid\\drawing\\grindmn_lid.png"
+ ]
+}

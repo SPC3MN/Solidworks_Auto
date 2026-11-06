@@ -1,0 +1,182 @@
+{
+ "title": "grindmn bridge (part 2) - machining",
+ "source": "projects/grindmn/requirements.md section 5.2",
+ "section": true,
+ "views": [
+  "front",
+  "top",
+  "isometric"
+ ],
+ "_comment": "Front is section A-A through the axis (y = 0); picks lie on section-face edges at (x, 0, z). Axial steps on the -x side from the bottom face. Single picks in the top view are diameters of circles seen from above.",
+ "dims": [
+  {
+   "label": "thickness",
+   "view": "front",
+   "pick": [
+    [
+     -20.5,
+     0,
+     0
+    ],
+    [
+     -20.5,
+     0,
+     8
+    ]
+   ],
+   "expect": 8.0,
+   "kind": "v",
+   "side": "left",
+   "suffix": " +-0.05"
+  },
+  {
+   "label": "bearing seat depth",
+   "view": "front",
+   "pick": [
+    [
+     -13,
+     0,
+     0
+    ],
+    [
+     -10,
+     0,
+     7
+    ]
+   ],
+   "expect": 7.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "groove width",
+   "view": "front",
+   "pick": [
+    [
+     21.5,
+     0,
+     3
+    ],
+    [
+     21.5,
+     0,
+     5
+    ]
+   ],
+   "expect": 2.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "groove from top",
+   "view": "front",
+   "pick": [
+    [
+     21.5,
+     0,
+     5
+    ],
+    [
+     20.5,
+     0,
+     8
+    ]
+   ],
+   "expect": 3.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "pick": [
+    [
+     -22,
+     0,
+     6.5
+    ],
+    [
+     22,
+     0,
+     6.5
+    ]
+   ],
+   "expect": 44.0,
+   "kind": "h",
+   "side": "below",
+   "suffix": " h6"
+  },
+  {
+   "label": "bearing seat",
+   "view": "front",
+   "pick": [
+    [
+     -11,
+     0,
+     3.5
+    ],
+    [
+     11,
+     0,
+     3.5
+    ]
+   ],
+   "expect": 22.0,
+   "kind": "h",
+   "side": "below",
+   "suffix": " J6"
+  },
+  {
+   "label": "lip hole",
+   "view": "front",
+   "pick": [
+    [
+     -9.25,
+     0,
+     7.5
+    ],
+    [
+     9.25,
+     0,
+     7.5
+    ]
+   ],
+   "expect": 18.5,
+   "kind": "h",
+   "side": "below"
+  },
+  {
+   "label": "ring ID",
+   "view": "top",
+   "pick": [
+    [
+     -3.2993,
+     18.7113,
+     8
+    ]
+   ],
+   "expect": 19.0,
+   "suffix": " (ring ID dia 38)"
+  },
+  {
+   "label": "hub OD",
+   "view": "top",
+   "pick": [
+    [
+     -14.0954,
+     5.1303,
+     8
+    ]
+   ],
+   "expect": 15.0,
+   "suffix": " (hub dia 30)"
+  }
+ ],
+ "notes": [
+  "6061-T6, clear anodise, bearing bore masked. OD and bearing bore in ONE lathe setup; spokes on a mill.",
+  "3 spokes 5.0 wide, full 8 thick, at 60/180/300 deg (between the dial spokes). Bearing seat 22 J6 x 7 from the bottom onto a 1.0 lip.",
+  "Screw groove on the OD at 0 deg: 15 deg arc, 2.0 wide, 1.0 deep, centred 4.0 below the top face (M4 tip sits in it).",
+  "Runout: bearing seat 0.005 to OD; top face perpendicular 0.01 to OD.",
+  "General tolerance ISO 2768-mK, linear +-0.1, angles +-0.5 deg; all edges 0.3x45; Ra 1.6 on fits, 3.2 elsewhere."
+ ]
+}

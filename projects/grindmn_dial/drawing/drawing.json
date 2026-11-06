@@ -1,0 +1,259 @@
+{
+ "title": "grindmn grind dial (part 3) - machining",
+ "source": "projects/grindmn/requirements.md section 5.1",
+ "section": true,
+ "views": [
+  "front",
+  "top",
+  "isometric"
+ ],
+ "_comment": "Front is section A-A through the axis (y = 0); picks lie on section-face edges at (x, 0, z). Axial steps on the -x side from the bottom face. Single picks in the top view are diameters of circles seen from above.",
+ "dims": [
+  {
+   "label": "flange height",
+   "view": "front",
+   "pick": [
+    [
+     -28,
+     0,
+     0
+    ],
+    [
+     -30.5,
+     0,
+     6
+    ]
+   ],
+   "expect": 6.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "thread end",
+   "view": "front",
+   "pick": [
+    [
+     -28,
+     0,
+     0
+    ],
+    [
+     -28.6,
+     0,
+     15
+    ]
+   ],
+   "expect": 15.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "pilot start",
+   "view": "front",
+   "pick": [
+    [
+     -28,
+     0,
+     0
+    ],
+    [
+     -27.9,
+     0,
+     16.5
+    ]
+   ],
+   "expect": 16.5,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "hub bottom",
+   "view": "front",
+   "pick": [
+    [
+     -28,
+     0,
+     0
+    ],
+    [
+     -12,
+     0,
+     24.5
+    ]
+   ],
+   "expect": 24.5,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "bearing lip",
+   "view": "front",
+   "pick": [
+    [
+     -28,
+     0,
+     0
+    ],
+    [
+     -10,
+     0,
+     27.5
+    ]
+   ],
+   "expect": 27.5,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "overall height",
+   "view": "front",
+   "pick": [
+    [
+     -28,
+     0,
+     0
+    ],
+    [
+     -26,
+     0,
+     34.5
+    ]
+   ],
+   "expect": 34.5,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "flange",
+   "view": "front",
+   "pick": [
+    [
+     -31.7,
+     0,
+     3
+    ],
+    [
+     31.7,
+     0,
+     3
+    ]
+   ],
+   "expect": 63.4,
+   "kind": "h",
+   "side": "below",
+   "suffix": " before knurl"
+  },
+  {
+   "label": "thread",
+   "view": "front",
+   "pick": [
+    [
+     -29,
+     0,
+     10
+    ],
+    [
+     29,
+     0,
+     10
+    ]
+   ],
+   "expect": 58.0,
+   "kind": "h",
+   "side": "below",
+   "prefix": "M58x1-6g "
+  },
+  {
+   "label": "relief",
+   "view": "front",
+   "pick": [
+    [
+     -28.25,
+     0,
+     15.75
+    ],
+    [
+     28.25,
+     0,
+     15.75
+    ]
+   ],
+   "expect": 56.5,
+   "kind": "h",
+   "side": "below"
+  },
+  {
+   "label": "groove root",
+   "view": "front",
+   "pick": [
+    [
+     -27.5,
+     0,
+     25
+    ],
+    [
+     27.5,
+     0,
+     25
+    ]
+   ],
+   "expect": 55.0,
+   "kind": "h",
+   "side": "below",
+   "suffix": " groove root"
+  },
+  {
+   "label": "ring bore",
+   "view": "front",
+   "pick": [
+    [
+     -25,
+     0,
+     10
+    ],
+    [
+     25,
+     0,
+     10
+    ]
+   ],
+   "expect": 50.0,
+   "kind": "h",
+   "side": "below"
+  },
+  {
+   "label": "bearing seat",
+   "view": "top",
+   "pick": [
+    [
+     -9.5263,
+     5.5,
+     34.5
+    ]
+   ],
+   "expect": 22.0,
+   "suffix": " J6"
+  },
+  {
+   "label": "bearing lip hole",
+   "view": "top",
+   "pick": [
+    [
+     -8.0107,
+     -4.625,
+     27.5
+    ]
+   ],
+   "expect": 18.5
+  }
+ ],
+ "notes": [
+  "303 stainless. Thread, pilot and bearing seat in ONE lathe setup; spokes and grooves on a mill with rotary axis. Bead blast, passivate.",
+  "Pilot dia 56 h5 (0/-0.013) measured across the lands. 60 axial V-grooves, 90 deg incl., 0.5 deep, 6.000 deg pitch (+-0.05), z 16.5..34.5.",
+  "Thread M58x1-6g external, right-hand single-start. Bearing seat 22 J6 (+0.008/-0.005), 7 deep from the top, on the 18.5 lip.",
+  "3 spokes 5.0 wide x 10 tall at 0/120/240 deg join the hub (OD 30) to the ring (z 24.5..34.5).",
+  "Runout to pilot: bearing seat 0.005, thread pitch dia 0.03. Lip face perpendicular 0.01 to pilot.",
+  "Flange: diamond knurl 0.8 pitch; 60-line scale etched on its chamfer.",
+  "General tolerance ISO 2768-mK, linear +-0.1, angles +-0.5 deg; all edges 0.3x45; Ra 1.6 on fits, 3.2 elsewhere."
+ ]
+}

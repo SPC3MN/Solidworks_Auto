@@ -1,0 +1,217 @@
+{
+ "title": "grindmn shaft (part 4) - machining",
+ "source": "projects/grindmn/requirements.md section 5.3",
+ "section": true,
+ "views": [
+  "front",
+  "top",
+  "isometric"
+ ],
+ "_comment": "Front is section A-A through the axis (y = 0); picks lie on section-face edges at (x, 0, z). Axial steps on the -x side from the bottom face. Single picks in the top view are diameters of circles seen from above.",
+ "dims": [
+  {
+   "label": "collar bottom",
+   "view": "front",
+   "pick": [
+    [
+     -2,
+     0,
+     0
+    ],
+    [
+     -4.5,
+     0,
+     8
+    ]
+   ],
+   "expect": 8.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "collar top",
+   "view": "front",
+   "pick": [
+    [
+     -2,
+     0,
+     0
+    ],
+    [
+     -4.5,
+     0,
+     11
+    ]
+   ],
+   "expect": 11.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "burr drive end",
+   "view": "front",
+   "pick": [
+    [
+     -2,
+     0,
+     0
+    ],
+    [
+     -3.6,
+     0,
+     41
+    ]
+   ],
+   "expect": 41.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "spring e-clip groove",
+   "view": "front",
+   "pick": [
+    [
+     -2,
+     0,
+     0
+    ],
+    [
+     -3.5,
+     0,
+     70.5
+    ]
+   ],
+   "expect": 70.5,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "length",
+   "view": "front",
+   "pick": [
+    [
+     -2,
+     0,
+     0
+    ],
+    [
+     -2,
+     0,
+     121
+    ]
+   ],
+   "expect": 121.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "crank flat start",
+   "view": "front",
+   "pick": [
+    [
+     2,
+     0,
+     0
+    ],
+    [
+     3.6,
+     0,
+     109
+    ]
+   ],
+   "expect": 109.0,
+   "kind": "v",
+   "side": "right"
+  },
+  {
+   "label": "collar",
+   "view": "front",
+   "pick": [
+    [
+     -5,
+     0,
+     9.5
+    ],
+    [
+     5,
+     0,
+     9.5
+    ]
+   ],
+   "expect": 10.0,
+   "kind": "h",
+   "side": "below",
+   "suffix": " +-0.02"
+  },
+  {
+   "label": "shaft",
+   "view": "front",
+   "pick": [
+    [
+     -4,
+     0,
+     60
+    ],
+    [
+     4,
+     0,
+     60
+    ]
+   ],
+   "expect": 8.0,
+   "kind": "h",
+   "side": "below",
+   "suffix": " +-0.02"
+  },
+  {
+   "label": "burr flats",
+   "view": "front",
+   "pick": [
+    [
+     -3.25,
+     0,
+     26
+    ],
+    [
+     3.25,
+     0,
+     26
+    ]
+   ],
+   "expect": 6.5,
+   "kind": "h",
+   "side": "below",
+   "prefix": "flats ",
+   "suffix": " +-0.02"
+  },
+  {
+   "label": "crank flat",
+   "view": "front",
+   "pick": [
+    [
+     -4,
+     0,
+     115
+    ],
+    [
+     3.2,
+     0,
+     115
+    ]
+   ],
+   "expect": 7.2,
+   "kind": "h",
+   "side": "below",
+   "prefix": "flat to ",
+   "suffix": " +-0.02"
+  }
+ ],
+ "notes": [
+  "416 stainless (magnetic). Turn between centres; grind both bearing seats in one setup between centres.",
+  "Bearing seats dia 8 h5 (0/-0.006), Ra 0.4: z 0..8 and z 89..100. Runout seats to each other 0.005; burr drive 0.01 to seats; straightness 0.01.",
+  "E-clip grooves DIN 6799 size 6: dia 6.0 x 0.74 wide at z 41.2 and z 70.5. Collar faces perpendicular 0.01.",
+  "Burr drive z 11..41: two flats 6.50 across, symmetric 0.02 (ASSUMED, cut to the inner burr bore). Crank flat z 109..121, one side.",
+  "Top end: 0.3 chamfer, face flat (magnet seats on it).",
+  "General tolerance ISO 2768-mK, linear +-0.1, angles +-0.5 deg; all edges 0.3x45; Ra 1.6 on fits, 3.2 elsewhere."
+ ]
+}

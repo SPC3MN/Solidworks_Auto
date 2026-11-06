@@ -1,0 +1,156 @@
+{
+ "part": "grindmn_tube",
+ "time": "2026-11-06T15:43:41",
+ "pass": true,
+ "scale": 1,
+ "bbox": [
+  64.0,
+  64.0,
+  122.0
+ ],
+ "dims": [
+  {
+   "label": "thread length",
+   "view": "front",
+   "expected": 10.0,
+   "actual": 10.0,
+   "pass": true
+  },
+  {
+   "label": "relief top",
+   "view": "front",
+   "expected": 12.0,
+   "actual": 12.0,
+   "pass": true
+  },
+  {
+   "label": "pilot seat top",
+   "view": "front",
+   "expected": 30.0,
+   "actual": 30.0,
+   "pass": true
+  },
+  {
+   "label": "burr shoulder",
+   "view": "front",
+   "expected": 50.0,
+   "actual": 50.0,
+   "pass": true
+  },
+  {
+   "label": "bridge seat bottom",
+   "view": "front",
+   "expected": 111.0,
+   "actual": 111.0,
+   "pass": true
+  },
+  {
+   "label": "bridge shoulder",
+   "view": "front",
+   "expected": 119.0,
+   "actual": 119.0,
+   "pass": true
+  },
+  {
+   "label": "overall length",
+   "view": "front",
+   "expected": 122.0,
+   "actual": 122.0,
+   "pass": true
+  },
+  {
+   "label": "plunger hole",
+   "view": "front",
+   "expected": 5.0,
+   "actual": 5.0,
+   "pass": true
+  },
+  {
+   "label": "groove from bottom",
+   "view": "front",
+   "expected": 14.65,
+   "actual": 14.65,
+   "pass": true
+  },
+  {
+   "label": "groove width",
+   "view": "front",
+   "expected": 2.7,
+   "actual": 2.7,
+   "pass": true
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "expected": 64.0,
+   "actual": 64.0,
+   "pass": true
+  },
+  {
+   "label": "groove floor",
+   "view": "front",
+   "expected": 60.9,
+   "actual": 60.9,
+   "pass": true
+  },
+  {
+   "label": "relief",
+   "view": "front",
+   "expected": 59.0,
+   "actual": 59.0,
+   "pass": true
+  },
+  {
+   "label": "thread minor",
+   "view": "front",
+   "expected": 56.92,
+   "actual": 56.92,
+   "pass": true
+  },
+  {
+   "label": "pilot seat",
+   "view": "front",
+   "expected": 56.0,
+   "actual": 56.0,
+   "pass": true
+  },
+  {
+   "label": "burr seat (datum A)",
+   "view": "front",
+   "expected": 54.0,
+   "actual": 54.0,
+   "pass": true
+  },
+  {
+   "label": "hopper",
+   "view": "front",
+   "expected": 50.0,
+   "actual": 50.0,
+   "pass": true
+  },
+  {
+   "label": "bridge seat",
+   "view": "front",
+   "expected": 44.0,
+   "actual": 44.0,
+   "pass": true
+  },
+  {
+   "label": "top lip",
+   "view": "front",
+   "expected": 40.0,
+   "actual": 40.0,
+   "pass": true
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_tube\\drawing\\grindmn_tube.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_tube\\drawing\\grindmn_tube.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_tube\\drawing\\grindmn_tube.png"
+ ]
+}

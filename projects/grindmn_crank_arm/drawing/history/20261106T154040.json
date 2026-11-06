@@ -1,0 +1,84 @@
+{
+ "part": "grindmn_crank_arm",
+ "time": "2026-11-06T15:40:40",
+ "pass": false,
+ "scale": 1,
+ "bbox": [
+  100.0,
+  14.0,
+  6.0
+ ],
+ "dims": [
+  {
+   "label": "length",
+   "view": "top",
+   "expected": 100.0,
+   "actual": 65.4498,
+   "pass": false
+  },
+  {
+   "label": "screw pitch",
+   "view": "top",
+   "expected": 12.0,
+   "actual": 12.0,
+   "pass": true
+  },
+  {
+   "label": "screw to knob hole",
+   "view": "top",
+   "expected": 91.0,
+   "actual": 91.0,
+   "pass": true
+  },
+  {
+   "label": "width at hub",
+   "view": "top",
+   "expected": 14.0,
+   "actual": 21.2312,
+   "pass": false
+  },
+  {
+   "label": "width at knob",
+   "view": "top",
+   "expected": 12.0,
+   "actual": 44.2187,
+   "pass": false
+  },
+  {
+   "label": "screw hole (2x)",
+   "view": "top",
+   "expected": 3.4,
+   "actual": 3.4,
+   "pass": true
+  },
+  {
+   "label": "knob hole",
+   "view": "top",
+   "expected": 3.3,
+   "actual": 3.3,
+   "pass": true
+  },
+  {
+   "label": "thickness",
+   "pass": false,
+   "error": "no edge at pick [-8, 0, 0]"
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": false,
+   "overlaps": {
+    "knob hole": [
+     "length",
+     "width at knob",
+     "view:top",
+     "view:isometric"
+    ]
+   }
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_arm\\drawing\\grindmn_crank_arm.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_arm\\drawing\\grindmn_crank_arm.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_arm\\drawing\\grindmn_crank_arm.png"
+ ]
+}

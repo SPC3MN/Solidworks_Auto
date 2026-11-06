@@ -1,0 +1,86 @@
+{
+ "part": "grindmn_crank_hub",
+ "time": "2026-11-06T15:37:20",
+ "pass": true,
+ "scale": 5,
+ "bbox": [
+  18.0,
+  18.0,
+  19.0
+ ],
+ "dims": [
+  {
+   "label": "bore depth",
+   "view": "front",
+   "expected": 12.0,
+   "actual": 12.0,
+   "pass": true
+  },
+  {
+   "label": "magnet pocket top",
+   "view": "front",
+   "expected": 15.0,
+   "actual": 15.0,
+   "pass": true
+  },
+  {
+   "label": "slot floor",
+   "view": "front",
+   "expected": 16.0,
+   "actual": 16.0,
+   "pass": true
+  },
+  {
+   "label": "screw hole depth",
+   "view": "front",
+   "expected": 6.0,
+   "actual": 6.0,
+   "pass": true
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "expected": 18.0,
+   "actual": 18.0,
+   "pass": true
+  },
+  {
+   "label": "bore flat",
+   "view": "front",
+   "expected": 7.2,
+   "actual": 7.2,
+   "pass": true
+  },
+  {
+   "label": "magnet pocket",
+   "view": "front",
+   "expected": 6.0,
+   "actual": 6.0,
+   "pass": true
+  },
+  {
+   "label": "screw pitch",
+   "view": "front",
+   "expected": 12.0,
+   "actual": 12.0,
+   "pass": true
+  },
+  {
+   "label": "slot width",
+   "view": "top",
+   "expected": 14.0,
+   "actual": 14.0,
+   "pass": true
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_hub\\drawing\\grindmn_crank_hub.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_hub\\drawing\\grindmn_crank_hub.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_hub\\drawing\\grindmn_crank_hub.png"
+ ]
+}

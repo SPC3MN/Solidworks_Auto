@@ -1,0 +1,44 @@
+{
+ "part": "grindmn_spacer",
+ "time": "2026-11-06T15:45:01",
+ "pass": true,
+ "scale": 10,
+ "bbox": [
+  11.5,
+  11.5,
+  2.0
+ ],
+ "dims": [
+  {
+   "label": "thickness",
+   "view": "front",
+   "expected": 2.0,
+   "actual": 2.0,
+   "pass": true
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "expected": 11.5,
+   "actual": 11.5,
+   "pass": true
+  },
+  {
+   "label": "ID",
+   "view": "front",
+   "expected": 8.2,
+   "actual": 8.2,
+   "pass": true
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_spacer\\drawing\\grindmn_spacer.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_spacer\\drawing\\grindmn_spacer.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_spacer\\drawing\\grindmn_spacer.png"
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "part": "grindmn_bridge",
+ "time": "2026-11-06T15:42:43",
+ "pass": true,
+ "scale": 2,
+ "bbox": [
+  44.0,
+  44.0,
+  8.0
+ ],
+ "dims": [
+  {
+   "label": "thickness",
+   "view": "front",
+   "expected": 8.0,
+   "actual": 8.0,
+   "pass": true
+  },
+  {
+   "label": "bearing seat depth",
+   "view": "front",
+   "expected": 7.0,
+   "actual": 7.0,
+   "pass": true
+  },
+  {
+   "label": "groove width",
+   "view": "front",
+   "expected": 2.0,
+   "actual": 2.0,
+   "pass": true
+  },
+  {
+   "label": "groove from top",
+   "view": "front",
+   "expected": 3.0,
+   "actual": 3.0,
+   "pass": true
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "expected": 44.0,
+   "actual": 44.0,
+   "pass": true
+  },
+  {
+   "label": "bearing seat",
+   "view": "front",
+   "expected": 22.0,
+   "actual": 22.0,
+   "pass": true
+  },
+  {
+   "label": "lip hole",
+   "view": "front",
+   "expected": 18.5,
+   "actual": 18.5,
+   "pass": true
+  },
+  {
+   "label": "ring ID",
+   "view": "top",
+   "expected": 19.0,
+   "actual": 19.0,
+   "pass": true
+  },
+  {
+   "label": "hub OD",
+   "view": "top",
+   "expected": 15.0,
+   "actual": 15.0,
+   "pass": true
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bridge\\drawing\\grindmn_bridge.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bridge\\drawing\\grindmn_bridge.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bridge\\drawing\\grindmn_bridge.png"
+ ]
+}

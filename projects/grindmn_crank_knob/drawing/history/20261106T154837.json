@@ -1,0 +1,65 @@
+{
+ "part": "grindmn_crank_knob",
+ "time": "2026-11-06T15:48:37",
+ "pass": true,
+ "scale": 2,
+ "bbox": [
+  20.0,
+  20.0,
+  28.4
+ ],
+ "dims": [
+  {
+   "label": "bottom bore depth",
+   "view": "front",
+   "expected": 4.0,
+   "actual": 4.0,
+   "pass": true
+  },
+  {
+   "label": "length",
+   "view": "front",
+   "expected": 28.4,
+   "actual": 28.4,
+   "pass": true
+  },
+  {
+   "label": "top bore depth",
+   "view": "front",
+   "expected": 4.0,
+   "actual": 4.0,
+   "pass": true
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "expected": 20.0,
+   "actual": 20.0,
+   "pass": true
+  },
+  {
+   "label": "bearing bores",
+   "view": "front",
+   "expected": 10.0,
+   "actual": 10.0,
+   "pass": true
+  },
+  {
+   "label": "through",
+   "view": "front",
+   "expected": 6.0,
+   "actual": 6.0,
+   "pass": true
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_knob\\drawing\\grindmn_crank_knob.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_knob\\drawing\\grindmn_crank_knob.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_knob\\drawing\\grindmn_crank_knob.png"
+ ]
+}

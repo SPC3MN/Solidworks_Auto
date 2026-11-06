@@ -225,3 +225,13 @@ Every script run leaves its part open in SolidWorks (Part1, Part2 and so on).
 - Picking each flat top face at its centre and filleting the faces: 46 of 48 were rounded. Looking down −Z first didn't change that. The 2 misses (SSR7) have no obvious cause.
 - `board_build` now checks each top face's area after the fillet and rounds any still at full size in a `_fix` feature. The pipeline's feature check takes a prefix (`RoundTop*`) and suppresses those features together. That result was exact: −98.229 mm³.
 - The total-volume check can't see this. The rounds are 0.01 % of the volume, under the 0.1 % tolerance, and the first build passed all 9 checks with no rounds at all. Small features need a `features` check.
+
+## Section views in drawings (grindmn, 2026-11-06)
+
+- `drawing.py` `"section": true` replaces the front view with section A-A, cut along x through the origin in the top view.
+- The cut line must be drawn in the top view's own sketch (`ActivateView`, then `CreateLine` in view coordinates, model metres) and selected with `Select4`. Drawn in sheet coordinates it does not cut: the "section" is just the flipped outside view.
+- Drawn from +x to -x the section is z-up, x-right. Drawn from -x to +x it comes out upside down.
+- `CreateLine` sometimes throws "The server threw an exception" for one length (grindmn_lid at 74 mm) and works for a slightly longer one; `drawing.py` retries longer lengths.
+- Section-face boundaries are ordinary lines, so bore diameters (width between the two walls) and axial steps pick reliably. Width dimensions on a turned section get the diameter sign automatically.
+- `DisplayDimension.SetText`: 1 = prefix, 2 = suffix, 3 = callout above. A prefix replaces the automatic diameter sign.
+- Circles interrupted by spokes are arcs: a single pick gives the radius (R), not the diameter.

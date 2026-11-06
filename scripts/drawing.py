@@ -83,7 +83,7 @@ GAP_ISO = 20  # sheet mm between the left column (and its right-side dimensions)
 LEFT_MAX = 0.55  # the left column may take at most this share of the usable sheet width
 
 
-def layout(bb, sheet, scale=None, n_above=1, n_left=1):
+def layout(bb, sheet, scale=None, n_above=1, n_left=1, n_below=0):
     """Sheet template: the top view stacked above the front elevation in a left column (third-angle
     aligned, one scale), and a large isometric filling the right side above the title block, at its
     own scale. Returns (scale, iso_scale, {view: sheet centre in mm})."""
@@ -92,7 +92,8 @@ def layout(bb, sheet, scale=None, n_above=1, n_left=1):
     usable_w = W - 2 * MARGIN
     top_room = 14 + 9 * n_above  # dimension rows stacked above the top view
     left_room = 14 + 9 * n_left  # and to the left of the column
-    left_h_max = H - 2 * MARGIN - TB_H - GAP - 10 - top_room  # bottom band holds the notes
+    below_room = 9 * n_below  # dimension rows under the front view (section diameters)
+    left_h_max = H - 2 * MARGIN - TB_H - GAP - 10 - top_room - below_room  # bottom band holds the notes
     for s in ([scale] if scale else SCALES):
         fw, fh = fp["front"][0] * s, fp["front"][1] * s
         tw, th = fp["top"][0] * s, fp["top"][1] * s
@@ -140,9 +141,16 @@ class Drawing:
         self.doc.GetCurrentSheet.SetScale(1, 1, False, False)  # sheet sketch and notes at 1:1
         n_above = sum(1 for d in spec["dims"] if d["view"] == "top" and d.get("side") == "above")
         n_left = max(sum(1 for d in spec["dims"] if d["view"] == v and d.get("side") == "left") for v in ("top", "front"))
-        self.scale, self.iso_scale, centres = layout(self.bb, self.sheet, spec.get("scale"), max(1, n_above), max(1, n_left))
+        n_below = sum(1 for d in spec["dims"] if d["view"] == "front" and d.get("side") == "below")
+        if spec.get("section") and n_below:
+            n_below += 2  # the SECTION A-A label sits under the view
+        self.scale, self.iso_scale, centres = layout(self.bb, self.sheet, spec.get("scale"), max(1, n_above), max(1, n_left),
+                                                     n_below)
         self.views = {}
+        section = spec.get("section", False)
         for name in spec.get("views", ["front", "top", "isometric"]):
+            if section and name == "front":
+                continue  # replaced by the section A-A below
             cx, cy = centres[name]
             v = self.doc.CreateDrawViewFromModelView3(self.part_path, "Z_" + name, cx * MM, cy * MM, 0)
             if v is None:
@@ -152,12 +160,40 @@ class Drawing:
             self.views[name] = v
         self.doc.GetCurrentSheet.SetScale(1, 1, False, False)  # the first view auto-scales the sheet
         self.doc.EditRebuild3
+        if section:
+            self.views["front"] = self.section_view()
         # Re-centre: SolidWorks places the view's own box centre, which differs from the bbox centre
         for name, v in self.views.items():
             v.Position = arr([centres[name][0] * MM, centres[name][1] * MM])
         self.doc.EditRebuild3
         self.stack = {}
         self.placed = []  # (spec, DisplayDimension) in placement order
+
+    def section_view(self):
+        """Section A-A through the model origin along x, cut in the top view, standing in for the front
+        elevation (z up, x right). The cut line is drawn in the top view's own sketch, in view
+        coordinates, from +x to -x: drawn the other way the section comes out upside down, and drawn
+        in sheet coordinates it does not cut at all (both verified on grindmn_tube)."""
+        top = self.views["top"]
+        self.doc.ActivateView(top.Name)
+        ext = (max(abs(self.lo[0]), abs(self.lo[0] + self.bb[0])) + 5) * MM  # view sketch is in model units
+        self.doc.ClearSelection2(True)
+        ln = None
+        # Some line lengths make CreateLine throw (seen on grindmn_lid at 74 mm); retry a bit longer.
+        for k in (1.0, 1.3, 1.7, 2.2):
+            try:
+                ln = self.doc.SketchManager.CreateLine(ext * k, 0, 0, -ext * k, 0, 0)
+                break
+            except Exception as e:  # noqa: BLE001
+                print("section line retry:", e)
+        if ln is None or not ln.Select4(False, NOTHING):
+            raise RuntimeError("section line failed")
+        v = self.doc.CreateSectionViewAt5(0.1, 0.1, 0, "A", 0, None, 0)
+        if v is None:
+            raise RuntimeError("section view failed")
+        v.UseSheetScale = False
+        v.ScaleDecimal = self.scale
+        return v
 
     # -- geometry helpers
     def to_sheet(self, view, p):
@@ -184,6 +220,8 @@ class Drawing:
         if side == "above":
             return mx, o[3] + off
         if side == "below":
+            if view == "front" and self.spec.get("section"):
+                off += 16 * MM  # clear the SECTION A-A label under the view
             return mx, o[1] - off
         # "near" (diameters, radii): push the text out of the view along the line from the view
         # centre through the pick, to just past the outline, so it never sits on the part
@@ -222,6 +260,12 @@ class Drawing:
         doc.ClearSelection2(True)
         if dd is None:
             return {"label": d.get("label"), "pass": False, "error": "SolidWorks made no dimension"}
+        # DisplayDimension.SetText parts (verified on grindmn_tube): 1 = prefix, 2 = suffix,
+        # 3 = callout above. Width dims of turned sections get their diameter sign automatically.
+        if d.get("prefix"):
+            dd.SetText(1, d["prefix"])
+        if d.get("suffix"):
+            dd.SetText(2, d["suffix"])
         self.placed.append((d, dd))
         val = round(dd.GetDimension2(0).SystemValue / MM, 4)
         ok = abs(val - d["expect"]) <= d.get("tol", 0.01)

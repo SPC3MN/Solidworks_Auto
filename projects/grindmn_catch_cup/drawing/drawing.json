@@ -1,0 +1,146 @@
+{
+ "title": "grindmn catch cup (part 9) - machining",
+ "source": "projects/grindmn/requirements.md section 5.9",
+ "section": true,
+ "views": [
+  "front",
+  "top",
+  "isometric"
+ ],
+ "_comment": "Front is section A-A through the axis (y = 0); picks lie on section-face edges at (x, 0, z). Axial steps on the -x side from the bottom face. Single picks in the top view are diameters of circles seen from above.",
+ "dims": [
+  {
+   "label": "base",
+   "view": "front",
+   "pick": [
+    [
+     -20,
+     0,
+     0
+    ],
+    [
+     -15,
+     0,
+     4
+    ]
+   ],
+   "expect": 4.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "step",
+   "view": "front",
+   "pick": [
+    [
+     -20,
+     0,
+     0
+    ],
+    [
+     -31,
+     0,
+     44
+    ]
+   ],
+   "expect": 44.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "length",
+   "view": "front",
+   "pick": [
+    [
+     -20,
+     0,
+     0
+    ],
+    [
+     -33,
+     0,
+     74
+    ]
+   ],
+   "expect": 74.0,
+   "kind": "v",
+   "side": "left"
+  },
+  {
+   "label": "OD",
+   "view": "front",
+   "pick": [
+    [
+     -34,
+     0,
+     30
+    ],
+    [
+     34,
+     0,
+     30
+    ]
+   ],
+   "expect": 68.0,
+   "kind": "h",
+   "side": "below"
+  },
+  {
+   "label": "sleeve bore",
+   "view": "front",
+   "pick": [
+    [
+     -32.1,
+     0,
+     60
+    ],
+    [
+     32.1,
+     0,
+     60
+    ]
+   ],
+   "expect": 64.2,
+   "kind": "h",
+   "side": "below",
+   "suffix": " H8"
+  },
+  {
+   "label": "chamber",
+   "view": "front",
+   "pick": [
+    [
+     -30,
+     0,
+     25
+    ],
+    [
+     30,
+     0,
+     25
+    ]
+   ],
+   "expect": 60.0,
+   "kind": "h",
+   "side": "below"
+  },
+  {
+   "label": "corner radius",
+   "view": "front",
+   "pick": [
+    [
+     -29.4142,
+     0,
+     4.5858
+    ]
+   ],
+   "expect": 2.0
+  }
+ ],
+ "notes": [
+  "6061-T6, bead blast, clear anodise. Sleeve bore 64.20 H8 (+0.046/0) x 30 deep from the rim; chamber 60 x 40 (about 110 ml).",
+  "Rim: 1.0 x 30 deg lead-in so the O-ring is not cut. Inside base corner R2.",
+  "Base: etch grindmn mark, model version, build date, serial, 16.7 um / click (Plex Mono).",
+  "General tolerance ISO 2768-mK, linear +-0.1, angles +-0.5 deg; all edges 0.3x45; Ra 1.6 on fits, 3.2 elsewhere."
+ ]
+}

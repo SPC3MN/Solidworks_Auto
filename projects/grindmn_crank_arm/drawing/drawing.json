@@ -1,0 +1,120 @@
+{
+ "title": "grindmn crank arm (part 5) - machining",
+ "source": "requirements.md 5.6, end +2 mm",
+ "section": true,
+ "views": [
+  "front",
+  "top",
+  "isometric"
+ ],
+ "_comment": "Outline is drawn as a fine polygon, so its round ends are not single edges: length and thickness are measured in the section, widths and end radii are in the notes.",
+ "dims": [
+  {
+   "label": "screw pitch",
+   "view": "top",
+   "pick": [
+    [
+     -7.7,
+     0,
+     6
+    ],
+    [
+     4.3,
+     0,
+     6
+    ]
+   ],
+   "expect": 12.0,
+   "kind": "h",
+   "side": "above"
+  },
+  {
+   "label": "screw to knob hole",
+   "view": "top",
+   "pick": [
+    [
+     -7.7,
+     0,
+     6
+    ],
+    [
+     83.35,
+     0,
+     6
+    ]
+   ],
+   "expect": 91.0,
+   "kind": "h",
+   "side": "above"
+  },
+  {
+   "label": "screw hole (2x)",
+   "view": "top",
+   "pick": [
+    [
+     4.7979,
+     1.2021,
+     6
+    ]
+   ],
+   "expect": 3.4
+  },
+  {
+   "label": "knob hole",
+   "view": "top",
+   "pick": [
+    [
+     83.8333,
+     -1.1667,
+     6
+    ]
+   ],
+   "expect": 3.3,
+   "prefix": "M4 tap "
+  },
+  {
+   "label": "length",
+   "view": "front",
+   "pick": [
+    [
+     -9,
+     0,
+     3
+    ],
+    [
+     91,
+     0,
+     3
+    ]
+   ],
+   "expect": 100.0,
+   "kind": "h",
+   "side": "below"
+  },
+  {
+   "label": "thickness",
+   "view": "front",
+   "pick": [
+    [
+     40,
+     0,
+     0
+    ],
+    [
+     40,
+     0,
+     6
+    ]
+   ],
+   "expect": 6.0,
+   "kind": "v",
+   "side": "left"
+  }
+ ],
+ "notes": [
+  "6061-T6 plate 6.0, waterjet or milled, clear anodise. Flat 0.05. Width 14 at the hub end tapering to 12 at the knob end; ends full radius R7 (centre 2 mm beyond the hub axis) and R6 (on the knob hole).",
+  "Hub axis midway between the two M3 clearance holes (dia 3.4); knob hole 85.0 from the hub axis (crank radius).",
+  "Knob hole M4x0.7 tapped through for the ISO 7379 shoulder screw.",
+  "General tolerance ISO 2768-mK, linear +-0.1, angles +-0.5 deg; all edges 0.3x45; Ra 1.6 on fits, 3.2 elsewhere."
+ ]
+}
