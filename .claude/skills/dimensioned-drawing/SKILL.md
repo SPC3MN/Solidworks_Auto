@@ -54,16 +54,18 @@ be promoted (`design/<name>.SLDPRT`, with a passing pipeline report). Run Python
   SolidWorks run: the check is only worth something if the number comes from somewhere else.
 - `side` is `left`, `right`, `above` or `below` for linear dimensions. Diameters are placed automatically.
 
-### What to dimension (in this order)
+### What to dimension: general dimensions and holes only
 
-1. Overall size: length and width in the top view, height in the front view.
-2. The mounting-hole pattern (pitch in x and y), the first hole's distance from an edge, and the
-   hole diameter labelled "(4x)".
-3. Features that something mates with: connector or socket positions and spacing, axis heights,
-   bores and tube ODs.
-4. Material thickness (PCB 1.6) when it matters for fit.
+This is the user's rule for parts they send as photos or part numbers. The drawing gives what is
+needed to design fasteners and enclosures, and nothing more:
 
-Typically 6 to 10 dimensions. Don't dimension every component; the drawing is for fit, not manufacture.
+1. Overall size: length and width in the top view, overall height in the front view, overhangs included where they can be picked.
+2. Mounting holes: pitch in x and y, the first hole's distance from an edge, and the diameter labelled "(4x)".
+3. Board or plate thickness, which sets fastener and standoff lengths.
+
+**Don't dimension ports and features**: RCA, USB-C, HDMI, jacks, headers, lens tubes, bores or chips.
+Their envelope is already inside the overall size. Add one only if the user asks for it.
+That usually comes to 5 to 8 dimensions.
 
 ### Pick rules (learned on standoff, rpi5, rpi_dac_hat, rpi_hq_camera)
 

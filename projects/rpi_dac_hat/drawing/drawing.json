@@ -1,16 +1,17 @@
 {
   "title": "Raspberry Pi DAC+ HAT - envelope",
   "source": "HAT spec + photo (see requirements.md)",
-  "_comment": "Front view looks along +y, so the RCA barrels appear as circles. Picks avoid the RCA housings (x 29..51) and the jack (x 52.5..59.5) on the y = 0 edge. The barrel reach (9 mm) is not dimensioned: its end circle is edge-on in the top and right views and cannot be selected.",
+  "_comment": "Front view looks along +y, so the RCA barrels appear as circles. Picks avoid the RCA housings (x 29..51) and the jack (x 52.5..59.5) on the y = 0 edge. General dimensions and holes only (user rule): no port dimensions.",
   "dims": [
     {"label": "PCB length", "view": "top", "pick": [[0, 30, 1.6], [65, 30, 1.6]], "kind": "h", "side": "above", "expect": 65.0},
     {"label": "PCB width", "view": "top", "pick": [[15, 0, 1.6], [15, 56.5, 1.6]], "kind": "v", "side": "left", "expect": 56.5},
     {"label": "hole pitch x", "view": "top", "pick": [[4.875, 3.5, 1.6], [62.875, 3.5, 1.6]], "kind": "h", "side": "above", "expect": 58.0},
     {"label": "hole pitch y", "view": "top", "pick": [[61.5, 4.875, 1.6], [61.5, 51.125, 1.6]], "kind": "v", "side": "right", "expect": 49.0},
+    {"label": "hole from left edge", "view": "top", "pick": [[0, 30, 1.6], [4.875, 52.5, 1.6]], "kind": "h", "side": "above", "expect": 3.5},
     {"label": "hole dia (4x)", "view": "top", "pick": [[4.875, 52.5, 1.6]], "expect": 2.75},
-    {"label": "RCA spacing", "view": "front", "pick": [[38, -9, 7.6], [50, -9, 7.6]], "kind": "h", "side": "below", "expect": 12.0},
-    {"label": "RCA barrel dia", "view": "front", "pick": [[46, -9, 11.6]], "expect": 8.0},
-    {"label": "RCA axis height", "view": "front", "pick": [[15, 0, 0], [38, -9, 7.6]], "kind": "v", "side": "left", "expect": 7.6},
+
+
+    {"label": "PCB thickness", "view": "front", "pick": [[15, 0, 0], [15, 0, 1.6]], "kind": "v", "side": "left", "expect": 1.6},
     {"label": "overall height", "view": "front", "pick": [[15, 0, 0], [31, 0, 13.6]], "kind": "v", "side": "left", "expect": 13.6}
   ],
   "notes": ["All dimensions in mm", "Outline and 58 x 49 hole pattern: given (HAT spec)", "Connector positions and heights: estimated from photo"]

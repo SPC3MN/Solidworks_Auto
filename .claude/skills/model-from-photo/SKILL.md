@@ -122,6 +122,12 @@ Never claim success without a passing report.
 
 Stack HATs on 11 mm standoffs (`standoff_m25`) with `header_2x20_female`.
 
+## 7b. Drawing (when asked)
+
+Use the `dimensioned-drawing` skill. For photo or part-number parts, dimension only the general
+size, the thickness and the mounting holes, which is what fastener and enclosure design needs.
+Never dimension ports (RCA, USB-C, HDMI and so on).
+
 ## 8. Keep SolidWorks tidy
 
 Save and close every document a script opens. Never call `CloseAllDocuments`, and never close documents the user opened. Afterwards, check that no document is left open.
