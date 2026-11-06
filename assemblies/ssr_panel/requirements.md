@@ -25,4 +25,4 @@ straight-on photo, so about 0.351 mm/px. Everything except the rack is **estimat
 Every part passes its own 9-check pipeline; the rack passes 10.
 
 **Left out:** wiring, the ribbon cable, end stops and labels on the terminal groups, the
-supplies' mounting brackets and screw terminals, and the panel's fixing to the frame.
+supplies' mounting brackets, and the panel's fixing to the frame.

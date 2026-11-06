@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "project": "psu_lrs350",
+  "timestamp": "20261106T131351",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\psu_lrs350\\.staging\\20261106T131351\\psu_lrs350.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "t": 30.0,
+    "wall": 1.0,
+    "cols": 4,
+    "hole_d": 4.0,
+    "hole_pitch": 6.0,
+    "hole_margin": 15.0,
+    "tb_len": 14.0,
+    "terminals": 7,
+    "tb_margin": 8.0,
+    "tb_top": 22.0,
+    "screw_d": 5.0,
+    "screw_depth": 2.0,
+    "groove_w": 1.0,
+    "groove_depth": 3.0,
+    "pot_d": 4.0,
+    "pot_h": 1.5,
+    "led_d": 3.0,
+    "led_h": 1.0,
+    "vent_l": 20.0,
+    "vent_w": 3.0,
+    "vent_pitch": 8.0,
+    "vent_margin": 10.0,
+    "vent_from_edge": 18.0,
+    "l": 215.0,
+    "h": 115.0
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        31.5,
+        215.0,
+        115.0
+      ],
+      "volume": 104849.02,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 574784,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 31.5,
+      "expected": 31.5,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 215.0,
+      "expected": 215.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 115.0,
+      "expected": 115.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 104849.02,
+      "expected": 104849.02,
+      "tolerance": 104.84902000000001,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 104849.02,
+      "expected": 104849.02,
+      "tolerance": 104.84902000000001,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 104860.156,
+      "expected": 104849.02,
+      "tolerance": 1048.4902,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "36152 triangles"
+    }
+  ]
+}

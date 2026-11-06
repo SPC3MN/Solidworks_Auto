@@ -109,29 +109,65 @@ def terminal_build(app, p):
 def psu_holes(p):
     T, L = p["t"], p["l"]
     xs = [(i - (p["cols"] - 1) / 2) * p["hole_pitch"] for i in range(p["cols"])]
-    ys, y = [], p["hole_margin"]
+    ys, y = [], p.get("tb_len", 0) + p["hole_margin"]  # perforation starts past the terminal block
     while y <= L - p["hole_margin"] + 1e-9:
         ys.append(round(y, 4))
         y += p["hole_pitch"]
     return [(x, y) for x in xs for y in ys]
 
 
+def psu_details(p):
+    """Positions of the terminal-end and side details (all estimated, typical LRS layout).
+    The terminal block fills y 0..tb at the bottom end; the sheet-metal case runs y tb..L."""
+    L, T, H, tb = p["l"], p["t"], p["h"], p["tb_len"]
+    n = p["terminals"]
+    zs = [p["tb_margin"] + i * (H - p["tb_margin"] - p["tb_top"]) / (n - 1) for i in range(n)]
+    grooves = [(a + b) / 2 for a, b in zip(zs, zs[1:])]
+    vy, vents = tb + p["vent_margin"], []
+    while vy + p["vent_margin"] <= L + 1e-9:
+        vents.append(round(vy, 4))
+        vy += p["vent_pitch"]
+    vrows = [p["vent_from_edge"], H - p["vent_from_edge"]]
+    return {"screws": zs, "grooves": grooves, "vents": [(y, z) for y in vents for z in vrows],
+            "pot": (tb / 2, H - p["tb_top"] / 2 - 3), "led": (tb / 2, H - p["tb_top"] / 2 + 4)}
+
+
 def psu_expected(p):
-    L, T, H, w = p["l"], p["t"], p["h"], p["wall"]
-    v = L * T * H - (L - 2 * w) * (T - 2 * w) * (H - 2 * w)
-    v -= len(psu_holes(p)) * disc(p["hole_d"]) * w
-    return round(v, 3), [T, L, H]
+    L, T, H, w, tb = p["l"], p["t"], p["h"], p["wall"], p["tb_len"]
+    Lc = L - tb
+    d = psu_details(p)
+    v = Lc * T * H - (Lc - 2 * w) * (T - 2 * w) * (H - 2 * w)          # sheet-metal case
+    v -= len(psu_holes(p)) * disc(p["hole_d"]) * w                       # perforated outward face
+    v -= len(d["vents"]) * 2 * ((p["vent_l"] - p["vent_w"]) * p["vent_w"] + disc(p["vent_w"])) * w  # side vents
+    v += tb * T * H                                                       # terminal block
+    v -= len(d["screws"]) * disc(p["screw_d"]) * p["screw_depth"]        # screw pockets
+    v -= len(d["grooves"]) * (tb - 2) * p["groove_w"] * p["groove_depth"]  # barriers between terminals
+    v += disc(p["pot_d"]) * p["pot_h"] + disc(p["led_d"]) * p["led_h"]   # V-adj pot and LED
+    return round(v, 3), [T + max(p["pot_h"], p["led_h"]), L, H]
 
 
 def psu_build(app, p):
     """Enclosed supply mounted on edge: footprint t (x) by l (y), standing h out of the panel.
-    Sheet-metal box (closed shell, wall thick) with a perforated outward face."""
-    L, T, H, w = p["l"], p["t"], p["h"], p["wall"]
+    A closed sheet-metal case (perforated outward face, vent slots in both side faces) with a solid
+    terminal block at the y = 0 end: 7 screw pockets and barrier grooves on its +x face, and the
+    V-adjust pot and power LED standing proud of that face."""
+    L, T, H, w, tb = p["l"], p["t"], p["h"], p["wall"], p["tb_len"]
+    d = psu_details(p)
     part = Part(app)
     try:
-        part.extrude("Case", [rect(0, L / 2, T, L)], H)
+        part.extrude("Case", [rect(0, tb + (L - tb) / 2, T, L - tb)], H)
         part.shell("Case_shell", w)  # no open faces: a closed, hollow case
+        part.extrude("Terminal_block", [rect(0, tb / 2, T, tb)], H)  # touches the case end wall
+        part.extrude("Pot", [circle(tb / 2, d["pot"][1], p["pot_d"])], p["pot_h"], z=T / 2, axis="x")
+        part.extrude("LED", [circle(tb / 2, d["led"][1], p["led_d"])], p["led_h"], z=T / 2, axis="x")
         part.cut("Perforation", [circle(x, y, p["hole_d"]) for x, y in psu_holes(p)], depth=w, z=H, down=True)
+        vents = [slot(y, z, p["vent_l"], p["vent_w"], 90) for y, z in d["vents"]]
+        part.cut("Vents_R", vents, depth=w, z=T / 2, down=True, axis="x")
+        part.cut("Vents_L", vents, depth=w, z=-T / 2, down=False, axis="x")
+        part.cut("Screws", [circle(tb / 2, z, p["screw_d"]) for z in d["screws"]],
+                 depth=p["screw_depth"], z=T / 2, down=True, axis="x")
+        part.cut("Barriers", [rect(tb / 2, z, tb - 2, p["groove_w"]) for z in d["grooves"]],
+                 depth=p["groove_depth"], z=T / 2, down=True, axis="x")
     finally:
         part.close_prefs()
     return part.doc

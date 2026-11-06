@@ -31,7 +31,12 @@ PSUS = [  # (project, length, outward height, bottom y)
     ("psu_lrs150", 159.0, 97.0, 211.0),
     ("psu_lrs150", 159.0, 97.0, 31.0),
 ]
-PSU_COMMON = {"t": 30.0, "wall": 1.0, "cols": 4, "hole_d": 4.0, "hole_pitch": 6.0, "hole_margin": 15.0}
+PSU_COMMON = {"t": 30.0, "wall": 1.0, "cols": 4, "hole_d": 4.0, "hole_pitch": 6.0, "hole_margin": 15.0,
+              # terminal end and side details (estimated, typical LRS layout)
+              "tb_len": 14.0, "terminals": 7, "tb_margin": 8.0, "tb_top": 22.0,
+              "screw_d": 5.0, "screw_depth": 2.0, "groove_w": 1.0, "groove_depth": 3.0,
+              "pot_d": 4.0, "pot_h": 1.5, "led_d": 3.0, "led_h": 1.0,
+              "vent_l": 20.0, "vent_w": 3.0, "vent_pitch": 8.0, "vent_margin": 10.0, "vent_from_edge": 18.0}
 
 
 def rack_to_panel(x, y):
@@ -102,12 +107,21 @@ grips the rail is not modelled: the body sits on the rail flanges.
         project(name, "psu", dict(PSU_COMMON, l=L, h=H), f"""# Enclosed power supply, Mean Well {model} size
 
 Mounted on edge on the panel, perforated face outward. The case is {L:g} x {H:g} x 30 mm: the
-size of a Mean Well {model}, **estimated** from the photo. It is modelled as a closed sheet-metal
-box with 1 mm walls (no internals), with Ø4 perforations at 6 mm pitch in 4 columns on the outward face.
+size of a Mean Well {model}, **estimated** from the photo. The parts:
+- a closed sheet-metal case with 1 mm walls and no internals;
+- Ø4 perforations at 6 mm pitch, in 4 columns, on the outward face;
+- 3 × 20 vent slots at 8 mm pitch, two rows on each big side face;
+- at the bottom end, a solid 14 mm terminal block with 7 screw pockets (Ø5, 2 deep) and barrier
+  grooves between them on its side face;
+- a V-adjust pot (Ø4, 1.5 proud) and a power LED (Ø3, 1 proud) above the screws.
+
+All detail sizes are **estimated**.
 """
                 + """
 ## Expected values
-- Outer less inner box, L·30·H - (L-2)·28·(H-2), less the holes n·π·2²·1
+- Case (L-14 long): outer less inner box, less the perforations n·π·2²·1 and the vents (2 sides × n × slot area × 1)
+- Plus the terminal block 14·30·H, less 7 screw pockets π·2.5²·2 and 6 grooves 12·1·3
+- Plus the pot π·2²·1.5 and the LED π·1.5²·1
 - **{vol} mm³**, bounding box {bb}
 """)
     comps = [{"part": "acrylic_panel"}]
