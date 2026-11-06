@@ -22,7 +22,8 @@ def build(app, p):
         tracks.apply(part, lay, T)  # generated, illustrative copper (scripts/tracks.py)
 
         # 40-pin header on the hole line along the far edge
-        hy, pitch = W - p["hole_inset"], p["hdr_pitch"]
+        # 58 x 49 hole pattern from the HAT spec: the far hole line is at 3.5 + 49 = 52.5
+        hy, pitch = p["hole_inset"] + p["hole_pitch_y"], p["hdr_pitch"]
         part.extrude("Header_Block", [rect(L / 2, hy, 20 * pitch, 2 * pitch)], p["hdr_block_h"], z=T)
         pins = [rect(L / 2 + (i - 9.5) * pitch, hy + (j - 0.5) * pitch, p["hdr_pin"], p["hdr_pin"])
                 for i in range(20) for j in range(2)]
@@ -64,7 +65,7 @@ def build(app, p):
         part.cut("Jack_Bore", [circle(jx, jz, p["jack_bore_d"])],
                  depth=p["jack_nose_out"], z=0, down=True, axis="y")
         i = p["hole_inset"]
-        part.cut("Mount_Holes", [circle(x, y, p["hole_d"]) for x in (i, L - i) for y in (i, W - i)])
+        part.cut("Mount_Holes", [circle(x, y, p["hole_d"]) for x in (i, L - i) for y in (i, hy)])
 
         part.link(p, {"D1@PCB": "pcb_t", "D1@RCA_Barrels": "rca_barrel_out"})
     finally:

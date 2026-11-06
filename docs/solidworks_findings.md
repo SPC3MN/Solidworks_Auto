@@ -140,6 +140,26 @@ connector, keeping clear of parts, holes, headers and other tracks. Tracks are
 - Re-run `scripts/tracks.py` after any layout change. `tpa3255_4ch/design/gen_layout.py`
   regenerates the layout without tracks.
 
+## Assemblies (scripts/assembly.py)
+
+`assemblies/<name>/assembly.json` lists promoted parts with a position in mm
+and a rotation about Z. The script builds a `.SLDASM`, fixes every component,
+then checks the component count, the bounding box (hand-worked) and interference.
+It saves the assembly and a STEP export, renders it, and writes a report to
+`validation/history/`.
+
+- `AddComponent5` needs the part already open (`OpenDoc6`). The part's own tab
+  can be closed afterwards while the assembly keeps it loaded.
+- Placement: `comp.Transform2 = CreateTransform([c, s, 0, -s, c, 0, 0, 0, 1, tx, ty, tz, 1, 0, 0, 0])`,
+  translation in metres. Verified with bounding boxes: rot_z −90 maps local (x, y) to (y, −x).
+- `Select4` and `SaveAs3` need `NOTHING` (`VARIANT(VT_DISPATCH, None)`), not Python `None`.
+- `InterferenceDetectionManager` with `TreatCoincidenceAsInterference = False`:
+  touching faces don't count. A probe with the HAT lowered to z = 8 reported
+  the expected socket, standoff and pin collisions, so a run that finds none is meaningful.
+- The HAT model had its far hole line at y = 53 instead of 52.5 (58 × 49 pattern). Fixed with `hole_pitch_y`.
+- Wireframe renders are recoloured to off-white on charcoal (`recolor()`).
+  Grey values of 190 and above are SolidWorks' background gradient and become flat charcoal.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and

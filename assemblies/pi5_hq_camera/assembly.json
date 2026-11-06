@@ -1,0 +1,17 @@
+{
+  "_comment": "HQ camera beside a Raspberry Pi 5, connected by a ribbon from CAM/DISP0. Pi 5 board mm. The camera sits on four 11 mm standoffs, rotated -90 deg so that its ribbon connector (local y 0.75..6.25, x 8.5..29.5) faces the Pi: X = 100 + y_local, Y = 28.7 - x_local. That puts the connector at X 100.75..106.25 and centres it on Y 9.7, in line with the Pi connector.",
+  "components": [
+    {"part": "rpi5"},
+    {"part": "ffc_cam_cable"},
+    {"part": "rpi_hq_camera", "at": [100, 28.7, 11], "rot_z": -90},
+    {"part": "standoff_m25", "label": "standoff_1", "at": [104, 24.7, 0]},
+    {"part": "standoff_m25", "label": "standoff_2", "at": [104, -5.3, 0]},
+    {"part": "standoff_m25", "label": "standoff_3", "at": [134, 24.7, 0]},
+    {"part": "standoff_m25", "label": "standoff_4", "at": [134, -5.3, 0]}
+  ],
+  "expected": {
+    "_comment": "x: Pi -1 .. camera 138; y: camera -9.3 .. Pi 56; z: 0 .. cable top 22.075",
+    "bbox": [139.0, 65.3, 22.075],
+    "allowed_interference": []
+  }
+}

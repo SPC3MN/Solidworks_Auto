@@ -1,0 +1,17 @@
+{
+  "_comment": "DAC+ HAT stacked on a Raspberry Pi 5 with the standard 11 mm M2.5 standoffs and a 2x20 female socket. Coordinates are Pi 5 board mm (z up from the Pi PCB bottom). The HAT's hole pattern (58 x 49, origin at its corner) lines up with the Pi's, so it only moves up: Pi top 1.6 + 11 = 12.6.",
+  "components": [
+    {"part": "rpi5"},
+    {"part": "standoff_m25", "label": "standoff_1", "at": [3.5, 3.5, 1.6]},
+    {"part": "standoff_m25", "label": "standoff_2", "at": [61.5, 3.5, 1.6]},
+    {"part": "standoff_m25", "label": "standoff_3", "at": [3.5, 52.5, 1.6]},
+    {"part": "standoff_m25", "label": "standoff_4", "at": [61.5, 52.5, 1.6]},
+    {"part": "header_2x20_female"},
+    {"part": "rpi_dac_hat", "at": [0, 0, 12.6]}
+  ],
+  "expected": {
+    "_comment": "x: Pi -1 .. 88.6; y: HAT RCA barrels at -9 .. HAT edge 56.5; z: HAT top 12.6 + 13.6",
+    "bbox": [89.6, 65.5, 26.2],
+    "allowed_interference": []
+  }
+}

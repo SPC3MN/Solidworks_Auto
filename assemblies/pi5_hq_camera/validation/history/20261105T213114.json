@@ -1,0 +1,52 @@
+{
+ "assembly": "pi5_hq_camera",
+ "time": "2026-11-05T21:31:14",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 7,
+   "actual": 7
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 139.0,
+   "actual": 139.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 65.3,
+   "actual": 65.3
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 22.075,
+   "actual": 22.075
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  139.0,
+  65.3,
+  22.075
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_hq_camera\\pi5_hq_camera.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_hq_camera\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_hq_camera\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_hq_camera\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_hq_camera\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_hq_camera\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_hq_camera\\renders\\wireframe\\front.png"
+ ]
+}

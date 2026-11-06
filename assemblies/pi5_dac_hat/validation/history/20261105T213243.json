@@ -1,0 +1,52 @@
+{
+ "assembly": "pi5_dac_hat",
+ "time": "2026-11-05T21:32:43",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 7,
+   "actual": 7
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 89.6,
+   "actual": 89.6
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 65.5,
+   "actual": 65.5
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 26.2,
+   "actual": 26.2
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  89.6,
+  65.5,
+  26.2
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat\\pi5_dac_hat.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\pi5_dac_hat\\renders\\wireframe\\front.png"
+ ]
+}

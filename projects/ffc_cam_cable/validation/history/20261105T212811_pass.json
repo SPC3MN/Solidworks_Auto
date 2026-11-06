@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "project": "ffc_cam_cable",
+  "timestamp": "20261105T212811",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\ffc_cam_cable\\.staging\\20261105T212811\\ffc_cam_cable.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "_comment": "Path (x, z) in Pi 5 board mm: up from the CAM/DISP0 connector top, over the RJ45, down to the HQ camera's connector. y0 = connector centre 9.7 - w/2.",
+    "path_xz": [
+      [
+        54.6,
+        4.6
+      ],
+      [
+        54.6,
+        22.0
+      ],
+      [
+        95.0,
+        22.0
+      ],
+      [
+        95.0,
+        9.75
+      ],
+      [
+        100.75,
+        9.75
+      ]
+    ],
+    "t": 0.15,
+    "w": 13.0,
+    "y0": 3.2
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        46.225,
+        13.0,
+        17.475
+      ],
+      "volume": 147.81,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 57497,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 46.225,
+      "expected": 46.225,
+      "tolerance": 0.02,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 13.0,
+      "expected": 13.0,
+      "tolerance": 0.02,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 17.475,
+      "expected": 17.475,
+      "tolerance": 0.02,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 147.81,
+      "expected": 147.81,
+      "tolerance": 0.14781,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 147.81,
+      "expected": 147.81,
+      "tolerance": 0.14781,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 147.809,
+      "expected": 147.81,
+      "tolerance": 1.4781,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "36 triangles"
+    }
+  ]
+}

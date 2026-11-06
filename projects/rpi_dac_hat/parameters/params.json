@@ -5,6 +5,7 @@
   "pcb_r": 3,
   "hole_d": 2.75,
   "hole_inset": 3.5,
+  "hole_pitch_y": 49,
   "hdr_pitch": 2.54,
   "hdr_block_h": 2.5,
   "hdr_pin": 0.64,
@@ -27,3 +28,4 @@
   "jack_nose_out": 2.5,
   "jack_bore_d": 3.5
 }
+

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "project": "header_2x20_female",
+  "timestamp": "20261105T212751",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\header_2x20_female\\.staging\\20261105T212751\\header_2x20_female.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "cx": 32.5,
+    "cy": 52.5,
+    "pitch": 2.54,
+    "z0": 4.1,
+    "z1": 12.6,
+    "hole": 1.0
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        50.8,
+        5.08,
+        8.5
+      ],
+      "volume": 1853.544,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 165173,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 50.8,
+      "expected": 50.8,
+      "tolerance": 0.02,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 5.08,
+      "expected": 5.08,
+      "tolerance": 0.02,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 8.5,
+      "expected": 8.5,
+      "tolerance": 0.02,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1853.544,
+      "expected": 1853.54,
+      "tolerance": 1.85354,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1853.544,
+      "expected": 1853.544,
+      "tolerance": 1.853544,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1853.543,
+      "expected": 1853.544,
+      "tolerance": 18.53544,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1084 triangles"
+    }
+  ]
+}
