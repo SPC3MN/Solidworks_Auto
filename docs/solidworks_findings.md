@@ -124,6 +124,10 @@ Pi 5 18047.383 vs 18047.38).
 
 ## PCB tracks (scripts/tracks.py), generated rather than real
 
+**Removed from all models at the user's request (2026-11-05).** The router,
+the `tracks.apply` hooks (which do nothing when a layout has no `tracks` key)
+and the pipeline's `features` check remain for future use.
+
 The real copper routing isn't known, so the tracks are generated. A 0.5 mm
 grid router runs from each passive end and each IC to the nearest part or
 connector, keeping clear of parts, holes, headers and other tracks. Tracks are

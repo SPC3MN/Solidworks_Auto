@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "project": "rpi5",
+  "timestamp": "20261105T194955",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\rpi5\\.staging\\20261105T194955\\rpi5.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "pcb_l": 85,
+    "pcb_w": 56,
+    "pcb_t": 1.6,
+    "pcb_r": 3,
+    "hole_d": 2.7,
+    "hole_x1": 3.5,
+    "hole_x2": 61.5,
+    "hole_y1": 3.5,
+    "hole_y2": 52.5,
+    "hdr_pitch": 2.54,
+    "hdr_block_h": 2.5,
+    "hdr_pin": 0.64,
+    "hdr_pin_h": 6,
+    "gpio_x": 32.5,
+    "gpio_y": 52.5,
+    "poe_x": 61.3,
+    "poe_y": 9.3
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        89.6,
+        57.0,
+        17.6
+      ],
+      "volume": 18047.383,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 747138,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 89.6,
+      "expected": 89.6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 57.0,
+      "expected": 57.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 17.6,
+      "expected": 17.6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 18047.383,
+      "expected": 18047.38,
+      "tolerance": 18.04738,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 18047.383,
+      "expected": 18047.383,
+      "tolerance": 18.047383000000004,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 18047.533,
+      "expected": 18047.383,
+      "tolerance": 180.47383000000002,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "6168 triangles"
+    }
+  ]
+}

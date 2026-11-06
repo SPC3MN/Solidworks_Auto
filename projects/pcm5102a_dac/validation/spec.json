@@ -16,7 +16,7 @@
     "tol": 0.05
   },
   "volume": {
-    "expected": 1274.712,
+    "expected": 1274.507,
     "rel_tol": 0.001
   },
   "export.step": {
@@ -24,12 +24,5 @@
   },
   "export.stl": {
     "rel_tol": 0.01
-  },
-  "features": {
-    "Tracks": {
-      "expected": 0.2048,
-      "rel_tol": 0.01
-    }
-  },
-  "_tracks": "Tracks are generated (scripts/tracks.py), illustrative only; volume = length x 0.3 x 0.035."
+  }
 }

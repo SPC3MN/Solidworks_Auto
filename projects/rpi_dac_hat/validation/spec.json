@@ -19,7 +19,7 @@
     "param": "rca_h"
   },
   "volume": {
-    "expected": 10890.862,
+    "expected": 10889.67,
     "rel_tol": 0.001
   },
   "export.step": {
@@ -27,12 +27,5 @@
   },
   "export.stl": {
     "rel_tol": 0.01
-  },
-  "features": {
-    "Tracks": {
-      "expected": 1.1917,
-      "rel_tol": 0.01
-    }
-  },
-  "_tracks": "Tracks are generated (scripts/tracks.py), illustrative only; volume = length x 0.3 x 0.035."
+  }
 }
