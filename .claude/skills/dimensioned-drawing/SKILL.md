@@ -86,6 +86,13 @@ That usually comes to 5 to 8 dimensions.
   to run if you do. Put top-view dimensions above, left or right, and front-view dimensions left,
   below or right. Use only the top and front views; there is no separate right view in this template.
 - Within a side, the script stacks shorter dimensions nearer the part.
+- **No overlaps.** After placing the dimensions, the script reads each one's text box and lines
+  (`DisplayDimension.GetDisplayData`). A dimension's text may not touch another dimension's text,
+  its extension or dimension lines, or any view. If it does, the text slides along its dimension
+  line, then moves out one or two rows. Diameter labels move round their leader. Any overlap still
+  left fails the run as `layout: no overlapping dimensions`. A typical case: a short dimension
+  (3.50 hole-to-edge) that shares extension lines with longer ones gets its text pushed outside its span.
+  If the rule can't clear an overlap, change the spec: use another side, or another edge to measure from.
 
 ## Loop
 

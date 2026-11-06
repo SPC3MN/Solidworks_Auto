@@ -28,6 +28,7 @@ Usage: .venv\\Scripts\\python scripts\\drawing.py projects\\<name>
 import argparse
 import datetime as dt
 import json
+import math
 import pathlib
 import sys
 
@@ -156,6 +157,7 @@ class Drawing:
             v.Position = arr([centres[name][0] * MM, centres[name][1] * MM])
         self.doc.EditRebuild3
         self.stack = {}
+        self.placed = []  # (spec, DisplayDimension) in placement order
 
     # -- geometry helpers
     def to_sheet(self, view, p):
@@ -216,9 +218,140 @@ class Drawing:
         doc.ClearSelection2(True)
         if dd is None:
             return {"label": d.get("label"), "pass": False, "error": "SolidWorks made no dimension"}
+        self.placed.append((d, dd))
         val = round(dd.GetDimension2(0).SystemValue / MM, 4)
         ok = abs(val - d["expect"]) <= d.get("tol", 0.01)
         return {"label": d.get("label"), "view": view, "expected": d["expect"], "actual": val, "pass": ok}
+
+    # -- overlap rule: no dimension text may touch another dimension's text or lines, or a view
+    CHAR_W = 0.6   # text width per character, as a share of text height (measured: ' 85.00 ' = 14.2 mm at 3.5)
+    PAD = 0.8      # clearance around text, sheet mm
+
+    def _geom(self, dd):
+        """(text boxes, line segments) of one display dimension, in sheet mm. A box is
+        (x, y, angle, w, h) with (x, y) at the start of the text baseline."""
+        dat = dd.GetDisplayData
+        boxes = []
+        for i in range(dat.GetTextCount):
+            s = dat.GetTextAtIndex(i).replace("<MOD-DIAM>", "Ø")
+            if not s.strip():
+                continue
+            x, y, _ = [v / MM for v in dat.GetTextPositionAtIndex(i)]
+            h = dat.GetTextHeightAtIndex(i) / MM
+            boxes.append((x, y, dat.GetTextAngleAtIndex(i), len(s) * self.CHAR_W * h, h))
+        lines = []
+        for i in range(dat.GetLineCount):
+            a = list(dat.GetLineAtIndex3(i))
+            lines.append(((a[4] / MM, a[5] / MM), (a[7] / MM, a[8] / MM)))
+        return boxes, lines
+
+    @staticmethod
+    def _local(box, p):
+        x, y, ang, _, _ = box
+        c, s = math.cos(-ang), math.sin(-ang)
+        dx, dy = p[0] - x, p[1] - y
+        return dx * c - dy * s, dx * s + dy * c
+
+    def _box_hits_segment(self, box, seg):
+        """Segment vs padded text rectangle, tested in the text's own frame (Liang-Barsky clip)."""
+        _, _, _, w, h = box
+        (x0, y0), (x1, y1) = self._local(box, seg[0]), self._local(box, seg[1])
+        lo = (-self.PAD, -0.25 * h - self.PAD)
+        hi = (w + self.PAD, 1.1 * h + self.PAD)
+        t0, t1 = 0.0, 1.0
+        for p0, d, a, b in ((x0, x1 - x0, lo[0], hi[0]), (y0, y1 - y0, lo[1], hi[1])):
+            if abs(d) < 1e-12:
+                if p0 < a or p0 > b:
+                    return False
+                continue
+            ta, tb = (a - p0) / d, (b - p0) / d
+            t0, t1 = max(t0, min(ta, tb)), min(t1, max(ta, tb))
+            if t0 > t1:
+                return False
+        return True
+
+    def _box_corners(self, box):
+        x, y, ang, w, h = box
+        c, s = math.cos(ang), math.sin(ang)
+        pts = [(-self.PAD, -0.25 * h - self.PAD), (w + self.PAD, -0.25 * h - self.PAD),
+               (w + self.PAD, 1.1 * h + self.PAD), (-self.PAD, 1.1 * h + self.PAD)]
+        return [(x + u * c - v * s, y + u * s + v * c) for u, v in pts]
+
+    def _box_hits_box(self, a, b):
+        ca, cb = self._box_corners(a), self._box_corners(b)
+        edges = lambda cs: list(zip(cs, cs[1:] + cs[:1]))  # noqa: E731
+        return (any(self._box_hits_segment(a, e) for e in edges(cb))
+                or any(self._box_hits_segment(b, e) for e in edges(ca))
+                or self._inside(cb[0], ca) or self._inside(ca[0], cb))
+
+    @staticmethod
+    def _inside(p, poly):
+        sgn = None
+        for (x0, y0), (x1, y1) in zip(poly, poly[1:] + poly[:1]):
+            cr = (x1 - x0) * (p[1] - y0) - (y1 - y0) * (p[0] - x0)
+            if sgn is None:
+                sgn = cr > 0
+            elif (cr > 0) != sgn:
+                return False
+        return True
+
+    def _conflicts(self, k, geoms):
+        """What dimension k's text hits: other dims' text and lines, and any view outline."""
+        boxes, _ = geoms[k]
+        hits = []
+        for j, (ob, ol) in enumerate(geoms):
+            if j == k:
+                continue
+            if any(self._box_hits_box(b, o) for b in boxes for o in ob) or \
+               any(self._box_hits_segment(b, seg) for b in boxes for seg in ol):
+                hits.append(self.placed[j][0].get("label"))
+        for name, v in self.views.items():
+            x0, y0, x1, y1 = [c / MM for c in v.GetOutline]
+            rect = [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+            if any(self._box_hits_segment(b, e) or self._inside(self._box_corners(b)[0], rect)
+                   for b in boxes for e in zip(rect, rect[1:] + rect[:1])):
+                hits.append(f"view:{name}")
+        return hits
+
+    def _candidates(self, d, pos):
+        """Text positions to try, nearest first. Along the dimension line, so the text slides
+        clear of crossing extension lines and outside short spans; then one or two rows further out."""
+        x, y = pos[0] / MM, pos[1] / MM
+        side = d.get("side", "near" if len(d["pick"]) == 1 else "above")
+        along = (0, 1) if side in ("left", "right") else (1, 0)
+        out = {"left": (-1, 0), "right": (1, 0), "above": (0, 1), "below": (0, -1)}.get(side)
+        shifts = sorted({s * k for k in range(1, 21) for s in (3, -3)}, key=abs)
+        rows = [0, 9, 18] if out else [0]
+        if not out:  # diameters: walk the leader outwards in a ring of directions
+            return [(x + r * math.cos(a), y + r * math.sin(a))
+                    for r in (0, 6, 12, 18) for a in [i * math.pi / 4 for i in range(8)]][1:]
+        return [(x + out[0] * r + along[0] * s, y + out[1] * r + along[1] * s)
+                for r in rows for s in [0] + shifts if (r, s) != (0, 0)]
+
+    def resolve_overlaps(self, passes=3):
+        """Apply the overlap rule; returns the overlaps that are left (label -> what it hits)."""
+        for _ in range(passes):
+            geoms = [self._geom(dd) for _, dd in self.placed]
+            moved = False
+            for k, (d, dd) in enumerate(self.placed):
+                if not self._conflicts(k, geoms):
+                    continue
+                ann = dd.GetAnnotation
+                start = list(ann.GetPosition)
+                for cx, cy in self._candidates(d, start):
+                    ann.SetPosition2(cx * MM, cy * MM, start[2])
+                    geoms[k] = self._geom(dd)
+                    if not self._conflicts(k, geoms):
+                        moved = True
+                        break
+                else:
+                    ann.SetPosition2(*start)
+                    geoms[k] = self._geom(dd)
+            if not moved:
+                break
+        geoms = [self._geom(dd) for _, dd in self.placed]
+        return {self.placed[k][0].get("label"): h for k in range(len(self.placed))
+                if (h := self._conflicts(k, geoms))}
 
     # -- sheet furniture
     def note(self, text, x, y, height=None):
@@ -286,6 +419,8 @@ def run(project):
             for r, d in enumerate(sorted(ds, key=lambda d: d["expect"])):
                 d["_rank"] = r
         results = [drw.dimension(d) for d in spec["dims"]]
+        left = drw.resolve_overlaps()
+        results.append({"label": "layout: no overlapping dimensions", "pass": not left, "overlaps": left})
         drw.frame(spec.get("title", name), name, spec.get("source", "see requirements.md"))
         W = drw.sheet[0]
         for i, n in enumerate(spec.get("notes", [])):
