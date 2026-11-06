@@ -1,0 +1,89 @@
+{
+ "part": "ssr_rack48",
+ "time": "2026-11-06T12:05:00",
+ "pass": false,
+ "scale": 0.5,
+ "bbox": [
+  431.8,
+  114.3,
+  38.1
+ ],
+ "dims": [
+  {
+   "label": "board length",
+   "view": "top",
+   "expected": 431.8,
+   "actual": 431.8,
+   "pass": true
+  },
+  {
+   "label": "board width",
+   "view": "top",
+   "expected": 114.3,
+   "actual": 109.5,
+   "pass": false
+  },
+  {
+   "label": "hole from left edge",
+   "view": "top",
+   "expected": 4.8,
+   "actual": 1570.7963,
+   "pass": false
+  },
+  {
+   "label": "hole pitch 1-2",
+   "pass": false,
+   "error": "SolidWorks made no dimension"
+  },
+  {
+   "label": "hole pitch 2-3",
+   "pass": false,
+   "error": "SolidWorks made no dimension"
+  },
+  {
+   "label": "hole pitch outer",
+   "view": "top",
+   "expected": 422.2,
+   "actual": 1570.7963,
+   "pass": false
+  },
+  {
+   "label": "hole pitch y",
+   "view": "top",
+   "expected": 104.7,
+   "actual": 1570.7963,
+   "pass": false
+  },
+  {
+   "label": "hole dia (8x)",
+   "view": "top",
+   "expected": 3.5,
+   "actual": 114.3,
+   "pass": false
+  },
+  {
+   "label": "PCB thickness",
+   "view": "front",
+   "expected": 1.6,
+   "actual": 1.6,
+   "pass": true
+  },
+  {
+   "label": "height to module top",
+   "view": "front",
+   "expected": 37.6,
+   "actual": 36.0,
+   "pass": false
+  },
+  {
+   "label": "layout: no overlapping dimensions",
+   "pass": true,
+   "overlaps": {}
+  }
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\ssr_rack48\\drawing\\ssr_rack48.SLDDRW",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\ssr_rack48\\drawing\\ssr_rack48.pdf",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\ssr_rack48\\drawing\\ssr_rack48.png"
+ ]
+}

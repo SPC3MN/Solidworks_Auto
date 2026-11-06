@@ -214,3 +214,7 @@ Questions 3, 5, 6 and 7 in [solidworks_open_questions.md](solidworks_open_questi
 modal dialogs in general, export settings, geometry queries, and the missing
 tools above. Not yet done: syncing edits made in the GUI back into `params.json`.
 Every script run leaves its part open in SolidWorks (Part1, Part2 and so on).
+
+## Drawing picks on large sheets (SSR-RACK48, 2026-11-06)
+
+`SelectByID2` on a drawing uses a screen-pixel tolerance. With a whole A2 sheet in the window, a Ø3.5 hole at 1:2 was about 1.5 px wide, so picks on it chose the board edge 3 mm away. The result was wrong values or angles (1570.8 = 90°). `drawing.py` now calls `ViewZoomTo2` on a ±8 mm box of the sheet, which works in sheet coordinates for drawings, before each pick, and `ViewZoomtofit2` before saving.

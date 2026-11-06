@@ -1,0 +1,19 @@
+{
+  "title": "SSR-RACK48 48-ch SSR rack - envelope",
+  "source": "OMEGA 17 x 4.5 x 1.5 in; layout from Digilent/MCC photos (see requirements.md)",
+  "sheet": [594, 420],
+  "_comment": "General dimensions and holes only (user rule). The width is picked at x = 150, in the gap between terminal strips 1 and 2 and clear of the hole at x = 143.9. Hole pitches use the top row (y = 109.5), clear of the terminal strips. The height is to the module top (37.6); the LED domes add 0.5 to reach the given 38.1, but they are edge-on circles in the front view and can't be picked.",
+  "dims": [
+    {"label": "board length", "view": "top", "pick": [[0, 85, 1.6], [431.8, 85, 1.6]], "kind": "h", "side": "above", "expect": 431.8},
+    {"label": "board width", "view": "top", "pick": [[150, 0, 1.6], [150, 114.3, 1.6]], "kind": "v", "side": "left", "expect": 114.3},
+    {"label": "hole from left edge", "view": "top", "pick": [[0, 85, 1.6], [6.55, 109.5, 1.6]], "kind": "h", "side": "above", "expect": 4.8},
+    {"label": "hole pitch 1-2", "view": "top", "pick": [[6.55, 109.5, 1.6], [145.683, 109.5, 1.6]], "kind": "h", "side": "above", "expect": 139.133},
+    {"label": "hole pitch 2-3", "view": "top", "pick": [[145.683, 109.5, 1.6], [289.617, 109.5, 1.6]], "kind": "h", "side": "above", "expect": 143.933},
+    {"label": "hole pitch outer", "view": "top", "pick": [[6.55, 109.5, 1.6], [428.75, 109.5, 1.6]], "kind": "h", "side": "above", "expect": 422.2},
+    {"label": "hole pitch y", "view": "top", "pick": [[427.0, 6.55, 1.6], [427.0, 107.75, 1.6]], "kind": "v", "side": "right", "expect": 104.7},
+    {"label": "hole dia (8x)", "view": "top", "pick": [[6.037, 110.737, 1.6]], "expect": 3.5},
+    {"label": "PCB thickness", "view": "front", "pick": [[150, 0, 0], [150, 0, 1.6]], "kind": "v", "side": "left", "expect": 1.6},
+    {"label": "height to module top", "view": "front", "pick": [[150, 0, 0], [165, 16, 37.6]], "kind": "v", "side": "left", "expect": 37.6}
+  ],
+  "notes": ["All dimensions in mm", "Board 17 x 4.5 in and 1.5 in overall: given (OMEGA)", "Holes and layout: estimated from photos", "LED domes add 0.5 above module tops (38.1 overall)"]
+}

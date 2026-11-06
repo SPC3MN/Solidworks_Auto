@@ -80,6 +80,9 @@ That usually comes to 5 to 8 dimensions.
   the whole view instead. Dimension a cylinder in the view where it looks round (a diameter, or
   centre-to-centre spacing). Leave out lengths that can only be measured to an edge-on circle,
   and say so in `_comment`.
+- **Big boards:** use `"sheet": [594, 420]` (A2) when the part is over about 200 mm long, so the scale stays at 1:2.
+  Before each pick, the script zooms the window to the pick point. Selection tolerance is in screen
+  pixels, so on a zoomed-out A2 sheet a Ø3.5 hole was about 1.5 px and the board edge won (SSR-RACK48).
 - **Pick each diameter at a different angle on its circle** (45°, 135°, 225°, ...). Each label
   leaves the view in the direction of its pick, so labels picked at the same angle collide.
 - **Never use the gap the two stacked views share:** `top/below` and `front/above`. The script refuses

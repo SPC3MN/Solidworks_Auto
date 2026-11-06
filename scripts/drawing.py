@@ -202,6 +202,10 @@ class Drawing:
         doc.ClearSelection2(True)
         for i, p in enumerate(d["pick"]):
             sx, sy = self.to_sheet(view, p)
+            # Selection tolerance is in screen pixels: zoomed out on a big sheet, a small hole is a
+            # pixel or two and a long edge nearby wins. Zoom the window to the pick first.
+            r = 0.008  # +-8 mm of sheet around the pick
+            _invoke(doc, "ViewZoomTo2", sx - r, sy - r, 0, sx + r, sy + r, 0)
             # model edges first; cylinder outlines in side views are silhouettes, not edges
             if not any(doc.Extension.SelectByID2("", typ, sx, sy, 0, i > 0, 0, NOTHING, 0)
                        for typ in ("EDGE", "SILHOUETTE")):
