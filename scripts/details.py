@@ -12,6 +12,8 @@ Rules every generator keeps, so that the arithmetic stays exact:
 
 Op: dict(op="add"|"cut", axis="z"|"y"|"x", at=offset, depth, down, prof, vol)
 prof: ("rect", a, b, l, w) | ("circle", a, b, d) | ("poly", [(a, b), ...]) | ("slot", a, b, length, width)
+      | ("ring", outer_prof, inner_prof): the region between two nested profiles (an opening cut around
+        a tongue, which is left standing as an island joined to the back of the pocket)
 (a, b) are plane coordinates: (x, y) on z planes, (x, z) on y planes, (y, z) on x planes.
 """
 import math
@@ -24,6 +26,8 @@ CAP_T = 0.05      # passive end-cap thickness
 
 def _area(prof):
     k = prof[0]
+    if k == "ring":
+        return _area(prof[1]) - _area(prof[2])
     if k == "rect":
         return prof[3] * prof[4]
     if k == "circle":
@@ -155,39 +159,84 @@ def ffc(x, y, l, w, h, rot, T, c):
             _op("cut", ("rect", x, y, slot_l, slot_w), h - 0.5, T + h, down=True)]
 
 
-def usb_a2(x, y, l, w, h, rot, T, c):
-    """Stacked dual USB-A, opening at the +x face: two 12.5 x 5.1 ports, 14 deep."""
+# Port interiors: only the large structures (tongues, latch notch, LED windows), all ESTIMATED from
+# typical receptacles. Each opening is cut as a ring around its tongue, so the tongue stays joined to
+# the back of the pocket; the tongue face is then recessed. Every cut lies inside solid material.
+USB_A = {"open": (12.5, 5.1), "depth": 14.0, "tongue": (11.0, 1.9), "tongue_top_gap": 1.0, "recess": 0.8}
+USBC = {"tongue": (6.6, 0.7), "recess": 0.5}
+HDMI_MICRO = {"tongue": (4.2, 0.6), "recess": 0.5}
+RJ45 = {"open": (11.7, 8.5), "depth": 18.0, "notch": (6.3, 1.2), "led": (2.5, 1.5), "led_depth": 0.5,
+        "led_off": 5.0, "led_from_top": 1.0}
+
+
+def usb_a2(x, y, l, w, h, rot, T, c, levels=(0.27, 0.73)):
+    """Stacked dual USB-A, opening at the +x face: two 12.5 x 5.1 ports, 14 deep, each with its
+    contact tongue (11 x 1.9, 1 mm below the opening top) recessed 0.8 from the face."""
+    p = USB_A
     front = x + l / 2
     ops = [_op("add", ("rect", x, y, l, w), h, T)]
-    for zc in (T + h * 0.27, T + h * 0.73):
-        ops.append(_op("cut", ("rect", y, zc, 12.5, 5.1), 14.0, front, axis="x", down=True))
+    ow, oh = p["open"]
+    tw, th = p["tongue"]
+    for zc in (T + h * k for k in levels):
+        tz = zc + oh / 2 - p["tongue_top_gap"] - th / 2
+        tongue = ("rect", y, tz, tw, th)
+        ops.append(_op("cut", ("ring", ("rect", y, zc, ow, oh), tongue), p["depth"], front, axis="x", down=True))
+        ops.append(_op("cut", tongue, p["recess"], front, axis="x", down=True))
     return ops
 
 
+def usb_a1(x, y, l, w, h, rot, T, c):
+    """Single USB-A (typical body 14 x 15 x 7 mm, l along x), same port and tongue as usb_a2, centred."""
+    return usb_a2(x, y, l, w, h, rot, T, c, levels=(0.5,))
+
+
 def rj45(x, y, l, w, h, rot, T, c):
+    """RJ45 jack, opening at the +x face: 11.7 x 8.5 plug cavity with the latch notch below it
+    (6.3 x 1.2, toward the PCB), 18 deep, and two LED windows near the top corners of the face."""
+    p = RJ45
     front = x + l / 2
-    return [_op("add", ("rect", x, y, l, w), h, T),
-            _op("cut", ("rect", y, T + 1.5 + 4.25, 11.7, 8.5), 18.0, front, axis="x", down=True)]
+    ow, oh = p["open"]
+    nw, nh = p["notch"]
+    zc = T + 1.5 + oh / 2
+    z0, z1 = zc - oh / 2, zc + oh / 2
+    keyhole = [(y - ow / 2, z0), (y - nw / 2, z0), (y - nw / 2, z0 - nh), (y + nw / 2, z0 - nh),
+               (y + nw / 2, z0), (y + ow / 2, z0), (y + ow / 2, z1), (y - ow / 2, z1)]
+    ops = [_op("add", ("rect", x, y, l, w), h, T),
+           _op("cut", ("poly", keyhole), p["depth"], front, axis="x", down=True)]
+    lw, lh = p["led"]
+    lz = T + h - p["led_from_top"] - lh / 2
+    for s in (-1, 1):
+        ops.append(_op("cut", ("rect", y + s * p["led_off"], lz, lw, lh), p["led_depth"], front, axis="x", down=True))
+    return ops
 
 
-def _front_opening(x, y, l, w, h, T, prof):
-    """Opening in the -y face, cut from a plane 0.5 mm in front of the back wall."""
+def _front_opening(x, y, l, w, h, T, prof, tongue=None, recess=0.0):
+    """Opening in the -y face, cut from a plane 0.5 mm in front of the back wall. With a tongue,
+    the opening is cut around it, and the tongue face is recessed from the front."""
     back = y + w / 2 - 0.5
-    return [_op("add", ("rect", x, y, l, w), h, T),
-            _op("cut", prof, w - 0.5, back, axis="y", down=True)]
+    front = y - w / 2
+    ops = [_op("add", ("rect", x, y, l, w), h, T)]
+    if tongue is None:
+        return ops + [_op("cut", prof, w - 0.5, back, axis="y", down=True)]
+    ops.append(_op("cut", ("ring", prof, tongue), w - 0.5, back, axis="y", down=True))
+    ops.append(_op("cut", tongue, recess, front, axis="y", down=False))
+    return ops
 
 
 def hdmi_micro(x, y, l, w, h, rot, T, c):
-    return _front_opening(x, y, l, w, h, T, ("rect", x, T + h / 2, 5.5, 2.0))
+    tw, th = HDMI_MICRO["tongue"]
+    return _front_opening(x, y, l, w, h, T, ("rect", x, T + h / 2, 5.5, 2.0),
+                          ("rect", x, T + h / 2, tw, th), HDMI_MICRO["recess"])
 
 
 def usbc(x, y, l, w, h, rot, T, c):
-    return _front_opening(x, y, l, w, h, T, ("slot", x, T + h / 2, 8.3, 2.5))
-
+    tw, th = USBC["tongue"]
+    return _front_opening(x, y, l, w, h, T, ("slot", x, T + h / 2, 8.3, 2.5),
+                          ("rect", x, T + h / 2, tw, th), USBC["recess"])
 
 KINDS = {"plain": plain, "passive": passive, "sot23": sot23, "sod323": sod323,
          "tssop": tssop, "qfn": qfn, "bga": bga, "soc_lid": soc_lid, "jst": jst,
-         "ffc": ffc, "usb_a2": usb_a2, "rj45": rj45, "hdmi_micro": hdmi_micro, "usbc": usbc}
+         "ffc": ffc, "usb_a1": usb_a1, "usb_a2": usb_a2, "rj45": rj45, "hdmi_micro": hdmi_micro, "usbc": usbc}
 
 
 def layout_ops(lay, T, detail=True):
@@ -209,6 +258,15 @@ def apply(part, ops, prefix, which):
     from swlib import circle, polygon, rect, slot
     makers = {"rect": lambda p: rect(*p[1:]), "circle": lambda p: circle(*p[1:]),
               "poly": lambda p: polygon(p[1]), "slot": lambda p: slot(*p[1:])}
+
+    def ring(p):
+        outer, inner = makers[p[1][0]](p[1]), makers[p[2][0]](p[2])
+
+        def draw(sm):
+            outer(sm)
+            inner(sm)
+        return draw
+    makers["ring"] = ring
     groups = {}
     for o in ops:
         if o["op"] == which:

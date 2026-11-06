@@ -37,3 +37,14 @@ underside parts (not visible), and the silkscreen.
 - Components (31, none touching, 0.15 mm gap checked): 15582.17
 - **Total ≈ 23966.98 mm³**
 - **Bounding box**: x −1.0 … 88.6 = 89.6, y −1.0 … 56 = 57.0, z 1.6 + 16 = 17.6
+
+## Port interiors (added 2026-11-06)
+
+Only the large structures, all **estimated** from typical receptacles (`scripts/details.py`):
+- USB-A: a contact tongue, 11 × 1.9, sits 1 mm below the top of each opening and is recessed 0.8 mm from the face.
+- RJ45: a latch notch, 6.3 × 1.2, below the plug cavity and 18 deep; two LED windows, 2.5 × 1.5 and 0.5 deep, near the top corners.
+- USB-C and micro-HDMI: a centre tongue (6.6 × 0.7 and 4.2 × 0.6) recessed 0.5 mm.
+
+Volume change: USB-A +4·11·1.9·13.2 = +1103.52; micro-HDMI +2·4.2·0.6·6.5 = +32.76;
+USB-C +6.6·0.7·6.5 = +30.03; RJ45 notch −6.3·1.2·18 = −136.08; RJ45 LEDs −2·2.5·1.5·0.5 = −3.75.
+That is **+1026.48 mm³**, so the expected volume is now 18047.38 + 1026.48 = **19073.86 mm³**.

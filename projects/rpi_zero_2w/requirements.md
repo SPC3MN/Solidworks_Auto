@@ -34,3 +34,7 @@ Sums of the layout's primitives (`scripts/board_build.py expected()`, independen
 - Components 1076.89 (package detail from `scripts/details.py`: leads, end caps, connector openings)
 - **Total 2963.99 mm³**
 - **Bounding box 65 × 30.5 × 4.2 mm** (connectors overhang 0.5 mm; the HDMI socket is the tallest part)
+
+## Port interior (added 2026-11-06)
+
+The mini-HDMI has a centre tongue, 4.2 × 0.6 (**estimated**), recessed 0.5 mm. Volume change: +4.2·0.6·6.5 = +16.38 mm³, so the expected volume is now 2963.99 + 16.38 = **2980.37 mm³**.

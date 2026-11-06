@@ -189,6 +189,17 @@ It saves the assembly and a STEP export, renders it, and writes a report to
 - Circles seen edge-on can't be selected (the type falls back to 12, the drawing view itself).
 - PNG export of a drawing is screen resolution; call `ViewZoomtofit2` first. The PDF is vector.
 
+## Port interiors and a stalled build (2026-11-06)
+
+- Port openings are cut as `("ring", outer, tongue)` profiles: two nested contours in one sketch.
+  SolidWorks cuts the region between them and leaves the tongue joined to the back of the pocket.
+  Volumes match the arithmetic exactly. The Pi 5 went from 18047.38 to 19073.86 mm³.
+- The Zero 2 W build stalled once for more than 15 minutes, with SolidWorks "Not Responding" and
+  using about 2 cores. Killing the Python script does not interrupt SolidWorks. SolidWorks had been
+  running for about 16 hours across many builds. After a force-close and restart, the same build
+  passed in under a minute, so the stall was in the session, not the geometry. If a build takes
+  more than about 5 minutes, restart SolidWorks (asking the user first) before debugging the model.
+
 ## pywin32 late-binding quirks
 
 - Methods with no arguments show up as properties: use `app.RevisionNumber` and

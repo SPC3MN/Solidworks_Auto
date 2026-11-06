@@ -57,6 +57,40 @@ Before adding a fourth near-duplicate `model.py`, extend a shared builder instea
 
    Each kind gives leads, end caps, pin-1 dimples or connector openings. Add a new kind to `details.py` when a part needs one. Each op must carry its exact volume.
 
+### Known ports: use these kinds, never plain boxes
+
+They recur on almost every board. Each one is a single `parts` entry in `layout.json`. The interior
+holds only the large structures (tongues, latch notch, LED windows); never pins or contacts.
+Sizes are standard or typical (**estimated**) and live as constants in `scripts/details.py`
+(`USB_A`, `USBC`, `HDMI_MICRO`, `RJ45`). Volumes are exact, so `expected()` stays right.
+Set `"overhang": true` when the port sticks out past the board edge.
+
+| Port | Kind | Faces | Typical body l × w × h | Interior |
+|---|---|---|---|---|
+| USB-A, single | `usb_a1` | +x | 14 × 15 × 7 | 12.5 × 5.1 opening, 14 deep; tongue 11 × 1.9, 1 mm below the opening top, recessed 0.8 |
+| USB-A, stacked pair | `usb_a2` | +x | 18.4 × 13.8 × 16 (Pi) | two of the above, at 27 % and 73 % of the height |
+| Ethernet RJ45 | `rj45` | +x | 22.2 × 16.2 × 13.5 (Pi) | 11.7 × 8.5 plug cavity, 18 deep; latch notch 6.3 × 1.2 below it (PCB side); 2 LED windows 2.5 × 1.5 near the top corners |
+| USB-C | `usbc` | −y | 9 × 7.5 × 3.2 | 8.3 × 2.5 rounded opening; tongue 6.6 × 0.7 recessed 0.5 |
+| micro- or mini-HDMI | `hdmi_micro` | −y | 6.5 × 7.5 × 3.2 | 5.5 × 2.0 opening; tongue 4.2 × 0.6 recessed 0.5 |
+
+```json
+{"ref": "USB_C",  "x": 11.0, "y": 2.75, "l": 9.0,  "w": 7.5,  "h": 3.2,  "overhang": true, "kind": "usbc"},
+{"ref": "USB2",   "x": 79.4, "y": 47.3, "l": 18.4, "w": 13.8, "h": 16.0, "overhang": true, "kind": "usb_a2"},
+{"ref": "USB",    "x": 60.0, "y": 20.0, "l": 14.0, "w": 15.0, "h": 7.0,  "overhang": true, "kind": "usb_a1"},
+{"ref": "RJ45",   "x": 77.5, "y": 9.6,  "l": 22.2, "w": 16.2, "h": 13.5, "overhang": true, "kind": "rj45"},
+{"ref": "HDMI0",  "x": 25.65,"y": 2.75, "l": 6.5,  "w": 7.5,  "h": 3.2,  "overhang": true, "kind": "hdmi_micro"}
+```
+
+(x, y) is the body centre in board mm.
+- `usb_a1`, `usb_a2` and `rj45` open toward +x, so put them on the board's right edge.
+- `usbc` and `hdmi_micro` open toward −y, so put them on the y = 0 edge.
+
+If a board has a port facing another way, add a rotated variant to `details.py` rather than faking it with blocks.
+For a new port type (micro-USB, DC barrel, audio jack, SD slot):
+1. Add a constant dict and a generator to `details.py`, cutting the opening as a `("ring", outer, tongue)` profile.
+2. Make sure every cut lies inside solid material.
+3. Add a row here.
+
 Do not add PCB tracks. The user removed them. `scripts/tracks.py` stays unused unless the user asks for tracks.
 
 ## 4. Write the project (`projects/<snake_name>/`)
