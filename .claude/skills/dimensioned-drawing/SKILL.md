@@ -97,6 +97,33 @@ That usually comes to 5 to 8 dimensions.
   (3.50 hole-to-edge) that shares extension lines with longer ones gets its text pushed outside its span.
   If the rule can't clear an overlap, change the spec: use another side, or another edge to measure from.
 
+### Machining drawings (parts the user will make; learned on grindmn)
+
+When the user asks for a machining drawing, the general-dimensions rule above does not apply:
+dimension every seat, step, bore and fit the machinist needs.
+
+- **Turned parts:** set `"section": true`. Section A-A, cut through the axis along x, replaces the front
+  view, so bores and steps show as lines. Pick on the section face at (x, 0, z).
+  - Axial steps: `kind "v"` on the `left` side, all from the bottom face (the datum). Pick on the -x
+    side so holes and grooves on +x stay clear.
+  - Diameters: `kind "h"` between the two walls, side `below`; the diameter sign is added automatically.
+    The layout reserves a row for each, plus room for the SECTION A-A label.
+  - A feature cut by the section plane changes the wall (click grooves at 0°/180° show the groove
+    root, not the pilot). Dimension what the section shows and give the true size in the notes.
+- **Fits and threads:** `"suffix": " H7"`, `"prefix": "M58x1-6g "` (a prefix replaces the diameter sign).
+  Keep suffixes short; long ones collide. Put the tolerance values in the notes.
+- **Circles broken by spokes** are arcs: a single pick gives a radius. Expect the radius and add the
+  diameter in the suffix, or put it in the notes if every angle collides.
+- **Polygon outlines** (an arm with rounded ends drawn as a polygon) have no single end edge: measure
+  length and thickness in the section and give the end radii in the notes.
+- **Diameter label angles:** the label leaves along the pick angle. Up runs off the sheet, toward the
+  isometric collides, and down hits the section. Try the gaps between the views.
+- **Big parts:** use A2 (`"sheet": [594, 420]`) when the section plus its diameter rows does not fit A3 at 1:1.
+- **Notes:** at most about 7 lines of up to about 150 characters (material and finish, setup,
+  datum and runouts, holes by angle, threads, general tolerance, assumed values). Keep `source`
+  under about 40 characters, or it runs into the date cell of the title block.
+- **Not drawn:** GD&T frames and surface-finish symbols. Write those requirements in the notes.
+
 ## Loop
 
 1. Write `drawing.json`. Explain the pick choices in `_comment`.
