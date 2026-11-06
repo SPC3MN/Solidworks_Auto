@@ -1,0 +1,9 @@
+{
+  "_kind": "screw",
+  "d": 3.0,
+  "length": 8.0,
+  "head_d": 5.5,
+  "head_h": 3.0,
+  "socket": 2.5,
+  "socket_depth": 1.6
+}

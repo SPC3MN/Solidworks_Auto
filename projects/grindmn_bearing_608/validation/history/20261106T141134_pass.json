@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_bearing_608",
+  "timestamp": "20261106T141134",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bearing_608\\.staging\\20261106T141134\\grindmn_bearing_608.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "_kind": "bearing",
+    "d": 8.0,
+    "D": 22.0,
+    "B": 7.0,
+    "ring_od_in": 12.0,
+    "ring_id_out": 19.0,
+    "recess": 0.3
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        22.0,
+        22.0,
+        7.0
+      ],
+      "volume": 2206.812,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 88045,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 22.0,
+      "expected": 22.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 22.0,
+      "expected": 22.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 7.0,
+      "expected": 7.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 2206.812,
+      "expected": 2206.812,
+      "tolerance": 2.2068119999999998,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 2206.812,
+      "expected": 2206.812,
+      "tolerance": 2.2068119999999998,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 2203.732,
+      "expected": 2206.812,
+      "tolerance": 22.06812,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1192 triangles"
+    }
+  ]
+}

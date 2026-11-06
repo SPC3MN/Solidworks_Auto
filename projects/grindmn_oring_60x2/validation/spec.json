@@ -1,0 +1,28 @@
+{
+  "_comment": "Expected values worked out by hand in projects/grindmn/grindmn_parts.py (closed forms and 1-D integrals), from requirements.md.",
+  "solid_bodies": {
+    "expected": 1
+  },
+  "bbox.x": {
+    "expected": 64.9,
+    "tol": 0.05
+  },
+  "bbox.y": {
+    "expected": 64.9,
+    "tol": 0.05
+  },
+  "bbox.z": {
+    "expected": 2.0,
+    "tol": 0.05
+  },
+  "volume": {
+    "expected": 620.798,
+    "rel_tol": 0.001
+  },
+  "export.step": {
+    "rel_tol": 0.001
+  },
+  "export.stl": {
+    "rel_tol": 0.01
+  }
+}

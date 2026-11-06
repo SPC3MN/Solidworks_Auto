@@ -1,0 +1,167 @@
+{
+ "assembly": "grindmn",
+ "time": "2026-11-06T14:37:08",
+ "pass": false,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 29,
+   "actual": 29
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 129.0,
+   "actual": 129.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": false,
+   "expected": 68.0,
+   "actual": 68.4
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 235.0,
+   "actual": 235.0
+  },
+  {
+   "id": "interference grindmn_dial / grindmn_tube",
+   "pass": false,
+   "pair": [
+    "grindmn_dial",
+    "grindmn_tube"
+   ],
+   "volume_mm3": 828.568,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_crank_arm / grindmn_crank_hub",
+   "pass": false,
+   "pair": [
+    "grindmn_crank_arm",
+    "grindmn_crank_hub"
+   ],
+   "volume_mm3": 165.5494,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_crank_arm / grindmn_crank_hub",
+   "pass": false,
+   "pair": [
+    "grindmn_crank_arm",
+    "grindmn_crank_hub"
+   ],
+   "volume_mm3": 165.5494,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_catch_cup / grindmn_oring_60x2",
+   "pass": false,
+   "pair": [
+    "grindmn_catch_cup",
+    "grindmn_oring_60x2"
+   ],
+   "volume_mm3": 74.8053,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_screw_m4x12 / grindmn_tube",
+   "pass": false,
+   "pair": [
+    "grindmn_screw_m4x12",
+    "grindmn_tube"
+   ],
+   "volume_mm3": 40.1781,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_crank_arm / grindmn_shoulder_5x30",
+   "pass": false,
+   "pair": [
+    "grindmn_crank_arm",
+    "grindmn_shoulder_5x30"
+   ],
+   "volume_mm3": 24.0803,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_screw_m4x6 / grindmn_tube",
+   "pass": false,
+   "pair": [
+    "grindmn_screw_m4x6",
+    "grindmn_tube"
+   ],
+   "volume_mm3": 20.0848,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_screw_m4x6 / grindmn_tube",
+   "pass": false,
+   "pair": [
+    "grindmn_screw_m4x6",
+    "grindmn_tube"
+   ],
+   "volume_mm3": 20.0846,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_bridge / grindmn_screw_m4x12",
+   "pass": false,
+   "pair": [
+    "grindmn_bridge",
+    "grindmn_screw_m4x12"
+   ],
+   "volume_mm3": 17.1812,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_ball_plunger / grindmn_dial",
+   "pass": false,
+   "pair": [
+    "grindmn_ball_plunger",
+    "grindmn_dial"
+   ],
+   "volume_mm3": 4.8448,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_crank_hub / grindmn_screw_m3x8",
+   "pass": false,
+   "pair": [
+    "grindmn_crank_hub",
+    "grindmn_screw_m3x8"
+   ],
+   "volume_mm3": 4.3197,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference grindmn_crank_hub / grindmn_screw_m3x8",
+   "pass": false,
+   "pair": [
+    "grindmn_crank_hub",
+    "grindmn_screw_m3x8"
+   ],
+   "volume_mm3": 4.3197,
+   "note": "unexpected"
+  }
+ ],
+ "bbox_mm": [
+  129.0,
+  68.4,
+  235.0
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\grindmn.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\renders\\wireframe\\top.png"
+ ]
+}

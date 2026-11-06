@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_screw_m4x6",
+  "timestamp": "20261106T143023",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m4x6\\.staging\\20261106T143023\\grindmn_screw_m4x6.SLDPRT",
+  "status": "fail",
+  "params_used": {
+    "_kind": "screw",
+    "d": 4.0,
+    "length": 6.0,
+    "head_d": 7.6,
+    "head_h": 2.2,
+    "button_r": 1.5,
+    "socket": 2.5,
+    "socket_depth": 1.3
+  },
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        7.6,
+        7.6,
+        8.2
+      ],
+      "volume": 157.652,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 115503,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 7.6,
+      "expected": 7.6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 7.6,
+      "expected": 7.6,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 8.2,
+      "expected": 8.2,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 157.652,
+      "expected": 157.652,
+      "tolerance": 0.157652,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "fail",
+      "measured": null,
+      "expected": 157.652,
+      "tolerance": 0.157652,
+      "message": "export.step.volume: measured None, expected 157.652 \u00b1 0.157652"
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 157.124,
+      "expected": 157.652,
+      "tolerance": 1.57652,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "2370 triangles"
+    }
+  ]
+}
