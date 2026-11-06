@@ -1,0 +1,9600 @@
+{
+ "source": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\TANK.SLDASM",
+ "bbox_box": [
+  183.028,
+  -302.106,
+  1402.681,
+  1440.328,
+  1964.844,
+  2732.172
+ ],
+ "bbox": [
+  1257.3,
+  2266.95,
+  1329.49
+ ],
+ "leaves": [
+  {
+   "name": "Assem1^TANK-1/Vertical-2",
+   "file": "Vertical.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    1338.727979,
+    1738.102176,
+    2530.498352
+   ],
+   "comp_box": [
+    1195.853,
+    790.094,
+    2446.763,
+    1348.253,
+    1774.344,
+    2599.163
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-2",
+   "file": "15EX1530L (Upper FAZ).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\15EX1530L (Upper FAZ).SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    281.452979,
+    1936.910991,
+    2589.818909
+   ],
+   "comp_box": [
+    281.453,
+    1926.744,
+    2592.813,
+    1418.103,
+    1964.844,
+    2669.013
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-5",
+   "file": "15EX1530L (Upper FAZ).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\15EX1530L (Upper FAZ).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    284.446732,
+    1936.910991,
+    1532.362662
+   ],
+   "comp_box": [
+    205.253,
+    1926.744,
+    1532.363,
+    281.453,
+    1964.844,
+    2669.013
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6",
+   "file": "15EX1530L (Upper FAZ).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\15EX1530L (Upper FAZ).SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    205.252979,
+    1936.910991,
+    1453.168909
+   ],
+   "comp_box": [
+    205.253,
+    1926.744,
+    1456.163,
+    1341.903,
+    1964.844,
+    1532.363
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-7",
+   "file": "15EX1530L (Upper FAZ).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\15EX1530L (Upper FAZ).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1421.096732,
+    1936.910991,
+    1456.162662
+   ],
+   "comp_box": [
+    1341.903,
+    1926.744,
+    1456.163,
+    1418.103,
+    1964.844,
+    2592.813
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Vertical-1",
+   "file": "Vertical.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    343.767289,
+    1738.102176,
+    2589.637662
+   ],
+   "comp_box": [
+    275.103,
+    790.094,
+    2446.763,
+    427.503,
+    1774.344,
+    2599.163
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Vertical-4",
+   "file": "Vertical.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    284.627979,
+    1738.102176,
+    1594.676972
+   ],
+   "comp_box": [
+    275.103,
+    790.094,
+    1526.013,
+    427.503,
+    1774.344,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+   "file": "Bottom Acrylic Sheet.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom Acrylic Sheet.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    811.677979,
+    647.218999,
+    2062.587662
+   ],
+   "comp_box": [
+    290.978,
+    647.219,
+    1541.888,
+    1332.378,
+    672.619,
+    2583.288
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-2/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    -0.0,
+    1.0,
+    0.0,
+    244.940479,
+    1345.718999,
+    2484.862662
+   ],
+   "comp_box": [
+    240.178,
+    1345.719,
+    2446.763,
+    249.703,
+    1421.919,
+    2522.963
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-5/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    247.480479,
+    751.993999,
+    2329.287662
+   ],
+   "comp_box": [
+    242.718,
+    713.894,
+    2329.288,
+    252.243,
+    790.094,
+    2405.488
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-6/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    1.0,
+    244.940479,
+    751.993999,
+    2126.087662
+   ],
+   "comp_box": [
+    240.178,
+    713.894,
+    2126.088,
+    249.703,
+    790.094,
+    2202.288
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-8/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    1.0,
+    244.940479,
+    751.993999,
+    1719.687662
+   ],
+   "comp_box": [
+    240.178,
+    713.894,
+    1719.688,
+    249.703,
+    790.094,
+    1795.888
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Vertical-3",
+   "file": "Vertical.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical.SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    1279.588669,
+    1738.102176,
+    1535.537662
+   ],
+   "comp_box": [
+    1195.853,
+    790.094,
+    1526.013,
+    1348.253,
+    1774.344,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-7/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    244.940479,
+    751.993999,
+    1922.887662
+   ],
+   "comp_box": [
+    240.178,
+    713.894,
+    1922.888,
+    249.703,
+    790.094,
+    1999.088
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Side Acrylic Sheet-2",
+   "file": "Side Acrylic Sheet.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Side Acrylic Sheet.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1348.252979,
+    1282.218999,
+    2062.587662
+   ],
+   "comp_box": [
+    1348.253,
+    701.194,
+    1589.513,
+    1373.653,
+    1863.244,
+    2535.663
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-9/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    244.940479,
+    1015.518999,
+    1640.312662
+   ],
+   "comp_box": [
+    240.178,
+    939.319,
+    1602.213,
+    249.703,
+    1015.519,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-3/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    1.0,
+    0.0,
+    247.480479,
+    1142.518999,
+    2484.862662
+   ],
+   "comp_box": [
+    242.718,
+    1142.519,
+    2446.763,
+    252.243,
+    1218.719,
+    2522.963
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Side Acrylic Sheet-4",
+   "file": "Side Acrylic Sheet.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Side Acrylic Sheet.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    811.677979,
+    1282.218999,
+    1526.012662
+   ],
+   "comp_box": [
+    338.603,
+    701.194,
+    1500.613,
+    1284.753,
+    1863.244,
+    1526.013
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-4",
+   "file": "Bottom (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom (one part).SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -0.0,
+    735.677233,
+    637.693999,
+    2093.552331
+   ],
+   "comp_box": [
+    275.103,
+    637.694,
+    1535.538,
+    427.503,
+    790.094,
+    2589.638
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-1",
+   "file": "Bottom (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom (one part).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    842.642647,
+    637.693999,
+    2138.588407
+   ],
+   "comp_box": [
+    284.628,
+    637.694,
+    2446.763,
+    1338.728,
+    790.094,
+    2599.163
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-3",
+   "file": "Bottom (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom (one part).SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    780.71331,
+    637.693999,
+    1986.586917
+   ],
+   "comp_box": [
+    284.628,
+    637.694,
+    1526.013,
+    1338.728,
+    790.094,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-2",
+   "file": "Bottom (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom (one part).SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    887.678724,
+    637.693999,
+    2031.622994
+   ],
+   "comp_box": [
+    1195.853,
+    637.694,
+    1535.538,
+    1348.253,
+    790.094,
+    2589.638
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14",
+   "file": "Horizontal_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Horizontal_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    303.132688,
+    619.063024,
+    1589.512662
+   ],
+   "comp_box": [
+    262.403,
+    561.494,
+    1589.513,
+    338.603,
+    637.694,
+    2535.663
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_H_Beam_Base-3",
+   "file": "second_H_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_H_Beam_Base.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    262.402979,
+    -168.336976,
+    1548.782953
+   ],
+   "comp_box": [
+    262.403,
+    -225.906,
+    1513.313,
+    1360.953,
+    -149.706,
+    1589.513
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_H_Beam_Base-4",
+   "file": "second_H_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_H_Beam_Base.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    262.402979,
+    -168.336976,
+    2571.132953
+   ],
+   "comp_box": [
+    262.403,
+    -225.906,
+    2535.663,
+    1360.953,
+    -149.706,
+    2611.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-3",
+   "file": "Vertical_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    303.132688,
+    561.493999,
+    1570.881687
+   ],
+   "comp_box": [
+    262.403,
+    -149.706,
+    1513.313,
+    338.603,
+    561.494,
+    1589.513
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-4",
+   "file": "Vertical_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    303.132688,
+    561.493999,
+    2593.231687
+   ],
+   "comp_box": [
+    262.403,
+    -149.706,
+    2535.663,
+    338.603,
+    561.494,
+    2611.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-15",
+   "file": "Horizontal_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Horizontal_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    303.132688,
+    -168.336976,
+    1589.512662
+   ],
+   "comp_box": [
+    262.403,
+    -225.906,
+    1589.513,
+    338.603,
+    -149.706,
+    2535.663
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_V_Beam_Base-8",
+   "file": "second_V_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_V_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    303.132688,
+    561.493999,
+    2082.056687
+   ],
+   "comp_box": [
+    262.403,
+    -149.706,
+    2024.488,
+    338.603,
+    561.494,
+    2100.688
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_V_Beam_Base-4",
+   "file": "second_V_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_V_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    814.307688,
+    561.493999,
+    2593.231687
+   ],
+   "comp_box": [
+    773.578,
+    -149.706,
+    2535.663,
+    849.778,
+    561.494,
+    2611.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_V_Beam_Base-6",
+   "file": "second_V_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_V_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1325.482688,
+    561.493999,
+    2082.056687
+   ],
+   "comp_box": [
+    1284.753,
+    -149.706,
+    2024.488,
+    1360.953,
+    561.494,
+    2100.688
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_H_Beam_Base-1",
+   "file": "second_H_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_H_Beam_Base.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    262.402979,
+    619.063024,
+    2571.132953
+   ],
+   "comp_box": [
+    262.403,
+    561.494,
+    2535.663,
+    1360.953,
+    637.694,
+    2611.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_H_Beam_Base-2",
+   "file": "second_H_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_H_Beam_Base.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    262.402979,
+    619.063024,
+    1548.782953
+   ],
+   "comp_box": [
+    262.403,
+    561.494,
+    1513.313,
+    1360.953,
+    637.694,
+    1589.513
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/second_V_Beam_Base-7",
+   "file": "second_V_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\second_V_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    814.307688,
+    561.493999,
+    1570.881687
+   ],
+   "comp_box": [
+    773.578,
+    -149.706,
+    1513.313,
+    849.778,
+    561.494,
+    1589.513
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1",
+   "file": "Horizontal_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Horizontal_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1325.482688,
+    619.063024,
+    1589.512662
+   ],
+   "comp_box": [
+    1284.753,
+    561.494,
+    1589.513,
+    1360.953,
+    637.694,
+    2535.663
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-1",
+   "file": "Vertical_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1325.482688,
+    561.493999,
+    1570.881687
+   ],
+   "comp_box": [
+    1284.753,
+    -149.706,
+    1513.313,
+    1360.953,
+    561.494,
+    1589.513
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-2",
+   "file": "Vertical_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Vertical_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1325.482688,
+    561.493999,
+    2593.231687
+   ],
+   "comp_box": [
+    1284.753,
+    -149.706,
+    2535.663,
+    1360.953,
+    561.494,
+    2611.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-13",
+   "file": "Horizontal_Beam_Base.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Horizontal_Beam_Base.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1325.482688,
+    -168.336976,
+    1589.512662
+   ],
+   "comp_box": [
+    1284.753,
+    -225.906,
+    1589.513,
+    1360.953,
+    -149.706,
+    2535.663
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Side Acrylic Sheet-1",
+   "file": "Side Acrylic Sheet.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Side Acrylic Sheet.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    249.702979,
+    1282.218999,
+    2062.587662
+   ],
+   "comp_box": [
+    249.703,
+    701.194,
+    1589.513,
+    275.103,
+    1863.244,
+    2535.663
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Side Acrylic Sheet-3",
+   "file": "Side Acrylic Sheet.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Side Acrylic Sheet.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    811.677979,
+    1282.218999,
+    2624.562662
+   ],
+   "comp_box": [
+    338.603,
+    701.194,
+    2599.163,
+    1284.753,
+    1863.244,
+    2624.563
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-1/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    -0.0,
+    1.0,
+    0.0,
+    244.940479,
+    1548.918999,
+    2484.862662
+   ],
+   "comp_box": [
+    240.178,
+    1548.919,
+    2446.763,
+    249.703,
+    1625.119,
+    2522.963
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-4/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    1.0,
+    0.0,
+    247.480479,
+    939.318999,
+    2484.862662
+   ],
+   "comp_box": [
+    242.718,
+    939.319,
+    2446.763,
+    252.243,
+    1015.519,
+    2522.963
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-3",
+   "file": "Bottom Levelling Plate (option 2).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom Levelling Plate (option 2).SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    1360.952979,
+    -149.706001,
+    1500.612662
+   ],
+   "comp_box": [
+    1284.753,
+    -225.906,
+    1437.113,
+    1360.953,
+    -149.706,
+    1513.313
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-3",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    408.452979,
+    523.393999,
+    2602.337662
+   ],
+   "comp_box": [
+    389.403,
+    485.294,
+    2602.338,
+    427.503,
+    561.494,
+    2611.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-14/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    244.940479,
+    1812.443999,
+    1999.087662
+   ],
+   "comp_box": [
+    240.178,
+    1774.344,
+    1922.888,
+    249.703,
+    1850.544,
+    1999.088
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-4/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    -0.0,
+    1233.952979,
+    1142.518999,
+    2629.325162
+   ],
+   "comp_box": [
+    1195.853,
+    1142.519,
+    2624.563,
+    1272.053,
+    1218.719,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-6/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    -0.0,
+    0.0,
+    875.177979,
+    751.993999,
+    2629.325162
+   ],
+   "comp_box": [
+    875.178,
+    713.894,
+    2624.563,
+    951.378,
+    790.094,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-7/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    -0.0,
+    671.977979,
+    751.993999,
+    2629.325162
+   ],
+   "comp_box": [
+    671.978,
+    713.894,
+    2624.563,
+    748.178,
+    790.094,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-5/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    1.0,
+    -0.0,
+    -0.0,
+    1078.377979,
+    751.993999,
+    2629.325162
+   ],
+   "comp_box": [
+    1078.378,
+    713.894,
+    2624.563,
+    1154.578,
+    790.094,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-3/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    -0.0,
+    1233.952979,
+    939.318999,
+    2629.325162
+   ],
+   "comp_box": [
+    1195.853,
+    939.319,
+    2624.563,
+    1272.053,
+    1015.519,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-1/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1233.952979,
+    1548.918999,
+    2629.325162
+   ],
+   "comp_box": [
+    1195.853,
+    1548.919,
+    2624.563,
+    1272.053,
+    1625.119,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-2/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1233.952979,
+    1345.718999,
+    2629.325162
+   ],
+   "comp_box": [
+    1195.853,
+    1345.719,
+    2624.563,
+    1272.053,
+    1421.919,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-13/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    544.977979,
+    1812.443999,
+    2629.325162
+   ],
+   "comp_box": [
+    468.778,
+    1774.344,
+    2624.563,
+    544.978,
+    1850.544,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-14/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    -0.0,
+    748.177979,
+    1812.443999,
+    2629.325162
+   ],
+   "comp_box": [
+    671.978,
+    1774.344,
+    2624.563,
+    748.178,
+    1850.544,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-16/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    1154.577979,
+    1812.443999,
+    2629.325162
+   ],
+   "comp_box": [
+    1078.378,
+    1774.344,
+    2624.563,
+    1154.578,
+    1850.544,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-15/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    951.377979,
+    1812.443999,
+    2629.325162
+   ],
+   "comp_box": [
+    875.178,
+    1774.344,
+    2624.563,
+    951.378,
+    1850.544,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-8/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    -1.0,
+    0.0,
+    389.402979,
+    1015.518999,
+    2629.325162
+   ],
+   "comp_box": [
+    351.303,
+    939.319,
+    2624.563,
+    427.503,
+    1015.519,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-9/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    -0.0,
+    0.0,
+    468.777979,
+    751.993999,
+    2629.325162
+   ],
+   "comp_box": [
+    468.778,
+    713.894,
+    2624.563,
+    544.978,
+    790.094,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-10/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    -1.0,
+    0.0,
+    389.402979,
+    1218.718999,
+    2629.325162
+   ],
+   "comp_box": [
+    351.303,
+    1142.519,
+    2624.563,
+    427.503,
+    1218.719,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-11/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    389.402979,
+    1421.918999,
+    2629.325162
+   ],
+   "comp_box": [
+    351.303,
+    1345.719,
+    2624.563,
+    427.503,
+    1421.919,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-12/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    -1.0,
+    0.0,
+    389.402979,
+    1625.118999,
+    2629.325162
+   ],
+   "comp_box": [
+    351.303,
+    1548.919,
+    2624.563,
+    427.503,
+    1625.119,
+    2634.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-2",
+   "file": "Bottom Levelling Plate (option 2).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom Levelling Plate (option 2).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1284.752979,
+    -149.706001,
+    2624.562662
+   ],
+   "comp_box": [
+    1284.753,
+    -225.906,
+    2611.863,
+    1360.953,
+    -149.706,
+    2688.063
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-15/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    244.940479,
+    1812.443999,
+    2202.287662
+   ],
+   "comp_box": [
+    240.178,
+    1774.344,
+    2126.088,
+    249.703,
+    1850.544,
+    2202.288
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-4/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    0.0,
+    389.402979,
+    1142.518999,
+    1495.850162
+   ],
+   "comp_box": [
+    351.303,
+    1142.519,
+    1491.088,
+    427.503,
+    1218.719,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-6/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    -0.0,
+    0.0,
+    748.177979,
+    751.993999,
+    1495.850162
+   ],
+   "comp_box": [
+    671.978,
+    713.894,
+    1491.088,
+    748.178,
+    790.094,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-7/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    951.377979,
+    751.993999,
+    1495.850162
+   ],
+   "comp_box": [
+    875.178,
+    713.894,
+    1491.088,
+    951.378,
+    790.094,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-5/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    -0.0,
+    0.0,
+    544.977979,
+    751.993999,
+    1495.850162
+   ],
+   "comp_box": [
+    468.778,
+    713.894,
+    1491.088,
+    544.978,
+    790.094,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-3/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    0.0,
+    389.402979,
+    939.318999,
+    1495.850162
+   ],
+   "comp_box": [
+    351.303,
+    939.319,
+    1491.088,
+    427.503,
+    1015.519,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-1/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    389.402979,
+    1548.918999,
+    1495.850162
+   ],
+   "comp_box": [
+    351.303,
+    1548.919,
+    1491.088,
+    427.503,
+    1625.119,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-2/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    389.402979,
+    1345.718999,
+    1495.850162
+   ],
+   "comp_box": [
+    351.303,
+    1345.719,
+    1491.088,
+    427.503,
+    1421.919,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-13/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    1078.377979,
+    1812.443999,
+    1495.850162
+   ],
+   "comp_box": [
+    1078.378,
+    1774.344,
+    1491.088,
+    1154.578,
+    1850.544,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-14/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    875.177979,
+    1812.443999,
+    1495.850162
+   ],
+   "comp_box": [
+    875.178,
+    1774.344,
+    1491.088,
+    951.378,
+    1850.544,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-16/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    468.777979,
+    1812.443999,
+    1495.850162
+   ],
+   "comp_box": [
+    468.778,
+    1774.344,
+    1491.088,
+    544.978,
+    1850.544,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-15/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    671.977979,
+    1812.443999,
+    1495.850162
+   ],
+   "comp_box": [
+    671.978,
+    1774.344,
+    1491.088,
+    748.178,
+    1850.544,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-8/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1233.952979,
+    1015.518999,
+    1495.850162
+   ],
+   "comp_box": [
+    1195.853,
+    939.319,
+    1491.088,
+    1272.053,
+    1015.519,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-9/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    -0.0,
+    0.0,
+    1154.577979,
+    751.993999,
+    1495.850162
+   ],
+   "comp_box": [
+    1078.378,
+    713.894,
+    1491.088,
+    1154.578,
+    790.094,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-10/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1233.952979,
+    1218.718999,
+    1495.850162
+   ],
+   "comp_box": [
+    1195.853,
+    1142.519,
+    1491.088,
+    1272.053,
+    1218.719,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-11/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1233.952979,
+    1421.918999,
+    1495.850162
+   ],
+   "comp_box": [
+    1195.853,
+    1345.719,
+    1491.088,
+    1272.053,
+    1421.919,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-12/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1233.952979,
+    1625.118999,
+    1495.850162
+   ],
+   "comp_box": [
+    1195.853,
+    1548.919,
+    1491.088,
+    1272.053,
+    1625.119,
+    1500.613
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/KBC-1",
+   "file": "KBC.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\KBC.SLDPRT",
+   "xform": [
+    0.994669514,
+    0.0,
+    -0.103114299,
+    0.0,
+    1.0,
+    0.0,
+    0.103114299,
+    0.0,
+    0.994669514,
+    300.502979,
+    -273.531001,
+    1468.862662
+   ],
+   "comp_box": [
+    240.379,
+    -302.106,
+    1408.738,
+    360.627,
+    -162.099,
+    1528.987
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-1",
+   "file": "Bottom Levelling Plate (option 2).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom Levelling Plate (option 2).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    262.402979,
+    -149.706001,
+    2624.562662
+   ],
+   "comp_box": [
+    262.403,
+    -225.906,
+    2611.863,
+    338.603,
+    -149.706,
+    2688.063
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-10",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    1351.427979,
+    523.393999,
+    1659.362662
+   ],
+   "comp_box": [
+    1351.428,
+    485.294,
+    1640.313,
+    1360.953,
+    561.494,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-4",
+   "file": "Bottom Levelling Plate (option 2).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bottom Levelling Plate (option 2).SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    338.602979,
+    -149.706001,
+    1500.612662
+   ],
+   "comp_box": [
+    262.403,
+    -225.906,
+    1437.113,
+    338.603,
+    -149.706,
+    1513.313
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-16/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    244.940479,
+    1812.443999,
+    2405.487662
+   ],
+   "comp_box": [
+    240.178,
+    1774.344,
+    2329.288,
+    249.703,
+    1850.544,
+    2405.488
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/KBC-2",
+   "file": "KBC.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\KBC.SLDPRT",
+   "xform": [
+    0.971553016,
+    0.0,
+    0.236822163,
+    -0.0,
+    1.0,
+    -0.0,
+    -0.236822163,
+    0.0,
+    0.971553016,
+    1322.852979,
+    -273.531001,
+    1468.862662
+   ],
+   "comp_box": [
+    1256.672,
+    -302.106,
+    1402.681,
+    1389.034,
+    -162.099,
+    1535.044
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-11/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    -0.0,
+    244.940479,
+    1421.918999,
+    1640.312662
+   ],
+   "comp_box": [
+    240.178,
+    1345.719,
+    1602.213,
+    249.703,
+    1421.919,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/KBC-3",
+   "file": "KBC.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\KBC.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    300.502979,
+    -273.531001,
+    2656.312662
+   ],
+   "comp_box": [
+    245.734,
+    -302.106,
+    2601.544,
+    355.272,
+    -162.099,
+    2711.081
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-2",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    262.402979,
+    523.393999,
+    1659.362662
+   ],
+   "comp_box": [
+    262.403,
+    485.294,
+    1640.313,
+    271.928,
+    561.494,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-10/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    -0.0,
+    244.940479,
+    1218.718999,
+    1640.312662
+   ],
+   "comp_box": [
+    240.178,
+    1142.519,
+    1602.213,
+    249.703,
+    1218.719,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-12/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    244.940479,
+    1625.118999,
+    1640.312662
+   ],
+   "comp_box": [
+    240.178,
+    1548.919,
+    1602.213,
+    249.703,
+    1625.119,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button-13/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    244.940479,
+    1812.443999,
+    1795.887662
+   ],
+   "comp_box": [
+    240.178,
+    1774.344,
+    1719.688,
+    249.703,
+    1850.544,
+    1795.888
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-4/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1378.415479,
+    1142.518999,
+    1640.312662
+   ],
+   "comp_box": [
+    1373.653,
+    1142.519,
+    1602.213,
+    1383.178,
+    1218.719,
+    1678.413
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-6/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -1.0,
+    1378.415479,
+    751.993999,
+    1999.087662
+   ],
+   "comp_box": [
+    1373.653,
+    713.894,
+    1922.888,
+    1383.178,
+    790.094,
+    1999.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-7/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    1378.415479,
+    751.993999,
+    2202.287662
+   ],
+   "comp_box": [
+    1373.653,
+    713.894,
+    2126.088,
+    1383.178,
+    790.094,
+    2202.288
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-5/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    1378.415479,
+    751.993999,
+    1795.887662
+   ],
+   "comp_box": [
+    1373.653,
+    713.894,
+    1719.688,
+    1383.178,
+    790.094,
+    1795.888
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-3/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1378.415479,
+    939.318999,
+    1640.312662
+   ],
+   "comp_box": [
+    1373.653,
+    939.319,
+    1602.213,
+    1383.178,
+    1015.519,
+    1678.413
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-1/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1378.415479,
+    1548.918999,
+    1640.312662
+   ],
+   "comp_box": [
+    1373.653,
+    1548.919,
+    1602.213,
+    1383.178,
+    1625.119,
+    1678.413
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-2/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1378.415479,
+    1345.718999,
+    1640.312662
+   ],
+   "comp_box": [
+    1373.653,
+    1345.719,
+    1602.213,
+    1383.178,
+    1421.919,
+    1678.413
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-13/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1378.415479,
+    1812.443999,
+    2329.287662
+   ],
+   "comp_box": [
+    1373.653,
+    1774.344,
+    2329.288,
+    1383.178,
+    1850.544,
+    2405.488
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-14/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    1.0,
+    1378.415479,
+    1812.443999,
+    2126.087662
+   ],
+   "comp_box": [
+    1373.653,
+    1774.344,
+    2126.088,
+    1383.178,
+    1850.544,
+    2202.288
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-16/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1378.415479,
+    1812.443999,
+    1719.687662
+   ],
+   "comp_box": [
+    1373.653,
+    1774.344,
+    1719.688,
+    1383.178,
+    1850.544,
+    1795.888
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-15/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1378.415479,
+    1812.443999,
+    1922.887662
+   ],
+   "comp_box": [
+    1373.653,
+    1774.344,
+    1922.888,
+    1383.178,
+    1850.544,
+    1999.088
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-8/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1378.415479,
+    1015.518999,
+    2484.862662
+   ],
+   "comp_box": [
+    1373.653,
+    939.319,
+    2446.763,
+    1383.178,
+    1015.519,
+    2522.963
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-9/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -1.0,
+    1378.415479,
+    751.993999,
+    2405.487662
+   ],
+   "comp_box": [
+    1373.653,
+    713.894,
+    2329.288,
+    1383.178,
+    790.094,
+    2405.488
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-10/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    1.0,
+    -1.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1378.415479,
+    1218.718999,
+    2484.862662
+   ],
+   "comp_box": [
+    1373.653,
+    1142.519,
+    2446.763,
+    1383.178,
+    1218.719,
+    2522.963
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-11/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    0.0,
+    1378.415479,
+    1421.918999,
+    2484.862662
+   ],
+   "comp_box": [
+    1373.653,
+    1345.719,
+    2446.763,
+    1383.178,
+    1421.919,
+    2522.963
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-12/separated strip-1",
+   "file": "separated strip.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\separated strip.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1378.415479,
+    1625.118999,
+    2484.862662
+   ],
+   "comp_box": [
+    1373.653,
+    1548.919,
+    2446.763,
+    1383.178,
+    1625.119,
+    2522.963
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/KBC-4",
+   "file": "KBC.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\KBC.SLDPRT",
+   "xform": [
+    -0.835323076,
+    0.0,
+    0.549759365,
+    0.0,
+    1.0,
+    0.0,
+    -0.549759365,
+    0.0,
+    -0.835323076,
+    1322.852979,
+    -273.531001,
+    2656.312662
+   ],
+   "comp_box": [
+    1246.994,
+    -302.106,
+    2580.453,
+    1398.712,
+    -162.099,
+    2732.172
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-1",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    262.402979,
+    523.393999,
+    2465.812662
+   ],
+   "comp_box": [
+    262.403,
+    485.294,
+    2446.763,
+    271.928,
+    561.494,
+    2484.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-4",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1214.902979,
+    523.393999,
+    2602.337662
+   ],
+   "comp_box": [
+    1195.853,
+    485.294,
+    2602.338,
+    1233.953,
+    561.494,
+    2611.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-6",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    329.077979,
+    -111.606001,
+    1659.362662
+   ],
+   "comp_box": [
+    329.078,
+    -149.706,
+    1640.313,
+    338.603,
+    -73.506,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-7",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    1284.752979,
+    -111.606001,
+    2465.812662
+   ],
+   "comp_box": [
+    1284.753,
+    -149.706,
+    2446.763,
+    1294.278,
+    -73.506,
+    2484.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-8",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    1284.752979,
+    -111.606001,
+    1659.362662
+   ],
+   "comp_box": [
+    1284.753,
+    -149.706,
+    1640.313,
+    1294.278,
+    -73.506,
+    1678.413
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-9",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    1351.427979,
+    523.393999,
+    2465.812662
+   ],
+   "comp_box": [
+    1351.428,
+    485.294,
+    2446.763,
+    1360.953,
+    561.494,
+    2484.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-13",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    408.452979,
+    -111.606001,
+    1579.987662
+   ],
+   "comp_box": [
+    389.403,
+    -149.706,
+    1579.988,
+    427.503,
+    -73.506,
+    1589.513
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-5",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    329.077979,
+    -111.606001,
+    2465.812662
+   ],
+   "comp_box": [
+    329.078,
+    -149.706,
+    2446.763,
+    338.603,
+    -73.506,
+    2484.863
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-15",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1214.902979,
+    -111.606001,
+    2535.662662
+   ],
+   "comp_box": [
+    1195.853,
+    -149.706,
+    2535.663,
+    1233.953,
+    -73.506,
+    2545.188
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-12",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    408.452979,
+    523.393999,
+    1513.312662
+   ],
+   "comp_box": [
+    389.403,
+    485.294,
+    1513.313,
+    427.503,
+    561.494,
+    1522.838
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-14",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1214.902979,
+    -111.606001,
+    1579.987662
+   ],
+   "comp_box": [
+    1195.853,
+    -149.706,
+    1579.988,
+    1233.953,
+    -73.506,
+    1589.513
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/UPPER-1/upper (one part)-2",
+   "file": "upper (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\upper (one part).SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    811.677979,
+    1774.343999,
+    2062.587662
+   ],
+   "comp_box": [
+    183.028,
+    1774.344,
+    1433.938,
+    284.628,
+    1926.744,
+    2691.238
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/UPPER-1/upper (one part)-4",
+   "file": "upper (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\upper (one part).SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    811.677979,
+    1774.343999,
+    2062.587662
+   ],
+   "comp_box": [
+    1338.728,
+    1774.344,
+    1433.938,
+    1440.328,
+    1926.744,
+    2691.238
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/UPPER-1/upper (one part)-1",
+   "file": "upper (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\upper (one part).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    811.677979,
+    1774.343999,
+    2062.587662
+   ],
+   "comp_box": [
+    183.028,
+    1774.344,
+    1433.938,
+    1440.328,
+    1926.744,
+    1535.538
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/UPPER-1/upper (one part)-3",
+   "file": "upper (one part).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\upper (one part).SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    811.677979,
+    1774.343999,
+    2062.587662
+   ],
+   "comp_box": [
+    183.028,
+    1774.344,
+    2589.638,
+    1440.328,
+    1926.744,
+    2691.238
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-11",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1214.902979,
+    523.393999,
+    1513.312662
+   ],
+   "comp_box": [
+    1195.853,
+    485.294,
+    1513.313,
+    1233.953,
+    561.494,
+    1522.838
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Assem1^TANK-1/FAZTEKMountedPlate-16",
+   "file": "FAZTEKMountedPlate.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\FAZTEKMountedPlate.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    408.452979,
+    -111.606001,
+    2535.662662
+   ],
+   "comp_box": [
+    389.403,
+    -149.706,
+    2535.663,
+    427.503,
+    -73.506,
+    2545.188
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/3-17",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    1326.281979,
+    1842.803991,
+    1589.077416
+   ],
+   "comp_box": [
+    335.174,
+    1832.637,
+    1547.984,
+    1326.282,
+    1870.737,
+    1586.084
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/4(stick)-22",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    1021.060072,
+    1804.703991,
+    2411.481319
+   ],
+   "comp_box": [
+    992.002,
+    1794.537,
+    2413.598,
+    1144.667,
+    1832.637,
+    2566.263
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/4(stick)-26",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    477.017027,
+    1804.703991,
+    2536.359842
+   ],
+   "comp_box": [
+    479.134,
+    1794.537,
+    2412.753,
+    631.798,
+    1832.637,
+    2565.418
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-32",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    -1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    348.006912,
+    1794.536999,
+    2375.212881
+   ],
+   "comp_box": [
+    336.243,
+    1794.537,
+    2363.449,
+    386.712,
+    1832.637,
+    2413.918
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/3-13",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    1285.188225,
+    682.703991,
+    2577.191662
+   ],
+   "comp_box": [
+    1288.182,
+    672.537,
+    1586.084,
+    1326.282,
+    710.637,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/3-15",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    338.167732,
+    682.703991,
+    1547.983662
+   ],
+   "comp_box": [
+    297.074,
+    672.537,
+    1547.984,
+    335.174,
+    710.637,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/4(stick)-23",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1192.571284,
+    1804.703991,
+    2239.905202
+   ],
+   "comp_box": [
+    1163.514,
+    1794.537,
+    2242.022,
+    1316.178,
+    1832.637,
+    2394.686
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-1",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    1680.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    1583.537,
+    2299.05,
+    386.189,
+    1680.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-4",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    1568.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    1471.537,
+    2457.442,
+    544.581,
+    1568.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-2",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    1680.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    1583.537,
+    2378.246,
+    465.385,
+    1680.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "file": "M-1003 SQR MTG PLATE.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\M-1003 SQR MTG PLATE.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    436.323362,
+    1233.536999,
+    2433.939153
+   ],
+   "comp_box": [
+    336.199,
+    672.537,
+    2332.692,
+    537.57,
+    1794.537,
+    2534.064
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-3",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    1680.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    1583.537,
+    2457.442,
+    544.581,
+    1680.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-7",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    1456.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    1359.537,
+    2299.05,
+    386.189,
+    1456.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-23",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    896.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    799.537,
+    2378.246,
+    465.385,
+    896.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-16",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    1120.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    1023.537,
+    2299.05,
+    386.189,
+    1120.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-24",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    896.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    799.537,
+    2299.05,
+    386.189,
+    896.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-8",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    1456.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    1359.537,
+    2378.246,
+    465.385,
+    1456.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-17",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    1120.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    1023.537,
+    2378.246,
+    465.385,
+    1120.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-9",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    1456.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    1359.537,
+    2457.442,
+    544.581,
+    1456.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-20",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    1008.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    911.537,
+    2378.246,
+    465.385,
+    1008.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-13",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    1232.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    1135.537,
+    2299.05,
+    386.189,
+    1232.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-22",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    896.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    799.537,
+    2457.442,
+    544.581,
+    896.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-21",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    1008.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    911.537,
+    2299.05,
+    386.189,
+    1008.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-19",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    1008.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    911.537,
+    2457.442,
+    544.581,
+    1008.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-11",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    1344.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    1247.537,
+    2378.246,
+    465.385,
+    1344.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-5",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    1568.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    1471.537,
+    2378.246,
+    465.385,
+    1568.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-6",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    1568.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    1471.537,
+    2299.05,
+    386.189,
+    1568.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-10",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    1344.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    1247.537,
+    2457.442,
+    544.581,
+    1344.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-12",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    320.137301,
+    1344.366999,
+    2365.101989
+   ],
+   "comp_box": [
+    271.031,
+    1247.537,
+    2299.05,
+    386.189,
+    1344.367,
+    2414.208
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-14",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    399.33326,
+    1232.366999,
+    2444.297948
+   ],
+   "comp_box": [
+    350.227,
+    1135.537,
+    2378.246,
+    465.385,
+    1232.367,
+    2493.404
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-15",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    1232.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    1135.537,
+    2457.442,
+    544.581,
+    1232.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-18",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    478.52922,
+    1120.366999,
+    2523.493908
+   ],
+   "comp_box": [
+    429.423,
+    1023.537,
+    2457.442,
+    544.581,
+    1120.367,
+    2572.6
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-18",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -1.0,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    0.707106781,
+    1272.556333,
+    1794.537103,
+    2378.005594
+   ],
+   "comp_box": [
+    1233.851,
+    1794.537,
+    2366.241,
+    1284.321,
+    1832.637,
+    2416.711
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-31",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    -1.0,
+    0.0,
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    495.202353,
+    1794.536999,
+    2522.408323
+   ],
+   "comp_box": [
+    456.497,
+    1794.537,
+    2483.703,
+    506.967,
+    1832.637,
+    2534.173
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/3-18",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    1285.188225,
+    1842.803991,
+    2577.191662
+   ],
+   "comp_box": [
+    1288.182,
+    1832.637,
+    1586.084,
+    1326.282,
+    1870.737,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/3-16",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    338.167732,
+    1842.803991,
+    1547.983662
+   ],
+   "comp_box": [
+    297.074,
+    1832.637,
+    1547.984,
+    335.174,
+    1870.737,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-1",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    1680.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    1583.537,
+    1521.634,
+    570.968,
+    1680.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-4",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    1568.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    1471.537,
+    1680.026,
+    412.576,
+    1568.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-2",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    1680.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    1583.537,
+    1600.83,
+    491.772,
+    1680.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "file": "M-1003 SQR MTG PLATE.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\M-1003 SQR MTG PLATE.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    436.079327,
+    1233.536999,
+    1686.926858
+   ],
+   "comp_box": [
+    335.955,
+    672.537,
+    1586.802,
+    537.326,
+    1794.537,
+    1788.174
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-3",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    1680.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    1583.537,
+    1680.026,
+    412.576,
+    1680.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-7",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    1456.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    1359.537,
+    1521.634,
+    570.968,
+    1456.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-23",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    896.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    799.537,
+    1600.83,
+    491.772,
+    896.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-16",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    1120.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    1023.537,
+    1521.634,
+    570.968,
+    1120.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-24",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    896.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    799.537,
+    1521.634,
+    570.968,
+    896.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-8",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    1456.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    1359.537,
+    1600.83,
+    491.772,
+    1456.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-17",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    1120.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    1023.537,
+    1600.83,
+    491.772,
+    1120.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-9",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    1456.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    1359.537,
+    1680.026,
+    412.576,
+    1456.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-20",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    1008.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    911.537,
+    1600.83,
+    491.772,
+    1008.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-13",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    1232.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    1135.537,
+    1521.634,
+    570.968,
+    1232.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-22",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    896.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    799.537,
+    1680.026,
+    412.576,
+    896.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-21",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    1008.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    911.537,
+    1521.634,
+    570.968,
+    1008.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-19",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    1008.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    911.537,
+    1680.026,
+    412.576,
+    1008.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-11",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    1344.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    1247.537,
+    1600.83,
+    491.772,
+    1344.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-5",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    1568.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    1471.537,
+    1600.83,
+    491.772,
+    1568.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-6",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    1568.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    1471.537,
+    1521.634,
+    570.968,
+    1568.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-10",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    1344.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    1247.537,
+    1680.026,
+    412.576,
+    1344.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-12",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    504.916491,
+    1344.366999,
+    1570.740797
+   ],
+   "comp_box": [
+    455.81,
+    1247.537,
+    1521.634,
+    570.968,
+    1344.367,
+    1636.792
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-14",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    425.720532,
+    1232.366999,
+    1649.936756
+   ],
+   "comp_box": [
+    376.614,
+    1135.537,
+    1600.83,
+    491.772,
+    1232.367,
+    1715.988
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-15",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    1232.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    1135.537,
+    1680.026,
+    412.576,
+    1232.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-18",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    346.524573,
+    1120.366999,
+    1729.132716
+   ],
+   "comp_box": [
+    297.418,
+    1023.537,
+    1680.026,
+    412.576,
+    1120.367,
+    1795.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/4(stick)-19",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    1159.95463,
+    1804.703991,
+    1855.661933
+   ],
+   "comp_box": [
+    1162.072,
+    1794.537,
+    1732.055,
+    1314.736,
+    1832.637,
+    1884.72
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/3-12",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1326.281979,
+    682.703991,
+    1589.077416
+   ],
+   "comp_box": [
+    335.174,
+    672.537,
+    1547.984,
+    1326.282,
+    710.637,
+    1586.084
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/3-14",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    297.073979,
+    682.703991,
+    2536.097909
+   ],
+   "comp_box": [
+    297.074,
+    672.537,
+    2539.092,
+    1288.182,
+    710.637,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/4(stick)-15",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    510.203239,
+    1804.703991,
+    1557.41285
+   ],
+   "comp_box": [
+    481.146,
+    1794.537,
+    1559.53,
+    633.81,
+    1832.637,
+    1712.194
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/4(stick)-16",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    0.707106781,
+    0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    338.510582,
+    1804.703991,
+    1729.889921
+   ],
+   "comp_box": [
+    309.453,
+    1794.537,
+    1732.007,
+    462.117,
+    1832.637,
+    1884.671
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-1",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    1680.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    1583.537,
+    1707.161,
+    1352.19,
+    1680.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-4",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    1568.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    1471.537,
+    1548.769,
+    1193.798,
+    1568.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-2",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    1680.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    1583.537,
+    1627.965,
+    1272.994,
+    1680.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "file": "M-1003 SQR MTG PLATE.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\M-1003 SQR MTG PLATE.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1186.897538,
+    1233.536999,
+    1687.430256
+   ],
+   "comp_box": [
+    1085.65,
+    672.537,
+    1587.306,
+    1287.022,
+    1794.537,
+    1788.677
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-3",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    1680.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    1583.537,
+    1548.769,
+    1193.798,
+    1680.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-7",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    1456.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    1359.537,
+    1707.161,
+    1352.19,
+    1456.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-23",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    896.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    799.537,
+    1627.965,
+    1272.994,
+    896.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-16",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    1120.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    1023.537,
+    1707.161,
+    1352.19,
+    1120.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-24",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    896.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    799.537,
+    1707.161,
+    1352.19,
+    896.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-8",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    1456.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    1359.537,
+    1627.965,
+    1272.994,
+    1456.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-17",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    1120.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    1023.537,
+    1627.965,
+    1272.994,
+    1120.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-9",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    1456.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    1359.537,
+    1548.769,
+    1193.798,
+    1456.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-20",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    1008.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    911.537,
+    1627.965,
+    1272.994,
+    1008.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-13",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    1232.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    1135.537,
+    1707.161,
+    1352.19,
+    1232.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-22",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    896.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    799.537,
+    1548.769,
+    1193.798,
+    896.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-21",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    1008.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    911.537,
+    1707.161,
+    1352.19,
+    1008.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-19",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    1008.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    911.537,
+    1548.769,
+    1193.798,
+    1008.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-11",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    1344.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    1247.537,
+    1627.965,
+    1272.994,
+    1344.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-5",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    1568.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    1471.537,
+    1627.965,
+    1272.994,
+    1568.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-6",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    1568.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    1471.537,
+    1707.161,
+    1352.19,
+    1568.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-10",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    1344.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    1247.537,
+    1548.769,
+    1193.798,
+    1344.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-12",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1303.083599,
+    1344.366999,
+    1756.26742
+   ],
+   "comp_box": [
+    1237.032,
+    1247.537,
+    1707.161,
+    1352.19,
+    1344.367,
+    1822.319
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-14",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1223.887639,
+    1232.366999,
+    1677.071461
+   ],
+   "comp_box": [
+    1157.836,
+    1135.537,
+    1627.965,
+    1272.994,
+    1232.367,
+    1743.123
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-15",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    1232.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    1135.537,
+    1548.769,
+    1193.798,
+    1232.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-18",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1144.69168,
+    1120.366999,
+    1597.875501
+   ],
+   "comp_box": [
+    1078.64,
+    1023.537,
+    1548.769,
+    1193.798,
+    1120.367,
+    1663.927
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/3-19",
+   "file": "3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\3.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1.0,
+    0.0,
+    -0.0,
+    297.073979,
+    1842.803991,
+    2536.097909
+   ],
+   "comp_box": [
+    297.074,
+    1832.637,
+    2539.092,
+    1288.182,
+    1870.737,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-1",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    1680.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    1583.537,
+    2488.759,
+    1169.442,
+    1680.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-4",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    1568.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    1471.537,
+    2330.367,
+    1327.834,
+    1568.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-2",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    1680.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    1583.537,
+    2409.563,
+    1248.638,
+    1680.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "file": "M-1003 SQR MTG PLATE.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\M-1003 SQR MTG PLATE.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1189.172699,
+    1233.536999,
+    2438.624357
+   ],
+   "comp_box": [
+    1087.926,
+    672.537,
+    2337.377,
+    1289.297,
+    1794.537,
+    2538.749
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-3",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    1680.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    1583.537,
+    2330.367,
+    1327.834,
+    1680.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-7",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    1456.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    1359.537,
+    2488.759,
+    1169.442,
+    1456.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-23",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    896.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    799.537,
+    2409.563,
+    1248.638,
+    896.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-16",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    1120.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    1023.537,
+    2488.759,
+    1169.442,
+    1120.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-24",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    896.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    799.537,
+    2488.759,
+    1169.442,
+    896.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-8",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    1456.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    1359.537,
+    2409.563,
+    1248.638,
+    1456.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-17",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    1120.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    1023.537,
+    2409.563,
+    1248.638,
+    1120.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-9",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    1456.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    1359.537,
+    2330.367,
+    1327.834,
+    1456.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-20",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    1008.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    911.537,
+    2409.563,
+    1248.638,
+    1008.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-13",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    1232.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    1135.537,
+    2488.759,
+    1169.442,
+    1232.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-22",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    896.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    799.537,
+    2330.367,
+    1327.834,
+    896.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-21",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    1008.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    911.537,
+    2488.759,
+    1169.442,
+    1008.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-19",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    1008.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    911.537,
+    2330.367,
+    1327.834,
+    1008.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-11",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    1344.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    1247.537,
+    2409.563,
+    1248.638,
+    1344.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-5",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    1568.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    1471.537,
+    2409.563,
+    1248.638,
+    1568.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-6",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    1568.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    1471.537,
+    2488.759,
+    1169.442,
+    1568.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-10",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    1344.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    1247.537,
+    2330.367,
+    1327.834,
+    1344.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-12",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1120.335535,
+    1344.366999,
+    2554.810418
+   ],
+   "comp_box": [
+    1054.284,
+    1247.537,
+    2488.759,
+    1169.442,
+    1344.367,
+    2603.917
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-14",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1199.531494,
+    1232.366999,
+    2475.614459
+   ],
+   "comp_box": [
+    1133.48,
+    1135.537,
+    2409.563,
+    1248.638,
+    1232.367,
+    2524.721
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-15",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    1232.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    1135.537,
+    2330.367,
+    1327.834,
+    1232.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-18",
+   "file": "Bilge_Pump.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Bilge_Pump.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    0.0,
+    0.707106781,
+    1278.727454,
+    1120.366999,
+    2396.418499
+   ],
+   "comp_box": [
+    1212.676,
+    1023.537,
+    2330.367,
+    1327.834,
+    1120.367,
+    2445.525
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/4(stick)-20",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    985.737469,
+    1804.703991,
+    1681.309557
+   ],
+   "comp_box": [
+    987.854,
+    1794.537,
+    1557.703,
+    1140.519,
+    1832.637,
+    1710.367
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/4(stick)-25",
+   "file": "4(stick).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\4(stick).SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    300.899698,
+    1804.703991,
+    2364.204752
+   ],
+   "comp_box": [
+    303.017,
+    1794.537,
+    2240.598,
+    455.681,
+    1832.637,
+    2393.262
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-17",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1124.781678,
+    1794.536999,
+    2519.436731
+   ],
+   "comp_box": [
+    1113.017,
+    1794.537,
+    2480.732,
+    1163.487,
+    1832.637,
+    2531.201
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/anchor-34",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    1280.433979,
+    691.649999,
+    2573.254662
+   ],
+   "comp_box": [
+    1280.434,
+    687.713,
+    2569.318,
+    1296.182,
+    695.587,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-35",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    301.010979,
+    691.649999,
+    2531.343662
+   ],
+   "comp_box": [
+    297.074,
+    687.713,
+    2531.344,
+    304.948,
+    695.587,
+    2547.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V2-3",
+   "file": "5 - V2.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V2.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    337.615677,
+    1766.603991,
+    2333.242725
+   ],
+   "comp_box": [
+    308.558,
+    1756.437,
+    2335.36,
+    534.903,
+    1794.537,
+    2561.705
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V2-2",
+   "file": "5 - V2.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V2.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    1117.375685,
+    1766.603991,
+    1557.547996
+   ],
+   "comp_box": [
+    1088.318,
+    1756.437,
+    1559.665,
+    1314.663,
+    1794.537,
+    1786.01
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V2-4",
+   "file": "5 - V2.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V2.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    536.775755,
+    1766.603991,
+    1588.219173
+   ],
+   "comp_box": [
+    308.314,
+    1756.437,
+    1559.162,
+    534.659,
+    1794.537,
+    1785.506
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/vertical_pillar-1",
+   "file": "vertical_pillar.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\vertical_pillar.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1329.275732,
+    1832.636999,
+    2549.258653
+   ],
+   "comp_box": [
+    1288.182,
+    710.637,
+    2539.092,
+    1326.282,
+    1832.637,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/vertical_pillar-2",
+   "file": "vertical_pillar.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\vertical_pillar.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    338.167732,
+    1832.636999,
+    2549.258653
+   ],
+   "comp_box": [
+    297.074,
+    710.637,
+    2539.092,
+    335.174,
+    1832.637,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-30",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1322.344979,
+    1851.749999,
+    1578.083662
+   ],
+   "comp_box": [
+    1318.408,
+    1847.813,
+    1578.084,
+    1326.282,
+    1855.687,
+    1593.832
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V2-1",
+   "file": "5 - V2.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V2.SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1088.476272,
+    1766.603991,
+    2537.332042
+   ],
+   "comp_box": [
+    1090.593,
+    1756.437,
+    2340.045,
+    1316.938,
+    1794.537,
+    2566.39
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/vertical_pillar-3",
+   "file": "vertical_pillar.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\vertical_pillar.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    338.167732,
+    1832.636999,
+    1558.150653
+   ],
+   "comp_box": [
+    297.074,
+    710.637,
+    1547.984,
+    335.174,
+    1832.637,
+    1586.084
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-28",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    301.136979,
+    1851.623999,
+    2531.343662
+   ],
+   "comp_box": [
+    297.2,
+    1847.687,
+    2531.344,
+    305.074,
+    1855.561,
+    2547.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-29",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    327.173979,
+    1851.749999,
+    1552.046662
+   ],
+   "comp_box": [
+    327.174,
+    1847.813,
+    1548.11,
+    342.922,
+    1855.687,
+    1555.984
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/vertical_pillar-4",
+   "file": "vertical_pillar.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\vertical_pillar.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1329.275732,
+    1832.636999,
+    1558.150653
+   ],
+   "comp_box": [
+    1288.182,
+    710.637,
+    1547.984,
+    1326.282,
+    1832.637,
+    1586.084
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-32",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    327.173979,
+    691.523999,
+    1551.920662
+   ],
+   "comp_box": [
+    327.174,
+    687.587,
+    1547.984,
+    342.922,
+    695.461,
+    1555.858
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-33",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1322.344979,
+    691.523999,
+    1578.083662
+   ],
+   "comp_box": [
+    1318.408,
+    687.587,
+    1578.084,
+    1326.282,
+    695.461,
+    1593.832
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-36",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -1.0,
+    0.0,
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    1272.618486,
+    1794.536999,
+    1747.231883
+   ],
+   "comp_box": [
+    1233.913,
+    1794.537,
+    1708.527,
+    1284.383,
+    1832.637,
+    1758.996
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-33",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    351.178105,
+    1794.537,
+    1746.79125
+   ],
+   "comp_box": [
+    339.414,
+    1794.537,
+    1708.086,
+    389.883,
+    1832.637,
+    1758.556
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-35",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    1125.274486,
+    1794.536999,
+    1599.887884
+   ],
+   "comp_box": [
+    1113.51,
+    1794.537,
+    1588.124,
+    1163.98,
+    1832.637,
+    1638.593
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/anchor-31",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    1280.433979,
+    1851.749999,
+    2573.254662
+   ],
+   "comp_box": [
+    1280.434,
+    1847.813,
+    2569.318,
+    1296.182,
+    1855.687,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-34",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    -1.0,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    0.707106781,
+    496.3222,
+    1794.536999,
+    1601.647155
+   ],
+   "comp_box": [
+    457.617,
+    1794.537,
+    1589.883,
+    508.086,
+    1832.637,
+    1640.352
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-39",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1288.181979,
+    1832.636999,
+    1777.443447
+   ],
+   "comp_box": [
+    1250.082,
+    1832.637,
+    1760.806,
+    1288.182,
+    1870.737,
+    1794.081
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/5 - V3-3",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    305.379802,
+    682.703991,
+    1757.265975
+   ],
+   "comp_box": [
+    412.277,
+    672.537,
+    1559.143,
+    534.677,
+    710.637,
+    1681.543
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/5 - V3-6",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1116.999665,
+    700.470008,
+    2571.157798
+   ],
+   "comp_box": [
+    1192.723,
+    672.537,
+    2341.86,
+    1315.123,
+    710.637,
+    2464.26
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-7",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    335.173979,
+    689.173999,
+    1586.083662
+   ],
+   "comp_box": [
+    335.169,
+    672.532,
+    1586.079,
+    411.379,
+    705.816,
+    1662.289
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-8",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    1288.181979,
+    689.173999,
+    1586.083662
+   ],
+   "comp_box": [
+    1211.977,
+    672.532,
+    1586.079,
+    1288.187,
+    705.816,
+    1662.289
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V3-2",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    -0.0,
+    -1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    309.933151,
+    700.470008,
+    2367.909349
+   ],
+   "comp_box": [
+    416.831,
+    672.537,
+    2443.632,
+    539.231,
+    710.637,
+    2566.032
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-38",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1.0,
+    0.0,
+    1096.47935,
+    1832.636999,
+    2539.091662
+   ],
+   "comp_box": [
+    1079.842,
+    1832.637,
+    2500.992,
+    1113.116,
+    1870.737,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-43",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    -0.0,
+    335.173979,
+    1832.636999,
+    1776.037468
+   ],
+   "comp_box": [
+    335.174,
+    1832.637,
+    1759.4,
+    373.274,
+    1870.737,
+    1792.675
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-4",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    335.173979,
+    1854.099999,
+    1586.083662
+   ],
+   "comp_box": [
+    335.169,
+    1837.458,
+    1586.079,
+    411.379,
+    1870.742,
+    1662.289
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V3-4",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    -1.0,
+    0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    506.356292,
+    700.470008,
+    1556.289486
+   ],
+   "comp_box": [
+    308.233,
+    672.537,
+    1663.187,
+    430.633,
+    710.637,
+    1785.587
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/anchor-43",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1282.108694,
+    691.523999,
+    2353.501185
+   ],
+   "comp_box": [
+    1279.325,
+    687.587,
+    2339.582,
+    1296.028,
+    695.461,
+    2356.285
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-41",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    525.23387,
+    1832.636999,
+    2539.091662
+   ],
+   "comp_box": [
+    508.597,
+    1832.637,
+    2500.992,
+    541.871,
+    1870.737,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V3-8",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    1116.999665,
+    682.703991,
+    1557.171976
+   ],
+   "comp_box": [
+    1192.723,
+    672.537,
+    1664.069,
+    1315.123,
+    710.637,
+    1786.47
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-37",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    1288.181979,
+    1832.636999,
+    2349.034519
+   ],
+   "comp_box": [
+    1250.082,
+    1832.637,
+    2332.397,
+    1288.182,
+    1870.737,
+    2365.672
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-42",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    -0.0,
+    335.173979,
+    1832.636999,
+    2340.758822
+   ],
+   "comp_box": [
+    335.174,
+    1832.637,
+    2324.122,
+    373.274,
+    1870.737,
+    2357.396
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-40",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    1093.507373,
+    1832.636999,
+    1586.083662
+   ],
+   "comp_box": [
+    1076.87,
+    1832.637,
+    1586.084,
+    1110.144,
+    1870.737,
+    1624.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-1",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    335.173979,
+    1854.099999,
+    2539.091662
+   ],
+   "comp_box": [
+    335.169,
+    1837.458,
+    2462.887,
+    411.379,
+    1870.742,
+    2539.097
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-44",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    526.435409,
+    1832.636999,
+    1586.083662
+   ],
+   "comp_box": [
+    509.798,
+    1832.637,
+    1586.084,
+    543.073,
+    1870.737,
+    1624.184
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-2",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    1288.181979,
+    1854.099999,
+    2539.091662
+   ],
+   "comp_box": [
+    1211.977,
+    1837.458,
+    2462.887,
+    1288.187,
+    1870.742,
+    2539.097
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-6",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    -0.0,
+    1.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    1.0,
+    0.0,
+    -0.0,
+    335.173979,
+    689.173999,
+    2539.091662
+   ],
+   "comp_box": [
+    335.169,
+    672.532,
+    2462.887,
+    411.379,
+    705.816,
+    2539.097
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V3-1",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    -0.707106781,
+    0.0,
+    -0.707106781,
+    506.356292,
+    682.703991,
+    2564.33249
+   ],
+   "comp_box": [
+    308.233,
+    672.537,
+    2335.035,
+    430.633,
+    710.637,
+    2457.435
+   ],
+   "box_dev": 0.001
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-3",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    1288.181979,
+    1854.099999,
+    1586.083662
+   ],
+   "comp_box": [
+    1211.977,
+    1837.458,
+    1586.079,
+    1288.187,
+    1870.742,
+    1662.289
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4842)-5",
+   "file": "Gusset Corner Bracket(15CB4842).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4842).SLDPRT",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    1288.181979,
+    693.999999,
+    2539.091662
+   ],
+   "comp_box": [
+    1211.977,
+    677.358,
+    2462.887,
+    1288.187,
+    710.642,
+    2539.097
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V3-5",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    1320.248115,
+    682.703991,
+    2367.909349
+   ],
+   "comp_box": [
+    1090.95,
+    672.537,
+    2443.632,
+    1213.351,
+    710.637,
+    2566.032
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/5 - V3-7",
+   "file": "5 - V3.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\5 - V3.SLDPRT",
+   "xform": [
+    0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    -1.0,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    1317.093664,
+    700.470008,
+    1757.265975
+   ],
+   "comp_box": [
+    1087.796,
+    672.537,
+    1559.143,
+    1210.196,
+    710.637,
+    1681.543
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-36",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    0.707106781,
+    0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    1087.732761,
+    691.523999,
+    1580.274466
+   ],
+   "comp_box": [
+    1084.949,
+    687.587,
+    1577.491,
+    1101.652,
+    695.461,
+    1594.194
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-37",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    1282.782083,
+    691.649999,
+    1775.323788
+   ],
+   "comp_box": [
+    1279.998,
+    687.713,
+    1772.54,
+    1296.701,
+    695.587,
+    1789.243
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-38",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    523.633372,
+    691.649999,
+    1591.381799
+   ],
+   "comp_box": [
+    520.849,
+    687.713,
+    1577.462,
+    537.553,
+    695.587,
+    1594.166
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-39",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    0.707106781,
+    0.0,
+    0.707106781,
+    0.0,
+    1.0,
+    -0.0,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    340.608853,
+    691.523999,
+    1774.58451
+   ],
+   "comp_box": [
+    326.689,
+    687.587,
+    1771.801,
+    343.393,
+    695.461,
+    1788.504
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-40",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    331.283919,
+    691.523999,
+    2336.712533
+   ],
+   "comp_box": [
+    328.5,
+    687.587,
+    2333.929,
+    345.203,
+    695.461,
+    2350.632
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-41",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    0.707106781,
+    0.0,
+    -0.707106781,
+    0.0,
+    1.0,
+    0.0,
+    0.707106781,
+    -0.0,
+    0.707106781,
+    528.238461,
+    691.523999,
+    2533.667075
+   ],
+   "comp_box": [
+    525.455,
+    687.587,
+    2530.883,
+    542.158,
+    695.461,
+    2547.586
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-42",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -0.707106781,
+    -0.0,
+    -0.707106781,
+    -0.0,
+    1.0,
+    -0.0,
+    0.707106781,
+    -0.0,
+    -0.707106781,
+    1092.138428,
+    691.523999,
+    2543.471451
+   ],
+   "comp_box": [
+    1089.355,
+    687.587,
+    2529.552,
+    1106.058,
+    695.461,
+    2546.255
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-44",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1322.344979,
+    1840.636999,
+    1566.970662
+   ],
+   "comp_box": [
+    1318.408,
+    1824.889,
+    1563.034,
+    1326.282,
+    1840.637,
+    1570.908
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-45",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1322.218979,
+    718.384999,
+    1566.970662
+   ],
+   "comp_box": [
+    1318.282,
+    702.637,
+    1563.034,
+    1326.156,
+    718.385,
+    1570.908
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-46",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1307.294979,
+    702.636999,
+    2573.254662
+   ],
+   "comp_box": [
+    1303.358,
+    702.637,
+    2569.318,
+    1311.232,
+    718.385,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-47",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1307.168979,
+    1840.636999,
+    2573.254662
+   ],
+   "comp_box": [
+    1303.232,
+    1824.889,
+    2569.318,
+    1311.106,
+    1840.637,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-50",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    301.010979,
+    718.384999,
+    2558.204662
+   ],
+   "comp_box": [
+    297.074,
+    702.637,
+    2554.268,
+    304.948,
+    718.385,
+    2562.142
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-51",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    316.060979,
+    1840.636999,
+    1551.920662
+   ],
+   "comp_box": [
+    312.124,
+    1824.889,
+    1547.984,
+    319.998,
+    1840.637,
+    1555.858
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-52",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1.0,
+    0.0,
+    316.186979,
+    702.636999,
+    1551.920662
+   ],
+   "comp_box": [
+    312.25,
+    702.637,
+    1547.984,
+    320.124,
+    718.385,
+    1555.858
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-45",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    335.173979,
+    1832.636999,
+    2560.554662
+   ],
+   "comp_box": [
+    335.174,
+    1794.537,
+    2543.918,
+    373.274,
+    1832.637,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-46",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    -1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    335.173979,
+    710.636999,
+    2560.554662
+   ],
+   "comp_box": [
+    335.174,
+    710.637,
+    2543.918,
+    373.274,
+    748.737,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-48",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1288.181979,
+    1832.636999,
+    2560.554662
+   ],
+   "comp_box": [
+    1250.082,
+    1794.537,
+    2543.918,
+    1288.182,
+    1832.637,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-49",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    313.710979,
+    710.636999,
+    2539.091662
+   ],
+   "comp_box": [
+    297.074,
+    710.637,
+    2500.992,
+    330.348,
+    748.737,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/anchor-48",
+   "file": "anchor.SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\anchor.SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    301.136979,
+    1840.636999,
+    2558.078662
+   ],
+   "comp_box": [
+    297.2,
+    1824.889,
+    2554.142,
+    305.074,
+    1840.637,
+    2562.016
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-50",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    1.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    313.710979,
+    710.636999,
+    1586.083662
+   ],
+   "comp_box": [
+    297.074,
+    710.637,
+    1586.084,
+    330.348,
+    748.737,
+    1624.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-47",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    -0.0,
+    -0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1288.181979,
+    710.636999,
+    2560.554662
+   ],
+   "comp_box": [
+    1250.082,
+    710.637,
+    2543.918,
+    1288.182,
+    748.737,
+    2577.192
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-51",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    313.710979,
+    1832.636999,
+    1586.083662
+   ],
+   "comp_box": [
+    297.074,
+    1794.537,
+    1586.084,
+    330.348,
+    1832.637,
+    1624.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-52",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    313.710979,
+    1832.636999,
+    2539.091662
+   ],
+   "comp_box": [
+    297.074,
+    1794.537,
+    2500.992,
+    330.348,
+    1832.637,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-58",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -1.0,
+    -0.0,
+    1.0,
+    -0.0,
+    1309.644979,
+    710.636999,
+    1586.083662
+   ],
+   "comp_box": [
+    1293.008,
+    710.637,
+    1586.084,
+    1326.282,
+    748.737,
+    1624.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-57",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1309.644979,
+    1832.636999,
+    1586.083662
+   ],
+   "comp_box": [
+    1293.008,
+    1794.537,
+    1586.084,
+    1326.282,
+    1832.637,
+    1624.184
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-56",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    -0.0,
+    -0.0,
+    335.173979,
+    1832.636999,
+    1564.620662
+   ],
+   "comp_box": [
+    335.174,
+    1794.537,
+    1547.984,
+    373.274,
+    1832.637,
+    1581.258
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-60",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    1309.644979,
+    1832.636999,
+    2539.091662
+   ],
+   "comp_box": [
+    1293.008,
+    1794.537,
+    2500.992,
+    1326.282,
+    1832.637,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-54",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    -0.0,
+    -0.0,
+    0.0,
+    1.0,
+    -0.0,
+    1288.181979,
+    710.636999,
+    1564.620662
+   ],
+   "comp_box": [
+    1250.082,
+    710.637,
+    1547.984,
+    1288.182,
+    748.737,
+    1581.258
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-59",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1309.644979,
+    710.636999,
+    2539.091662
+   ],
+   "comp_box": [
+    1293.008,
+    710.637,
+    2500.992,
+    1326.282,
+    748.737,
+    2539.092
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-53",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    0.0,
+    -1.0,
+    -1.0,
+    -0.0,
+    0.0,
+    -0.0,
+    1.0,
+    0.0,
+    335.173979,
+    710.636999,
+    1564.620662
+   ],
+   "comp_box": [
+    335.174,
+    710.637,
+    1547.984,
+    373.274,
+    748.737,
+    1581.258
+   ],
+   "box_dev": 0.0
+  },
+  {
+   "name": "Internal Module-1/Gusset Corner Bracket(15CB4840)-55",
+   "file": "Gusset Corner Bracket(15CB4840).SLDPRT",
+   "path": "C:\\Users\\admin\\Downloads\\Tank CAD\\Gusset Corner Bracket(15CB4840).SLDPRT",
+   "xform": [
+    -0.0,
+    -0.0,
+    -1.0,
+    1.0,
+    0.0,
+    -0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1288.181979,
+    1832.636999,
+    1564.620662
+   ],
+   "comp_box": [
+    1250.082,
+    1794.537,
+    1547.984,
+    1288.182,
+    1832.637,
+    1581.258
+   ],
+   "box_dev": 0.0
+  }
+ ],
+ "skipped": [],
+ "interference": [
+  {
+   "pair": [
+    "Assem1^TANK-1/Clamp and Button-4/separated strip-1",
+    "Assem1^TANK-1/Side Acrylic Sheet-1"
+   ],
+   "volume_mm3": 11481.707
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Clamp and Button-3/separated strip-1",
+    "Assem1^TANK-1/Side Acrylic Sheet-1"
+   ],
+   "volume_mm3": 11481.707
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Clamp and Button-5/separated strip-1",
+    "Assem1^TANK-1/Side Acrylic Sheet-1"
+   ],
+   "volume_mm3": 11481.707
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-15"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-15"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-13"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-13"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-14"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-14"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-12"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-12"
+   ],
+   "volume_mm3": 1223.126
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-1"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-7"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-5"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-2"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-3"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-8"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-6"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-4"
+   ],
+   "volume_mm3": 157.317
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-1"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-7"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-5"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-2"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-3"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-8"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-6"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-4"
+   ],
+   "volume_mm3": 128.871
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-8"
+   ],
+   "volume_mm3": 124.095
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-6"
+   ],
+   "volume_mm3": 124.093
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-7"
+   ],
+   "volume_mm3": 124.093
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 93.335
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 93.335
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 93.335
+  },
+  {
+   "pair": [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 93.335
+  },
+  {
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/anchor-38"
+   ],
+   "volume_mm3": 3.039
+  },
+  {
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/anchor-36"
+   ],
+   "volume_mm3": 2.77
+  },
+  {
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/anchor-37"
+   ],
+   "volume_mm3": 2.125
+  },
+  {
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/anchor-41"
+   ],
+   "volume_mm3": 1.928
+  },
+  {
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-39"
+   ],
+   "volume_mm3": 1.849
+  }
+ ],
+ "interference_seconds": 7.9,
+ "parts": {
+  "Vertical.SLDPRT": {
+   "box": [
+    -68.664,
+    -948.008,
+    -142.875,
+    83.736,
+    36.242,
+    9.525
+   ],
+   "volume": 2762640.486,
+   "faces": 24,
+   "bodies": 1
+  },
+  "15EX1530L (Upper FAZ).SLDPRT": {
+   "box": [
+    -79.194,
+    -10.167,
+    0.0,
+    -2.994,
+    27.933,
+    1136.65
+   ],
+   "volume": 2863471.413,
+   "faces": 30,
+   "bodies": 1
+  },
+  "Bottom Acrylic Sheet.SLDPRT": {
+   "box": [
+    -520.7,
+    0.0,
+    -520.7,
+    520.7,
+    25.4,
+    520.7
+   ],
+   "volume": 27546654.584,
+   "faces": 6,
+   "bodies": 1
+  },
+  "separated strip.SLDPRT": {
+   "box": [
+    -38.1,
+    -4.762,
+    0.0,
+    38.1,
+    4.763,
+    76.2
+   ],
+   "volume": 43056.402,
+   "faces": 4,
+   "bodies": 1
+  },
+  "Side Acrylic Sheet.SLDPRT": {
+   "box": [
+    0.0,
+    -581.025,
+    -473.075,
+    25.4,
+    581.025,
+    473.075
+   ],
+   "volume": 27926629.63,
+   "faces": 6,
+   "bodies": 1
+  },
+  "Bottom (one part).SLDPRT": {
+   "box": [
+    -558.015,
+    0.0,
+    308.174,
+    496.085,
+    152.4,
+    460.574
+   ],
+   "volume": 2767501.363,
+   "faces": 18,
+   "bodies": 1
+  },
+  "Horizontal_Beam_Base.SLDPRT": {
+   "box": [
+    -40.73,
+    -57.569,
+    0.0,
+    35.47,
+    18.631,
+    946.15
+   ],
+   "volume": 877476.068,
+   "faces": 10,
+   "bodies": 1
+  },
+  "second_H_Beam_Base.SLDPRT": {
+   "box": [
+    -40.73,
+    -57.569,
+    0.0,
+    35.47,
+    18.631,
+    1098.55
+   ],
+   "volume": 1018814.495,
+   "faces": 10,
+   "bodies": 1
+  },
+  "Vertical_Beam_Base.SLDPRT": {
+   "box": [
+    -40.73,
+    -57.569,
+    0.0,
+    35.47,
+    18.631,
+    711.2
+   ],
+   "volume": 659579.326,
+   "faces": 10,
+   "bodies": 1
+  },
+  "second_V_Beam_Base.SLDPRT": {
+   "box": [
+    -40.73,
+    -57.569,
+    0.0,
+    35.47,
+    18.631,
+    711.2
+   ],
+   "volume": 659579.326,
+   "faces": 10,
+   "bodies": 1
+  },
+  "Bottom Levelling Plate (option 2).SLDPRT": {
+   "box": [
+    0.0,
+    -76.2,
+    -12.7,
+    76.2,
+    0.0,
+    63.5
+   ],
+   "volume": 132421.875,
+   "faces": 9,
+   "bodies": 1
+  },
+  "FAZTEKMountedPlate.SLDPRT": {
+   "box": [
+    -19.05,
+    -38.1,
+    0.0,
+    19.05,
+    38.1,
+    9.525
+   ],
+   "volume": 27095.24,
+   "faces": 7,
+   "bodies": 1
+  },
+  "KBC.SLDPRT": {
+   "box": [
+    -54.769,
+    -28.575,
+    -54.769,
+    54.769,
+    111.432,
+    54.769
+   ],
+   "volume": 289046.84,
+   "faces": 10,
+   "bodies": 1
+  },
+  "upper (one part).SLDPRT": {
+   "box": [
+    -628.65,
+    0.0,
+    -628.65,
+    628.65,
+    152.4,
+    -527.05
+   ],
+   "volume": 2545823.66,
+   "faces": 26,
+   "bodies": 1
+  },
+  "3.SLDPRT": {
+   "box": [
+    -41.094,
+    -10.167,
+    0.0,
+    -2.994,
+    27.933,
+    991.108
+   ],
+   "volume": 1184978.636,
+   "faces": 22,
+   "bodies": 1
+  },
+  "4(stick).SLDPRT": {
+   "box": [
+    -41.094,
+    -10.167,
+    0.0,
+    -2.994,
+    27.933,
+    177.8
+   ],
+   "volume": 212579.458,
+   "faces": 22,
+   "bodies": 1
+  },
+  "Gusset Corner Bracket(15CB4840).SLDPRT": {
+   "box": [
+    -16.637,
+    -38.1,
+    -0.0,
+    16.637,
+    0.0,
+    38.1
+   ],
+   "volume": 19101.991,
+   "faces": 24,
+   "bodies": 1
+  },
+  "Bilge_Pump.SLDPRT": {
+   "box": [
+    -35.72,
+    -96.83,
+    -57.691,
+    35.72,
+    0.0,
+    33.727
+   ],
+   "volume": 290523.248,
+   "faces": 19,
+   "bodies": 1
+  },
+  "M-1003 SQR MTG PLATE.SLDPRT": {
+   "box": [
+    -140.01,
+    -561.0,
+    -3.175,
+    140.01,
+    561.0,
+    1.587
+   ],
+   "volume": 520172.062,
+   "faces": 452,
+   "bodies": 1
+  },
+  "anchor.SLDPRT": {
+   "box": [
+    -3.937,
+    -3.937,
+    0.0,
+    3.937,
+    3.937,
+    15.748
+   ],
+   "volume": 976.374,
+   "faces": 6,
+   "bodies": 1
+  },
+  "5 - V2.SLDPRT": {
+   "box": [
+    -41.094,
+    -10.167,
+    0.0,
+    -2.994,
+    27.933,
+    282.0
+   ],
+   "volume": 337162.02,
+   "faces": 22,
+   "bodies": 1
+  },
+  "vertical_pillar.SLDPRT": {
+   "box": [
+    -41.094,
+    -10.167,
+    0.0,
+    -2.994,
+    27.933,
+    1122.0
+   ],
+   "volume": 1341474.42,
+   "faces": 22,
+   "bodies": 1
+  },
+  "5 - V3.SLDPRT": {
+   "box": [
+    -41.094,
+    -10.167,
+    148.182,
+    -2.994,
+    27.933,
+    283.182
+   ],
+   "volume": 138630.98,
+   "faces": 22,
+   "bodies": 1
+  },
+  "Gusset Corner Bracket(15CB4842).SLDPRT": {
+   "box": [
+    -16.642,
+    -76.205,
+    -0.005,
+    16.642,
+    0.005,
+    76.205
+   ],
+   "volume": 42821.46,
+   "faces": 43,
+   "bodies": 1
+  }
+ },
+ "faces_total": 6618,
+ "box_dev_max": 0.001,
+ "seconds": 83.5
+}

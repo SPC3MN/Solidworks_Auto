@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "project": "x8020_plate_m1003",
+  "timestamp": "20261106T161957",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\x8020_plate_m1003\\.staging\\20261106T161957\\x8020_plate_m1003.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "l": 280.02,
+    "w": 1122.0,
+    "t": 4.76,
+    "hole_grids": [
+      {
+        "d": 26.0,
+        "x": [
+          28.01,
+          140.01,
+          252.01
+        ],
+        "y": [
+          113,
+          225,
+          337,
+          449,
+          561,
+          673,
+          785,
+          897
+        ]
+      }
+    ],
+    "holes": [
+      [
+        44.05999999999999,
+        19.049999999999955,
+        8.74
+      ],
+      [
+        44.05999999999999,
+        1102.95,
+        8.74
+      ],
+      [
+        140.01,
+        19.049999999999955,
+        8.74
+      ],
+      [
+        140.01,
+        1102.95,
+        8.74
+      ],
+      [
+        235.95999999999998,
+        19.049999999999955,
+        8.74
+      ],
+      [
+        235.95999999999998,
+        1102.95,
+        8.74
+      ]
+    ]
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        280.02,
+        1122.0,
+        4.76
+      ],
+      "volume": 1433141.619,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 80292,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 280.02,
+      "expected": 280.02,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1122.0,
+      "expected": 1122.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 4.76,
+      "expected": 4.76,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1433141.619,
+      "expected": 1433141.619,
+      "tolerance": 1433.141619,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1433141.619,
+      "expected": 1433141.619,
+      "tolerance": 1433.141619,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1433436.753,
+      "expected": 1433141.619,
+      "tolerance": 14331.41619,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "4836 triangles"
+    }
+  ]
+}

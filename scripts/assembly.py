@@ -46,7 +46,12 @@ def recolor(png, bg=BG, fg=FG):
     Image.merge("RGB", [im.point(l) for l in lut]).save(png)
 
 
-def transform(math_util, at, rot_z):
+def transform(math_util, at, rot_z, xform=None):
+    """Placement from at + rot_z, or from a full xform: 9 rotation numbers (row-vector form,
+    p' = p R + t, as in Component2.Transform2) then the translation in mm."""
+    if xform is not None:
+        data = list(xform[:9]) + [v * MM for v in xform[9:12]] + [1, 0, 0, 0]
+        return _invoke(math_util, "CreateTransform", VARIANT(pythoncom.VT_ARRAY | pythoncom.VT_R8, data))
     c, s = math.cos(math.radians(rot_z)), math.sin(math.radians(rot_z))
     data = [c, s, 0, -s, c, 0, 0, 0, 1, at[0] * MM, at[1] * MM, at[2] * MM, 1, 0, 0, 0]
     return _invoke(math_util, "CreateTransform", VARIANT(pythoncom.VT_ARRAY | pythoncom.VT_R8, data))
@@ -81,7 +86,7 @@ def build(app, spec, folder):
     mu = app.GetMathUtility
     opened, comps = [], []
     for c in spec["components"] + extra:
-        path = pathlib.Path(c["file"]) if "file" in c else ROOT / "projects" / c["part"] / "design" / f"{c['part']}.SLDPRT"
+        path = (ROOT / c["file"] if not pathlib.Path(c["file"]).is_absolute() else pathlib.Path(c["file"])) if "file" in c else ROOT / "projects" / c["part"] / "design" / f"{c['part']}.SLDPRT"
         if str(path) not in opened:
             app.OpenDoc6(str(path), 1, 1, "", byref(), byref())
             opened.append(str(path))
@@ -89,8 +94,8 @@ def build(app, spec, folder):
         comp = asm.AddComponent5(str(path), 0, "", False, "", 0, 0, 0)
         if comp is None:
             raise RuntimeError(f"could not insert {path.name}")
-        comp.Transform2 = transform(mu, c.get("at", (0, 0, 0)), c.get("rot_z", 0))
-        comps.append((c.get("label") or c["part"], comp))
+        comp.Transform2 = transform(mu, c.get("at", (0, 0, 0)), c.get("rot_z", 0), c.get("xform"))
+        comps.append((c.get("label") or c.get("part") or path.stem, comp))
     # Fix every component so nothing floats, then rebuild
     doc.ClearSelection2(True)
     for _, comp in comps:
@@ -103,14 +108,15 @@ def build(app, spec, folder):
     return doc, comps
 
 
-def interferences(doc):
+def interferences(doc, labels=None):
+    """Colliding pairs, named by part (or by the component labels, when given {Name2: label})."""
     idm = doc.InterferenceDetectionManager
     idm.TreatCoincidenceAsInterference = False
     idm.TreatSubAssembliesAsComponents = True
     idm.IncludeMultibodyPartInterferences = False
     found = []
     for itf in idm.GetInterferences or ():
-        names = sorted(c.Name2.rsplit("-", 1)[0] for c in itf.Components)
+        names = sorted(labels.get(c.Name2, c.Name2) if labels else c.Name2.rsplit("-", 1)[0] for c in itf.Components)
         found.append({"pair": names, "volume_mm3": round(itf.Volume / MM ** 3, 4)})
     idm.Done
     return found
@@ -150,12 +156,43 @@ def _run(app, folder, spec, exp):
     size = [round((box[i + 3] - box[i]) / MM, 3) for i in range(3)]
     for ax, e, a in zip("xyz", exp.get("bbox", []), size):
         check(f"bbox.{ax}", abs(a - e) <= exp.get("bbox_tol", 0.1), expected=e, actual=a)
-    allowed = [sorted(p) for p in exp.get("allowed_interference", [])]
-    for itf in interferences(doc):
-        check("interference " + " / ".join(itf["pair"]), itf["pair"] in allowed, **itf,
-              note="allowed" if itf["pair"] in allowed else "unexpected")
-    if not any(c["id"].startswith("interference") for c in checks):
-        check("interference", True, note="none found")
+    if "baseline_interference" in exp:
+        # rebuilt assembly: only pairs that already collide in the original are allowed
+        base = {tuple(sorted(p)) for p in exp["baseline_interference"]}
+        found = interferences(doc, {comp.Name2: label for label, comp in comps})
+        # "interference_ignore": {"below_mm3": touching noise, "parts": [[prefix_a, prefix_b]]}
+        # pairs of simplified parts known to collide by design (e.g. bolts into a slot with no T-cavity)
+        ign = exp.get("interference_ignore", {})
+        part_of = {label: (c.get("part") or pathlib.Path(c.get("file", "")).stem)
+                   for label, c in zip([lb for lb, _ in comps], spec["components"])}
+
+        def ignored(i):
+            if i["volume_mm3"] < ign.get("below_mm3", 0):
+                return True
+            a, b = (part_of.get(n, n) for n in i["pair"])
+            return any((a.startswith(x) and b.startswith(y)) or (a.startswith(y) and b.startswith(x))
+                       for x, y in ign.get("parts", []))
+        new = [i for i in found if tuple(i["pair"]) not in base and not ignored(i)]
+        for itf in new:
+            check("interference " + " / ".join(itf["pair"]), False, **itf, note="not in the original")
+        check("interference", not new, found=len(found), baseline=len(base), new=len(new))
+    else:
+        allowed = [sorted(p) for p in exp.get("allowed_interference", [])]
+        for itf in interferences(doc):
+            check("interference " + " / ".join(itf["pair"]), itf["pair"] in allowed, **itf,
+                  note="allowed" if itf["pair"] in allowed else "unexpected")
+        if not any(c["id"].startswith("interference") for c in checks):
+            check("interference", True, note="none found")
+    if "faces_before" in exp:
+        faces, seen = 0, {}
+        for _, comp in comps:
+            p = comp.GetPathName
+            if p not in seen:
+                m = comp.GetModelDoc2
+                seen[p] = sum(b.GetFaceCount() for b in (m.GetBodies2(0, False) or ())) if m else 0
+            faces += seen[p]
+        check("faces", faces < exp["faces_before"], before=exp["faces_before"], after=faces,
+              ratio=round(exp["faces_before"] / max(faces, 1), 2))
 
     path = folder / f"{name}.SLDASM"
     e = byref()

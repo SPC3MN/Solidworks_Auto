@@ -1,0 +1,61 @@
+{
+ "assembly": "tank",
+ "time": "2026-11-06T16:48:05",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 321,
+   "actual": 321
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 1257.3,
+   "actual": 1257.3
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 1329.491,
+   "actual": 1329.49
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 2266.95,
+   "actual": 2266.95
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "found": 579,
+   "baseline": 27,
+   "new": 0
+  },
+  {
+   "id": "faces",
+   "pass": true,
+   "before": 6618,
+   "after": 4394,
+   "ratio": 1.51
+  }
+ ],
+ "bbox_mm": [
+  1257.3,
+  1329.49,
+  2266.95
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\tank.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\wireframe\\top.png"
+ ]
+}

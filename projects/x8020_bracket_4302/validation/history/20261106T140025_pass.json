@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "project": "x8020_bracket_4302",
+  "timestamp": "20261106T140025",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\x8020_bracket_4302\\.staging\\20261106T140025\\x8020_bracket_4302.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "a": 38.1,
+    "b": 38.1,
+    "t": 6.35,
+    "w": 33.27,
+    "hole_d": 8.4,
+    "hole_s": 22.2,
+    "hole_z": [
+      0
+    ]
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        38.1,
+        38.1,
+        33.27
+      ],
+      "volume": 14053.021,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 81009,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 38.1,
+      "expected": 38.1,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 38.1,
+      "expected": 38.1,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 33.27,
+      "expected": 33.27,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 14053.021,
+      "expected": 14053.021,
+      "tolerance": 14.053021000000001,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 14053.021,
+      "expected": 14053.021,
+      "tolerance": 14.053021000000001,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 14056.399,
+      "expected": 14053.021,
+      "tolerance": 140.53021,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "324 triangles"
+    }
+  ]
+}

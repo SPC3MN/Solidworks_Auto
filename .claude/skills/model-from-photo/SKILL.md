@@ -236,3 +236,13 @@ blocked the assembly). After any failure, list the open documents and close your
 - Give the check result (e.g. "9/9") and the paths: `design/<name>.SLDPRT` and `exports/<name>.step|.stl`.
 - Say what was left out.
 - Commit with git at `C:\Program Files\Git\cmd\git.exe`, avoiding `"` in messages. Push only when the user says so.
+
+## 10. Simplify an existing assembly (vendor CAD too heavy to render)
+
+1. Run `.venv\Scripts\python scripts\asm_capture.py <source.SLDASM> assemblies\<name> --interference`. It opens the source read-only.
+2. Map every source part in `assemblies/x8020_map.json` to a `kind` and `type` (profile, bracket, fastener, plate or bearing; builders in
+   `scripts/x8020_parts.py`) or to `keep`. Rebuild every catalog part so all assemblies share the same geometry.
+3. Run `asm_simplify.py gen ...`, then `pipeline.py` on the new projects, then `frame_check.py --scratch <scratchpad>`.
+4. Run `asm_simplify.py assemble assemblies\<name>`, then `assembly.py assemblies\<name>`. It checks the component count, the original
+   bbox, no new interference against the original, and the face count before and after.
+5. Never modify the source files.

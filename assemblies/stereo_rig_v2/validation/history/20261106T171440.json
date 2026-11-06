@@ -1,0 +1,61 @@
+{
+ "assembly": "stereo_rig_v2",
+ "time": "2026-11-06T17:14:40",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 112,
+   "actual": 112
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 2111.232,
+   "actual": 2111.232
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 2502.04,
+   "actual": 2502.04
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 2115.797,
+   "actual": 2115.797
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "found": 113,
+   "baseline": 54,
+   "new": 0
+  },
+  {
+   "id": "faces",
+   "pass": true,
+   "before": 12216,
+   "after": 1337,
+   "ratio": 9.14
+  }
+ ],
+ "bbox_mm": [
+  2111.232,
+  2502.04,
+  2115.797
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\stereo_rig_v2.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\wireframe\\top.png"
+ ]
+}

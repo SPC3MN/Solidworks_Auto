@@ -1,0 +1,1101 @@
+{
+ "assembly": "stereo_rig_v2",
+ "time": "2026-11-06T16:05:57",
+ "pass": false,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 112,
+   "actual": 112
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 2111.232,
+   "actual": 2111.232
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 2115.797,
+   "actual": 2115.797
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 2502.04,
+   "actual": 2502.04
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-1 / Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-1",
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1"
+   ],
+   "volume_mm3": 70591.4249,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-2 / Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-2",
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1"
+   ],
+   "volume_mm3": 70591.4249,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-3 / Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-3",
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1"
+   ],
+   "volume_mm3": 70590.9508,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-2 / Assem2^Stereo_Rig_V2-2/baseplate-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-2",
+    "Assem2^Stereo_Rig_V2-2/baseplate-1"
+   ],
+   "volume_mm3": 14434.3072,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-3 / Assem2^Stereo_Rig_V2-2/baseplate-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-3",
+    "Assem2^Stereo_Rig_V2-2/baseplate-1"
+   ],
+   "volume_mm3": 14434.3072,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-1 / Assem2^Stereo_Rig_V2-2/baseplate-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-1",
+    "Assem2^Stereo_Rig_V2-2/baseplate-1"
+   ],
+   "volume_mm3": 14434.3072,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-3 / Assem2^Stereo_Rig_V2-2/3330-16",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-3",
+    "Assem2^Stereo_Rig_V2-2/3330-16"
+   ],
+   "volume_mm3": 1604.2453,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-3 / Assem2^Stereo_Rig_V2-2/3330-15",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-3",
+    "Assem2^Stereo_Rig_V2-2/3330-15"
+   ],
+   "volume_mm3": 1604.2453,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-2 / Assem2^Stereo_Rig_V2-2/3330-18",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-2",
+    "Assem2^Stereo_Rig_V2-2/3330-18"
+   ],
+   "volume_mm3": 1604.2453,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-2 / Assem2^Stereo_Rig_V2-2/3330-13",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-2",
+    "Assem2^Stereo_Rig_V2-2/3330-13"
+   ],
+   "volume_mm3": 1604.2453,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-1 / Assem2^Stereo_Rig_V2-2/3330-17",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-1",
+    "Assem2^Stereo_Rig_V2-2/3330-17"
+   ],
+   "volume_mm3": 1604.2442,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-1 / Assem2^Stereo_Rig_V2-2/3330-14",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-1",
+    "Assem2^Stereo_Rig_V2-2/3330-14"
+   ],
+   "volume_mm3": 1604.2442,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-1 / Assem2^Stereo_Rig_V2-2/3330-16",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-1",
+    "Assem2^Stereo_Rig_V2-2/3330-16"
+   ],
+   "volume_mm3": 425.342,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-3 / Assem2^Stereo_Rig_V2-2/3330-13",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-3",
+    "Assem2^Stereo_Rig_V2-2/3330-13"
+   ],
+   "volume_mm3": 425.339,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-3 / Assem2^Stereo_Rig_V2-2/3330-14",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-3",
+    "Assem2^Stereo_Rig_V2-2/3330-14"
+   ],
+   "volume_mm3": 422.7811,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1770660457-2 / Assem2^Stereo_Rig_V2-2/3330-15",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1770660457-2",
+    "Assem2^Stereo_Rig_V2-2/3330-15"
+   ],
+   "volume_mm3": 422.7811,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3214-1 / Assem2^Stereo_Rig_V2-2/6523-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3214-1",
+    "Assem2^Stereo_Rig_V2-2/6523-4"
+   ],
+   "volume_mm3": 361.5173,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 4302-2 / feet-3",
+   "pass": false,
+   "pair": [
+    "4302-2",
+    "feet-3"
+   ],
+   "volume_mm3": 160.4303,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 4302-4 / feet-1",
+   "pass": false,
+   "pair": [
+    "4302-4",
+    "feet-1"
+   ],
+   "volume_mm3": 160.4303,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 4302-1 / feet-2",
+   "pass": false,
+   "pair": [
+    "4302-1",
+    "feet-2"
+   ],
+   "volume_mm3": 160.4303,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 4302-3 / feet-4",
+   "pass": false,
+   "pair": [
+    "4302-3",
+    "feet-4"
+   ],
+   "volume_mm3": 160.4303,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1765216268-1 / Assem2^Stereo_Rig_V2-2/3330-24",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1765216268-1",
+    "Assem2^Stereo_Rig_V2-2/3330-24"
+   ],
+   "volume_mm3": 154.5104,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1765216268-1 / Assem2^Stereo_Rig_V2-2/3330-21",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1765216268-1",
+    "Assem2^Stereo_Rig_V2-2/3330-21"
+   ],
+   "volume_mm3": 154.5104,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1766953460-4 / Assem2^Stereo_Rig_V2-2/3330-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1766953460-4",
+    "Assem2^Stereo_Rig_V2-2/3330-4"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1766953460-3 / Assem2^Stereo_Rig_V2-2/3330-2",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1766953460-3",
+    "Assem2^Stereo_Rig_V2-2/3330-2"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1770839335-1 / Assem2^Stereo_Rig_V2-2/3330-12",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1770839335-1",
+    "Assem2^Stereo_Rig_V2-2/3330-12"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1766965418-1 / Assem2^Stereo_Rig_V2-2/3330-3",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1766965418-1",
+    "Assem2^Stereo_Rig_V2-2/3330-3"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1766965418-1 / Assem2^Stereo_Rig_V2-2/3330-7",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1766965418-1",
+    "Assem2^Stereo_Rig_V2-2/3330-7"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1770839335-1 / Assem2^Stereo_Rig_V2-2/3330-6",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1770839335-1",
+    "Assem2^Stereo_Rig_V2-2/3330-6"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1770839335-2 / Assem2^Stereo_Rig_V2-2/3330-5",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1770839335-2",
+    "Assem2^Stereo_Rig_V2-2/3330-5"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-18",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-18"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-13",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-13"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1770839335-2 / Assem2^Stereo_Rig_V2-2/3330-11",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1770839335-2",
+    "Assem2^Stereo_Rig_V2-2/3330-11"
+   ],
+   "volume_mm3": 152.6478,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-20",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-20"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-17",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-17"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-22",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-22"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-25",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-25"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-14",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-14"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-26",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-26"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-16",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-16"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1766953460-1 / Assem2^Stereo_Rig_V2-2/3330-9",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1766953460-1",
+    "Assem2^Stereo_Rig_V2-2/3330-9"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1515_1766953460-2 / Assem2^Stereo_Rig_V2-2/3330-8",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1515_1766953460-2",
+    "Assem2^Stereo_Rig_V2-2/3330-8"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3030_1765214344-1 / Assem2^Stereo_Rig_V2-2/3330-15",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3030_1765214344-1",
+    "Assem2^Stereo_Rig_V2-2/3330-15"
+   ],
+   "volume_mm3": 152.6429,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1765216268-1 / Assem2^Stereo_Rig_V2-2/3330-19",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1765216268-1",
+    "Assem2^Stereo_Rig_V2-2/3330-19"
+   ],
+   "volume_mm3": 150.7852,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/1530_1765216268-1 / Assem2^Stereo_Rig_V2-2/3330-23",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/1530_1765216268-1",
+    "Assem2^Stereo_Rig_V2-2/3330-23"
+   ],
+   "volume_mm3": 150.7852,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-25 / Assem2^Stereo_Rig_V2-2/4334-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-25",
+    "Assem2^Stereo_Rig_V2-2/4334-4"
+   ],
+   "volume_mm3": 149.4183,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-21 / Assem2^Stereo_Rig_V2-2/4334-3",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-21",
+    "Assem2^Stereo_Rig_V2-2/4334-3"
+   ],
+   "volume_mm3": 149.4051,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-19 / Assem2^Stereo_Rig_V2-2/4334-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-19",
+    "Assem2^Stereo_Rig_V2-2/4334-4"
+   ],
+   "volume_mm3": 149.4035,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-26 / Assem2^Stereo_Rig_V2-2/4334-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-26",
+    "Assem2^Stereo_Rig_V2-2/4334-4"
+   ],
+   "volume_mm3": 149.3386,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-22 / Assem2^Stereo_Rig_V2-2/4334-3",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-22",
+    "Assem2^Stereo_Rig_V2-2/4334-3"
+   ],
+   "volume_mm3": 149.3369,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-20 / Assem2^Stereo_Rig_V2-2/4334-3",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-20",
+    "Assem2^Stereo_Rig_V2-2/4334-3"
+   ],
+   "volume_mm3": 149.3169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-23 / Assem2^Stereo_Rig_V2-2/4334-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-23",
+    "Assem2^Stereo_Rig_V2-2/4334-4"
+   ],
+   "volume_mm3": 149.2506,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-24 / Assem2^Stereo_Rig_V2-2/4334-3",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-24",
+    "Assem2^Stereo_Rig_V2-2/4334-3"
+   ],
+   "volume_mm3": 149.249,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-32 / 4336-3",
+   "pass": false,
+   "pair": [
+    "3330-32",
+    "4336-3"
+   ],
+   "volume_mm3": 139.1995,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-22 / 4336-3",
+   "pass": false,
+   "pair": [
+    "3330-22",
+    "4336-3"
+   ],
+   "volume_mm3": 139.1995,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-28 / 4336-1",
+   "pass": false,
+   "pair": [
+    "3330-28",
+    "4336-1"
+   ],
+   "volume_mm3": 139.1994,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-29 / 4336-1",
+   "pass": false,
+   "pair": [
+    "3330-29",
+    "4336-1"
+   ],
+   "volume_mm3": 139.1994,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-35 / 4336-4",
+   "pass": false,
+   "pair": [
+    "3330-35",
+    "4336-4"
+   ],
+   "volume_mm3": 139.1615,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-38 / 4336-4",
+   "pass": false,
+   "pair": [
+    "3330-38",
+    "4336-4"
+   ],
+   "volume_mm3": 139.1615,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-6 / Assem2^Stereo_Rig_V2-2/4332-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-6",
+    "Assem2^Stereo_Rig_V2-2/4332-4"
+   ],
+   "volume_mm3": 139.1613,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-1 / Assem2^Stereo_Rig_V2-2/4332-6",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-1",
+    "Assem2^Stereo_Rig_V2-2/4332-6"
+   ],
+   "volume_mm3": 139.1567,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-10 / Assem2^Stereo_Rig_V2-2/4332-5",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-10",
+    "Assem2^Stereo_Rig_V2-2/4332-5"
+   ],
+   "volume_mm3": 139.1567,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-9 / Assem2^Stereo_Rig_V2-2/4332-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-9",
+    "Assem2^Stereo_Rig_V2-2/4332-4"
+   ],
+   "volume_mm3": 139.1567,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-8 / Assem2^Stereo_Rig_V2-2/4332-7",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-8",
+    "Assem2^Stereo_Rig_V2-2/4332-7"
+   ],
+   "volume_mm3": 139.1567,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-4 / Assem2^Stereo_Rig_V2-2/4332-9",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-4",
+    "Assem2^Stereo_Rig_V2-2/4332-9"
+   ],
+   "volume_mm3": 139.1567,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-2 / Assem2^Stereo_Rig_V2-2/4332-8",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-2",
+    "Assem2^Stereo_Rig_V2-2/4332-8"
+   ],
+   "volume_mm3": 139.1567,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-11 / Assem2^Stereo_Rig_V2-2/4332-7",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-11",
+    "Assem2^Stereo_Rig_V2-2/4332-7"
+   ],
+   "volume_mm3": 139.1518,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-34 / 4336-2",
+   "pass": false,
+   "pair": [
+    "3330-34",
+    "4336-2"
+   ],
+   "volume_mm3": 139.1375,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-42 / 4336-2",
+   "pass": false,
+   "pair": [
+    "3330-42",
+    "4336-2"
+   ],
+   "volume_mm3": 139.1375,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-37 / 4336-2",
+   "pass": false,
+   "pair": [
+    "3330-37",
+    "4336-2"
+   ],
+   "volume_mm3": 139.0519,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-5 / Assem2^Stereo_Rig_V2-2/4332-8",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-5",
+    "Assem2^Stereo_Rig_V2-2/4332-8"
+   ],
+   "volume_mm3": 139.0378,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-12 / Assem2^Stereo_Rig_V2-2/4332-9",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-12",
+    "Assem2^Stereo_Rig_V2-2/4332-9"
+   ],
+   "volume_mm3": 139.0283,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-36 / 4336-4",
+   "pass": false,
+   "pair": [
+    "3330-36",
+    "4336-4"
+   ],
+   "volume_mm3": 139.0283,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-40 / 4336-4",
+   "pass": false,
+   "pair": [
+    "3330-40",
+    "4336-4"
+   ],
+   "volume_mm3": 139.0283,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-39 / 4336-2",
+   "pass": false,
+   "pair": [
+    "3330-39",
+    "4336-2"
+   ],
+   "volume_mm3": 139.0281,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-31 / 4336-3",
+   "pass": false,
+   "pair": [
+    "3330-31",
+    "4336-3"
+   ],
+   "volume_mm3": 138.9901,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-30 / 4336-3",
+   "pass": false,
+   "pair": [
+    "3330-30",
+    "4336-3"
+   ],
+   "volume_mm3": 138.9901,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-7 / Assem2^Stereo_Rig_V2-2/4332-5",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-7",
+    "Assem2^Stereo_Rig_V2-2/4332-5"
+   ],
+   "volume_mm3": 138.99,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-41 / 4336-1",
+   "pass": false,
+   "pair": [
+    "3330-41",
+    "4336-1"
+   ],
+   "volume_mm3": 138.9853,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-33 / 4336-1",
+   "pass": false,
+   "pair": [
+    "3330-33",
+    "4336-1"
+   ],
+   "volume_mm3": 138.9853,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-3 / Assem2^Stereo_Rig_V2-2/4332-6",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-3",
+    "Assem2^Stereo_Rig_V2-2/4332-6"
+   ],
+   "volume_mm3": 138.9805,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 1530_1765218168-1 / 4336-4",
+   "pass": false,
+   "pair": [
+    "1530_1765218168-1",
+    "4336-4"
+   ],
+   "volume_mm3": 0.2229,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 1530_1765218168-1 / 4336-4",
+   "pass": false,
+   "pair": [
+    "1530_1765218168-1",
+    "4336-4"
+   ],
+   "volume_mm3": 0.1573,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-6 / Assem2^Stereo_Rig_V2-2/3330-9",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-6",
+    "Assem2^Stereo_Rig_V2-2/3330-9"
+   ],
+   "volume_mm3": 0.0805,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-11 / Assem2^Stereo_Rig_V2-2/3330-8",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-11",
+    "Assem2^Stereo_Rig_V2-2/3330-8"
+   ],
+   "volume_mm3": 0.0804,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-34 / 3330-37",
+   "pass": false,
+   "pair": [
+    "3330-34",
+    "3330-37"
+   ],
+   "volume_mm3": 0.0793,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-23 / Assem2^Stereo_Rig_V2-2/3330-26",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-23",
+    "Assem2^Stereo_Rig_V2-2/3330-26"
+   ],
+   "volume_mm3": 0.0792,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-2 / Assem2^Stereo_Rig_V2-2/3330-5",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-2",
+    "Assem2^Stereo_Rig_V2-2/3330-5"
+   ],
+   "volume_mm3": 0.0792,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-35 / 3330-36",
+   "pass": false,
+   "pair": [
+    "3330-35",
+    "3330-36"
+   ],
+   "volume_mm3": 0.0792,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-28 / 3330-41",
+   "pass": false,
+   "pair": [
+    "3330-28",
+    "3330-41"
+   ],
+   "volume_mm3": 0.0792,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference 3330-31 / 3330-32",
+   "pass": false,
+   "pair": [
+    "3330-31",
+    "3330-32"
+   ],
+   "volume_mm3": 0.0791,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-12 / Assem2^Stereo_Rig_V2-2/3330-4",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-12",
+    "Assem2^Stereo_Rig_V2-2/3330-4"
+   ],
+   "volume_mm3": 0.0791,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-10 / Assem2^Stereo_Rig_V2-2/3330-7",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-10",
+    "Assem2^Stereo_Rig_V2-2/3330-7"
+   ],
+   "volume_mm3": 0.0787,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-1 / Assem2^Stereo_Rig_V2-2/3330-3",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-1",
+    "Assem2^Stereo_Rig_V2-2/3330-3"
+   ],
+   "volume_mm3": 0.0786,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-19 / Assem2^Stereo_Rig_V2-2/3330-25",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-19",
+    "Assem2^Stereo_Rig_V2-2/3330-25"
+   ],
+   "volume_mm3": 0.0784,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-20 / Assem2^Stereo_Rig_V2-2/3330-21",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-20",
+    "Assem2^Stereo_Rig_V2-2/3330-21"
+   ],
+   "volume_mm3": 0.0782,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/3330-22 / Assem2^Stereo_Rig_V2-2/3330-24",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/3330-22",
+    "Assem2^Stereo_Rig_V2-2/3330-24"
+   ],
+   "volume_mm3": 0.0782,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1 / Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1",
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1"
+   ],
+   "volume_mm3": 0.0132,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1 / Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1",
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1"
+   ],
+   "volume_mm3": 0.0132,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1 / Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1",
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1"
+   ],
+   "volume_mm3": 0.0132,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1 / Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/camera-1",
+    "Assem2^Stereo_Rig_V2-2/Copy of Copy of Copy of Copy of Copy of Assem1^Assem2_Stereo_Rig_V2-1/scheeimpflug-1"
+   ],
+   "volume_mm3": 0.0132,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/camera-1 / Assem2^Stereo_Rig_V2-2/scheeimpflug-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/camera-1",
+    "Assem2^Stereo_Rig_V2-2/scheeimpflug-1"
+   ],
+   "volume_mm3": 0.0037,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/camera-1 / Assem2^Stereo_Rig_V2-2/scheeimpflug-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/camera-1",
+    "Assem2^Stereo_Rig_V2-2/scheeimpflug-1"
+   ],
+   "volume_mm3": 0.0037,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem2^Stereo_Rig_V2-2/camera-1 / Assem2^Stereo_Rig_V2-2/scheeimpflug-1",
+   "pass": false,
+   "pair": [
+    "Assem2^Stereo_Rig_V2-2/camera-1",
+    "Assem2^Stereo_Rig_V2-2/scheeimpflug-1"
+   ],
+   "volume_mm3": 0.0017,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference",
+   "pass": false,
+   "found": 165,
+   "baseline": 54,
+   "new": 104
+  },
+  {
+   "id": "faces",
+   "pass": true,
+   "before": 12216,
+   "after": 1337,
+   "ratio": 9.14
+  }
+ ],
+ "bbox_mm": [
+  2111.232,
+  2115.797,
+  2502.04
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\stereo_rig_v2.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\stereo_rig_v2\\renders\\wireframe\\top.png"
+ ]
+}

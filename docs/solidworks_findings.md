@@ -235,3 +235,25 @@ Every script run leaves its part open in SolidWorks (Part1, Part2 and so on).
 - Section-face boundaries are ordinary lines, so bore diameters (width between the two walls) and axial steps pick reliably. Width dimensions on a turned section get the diameter sign automatically.
 - `DisplayDimension.SetText`: 1 = prefix, 2 = suffix, 3 = callout above. A prefix replaces the automatic diameter sign.
 - Circles interrupted by spokes are arcs: a single pick gives the radius (R), not the diameter.
+
+## Simplifying existing assemblies (Stereo_Rig_V2, TANK, 2026-11-06)
+
+Tools: `scripts/asm_capture.py` -> `scripts/asm_simplify.py gen` -> `pipeline.py` on each
+`projects/x8020_*` -> `scripts/frame_check.py` -> `asm_simplify.py assemble` -> `assembly.py`.
+The source-to-simple mapping lives in `assemblies/x8020_map.json`, and the solved frames in `assemblies/x8020_frames.json`.
+
+- `Component2.Transform2` is **relative to the root assembly** for components at any depth, including
+  inside virtual sub-assemblies. Transformed part boxes matched `GetBox` to within 0.001 mm on all 433 leaves.
+- Late binding exposes `IsSuppressed`, `GetFaceCount`, `IsCylinder` and `GetVertices` as methods on some objects
+  and as properties on others. Check `callable()` before calling.
+- Vendor parts use their own frames: 80/20 rails are centred on the origin along Z, Faztek rails run from 0 to L with an
+  offset section, and gussets differ by vendor. Each simplified part therefore gets a per-source local transform. Profiles
+  are solved from the bbox; brackets and fasteners from the 24 axis rotations, choosing the one with the best
+  interference overlap against the original. The best candidate was always clearly ahead.
+- Watch for mitred rails. The 1530 brace has 60° and 30° end cuts, and the Faztek `5 - V3` has a 45° cut. Square-ended rails
+  then poke into their neighbours: the interference check found it at 70 591 mm³. Measure the end vertices and use `miters`.
+- Function check: run interference detection on the original (the baseline, about 20 s each) and allow only pairs that
+  are not new. The noise floor is about 20 mm³ of fit difference. Bolts reaching into a slot without a T-cavity are expected.
+- The source assemblies differ in up axis: TANK is Y-up and the rig is Z-up (`source_up` in the map).
+- Results: rig 12 216 -> 1 337 faces (9.1x); TANK 6 618 -> 4 394 (most of its parts were already simple, so they were kept).
+  Building assemblies of 112 and 321 components takes several minutes, so run them in the background.

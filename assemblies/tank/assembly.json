@@ -1,0 +1,5931 @@
+{
+ "_comment": "Simplified rebuild of C:\\Users\\admin\\Desktop\\Solidworks_Auto\\TANK.SLDASM (asm_capture.py -> asm_simplify.py). Every leaf sits at its original place; the Y-up source is turned Z-up.",
+ "components": [
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical.SLDPRT",
+   "label": "Assem1^TANK-1/Vertical-2",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1338.728,
+    -2530.4984,
+    1738.1022
+   ]
+  },
+  {
+   "part": "x8020_1530_l1136_65",
+   "label": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-2",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1418.103,
+    -2630.9129,
+    1945.794
+   ]
+  },
+  {
+   "part": "x8020_1530_l1136_65",
+   "label": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-5",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    243.3527,
+    -2669.0127,
+    1945.794
+   ]
+  },
+  {
+   "part": "x8020_1530_l1136_65",
+   "label": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1341.903,
+    -1494.2629,
+    1945.794
+   ]
+  },
+  {
+   "part": "x8020_1530_l1136_65",
+   "label": "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-7",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1380.0027,
+    -2592.8127,
+    1945.794
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical.SLDPRT",
+   "label": "Assem1^TANK-1/Vertical-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    343.7673,
+    -2589.6377,
+    1738.1022
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical.SLDPRT",
+   "label": "Assem1^TANK-1/Vertical-4",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    284.628,
+    -1594.677,
+    1738.1022
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom Acrylic Sheet.SLDPRT",
+   "label": "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    811.678,
+    -2062.5877,
+    647.219
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-2/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    244.9405,
+    -2484.8627,
+    1345.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-5/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    247.4805,
+    -2329.2877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-6/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    244.9405,
+    -2126.0877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-8/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    244.9405,
+    -1719.6877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical.SLDPRT",
+   "label": "Assem1^TANK-1/Vertical-3",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1279.5887,
+    -1535.5377,
+    1738.1022
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-7/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    244.9405,
+    -1922.8877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Side Acrylic Sheet.SLDPRT",
+   "label": "Assem1^TANK-1/Side Acrylic Sheet-2",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1348.253,
+    -2062.5877,
+    1282.219
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-9/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    244.9405,
+    -1640.3127,
+    1015.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-3/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    247.4805,
+    -2484.8627,
+    1142.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Side Acrylic Sheet.SLDPRT",
+   "label": "Assem1^TANK-1/Side Acrylic Sheet-4",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    811.678,
+    -1526.0127,
+    1282.219
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom (one part).SLDPRT",
+   "label": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-4",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    735.6772,
+    -2093.5523,
+    637.694
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom (one part).SLDPRT",
+   "label": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    842.6426,
+    -2138.5884,
+    637.694
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom (one part).SLDPRT",
+   "label": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-3",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    780.7133,
+    -1986.5869,
+    637.694
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom (one part).SLDPRT",
+   "label": "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-2",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    887.6787,
+    -2031.623,
+    637.694
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Horizontal_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    303.1327,
+    -1589.5127,
+    619.063
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_H_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_H_Beam_Base-3",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    262.403,
+    -1548.783,
+    -168.337
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_H_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_H_Beam_Base-4",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    262.403,
+    -2571.133,
+    -168.337
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-3",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    303.1327,
+    -1570.8817,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-4",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    303.1327,
+    -2593.2317,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Horizontal_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-15",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    303.1327,
+    -1589.5127,
+    -168.337
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_V_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_V_Beam_Base-8",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    303.1327,
+    -2082.0567,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_V_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_V_Beam_Base-4",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    814.3077,
+    -2593.2317,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_V_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_V_Beam_Base-6",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1325.4827,
+    -2082.0567,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_H_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_H_Beam_Base-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    262.403,
+    -2571.133,
+    619.063
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_H_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_H_Beam_Base-2",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    262.403,
+    -1548.783,
+    619.063
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\second_V_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/second_V_Beam_Base-7",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    814.3077,
+    -1570.8817,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Horizontal_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1325.4827,
+    -1589.5127,
+    619.063
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1325.4827,
+    -1570.8817,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Vertical_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Vertical_Beam_Base-2",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1325.4827,
+    -2593.2317,
+    561.494
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Horizontal_Beam_Base.SLDPRT",
+   "label": "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-13",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1325.4827,
+    -1589.5127,
+    -168.337
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Side Acrylic Sheet.SLDPRT",
+   "label": "Assem1^TANK-1/Side Acrylic Sheet-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    249.703,
+    -2062.5877,
+    1282.219
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Side Acrylic Sheet.SLDPRT",
+   "label": "Assem1^TANK-1/Side Acrylic Sheet-3",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    811.678,
+    -2624.5627,
+    1282.219
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-1/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    244.9405,
+    -2484.8627,
+    1548.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-4/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    247.4805,
+    -2484.8627,
+    939.319
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom Levelling Plate (option 2).SLDPRT",
+   "label": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-3",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1360.953,
+    -1500.6127,
+    -149.706
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-3",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    408.453,
+    -2602.3377,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-14/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    244.9405,
+    -1999.0877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-4/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1233.953,
+    -2629.3252,
+    1142.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-6/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    875.178,
+    -2629.3252,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-7/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    671.978,
+    -2629.3252,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-5/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1078.378,
+    -2629.3252,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-3/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1233.953,
+    -2629.3252,
+    939.319
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-1/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1233.953,
+    -2629.3252,
+    1548.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-2/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1233.953,
+    -2629.3252,
+    1345.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-13/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    544.978,
+    -2629.3252,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-14/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    748.178,
+    -2629.3252,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-16/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1154.578,
+    -2629.3252,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-15/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    951.378,
+    -2629.3252,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-8/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    389.403,
+    -2629.3252,
+    1015.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-9/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    468.778,
+    -2629.3252,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-10/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    389.403,
+    -2629.3252,
+    1218.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-11/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    389.403,
+    -2629.3252,
+    1421.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-1/Clamp and Button-12/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    389.403,
+    -2629.3252,
+    1625.119
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom Levelling Plate (option 2).SLDPRT",
+   "label": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-2",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1284.753,
+    -2624.5627,
+    -149.706
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-15/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    244.9405,
+    -2202.2877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-4/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    389.403,
+    -1495.8502,
+    1142.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-6/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    748.178,
+    -1495.8502,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-7/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    951.378,
+    -1495.8502,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-5/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    544.978,
+    -1495.8502,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-3/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    389.403,
+    -1495.8502,
+    939.319
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-1/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    389.403,
+    -1495.8502,
+    1548.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-2/separated strip-1",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    389.403,
+    -1495.8502,
+    1345.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-13/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1078.378,
+    -1495.8502,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-14/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    875.178,
+    -1495.8502,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-16/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    468.778,
+    -1495.8502,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-15/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    671.978,
+    -1495.8502,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-8/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1233.953,
+    -1495.8502,
+    1015.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-9/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1154.578,
+    -1495.8502,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-10/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1233.953,
+    -1495.8502,
+    1218.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-11/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1233.953,
+    -1495.8502,
+    1421.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-2/Clamp and Button-12/separated strip-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1233.953,
+    -1495.8502,
+    1625.119
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\KBC.SLDPRT",
+   "label": "Assem1^TANK-1/KBC-1",
+   "xform": [
+    0.994669514,
+    0.103114299,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.103114299,
+    -0.994669514,
+    0.0,
+    300.503,
+    -1468.8627,
+    -273.531
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom Levelling Plate (option 2).SLDPRT",
+   "label": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    262.403,
+    -2624.5627,
+    -149.706
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-10",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1351.428,
+    -1659.3627,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bottom Levelling Plate (option 2).SLDPRT",
+   "label": "Assem1^TANK-1/Bottom Levelling Plate (option 2)-4",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    338.603,
+    -1500.6127,
+    -149.706
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-16/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    244.9405,
+    -2405.4877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\KBC.SLDPRT",
+   "label": "Assem1^TANK-1/KBC-2",
+   "xform": [
+    0.971553016,
+    -0.236822163,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.236822163,
+    -0.971553016,
+    0.0,
+    1322.853,
+    -1468.8627,
+    -273.531
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-11/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    244.9405,
+    -1640.3127,
+    1421.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\KBC.SLDPRT",
+   "label": "Assem1^TANK-1/KBC-3",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    300.503,
+    -2656.3127,
+    -273.531
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-2",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    262.403,
+    -1659.3627,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-10/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    244.9405,
+    -1640.3127,
+    1218.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-12/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    244.9405,
+    -1640.3127,
+    1625.119
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button-13/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    244.9405,
+    -1795.8877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-4/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1378.4155,
+    -1640.3127,
+    1142.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-6/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1378.4155,
+    -1999.0877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-7/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1378.4155,
+    -2202.2877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-5/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1378.4155,
+    -1795.8877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-3/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1378.4155,
+    -1640.3127,
+    939.319
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-1/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1378.4155,
+    -1640.3127,
+    1548.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-2/separated strip-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1378.4155,
+    -1640.3127,
+    1345.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-13/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1378.4155,
+    -2329.2877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-14/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1378.4155,
+    -2126.0877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-16/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1378.4155,
+    -1719.6877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-15/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1378.4155,
+    -1922.8877,
+    1812.444
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-8/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1378.4155,
+    -2484.8627,
+    1015.519
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-9/separated strip-1",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1378.4155,
+    -2405.4877,
+    751.994
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-10/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1378.4155,
+    -2484.8627,
+    1218.719
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-11/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1378.4155,
+    -2484.8627,
+    1421.919
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\separated strip.SLDPRT",
+   "label": "Assem1^TANK-1/Clamp and Button SET-3/Clamp and Button-12/separated strip-1",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1378.4155,
+    -2484.8627,
+    1625.119
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\KBC.SLDPRT",
+   "label": "Assem1^TANK-1/KBC-4",
+   "xform": [
+    -0.835323076,
+    -0.549759365,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.549759365,
+    0.835323076,
+    0.0,
+    1322.853,
+    -2656.3127,
+    -273.531
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    262.403,
+    -2465.8127,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-4",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1214.903,
+    -2602.3377,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-6",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    329.078,
+    -1659.3627,
+    -111.606
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-7",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1284.753,
+    -2465.8127,
+    -111.606
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-8",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1284.753,
+    -1659.3627,
+    -111.606
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-9",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1351.428,
+    -2465.8127,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-13",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    408.453,
+    -1579.9877,
+    -111.606
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-5",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    329.078,
+    -2465.8127,
+    -111.606
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-15",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1214.903,
+    -2535.6627,
+    -111.606
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-12",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    408.453,
+    -1513.3127,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-14",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1214.903,
+    -1579.9877,
+    -111.606
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\upper (one part).SLDPRT",
+   "label": "Assem1^TANK-1/UPPER-1/upper (one part)-2",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    811.678,
+    -2062.5877,
+    1774.344
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\upper (one part).SLDPRT",
+   "label": "Assem1^TANK-1/UPPER-1/upper (one part)-4",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    811.678,
+    -2062.5877,
+    1774.344
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\upper (one part).SLDPRT",
+   "label": "Assem1^TANK-1/UPPER-1/upper (one part)-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    811.678,
+    -2062.5877,
+    1774.344
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\upper (one part).SLDPRT",
+   "label": "Assem1^TANK-1/UPPER-1/upper (one part)-3",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    811.678,
+    -2062.5877,
+    1774.344
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-11",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1214.903,
+    -1513.3127,
+    523.394
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\FAZTEKMountedPlate.SLDPRT",
+   "label": "Assem1^TANK-1/FAZTEKMountedPlate-16",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    408.453,
+    -2535.6627,
+    -111.606
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-17",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    1326.282,
+    -1567.0334,
+    1851.687
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-22",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1005.4726,
+    -2427.0688,
+    1813.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-26",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    492.6045,
+    -2551.9473,
+    1813.587
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-32",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    347.9906,
+    -2375.2291,
+    1794.537
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-13",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1307.2322,
+    -2577.1917,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-15",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    316.1237,
+    -1547.9837,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-23",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1176.9838,
+    -2255.4927,
+    1813.587
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-1",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-4",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-2",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    1680.367
+   ]
+  },
+  {
+   "part": "x8020_plate_m1003",
+   "label": "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    339.5664,
+    -2332.6921,
+    672.537
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-3",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-7",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-23",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-16",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-24",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-8",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-17",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-9",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-20",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-13",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-22",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-21",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-19",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-11",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-5",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-6",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-10",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-12",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    320.1373,
+    -2365.102,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-14",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    399.3333,
+    -2444.2979,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-15",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-5/Bilge_Pump-18",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    478.5292,
+    -2523.4939,
+    1120.367
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-18",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1272.5401,
+    -2377.9893,
+    1794.5371
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-31",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    495.2186,
+    -2522.3921,
+    1794.537
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-18",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1307.2322,
+    -2577.1917,
+    1851.687
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-16",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    316.1237,
+    -1547.9837,
+    1851.687
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-1",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-4",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-2",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    1680.367
+   ]
+  },
+  {
+   "part": "x8020_plate_m1003",
+   "label": "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    537.3264,
+    -1590.1699,
+    672.537
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-3",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-7",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-23",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-16",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-24",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-8",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-17",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-9",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-20",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-13",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-22",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-21",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-19",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-11",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-5",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-6",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-10",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-12",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    504.9165,
+    -1570.7408,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-14",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    425.7205,
+    -1649.9368,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-15",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-1/Bilge_Pump-18",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    346.5246,
+    -1729.1327,
+    1120.367
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-19",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1175.5421,
+    -1871.2494,
+    1813.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-12",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    1326.282,
+    -1567.0334,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-14",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    297.074,
+    -2558.1419,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-15",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    494.6158,
+    -1573.0003,
+    1813.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-16",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    322.9231,
+    -1745.4774,
+    1813.587
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-1",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-4",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-2",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    1680.367
+   ]
+  },
+  {
+   "part": "x8020_plate_m1003",
+   "label": "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1283.6545,
+    -1788.6773,
+    672.537
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-3",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-7",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-23",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-16",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-24",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-8",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-17",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-9",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-20",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-13",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-22",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-21",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-19",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-11",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-5",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-6",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-10",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-12",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1303.0836,
+    -1756.2674,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-14",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1223.8876,
+    -1677.0715,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-15",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-3/Bilge_Pump-18",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1144.6917,
+    -1597.8755,
+    1120.367
+   ]
+  },
+  {
+   "part": "x8020_1515_l991_11",
+   "label": "Internal Module-1/3-19",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    297.074,
+    -2558.1419,
+    1851.687
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-1",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-4",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-2",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    1680.367
+   ]
+  },
+  {
+   "part": "x8020_plate_m1003",
+   "label": "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1087.9256,
+    -2535.3813,
+    672.537
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-3",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    1680.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-7",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-23",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-16",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-24",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-8",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-17",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    1120.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-9",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    1456.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-20",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-13",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-22",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    896.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-21",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-19",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    1008.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-11",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-5",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-6",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    1568.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-10",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-12",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1120.3355,
+    -2554.8104,
+    1344.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-14",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1199.5315,
+    -2475.6145,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-15",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    1232.367
+   ]
+  },
+  {
+   "file": "assemblies\\tank\\kept_parts\\Bilge_Pump.SLDPRT",
+   "label": "Internal Module-1/PlateWithPumps-4/Bilge_Pump-18",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1278.7275,
+    -2396.4185,
+    1120.367
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-20",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1001.3249,
+    -1696.897,
+    1813.587
+   ]
+  },
+  {
+   "part": "x8020_1515_l177_8",
+   "label": "Internal Module-1/4(stick)-25",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    316.4872,
+    -2379.7922,
+    1813.587
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-17",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    1124.7979,
+    -2519.453,
+    1794.537
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-34",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1280.434,
+    -2572.8717,
+    692.033
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-35",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    301.394,
+    -2531.3437,
+    692.033
+   ]
+  },
+  {
+   "part": "x8020_1515_l282",
+   "label": "Internal Module-1/5 - V2-3",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    322.0282,
+    -2348.8302,
+    1775.487
+   ]
+  },
+  {
+   "part": "x8020_1515_l282",
+   "label": "Internal Module-1/5 - V2-2",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1101.7882,
+    -1573.1355,
+    1775.487
+   ]
+  },
+  {
+   "part": "x8020_1515_l282",
+   "label": "Internal Module-1/5 - V2-4",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    521.1883,
+    -1572.6317,
+    1775.487
+   ]
+  },
+  {
+   "part": "x8020_1515_l1122",
+   "label": "Internal Module-1/vertical_pillar-1",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1307.2317,
+    -2558.1417,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_1515_l1122",
+   "label": "Internal Module-1/vertical_pillar-2",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    316.1237,
+    -2558.1417,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-30",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1322.728,
+    -1578.0837,
+    1852.133
+   ]
+  },
+  {
+   "part": "x8020_1515_l282",
+   "label": "Internal Module-1/5 - V2-1",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1104.0637,
+    -2552.9195,
+    1775.487
+   ]
+  },
+  {
+   "part": "x8020_1515_l1122",
+   "label": "Internal Module-1/vertical_pillar-3",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    316.1237,
+    -1567.0337,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-28",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    301.52,
+    -2531.3437,
+    1852.007
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-29",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    327.174,
+    -1551.6637,
+    1852.133
+   ]
+  },
+  {
+   "part": "x8020_1515_l1122",
+   "label": "Internal Module-1/vertical_pillar-4",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1307.2317,
+    -1567.0337,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-32",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    327.174,
+    -1551.5377,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-33",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1322.728,
+    -1578.0837,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-36",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    1272.6347,
+    -1747.2156,
+    1794.537
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-33",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    351.1944,
+    -1746.8075,
+    1794.537
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-35",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1125.2582,
+    -1599.9041,
+    1794.537
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-31",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1280.434,
+    -2572.8717,
+    1852.133
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-34",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    496.3059,
+    -1601.6309,
+    1794.537
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-39",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1288.182,
+    -1777.4204,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-3",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    425.7478,
+    -1668.0729,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-6",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1206.1927,
+    -2450.7898,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-7",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    335.179,
+    -1586.0787,
+    689.192
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-8",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1288.177,
+    -1586.0787,
+    689.156
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-2",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    430.3011,
+    -2457.1024,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-38",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1096.4564,
+    -2539.0917,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-43",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    335.174,
+    -1776.0605,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-4",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    335.179,
+    -1586.0787,
+    1854.118
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-4",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    417.1633,
+    -1676.6574,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-43",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1281.8379,
+    -2353.2304,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-41",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    525.2569,
+    -2539.0917,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-8",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1206.1927,
+    -1677.5399,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-37",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1288.182,
+    -2349.0115,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-42",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    335.174,
+    -2340.7818,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-40",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1093.4844,
+    -1586.0837,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-1",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    335.169,
+    -2539.0867,
+    1854.118
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-44",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    526.4124,
+    -1586.0837,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-2",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1288.177,
+    -2539.0967,
+    1854.118
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-6",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    335.169,
+    -2539.0867,
+    689.192
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-1",
+   "xform": [
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    417.1633,
+    -2443.9645,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-3",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1288.187,
+    -1586.0887,
+    1854.118
+   ]
+  },
+  {
+   "part": "x8020_bracket_4336",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4842)-5",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1288.177,
+    -2539.0967,
+    694.018
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-5",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    1199.8802,
+    -2457.1024,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_1515_miter45_l135",
+   "label": "Internal Module-1/5 - V3-7",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    -0.707106781,
+    0.707106781,
+    0.0,
+    1196.7257,
+    -1668.0729,
+    691.587
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-36",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1088.0036,
+    -1580.0036,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-37",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    1283.0529,
+    -1775.053,
+    692.033
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-38",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    523.3626,
+    -1591.111,
+    692.033
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-39",
+   "xform": [
+    0.707106781,
+    -0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -0.707106781,
+    -0.707106781,
+    0.0,
+    340.8797,
+    -1774.8553,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-40",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    331.5547,
+    -2336.4417,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-41",
+   "xform": [
+    0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    -0.707106781,
+    0.0,
+    528.5093,
+    -2533.3963,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-42",
+   "xform": [
+    -0.707106781,
+    0.707106781,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.707106781,
+    0.707106781,
+    0.0,
+    1091.8676,
+    -2543.2006,
+    691.907
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-44",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1322.728,
+    -1567.3537,
+    1840.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-45",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1322.602,
+    -1567.3537,
+    718.385
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-46",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1306.912,
+    -2573.6377,
+    702.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-47",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1307.552,
+    -2573.6377,
+    1840.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-50",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    301.394,
+    -2558.5877,
+    718.385
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-51",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    316.444,
+    -1552.3037,
+    1840.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-52",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    315.804,
+    -1552.3037,
+    702.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-45",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    335.174,
+    -2560.5317,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-46",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    335.174,
+    -2560.5317,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-48",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1288.182,
+    -2560.5317,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-49",
+   "xform": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    313.734,
+    -2539.0917,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_fastener_anchor",
+   "label": "Internal Module-1/anchor-48",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    301.52,
+    -2558.4617,
+    1840.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-50",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    313.734,
+    -1586.0837,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-47",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1288.182,
+    -2560.5777,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-51",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    313.734,
+    -1586.0837,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-52",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    313.688,
+    -2539.0917,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-58",
+   "xform": [
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    1309.668,
+    -1586.0837,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-57",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    1309.668,
+    -1586.0837,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-56",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    335.174,
+    -1564.5977,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-60",
+   "xform": [
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1309.622,
+    -2539.0917,
+    1832.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-54",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1288.182,
+    -1564.6437,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-59",
+   "xform": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1309.622,
+    -2539.0917,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-53",
+   "xform": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    -1.0,
+    0.0,
+    335.174,
+    -1564.5977,
+    710.637
+   ]
+  },
+  {
+   "part": "x8020_bracket_4332",
+   "label": "Internal Module-1/Gusset Corner Bracket(15CB4840)-55",
+   "xform": [
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    -1.0,
+    0.0,
+    1288.182,
+    -1564.5977,
+    1832.637
+   ]
+  }
+ ],
+ "expected": {
+  "_comment": "bbox measured from the original assembly (rotated Z-up); interference: only pairs that already collide in the original are allowed",
+  "bbox": [
+   1257.3,
+   1329.491,
+   2266.95
+  ],
+  "bbox_tol": 1.0,
+  "views": [
+   "isometric",
+   "top",
+   "front",
+   "right"
+  ],
+  "baseline_interference": [
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-12"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-13"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-14"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/3-15"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-1"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-2"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-3"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-4"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-5"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-6"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-7"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/5 - V3-8"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-6"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-7"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-8"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   [
+    "Assem1^TANK-1/Bottom Acrylic Sheet-1",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   [
+    "Assem1^TANK-1/Clamp and Button-3/separated strip-1",
+    "Assem1^TANK-1/Side Acrylic Sheet-1"
+   ],
+   [
+    "Assem1^TANK-1/Clamp and Button-4/separated strip-1",
+    "Assem1^TANK-1/Side Acrylic Sheet-1"
+   ],
+   [
+    "Assem1^TANK-1/Clamp and Button-5/separated strip-1",
+    "Assem1^TANK-1/Side Acrylic Sheet-1"
+   ],
+   [
+    "Internal Module-1/3-12",
+    "Internal Module-1/anchor-36"
+   ],
+   [
+    "Internal Module-1/3-12",
+    "Internal Module-1/anchor-38"
+   ],
+   [
+    "Internal Module-1/3-13",
+    "Internal Module-1/anchor-37"
+   ],
+   [
+    "Internal Module-1/3-14",
+    "Internal Module-1/anchor-41"
+   ],
+   [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-39"
+   ]
+  ],
+  "interference_ignore": {
+   "_comment": "below_mm3: touching and small fit differences of simplified shapes. parts: by design - fasteners reach into solid rail or plate (no T-cavity, fixing holes left out); the kept 3214 nut sits in the bearing's brake gap, which the collapsed bearing block fills.",
+   "below_mm3": 20.0,
+   "parts": [
+    [
+     "x8020_fastener",
+     "x8020_15"
+    ],
+    [
+     "x8020_fastener",
+     "x8020_30"
+    ],
+    [
+     "x8020_fastener",
+     "x8020_plate"
+    ],
+    [
+     "3214",
+     "x8020_bearing"
+    ]
+   ]
+  },
+  "faces_before": 6618
+ }
+}

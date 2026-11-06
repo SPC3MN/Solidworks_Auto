@@ -1,0 +1,28 @@
+{
+ "_comment": "Expected values from requirements.md (x8020_parts arithmetic).",
+ "solid_bodies": {
+  "expected": 1
+ },
+ "bbox.x": {
+  "expected": 11.91,
+  "tol": 0.05
+ },
+ "bbox.y": {
+  "expected": 11.91,
+  "tol": 0.05
+ },
+ "bbox.z": {
+  "expected": 39.69,
+  "tol": 0.05
+ },
+ "volume": {
+  "expected": 2438.358,
+  "rel_tol": 0.001
+ },
+ "export.step": {
+  "rel_tol": 0.001
+ },
+ "export.stl": {
+  "rel_tol": 0.01
+ }
+}

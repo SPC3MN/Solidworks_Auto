@@ -1,0 +1,2281 @@
+{
+ "assembly": "tank",
+ "time": "2026-11-06T16:14:12",
+ "pass": false,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 321,
+   "actual": 321
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 1257.3,
+   "actual": 1257.3
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 1329.491,
+   "actual": 1329.49
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 2266.95,
+   "actual": 2266.95
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/5 - V3-7",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/5 - V3-7"
+   ],
+   "volume_mm3": 18824.2716,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/5 - V3-8",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/5 - V3-8"
+   ],
+   "volume_mm3": 18824.2716,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/5 - V3-6",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/5 - V3-6"
+   ],
+   "volume_mm3": 18824.2716,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/5 - V3-3",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/5 - V3-3"
+   ],
+   "volume_mm3": 18824.2716,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/5 - V3-2",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/5 - V3-2"
+   ],
+   "volume_mm3": 18824.2716,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/5 - V3-5",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/5 - V3-5"
+   ],
+   "volume_mm3": 18824.2716,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/5 - V3-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/5 - V3-4"
+   ],
+   "volume_mm3": 18824.1279,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/5 - V3-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/5 - V3-1"
+   ],
+   "volume_mm3": 18824.1279,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-11 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-11",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-20 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-20",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-5 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-5",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-14 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-14",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-8 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-8",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-9 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-9",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-15 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-15",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-17 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-17",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-23 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-23",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-22 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-22",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-3 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-3",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-19 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-19",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-18 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-18",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-10 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-10",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3585,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-6 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-6",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-16 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-16",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-13 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-13",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-7 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-7",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-21 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-21",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-16 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-16",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-6 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-6",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-13 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-13",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-8 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-8",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-10 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-10",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-14 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-14",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-19 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-19",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-24 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-24",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-21 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-21",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-7 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-7",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-3 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-3",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-10 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-10",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-24 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-24",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3578,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-12 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-12",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-7 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-7",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-21 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-21",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-18 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-18",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-24 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-24",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-6 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-6",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-3 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-3",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-12 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-12",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-7 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-7",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-24 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-24",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-12 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-12",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-9 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-9",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-15 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-15",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-13 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-13",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-16 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-16",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-22 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-22",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-16 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-16",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-3 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-3",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-18 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-18",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-6 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-6",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-5 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-5",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-11 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-11",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-21 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-21",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-9 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-9",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-17 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-17",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-19 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-19",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-18 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-18",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-15 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-15",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-13 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-13",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-19 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-19",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-12 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-12",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-23 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-23",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-9 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-9",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-20 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-20",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-22 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-22",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-15 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-15",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-10 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-10",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-22 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-22",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3576,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-14 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-14",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3559,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-11 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-11",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3559,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-8 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-8",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-20 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-20",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-17 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-17",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-5 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-5",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-23 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-23",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-5 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-5",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-8 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-8",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-17 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-17",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-11 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-11",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-20 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-20",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-14 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-14",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-23 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-23",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3557,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-4 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-4",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3464,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-2 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-2",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3464,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-1 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-1",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3462,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-4 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-4",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3454,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-4 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-4",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3454,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-2 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-2",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3454,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-4 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-4",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3454,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/Bilge_Pump-1 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/Bilge_Pump-1",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3452,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/Bilge_Pump-1 / Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/Bilge_Pump-1",
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3452,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-1 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-1",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3452,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/Bilge_Pump-2 / Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/Bilge_Pump-2",
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3433,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-3/Bilge_Pump-2 / Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-3/Bilge_Pump-2",
+    "Internal Module-1/PlateWithPumps-3/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 2434.3433,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 18.6525,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1"
+   ],
+   "volume_mm3": 18.6525,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/anchor-28",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/anchor-28"
+   ],
+   "volume_mm3": 6.3948,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-8 / Internal Module-1/anchor-37",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-8",
+    "Internal Module-1/anchor-37"
+   ],
+   "volume_mm3": 6.3935,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-3 / Internal Module-1/anchor-38",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-3",
+    "Internal Module-1/anchor-38"
+   ],
+   "volume_mm3": 6.3935,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-3 / Internal Module-1/anchor-38",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-3",
+    "Internal Module-1/anchor-38"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-8 / Internal Module-1/anchor-37",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-8",
+    "Internal Module-1/anchor-37"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/anchor-35",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-35"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/anchor-34",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/anchor-34"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/anchor-29",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/anchor-29"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-17 / Internal Module-1/anchor-30",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-17",
+    "Internal Module-1/anchor-30"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-19 / Internal Module-1/anchor-31",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-19",
+    "Internal Module-1/anchor-31"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/anchor-50 / Internal Module-1/vertical_pillar-2",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/anchor-50",
+    "Internal Module-1/vertical_pillar-2"
+   ],
+   "volume_mm3": 6.3911,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1 / Internal Module-1/anchor-39",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-1/M-1003 SQR MTG PLATE-1",
+    "Internal Module-1/anchor-39"
+   ],
+   "volume_mm3": 6.3605,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1 / Internal Module-1/anchor-41",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-5/M-1003 SQR MTG PLATE-1",
+    "Internal Module-1/anchor-41"
+   ],
+   "volume_mm3": 6.3605,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1 / Internal Module-1/anchor-43",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/PlateWithPumps-4/M-1003 SQR MTG PLATE-1",
+    "Internal Module-1/anchor-43"
+   ],
+   "volume_mm3": 6.3596,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-18 / Internal Module-1/Gusset Corner Bracket(15CB4842)-3",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-18",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-3"
+   ],
+   "volume_mm3": 5.3622,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-19 / Internal Module-1/Gusset Corner Bracket(15CB4842)-2",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-19",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-2"
+   ],
+   "volume_mm3": 5.3622,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/Gusset Corner Bracket(15CB4842)-5",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-5"
+   ],
+   "volume_mm3": 5.3622,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/Gusset Corner Bracket(15CB4842)-7",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-7"
+   ],
+   "volume_mm3": 5.2531,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/Gusset Corner Bracket(15CB4842)-6",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-6"
+   ],
+   "volume_mm3": 5.2531,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/Gusset Corner Bracket(15CB4842)-8",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-8"
+   ],
+   "volume_mm3": 5.2505,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-17 / Internal Module-1/Gusset Corner Bracket(15CB4842)-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-17",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-4"
+   ],
+   "volume_mm3": 5.2505,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/Gusset Corner Bracket(15CB4842)-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-1"
+   ],
+   "volume_mm3": 5.2505,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/anchor-35",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-35"
+   ],
+   "volume_mm3": 4.907,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/anchor-51",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/anchor-51"
+   ],
+   "volume_mm3": 4.907,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/anchor-50 / Internal Module-1/vertical_pillar-2",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/anchor-50",
+    "Internal Module-1/vertical_pillar-2"
+   ],
+   "volume_mm3": 4.907,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-17 / Internal Module-1/anchor-44",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-17",
+    "Internal Module-1/anchor-44"
+   ],
+   "volume_mm3": 4.907,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-19 / Internal Module-1/anchor-31",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-19",
+    "Internal Module-1/anchor-31"
+   ],
+   "volume_mm3": 4.9058,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/anchor-34",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/anchor-34"
+   ],
+   "volume_mm3": 4.9058,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/anchor-46",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/anchor-46"
+   ],
+   "volume_mm3": 4.9058,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/anchor-40",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-40"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-2 / Internal Module-1/anchor-41",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-2",
+    "Internal Module-1/anchor-41"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/anchor-42",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/anchor-42"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-6 / Internal Module-1/anchor-43",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-6",
+    "Internal Module-1/anchor-43"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/anchor-32",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-32"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/anchor-28",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/anchor-28"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/anchor-33",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/anchor-33"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-4 / Internal Module-1/anchor-39",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-4",
+    "Internal Module-1/anchor-39"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/anchor-45 / Internal Module-1/vertical_pillar-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/anchor-45",
+    "Internal Module-1/vertical_pillar-4"
+   ],
+   "volume_mm3": 4.9036,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-18 / Internal Module-1/anchor-47",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-18",
+    "Internal Module-1/anchor-47"
+   ],
+   "volume_mm3": 4.9013,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-19 / Internal Module-1/anchor-48",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-19",
+    "Internal Module-1/anchor-48"
+   ],
+   "volume_mm3": 4.9013,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/anchor-52",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-52"
+   ],
+   "volume_mm3": 4.9002,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/BOTTOM-1/Bottom (one part)-3 / Assem1^TANK-1/Side Acrylic Sheet-4",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-3",
+    "Assem1^TANK-1/Side Acrylic Sheet-4"
+   ],
+   "volume_mm3": 4.611,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-18 / Internal Module-1/Gusset Corner Bracket(15CB4842)-3",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-18",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-3"
+   ],
+   "volume_mm3": 3.7414,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-19 / Internal Module-1/Gusset Corner Bracket(15CB4842)-2",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-19",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-2"
+   ],
+   "volume_mm3": 3.7414,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/Gusset Corner Bracket(15CB4842)-5",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-5"
+   ],
+   "volume_mm3": 3.7414,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/Gusset Corner Bracket(15CB4842)-7",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-7"
+   ],
+   "volume_mm3": 3.6763,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/Gusset Corner Bracket(15CB4842)-6",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-6"
+   ],
+   "volume_mm3": 3.6763,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-17 / Internal Module-1/Gusset Corner Bracket(15CB4842)-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-17",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-4"
+   ],
+   "volume_mm3": 3.6634,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/Gusset Corner Bracket(15CB4842)-8",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-8"
+   ],
+   "volume_mm3": 3.6634,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/Gusset Corner Bracket(15CB4842)-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/Gusset Corner Bracket(15CB4842)-1"
+   ],
+   "volume_mm3": 3.6634,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/anchor-50",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/anchor-50"
+   ],
+   "volume_mm3": 2.5918,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/anchor-45",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/anchor-45"
+   ],
+   "volume_mm3": 2.5918,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/anchor-34",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/anchor-34"
+   ],
+   "volume_mm3": 2.5879,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-18 / Internal Module-1/anchor-31",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-18",
+    "Internal Module-1/anchor-31"
+   ],
+   "volume_mm3": 2.5879,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/anchor-35",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/anchor-35"
+   ],
+   "volume_mm3": 2.5879,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-19 / Internal Module-1/anchor-28",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-19",
+    "Internal Module-1/anchor-28"
+   ],
+   "volume_mm3": 2.5879,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/BOTTOM-1/Bottom (one part)-4 / Assem1^TANK-1/Side Acrylic Sheet-1",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/BOTTOM-1/Bottom (one part)-4",
+    "Assem1^TANK-1/Side Acrylic Sheet-1"
+   ],
+   "volume_mm3": 2.3041,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-1 / Internal Module-1/anchor-40",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-1",
+    "Internal Module-1/anchor-40"
+   ],
+   "volume_mm3": 1.8349,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-18 / Internal Module-1/3-19",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-18",
+    "Internal Module-1/3-19"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/3-14",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/3-14"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-13 / Internal Module-1/3-14",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-13",
+    "Internal Module-1/3-14"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-18 / Internal Module-1/3-19",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-18",
+    "Internal Module-1/3-19"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/3-15",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/3-15"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-14 / Internal Module-1/3-15",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-14",
+    "Internal Module-1/3-15"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/3-19",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/3-19"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/3-19",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/3-19"
+   ],
+   "volume_mm3": 0.9169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/3-13",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/3-13"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/3-13",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/3-13"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-17 / Internal Module-1/3-18",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-17",
+    "Internal Module-1/3-18"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-17 / Internal Module-1/3-18",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-17",
+    "Internal Module-1/3-18"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/3-17",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/3-17"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-16 / Internal Module-1/3-17",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-16",
+    "Internal Module-1/3-17"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/3-15",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/3-15"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-12 / Internal Module-1/3-15",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-12",
+    "Internal Module-1/3-15"
+   ],
+   "volume_mm3": 0.866,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/5 - V3-5 / Internal Module-1/anchor-42",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/5 - V3-5",
+    "Internal Module-1/anchor-42"
+   ],
+   "volume_mm3": 0.4765,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6 / Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-7",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6",
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-7"
+   ],
+   "volume_mm3": 0.3056,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6 / Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-7",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6",
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-7"
+   ],
+   "volume_mm3": 0.3056,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-5 / Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-5",
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6"
+   ],
+   "volume_mm3": 0.2038,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-5 / Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-5",
+    "Assem1^TANK-1/Upper FAZ-1/15EX1530L (Upper FAZ)-6"
+   ],
+   "volume_mm3": 0.2038,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-54 / Internal Module-1/vertical_pillar-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-54",
+    "Internal Module-1/vertical_pillar-4"
+   ],
+   "volume_mm3": 0.1677,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-48 / Internal Module-1/vertical_pillar-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-48",
+    "Internal Module-1/vertical_pillar-1"
+   ],
+   "volume_mm3": 0.1677,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-47 / Internal Module-1/vertical_pillar-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-47",
+    "Internal Module-1/vertical_pillar-1"
+   ],
+   "volume_mm3": 0.1676,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-55 / Internal Module-1/vertical_pillar-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-55",
+    "Internal Module-1/vertical_pillar-4"
+   ],
+   "volume_mm3": 0.1676,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-25 / Internal Module-1/Gusset Corner Bracket(15CB4840)-32",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-25",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-32"
+   ],
+   "volume_mm3": 0.1661,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-23 / Internal Module-1/Gusset Corner Bracket(15CB4840)-18",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-23",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-18"
+   ],
+   "volume_mm3": 0.1661,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-25 / Internal Module-1/Gusset Corner Bracket(15CB4840)-32",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-25",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-32"
+   ],
+   "volume_mm3": 0.1592,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-23 / Internal Module-1/Gusset Corner Bracket(15CB4840)-18",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-23",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-18"
+   ],
+   "volume_mm3": 0.1592,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-20 / Internal Module-1/Gusset Corner Bracket(15CB4840)-35",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-20",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-35"
+   ],
+   "volume_mm3": 0.1306,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-20 / Internal Module-1/Gusset Corner Bracket(15CB4840)-35",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-20",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-35"
+   ],
+   "volume_mm3": 0.1252,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-48 / Internal Module-1/vertical_pillar-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-48",
+    "Internal Module-1/vertical_pillar-1"
+   ],
+   "volume_mm3": 0.1174,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-54 / Internal Module-1/vertical_pillar-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-54",
+    "Internal Module-1/vertical_pillar-4"
+   ],
+   "volume_mm3": 0.1174,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-47 / Internal Module-1/vertical_pillar-1",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-47",
+    "Internal Module-1/vertical_pillar-1"
+   ],
+   "volume_mm3": 0.1169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/Gusset Corner Bracket(15CB4840)-55 / Internal Module-1/vertical_pillar-4",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-55",
+    "Internal Module-1/vertical_pillar-4"
+   ],
+   "volume_mm3": 0.1169,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-15 / Internal Module-1/Gusset Corner Bracket(15CB4840)-34",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-15",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-34"
+   ],
+   "volume_mm3": 0.0952,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/4(stick)-15 / Internal Module-1/Gusset Corner Bracket(15CB4840)-34",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/4(stick)-15",
+    "Internal Module-1/Gusset Corner Bracket(15CB4840)-34"
+   ],
+   "volume_mm3": 0.0912,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14 / Assem1^TANK-1/FAZTEKMountedPlate-2",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14",
+    "Assem1^TANK-1/FAZTEKMountedPlate-2"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14 / Assem1^TANK-1/FAZTEKMountedPlate-1",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14",
+    "Assem1^TANK-1/FAZTEKMountedPlate-1"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/second_H_Beam_Base-1 / Assem1^TANK-1/FAZTEKMountedPlate-3",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-1",
+    "Assem1^TANK-1/FAZTEKMountedPlate-3"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/second_H_Beam_Base-1 / Assem1^TANK-1/FAZTEKMountedPlate-4",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-1",
+    "Assem1^TANK-1/FAZTEKMountedPlate-4"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1 / Assem1^TANK-1/FAZTEKMountedPlate-9",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1",
+    "Assem1^TANK-1/FAZTEKMountedPlate-9"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1 / Assem1^TANK-1/FAZTEKMountedPlate-10",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1",
+    "Assem1^TANK-1/FAZTEKMountedPlate-10"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/second_H_Beam_Base-2 / Assem1^TANK-1/FAZTEKMountedPlate-12",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-2",
+    "Assem1^TANK-1/FAZTEKMountedPlate-12"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/second_H_Beam_Base-2 / Assem1^TANK-1/FAZTEKMountedPlate-11",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-2",
+    "Assem1^TANK-1/FAZTEKMountedPlate-11"
+   ],
+   "volume_mm3": 0.0059,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-15 / Internal Module-1/anchor-52",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-15",
+    "Internal Module-1/anchor-52"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-19 / Internal Module-1/anchor-48",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-19",
+    "Internal Module-1/anchor-48"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Internal Module-1/3-18 / Internal Module-1/anchor-47",
+   "pass": false,
+   "pair": [
+    "Internal Module-1/3-18",
+    "Internal Module-1/anchor-47"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14 / Assem1^TANK-1/Base-1/Vertical_Beam_Base-4",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14",
+    "Assem1^TANK-1/Base-1/Vertical_Beam_Base-4"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1 / Assem1^TANK-1/Base-1/Vertical_Beam_Base-2",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1",
+    "Assem1^TANK-1/Base-1/Vertical_Beam_Base-2"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Vertical_Beam_Base-2 / Assem1^TANK-1/Base-1/second_H_Beam_Base-1",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Vertical_Beam_Base-2",
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-1"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Vertical_Beam_Base-3 / Assem1^TANK-1/Base-1/second_H_Beam_Base-2",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Vertical_Beam_Base-3",
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-2"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Vertical_Beam_Base-4 / Assem1^TANK-1/Base-1/second_H_Beam_Base-1",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Vertical_Beam_Base-4",
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-1"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Vertical_Beam_Base-1 / Assem1^TANK-1/Base-1/second_H_Beam_Base-2",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Vertical_Beam_Base-1",
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-2"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14 / Assem1^TANK-1/Base-1/second_V_Beam_Base-8",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-14",
+    "Assem1^TANK-1/Base-1/second_V_Beam_Base-8"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1 / Assem1^TANK-1/Base-1/second_V_Beam_Base-6",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/Horizontal_Beam_Base-1",
+    "Assem1^TANK-1/Base-1/second_V_Beam_Base-6"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/second_H_Beam_Base-2 / Assem1^TANK-1/Base-1/second_V_Beam_Base-7",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-2",
+    "Assem1^TANK-1/Base-1/second_V_Beam_Base-7"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference Assem1^TANK-1/Base-1/second_H_Beam_Base-1 / Assem1^TANK-1/Base-1/second_V_Beam_Base-4",
+   "pass": false,
+   "pair": [
+    "Assem1^TANK-1/Base-1/second_H_Beam_Base-1",
+    "Assem1^TANK-1/Base-1/second_V_Beam_Base-4"
+   ],
+   "volume_mm3": 0.0,
+   "note": "not in the original"
+  },
+  {
+   "id": "interference",
+   "pass": false,
+   "found": 258,
+   "baseline": 27,
+   "new": 222
+  },
+  {
+   "id": "faces",
+   "pass": true,
+   "before": 6618,
+   "after": 4274,
+   "ratio": 1.55
+  }
+ ],
+ "bbox_mm": [
+  1257.3,
+  1329.49,
+  2266.95
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\tank.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\tank\\renders\\wireframe\\top.png"
+ ]
+}

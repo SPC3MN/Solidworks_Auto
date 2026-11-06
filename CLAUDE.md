@@ -69,4 +69,6 @@ Never claim success without a passing pipeline report in `validation/history/`.
   Other changes need a rerun of `model.py`.
 - Faces and edges for shell and fillet are picked by a point on them. Choose
   points well away from other edges.
+- Shared simple 80/20 (15 series) rails, gussets, fasteners: `scripts/x8020_parts.py`;
+  existing assemblies are rebuilt with them via `asm_capture.py` / `asm_simplify.py` (see the skill).
 - There are no checks yet for holes, wall thickness or interference (tests 3 to 5).

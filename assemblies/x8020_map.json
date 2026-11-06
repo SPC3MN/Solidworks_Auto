@@ -1,0 +1,474 @@
+{
+ "_comment": "Source part file -> simplified part. Groove 8 x 8 measured on the TANK's Faztek rails; other sizes from source bboxes and 80/20 catalog (estimated where noted). collapse: sub-assemblies captured as one leaf.",
+ "collapse": [
+  "6523.SLDASM"
+ ],
+ "types": {
+  "1515": {
+   "_title": "15 series 1515 rail (1.5 x 1.5 in)",
+   "_notes": "Square 38.1 section, one 8 x 8 groove per face (groove measured on the TANK's Faztek 1515).",
+   "nx": 1,
+   "ny": 1,
+   "gw": 8.0,
+   "gd": 8.0
+  },
+  "1530": {
+   "_title": "15 series 1530 rail (1.5 x 3 in)",
+   "_notes": "38.1 x 76.2 section, one 8 x 8 groove per 38.1 of each face.",
+   "nx": 1,
+   "ny": 2,
+   "gw": 8.0,
+   "gd": 8.0
+  },
+  "3030": {
+   "_title": "15 series 3030 rail (3 x 3 in)",
+   "_notes": "76.2 square section, two 8 x 8 grooves per face.",
+   "nx": 2,
+   "ny": 2,
+   "gw": 8.0,
+   "gd": 8.0
+  },
+  "4302": {
+   "_title": "Inside corner bracket (80/20 4302)",
+   "_notes": "L bracket, 6.35 legs (estimated), one hole per leg. Holes at 19.05 + n x 38.1 along each leg, measured from where the source bolts sit.",
+   "a": 38.1,
+   "b": 38.1,
+   "t": 6.35,
+   "w": 33.27,
+   "hole_d": 8.4,
+   "hole_s": 19.05,
+   "hole_z": [
+    0
+   ]
+  },
+  "4332": {
+   "_title": "Inside corner gusset 38 (80/20 4332 = Faztek 15CB4840)",
+   "_notes": "L legs 6.35 plus triangular side walls 4.5 (estimated), one hole per leg. Holes at 19.05 + n x 38.1 along each leg, measured from where the source bolts sit.",
+   "a": 38.1,
+   "b": 38.1,
+   "t": 6.35,
+   "w": 33.32,
+   "wall": 4.5,
+   "hole_d": 8.4,
+   "hole_s": 19.05,
+   "hole_z": [
+    0
+   ]
+  },
+  "4334": {
+   "_title": "Wide inside corner gusset (80/20 4334)",
+   "_notes": "As 4332 but 71.4 wide for a 3 in face; two holes per leg. Holes at 19.05 + n x 38.1 along each leg, measured from where the source bolts sit.",
+   "a": 38.1,
+   "b": 38.1,
+   "t": 6.35,
+   "w": 71.42,
+   "wall": 4.5,
+   "hole_d": 8.4,
+   "hole_s": 19.05,
+   "hole_z": [
+    -19.05,
+    19.05
+   ]
+  },
+  "4336": {
+   "_title": "Inside corner gusset 76 (80/20 4336 = Faztek 15CB4842)",
+   "_notes": "76.2 legs, two holes along each leg. Holes at 19.05 + n x 38.1 along each leg, measured from where the source bolts sit.",
+   "a": 76.2,
+   "b": 76.2,
+   "t": 6.35,
+   "w": 33.32,
+   "wall": 4.5,
+   "hole_d": 8.4,
+   "hole_s": 19.05,
+   "hole_z": [
+    0
+   ]
+  },
+  "3330": {
+   "_title": "Flanged button head bolt (80/20 3330)",
+   "_notes": "Head and shank only; sizes from the source bbox, split estimated.",
+   "head_d": 16.93,
+   "head_h": 3.2,
+   "shank_d": 7.9,
+   "shank_l": 18.7
+  },
+  "3627": {
+   "_title": "Socket cap screw (80/20 3627)",
+   "_notes": "Head and shank only (estimated split).",
+   "head_d": 11.91,
+   "head_h": 7.9,
+   "shank_d": 7.9,
+   "shank_l": 31.79
+  },
+  "anchor": {
+   "_title": "Anchor screw (80/20 3628 = TANK anchor)",
+   "_notes": "Head and shank only (estimated split).",
+   "head_d": 8.64,
+   "head_h": 2.5,
+   "shank_d": 5.0,
+   "shank_l": 13.38
+  },
+  "m1003": {
+   "_title": "Pump mounting plate (M-1003), outline only",
+   "_notes": "Outline plus the 24 pump holes (d 26, 3 x 8 grid at 112 pitch) and 6 fixing holes (d 8.74), measured on the source plate; the rest of the hole grid is left out.",
+   "l": 280.02,
+   "w": 1122.0,
+   "t": 4.76,
+   "hole_grids": [
+    {
+     "d": 26.0,
+     "x": [
+      28.01,
+      140.01,
+      252.01
+     ],
+     "y": [
+      169,
+      281,
+      393,
+      505,
+      617,
+      729,
+      841,
+      953
+     ]
+    }
+   ],
+   "holes": [
+    [
+     44.05999999999999,
+     19.049999999999955,
+     8.74
+    ],
+    [
+     44.05999999999999,
+     1102.95,
+     8.74
+    ],
+    [
+     140.01,
+     19.049999999999955,
+     8.74
+    ],
+    [
+     140.01,
+     1102.95,
+     8.74
+    ],
+    [
+     235.95999999999998,
+     19.049999999999955,
+     8.74
+    ],
+    [
+     235.95999999999998,
+     1102.95,
+     8.74
+    ]
+   ]
+  },
+  "6523": {
+   "_title": "Linear bearing (80/20 6523), collapsed",
+   "_notes": "U channel: base plate and two side walls (estimated); pads and screws left out.",
+   "blocks": [
+    [
+     -69.85,
+     0,
+     -35.71,
+     69.85,
+     9.53,
+     35.71
+    ],
+    [
+     -60.33,
+     9.53,
+     -35.71,
+     -50.8,
+     47.63,
+     35.71
+    ],
+    [
+     50.8,
+     9.53,
+     -35.71,
+     60.33,
+     47.63,
+     35.71
+    ]
+   ]
+  },
+  "1530_brace": {
+   "_title": "15 series 1530 diagonal brace",
+   "_notes": "1530 rail with mitred ends measured on the source part: 60 deg at the top end, 30 deg at the bottom end, across the 38.1 side.",
+   "nx": 1,
+   "ny": 2,
+   "gw": 8.0,
+   "gd": 8.0,
+   "miters": [
+    [
+     [
+      -19.05,
+      419.1
+     ],
+     [
+      25,
+      342.8
+     ],
+     [
+      25,
+      430
+     ]
+    ],
+    [
+     [
+      -19.05,
+      0
+     ],
+     [
+      25,
+      -10
+     ],
+     [
+      25,
+      25.43
+     ]
+    ]
+   ]
+  },
+  "1515_miter45": {
+   "_title": "15 series 1515 rail, one 45 deg mitred end",
+   "_notes": "As 1515, with a 45 deg end cut across one side (measured on the TANK's 5 - V3).",
+   "nx": 1,
+   "ny": 1,
+   "gw": 8.0,
+   "gd": 8.0,
+   "miters": [
+    [
+     [
+      -19.05,
+      135
+     ],
+     [
+      25,
+      90.95
+     ],
+     [
+      25,
+      145
+     ]
+    ]
+   ]
+  }
+ },
+ "parts": {
+  "1515_1765218299.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "1515_1766953460.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "1515_1766965418.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "1515_1770839335.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "1515_1772050751.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "1530_1765216268.SLDPRT": {
+   "kind": "profile",
+   "type": "1530"
+  },
+  "1530_1765218168.SLDPRT": {
+   "kind": "profile",
+   "type": "1530"
+  },
+  "1530_1770660457.SLDPRT": {
+   "kind": "profile",
+   "type": "1530_brace"
+  },
+  "3030_1765214344.SLDPRT": {
+   "kind": "profile",
+   "type": "3030"
+  },
+  "3.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "4(stick).SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "5 - V2.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "5 - V3.SLDPRT": {
+   "kind": "profile",
+   "type": "1515_miter45"
+  },
+  "vertical_pillar.SLDPRT": {
+   "kind": "profile",
+   "type": "1515"
+  },
+  "15EX1530L (Upper FAZ).SLDPRT": {
+   "kind": "profile",
+   "type": "1530"
+  },
+  "4302.SLDPRT": {
+   "kind": "bracket",
+   "type": "4302"
+  },
+  "4332.SLDPRT": {
+   "kind": "bracket",
+   "type": "4332"
+  },
+  "Gusset Corner Bracket(15CB4840).SLDPRT": {
+   "kind": "bracket",
+   "type": "4332"
+  },
+  "4334.SLDPRT": {
+   "kind": "bracket",
+   "type": "4334"
+  },
+  "4336.SLDPRT": {
+   "kind": "bracket",
+   "type": "4336"
+  },
+  "Gusset Corner Bracket(15CB4842).SLDPRT": {
+   "kind": "bracket",
+   "type": "4336"
+  },
+  "3330.SLDPRT": {
+   "kind": "fastener",
+   "type": "3330"
+  },
+  "3627.SLDPRT": {
+   "kind": "fastener",
+   "type": "3627"
+  },
+  "anchor.SLDPRT": {
+   "kind": "fastener",
+   "type": "anchor"
+  },
+  "M-1003 SQR MTG PLATE.SLDPRT": {
+   "kind": "plate",
+   "type": "m1003"
+  },
+  "6523.SLDASM": {
+   "kind": "bearing",
+   "type": "6523"
+  },
+  "3214.SLDPRT": {
+   "keep": true
+  },
+  "3260.SLDPRT": {
+   "keep": true
+  },
+  "FOVr.SLDPRT": {
+   "keep": true
+  },
+  "baseplate.SLDPRT": {
+   "keep": true
+  },
+  "camera.SLDPRT": {
+   "keep": true
+  },
+  "feet.SLDPRT": {
+   "keep": true
+  },
+  "laser base.SLDPRT": {
+   "keep": true
+  },
+  "laser sheet.SLDPRT": {
+   "keep": true
+  },
+  "laser volume.SLDPRT": {
+   "keep": true
+  },
+  "laserbeam.SLDPRT": {
+   "keep": true
+  },
+  "lens.SLDPRT": {
+   "keep": true
+  },
+  "scheeimpflug.SLDPRT": {
+   "keep": true
+  },
+  "Bilge_Pump.SLDPRT": {
+   "keep": true
+  },
+  "Bottom (one part).SLDPRT": {
+   "keep": true
+  },
+  "Bottom Acrylic Sheet.SLDPRT": {
+   "keep": true
+  },
+  "Bottom Levelling Plate (option 2).SLDPRT": {
+   "keep": true
+  },
+  "FAZTEKMountedPlate.SLDPRT": {
+   "keep": true
+  },
+  "Horizontal_Beam_Base.SLDPRT": {
+   "keep": true
+  },
+  "KBC.SLDPRT": {
+   "keep": true
+  },
+  "Side Acrylic Sheet.SLDPRT": {
+   "keep": true
+  },
+  "Vertical.SLDPRT": {
+   "keep": true
+  },
+  "Vertical_Beam_Base.SLDPRT": {
+   "keep": true
+  },
+  "second_H_Beam_Base.SLDPRT": {
+   "keep": true
+  },
+  "second_V_Beam_Base.SLDPRT": {
+   "keep": true
+  },
+  "separated strip.SLDPRT": {
+   "keep": true
+  },
+  "upper (one part).SLDPRT": {
+   "keep": true
+  }
+ },
+ "interference_ignore": {
+  "_comment": "below_mm3: touching and small fit differences of simplified shapes. parts: by design - fasteners reach into solid rail or plate (no T-cavity, fixing holes left out); the kept 3214 nut sits in the bearing's brake gap, which the collapsed bearing block fills.",
+  "below_mm3": 20.0,
+  "parts": [
+   [
+    "x8020_fastener",
+    "x8020_15"
+   ],
+   [
+    "x8020_fastener",
+    "x8020_30"
+   ],
+   [
+    "x8020_fastener",
+    "x8020_plate"
+   ],
+   [
+    "3214",
+    "x8020_bearing"
+   ]
+  ]
+ },
+ "source_up": {
+  "_comment": "up axis of each source assembly; y is turned Z-up",
+  "stereo_rig_v2": "z",
+  "tank": "y"
+ }
+}
