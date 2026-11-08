@@ -20,6 +20,21 @@ unit's axis on the origin.
 
 Consequence of the rods outside: the caps are **430 across, not 400** (rod clears the comb by 4.5 mm).
 
+## 3rd pass (2026-11-08): motor inside the filter, no exterior
+
+At the owner's request, to confirm the internal assembly before designing the exterior:
+
+- The motor group sits **inside the pack's open core**: a 5-spoke spider (ring 280 / 250 × 12, hub 80 × 40,
+  two 608 seats) is screwed under the inlet ring with 5 M3 at R132.5; grommets, bracket, coupling and motor hang
+  below it, motor shaft up. The 8 mm shaft runs from the impeller hub down through the eye into the spider.
+- The outlet band, top cover and the old top bridge are **out of the assembly** (projects kept for later). The
+  impeller is open above; tie rods now end on the inlet ring (489 long, top nuts 484 .. 488).
+- Trade-off against the brief: the spider spokes and the motor now sit in the fan's inflow (the brief put them
+  above the backplate). 5 spokes against 9 blades share no factor, and the spokes sit 23 mm below the shroud.
+
+Layout of the core group (z): motor 318 .. 405 (shaft to 393), bracket 393 .. 428, coupling 399 .. 424,
+grommets 428 .. 434, spider 434 .. 474 (608s at 434 and 467), shaft 414 .. 636. Unit height: 641 with feet.
+
 ## Main values
 
 | Item | Value | Status |

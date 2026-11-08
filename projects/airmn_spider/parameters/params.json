@@ -1,0 +1,35 @@
+{
+  "od": 280.0,
+  "ring_id": 250.0,
+  "t": 12.0,
+  "hub_d": 80.0,
+  "hub_h": 40.0,
+  "spoke_w": 16.0,
+  "spoke_angles": [
+    18,
+    90,
+    162,
+    234,
+    306
+  ],
+  "bore": 12.0,
+  "seat_d": 22.0,
+  "seat_depth": 7.0,
+  "screw_r": 132.5,
+  "screw_angles": [
+    54,
+    126,
+    198,
+    270,
+    342
+  ],
+  "screw_hole": 3.4,
+  "grommet_r": 30.0,
+  "grommet_angles": [
+    45,
+    135,
+    225,
+    315
+  ],
+  "grommet_screw_depth": 8.0
+}

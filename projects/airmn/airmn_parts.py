@@ -190,7 +190,9 @@ def inlet_ring(p):
         z += h
     g += [ring(p["groove_od"], p["groove_id"], 0, p["groove_depth"], "Comb_groove", "cut"),
           rabbet(D, p["rabbet_id"], T - p["rabbet_depth"], p["rabbet_depth"], "Band_rabbet"),
-          holes("Rod_holes", p["rod_hole"], rod_pts(p), 0, T)]
+          holes("Rod_holes", p["rod_hole"], rod_pts(p), 0, T),
+          holes("Spider_screws", TAP_M3, [polar(p["spider_screw_r"], a) for a in p["spider_screw_angles"]], 0,
+                p["spider_screw_depth"])]
     return g, [D, D, z]
 
 
@@ -285,6 +287,26 @@ def bridge(p):
     return g, [p["d"], p["d"], HH]
 
 
+def spider(p):
+    """Motor spider under the inlet ring, inside the pack's core: ring screwed up to the inlet ring (its top at
+    z = hub_h), 5 spokes, hub with two 608 seats; the motor bracket hangs from the hub's underside on grommets."""
+    T, HH = p["t"], p["hub_h"]
+    rh, rr, w = p["hub_d"] / 2, p["ring_id"] / 2, p["spoke_w"]
+    sp = [spoke(rh - 1, rr + 1, w, a) for a in p["spoke_angles"]]
+    sc = [polar(p["screw_r"], a) for a in p["screw_angles"]]
+    gp = [polar(p["grommet_r"], a) for a in p["grommet_angles"]]
+    z0 = HH - T
+    g = [ring(p["od"], p["ring_id"], z0, T, "Ring"),
+         rod(p["hub_d"], 0, HH, "Hub"),
+         ("Spokes", "add", sp, z0, T, len(sp) * strip_between(rh, rr, w) * T, "z"),
+         rod(p["bore"], 0, HH, "Bore", "cut"),
+         bore_step(p["seat_d"], p["bore"], 0, p["seat_depth"], "Bearing_seat_low"),
+         bore_step(p["seat_d"], p["bore"], HH - p["seat_depth"], p["seat_depth"], "Bearing_seat_high"),
+         holes("Ring_screws", p["screw_hole"], sc, z0, T),
+         holes("Grommet_screws", TAP_M3, gp, 0, p["grommet_screw_depth"])]
+    return g, [p["od"], p["od"], HH]
+
+
 def lid(p):
     T = p["t"]
     return [ring(p["d"], p["hole_d"], 0, T, "Lid"), holes("Rod_holes", p["rod_hole"], rod_pts(p), 0, T)], \
@@ -368,7 +390,7 @@ def pd_board(p):
 PARTS = {
     "bottom_cap": bottom_cap, "comb": comb, "pleat_pack": pleat_pack, "gasket": gasket,
     "inlet_ring": inlet_ring, "outlet_band": outlet_band, "blade": blade, "shroud": shroud,
-    "backplate": backplate, "bridge": bridge, "top_cover": top_cover,
+    "backplate": backplate, "bridge": bridge, "top_cover": top_cover, "spider": spider,
     "motor_bracket": motor_bracket, "motor": motor, "coupling": coupling, "rod": plain_rod,
     "grommet": grommet, "nut": nut, "pd_board": pd_board,
 }

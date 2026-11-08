@@ -34,6 +34,7 @@ PARTS = {
     "inlet_ring": ("PETG", "Top-cap ring: upper comb groove underneath, outlet-band seat, M5 rod holes, stepped bellmouth into the impeller eye.", {
         "d": CAP_D, "id": 240.0, "t": 10.0, "groove_od": 408.0, "groove_id": 288.0, "groove_depth": 4.0,
         **BAND_SEAT, **RODS,
+        "spider_screw_r": 132.5, "spider_screw_angles": [54, 126, 198, 270, 342], "spider_screw_depth": 8.0,
         "bellmouth_steps": [[260.0, 222.0, 5.0], [228.0, 186.0, 5.0], [189.0, 183.0, 8.0]]}),
     "outlet_band": ("PETG", "Dot-grid outlet band, flush with the caps and outside the rods: holes 7.2 on a 8.57 hex pitch (64 % open) over the impeller outlet.", {
         "od": CAP_D, "id": 425.0, "h": 162.0, "hole_d": 7.2, "units": 157, "rows": 16,
@@ -50,6 +51,11 @@ PARTS = {
         "grommet_r": 30.0, "grommet_angles": [45, 135, 225, 315], "grommet_screw_depth": 8.0}),
     "top_cover": ("PETG, foam lined inside (liner not modelled)", "Top cover flush with the band: encloses bridge hub, grommets, bracket, coupling and motor; tie rods end in nut counterbores in its top.", {
         "d": CAP_D, "id": 424.0, "h": 167.0, "top_t": 10.0, "nut_cbore_d": 10.0, "nut_cbore_depth": 6.0, **RODS}),
+    "spider": ("PETG", "Motor spider inside the pack's core, screwed under the inlet ring: 5 spokes (5 vs 9 blades), hub with two 608 seats, motor hung below on grommets.", {
+        "od": 280.0, "ring_id": 250.0, "t": 12.0, "hub_d": 80.0, "hub_h": 40.0, "spoke_w": 16.0,
+        "spoke_angles": [18, 90, 162, 234, 306], "bore": 12.0, "seat_d": 22.0, "seat_depth": 7.0,
+        "screw_r": 132.5, "screw_angles": [54, 126, 198, 270, 342], "screw_hole": 3.4,
+        "grommet_r": 30.0, "grommet_angles": [45, 135, 225, 315], "grommet_screw_depth": 8.0}),
     "motor_bracket": ("PETG", "Motor bracket on 4 grommets: flange, tube round the coupling, plate for the motor face.", {
         "flange_d": 80.0, "flange_t": 5.0, "tube_od": 66.0, "tube_id": 56.0, "tube_h": 25.0, "plate_t": 5.0,
         "shaft_hole": 12.0, "motor_screw_pitch": 17.0, "motor_screw_hole": 3.2,
@@ -58,8 +64,8 @@ PARTS = {
         "d": 25.0, "body_l": 75.0, "shaft_d": 4.0, "shaft_l": 12.0, "flat": 1.5, "flat_l": 10.0}),
     "coupling": ("Bought: jaw coupling 4 x 8", "Flexible jaw coupling as one body (spider not modelled).", {
         "d": 20.0, "l": 25.0, "bore_low": 8.0, "depth_low": 12.0, "bore_high": 4.0, "depth_high": 10.0}),
-    "shaft": ("Steel", "Impeller shaft 8 mm.", {"_kind": "rod", "d": 8.0, "l": 88.0}),
-    "tie_rod": ("Steel M5 threaded rod (nominal diameter)", "Tie rod, 5 used.", {"_kind": "rod", "d": 5.0, "l": 814.0}),
+    "shaft": ("Steel", "Impeller shaft 8 mm, from the impeller hub down through the eye to the spider.", {"_kind": "rod", "d": 8.0, "l": 222.0}),
+    "tie_rod": ("Steel M5 threaded rod (nominal diameter)", "Tie rod, 5 used.", {"_kind": "rod", "d": 5.0, "l": 489.0}),
     "grommet": ("Silicone", "Motor soft mount, 4 used.", {"od": 10.0, "id": 3.2, "h": 6.0}),
     "nut_m5": ("Steel", "ISO 4032 M5 nut (hole at nominal 5).", {"_kind": "nut", "af": 8.0, "t": 4.0, "d": 5.0}),
     "foot": ("Rubber", "Soft foot, 4 used.", {"_kind": "rod", "d": 20.0, "l": 5.0}),
@@ -158,13 +164,15 @@ def extents(comps):
 
 
 Z = {"cap": 0.0, "gasket_low": 16.0, "comb_low": 19.0, "pack": 22.0, "comb_high_top": 475.0, "gasket_high": 475.0,
-     "inlet": 474.0, "band": 481.0, "shroud": 497.0, "blades": 497.0, "backplate": 612.0, "shaft": 612.0,
-     "bridge": 640.0, "bearing_low": 640.0, "bearing_high": 673.0, "cover": 649.0,
-     "grommets": 680.0, "bracket": 686.0, "coupling": 690.0, "motor": 709.0, "nut_low": 1.0, "rod": 1.0,
-     "nut_high": 810.0, "foot": -5.0, "pd": 3.2}
+     "inlet": 474.0, "spider": 434.0, "bearing_low": 434.0, "bearing_high": 467.0, "shroud": 497.0,
+     "blades": 497.0, "backplate": 612.0, "shaft": 414.0, "grommets": 428.0, "bracket_top": 428.0,
+     "coupling_top": 424.0, "motor_t": 405.0, "nut_low": 1.0, "rod": 1.0, "nut_high": 484.0, "foot": -5.0,
+     "pd": 3.2}
 
 
 def assembled():
+    """Motor group inside the pack's core: spider under the inlet ring, bracket, coupling and motor hung below it
+    (flipped, motor shaft up). No exterior yet: the impeller is open above."""
     rp = [ap.polar(RODS["rod_r"], a) for a in RODS["rod_angles"]]
     gp = [ap.polar(30.0, a) for a in (45, 135, 225, 315)]
     c = [comp("bottom_cap", (0, 0, Z["cap"]))]
@@ -173,16 +181,15 @@ def assembled():
     c += [comp("gasket", (0, 0, Z["gasket_low"]), "gasket_low"), comp("comb", (0, 0, Z["comb_low"]), "comb_low"),
           comp("pleat_pack", (0, 0, Z["pack"])), comp("comb", (0, 0, Z["comb_high_top"]), "comb_high", flip=True),
           comp("gasket", (0, 0, Z["gasket_high"]), "gasket_high"), comp("inlet_ring", (0, 0, Z["inlet"])),
-          comp("outlet_band", (0, 0, Z["band"])), comp("shroud", (0, 0, Z["shroud"]))]
+          comp("shroud", (0, 0, Z["shroud"]))]
     c += [comp("blade", (0, 0, Z["blades"]), f"blade_{k + 1}", rot_z=40.0 * k) for k in range(9)]
     c += [comp("backplate", (0, 0, Z["backplate"])), comp("shaft", (0, 0, Z["shaft"])),
-          comp("bridge", (0, 0, Z["bridge"]))]
+          comp("spider", (0, 0, Z["spider"]))]
     c += [{"part": "grindmn_bearing_608", "at": [0, 0, Z["bearing_low"]], "label": "bearing_low"},
           {"part": "grindmn_bearing_608", "at": [0, 0, Z["bearing_high"]], "label": "bearing_high"}]
-    c.append(comp("top_cover", (0, 0, Z["cover"])))
     c += [comp("grommet", (x, y, Z["grommets"]), f"grommet_{i + 1}") for i, (x, y) in enumerate(gp)]
-    c += [comp("motor_bracket", (0, 0, Z["bracket"])), comp("coupling", (0, 0, Z["coupling"])),
-          comp("motor", (0, 0, Z["motor"]))]
+    c += [comp("motor_bracket", (0, 0, Z["bracket_top"]), flip=True),
+          comp("coupling", (0, 0, Z["coupling_top"]), flip=True), comp("motor", (0, 0, Z["motor_t"]), flip=True)]
     for i, (x, y) in enumerate(rp):
         c += [comp("tie_rod", (x, y, Z["rod"]), f"rod_{i + 1}"), comp("nut_m5", (x, y, Z["nut_low"]), f"nut_low_{i + 1}"),
               comp("nut_m5", (x, y, Z["nut_high"]), f"nut_high_{i + 1}")]
@@ -190,7 +197,7 @@ def assembled():
 
 
 def exploded():
-    """Axis stack in fitting order with 40 mm gaps; shaft group beside it; rods and nuts round it."""
+    """Axis stack in fitting order with 40 mm gaps; motor group in a column beside it; rods and nuts round it."""
     gap, z, c = 40.0, 0.0, []
     def h(part):
         return local_bounds(part)[5]
@@ -200,36 +207,38 @@ def exploded():
     z += h("foot") + gap
     seq = [("bottom_cap", None), ("gasket", "gasket_low"), ("comb", "comb_low"), ("pleat_pack", None),
            ("comb", "comb_high"), ("gasket", "gasket_high"), ("inlet_ring", None), ("shroud", None),
-           ("blades", None), ("backplate", None), ("outlet_band", None), ("bridge", None),
-           ("grommets", None), ("motor_bracket", None), ("top_cover", None)]
+           ("blades", None), ("backplate", None)]
     for part, label in seq:
         if part == "blades":
             c += [comp("blade", (0, 0, z), f"blade_{k + 1}", rot_z=40.0 * k) for k in range(9)]
             z += h("blade") + gap
-        elif part == "grommets":
-            c += [comp("grommet", (*ap.polar(30, a), z), f"grommet_{i + 1}") for i, a in enumerate((45, 135, 225, 315))]
-            z += h("grommet") + gap
         elif label == "comb_high":
             c.append(comp("comb", (0, 0, z + h("comb")), label, flip=True))
             z += h("comb") + gap
         else:
             c.append(comp(part, (0, 0, z), label))
             z += h(part) + gap
-    # shaft group at x = -280 on the bridge level: bearing, shaft, bearing, coupling, motor
-    zb = next(q["at"][2] for q in c if q["part"] == "airmn_bridge")
-    x, zz = -280.0, zb
-    for part, label in (("bearing", "bearing_low"), ("shaft", None), ("bearing", "bearing_high"),
-                        ("coupling", None), ("motor", None)):
-        if part == "bearing":
-            c.append({"part": "grindmn_bearing_608", "at": [x, 0, zz], "label": label})
-            zz += 7.0 + 20.0
+    # motor group at x = -460, bottom up in fitting order, starting at the pack's base
+    zp = next(q["at"][2] for q in c if q["part"] == "airmn_pleat_pack")
+    x, zz = -460.0, zp
+    for part in ("motor", "motor_bracket", "coupling", "grommets", "bearing_low", "spider", "bearing_high", "shaft"):
+        if part in ("motor", "motor_bracket", "coupling"):
+            c.append(comp(part, (x, 0, zz + h(part)), flip=True))
+            zz += h(part) + 25.0
+        elif part == "grommets":
+            c += [comp("grommet", (x + gx, gy, zz), f"grommet_{i + 1}")
+                  for i, (gx, gy) in enumerate(ap.polar(30, a) for a in (45, 135, 225, 315))]
+            zz += h("grommet") + 25.0
+        elif part.startswith("bearing"):
+            c.append({"part": "grindmn_bearing_608", "at": [x, 0, zz], "label": part})
+            zz += 7.0 + 25.0
         else:
-            c.append(comp(part, (x, 0, zz), label))
-            zz += h(part) + 20.0
+            c.append(comp(part, (x, 0, zz)))
+            zz += h(part) + 25.0
     for i, a in enumerate(RODS["rod_angles"]):
-        px, py = ap.polar(300.0, a)
+        px, py = ap.polar(320.0, a)
         c += [comp("nut_m5", (px, py, 0), f"nut_low_{i + 1}"), comp("tie_rod", (px, py, 24.0), f"rod_{i + 1}"),
-              comp("nut_m5", (px, py, 24.0 + 814.0 + 20.0), f"nut_high_{i + 1}")]
+              comp("nut_m5", (px, py, 24.0 + 489.0 + 20.0), f"nut_high_{i + 1}")]
     return c
 
 
@@ -245,15 +254,15 @@ def gen_assemblies():
         "_comment": "airmn bench prototype, assembled. z = 0 at the bottom cap's underside; stack heights in "
                     "projects/airmn/requirements.md (Layout). Rods on R209 at 18 + 72k deg; blades every 40 deg.",
         "components": a,
-        "expected": {"_comment": "x, y: caps 430 across; z: feet -5 .. top cover 649 + 167 = 816. No interference "
+        "expected": {"_comment": "x, y: caps 430 across; z: feet -5 .. impeller hub top 612 + 24 = 636. Exterior (outlet band, top cover) left out for now; the motor group hangs under the inlet ring inside the pack's core. No interference "
                                  "allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal "
                                  "nut bore only touches.",
                      "bbox": bearing_aware_extents(a), "allowed_interference": []}}, indent=1) + "\n")
     e = exploded()
     write(ROOT / "assemblies" / "airmn_exploded" / "assembly.json", json.dumps({
-        "_comment": "airmn exploded: housing stack on the axis in fitting order with 40 mm gaps; shaft group "
-                    "(608, shaft, 608, coupling, motor) at x = -280 from the bridge level; rods and nuts on "
-                    "R300 at the rod angles. Extents worked out from each part's spec bbox.",
+        "_comment": "airmn exploded: housing stack on the axis in fitting order with 40 mm gaps; motor group "
+                    "(motor, bracket, coupling, grommets, 608, spider, 608, shaft) at x = -460 from the pack base; "
+                    "rods and nuts on R320 at the rod angles. Extents worked out from each part's spec bbox.",
         "components": e,
         "expected": {"bbox": bearing_aware_extents(e), "allowed_interference": []}}, indent=1) + "\n")
     print("assembly bbox", bearing_aware_extents(a), "exploded bbox", bearing_aware_extents(e))

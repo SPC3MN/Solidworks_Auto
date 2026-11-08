@@ -1,0 +1,317 @@
+{
+ "assembly": "airmn_exploded",
+ "time": "2026-11-08T14:04:30",
+ "pass": false,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 49,
+   "actual": 49
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 748.96,
+   "actual": 748.957
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 586.88,
+   "actual": 586.885
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 1074.0,
+   "actual": 1074.0
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 624.7581,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 394.9777,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 394.9777,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 281.3746,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 204.5679,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 204.5679,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 180.9656,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 180.9656,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 175.0204,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 175.0204,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 165.3013,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 161.12,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 155.3403,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 155.3403,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 152.7793,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 152.7793,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 149.0448,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 149.0448,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 147.476,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 147.476,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 145.433,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 145.433,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 144.685,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 144.685,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 144.0336,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_pleat_pack / airmn_spider",
+   "pass": false,
+   "pair": [
+    "airmn_pleat_pack",
+    "airmn_spider"
+   ],
+   "volume_mm3": 144.0336,
+   "note": "unexpected"
+  },
+  {
+   "id": "interference airmn_spider / airmn_tie_rod",
+   "pass": false,
+   "pair": [
+    "airmn_spider",
+    "airmn_tie_rod"
+   ],
+   "volume_mm3": 39.2699,
+   "note": "unexpected"
+  }
+ ],
+ "bbox_mm": [
+  748.957,
+  586.885,
+  1074.0
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn_exploded\\airmn_exploded.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn_exploded\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn_exploded\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn_exploded\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn_exploded\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn_exploded\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn_exploded\\renders\\wireframe\\top.png"
+ ]
+}

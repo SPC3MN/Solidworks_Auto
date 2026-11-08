@@ -16,6 +16,15 @@
     306
   ],
   "rod_hole": 5.5,
+  "spider_screw_r": 132.5,
+  "spider_screw_angles": [
+    54,
+    126,
+    198,
+    270,
+    342
+  ],
+  "spider_screw_depth": 8.0,
   "bellmouth_steps": [
     [
       260.0,

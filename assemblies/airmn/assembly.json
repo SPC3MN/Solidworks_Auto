@@ -115,14 +115,6 @@
    ]
   },
   {
-   "part": "airmn_outlet_band",
-   "at": [
-    0,
-    0,
-    481.0
-   ]
-  },
-  {
    "part": "airmn_shroud",
    "at": [
     0,
@@ -232,15 +224,15 @@
    "at": [
     0,
     0,
-    612.0
+    414.0
    ]
   },
   {
-   "part": "airmn_bridge",
+   "part": "airmn_spider",
    "at": [
     0,
     0,
-    640.0
+    434.0
    ]
   },
   {
@@ -248,7 +240,7 @@
    "at": [
     0,
     0,
-    640.0
+    434.0
    ],
    "label": "bearing_low"
   },
@@ -257,24 +249,16 @@
    "at": [
     0,
     0,
-    673.0
+    467.0
    ],
    "label": "bearing_high"
-  },
-  {
-   "part": "airmn_top_cover",
-   "at": [
-    0,
-    0,
-    649.0
-   ]
   },
   {
    "part": "airmn_grommet",
    "at": [
     21.213,
     21.213,
-    680.0
+    428.0
    ],
    "label": "grommet_1"
   },
@@ -283,7 +267,7 @@
    "at": [
     -21.213,
     21.213,
-    680.0
+    428.0
    ],
    "label": "grommet_2"
   },
@@ -292,7 +276,7 @@
    "at": [
     -21.213,
     -21.213,
-    680.0
+    428.0
    ],
    "label": "grommet_3"
   },
@@ -301,32 +285,59 @@
    "at": [
     21.213,
     -21.213,
-    680.0
+    428.0
    ],
    "label": "grommet_4"
   },
   {
    "part": "airmn_motor_bracket",
-   "at": [
+   "xform": [
+    1,
     0,
     0,
-    686.0
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    428.0
    ]
   },
   {
    "part": "airmn_coupling",
-   "at": [
+   "xform": [
+    1,
     0,
     0,
-    690.0
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    424.0
    ]
   },
   {
    "part": "airmn_motor",
-   "at": [
+   "xform": [
+    1,
     0,
     0,
-    709.0
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    405.0
    ]
   },
   {
@@ -352,7 +363,7 @@
    "at": [
     198.771,
     64.585,
-    810.0
+    484.0
    ],
    "label": "nut_high_1"
   },
@@ -379,7 +390,7 @@
    "at": [
     0.0,
     209.0,
-    810.0
+    484.0
    ],
    "label": "nut_high_2"
   },
@@ -406,7 +417,7 @@
    "at": [
     -198.771,
     64.585,
-    810.0
+    484.0
    ],
    "label": "nut_high_3"
   },
@@ -433,7 +444,7 @@
    "at": [
     -122.847,
     -169.085,
-    810.0
+    484.0
    ],
    "label": "nut_high_4"
   },
@@ -460,17 +471,17 @@
    "at": [
     122.847,
     -169.085,
-    810.0
+    484.0
    ],
    "label": "nut_high_5"
   }
  ],
  "expected": {
-  "_comment": "x, y: caps 430 across; z: feet -5 .. top cover 649 + 167 = 816. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
+  "_comment": "x, y: caps 430 across; z: feet -5 .. impeller hub top 612 + 24 = 636. Exterior (outlet band, top cover) left out for now; the motor group hangs under the inlet ring inside the pack's core. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
   "bbox": [
    430.0,
    430.0,
-   821.0
+   641.0
   ],
   "allowed_interference": []
  }

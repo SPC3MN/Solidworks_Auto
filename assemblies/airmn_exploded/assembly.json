@@ -1,5 +1,5 @@
 {
- "_comment": "airmn exploded: housing stack on the axis in fitting order with 40 mm gaps; shaft group (608, shaft, 608, coupling, motor) at x = -280 from the bridge level; rods and nuts on R300 at the rod angles. Extents worked out from each part's spec bbox.",
+ "_comment": "airmn exploded: housing stack on the axis in fitting order with 40 mm gaps; motor group (motor, bracket, coupling, grommets, 608, spider, 608, shaft) at x = -460 from the pack base; rods and nuts on R320 at the rod angles. Extents worked out from each part's spec bbox.",
  "components": [
   {
    "part": "airmn_foot",
@@ -220,120 +220,131 @@
    ]
   },
   {
-   "part": "airmn_outlet_band",
-   "at": [
+   "part": "airmn_motor",
+   "xform": [
+    1,
     0,
     0,
-    1114.0
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -460.0,
+    0,
+    285.0
    ]
   },
   {
-   "part": "airmn_bridge",
-   "at": [
+   "part": "airmn_motor_bracket",
+   "xform": [
+    1,
     0,
     0,
-    1316.0
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -460.0,
+    0,
+    345.0
+   ]
+  },
+  {
+   "part": "airmn_coupling",
+   "xform": [
+    1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -460.0,
+    0,
+    395.0
    ]
   },
   {
    "part": "airmn_grommet",
    "at": [
+    -438.787,
     21.213,
-    21.213,
-    1396.0
+    420.0
    ],
    "label": "grommet_1"
   },
   {
    "part": "airmn_grommet",
    "at": [
-    -21.213,
+    -481.213,
     21.213,
-    1396.0
+    420.0
    ],
    "label": "grommet_2"
   },
   {
    "part": "airmn_grommet",
    "at": [
+    -481.213,
     -21.213,
-    -21.213,
-    1396.0
+    420.0
    ],
    "label": "grommet_3"
   },
   {
    "part": "airmn_grommet",
    "at": [
-    21.213,
+    -438.787,
     -21.213,
-    1396.0
+    420.0
    ],
    "label": "grommet_4"
   },
   {
-   "part": "airmn_motor_bracket",
-   "at": [
-    0,
-    0,
-    1442.0
-   ]
-  },
-  {
-   "part": "airmn_top_cover",
-   "at": [
-    0,
-    0,
-    1517.0
-   ]
-  },
-  {
    "part": "grindmn_bearing_608",
    "at": [
-    -280.0,
+    -460.0,
     0,
-    1316.0
+    451.0
    ],
    "label": "bearing_low"
   },
   {
-   "part": "airmn_shaft",
+   "part": "airmn_spider",
    "at": [
-    -280.0,
+    -460.0,
     0,
-    1343.0
+    483.0
    ]
   },
   {
    "part": "grindmn_bearing_608",
    "at": [
-    -280.0,
+    -460.0,
     0,
-    1451.0
+    548.0
    ],
    "label": "bearing_high"
   },
   {
-   "part": "airmn_coupling",
+   "part": "airmn_shaft",
    "at": [
-    -280.0,
+    -460.0,
     0,
-    1478.0
-   ]
-  },
-  {
-   "part": "airmn_motor",
-   "at": [
-    -280.0,
-    0,
-    1523.0
+    580.0
    ]
   },
   {
    "part": "airmn_nut_m5",
    "at": [
-    285.317,
-    92.705,
+    304.338,
+    98.885,
     0
    ],
    "label": "nut_low_1"
@@ -341,8 +352,8 @@
   {
    "part": "airmn_tie_rod",
    "at": [
-    285.317,
-    92.705,
+    304.338,
+    98.885,
     24.0
    ],
    "label": "rod_1"
@@ -350,9 +361,9 @@
   {
    "part": "airmn_nut_m5",
    "at": [
-    285.317,
-    92.705,
-    858.0
+    304.338,
+    98.885,
+    533.0
    ],
    "label": "nut_high_1"
   },
@@ -360,7 +371,7 @@
    "part": "airmn_nut_m5",
    "at": [
     0.0,
-    300.0,
+    320.0,
     0
    ],
    "label": "nut_low_2"
@@ -369,7 +380,7 @@
    "part": "airmn_tie_rod",
    "at": [
     0.0,
-    300.0,
+    320.0,
     24.0
    ],
    "label": "rod_2"
@@ -378,16 +389,16 @@
    "part": "airmn_nut_m5",
    "at": [
     0.0,
-    300.0,
-    858.0
+    320.0,
+    533.0
    ],
    "label": "nut_high_2"
   },
   {
    "part": "airmn_nut_m5",
    "at": [
-    -285.317,
-    92.705,
+    -304.338,
+    98.885,
     0
    ],
    "label": "nut_low_3"
@@ -395,8 +406,8 @@
   {
    "part": "airmn_tie_rod",
    "at": [
-    -285.317,
-    92.705,
+    -304.338,
+    98.885,
     24.0
    ],
    "label": "rod_3"
@@ -404,17 +415,17 @@
   {
    "part": "airmn_nut_m5",
    "at": [
-    -285.317,
-    92.705,
-    858.0
+    -304.338,
+    98.885,
+    533.0
    ],
    "label": "nut_high_3"
   },
   {
    "part": "airmn_nut_m5",
    "at": [
-    -176.336,
-    -242.705,
+    -188.091,
+    -258.885,
     0
    ],
    "label": "nut_low_4"
@@ -422,8 +433,8 @@
   {
    "part": "airmn_tie_rod",
    "at": [
-    -176.336,
-    -242.705,
+    -188.091,
+    -258.885,
     24.0
    ],
    "label": "rod_4"
@@ -431,17 +442,17 @@
   {
    "part": "airmn_nut_m5",
    "at": [
-    -176.336,
-    -242.705,
-    858.0
+    -188.091,
+    -258.885,
+    533.0
    ],
    "label": "nut_high_4"
   },
   {
    "part": "airmn_nut_m5",
    "at": [
-    176.336,
-    -242.705,
+    188.091,
+    -258.885,
     0
    ],
    "label": "nut_low_5"
@@ -449,8 +460,8 @@
   {
    "part": "airmn_tie_rod",
    "at": [
-    176.336,
-    -242.705,
+    188.091,
+    -258.885,
     24.0
    ],
    "label": "rod_5"
@@ -458,18 +469,18 @@
   {
    "part": "airmn_nut_m5",
    "at": [
-    176.336,
-    -242.705,
-    858.0
+    188.091,
+    -258.885,
+    533.0
    ],
    "label": "nut_high_5"
   }
  ],
  "expected": {
   "bbox": [
-   582.44,
-   550.71,
-   1684.0
+   908.96,
+   586.88,
+   1074.0
   ],
   "allowed_interference": []
  }

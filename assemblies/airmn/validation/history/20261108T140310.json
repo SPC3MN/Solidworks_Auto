@@ -1,0 +1,52 @@
+{
+ "assembly": "airmn",
+ "time": "2026-11-08T14:03:10",
+ "pass": true,
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 49,
+   "actual": 49
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 430.0,
+   "actual": 430.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 430.0,
+   "actual": 430.0
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 641.0,
+   "actual": 641.0
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  430.0,
+  430.0,
+  641.0
+ ],
+ "files": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn\\airmn.SLDASM"
+ ],
+ "renders": [
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn\\renders\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn\\renders\\top.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn\\renders\\front.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn\\renders\\right.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn\\renders\\wireframe\\isometric.png",
+  "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\airmn\\renders\\wireframe\\top.png"
+ ]
+}
