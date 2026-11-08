@@ -1,0 +1,485 @@
+{
+ "_comment": "airmn bench prototype, assembled. z = 0 at the bottom cap's underside; stack heights in projects/airmn/requirements.md (Layout). Rods on R209 at 18 + 72k deg; blades every 40 deg.",
+ "components": [
+  {
+   "part": "airmn_bottom_cap",
+   "at": [
+    0,
+    0,
+    0.0
+   ]
+  },
+  {
+   "part": "airmn_foot",
+   "at": [
+    120.208,
+    120.208,
+    -5.0
+   ],
+   "label": "foot_1"
+  },
+  {
+   "part": "airmn_foot",
+   "at": [
+    -120.208,
+    120.208,
+    -5.0
+   ],
+   "label": "foot_2"
+  },
+  {
+   "part": "airmn_foot",
+   "at": [
+    -120.208,
+    -120.208,
+    -5.0
+   ],
+   "label": "foot_3"
+  },
+  {
+   "part": "airmn_foot",
+   "at": [
+    120.208,
+    -120.208,
+    -5.0
+   ],
+   "label": "foot_4"
+  },
+  {
+   "part": "airmn_pd_board",
+   "at": [
+    147.7,
+    0,
+    3.2
+   ]
+  },
+  {
+   "part": "airmn_gasket",
+   "at": [
+    0,
+    0,
+    16.0
+   ],
+   "label": "gasket_low"
+  },
+  {
+   "part": "airmn_comb",
+   "at": [
+    0,
+    0,
+    19.0
+   ],
+   "label": "comb_low"
+  },
+  {
+   "part": "airmn_pleat_pack",
+   "at": [
+    0,
+    0,
+    22.0
+   ]
+  },
+  {
+   "part": "airmn_comb",
+   "label": "comb_high",
+   "xform": [
+    1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    475.0
+   ]
+  },
+  {
+   "part": "airmn_gasket",
+   "at": [
+    0,
+    0,
+    475.0
+   ],
+   "label": "gasket_high"
+  },
+  {
+   "part": "airmn_inlet_ring",
+   "at": [
+    0,
+    0,
+    474.0
+   ]
+  },
+  {
+   "part": "airmn_outlet_band",
+   "at": [
+    0,
+    0,
+    481.0
+   ]
+  },
+  {
+   "part": "airmn_shroud",
+   "at": [
+    0,
+    0,
+    497.0
+   ]
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_1"
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_2",
+   "rot_z": 40.0
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_3",
+   "rot_z": 80.0
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_4",
+   "rot_z": 120.0
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_5",
+   "rot_z": 160.0
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_6",
+   "rot_z": 200.0
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_7",
+   "rot_z": 240.0
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_8",
+   "rot_z": 280.0
+  },
+  {
+   "part": "airmn_blade",
+   "at": [
+    0,
+    0,
+    497.0
+   ],
+   "label": "blade_9",
+   "rot_z": 320.0
+  },
+  {
+   "part": "airmn_backplate",
+   "at": [
+    0,
+    0,
+    612.0
+   ]
+  },
+  {
+   "part": "airmn_shaft",
+   "at": [
+    0,
+    0,
+    612.0
+   ]
+  },
+  {
+   "part": "airmn_bridge",
+   "at": [
+    0,
+    0,
+    640.0
+   ]
+  },
+  {
+   "part": "grindmn_bearing_608",
+   "at": [
+    0,
+    0,
+    640.0
+   ],
+   "label": "bearing_low"
+  },
+  {
+   "part": "grindmn_bearing_608",
+   "at": [
+    0,
+    0,
+    673.0
+   ],
+   "label": "bearing_high"
+  },
+  {
+   "part": "airmn_lid",
+   "at": [
+    0,
+    0,
+    652.0
+   ]
+  },
+  {
+   "part": "airmn_motor_pod",
+   "at": [
+    0,
+    0,
+    658.0
+   ]
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    21.213,
+    21.213,
+    680.0
+   ],
+   "label": "grommet_1"
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    -21.213,
+    21.213,
+    680.0
+   ],
+   "label": "grommet_2"
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    -21.213,
+    -21.213,
+    680.0
+   ],
+   "label": "grommet_3"
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    21.213,
+    -21.213,
+    680.0
+   ],
+   "label": "grommet_4"
+  },
+  {
+   "part": "airmn_motor_bracket",
+   "at": [
+    0,
+    0,
+    686.0
+   ]
+  },
+  {
+   "part": "airmn_coupling",
+   "at": [
+    0,
+    0,
+    690.0
+   ]
+  },
+  {
+   "part": "airmn_motor",
+   "at": [
+    0,
+    0,
+    709.0
+   ]
+  },
+  {
+   "part": "airmn_tie_rod",
+   "at": [
+    198.771,
+    64.585,
+    1.0
+   ],
+   "label": "rod_1"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    198.771,
+    64.585,
+    1.0
+   ],
+   "label": "nut_low_1"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    198.771,
+    64.585,
+    658.0
+   ],
+   "label": "nut_high_1"
+  },
+  {
+   "part": "airmn_tie_rod",
+   "at": [
+    0.0,
+    209.0,
+    1.0
+   ],
+   "label": "rod_2"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    0.0,
+    209.0,
+    1.0
+   ],
+   "label": "nut_low_2"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    0.0,
+    209.0,
+    658.0
+   ],
+   "label": "nut_high_2"
+  },
+  {
+   "part": "airmn_tie_rod",
+   "at": [
+    -198.771,
+    64.585,
+    1.0
+   ],
+   "label": "rod_3"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    -198.771,
+    64.585,
+    1.0
+   ],
+   "label": "nut_low_3"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    -198.771,
+    64.585,
+    658.0
+   ],
+   "label": "nut_high_3"
+  },
+  {
+   "part": "airmn_tie_rod",
+   "at": [
+    -122.847,
+    -169.085,
+    1.0
+   ],
+   "label": "rod_4"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    -122.847,
+    -169.085,
+    1.0
+   ],
+   "label": "nut_low_4"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    -122.847,
+    -169.085,
+    658.0
+   ],
+   "label": "nut_high_4"
+  },
+  {
+   "part": "airmn_tie_rod",
+   "at": [
+    122.847,
+    -169.085,
+    1.0
+   ],
+   "label": "rod_5"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    122.847,
+    -169.085,
+    1.0
+   ],
+   "label": "nut_low_5"
+  },
+  {
+   "part": "airmn_nut_m5",
+   "at": [
+    122.847,
+    -169.085,
+    658.0
+   ],
+   "label": "nut_high_5"
+  }
+ ],
+ "expected": {
+  "_comment": "x, y: caps 430 across; z: feet -5 .. pod top 658 + 152 = 810. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
+  "bbox": [
+   430.0,
+   430.0,
+   815.0
+  ],
+  "allowed_interference": []
+ }
+}

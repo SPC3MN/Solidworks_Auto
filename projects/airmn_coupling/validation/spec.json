@@ -1,0 +1,28 @@
+{
+  "_comment": "Expected values worked out by hand in projects/airmn/airmn_parts.py from projects/airmn/requirements.md.",
+  "solid_bodies": {
+    "expected": 1
+  },
+  "bbox.x": {
+    "expected": 20.0,
+    "tol": 0.05
+  },
+  "bbox.y": {
+    "expected": 20.0,
+    "tol": 0.05
+  },
+  "bbox.z": {
+    "expected": 25.0,
+    "tol": 0.05
+  },
+  "volume": {
+    "expected": 7125.132,
+    "rel_tol": 0.001
+  },
+  "export.step": {
+    "rel_tol": 0.001
+  },
+  "export.stl": {
+    "rel_tol": 0.01
+  }
+}

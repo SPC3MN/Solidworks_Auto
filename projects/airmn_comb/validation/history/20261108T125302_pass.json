@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "project": "airmn_comb",
+  "timestamp": "20261108T125302",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\airmn_comb\\.staging\\20261108T125302\\airmn_comb.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "od": 406.0,
+    "id": 292.0,
+    "t": 10.0,
+    "slot_w": 1.6,
+    "slot_depth": 7.0,
+    "pleats": 120,
+    "pleat_ro": 200.0,
+    "pleat_ri": 150.0,
+    "fold_flat": 2.0
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        406.0,
+        406.0,
+        10.0
+      ],
+      "volume": 485011.312,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 752646,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 406.0,
+      "expected": 406.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 406.0,
+      "expected": 406.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 10.0,
+      "expected": 10.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 485011.312,
+      "expected": 485011.312,
+      "tolerance": 485.011312,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 485011.312,
+      "expected": 485011.312,
+      "tolerance": 485.011312,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 484379.771,
+      "expected": 485011.312,
+      "tolerance": 4850.11312,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "4296 triangles"
+    }
+  ]
+}

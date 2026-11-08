@@ -325,6 +325,32 @@ class Part:
                                    NOTHING, NOTHING, NOTHING, NOTHING)
         return self._name(f, name, "fillet")
 
+    def z_axis(self):
+        """Reference axis along model Z (Top Plane x Right Plane), created once."""
+        if getattr(self, "_zaxis", None):
+            return self._zaxis
+        self.doc.ClearSelection2(True)
+        self.ext.SelectByID2("Top Plane", "PLANE", 0, 0, 0, False, 0, NOTHING, 0)
+        self.ext.SelectByID2("Right Plane", "PLANE", 0, 0, 0, True, 0, NOTHING, 0)
+        self.doc.InsertAxis2(True)
+        f = self.doc.FeatureByPositionReverse(0)
+        if f is None or f.GetTypeName2 != "RefAxis":
+            raise RuntimeError("could not create the Z axis")
+        f.Name = "Axis_Z"
+        self._zaxis = f.Name
+        return f.Name
+
+    def circular_pattern(self, name, features, count):
+        """Pattern the named features `count` times, equally spaced over 360 deg about Z."""
+        ax = self.z_axis()
+        self.doc.ClearSelection2(True)
+        self.ext.SelectByID2(ax, "AXIS", 0, 0, 0, False, 1, NOTHING, 0)
+        for fn in features:
+            self.ext.SelectByID2(fn, "BODYFEATURE", 0, 0, 0, True, 4, NOTHING, 0)
+        # Number, Spacing (rad), Flip, DName, GeometryPattern, EqualSpacing, VaryInstance
+        f = self.fm.FeatureCircularPattern4(count, 2 * math.pi, False, "NULL", True, True, False)
+        return self._name(f, name, "circular pattern")
+
     def render(self, out_dir, views=("isometric", "top", "front", "right")):
         return render(self.doc, out_dir, views)
 

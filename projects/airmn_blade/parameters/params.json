@@ -1,0 +1,15 @@
+{
+  "t": 3.0,
+  "te": 0.5,
+  "taper_l": 15.0,
+  "h": 112.0,
+  "tab_h": 3.0,
+  "rim_r": 150.0,
+  "blade_r0": 100.0,
+  "blade_angle": 40.0,
+  "blades": 9,
+  "tab_w": 2.6,
+  "tab_inset0": 1.0,
+  "tab_inset1": 16.0,
+  "slot_clear": 0.2
+}

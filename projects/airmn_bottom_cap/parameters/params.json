@@ -1,0 +1,28 @@
+{
+  "d": 430.0,
+  "t": 20.0,
+  "groove_od": 408.0,
+  "groove_id": 288.0,
+  "groove_depth": 4.0,
+  "rod_r": 209.0,
+  "rod_angles": [
+    18,
+    90,
+    162,
+    234,
+    306
+  ],
+  "rod_hole": 5.5,
+  "nut_pocket_d": 10.0,
+  "nut_pocket_depth": 6.0,
+  "pd_pocket": {
+    "x": 145.0,
+    "l": 40.0,
+    "w": 30.0,
+    "h": 8.0
+  },
+  "cable_channel": {
+    "x0": 160.0,
+    "w": 12.0
+  }
+}
