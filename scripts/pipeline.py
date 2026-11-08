@@ -3,8 +3,14 @@
 Usage:
   .venv\\Scripts\\python scripts\\pipeline.py projects\\example_box
   .venv\\Scripts\\python scripts\\pipeline.py projects\\example_box --override outer_length=118
+  python3 scripts/pipeline.py projects/example_box --backend freecad
+
+--backend solidworks (default on Windows) or freecad (default elsewhere; CAD_BACKEND overrides
+the default). FreeCAD builds model.py with scripts/fc/fclib.py inside FreeCADCmd and the check
+renders come from Blender, since headless FreeCAD has no viewport.
 
 --override changes a parameter for this run only (to inject an error, test 7).
+--no-promote checks only: nothing is copied out of .staging/ (sweeps, backend comparisons).
 Every run writes a report to validation/history/. Outputs are copied out of
 .staging/ into design/ and exports/ only when every check passes.
 """
@@ -12,17 +18,24 @@ import argparse
 import datetime as dt
 import importlib.util
 import json
+import os
 import pathlib
 import shutil
 import struct
+import tempfile
 
-import pythoncom
-import win32com.client
-from win32com.client import VARIANT
+try:  # SolidWorks backend: Windows + pywin32 only
+    import pythoncom
+    import win32com.client
+    from win32com.client import VARIANT
 
-import swlib
+    import swlib
 
-NOTHING = VARIANT(pythoncom.VT_DISPATCH, None)
+    NOTHING = VARIANT(pythoncom.VT_DISPATCH, None)
+except ImportError:
+    pythoncom = None
+
+SCRIPTS = pathlib.Path(__file__).resolve().parent
 SW_INPUT_DIM_VAL_ON_CREATE = 10
 SW_SOLID_BODY = 0
 
@@ -116,11 +129,80 @@ def check(checks, cid, category, measured, expected, tol, hint=None, rel=False):
     })
 
 
-def run(project, overrides):
+def geometry_checks(checks, spec, m):
+    check(checks, "solid_bodies", "solid_validity", m["solid_bodies"],
+          spec["solid_bodies"]["expected"], 0)
+    for i, axis in enumerate("xyz"):
+        s = spec[f"bbox.{axis}"]
+        check(checks, f"bbox.{axis}", "bounding_dimensions", m["bbox"][i],
+              s["expected"], s["tol"], hint={"param": s.get("param")})
+    check(checks, "volume", "bounding_dimensions", m["volume"],
+          spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
+
+
+def export_checks(checks, spec, m, step_volume, stl):
+    check(checks, "export.step.volume", "export_integrity", step_volume,
+          m["volume"], spec["export.step"]["rel_tol"], rel=True)
+    if stl is not None and stl.exists():
+        vol, closed, tris = stl_volume(stl)
+        check(checks, "export.stl.volume", "export_integrity", round(vol, 3),
+              m["volume"], spec["export.stl"]["rel_tol"], rel=True)
+        checks.append({"id": "export.stl.watertight", "category": "export_integrity",
+                       "status": "pass" if closed else "fail", "measured": closed,
+                       "expected": True, "message": f"{tris} triangles"})
+    else:
+        check(checks, "export.stl.volume", "export_integrity", None, m["volume"], 0)
+
+
+def native_check(checks, native):
+    # SolidWorks has been seen to report success while writing a 0-byte part.
+    size = native.stat().st_size if native.exists() else 0
+    checks.append({"id": "export.native", "category": "export_integrity",
+                   "status": "pass" if size > 1000 else "fail", "measured": size,
+                   "expected": "> 1000 bytes", "message": "" if size > 1000 else
+                   f"native part file is {size} bytes"})
+
+
+def build_freecad(project, params, spec, staging):
+    """Build, measure and export inside FreeCADCmd (scripts/fc/fc_job.py); check here."""
+    import freecad_run
+    import render_config
+    out = pathlib.Path(tempfile.mkdtemp(prefix="fcjob_")) / "job.json"
+    job = {"model": str(project / "design" / "model.py"), "params": params, "name": project.name,
+           "staging": str(staging), "features": list(spec.get("features", {})), "out_json": str(out)}
+    proc, cmd = freecad_run.run(SCRIPTS / "fc" / "fc_job.py", "FC_JOB", job)
+    err = out.with_name(out.name + ".error")
+    if err.exists() or not out.exists():
+        detail = err.read_text() if err.exists() else proc.stdout[-3000:] + proc.stderr[-3000:]
+        raise RuntimeError(f"FreeCAD build failed ({freecad_run.describe(cmd)}):\n{detail}")
+    r = json.loads(out.read_text(encoding="utf-8"))
+    m = {k: r["measure"][k] for k in ("bbox", "volume", "solid_bodies")}
+    native = pathlib.Path(r["native"])
+    checks = []
+    native_check(checks, native)
+    checks.append({"id": "shape.valid", "category": "solid_validity",
+                   "status": "pass" if r["measure"]["valid"] else "fail", "measured": r["measure"]["valid"],
+                   "expected": True, "message": "" if r["measure"]["valid"] else "OCCT reports an invalid shape"})
+    geometry_checks(checks, spec, m)
+    for fname, fs in spec.get("features", {}).items():
+        check(checks, f"feature.{fname}.volume", "feature_volume", r["features"].get(fname),
+              fs["expected"], fs["rel_tol"], rel=True)
+    step = pathlib.Path(r["step"]) if r["step"] else staging / f"{project.name}.step"
+    stl = pathlib.Path(r["stl"]) if r["stl"] else None
+    export_checks(checks, spec, m, r["step_reopened"] and r["step_reopened"]["volume"], stl)
+    renders = []
+    if stl is not None and render_config.blender_exe():
+        code, _ = render_config.run_blender("bl_check_views.py", "--stl", stl, "--out", staging / "renders", timeout=600)
+        renders = sorted((staging / "renders").glob("*.png")) if code == 0 else []
+    if not renders:
+        print("no check renders (Blender not found or failed)")
+    return native, m, checks, step, stl, renders, {"backend": "freecad", "freecad_version": r["freecad_version"]}
+
+
+def run(project, overrides, backend, promote=True):
     params = json.loads((project / "parameters" / "params.json").read_text())
     params.update(overrides)
     spec = json.loads((project / "validation" / "spec.json").read_text())
-    app = connect()
     # Each run gets its own staging folder: SolidWorks can keep a file lock on a
     # closed document, which would block clearing a shared folder. Old run folders
     # are removed when they are no longer locked.
@@ -131,7 +213,15 @@ def run(project, overrides):
             if not old.name.endswith(".SLDPRT") else None
     staging = root / stamp
     staging.mkdir(parents=True)
+    build = build_freecad if backend == "freecad" else build_solidworks
+    native, m, checks, step, stl, renders, info = build(project, params, spec, staging)
+    return finish(project, stamp, params, native, m, checks, step, stl, staging, renders, info, promote)
 
+
+def build_solidworks(project, params, spec, staging):
+    if pythoncom is None:
+        raise RuntimeError("the SolidWorks backend needs Windows and pywin32; use --backend freecad")
+    app = connect()
     prev = app.GetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE)
     app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, False)
     checks = []
@@ -151,22 +241,10 @@ def run(project, overrides):
         native = staging / f"{project.name}.SLDPRT"
         save_as(app, model, native)
         m = measure(model)
-        # SolidWorks has been seen to report success while writing a 0-byte part.
-        size = native.stat().st_size if native.exists() else 0
-        checks.append({"id": "export.native", "category": "export_integrity",
-                       "status": "pass" if size > 1000 else "fail", "measured": size,
-                       "expected": "> 1000 bytes", "message": "" if size > 1000 else
-                       f"native part file is {size} bytes"})
+        native_check(checks, native)
 
         # 2. Validate geometry against the spec
-        check(checks, "solid_bodies", "solid_validity", m["solid_bodies"],
-              spec["solid_bodies"]["expected"], 0)
-        for i, axis in enumerate("xyz"):
-            s = spec[f"bbox.{axis}"]
-            check(checks, f"bbox.{axis}", "bounding_dimensions", m["bbox"][i],
-                  s["expected"], s["tol"], hint={"param": s.get("param")})
-        check(checks, "volume", "bounding_dimensions", m["volume"],
-              spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
+        geometry_checks(checks, spec, m)
         # Features too small for the total-volume tolerance (e.g. copper tracks):
         # suppress each one, measure what it contributed, then restore it.
         # A name ending in "*" covers every feature with that prefix (e.g. "RoundTop*" for a
@@ -204,25 +282,18 @@ def run(project, overrides):
         step_ok, stl_ok = save_as(app, model, step), save_as(app, model, stl)
         app.CloseDoc(model.GetTitle)
         r = reopen_step(app, step) if step_ok else None
-        check(checks, "export.step.volume", "export_integrity", r and r["volume"],
-              m["volume"], spec["export.step"]["rel_tol"], rel=True)
-        if stl_ok:
-            vol, closed, tris = stl_volume(stl)
-            check(checks, "export.stl.volume", "export_integrity", round(vol, 3),
-                  m["volume"], spec["export.stl"]["rel_tol"], rel=True)
-            checks.append({"id": "export.stl.watertight", "category": "export_integrity",
-                           "status": "pass" if closed else "fail", "measured": closed,
-                           "expected": True, "message": f"{tris} triangles"})
-        else:
-            check(checks, "export.stl.volume", "export_integrity", None, m["volume"], 0)
+        export_checks(checks, spec, m, r and r["volume"], stl if stl_ok else None)
     finally:
         app.SetUserPreferenceToggle(SW_INPUT_DIM_VAL_ON_CREATE, prev)
+    return native, m, checks, step, stl, renders, {"backend": "solidworks"}
 
+
+def finish(project, stamp, params, native, m, checks, step, stl, staging, renders, info, promote=True):
     failed = sum(c["status"] == "fail" for c in checks)
     status = "fail" if failed else "pass"
     report = {
         "schema_version": "1.0", "project": project.name, "timestamp": stamp,
-        "model_file": str(native), "status": status, "params_used": params,
+        "model_file": str(native), "status": status, "params_used": params, **info,
         "summary": {"passed": len(checks) - failed, "failed": failed, "warnings": 0},
         "components": {"Body": m}, "checks": checks,
     }
@@ -231,12 +302,13 @@ def run(project, overrides):
     (hist / f"{stamp}_{status}.json").write_text(json.dumps(report, indent=2))
 
     # 4. Promote only on pass; otherwise last validated outputs stay untouched.
-    if status == "pass":
+    if status == "pass" and promote:
         (project / "exports").mkdir(exist_ok=True)
         shutil.copy2(native, project / "design" / native.name)
         shutil.copy2(step, project / "exports" / step.name)
         shutil.copy2(stl, project / "exports" / stl.name)
-        shutil.copytree(staging / "renders", project / "renders", dirs_exist_ok=True)
+        if (staging / "renders").exists():
+            shutil.copytree(staging / "renders", project / "renders", dirs_exist_ok=True)
     report["renders"] = [str(p) for p in renders]
     return report
 
@@ -245,14 +317,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("project", type=pathlib.Path)
     ap.add_argument("--override", action="append", default=[], help="name=value (mm)")
+    ap.add_argument("--no-promote", action="store_true")
+    ap.add_argument("--backend", choices=("solidworks", "freecad"),
+                    default=os.environ.get("CAD_BACKEND") or ("solidworks" if os.name == "nt" else "freecad"))
     a = ap.parse_args()
     overrides = {k: float(v) for k, v in (o.split("=", 1) for o in a.override)}
-    report = run(a.project.resolve(), overrides)
+    report = run(a.project.resolve(), overrides, a.backend, not a.no_promote)
     for c in report["checks"]:
         print(f'{c["status"].upper():4}  {c["id"]:24} {c.get("measured")}  {c.get("message", "")}')
     print("renders:", *report["renders"], sep="\n  ")
     print(f'\n{report["status"].upper()}: {report["summary"]}'
-          f'{"  -> promoted" if report["status"] == "pass" else "  -> not promoted"}')
+          f'{"  -> promoted" if report["status"] == "pass" and not a.no_promote else "  -> not promoted"}')
 
 
 if __name__ == "__main__":

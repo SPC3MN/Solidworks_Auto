@@ -3,7 +3,7 @@
 Nothing here is hard-coded to one machine. Blender is found, in order, from:
   1. the BLENDER_EXE environment variable
   2. config/render.local.json  {"blender": "C:/.../blender.exe"}   (gitignored, per machine)
-  3. ~/Tools/blender-*/blender.exe (newest), then Program Files/Blender Foundation/*/blender.exe
+  3. ~/Tools/blender-*/blender[.exe] (newest), then Program Files/Blender Foundation/*/blender.exe
   4. `blender` on PATH
 """
 import glob
@@ -31,7 +31,8 @@ def local_config():
 def blender_exe():
     cands = [os.environ.get("BLENDER_EXE"), local_config().get("blender")]
     home = pathlib.Path.home()
-    cands += sorted(glob.glob(str(home / "Tools" / "blender-*" / "blender.exe")), reverse=True)
+    for exe in ("blender.exe", "blender"):
+        cands += sorted(glob.glob(str(home / "Tools" / "blender-*" / exe)), reverse=True)
     cands += sorted(glob.glob(r"C:\Program Files\Blender Foundation\*\blender.exe"), reverse=True)
     cands.append(shutil.which("blender"))
     for c in cands:

@@ -1,7 +1,10 @@
 # Migration plan: SolidWorks → FreeCAD (with Blender rendering kept)
 
-Status: **plan only** (2026-11-08). FreeCAD is not installed on this machine yet; nothing
-below has been run against FreeCAD on Windows. Items marked **verify** must be proven by
+Status (2026-11-08, Linux machine): phase 0 partly done (headless runs, STEP, STL, Blender hand-off;
+see [freecad_findings.md](freecad_findings.md)) and **phase 2 done** in a simpler form than §4 describes: the
+Part module (OCCT booleans) instead of PartDesign, and `fc_job.py` aliasing `swlib` → `fclib`, which made phase 1
+unnecessary. Phase 3 is done apart from the new checks (holes, wall thickness, recompute stability). The part half of the
+phase 7 parity sweep passes 90/90. Phases 4–6 (assemblies, TechDraw, FreeCAD-native render export) are open. Nothing below has been run against FreeCAD on Windows. Items marked **verify** must be proven by
 the phase 0 probe before code depends on them. The FreeCAD 1.1.4 facts that *were*
 verified (on macOS) are in [freecad_prototype_findings.md](freecad_prototype_findings.md).
 

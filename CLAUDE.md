@@ -1,14 +1,18 @@
 # Solidworks_Auto: notes for Claude
 
 CAD driven from Python through a backend per CAD program: SolidWorks 2025 over COM (`.venv`,
-pywin32) today, FreeCAD next (the user is moving to it; backend not built yet, see
-`.claude/skills/model-from-photo/references/freecad.md`). The workflow and the geometry modules are
+pywin32) on the Windows machine, and FreeCAD (the user is moving to it). The FreeCAD part backend and
+`pipeline.py --backend freecad` work (see `.claude/skills/model-from-photo/references/freecad.md` and
+`docs/freecad_findings.md`); assemblies and drawings are still SolidWorks-only. The workflow and the geometry modules are
 CAD-neutral; only the backend changes. The notes below describe the SolidWorks backend unless they say otherwise. Read
 `docs/architecture.md` for the principles and `docs/solidworks_findings.md` for
 verified API behaviour and gotchas before changing scripts.
 
-Run Python as `.venv\Scripts\python`. Git is at `C:\Program Files\Git\cmd\git.exe`
+Windows: run Python as `.venv\Scripts\python`. Git is at `C:\Program Files\Git\cmd\git.exe`
 (it may not be on PATH in older shells).
+
+Linux machine: run `python3` (no venv needed; nothing outside the standard library runs on the host).
+FreeCAD 1.1.4 is the Flatpak and Blender 5.2.3 is in `~/Tools`; `config/render.local.json` points at both.
 
 ## Keep the CAD program tidy
 

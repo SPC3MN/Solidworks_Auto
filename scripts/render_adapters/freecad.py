@@ -1,24 +1,19 @@
 """FreeCAD adapter: .FCStd -> STEP per unique part + product manifest.
 
 Runs FreeCAD headless (FreeCADCmd / freecadcmd) with freecad_dump.py, then builds the
-manifest here. FreeCAD is found from FREECAD_CMD, config/render.local.json
-{"freecad": ".../FreeCADCmd.exe"}, ~/Tools/FreeCAD*/bin, Program Files/FreeCAD*/bin,
-/Applications/FreeCAD.app, or PATH.
+manifest here. FreeCAD is found and launched by scripts/freecad_run.py (FREECAD_CMD,
+config/render.local.json, the usual install folders, PATH, or the Linux Flatpak).
 
 Colours: a headless FreeCAD has no view providers, so the shape colour is read from the
 .FCStd's GuiDocument.xml (ShapeColor, a packed RGBA integer) when present; otherwise the
 parts are coloured by the material library alone. STEP from FreeCAD carries no colours.
 
-Status: written against the FreeCAD 0.21 / 1.x Python API; not yet run against a real
-FreeCAD on the development machine (none installed). The fallback that is verified: export
+Status: verified with FreeCAD 1.1.4 (Linux Flatpak) on 2026-11-08: an App::Part with a box and
+three App::Links to one cylinder passes tests/test_render_e2e.py end to end. The fallback: export
 STEP from FreeCAD (File > Export, STEP with assembly structure) and use the file adapter.
 """
-import glob
 import json
-import os
 import pathlib
-import shutil
-import subprocess
 import sys
 import tempfile
 import xml.etree.ElementTree as ET
@@ -28,20 +23,6 @@ from . import common as C
 
 EXTENSIONS = (".fcstd",)
 DUMP = pathlib.Path(__file__).with_name("freecad_dump.py")
-
-
-def freecad_cmd():
-    import render_config as rc
-    cands = [os.environ.get("FREECAD_CMD"), rc.local_config().get("freecad")]
-    home = pathlib.Path.home()
-    for base in (home / "Tools", pathlib.Path(r"C:\Program Files"), pathlib.Path(os.environ.get("LOCALAPPDATA", "")) / "Programs"):
-        for exe in ("FreeCADCmd.exe", "freecadcmd.exe"):
-            cands += sorted(glob.glob(str(base / "FreeCAD*" / "bin" / exe)), reverse=True)
-    cands += ["/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd", shutil.which("freecadcmd"), shutil.which("FreeCADCmd")]
-    for c in cands:
-        if c and pathlib.Path(c).is_file():
-            return pathlib.Path(c)
-    return None
 
 
 def find_file(target):
@@ -71,15 +52,16 @@ def gui_colors(fcstd):
 
 
 def run_dump(fcstd, render_dir):
-    exe = freecad_cmd()
-    if exe is None:
-        sys.exit("FreeCAD not found. Set FREECAD_CMD or config/render.local.json {\"freecad\": \".../FreeCADCmd.exe\"}, "
-                 "or export STEP from FreeCAD and pass the .step file instead (file adapter).")
+    import freecad_run
     geo = pathlib.Path(render_dir) / "export" / "geometry"
     raw = pathlib.Path(tempfile.mkdtemp(prefix="fcdump_")) / "raw.json"
-    env = dict(os.environ, RENDER_FC_ARGS=json.dumps({"file": str(fcstd), "parts_dir": str(geo / "parts"),
-                                                      "assembly_step": str(geo / f"{fcstd.stem}.step"), "out_json": str(raw)}))
-    proc = subprocess.run([str(exe), str(DUMP)], env=env, capture_output=True, text=True, timeout=3600)
+    args = {"file": str(fcstd), "parts_dir": str(geo / "parts"), "assembly_step": str(geo / f"{fcstd.stem}.step"),
+            "out_json": str(raw)}
+    try:
+        proc, cmd = freecad_run.run(DUMP, "RENDER_FC_ARGS", args)
+    except FileNotFoundError as e:
+        sys.exit(f"{e} Or export STEP from FreeCAD and pass the .step file instead (file adapter).")
+    exe = freecad_run.describe(cmd)
     err = raw.with_name(raw.name + ".error")
     if err.exists() or not raw.exists():
         detail = err.read_text() if err.exists() else (proc.stdout[-3000:] + proc.stderr[-3000:])

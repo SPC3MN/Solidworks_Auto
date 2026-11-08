@@ -1,9 +1,13 @@
 # Backend: FreeCAD 1.x (Python API, headless)
 
-Status: **target, not built.** FreeCAD is not installed on this machine yet (checked 2026-11-08), and none of the
-repo scripts run on it. Everything below is an API mapping from FreeCAD's documented Python interface,
-**unverified here**. Run the probe at the end, fix this page from what it shows, and move findings to a
-`docs/freecad_findings.md` (the counterpart of `docs/solidworks_findings.md`) before relying on any of it.
+Status: **part backend built and verified** on FreeCAD 1.1.4 (Linux Flatpak), 2026-11-08:
+`scripts/fc/fclib.py` (swlib's API on OCCT booleans), `scripts/fc/fc_job.py` (runs in FreeCADCmd) and
+`pipeline.py --backend freecad`. Verified behaviour is in [docs/freecad_findings.md](../../../../docs/freecad_findings.md);
+it overrides the mapping below where they differ. Not built yet: assemblies (`assembly.py`), TechDraw drawings,
+and GUI-parametric `.FCStd` files (the native file holds the result shape plus a `Params` spreadsheet).
+
+Run: `python3 scripts/pipeline.py projects/<name> --backend freecad` (the default off Windows; `CAD_BACKEND`
+overrides it). Add `--no-promote` to check without copying outputs into `design/` and `exports/`.
 
 ## Why it fits this workflow
 

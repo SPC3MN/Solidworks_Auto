@@ -149,10 +149,20 @@ def main():
     for o in doc.RootObjects:
         walk(o, App.Matrix(), root, "", True, frozenset())
 
-    # whole product as one STEP (cross-check in Blender) and FreeCAD's own overall bbox
-    shown = [c["world_shape"] for c in comps if c["visible"]]
+    # whole product as one STEP (cross-check in Blender) and FreeCAD's own overall bbox.
+    # One object per component, so the STEP holds one product each (a single compound
+    # would import as one mesh).
+    shown = [c for c in comps if c["visible"]]
     if shown:
-        Part.makeCompound(shown).exportStep(a["assembly_step"])
+        import Import
+        tmp = App.newDocument("render_assembly_step", hidden=True)
+        objs = []
+        for c in shown:
+            obj = tmp.addObject("Part::Feature", clean(c["id"]))
+            obj.Shape, obj.Label = c["world_shape"], c["name"]
+            objs.append(obj)
+        Import.export(objs, a["assembly_step"])
+        App.closeDocument(tmp.Name)
     ref = []
     for o in doc.RootObjects:
         if not getattr(o, "Visibility", True):

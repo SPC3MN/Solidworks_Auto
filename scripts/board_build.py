@@ -31,7 +31,7 @@ import pathlib
 
 import details
 import tracks
-from swlib import NOTHING, Part, _invoke, circle, rect
+from swlib import Part, circle, rect
 
 
 def _board(lay):
@@ -107,7 +107,12 @@ def build(app, lay):
                 # just the top circle. Picking the small circle edges by point rounded only
                 # 12 of 48 domes on the SSR-RACK48.
                 rgroups.setdefault(c["round_top"], []).append((c["x"], c["y"], c["z0"] + c["h"]))
-        if rgroups:
+        # SolidWorks resolves point picks through the view, which needs the workarounds below.
+        # FreeCAD (fclib) picks the nearest face in 3D, so it needs neither.
+        on_sw = hasattr(part, "ext")
+        if on_sw:
+            from swlib import NOTHING, _invoke
+        if rgroups and on_sw:
             # Point picks are resolved along the view direction; in a slanted view a pick can
             # hit a neighbouring dome first (46 of 48). Look straight down -Z (the Front plane view).
             part.doc.ShowNamedView2("*Front", 1)
@@ -119,7 +124,7 @@ def build(app, lay):
             d = next(c["d"] for c in lay["cyls"] if c.get("round_top") == r)
             full = math.pi * (d / 2) ** 2
             missed = []
-            for p in pts:
+            for p in pts if on_sw else ():
                 part.doc.ClearSelection2(True)
                 if part.ext.SelectByID2("", "FACE", p[0] / 1000, p[1] / 1000, p[2] / 1000, False, 0, NOTHING, 0):
                     a = part.doc.SelectionManager.GetSelectedObject6(1, -1).GetArea * 1e6

@@ -1,5 +1,5 @@
 {
-  "_comment": "Copy to render.local.json (gitignored) and set the paths for this machine. BLENDER_EXE / FREECAD_CMD override them. freecad is only needed to render .FCStd files directly.",
+  "_comment": "Copy to render.local.json (gitignored) and set the paths for this machine. BLENDER_EXE / FREECAD_CMD override them. freecad is a FreeCADCmd path, or \"flatpak\" for the Linux Flatpak build.",
   "blender": "C:/Users/<you>/Tools/blender-5.2.3-windows-x64/blender.exe",
   "freecad": "C:/Program Files/FreeCAD 1.0/bin/FreeCADCmd.exe"
 }

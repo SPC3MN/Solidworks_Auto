@@ -11,7 +11,7 @@ how to build features, measure the result, export, render and check assemblies.
 | Backend | Status | Reference |
 |---|---|---|
 | SolidWorks 2025 over COM (pywin32) | in use, every tool below verified | [references/solidworks.md](references/solidworks.md) |
-| FreeCAD 1.x (Python, headless `FreeCADCmd`) | target: not installed yet, API mapping unverified | [references/freecad.md](references/freecad.md) |
+| FreeCAD 1.x (Python, headless `FreeCADCmd`) | parts and pipeline verified (FreeCAD 1.1.4, Linux); assemblies and drawings not yet | [references/freecad.md](references/freecad.md) |
 
 **Pick the backend first.** Use the one the user names. Otherwise use FreeCAD once its backend exists and has
 passed the probe in its reference, and SolidWorks until then. Read that backend's reference before building:
