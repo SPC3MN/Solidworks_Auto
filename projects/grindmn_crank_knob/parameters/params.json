@@ -1,8 +1,0 @@
-{
-  "d": 20.0,
-  "h": 28.4,
-  "flange_bore": 10.0,
-  "flange_depth": 4.0,
-  "through": 6.0,
-  "_comment": "h 28.4 (note says 30): 0.8 flange + 28.4 + 0.8 flange = the 30 shoulder of the ISO 7379 5 x 30"
-}

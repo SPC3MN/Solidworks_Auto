@@ -1,9 +1,9 @@
 {
-  "od": 68.0,
+  "od": 64.0,
   "h": 69.0,
-  "sleeve_d": 64.2,
+  "sleeve_d": 61.2,
   "sleeve_depth": 20.0,
-  "chamber_d": 60.0,
+  "chamber_d": 58.0,
   "base": 4.0,
   "corner_r": 2.0
 }

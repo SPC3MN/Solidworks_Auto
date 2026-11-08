@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_oring_58x2",
+  "timestamp": "20261108T172343",
+  "model_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/projects/grindmn_oring_58x2/.staging/20261108T172343/grindmn_oring_58x2.FCStd",
+  "status": "pass",
+  "params_used": {
+    "_kind": "oring",
+    "centre_d": 59.9,
+    "cs": 2.0
+  },
+  "backend": "freecad",
+  "freecad_version": "1.1.4",
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        61.9,
+        61.9,
+        2.0
+      ],
+      "volume": 591.189,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 2292,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "shape.valid",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 61.9,
+      "expected": 61.9,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 61.9,
+      "expected": 61.9,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 2.0,
+      "expected": 2.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 591.189,
+      "expected": 591.189,
+      "tolerance": 0.591189,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 591.189,
+      "expected": 591.189,
+      "tolerance": 0.591189,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 589.618,
+      "expected": 591.189,
+      "tolerance": 5.91189,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "10206 triangles"
+    }
+  ]
+}

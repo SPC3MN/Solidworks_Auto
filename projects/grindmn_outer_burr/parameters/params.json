@@ -8,5 +8,14 @@
   "bore_step_z": 10.0,
   "teeth": 20,
   "tooth_r": 24.5,
-  "tooth_hw": 2.0
+  "tooth_hw": 2.0,
+  "notches": {
+    "r0": 25.6,
+    "w": 4.4,
+    "h": 2.3,
+    "angles": [
+      90,
+      270
+    ]
+  }
 }

@@ -1,22 +1,11 @@
 {
-  "d": 8.0,
-  "length": 138.0,
-  "collar_d": 10.0,
-  "collar_z": [
-    13.0,
-    16.0
-  ],
-  "groove_d": 6.0,
-  "groove_w": 0.74,
-  "clip_grooves_z": [
-    46.2,
-    82.0
-  ],
-  "burr_drive_z": [
-    16.0,
-    46.0
-  ],
+  "_kind": "stepped_shaft",
+  "d_low": 8.0,
+  "d_high": 6.0,
+  "length": 134.0,
+  "z_step": 46.0,
+  "flats_z0": 16.0,
   "burr_flats": 6.5,
-  "crank_flat": 7.2,
-  "crank_flat_z": 110.0
+  "crank_flat": 5.2,
+  "crank_flat_z": 121.0
 }

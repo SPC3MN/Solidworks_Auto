@@ -4,18 +4,14 @@
   "pilot_od": 50.0,
   "flange_od": 64.0,
   "ring_id": 46.0,
-  "hub_d": 28.0,
-  "lip_hole_d": 18.5,
+  "hub_d": 26.0,
+  "lip_hole_d": 15.0,
   "spoke_w": 4.0,
   "spoke_angles": [
     60,
     180,
     300
   ],
-  "seat_d": 22.0,
-  "seat_depth": 7.0,
-  "dowel": {
-    "r": 28.5,
-    "d": 3.1
-  }
+  "seat_d": 19.0,
+  "seat_depth": 6.0
 }

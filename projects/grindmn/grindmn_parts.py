@@ -111,15 +111,22 @@ def tube(p):
     for name, d, ztop in bores:
         g.append((name, "cut", [circle(0, 0, d)], 0, ztop, -(disc(d) - (disc(prev) if prev else 0)) * ztop, "z"))
         prev = d
+    outer = OD
+    if p.get("spigot"):  # turned-down bottom for a flush catch cup
+        sd, sh = p["spigot"]["d"], p["spigot"]["h"]
+        g.append(("Spigot", "cut", [circle(0, 0, OD + 2), circle(0, 0, sd)], 0, sh, -(disc(OD) - disc(sd)) * sh, "z"))
+        outer = sd
     gz = p["oring_groove"]
-    g.append(("Oring_groove", "cut", [circle(0, 0, OD + 2), circle(0, 0, gz["floor_d"])], gz["z0"], gz["w"],
-              -(disc(OD) - disc(gz["floor_d"])) * gz["w"], "z"))
+    g.append(("Oring_groove", "cut", [circle(0, 0, outer + 2), circle(0, 0, gz["floor_d"])], gz["z0"], gz["w"],
+              -(disc(outer) - disc(gz["floor_d"])) * gz["w"], "z"))
     r = OD / 2
-    g.append(radial("Burr_screw_90", TAP_M4, p["z_burr_screws"], 90, p["burr_seat_d"] / 2, r))
-    g.append(radial("Burr_screw_270", TAP_M4, p["z_burr_screws"], 270, p["burr_seat_d"] / 2, r))
-    dw = p["dowel"]
-    g.append(("Dowel_hole", "cut", [circle(dw["r"], 0, dw["d"])], L - dw["depth"], dw["depth"],
-              -disc(dw["d"]) * dw["depth"], "z"))
+    if p.get("z_burr_screws"):
+        g.append(radial("Burr_screw_90", TAP_M4, p["z_burr_screws"], 90, p["burr_seat_d"] / 2, r))
+        g.append(radial("Burr_screw_270", TAP_M4, p["z_burr_screws"], 270, p["burr_seat_d"] / 2, r))
+    if p.get("dowel"):
+        dw = p["dowel"]
+        g.append(("Dowel_hole", "cut", [circle(dw["r"], 0, dw["d"])], L - dw["depth"], dw["depth"],
+                  -disc(dw["d"]) * dw["depth"], "z"))
     return g, [OD, OD, L]
 
 
@@ -136,8 +143,9 @@ def bridge(p):
     sp = [spoke(rh - 1, rr + 1, w, a) for a in p["spoke_angles"]]
     g.append(("Spokes", "add", sp, 0, t, len(sp) * strip_between(rh, rr, w) * t, "z"))
     g.append(bore_step(p["seat_d"], p["lip_hole_d"], t - p["seat_depth"], p["seat_depth"], "Bearing_seat"))
-    dw = p["dowel"]
-    g.append(("Dowel_hole", "cut", [circle(dw["r"], 0, dw["d"])], ph, t - ph, -disc(dw["d"]) * (t - ph), "z"))
+    if p.get("dowel"):
+        dw = p["dowel"]
+        g.append(("Dowel_hole", "cut", [circle(dw["r"], 0, dw["d"])], ph, t - ph, -disc(dw["d"]) * (t - ph), "z"))
     return g, [p["flange_od"], p["flange_od"], t]
 
 
@@ -154,61 +162,13 @@ def spider(p):
     sp = [spoke(rh - 1, rr + 1, w, a) for a in p["spoke_angles"]]
     g.append(("Spokes", "add", sp, sz0, sz1 - sz0, len(sp) * strip_between(rh, rr, w) * (sz1 - sz0), "z"))
     g.append(bore_step(p["seat_d"], p["lip_hole_d"], 0, p["seat_depth"], "Bearing_seat"))
-    return g, [p["ring_od"], p["ring_od"], max(hh, rz + rh_)]
-
-
-def click_disc(p):
-    """Keyed to the shaft's flat; the boss presses on the top bearing's inner ring only; radial click
-    grooves on the top face for the nut's ball plunger (modelled square, real ones 90 deg V)."""
-    bh, t, D = p["boss_h"], p["t"], p["d"]
-    g = [ring(p["boss_d"], p["bore_d"], 0, bh, "Boss"), ring(D, p["bore_d"], bh, t - bh, "Disc")]
-    fa = p["flat"] - p["bore_d"] / 2
-    g.append(("Bore_flat", "add", [rect(fa + 0.75, 0, 1.5, p["bore_d"] + 1)], bh, t - bh,
-              segment_area(p["bore_d"] / 2, fa) * (t - bh), "z"))
-    R, ri, w, dep, n = D / 2, p["groove_r_in"], p["groove_w"], p["groove_depth"], p["clicks"]
-    a = integ(lambda y: sq(R * R - y * y) - ri, -w / 2, w / 2, 2000)
-    g.append(("Click_grooves", "cut", [spoke(ri, R + 1, w, i * 360 / n) for i in range(n)], t - dep, dep,
-              -n * a * dep, "z"))
-    return g, [D, D, t]
-
-
-def adjuster_nut(p):
-    """Knurled grind dial: M8 x 0.75 tapped through (modelled at tap-drill size), push-fit ball plunger
-    pointing down into the click disc."""
-    h = p["h"]
-    g = [ring(p["d"], p["tap_d"], 0, h, "Body"),
-         ("Plunger_hole", "cut", [circle(p["plunger_r"], 0, p["plunger_d"])], 0, h, -disc(p["plunger_d"]) * h, "z")]
-    return g, [p["d"], p["d"], h]
-
-
-def shaft(p):
-    d, L = p["d"], p["length"]
-    c0, c1 = p["collar_z"]
-    g = [rod(d, 0, c0, "Lower_seat"), rod(p["collar_d"], c0, c1 - c0, "Collar"), rod(d, c1, L - c1, "Upper")]
-    for i, z in enumerate(p["clip_grooves_z"]):
-        v = (disc(d) - disc(p["groove_d"])) * p["groove_w"]
-        g.append((f"Eclip_groove{i + 1}", "cut", [circle(0, 0, d + 2), circle(0, 0, p["groove_d"])], z,
-                  p["groove_w"], -v, "z"))
-    f0, f1 = p["burr_drive_z"]
-    hf = p["burr_flats"] / 2
-    g.append(("Burr_flats", "cut", [rect(hf + 1.5, 0, 3, d + 2), rect(-hf - 1.5, 0, 3, d + 2)], f0, f1 - f0,
-              -2 * segment_area(d / 2, hf) * (f1 - f0), "z"))
-    k0 = p["crank_flat_z"]
-    ka = p["crank_flat"] - d / 2  # flat at x = 7.2 - 4 = 3.2 from the axis
-    g.append(("Crank_flat", "cut", [rect(ka + 1.5, 0, 3, d + 2)], k0, L - k0,
-              -segment_area(d / 2, ka) * (L - k0), "z"))
-    return g, [p["collar_d"], p["collar_d"], L]
-
-
-def spacer(p):
-    return [ring(p["od"], p["id"], 0, p["t"], "Spacer")], [p["od"], p["od"], p["t"]]
-
-
-def lid(p):
-    sh = p.get("spigot_h", 0)
-    g = [ring(p["spigot_d"], p["hole_d"], 0, sh, "Spigot")] if sh else []
-    g.append(ring(p["od"], p["hole_d"], sh, p["t"], "Plate"))
-    return g, [p["od"], p["od"], sh + p["t"]]
+    top = max(hh, rz + rh_)
+    if p.get("tabs"):  # anti-rotation tabs up into the outer burr's lower-face notches
+        t = p["tabs"]
+        g.append(("Tabs", "add", [spoke(t["r0"], t["r1"], t["w"], a) for a in t["angles"]], rz + rh_, t["h"],
+                  len(t["angles"]) * (t["r1"] - t["r0"]) * t["w"] * t["h"], "z"))
+        top = rz + rh_ + t["h"]
+    return g, [p["ring_od"], p["ring_od"], top]
 
 
 def catch_cup(p):
@@ -224,64 +184,52 @@ def catch_cup(p):
     return g, [p["od"], p["od"], H]
 
 
-def crank_hub(p):
-    D, H = p["d"], p["h"]
-    g = [rod(D, 0, H, "Body"), rod(p["bore_d"], 0, p["bore_depth"], "Bore", "cut")]
-    fa = p["flat"] - p["bore_d"] / 2  # flat at 3.2 from the axis
-    r = p["bore_d"] / 2
-    g.append(("Bore_flat", "add", [rect(fa + 0.75, 0, 1.5, p["bore_d"] + 1)], 0, p["bore_depth"],
-              segment_area(r, fa) * p["bore_depth"], "z"))
-    g.append(rod(p["magnet_d"], p["bore_depth"], p["magnet_h"], "Magnet_pocket", "cut"))
-    sw, sd = p["slot_w"], p["slot_depth"]
-    g.append(("Arm_slot", "cut", [rect(0, 0, D + 4, sw)], H - sd, sd,
-              -integ(lambda y: 2 * sq((D / 2) ** 2 - y * y), -sw / 2, sw / 2) * sd, "z"))
-    s = p["screw_pitch"] / 2
-    g.append(("Arm_screws", "cut", [circle(-s, 0, TAP_M3), circle(s, 0, TAP_M3)], H - sd - p["screw_depth"],
-              p["screw_depth"], -2 * disc(TAP_M3) * p["screw_depth"], "z"))
-    return g, [D, D, H]
+def stepped_shaft(p):
+    """grindmn S shaft: Ø8 lower bearing seat and burr drive (two flats; the inner burr's D bore rests on the
+    shoulder where the flats start), Ø6 above (the burr slides on from the top), single crank flat at the top.
+    The M6 x 0.75 nut thread is modelled at Ø6."""
+    d1, d2, L, zs = p["d_low"], p["d_high"], p["length"], p["z_step"]
+    f0 = p["flats_z0"]
+    g = [rod(d1, 0, zs, "Low"), rod(d2, zs, L - zs, "High")]
+    hf = p["burr_flats"] / 2
+    g.append(("Burr_flats", "cut", [rect(hf + 1.5, 0, 3, d1 + 2), rect(-hf - 1.5, 0, 3, d1 + 2)], f0, zs - f0,
+              -2 * segment_area(d1 / 2, hf) * (zs - f0), "z"))
+    k0, ka = p["crank_flat_z"], p["crank_flat"] - d2 / 2
+    g.append(("Crank_flat", "cut", [rect(ka + 1.5, 0, 3, d2 + 2)], k0, L - k0, -segment_area(d2 / 2, ka) * (L - k0), "z"))
+    return g, [d1, d1, L]
 
 
-def crank_arm(p):
+def nut_s(p):
+    """grindmn S nut: knurled body with the stepless scale, a boss that bears on the top bearing's inner ring
+    only, M6 x 0.75 tapped through (modelled at tap-drill size; nylon patch not modelled)."""
+    bh, h = p["boss_h"], p["h"]
+    g = [ring(p["boss_d"], p["tap_d"], 0, bh, "Boss"), ring(p["d"], p["tap_d"], bh, h - bh, "Body")]
+    return g, [p["d"], p["d"], h]
+
+
+def crank_s(p):
+    """grindmn S crank: one piece, plate with a boss underneath; blind D bore on the shaft's flat (the crank
+    rests on the shaft's end, slip fit, nothing holds it); M6 tapped at the handle end."""
     n = 48
-    r1, r2, x1, x2 = p["w_hub"] / 2, p["w_knob"] / 2, p["hub_end_x"], p["knob_x"]
-    pts = [(x1 + r1 * math.cos(math.radians(90 + 180 * i / n)), r1 * math.sin(math.radians(90 + 180 * i / n)))
-           for i in range(n + 1)]
-    pts += [(x2 + r2 * math.cos(math.radians(-90 + 180 * i / n)), r2 * math.sin(math.radians(-90 + 180 * i / n)))
-            for i in range(n + 1)]
-    t = p["t"]
-    s = p["screw_pitch"] / 2
-    g = [
-        ("Plate", "add", [polygon(pts)], 0, t, poly_area(pts) * t, "z"),
-        ("Hub_screws", "cut", [circle(-s, 0, p["screw_hole"]), circle(s, 0, p["screw_hole"])], 0, t,
-         -2 * disc(p["screw_hole"]) * t, "z"),
-        ("Knob_thread", "cut", [circle(x2, 0, TAP_M4)], 0, t, -disc(TAP_M4) * t, "z"),
-    ]
-    return g, [x2 + r2 - (x1 - r1), 2 * r1, t]
-
-
-def crank_knob(p):
-    D, H, fb, fd = p["d"], p["h"], p["flange_bore"], p["flange_depth"]
-    g = [
-        rod(D, 0, H, "Body"),
-        rod(p["through"], 0, H, "Through", "cut"),
-        bore_step(fb, p["through"], 0, fd, "Bearing_bore_low"),
-        bore_step(fb, p["through"], H - fd, fd, "Bearing_bore_high"),
-    ]
-    return g, [D, D, H]
+    r1, r2, x2, t, bh = p["w_hub"] / 2, p["w_knob"] / 2, p["knob_x"], p["t"], p["boss_h"]
+    pts = [(r1 * math.cos(math.radians(90 + 180 * i / n)), r1 * math.sin(math.radians(90 + 180 * i / n))) for i in range(n + 1)]
+    pts += [(x2 + r2 * math.cos(math.radians(-90 + 180 * i / n)), r2 * math.sin(math.radians(-90 + 180 * i / n))) for i in range(n + 1)]
+    g = [rod(p["boss_d"], 0, bh, "Boss"), ("Plate", "add", [polygon(pts)], bh, t, poly_area(pts) * t, "z")]
+    b, dep = p["bore_d"], p["bore_depth"]
+    g.append(rod(b, 0, dep, "Bore", "cut"))
+    fa = p["flat"] - b / 2
+    g.append(("Bore_flat", "add", [rect(fa + 0.75, 0, 1.5, b + 1)], 0, dep, segment_area(b / 2, fa) * dep, "z"))
+    g.append(("Handle_thread", "cut", [circle(x2, 0, p["tap_d"])], bh, t, -disc(p["tap_d"]) * t, "z"))
+    return g, [x2 + r2 + r1, 2 * r1, bh + t]
 
 
 PARTS = {
-    "tube": tube, "bridge": bridge, "spider": spider, "click_disc": click_disc, "adjuster_nut": adjuster_nut,
-    "shaft": shaft, "spacer": spacer, "lid": lid,
-    "catch_cup": catch_cup, "crank_hub": crank_hub, "crank_arm": crank_arm, "crank_knob": crank_knob,
+    "tube": tube, "bridge": bridge, "spider": spider, "stepped_shaft": stepped_shaft, "nut_s": nut_s,
+    "crank_s": crank_s, "catch_cup": catch_cup,
 }
 
 
 # ---------------------------------------------------------------------------- bought parts (envelope detail)
-def round_edge_vol(R, r):
-    """Material removed by a radius-r round on the circular edge of a Ø2R end face."""
-    return r * r * (1 - PI / 4) * 2 * PI * (R - r + 2 * r / (3 * (4 - PI)))
-
 def outer_burr(p):
     """48 mm conical outer burr (assumed sizes; Evershine-style ring from the user's photos)."""
     D, H, fh = p["od"], p["h"], p["flange_h"]
@@ -305,6 +253,12 @@ def outer_burr(p):
     area = integ(width, x0, ap, 4000)
     g.append(("Teeth", "cut", [polygon(rot(tri, i * 360 / n)) for i in range(n)], zt, H - zt,
               -n * area * (H - zt), "z"))
+    if p.get("notches"):  # anti-rotation notches in the lower face (assumed: check on the bought burr)
+        nt = p["notches"]
+        rb_low, x0 = p["bore_low"] / 2, nt["r0"]
+        a = integ(lambda y: sq(R * R - y * y) - max(x0, sq(rb_low * rb_low - y * y)), -nt["w"] / 2, nt["w"] / 2, 2000)
+        g.append(("Notches", "cut", [spoke(x0, R + 1, nt["w"], ang) for ang in nt["angles"]], 0, nt["h"],
+                  -len(nt["angles"]) * a * nt["h"], "z"))
     return g, [D, D, H]
 
 def inner_burr(p):
@@ -338,39 +292,10 @@ def inner_burr(p):
               2 * segment_area(b / 2, fa) * H, "z"))
     return g, [steps[0][0], steps[0][0], H]
 
-def spring(p):
-    """Generic compression spring at its installed length: flat coils joined by short links."""
-    od, w, n, L = p["od"], p["wire"], p["coils"], p["length"]
-    idd = od - 2 * w
-    pitch = (L - w) / (n - 1)
-    g = []
-    for i in range(n):
-        g.append(ring(od, idd, i * pitch, w, f"Coil{i + 1}"))
-    gap = pitch - w
-    rm = od / 2 - w / 2
-    lw = w - 0.2
-    for i in range(n - 1):
-        ang = 180 * (i % 2)
-        prof = spoke(rm - lw / 2, rm + lw / 2, w - 0.2, ang)
-        g.append((f"Link{i + 1}", "add", [prof], i * pitch + w, gap, lw * (w - 0.2) * gap, "z"))
-    return g, [od, od, L]
-
-def ball_plunger(p):
-    """Push-fit ball plunger, smooth Ø5 sleeve flush with the tube OD, rounded Ø3 nose (the ball)."""
-    nd, nh, sd, sl, r = p["nose_d"], p["nose_h"], p["sleeve_d"], p["sleeve_l"], p["nose_round"]
-    g = [rod(nd, 0, nh, "Ball"), rod(sd, nh, sl, "Sleeve"),
-         ("Ball_round", "fillet", [(0, 0, 0)], 0, r, -round_edge_vol(nd / 2, r), "z")]
-    return g, [sd, sd, nh + sl]
-
-PARTS.update({"outer_burr": outer_burr, "inner_burr": inner_burr, "spring": spring, "ball_plunger": ball_plunger})
+PARTS.update({"outer_burr": outer_burr, "inner_burr": inner_burr})
 
 # ---------------------------------------------------------------------------- standard hardware
 # Catalogue-typical sizes (ISO/DIN nominal); single bodies, no thread form, no internal balls.
-
-def hexagon(af):
-    rv = af / math.sqrt(3)
-    return [(rv * math.cos(PI / 3 * i), rv * math.sin(PI / 3 * i)) for i in range(6)]
-
 
 def bearing(p):
     """Deep-groove ball bearing as one body: inner and outer ring joined by shields recessed `recess`."""
@@ -386,40 +311,6 @@ def bearing(p):
     return g, [p.get("flange_d") or D, p.get("flange_d") or D, B]
 
 
-def eclip(p):
-    """DIN 6799 retaining ring as a flat C ring: ring with an opening cut on +x."""
-    od, idd, t, w = p["od"], p["id"], p["t"], p["opening"]
-    g = [ring(od, idd, 0, t, "Ring"),
-         ("Opening", "cut", [rect(od / 4 + 0.5, 0, od / 2 + 1, w)], 0, t,
-          -integ(lambda y: sq((od / 2) ** 2 - y * y) - sq((idd / 2) ** 2 - y * y), -w / 2, w / 2, 2000) * t, "z")]
-    return g, [od / 2 + sq((od / 2) ** 2 - (w / 2) ** 2), od, t]
-
-
-def washer(p):
-    return [ring(p["od"], p["id"], 0, p["t"], "Washer")], [p["od"], p["od"], p["t"]]
-
-
-def screw(p):
-    """Socket screw, z = 0 at the shank tip, head on top. Button heads get a rounded top edge."""
-    L, d, dk, k, af, sd = p["length"], p["d"], p["head_d"], p["head_h"], p["socket"], p["socket_depth"]
-    g = []
-    if p.get("thread_d"):  # shoulder screw: thread, then the shoulder
-        tl = p["thread_l"]
-        g.append(rod(p["thread_d"], 0, tl, "Thread"))
-        g.append(rod(d, tl, L, "Shoulder"))
-        top = tl + L
-    else:
-        g.append(rod(d, 0, L, "Shank"))
-        top = L
-    g.append(rod(dk, top, k, "Head"))
-    if p.get("button_r"):
-        g.append(("Button_round", "fillet", [(0, dk / 4, top + k)], 0, p["button_r"],
-                  -round_edge_vol(dk / 2, p["button_r"]), "z"))
-    hx = hexagon(af)
-    g.append(("Socket", "cut", [polygon(hx)], top + k - sd, sd, -poly_area(hx) * sd, "z"))
-    return g, [dk, dk, top + k]
-
-
 def oring(p):
     """O-ring as installed in its groove: a Ø cs round bar swept round a circle (3 arcs of 120°)."""
     R, cs = p["centre_d"] / 2, p["cs"]
@@ -428,11 +319,13 @@ def oring(p):
     return [("Ring", "sweep", segs, cs / 2, cs, 2 * PI * PI * R * (cs / 2) ** 2, "z")], [2 * R + cs, 2 * R + cs, cs]
 
 
-def magnet(p):
-    return [rod(p["d"], 0, p["h"], "Magnet")], [p["d"], p["d"], p["h"]]
+def handle(p):
+    """Revolving handle as an envelope: threaded stud (at nominal Ø) and the grip."""
+    sl, gl = p["stud_l"], p["grip_l"]
+    return [rod(p["stud_d"], 0, sl, "Stud"), rod(p["grip_d"], sl, gl, "Grip")], [p["grip_d"], p["grip_d"], sl + gl]
 
 
-PARTS.update({"bearing": bearing, "eclip": eclip, "washer": washer, "screw": screw, "oring": oring, "magnet": magnet})
+PARTS.update({"handle": handle, "bearing": bearing, "oring": oring})
 
 
 def expected(kind, p):

@@ -1,5 +1,5 @@
 {
- "_comment": "grindmn hand grinder, top-adjust (2026-11-08), at grind 0, tube z from section 6 of projects/grindmn/requirements.md. Axis on the origin; the crank arm points along +x; outer burr flats and their M4 screws at 90/270 deg, bridge dowel at 0 deg, plunger at r 12 on +x. Written by projects/grindmn/gen_projects.py.",
+ "_comment": "grindmn S (2026-11-08) at grind 0, tube z from section 6 of projects/grindmn/requirements.md. Axis on the origin; the crank points along +x; spider tabs and burr notches at 90/270 deg. Written by projects/grindmn/gen_projects.py.",
  "components": [
   {
    "part": "grindmn_tube",
@@ -51,48 +51,6 @@
    ]
   },
   {
-   "part": "grindmn_eclip_6",
-   "at": [
-    0,
-    0,
-    41.2
-   ],
-   "label": "eclip_burr"
-  },
-  {
-   "part": "grindmn_eclip_6",
-   "at": [
-    0,
-    0,
-    77.0
-   ],
-   "label": "eclip_spring"
-  },
-  {
-   "part": "grindmn_washer_8",
-   "at": [
-    0,
-    0,
-    77.7
-   ]
-  },
-  {
-   "part": "grindmn_spring",
-   "at": [
-    0,
-    0,
-    79.3
-   ]
-  },
-  {
-   "part": "grindmn_spacer",
-   "at": [
-    0,
-    0,
-    94
-   ]
-  },
-  {
    "part": "grindmn_bridge",
    "at": [
     0,
@@ -101,69 +59,20 @@
    ]
   },
   {
-   "part": "grindmn_bearing_608",
+   "part": "grindmn_bearing_626",
    "at": [
     0,
     0,
-    96
+    97
    ],
    "label": "bearing_top"
   },
   {
-   "part": "grindmn_dowel_3x8",
-   "at": [
-    28.5,
-    0,
-    95
-   ]
-  },
-  {
-   "part": "grindmn_lid",
+   "part": "grindmn_nut",
    "at": [
     0,
     0,
     103
-   ]
-  },
-  {
-   "part": "grindmn_click_disc",
-   "at": [
-    0,
-    0,
-    103
-   ]
-  },
-  {
-   "part": "grindmn_ball_plunger",
-   "at": [
-    12,
-    0,
-    107
-   ],
-   "label": "plunger"
-  },
-  {
-   "part": "grindmn_adjuster_nut",
-   "at": [
-    0,
-    0,
-    108
-   ]
-  },
-  {
-   "part": "grindmn_crank_hub",
-   "at": [
-    0,
-    0,
-    121
-   ]
-  },
-  {
-   "part": "grindmn_magnet_6x3",
-   "at": [
-    0,
-    0,
-    133
    ]
   },
   {
@@ -171,68 +80,15 @@
    "at": [
     0,
     0,
-    137.0
+    116
    ]
   },
   {
-   "part": "grindmn_screw_m3x10",
-   "at": [
-    -6,
-    0,
-    133
-   ],
-   "label": "arm_screw_1"
-  },
-  {
-   "part": "grindmn_screw_m3x10",
-   "at": [
-    6,
-    0,
-    133
-   ],
-   "label": "arm_screw_2"
-  },
-  {
-   "part": "grindmn_bearing_mf105",
+   "part": "grindmn_handle",
    "at": [
     85,
     0,
-    143.0
-   ],
-   "label": "knob_bearing_low"
-  },
-  {
-   "part": "grindmn_crank_knob",
-   "at": [
-    85,
-    0,
-    143.8
-   ]
-  },
-  {
-   "part": "grindmn_bearing_mf105",
-   "label": "knob_bearing_high",
-   "xform": [
-    1,
-    0,
-    0,
-    0,
-    -1,
-    0,
-    0,
-    0,
-    -1,
-    85,
-    0,
-    173.0
-   ]
-  },
-  {
-   "part": "grindmn_shoulder_5x30",
-   "at": [
-    85,
-    0,
-    136.5
+    122
    ]
   },
   {
@@ -244,81 +100,33 @@
    ]
   },
   {
-   "part": "grindmn_oring_60x2",
+   "part": "grindmn_oring_58x2",
    "at": [
     0,
     0,
     12.35
    ]
-  },
-  {
-   "part": "grindmn_screw_m4x6",
-   "label": "burr_screw_90",
-   "xform": [
-    -1.0,
-    0.0,
-    0,
-    0,
-    0,
-    1,
-    0.0,
-    1.0,
-    0,
-    0.0,
-    26.0,
-    25
-   ]
-  },
-  {
-   "part": "grindmn_screw_m4x6",
-   "label": "burr_screw_270",
-   "xform": [
-    1.0,
-    -0.0,
-    0,
-    0,
-    0,
-    1,
-    -0.0,
-    -1.0,
-    0,
-    -0.0,
-    -26.0,
-    25
-   ]
   }
  ],
  "expected": {
-  "_comment": "x: cup -34 .. knob 85 + 10 = 95; y: burr-screw heads at 90/270 reach 32 + 2.2 = 34.2 each side; z: cup base -49 .. shoulder screw head 136.5 + 40 = 176.5. Allowed interference: nominal threads in tap-drill holes, the O-ring squeeze, the plunger ball in a click groove.",
+  "_comment": "x: tube and cup -32 .. handle grip 85 + 10 = 95; y: tube and cup +-32; z: cup base -49 .. grip top 122 + 8 + 30 = 160. Allowed interference: nominal threads in tap-drill holes (nut on the shaft, handle stud in the arm) and the O-ring squeeze.",
   "bbox": [
-   129.0,
-   68.4,
-   225.5
+   127.0,
+   64.0,
+   209.0
   ],
   "allowed_interference": [
    [
     "grindmn_catch_cup",
-    "grindmn_oring_60x2"
+    "grindmn_oring_58x2"
    ],
    [
-    "grindmn_screw_m4x6",
-    "grindmn_tube"
-   ],
-   [
-    "grindmn_crank_arm",
-    "grindmn_shoulder_5x30"
-   ],
-   [
-    "grindmn_crank_hub",
-    "grindmn_screw_m3x10"
-   ],
-   [
-    "grindmn_adjuster_nut",
+    "grindmn_nut",
     "grindmn_shaft"
    ],
    [
-    "grindmn_ball_plunger",
-    "grindmn_click_disc"
+    "grindmn_crank_arm",
+    "grindmn_handle"
    ]
   ]
  }

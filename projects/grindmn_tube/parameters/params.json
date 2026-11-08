@@ -6,15 +6,13 @@
   "z_burr_shoulder": 30.0,
   "spider_seat_d": 56.0,
   "z_spider_top": 10.0,
+  "spigot": {
+    "d": 61.0,
+    "h": 20.0
+  },
   "oring_groove": {
     "z0": 12.0,
     "w": 2.7,
-    "floor_d": 60.9
-  },
-  "z_burr_screws": 25.0,
-  "dowel": {
-    "r": 28.5,
-    "d": 3.0,
-    "depth": 6.0
+    "floor_d": 57.9
   }
 }

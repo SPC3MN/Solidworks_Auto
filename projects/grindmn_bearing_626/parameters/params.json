@@ -1,0 +1,9 @@
+{
+  "_kind": "bearing",
+  "d": 6.0,
+  "D": 19.0,
+  "B": 6.0,
+  "ring_od_in": 9.5,
+  "ring_id_out": 15.5,
+  "recess": 0.3
+}

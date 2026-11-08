@@ -1,9 +1,13 @@
 {
-  "t": 6.0,
-  "w_hub": 14.0,
+  "_kind": "crank_s",
+  "t": 8.0,
+  "boss_d": 16.0,
+  "boss_h": 6.0,
+  "w_hub": 16.0,
   "w_knob": 12.0,
-  "hub_end_x": -2.0,
   "knob_x": 85.0,
-  "screw_pitch": 12.0,
-  "screw_hole": 3.4
+  "bore_d": 6.0,
+  "bore_depth": 13.0,
+  "flat": 5.2,
+  "tap_d": 5.0
 }

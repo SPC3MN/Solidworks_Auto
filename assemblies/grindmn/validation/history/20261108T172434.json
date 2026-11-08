@@ -1,0 +1,95 @@
+{
+ "assembly": "grindmn",
+ "time": "2026-11-08T17:24:34",
+ "pass": true,
+ "backend": "freecad",
+ "freecad_version": "1.1.4",
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 13,
+   "actual": 13
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 127.0,
+   "actual": 127.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 64.0,
+   "actual": 64.0
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 209.0,
+   "actual": 209.0
+  },
+  {
+   "id": "interference grindmn_shaft-1 / grindmn_nut-1",
+   "pass": true,
+   "pair": [
+    "grindmn_nut",
+    "grindmn_shaft"
+   ],
+   "labels": [
+    "grindmn_shaft-1",
+    "grindmn_nut-1"
+   ],
+   "volume_mm3": 66.268,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_crank_arm-1 / grindmn_handle-1",
+   "pass": true,
+   "pair": [
+    "grindmn_crank_arm",
+    "grindmn_handle"
+   ],
+   "labels": [
+    "grindmn_crank_arm-1",
+    "grindmn_handle-1"
+   ],
+   "volume_mm3": 69.115,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_catch_cup-1 / grindmn_oring_58x2-1",
+   "pass": true,
+   "pair": [
+    "grindmn_catch_cup",
+    "grindmn_oring_58x2"
+   ],
+   "labels": [
+    "grindmn_catch_cup-1",
+    "grindmn_oring_58x2-1"
+   ],
+   "volume_mm3": 71.3252,
+   "note": "allowed"
+  }
+ ],
+ "bbox_mm": [
+  127.0,
+  64.0,
+  209.0
+ ],
+ "bbox_min_mm": [
+  -32.0,
+  -32.0,
+  -49.0
+ ],
+ "files": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/grindmn.FCStd",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/exports/grindmn.step"
+ ],
+ "renders": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/isometric.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/top.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/front.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/right.png"
+ ]
+}
