@@ -1,10 +1,9 @@
-# grindmn catch_cup: Catch cup (part 9), 6061-T6
+# grindmn catch cup: Part 9, 6061-T6, smooth, bead blast, clear anodise
 
-Every value is **given** in `projects/grindmn/requirements.md` (section 5.9) unless it depends on the burr set
-(marked **assumed** there). Driving values: `parameters/params.json`. Geometry and the hand-worked volume:
-`projects/grindmn/grindmn_parts.py`. z = 0 at the part's own bottom face, z up, axis on the origin.
+Catch cup: slides over the tube's bottom onto the O-ring and stops on the tube's bottom face; about 125 ml chamber.
 
-Expected: volume 58692.608 mm³, bounding box 68.0 × 68.0 × 74.0 mm.
+Values are **given** in `projects/grindmn/requirements.md` (top-adjust layout, 2026-11-08) unless they depend on the burr set (**assumed** there). Driving values: `parameters/params.json`, written by `projects/grindmn/gen_projects.py`. Geometry and the hand-worked volume: `projects/grindmn/grindmn_parts.py`. z = 0 at the part's own bottom face, z up, axis on the origin.
 
-Left out on purpose: thread form (threads at nominal diameter), knurls, 0.3 edge chamfers, lead-ins, etching.
-Tapped holes are at tap-drill size (M4 Ø3.3, M3 Ø2.5).
+Expected: volume 58768.321 mm³, bounding box 68.0 × 68.0 × 69.0 mm.
+
+Left out on purpose: thread form (threads at nominal or tap-drill diameter), knurls, 0.3 edge chamfers, etching; click grooves are modelled square.

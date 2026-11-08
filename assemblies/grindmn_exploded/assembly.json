@@ -1,10 +1,10 @@
 {
- "_comment": "Exploded view of grindmn: housing and crank on the axis (x = 0), bottom to top in fitting order with 12 mm gaps; the knob stack above the arm's knob end (x = 85); the shaft group beside it at x = -110 (shaft, then the parts that slide on from its top end); radial screws and the plunger pulled 20 mm out of their holes in the tube. Extents worked out from each part's spec bbox.",
+ "_comment": "Exploded view of the top-adjust grindmn: housing and crank on the axis (x = 0), bottom to top in fitting order with 12 mm gaps; the shaft group at x = -110; the knob stack above the arm's knob end (x = 85); the burr screws pulled 20 mm out. Written by projects/grindmn/gen_projects.py.",
  "components": [
   {
    "part": "grindmn_catch_cup",
    "at": [
-    0,
+    0.0,
     0,
     0.0
    ]
@@ -12,152 +12,225 @@
   {
    "part": "grindmn_oring_60x2",
    "at": [
+    0.0,
     0,
-    0,
-    86.0
+    81.0
    ]
   },
   {
-   "part": "grindmn_dial",
+   "part": "grindmn_spider",
    "at": [
+    0.0,
     0,
-    0,
-    100.0
+    95.0
    ]
   },
   {
    "part": "grindmn_bearing_608",
    "at": [
+    0.0,
     0,
-    0,
-    146.5
-   ],
-   "label": "bearing_lower"
+    122.0
+   ]
   },
   {
    "part": "grindmn_outer_burr",
    "at": [
+    0.0,
     0,
-    0,
-    165.5
+    141.0
    ]
   },
   {
    "part": "grindmn_tube",
    "at": [
+    0.0,
     0,
+    173.0
+   ]
+  },
+  {
+   "part": "grindmn_dowel_3x8",
+   "at": [
+    28.5,
     0,
-    197.5
+    284.0
    ]
   },
   {
    "part": "grindmn_bridge",
    "at": [
+    0.0,
     0,
-    0,
-    331.5
+    304.0
    ]
   },
   {
    "part": "grindmn_bearing_608",
    "at": [
+    0.0,
     0,
-    0,
-    351.5
-   ],
-   "label": "bearing_top"
+    328.0
+   ]
   },
   {
    "part": "grindmn_lid",
    "at": [
+    0.0,
     0,
-    0,
-    370.5
+    347.0
    ]
   },
   {
-   "part": "grindmn_magnet_6x3",
+   "part": "grindmn_click_disc",
    "at": [
+    0.0,
     0,
+    362.0
+   ]
+  },
+  {
+   "part": "grindmn_ball_plunger",
+   "at": [
+    12.0,
     0,
-    388.5
+    379.0
+   ]
+  },
+  {
+   "part": "grindmn_adjuster_nut",
+   "at": [
+    0.0,
+    0,
+    396.0
    ]
   },
   {
    "part": "grindmn_crank_hub",
    "at": [
+    0.0,
     0,
+    418.0
+   ]
+  },
+  {
+   "part": "grindmn_magnet_6x3",
+   "at": [
+    0.0,
     0,
-    403.5
+    449.0
    ]
   },
   {
    "part": "grindmn_crank_arm",
    "at": [
+    0.0,
     0,
-    0,
-    434.5
+    464.0
    ]
   },
   {
-   "part": "grindmn_screw_m3x8",
+   "part": "grindmn_screw_m3x10",
    "at": [
-    -6,
+    -6.0,
     0,
-    452.5
-   ],
-   "label": "arm_screw_1"
+    482.0
+   ]
   },
   {
-   "part": "grindmn_screw_m3x8",
+   "part": "grindmn_screw_m3x10",
    "at": [
-    6,
+    6.0,
     0,
-    452.5
-   ],
-   "label": "arm_screw_2"
+    482.0
+   ]
+  },
+  {
+   "part": "grindmn_shaft",
+   "at": [
+    -110.0,
+    0,
+    0.0
+   ]
+  },
+  {
+   "part": "grindmn_inner_burr",
+   "at": [
+    -110.0,
+    0,
+    150.0
+   ]
+  },
+  {
+   "part": "grindmn_eclip_6",
+   "at": [
+    -110.0,
+    0,
+    192.0
+   ]
+  },
+  {
+   "part": "grindmn_eclip_6",
+   "at": [
+    -110.0,
+    0,
+    204.7
+   ]
+  },
+  {
+   "part": "grindmn_washer_8",
+   "at": [
+    -110.0,
+    0,
+    217.4
+   ]
+  },
+  {
+   "part": "grindmn_spring",
+   "at": [
+    -110.0,
+    0,
+    231.0
+   ]
+  },
+  {
+   "part": "grindmn_spacer",
+   "at": [
+    -110.0,
+    0,
+    257.7
+   ]
   },
   {
    "part": "grindmn_bearing_mf105",
    "at": [
-    85,
+    85.0,
     0,
-    452.5
-   ],
-   "label": "knob_bearing_low"
+    482.0
+   ]
   },
   {
    "part": "grindmn_crank_knob",
    "at": [
-    85,
+    85.0,
     0,
-    468.5
+    498.0
    ]
   },
   {
    "part": "grindmn_bearing_mf105",
-   "label": "knob_bearing_high",
-   "xform": [
-    1,
+   "at": [
+    85.0,
     0,
-    0,
-    0,
-    -1,
-    0,
-    0,
-    0,
-    -1,
-    85,
-    0,
-    512.9
+    538.4
    ]
   },
   {
    "part": "grindmn_shoulder_5x30",
    "at": [
-    85,
+    85.0,
     0,
-    524.9
+    554.4
    ]
   },
   {
@@ -174,8 +247,8 @@
     1.0,
     0,
     0.0,
-    52.0,
-    237.5
+    46.0,
+    198.0
    ]
   },
   {
@@ -192,111 +265,16 @@
     -1.0,
     0,
     -0.0,
-    -52.0,
-    237.5
-   ]
-  },
-  {
-   "part": "grindmn_screw_m4x12",
-   "label": "bridge_screw",
-   "xform": [
-    -0.0,
-    1.0,
-    0,
-    0,
-    0,
-    1,
-    1.0,
-    0.0,
-    0,
-    52.0,
-    0.0,
-    312.5
-   ]
-  },
-  {
-   "part": "grindmn_ball_plunger",
-   "label": "plunger",
-   "xform": [
-    -0.0,
-    -1.0,
-    0,
-    0,
-    0,
-    1,
-    -1.0,
-    0.0,
-    0,
-    -52.0,
-    0.0,
-    219.5
-   ]
-  },
-  {
-   "part": "grindmn_shaft",
-   "at": [
-    -110.0,
-    0,
-    0.0
-   ]
-  },
-  {
-   "part": "grindmn_inner_burr",
-   "at": [
-    -110.0,
-    0,
-    133.0
-   ]
-  },
-  {
-   "part": "grindmn_eclip_6",
-   "at": [
-    -110.0,
-    0,
-    175.0
-   ],
-   "label": "eclip_burr"
-  },
-  {
-   "part": "grindmn_eclip_6",
-   "at": [
-    -110.0,
-    0,
-    187.7
-   ],
-   "label": "eclip_spring"
-  },
-  {
-   "part": "grindmn_washer_8",
-   "at": [
-    -110.0,
-    0,
-    200.4
-   ]
-  },
-  {
-   "part": "grindmn_spring",
-   "at": [
-    -110.0,
-    0,
-    214.0
-   ]
-  },
-  {
-   "part": "grindmn_spacer",
-   "at": [
-    -110.0,
-    0,
-    242.2
+    -46.0,
+    198.0
    ]
   }
  ],
  "expected": {
-  "_comment": "min [-133.8, -60.2, 0.0], max [95.0, 60.2, 564.9]",
   "bbox": [
    228.8,
-   120.4,
-   564.9
+   108.4,
+   594.4
   ],
   "bbox_tol": 0.2,
   "views": [

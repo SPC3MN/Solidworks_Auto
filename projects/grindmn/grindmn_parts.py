@@ -7,7 +7,7 @@ Each part is a list of ops (name, op, profiles, z0, h, volume, axis):
 Volumes are worked out by hand (closed forms or 1-D integrals), never read back from SolidWorks.
 z = 0 is each part's own bottom face (see ../requirements.md), z up.
 
-Simplified, on purpose: threads at nominal diameter (tube: minor Ø, dial: major Ø), no thread form,
+Simplified, on purpose: threads at nominal diameter (shaft: major Ø), no thread form,
 no knurl, no 0.3 edge chamfers, no etching. Tapped holes are modelled at their tap-drill size.
 """
 import math
@@ -99,92 +99,86 @@ def radial(name, d, z, deg, ri, ro):
 # ---------------------------------------------------------------------------- parts
 
 def tube(p):
+    """Top-adjust tube: three bores from the bottom in one chucking (spider seat, burr seat, hopper);
+    the bridge sits in the top of the hopper bore with its flange on the top face."""
     L, OD = p["length"], p["od"]
     g = [rod(OD, 0, L, "Body")]
-    # bores from the bottom, widest-reaching first (each cut starts at z = 0)
-    vol_removed = 0
-    bores = [  # (d, z_top) cut from z = 0 upward
-        (p["lip_d"], L), (p["bridge_seat_d"], p["z_bridge_shoulder"]), (p["hopper_d"], p["z_hopper_top"]),
-        (p["burr_seat_d"], p["z_burr_shoulder"]), (p["pilot_d"], p["z_pilot_top"]),
+    bores = [  # (d, z_top) cut from z = 0 upward, widest-reaching first
+        ("Hopper", p["hopper_d"], L), ("Burr_seat", p["burr_seat_d"], p["z_burr_shoulder"]),
+        ("Spider_seat", p["spider_seat_d"], p["z_spider_top"]),
     ]
     prev = 0.0
-    for i, (d, ztop) in enumerate(bores):
-        name = ["Lip_bore", "Bridge_seat", "Hopper", "Burr_seat", "Pilot_seat"][i]
-        v = (disc(d) - (disc(prev) if prev else 0)) * ztop
-        g.append((name, "cut", [circle(0, 0, d)], 0, ztop, -v, "z"))
+    for name, d, ztop in bores:
+        g.append((name, "cut", [circle(0, 0, d)], 0, ztop, -(disc(d) - (disc(prev) if prev else 0)) * ztop, "z"))
         prev = d
-        vol_removed += v
-    # thread minor Ø over 0..10 is wider than the pilot; relief wider again
-    g.append(bore_step(p["thread_minor_d"], p["pilot_d"], 0, p["z_thread_top"], "Thread_minor"))
-    g.append(bore_step(p["relief_d"], p["pilot_d"], p["z_thread_top"], p["relief_h"], "Thread_relief"))
     gz = p["oring_groove"]
-    g.append(ring(OD + 2, gz["floor_d"], gz["z0"], gz["w"], "Oring_groove", "cut"))
-    # the ring() volume above assumes the full annulus; correct to the part outside the floor only
-    name, op, prof, z0, h, _, ax = g[-1]
-    g[-1] = (name, op, prof, z0, h, -(disc(OD) - disc(gz["floor_d"])) * h, ax)
+    g.append(("Oring_groove", "cut", [circle(0, 0, OD + 2), circle(0, 0, gz["floor_d"])], gz["z0"], gz["w"],
+              -(disc(OD) - disc(gz["floor_d"])) * gz["w"], "z"))
     r = OD / 2
     g.append(radial("Burr_screw_90", TAP_M4, p["z_burr_screws"], 90, p["burr_seat_d"] / 2, r))
     g.append(radial("Burr_screw_270", TAP_M4, p["z_burr_screws"], 270, p["burr_seat_d"] / 2, r))
-    g.append(radial("Bridge_screw", TAP_M4, p["z_bridge_screw"], 0, p["bridge_seat_d"] / 2, r))
-    g.append(radial("Plunger_hole", p["plunger_d"], p["z_plunger"], 180, p["pilot_d"] / 2, r))
+    dw = p["dowel"]
+    g.append(("Dowel_hole", "cut", [circle(dw["r"], 0, dw["d"])], L - dw["depth"], dw["depth"],
+              -disc(dw["d"]) * dw["depth"], "z"))
     return g, [OD, OD, L]
 
 
-def groove_area(R, depth):
-    """90Â° V-groove, apex at R - depth: area inside the circle R."""
-    a = R - depth
-    xm = R + 1.0
-    return integ(lambda x: 2 * min(x - a, sq(R * R - x * x)), a, xm)
-
-
-def dial(p):
-    g = [
-        rod(p["flange_d"], 0, p["z_thread0"], "Flange"),
-        rod(p["thread_d"], p["z_thread0"], p["z_thread1"] - p["z_thread0"], "Thread"),
-        rod(p["relief_d"], p["z_thread1"], p["z_pilot0"] - p["z_thread1"], "Relief"),
-        rod(p["pilot_d"], p["z_pilot0"], p["h"] - p["z_pilot0"], "Pilot"),
-        rod(p["bore_d"], 0, p["h"], "Ring_bore", "cut"),
-    ]
-    hz0, hh = p["h"] - p["hub_h"], p["hub_h"]
-    g.append(ring(p["hub_d"], p["lip_hole_d"], hz0, hh, "Hub"))
-    rh, rb, w = p["hub_d"] / 2, p["bore_d"] / 2, p["spoke_w"]
-    sp = [spoke(rh - 1, rb + 1, w, a) for a in p["spoke_angles"]]
-    g.append(("Spokes", "add", sp, hz0, hh, len(sp) * strip_between(rh, rb, w) * hh, "z"))
-    seat_h = p["seat_depth"]
-    g.append(ring(p["seat_d"], p["lip_hole_d"], p["h"] - seat_h, seat_h, "Bearing_seat", "cut"))
-    # click grooves: 60 V-grooves on the pilot
-    R, dep, n = p["pilot_d"] / 2, p["groove_depth"], p["grooves"]
-    a, out = R - dep, R + 1.0
-    tri = [(a, 0), (out, out - a), (out, -(out - a))]
-    profs = [polygon(rot(tri, i * 360 / n)) for i in range(n)]
-    gh = p["h"] - p["z_pilot0"]
-    g.append(("Click_grooves", "cut", profs, p["z_pilot0"], gh, -n * groove_area(R, dep) * gh, "z"))
-    return g, [p["flange_d"], p["flange_d"], p["h"]]
-
-
 def bridge(p):
-    t = p["t"]
+    """Top bearing carrier: pilot ring in the hopper bore, flange on the tube's top face, hub with the
+    608 seat bored from the top (the adjuster nut loads it down), three spokes, wide bean openings."""
+    t, ph = p["t"], p["pilot_h"]
     g = [
-        ring(p["od"], p["ring_id"], 0, t, "Outer_ring"),
+        ring(p["pilot_od"], p["ring_id"], 0, ph, "Pilot_ring"),
+        ring(p["flange_od"], p["ring_id"], ph, t - ph, "Flange"),
         ring(p["hub_d"], p["lip_hole_d"], 0, t, "Hub"),
     ]
     rh, rr, w = p["hub_d"] / 2, p["ring_id"] / 2, p["spoke_w"]
     sp = [spoke(rh - 1, rr + 1, w, a) for a in p["spoke_angles"]]
     g.append(("Spokes", "add", sp, 0, t, len(sp) * strip_between(rh, rr, w) * t, "z"))
+    g.append(bore_step(p["seat_d"], p["lip_hole_d"], t - p["seat_depth"], p["seat_depth"], "Bearing_seat"))
+    dw = p["dowel"]
+    g.append(("Dowel_hole", "cut", [circle(dw["r"], 0, dw["d"])], ph, t - ph, -disc(dw["d"]) * (t - ph), "z"))
+    return g, [p["flange_od"], p["flange_od"], t]
+
+
+def spider(p):
+    """Lower bearing carrier, pressed into the tube from below against the outer burr: thin ring,
+    three spokes, hub with the 608 seat bored from the bottom. Open over the burr exit."""
+    hh, rz, rh_ = p["hub_h"], p["ring_z0"], p["ring_h"]
+    g = [
+        ring(p["hub_d"], p["lip_hole_d"], 0, hh, "Hub"),
+        ring(p["ring_od"], p["ring_id"], rz, rh_, "Ring"),
+    ]
+    rh, rr, w = p["hub_d"] / 2, p["ring_id"] / 2, p["spoke_w"]
+    sz0, sz1 = p["spoke_z"]
+    sp = [spoke(rh - 1, rr + 1, w, a) for a in p["spoke_angles"]]
+    g.append(("Spokes", "add", sp, sz0, sz1 - sz0, len(sp) * strip_between(rh, rr, w) * (sz1 - sz0), "z"))
     g.append(bore_step(p["seat_d"], p["lip_hole_d"], 0, p["seat_depth"], "Bearing_seat"))
-    # screw groove on the OD: 15Â° arc at 0Â°, 1 deep, 2 wide, centred 4 below the top
-    R, dep, arc, gw = p["od"] / 2, p["groove_depth"], p["groove_arc"], p["groove_w"]
-    ri, n = R - dep, 24
-    inner = [(ri * math.cos(math.radians(-arc / 2 + arc * i / n)), ri * math.sin(math.radians(-arc / 2 + arc * i / n)))
-             for i in range(n + 1)]
-    ro = R + 1.5
-    outer = [(ro * math.cos(math.radians(arc / 2)), ro * math.sin(math.radians(arc / 2))),
-             (ro * math.cos(math.radians(-arc / 2)), ro * math.sin(math.radians(-arc / 2)))]
-    fan = sum(abs(x0 * y1 - x1 * y0) / 2 for (x0, y0), (x1, y1) in zip(inner, inner[1:]))
-    area = PI * R * R * arc / 360 - fan
-    gz0 = t - p["groove_from_top"] - gw / 2
-    g.append(("Screw_groove", "cut", [polygon(inner + outer)], gz0, gw, -area * gw, "z"))
-    return g, [p["od"], p["od"], t]
+    return g, [p["ring_od"], p["ring_od"], max(hh, rz + rh_)]
+
+
+def click_disc(p):
+    """Keyed to the shaft's flat; the boss presses on the top bearing's inner ring only; radial click
+    grooves on the top face for the nut's ball plunger (modelled square, real ones 90 deg V)."""
+    bh, t, D = p["boss_h"], p["t"], p["d"]
+    g = [ring(p["boss_d"], p["bore_d"], 0, bh, "Boss"), ring(D, p["bore_d"], bh, t - bh, "Disc")]
+    fa = p["flat"] - p["bore_d"] / 2
+    g.append(("Bore_flat", "add", [rect(fa + 0.75, 0, 1.5, p["bore_d"] + 1)], bh, t - bh,
+              segment_area(p["bore_d"] / 2, fa) * (t - bh), "z"))
+    R, ri, w, dep, n = D / 2, p["groove_r_in"], p["groove_w"], p["groove_depth"], p["clicks"]
+    a = integ(lambda y: sq(R * R - y * y) - ri, -w / 2, w / 2, 2000)
+    g.append(("Click_grooves", "cut", [spoke(ri, R + 1, w, i * 360 / n) for i in range(n)], t - dep, dep,
+              -n * a * dep, "z"))
+    return g, [D, D, t]
+
+
+def adjuster_nut(p):
+    """Knurled grind dial: M8 x 0.75 tapped through (modelled at tap-drill size), push-fit ball plunger
+    pointing down into the click disc."""
+    h = p["h"]
+    g = [ring(p["d"], p["tap_d"], 0, h, "Body"),
+         ("Plunger_hole", "cut", [circle(p["plunger_r"], 0, p["plunger_d"])], 0, h, -disc(p["plunger_d"]) * h, "z")]
+    return g, [p["d"], p["d"], h]
 
 
 def shaft(p):
@@ -211,11 +205,10 @@ def spacer(p):
 
 
 def lid(p):
-    g = [
-        ring(p["spigot_d"], p["hole_d"], 0, p["spigot_h"], "Spigot"),
-        ring(p["od"], p["hole_d"], p["spigot_h"], p["t"], "Plate"),
-    ]
-    return g, [p["od"], p["od"], p["spigot_h"] + p["t"]]
+    sh = p.get("spigot_h", 0)
+    g = [ring(p["spigot_d"], p["hole_d"], 0, sh, "Spigot")] if sh else []
+    g.append(ring(p["od"], p["hole_d"], sh, p["t"], "Plate"))
+    return g, [p["od"], p["od"], sh + p["t"]]
 
 
 def catch_cup(p):
@@ -278,7 +271,8 @@ def crank_knob(p):
 
 
 PARTS = {
-    "tube": tube, "dial": dial, "bridge": bridge, "shaft": shaft, "spacer": spacer, "lid": lid,
+    "tube": tube, "bridge": bridge, "spider": spider, "click_disc": click_disc, "adjuster_nut": adjuster_nut,
+    "shaft": shaft, "spacer": spacer, "lid": lid,
     "catch_cup": catch_cup, "crank_hub": crank_hub, "crank_arm": crank_arm, "crank_knob": crank_knob,
 }
 

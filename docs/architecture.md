@@ -5,6 +5,9 @@ which CAD program is used, so it should carry over to SolidWorks.
 
 ## Principles
 
+- **Simplest effective design first.** The tool exists to produce designs that work with the fewest parts,
+  features and setups. A review asks of every part whether it can be removed or merged before it asks how to
+  improve it.
 - **Scripts and parameters are the authoritative inputs.** The native CAD file
   (`.SLDPRT` / `.SLDASM`) is a generated output that can always be rebuilt from
   `parameters/params.json` + `design/model.*`.

@@ -10,11 +10,14 @@ caller passes `params` names, so GUI edits rebuild correctly (see sw_params.py).
 import math
 import time
 
-import pythoncom
-import win32com.client
-from win32com.client import VARIANT
+try:  # Windows + pywin32; without them the profile helpers still import (generators' expected())
+    import pythoncom
+    import win32com.client
+    from win32com.client import VARIANT
 
-NOTHING = VARIANT(pythoncom.VT_DISPATCH, None)
+    NOTHING = VARIANT(pythoncom.VT_DISPATCH, None)
+except ImportError:
+    pythoncom = win32com = VARIANT = NOTHING = None
 MM = 0.001
 SW_DEFAULT_TEMPLATE_PART = 8
 SW_INPUT_DIM_VAL_ON_CREATE = 10

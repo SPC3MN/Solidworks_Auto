@@ -1,0 +1,21 @@
+{
+  "hub_d": 30.0,
+  "hub_h": 10.0,
+  "lip_hole_d": 14.0,
+  "ring_od": 56.0,
+  "ring_id": 52.0,
+  "ring_z0": 5.0,
+  "ring_h": 10.0,
+  "spoke_w": 4.0,
+  "spoke_z": [
+    5.0,
+    10.0
+  ],
+  "spoke_angles": [
+    0,
+    120,
+    240
+  ],
+  "seat_d": 22.0,
+  "seat_depth": 7.0
+}

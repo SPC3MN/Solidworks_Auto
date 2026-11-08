@@ -53,6 +53,16 @@ All **90** projects with a `model.py` and `spec.json` pass their existing specs 
 fixed by the three points above. Typical run 3 s end to end; the slowest are `airmn_fan_housing` (1132 holes,
 84 s), `rpi_dac_pro` (17 s) and the boards (10–12 s).
 
+## Assemblies (scripts/fc/fc_assembly.py)
+
+- Each component is the part's promoted STEP (`projects/<part>/exports/<part>.step`, from either backend) read once
+  with `Part.read`, copied and placed with `transformShape(Matrix)`. `at` + `rot_z` and the row-vector `xform` map
+  to the same 4 × 4 as SolidWorks' `Transform2`, so `assembly.json` files need no change.
+- Interference: pairwise `common().Volume > 1e-3 mm³` after a bounding-box prefilter. Touching faces give zero,
+  as with SolidWorks' coincidence off. grindmn (31 components): about 40 s including the Blender views.
+- The assembly STEP comes from `Import.export` of one `Part::Feature` per component, so it imports into Blender
+  (and FreeCAD) as separate products.
+
 ## Check renders
 
 - Headless FreeCAD has no 3D view, so the pipeline renders the exported STL in Blender

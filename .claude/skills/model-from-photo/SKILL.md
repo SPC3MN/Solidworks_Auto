@@ -5,13 +5,20 @@ description: Turn a photo, a part number, a written spec or breakdown (a multi-p
 
 # Photo, part number, spec or brief → validated CAD model
 
+**The main goal is the simplest design that works** (owner, 2026-11-08). Before modelling a product, and again
+when reviewing one, ask for each part and feature: can it be removed, merged with another, or made in fewer
+setups? Prefer one load path, standard hardware, one lathe chucking per part and parts that come apart for
+cleaning without losing their setting. Removing a part beats adding a fix for it. For a design change, plan
+first with sketches (section through the axis, the load path) and get the user's confirmation before modelling.
+grindmn's top-adjust redesign is the worked example (`projects/grindmn/requirements.md`).
+
 The workflow below is the same in every CAD program. What changes per program lives in a **backend**:
 how to build features, measure the result, export, render and check assemblies.
 
 | Backend | Status | Reference |
 |---|---|---|
 | SolidWorks 2025 over COM (pywin32) | in use, every tool below verified | [references/solidworks.md](references/solidworks.md) |
-| FreeCAD 1.x (Python, headless `FreeCADCmd`) | parts and pipeline verified (FreeCAD 1.1.4, Linux); assemblies and drawings not yet | [references/freecad.md](references/freecad.md) |
+| FreeCAD 1.x (Python, headless `FreeCADCmd`) | parts, pipeline and assemblies verified (FreeCAD 1.1.4, Linux); drawings not yet | [references/freecad.md](references/freecad.md) |
 
 **Pick the backend first.** Use the one the user names. Otherwise use FreeCAD once its backend exists and has
 passed the probe in its reference, and SolidWorks until then. Read that backend's reference before building:

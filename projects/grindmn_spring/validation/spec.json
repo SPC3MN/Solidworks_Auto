@@ -12,11 +12,11 @@
     "tol": 0.05
   },
   "bbox.z": {
-    "expected": 16.2,
+    "expected": 14.7,
     "tol": 0.05
   },
   "volume": {
-    "expected": 302.148,
+    "expected": 300.648,
     "rel_tol": 0.001
   },
   "export.step": {

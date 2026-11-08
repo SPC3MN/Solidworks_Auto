@@ -1,0 +1,38 @@
+{
+ "assembly": "grindmn_exploded",
+ "time": "2026-11-08T16:30:31",
+ "pass": true,
+ "backend": "freecad",
+ "freecad_version": "1.1.4",
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 31,
+   "actual": 31
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  228.8,
+  108.4,
+  594.4
+ ],
+ "bbox_min_mm": [
+  -133.8,
+  -54.2,
+  0.0
+ ],
+ "files": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn_exploded/grindmn_exploded.FCStd",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn_exploded/exports/grindmn_exploded.step"
+ ],
+ "renders": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn_exploded/renders/isometric.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn_exploded/renders/front.png"
+ ]
+}

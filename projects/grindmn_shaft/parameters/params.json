@@ -1,22 +1,22 @@
 {
   "d": 8.0,
-  "length": 121.0,
+  "length": 138.0,
   "collar_d": 10.0,
   "collar_z": [
-    8.0,
-    11.0
+    13.0,
+    16.0
   ],
   "groove_d": 6.0,
   "groove_w": 0.74,
   "clip_grooves_z": [
-    41.2,
-    70.5
+    46.2,
+    82.0
   ],
   "burr_drive_z": [
-    11.0,
-    41.0
+    16.0,
+    46.0
   ],
   "burr_flats": 6.5,
   "crank_flat": 7.2,
-  "crank_flat_z": 109.0
+  "crank_flat_z": 110.0
 }

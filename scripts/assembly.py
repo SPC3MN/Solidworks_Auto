@@ -11,21 +11,32 @@ A JSON report goes to validation/history/. Renders go to renders/ (shaded) and
 renders/wireframe/ (off-white lines on charcoal).
 
     .venv\\Scripts\\python scripts\\assembly.py assemblies\\pi5_dac_hat
+    python3 scripts/assembly.py assemblies/grindmn --backend freecad
+
+--backend freecad (the default off Windows; CAD_BACKEND overrides it) places the parts' promoted STEP
+files in FreeCADCmd (scripts/fc/fc_assembly.py) and renders the check views in Blender. It checks the
+component count, bbox and interference the same way; vendor-assembly options (baseline_interference,
+faces_before, explode lines) are SolidWorks only.
 """
 import argparse
 import datetime as dt
 import json
 import math
+import os
 import pathlib
 import sys
-
-import pythoncom
-import win32com.client as w
-from win32com.client import VARIANT
+import tempfile
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-import swlib  # noqa: E402
-from swlib import _invoke  # noqa: E402
+try:  # SolidWorks backend: Windows + pywin32 only
+    import pythoncom
+    import win32com.client as w
+    from win32com.client import VARIANT
+
+    import swlib  # noqa: E402
+    from swlib import _invoke  # noqa: E402
+except ImportError:
+    pythoncom = None
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 MM = 0.001
@@ -222,7 +233,82 @@ def _run(app, folder, spec, exp):
     return report
 
 
+def placement_matrix(c):
+    """4 x 4 rows (mm) from at + rot_z, or from xform (row-vector R then t, as for SolidWorks above)."""
+    if c.get("xform") is not None:
+        r, t = c["xform"][:9], c["xform"][9:12]
+    else:
+        a = math.radians(c.get("rot_z", 0))
+        r, t = [math.cos(a), math.sin(a), 0, -math.sin(a), math.cos(a), 0, 0, 0, 1], c["at"]
+    return [r[0], r[3], r[6], t[0], r[1], r[4], r[7], t[1], r[2], r[5], r[8], t[2], 0, 0, 0, 1]
+
+
+def run_freecad(folder):
+    import freecad_run
+    import render_config
+    spec = json.loads((folder / "assembly.json").read_text())
+    exp = spec.get("expected", {})
+    name, checks, comps, counts = folder.name, [], [], {}
+
+    def check(cid, ok, **kw):
+        checks.append({"id": cid, "pass": bool(ok), **kw})
+
+    for c in spec["components"]:
+        part = c.get("part")
+        step = ROOT / "projects" / str(part) / "exports" / f"{part}.step"
+        if not part or not step.exists():
+            check(f"component {part or c.get('file')}", False, note="no promoted STEP (run the pipeline first)")
+            continue
+        counts[part] = counts.get(part, 0) + 1
+        comps.append({"part": part, "label": c.get("label") or f"{part}-{counts[part]}", "step": str(step),
+                      "matrix": placement_matrix(c)})
+    out = pathlib.Path(tempfile.mkdtemp(prefix="fcasm_")) / "asm.json"
+    stl = out.with_name(f"{name}.stl")
+    (folder / "exports").mkdir(exist_ok=True)
+    job = {"components": comps, "fcstd": str(folder / f"{name}.FCStd"), "step": str(folder / "exports" / f"{name}.step"),
+           "stl": str(stl), "out_json": str(out)}
+    proc, cmd = freecad_run.run(pathlib.Path(__file__).parent / "fc" / "fc_assembly.py", "FC_JOB", job)
+    err = out.with_name(out.name + ".error")
+    if err.exists() or not out.exists():
+        sys.exit(f"FreeCAD assembly failed ({freecad_run.describe(cmd)}):\n" +
+                 (err.read_text() if err.exists() else proc.stdout[-3000:] + proc.stderr[-3000:]))
+    r = json.loads(out.read_text())
+
+    n_exp = len(spec["components"])
+    check("components", r["components"] == n_exp, expected=n_exp, actual=r["components"])
+    for ax, e, a in zip("xyz", exp.get("bbox") or [], r["bbox"]):
+        check(f"bbox.{ax}", abs(a - e) <= exp.get("bbox_tol", 0.1), expected=e, actual=a)
+    allowed = [sorted(p) for p in exp.get("allowed_interference", [])]
+    for itf in r["interference"]:
+        ok = itf["pair"] in allowed
+        check("interference " + " / ".join(itf["labels"]), ok, **itf, note="allowed" if ok else "unexpected")
+    if not r["interference"]:
+        check("interference", True, note="none found")
+
+    views = tuple(exp.get("views", ("isometric", "top", "front", "right")))
+    renders = []
+    if render_config.blender_exe():
+        code, _ = render_config.run_blender("bl_check_views.py", "--stl", stl, "--out", folder / "renders",
+                                            "--views", ",".join(views), timeout=900)
+        renders = [folder / "renders" / f"{v}.png" for v in views] if code == 0 else []
+    ok = all(c["pass"] for c in checks)
+    report = {"assembly": name, "time": dt.datetime.now().isoformat(timespec="seconds"), "pass": ok,
+              "backend": "freecad", "freecad_version": r["freecad_version"], "checks": checks,
+              "bbox_mm": r["bbox"], "bbox_min_mm": r["bbox_min"], "files": [job["fcstd"], job["step"]],
+              "renders": [str(p) for p in renders]}
+    hist = folder / "validation" / "history"
+    hist.mkdir(parents=True, exist_ok=True)
+    (hist / f"{dt.datetime.now():%Y%m%dT%H%M%S}.json").write_text(json.dumps(report, indent=1))
+    for c in checks:
+        print(("PASS " if c["pass"] else "FAIL ") + c["id"], {k: v for k, v in c.items() if k not in ("id", "pass")})
+    print("PASS" if ok else "FAIL", name)
+    return report
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("folder", type=pathlib.Path)
-    run(ap.parse_args().folder.resolve())
+    ap.add_argument("--backend", choices=("solidworks", "freecad"),
+                    default=os.environ.get("CAD_BACKEND") or ("solidworks" if os.name == "nt" else "freecad"))
+    a = ap.parse_args()
+    (run_freecad if a.backend == "freecad" else run)(a.folder.resolve())

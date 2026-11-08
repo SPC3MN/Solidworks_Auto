@@ -3,8 +3,11 @@
 Status: **part backend built and verified** on FreeCAD 1.1.4 (Linux Flatpak), 2026-11-08:
 `scripts/fc/fclib.py` (swlib's API on OCCT booleans), `scripts/fc/fc_job.py` (runs in FreeCADCmd) and
 `pipeline.py --backend freecad`. Verified behaviour is in [docs/freecad_findings.md](../../../../docs/freecad_findings.md);
-it overrides the mapping below where they differ. Not built yet: assemblies (`assembly.py`), TechDraw drawings,
-and GUI-parametric `.FCStd` files (the native file holds the result shape plus a `Params` spreadsheet).
+it overrides the mapping below where they differ. Assemblies: `python3 scripts/assembly.py assemblies/<name>
+--backend freecad` (`scripts/fc/fc_assembly.py`) places each part's promoted STEP and checks component count, bbox
+and pairwise interference against `assembly.json`. Not built yet: TechDraw drawings, GUI-parametric `.FCStd` files
+(the native file holds the result shape plus a `Params` spreadsheet), and the vendor-assembly options
+(`baseline_interference`, `faces_before`, explode lines).
 
 Run: `python3 scripts/pipeline.py projects/<name> --backend freecad` (the default off Windows; `CAD_BACKEND`
 overrides it). Add `--no-promote` to check without copying outputs into `design/` and `exports/`.

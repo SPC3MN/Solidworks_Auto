@@ -1,0 +1,165 @@
+{
+ "assembly": "grindmn",
+ "time": "2026-11-08T16:30:01",
+ "pass": true,
+ "backend": "freecad",
+ "freecad_version": "1.1.4",
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 31,
+   "actual": 31
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 129.0,
+   "actual": 129.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 68.4,
+   "actual": 68.4
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 225.5,
+   "actual": 225.5
+  },
+  {
+   "id": "interference grindmn_tube-1 / burr_screw_90",
+   "pass": true,
+   "pair": [
+    "grindmn_screw_m4x6",
+    "grindmn_tube"
+   ],
+   "labels": [
+    "grindmn_tube-1",
+    "burr_screw_90"
+   ],
+   "volume_mm3": 20.0871,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_tube-1 / burr_screw_270",
+   "pass": true,
+   "pair": [
+    "grindmn_screw_m4x6",
+    "grindmn_tube"
+   ],
+   "labels": [
+    "grindmn_tube-1",
+    "burr_screw_270"
+   ],
+   "volume_mm3": 20.0862,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_shaft-1 / grindmn_adjuster_nut-1",
+   "pass": true,
+   "pair": [
+    "grindmn_adjuster_nut",
+    "grindmn_shaft"
+   ],
+   "labels": [
+    "grindmn_shaft-1",
+    "grindmn_adjuster_nut-1"
+   ],
+   "volume_mm3": 73.4399,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_click_disc-1 / plunger",
+   "pass": true,
+   "pair": [
+    "grindmn_ball_plunger",
+    "grindmn_click_disc"
+   ],
+   "labels": [
+    "grindmn_click_disc-1",
+    "plunger"
+   ],
+   "volume_mm3": 1.1691,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_crank_hub-1 / arm_screw_1",
+   "pass": true,
+   "pair": [
+    "grindmn_crank_hub",
+    "grindmn_screw_m3x10"
+   ],
+   "labels": [
+    "grindmn_crank_hub-1",
+    "arm_screw_1"
+   ],
+   "volume_mm3": 8.6394,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_crank_hub-1 / arm_screw_2",
+   "pass": true,
+   "pair": [
+    "grindmn_crank_hub",
+    "grindmn_screw_m3x10"
+   ],
+   "labels": [
+    "grindmn_crank_hub-1",
+    "arm_screw_2"
+   ],
+   "volume_mm3": 8.6394,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_crank_arm-1 / grindmn_shoulder_5x30-1",
+   "pass": true,
+   "pair": [
+    "grindmn_crank_arm",
+    "grindmn_shoulder_5x30"
+   ],
+   "labels": [
+    "grindmn_crank_arm-1",
+    "grindmn_shoulder_5x30-1"
+   ],
+   "volume_mm3": 24.0803,
+   "note": "allowed"
+  },
+  {
+   "id": "interference grindmn_catch_cup-1 / grindmn_oring_60x2-1",
+   "pass": true,
+   "pair": [
+    "grindmn_catch_cup",
+    "grindmn_oring_60x2"
+   ],
+   "labels": [
+    "grindmn_catch_cup-1",
+    "grindmn_oring_60x2-1"
+   ],
+   "volume_mm3": 74.8053,
+   "note": "allowed"
+  }
+ ],
+ "bbox_mm": [
+  129.0,
+  68.4,
+  225.5
+ ],
+ "bbox_min_mm": [
+  -34.0,
+  -34.2,
+  -49.0
+ ],
+ "files": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/grindmn.FCStd",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/exports/grindmn.step"
+ ],
+ "renders": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/isometric.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/top.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/front.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/grindmn/renders/right.png"
+ ]
+}

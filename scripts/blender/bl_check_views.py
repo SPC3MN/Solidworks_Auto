@@ -1,7 +1,7 @@
 """Pipeline check renders for backends without a viewport (FreeCAD): the exported STL in the
 Z-up named views of swlib.render (isometric, top, front, right), shaded with Workbench.
 
-    blender -b --python bl_check_views.py -- --stl part.stl --out renders/ [--size 800]
+    blender -b --python bl_check_views.py -- --stl part.stl --out renders/ [--size 800] [--views isometric,front]
 """
 import pathlib
 import sys
@@ -54,7 +54,9 @@ def main():
     span = (hi - lo).length
     cam_data.clip_start, cam_data.clip_end = span * 0.01, span * 10
 
-    for name, (r, u, d) in VIEWS.items():
+    names = a["views"].split(",") if isinstance(a.get("views"), str) else list(VIEWS)
+    for name in names:
+        r, u, d = VIEWS[name]
         r, u, d = Vector(r), Vector(u), Vector(d)
         rot = Matrix((r, u, d)).transposed().to_4x4()
         cam.matrix_world = Matrix.Translation(centre + d * span * 2) @ rot

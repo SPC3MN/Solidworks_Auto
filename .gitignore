@@ -21,3 +21,6 @@ Thumbs.db
 */*/render/export/geometry/
 *.blend1
 config/render.local.json
+
+# FreeCAD backups
+*.FCBak

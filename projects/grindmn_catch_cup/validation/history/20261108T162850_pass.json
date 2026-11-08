@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "project": "grindmn_catch_cup",
+  "timestamp": "20261108T162850",
+  "model_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/projects/grindmn_catch_cup/.staging/20261108T162850/grindmn_catch_cup.FCStd",
+  "status": "pass",
+  "params_used": {
+    "od": 68.0,
+    "h": 69.0,
+    "sleeve_d": 64.2,
+    "sleeve_depth": 20.0,
+    "chamber_d": 60.0,
+    "base": 4.0,
+    "corner_r": 2.0
+  },
+  "backend": "freecad",
+  "freecad_version": "1.1.4",
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        68.0,
+        68.0,
+        69.0
+      ],
+      "volume": 58768.321,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 2432,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "shape.valid",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 68.0,
+      "expected": 68.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 68.0,
+      "expected": 68.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 69.0,
+      "expected": 69.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 58768.321,
+      "expected": 58768.321,
+      "tolerance": 58.76832100000001,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 58768.321,
+      "expected": 58768.321,
+      "tolerance": 58.76832100000001,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 58730.918,
+      "expected": 58768.321,
+      "tolerance": 587.68321,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "4492 triangles"
+    }
+  ]
+}

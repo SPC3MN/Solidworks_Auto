@@ -3,7 +3,12 @@
 CAD driven from Python through a backend per CAD program: SolidWorks 2025 over COM (`.venv`,
 pywin32) on the Windows machine, and FreeCAD (the user is moving to it). The FreeCAD part backend and
 `pipeline.py --backend freecad` work (see `.claude/skills/model-from-photo/references/freecad.md` and
-`docs/freecad_findings.md`); assemblies and drawings are still SolidWorks-only. The workflow and the geometry modules are
+`docs/freecad_findings.md`), and `assembly.py --backend freecad` builds and checks assemblies; drawings are
+still SolidWorks-only.
+
+**Main goal: the simplest design that works.** Fewer parts, fewer setups, one load path; remove a part rather
+than add a fix. Plan design changes with sketches and get confirmation before modelling (see the
+`model-from-photo` skill). The workflow and the geometry modules are
 CAD-neutral; only the backend changes. The notes below describe the SolidWorks backend unless they say otherwise. Read
 `docs/architecture.md` for the principles and `docs/solidworks_findings.md` for
 verified API behaviour and gotchas before changing scripts.
