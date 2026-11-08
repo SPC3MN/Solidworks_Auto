@@ -1,5 +1,5 @@
 {
- "_comment": "airmn exploded: housing stack on the axis in fitting order with 40 mm gaps; motor group (motor, bracket, coupling, grommets, 608, spider, 608, shaft) at x = -460 from the pack base; rods and nuts on R320 at the rod angles. Extents worked out from each part's spec bbox.",
+ "_comment": "airmn exploded: housing stack on the axis in fitting order with 40 mm gaps; motor group (608, 608, shaft, grommets, bracket, coupling, motor) at x = -460 from the pack base; rods and nuts on R320 at the rod angles. Extents worked out from each part's spec bbox.",
  "components": [
   {
    "part": "airmn_foot",
@@ -107,7 +107,7 @@
    "label": "gasket_high"
   },
   {
-   "part": "airmn_inlet_ring",
+   "part": "airmn_inlet_plate",
    "at": [
     0,
     0,
@@ -115,228 +115,121 @@
    ]
   },
   {
-   "part": "airmn_shroud",
+   "part": "airmn_rotor_hub",
    "at": [
     0,
     0,
-    849.0
+    831.0
    ]
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    892.0
+    911.0
    ],
    "label": "blade_1"
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    892.0
+    911.0
    ],
    "label": "blade_2",
-   "rot_z": 40.0
+   "rot_z": 51.4286
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    892.0
+    911.0
    ],
    "label": "blade_3",
-   "rot_z": 80.0
+   "rot_z": 102.8571
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    892.0
+    911.0
    ],
    "label": "blade_4",
-   "rot_z": 120.0
+   "rot_z": 154.2857
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    892.0
+    911.0
    ],
    "label": "blade_5",
-   "rot_z": 160.0
+   "rot_z": 205.7143
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    892.0
+    911.0
    ],
    "label": "blade_6",
-   "rot_z": 200.0
+   "rot_z": 257.1429
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    892.0
+    911.0
    ],
    "label": "blade_7",
-   "rot_z": 240.0
+   "rot_z": 308.5714
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_stator",
    "at": [
     0,
     0,
-    892.0
-   ],
-   "label": "blade_8",
-   "rot_z": 280.0
-  },
-  {
-   "part": "airmn_blade",
-   "at": [
-    0,
-    0,
-    892.0
-   ],
-   "label": "blade_9",
-   "rot_z": 320.0
-  },
-  {
-   "part": "airmn_backplate",
-   "at": [
-    0,
-    0,
-    1050.0
+    991.0
    ]
   },
   {
-   "part": "airmn_impeller_housing",
+   "part": "airmn_nacelle",
    "at": [
     0,
     0,
-    1114.0
+    1091.0
    ]
   },
   {
-   "part": "airmn_motor",
-   "xform": [
-    1,
+   "part": "airmn_fan_housing",
+   "at": [
     0,
     0,
-    0,
-    -1,
-    0,
-    0,
-    0,
-    -1,
-    -460.0,
-    0,
-    285.0
+    1217.0
    ]
-  },
-  {
-   "part": "airmn_motor_bracket",
-   "xform": [
-    1,
-    0,
-    0,
-    0,
-    -1,
-    0,
-    0,
-    0,
-    -1,
-    -460.0,
-    0,
-    345.0
-   ]
-  },
-  {
-   "part": "airmn_coupling",
-   "xform": [
-    1,
-    0,
-    0,
-    0,
-    -1,
-    0,
-    0,
-    0,
-    -1,
-    -460.0,
-    0,
-    395.0
-   ]
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    -438.787,
-    21.213,
-    420.0
-   ],
-   "label": "grommet_1"
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    -481.213,
-    21.213,
-    420.0
-   ],
-   "label": "grommet_2"
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    -481.213,
-    -21.213,
-    420.0
-   ],
-   "label": "grommet_3"
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    -438.787,
-    -21.213,
-    420.0
-   ],
-   "label": "grommet_4"
   },
   {
    "part": "grindmn_bearing_608",
    "at": [
     -460.0,
     0,
-    451.0
+    198.0
    ],
    "label": "bearing_low"
   },
   {
-   "part": "airmn_spider",
-   "at": [
-    -460.0,
-    0,
-    483.0
-   ]
-  },
-  {
    "part": "grindmn_bearing_608",
    "at": [
     -460.0,
     0,
-    548.0
+    230.0
    ],
    "label": "bearing_high"
   },
@@ -345,7 +238,67 @@
    "at": [
     -460.0,
     0,
-    580.0
+    262.0
+   ]
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    -438.787,
+    21.213,
+    407.0
+   ],
+   "label": "grommet_1"
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    -481.213,
+    21.213,
+    407.0
+   ],
+   "label": "grommet_2"
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    -481.213,
+    -21.213,
+    407.0
+   ],
+   "label": "grommet_3"
+  },
+  {
+   "part": "airmn_grommet",
+   "at": [
+    -438.787,
+    -21.213,
+    407.0
+   ],
+   "label": "grommet_4"
+  },
+  {
+   "part": "airmn_motor_bracket",
+   "at": [
+    -460.0,
+    0,
+    438.0
+   ]
+  },
+  {
+   "part": "airmn_coupling",
+   "at": [
+    -460.0,
+    0,
+    498.0
+   ]
+  },
+  {
+   "part": "airmn_motor",
+   "at": [
+    -460.0,
+    0,
+    548.0
    ]
   },
   {
@@ -371,7 +324,7 @@
    "at": [
     304.338,
     98.885,
-    696.0
+    796.0
    ],
    "label": "nut_high_1"
   },
@@ -398,7 +351,7 @@
    "at": [
     0.0,
     320.0,
-    696.0
+    796.0
    ],
    "label": "nut_high_2"
   },
@@ -425,7 +378,7 @@
    "at": [
     -304.338,
     98.885,
-    696.0
+    796.0
    ],
    "label": "nut_high_3"
   },
@@ -452,7 +405,7 @@
    "at": [
     -188.091,
     -258.885,
-    696.0
+    796.0
    ],
    "label": "nut_high_4"
   },
@@ -479,16 +432,16 @@
    "at": [
     188.091,
     -258.885,
-    696.0
+    796.0
    ],
    "label": "nut_high_5"
   }
  ],
  "expected": {
   "bbox": [
-   908.96,
+   808.96,
    586.88,
-   1287.0
+   1487.0
   ],
   "allowed_interference": []
  }

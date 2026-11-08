@@ -1,0 +1,20 @@
+{
+  "d": 430.0,
+  "bore": 404.0,
+  "h": 270.0,
+  "top_t": 8.0,
+  "hole_d": 10.0,
+  "hole_pitch": 11.2,
+  "grid_r": 198.0,
+  "nut_cbore_d": 10.0,
+  "nut_cbore_depth": 5.0,
+  "rod_r": 209.0,
+  "rod_angles": [
+    18,
+    90,
+    162,
+    234,
+    306
+  ],
+  "rod_hole": 5.5
+}

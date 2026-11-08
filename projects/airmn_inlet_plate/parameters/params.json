@@ -1,0 +1,18 @@
+{
+  "_kind": "inlet_plate",
+  "d": 430.0,
+  "id": 286.0,
+  "t": 10.0,
+  "groove_od": 408.0,
+  "groove_id": 288.0,
+  "groove_depth": 4.0,
+  "rod_r": 209.0,
+  "rod_angles": [
+    18,
+    90,
+    162,
+    234,
+    306
+  ],
+  "rod_hole": 5.5
+}

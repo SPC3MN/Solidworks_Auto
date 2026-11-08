@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "project": "airmn_stator",
+  "timestamp": "20261108T143709",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\airmn_stator\\.staging\\20261108T143709\\airmn_stator.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "h": 60.0,
+    "ring_od": 403.0,
+    "ring_id": 396.0,
+    "hub_d": 180.0,
+    "hub_id": 170.0,
+    "floor_t": 20.0,
+    "vanes": 11,
+    "vane_t": 3.0,
+    "bore": 12.0,
+    "seat_d": 22.0,
+    "seat_depth": 7.0,
+    "grommet_r": 30.0,
+    "grommet_angles": [
+      45,
+      135,
+      225,
+      315
+    ],
+    "grommet_screw_depth": 8.0
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        403.0,
+        403.0,
+        60.0
+      ],
+      "volume": 1090144.647,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 159752,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 403.0,
+      "expected": 403.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 403.0,
+      "expected": 403.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 60.0,
+      "expected": 60.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 1090144.647,
+      "expected": 1090144.647,
+      "tolerance": 1090.144647,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1090144.647,
+      "expected": 1090144.647,
+      "tolerance": 1090.144647,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 1086432.246,
+      "expected": 1090144.647,
+      "tolerance": 10901.44647,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "2108 triangles"
+    }
+  ]
+}

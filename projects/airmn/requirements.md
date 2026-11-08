@@ -8,6 +8,26 @@ Geometry: `airmn_parts.py` (one function per part, volumes by hand). Values: `ge
 every `projects/airmn_<part>/` project and both assemblies. Axis: z up, z = 0 at the bottom cap's underside, the
 unit's axis on the origin.
 
+## Current design (5th pass, 2026-11-08): axial fan blowing up
+
+Supersedes the plug-fan sections further down (kept as history). Basis: [upflow_feasibility.md](upflow_feasibility.md).
+The filter (bottom cap, combs, gaskets, pack, feet, PD board) is unchanged.
+
+| Part | What | z |
+| --- | --- | --- |
+| `airmn_inlet_plate` | 430 / 286 × 10, upper comb groove underneath, rod holes; open to the core | 474 .. 484 |
+| `airmn_fan_housing` | 430 OD, 404 bore (the duct), 270 tall; rods run up through the 13 mm wall; 8 mm top with 1132 holes of 10 on a 11.2 hex pitch inside R198 (72 % open) as the vertical outlet; nut counterbores in the top | 484 .. 754 |
+| `airmn_rotor_hub` | 176 × 40 on the 8 mm shaft, M3 clamp; flat underside (nose cone later) | 500 .. 540 |
+| `airmn_rotor_blade` ×7 | **PLACEHOLDER**: flat radial plate R88 .. R199 (3 mm tip gap to the 404 bore), 3 × 40, no pitch | 500 .. 540 |
+| `airmn_stator` | 11 flat guide vanes (placeholders too) between a 403 / 396 ring and the 180 centre-body hub; hub floor 20 holds two 608s and the grommet screws | 580 .. 640 (608s at 580, 593) |
+| motor group | grommets 600, bracket 606 .. 641, coupling 610 .. 635, motor 629 .. 716 (shaft down) | inside the centre body |
+| `airmn_nacelle` | 180 / 170 × 86 cap over the motor, closed top | 640 .. 726 |
+| shaft / rods | Ø8 × 120 (500 .. 620); M5 × 752 (1 .. 753), top nuts in the housing top | |
+
+Rotor–stator gap 40 (one blade height). 7 blades against 11 vanes and 5 rods share no factor. Unit height 754 + 5 mm
+feet. Open items: real rotor blades (angled, from the feasibility sizing), stator ring fixing (screws into the
+housing), a nose cone under the rotor hub, motor wires out through a vane.
+
 ## Decisions made with the owner (2026-11-08)
 
 | Brief conflict / open point | Decision |

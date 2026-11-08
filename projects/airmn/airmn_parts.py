@@ -315,6 +315,71 @@ def impeller_housing(p):
     return g, [D, D, H]
 
 
+def inlet_plate(p):
+    """Top ring of the filter: upper comb groove underneath, rod holes; open to the pack's core (axial fan above)."""
+    D, T = p["d"], p["t"]
+    g = [ring(D, p["id"], 0, T, "Plate"),
+         ring(p["groove_od"], p["groove_id"], 0, p["groove_depth"], "Comb_groove", "cut"),
+         holes("Rod_holes", p["rod_hole"], rod_pts(p), 0, T)]
+    return g, [D, D, T]
+
+
+def fan_housing(p):
+    """Axial-fan duct and lid: thick wall (bore = duct) with the tie rods running up through it, perforated top
+    plate (the vertical outlet), rods ending in nut counterbores in the top."""
+    D, H, tt = p["d"], p["h"], p["top_t"]
+    cb, cd = p["nut_cbore_d"], p["nut_cbore_depth"]
+    grid = hex_grid(p["hole_pitch"], p["grid_r"])
+    g = [rod(D, 0, H, "Body"), rod(p["bore"], 0, H - tt, "Duct", "cut"),
+         holes("Outlet_grid", p["hole_d"], grid, H - tt, tt),
+         holes("Rod_holes", p["rod_hole"], rod_pts(p), 0, H),
+         ("Nut_counterbores", "cut", [circle(x, y, cb) for x, y in rod_pts(p)], H - cd, cd,
+          -len(p["rod_angles"]) * (disc(cb) - disc(p["rod_hole"])) * cd, "z")]
+    return g, [D, D, H]
+
+
+def rotor_hub(p):
+    """Axial rotor hub on the 8 mm shaft, M3 radial clamp screw. Flat underside (nose cone later)."""
+    Dh, H = p["d"], p["h"]
+    ri, ro = p["bore"] / 2, Dh / 2
+    depth = ro - ri + 1.0
+    g = [rod(Dh, 0, H, "Hub"), rod(p["bore"], 0, H, "Bore", "cut"),
+         ("Clamp_screw", "cut", [circle(0, H / 2, TAP_M3)], ro + 0.5 - depth, depth,
+          -offset_hole_vol(TAP_M3, 0, ri, ro), "x")]
+    return g, [Dh, Dh, H]
+
+
+def placeholder_blade(p):
+    """PLACEHOLDER rotor blade: flat radial plate, no pitch, from the hub surface to the tip (x along the radius)."""
+    r0, r1, t, H = p["r0"], p["r1"], p["t"], p["h"]
+    return [("Plate", "add", [rect((r0 + r1) / 2, 0, r1 - r0, t)], 0, H, (r1 - r0) * t * H, "z")], [r1 - r0, t, H]
+
+
+def stator(p):
+    """Outlet guide vanes and the motor centre body in one part: outer ring (in the duct), n flat vanes, hub with a
+    floor carrying two 608 seats and M3 holes for the motor grommets, hub tube above the floor."""
+    H, fl = p["h"], p["floor_t"]
+    rh, rr, w = p["hub_d"] / 2, p["ring_id"] / 2, p["vane_t"]
+    n = p["vanes"]
+    vanes = [spoke(rh - 1, rr + 1, w, 360 * k / n) for k in range(n)]
+    gp = [polar(p["grommet_r"], a) for a in p["grommet_angles"]]
+    g = [ring(p["ring_od"], p["ring_id"], 0, H, "Ring"),
+         rod(p["hub_d"], 0, fl, "Floor"),
+         ring(p["hub_d"], p["hub_id"], fl, H - fl, "Hub_tube"),
+         ("Vanes", "add", vanes, 0, H, n * strip_between(rh, rr, w) * H, "z"),
+         rod(p["bore"], 0, fl, "Bore", "cut"),
+         bore_step(p["seat_d"], p["bore"], 0, p["seat_depth"], "Bearing_seat_low"),
+         bore_step(p["seat_d"], p["bore"], fl - p["seat_depth"], p["seat_depth"], "Bearing_seat_high"),
+         holes("Grommet_screws", TAP_M3, gp, fl - p["grommet_screw_depth"], p["grommet_screw_depth"])]
+    return g, [p["ring_od"], p["ring_od"], H]
+
+
+def nacelle(p):
+    """Cap over the motor, continuing the stator hub: tube closed at the top."""
+    return [rod(p["d"], 0, p["h"], "Body"), rod(p["id"], 0, p["h"] - p["top_t"], "Cavity", "cut")], \
+        [p["d"], p["d"], p["h"]]
+
+
 def spider(p):
     """Motor spider under the inlet ring, inside the pack's core: ring screwed up to the inlet ring (its top at
     z = hub_h), 5 spokes, hub with two 608 seats; the motor bracket hangs from the hub's underside on grommets."""
@@ -418,7 +483,9 @@ def pd_board(p):
 PARTS = {
     "bottom_cap": bottom_cap, "comb": comb, "pleat_pack": pleat_pack, "gasket": gasket,
     "inlet_ring": inlet_ring, "outlet_band": outlet_band, "blade": blade, "shroud": shroud,
-    "backplate": backplate, "bridge": bridge, "top_cover": top_cover, "spider": spider, "impeller_housing": impeller_housing,
+    "backplate": backplate, "bridge": bridge, "top_cover": top_cover, "spider": spider, "impeller_housing": impeller_housing, "inlet_plate": inlet_plate,
+    "fan_housing": fan_housing, "rotor_hub": rotor_hub, "placeholder_blade": placeholder_blade,
+    "stator": stator, "nacelle": nacelle,
     "motor_bracket": motor_bracket, "motor": motor, "coupling": coupling, "rod": plain_rod,
     "grommet": grommet, "nut": nut, "pd_board": pd_board,
 }

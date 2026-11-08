@@ -107,7 +107,7 @@
    "label": "gasket_high"
   },
   {
-   "part": "airmn_inlet_ring",
+   "part": "airmn_inlet_plate",
    "at": [
     0,
     0,
@@ -115,132 +115,104 @@
    ]
   },
   {
-   "part": "airmn_shroud",
+   "part": "airmn_fan_housing",
    "at": [
     0,
     0,
-    497.0
+    484.0
    ]
   },
   {
-   "part": "airmn_impeller_housing",
+   "part": "airmn_rotor_hub",
    "at": [
     0,
     0,
-    481.0
+    500.0
    ]
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    497.0
+    500.0
    ],
    "label": "blade_1"
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    497.0
+    500.0
    ],
    "label": "blade_2",
-   "rot_z": 40.0
+   "rot_z": 51.4286
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    497.0
+    500.0
    ],
    "label": "blade_3",
-   "rot_z": 80.0
+   "rot_z": 102.8571
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    497.0
+    500.0
    ],
    "label": "blade_4",
-   "rot_z": 120.0
+   "rot_z": 154.2857
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    497.0
+    500.0
    ],
    "label": "blade_5",
-   "rot_z": 160.0
+   "rot_z": 205.7143
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    497.0
+    500.0
    ],
    "label": "blade_6",
-   "rot_z": 200.0
+   "rot_z": 257.1429
   },
   {
-   "part": "airmn_blade",
+   "part": "airmn_rotor_blade",
    "at": [
     0,
     0,
-    497.0
+    500.0
    ],
    "label": "blade_7",
-   "rot_z": 240.0
-  },
-  {
-   "part": "airmn_blade",
-   "at": [
-    0,
-    0,
-    497.0
-   ],
-   "label": "blade_8",
-   "rot_z": 280.0
-  },
-  {
-   "part": "airmn_blade",
-   "at": [
-    0,
-    0,
-    497.0
-   ],
-   "label": "blade_9",
-   "rot_z": 320.0
-  },
-  {
-   "part": "airmn_backplate",
-   "at": [
-    0,
-    0,
-    612.0
-   ]
+   "rot_z": 308.5714
   },
   {
    "part": "airmn_shaft",
    "at": [
     0,
     0,
-    414.0
+    500.0
    ]
   },
   {
-   "part": "airmn_spider",
+   "part": "airmn_stator",
    "at": [
     0,
     0,
-    434.0
+    580.0
    ]
   },
   {
@@ -248,7 +220,7 @@
    "at": [
     0,
     0,
-    434.0
+    580.0
    ],
    "label": "bearing_low"
   },
@@ -257,7 +229,7 @@
    "at": [
     0,
     0,
-    467.0
+    593.0
    ],
    "label": "bearing_high"
   },
@@ -266,7 +238,7 @@
    "at": [
     21.213,
     21.213,
-    428.0
+    600.0
    ],
    "label": "grommet_1"
   },
@@ -275,7 +247,7 @@
    "at": [
     -21.213,
     21.213,
-    428.0
+    600.0
    ],
    "label": "grommet_2"
   },
@@ -284,7 +256,7 @@
    "at": [
     -21.213,
     -21.213,
-    428.0
+    600.0
    ],
    "label": "grommet_3"
   },
@@ -293,59 +265,40 @@
    "at": [
     21.213,
     -21.213,
-    428.0
+    600.0
    ],
    "label": "grommet_4"
   },
   {
    "part": "airmn_motor_bracket",
-   "xform": [
-    1,
+   "at": [
     0,
     0,
-    0,
-    -1,
-    0,
-    0,
-    0,
-    -1,
-    0,
-    0,
-    428.0
+    606.0
    ]
   },
   {
    "part": "airmn_coupling",
-   "xform": [
-    1,
+   "at": [
     0,
     0,
-    0,
-    -1,
-    0,
-    0,
-    0,
-    -1,
-    0,
-    0,
-    424.0
+    610.0
    ]
   },
   {
    "part": "airmn_motor",
-   "xform": [
-    1,
+   "at": [
     0,
     0,
+    629.0
+   ]
+  },
+  {
+   "part": "airmn_nacelle",
+   "at": [
     0,
-    -1,
     0,
-    0,
-    0,
-    -1,
-    0,
-    0,
-    405.0
+    640.0
    ]
   },
   {
@@ -371,7 +324,7 @@
    "at": [
     198.771,
     64.585,
-    649.0
+    749.0
    ],
    "label": "nut_high_1"
   },
@@ -398,7 +351,7 @@
    "at": [
     0.0,
     209.0,
-    649.0
+    749.0
    ],
    "label": "nut_high_2"
   },
@@ -425,7 +378,7 @@
    "at": [
     -198.771,
     64.585,
-    649.0
+    749.0
    ],
    "label": "nut_high_3"
   },
@@ -452,7 +405,7 @@
    "at": [
     -122.847,
     -169.085,
-    649.0
+    749.0
    ],
    "label": "nut_high_4"
   },
@@ -479,17 +432,17 @@
    "at": [
     122.847,
     -169.085,
-    649.0
+    749.0
    ],
    "label": "nut_high_5"
   }
  ],
  "expected": {
-  "_comment": "x, y: caps 430 across; z: feet -5 .. impeller housing top 481 + 173 = 654. Solid lid round the impeller, perforated top (vertical outlet); the motor group hangs under the inlet ring inside the pack's core. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
+  "_comment": "x, y: caps 430 across; z: feet -5 .. fan housing top 484 + 270 = 754. Axial fan (placeholder blades) with the motor in the stator's centre body; the motor group hangs under the inlet ring inside the pack's core. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
   "bbox": [
    430.0,
    430.0,
-   659.0
+   759.0
   ],
   "allowed_interference": []
  }
