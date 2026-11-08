@@ -1,4 +1,11 @@
-"""Photorealistic rendering of a SolidWorks product with Blender Cycles: one entry point.
+"""Photorealistic rendering of a CAD product with Blender Cycles: one entry point.
+
+`export` picks a CAD source adapter from the file type (scripts/render_adapters): SolidWorks,
+FreeCAD, or any STEP/glTF/OBJ/STL/PLY/FBX/USD file (from Onshape, Fusion, Inventor, Creo, ...).
+Every later command is source-neutral.
+
+    .venv\\Scripts\\python scripts\\render_cli.py export   path\\to\\product.FCStd | product.step | product.glb
+    .venv\\Scripts\\python scripts\\render_cli.py export   path\\to\\part.stl --units mm --up Z --expect-size 120,80,0
 
     .venv\\Scripts\\python scripts\\render_cli.py hw
     .venv\\Scripts\\python scripts\\render_cli.py export   assemblies\\grindmn [--exploded-from assemblies\\grindmn_exploded]
@@ -24,30 +31,17 @@ import subprocess
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
+import render_adapters  # noqa: E402
 import render_config as rc  # noqa: E402
+from render_adapters import common as manifest_lib  # noqa: E402
 
 CATEGORIES = ("studio", "environment", "details", "exploded", "technical")
 
 
 # ---------------------------------------------------------------- helpers
 
-def blender():
-    exe = rc.blender_exe()
-    if exe is None:
-        sys.exit("Blender not found. Set BLENDER_EXE or config/render.local.json (see docs/rendering.md).")
-    return exe
-
-
-def run_blender(script, *args, timeout=None):
-    cmd = [str(blender()), "-b", "-noaudio", "--python-exit-code", "1", "--python", str(rc.BLENDER_SCRIPTS / script), "--", *map(str, args)]
-    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
-    keep = []
-    for line in proc.stdout:
-        if line.startswith("[render]") or "Error" in line or "Traceback" in line or line.startswith("  File") or keep and keep[-1].startswith("  File"):
-            print(line.rstrip(), flush=True)
-        keep.append(line)
-    proc.wait(timeout=timeout)
-    return proc.returncode, "".join(keep)
+blender = rc.blender
+run_blender = rc.run_blender
 
 
 def folder_of(target):
@@ -97,8 +91,14 @@ def cmd_hw(_a):
 
 
 def cmd_export(a):
-    import render_export
-    render_export.run(a.target, None, a.exploded_from, a.explode_axis, a.ap242)
+    expect = [float(v) for v in a.expect_size.split(",")] if a.expect_size else None
+    render_adapters.export(a.target, a.out, a.source, exploded_from=a.exploded_from, explode_axis=a.explode_axis,
+                           ap242=a.ap242, units=a.units, up=a.up, expect_size=expect,
+                           tol_linear=a.tol_linear, tol_angular=a.tol_angular)
+
+
+def load_manifest(folder):
+    return manifest_lib.load(rc.path(folder, "manifest"))
 
 
 def cmd_import(a):
@@ -142,7 +142,8 @@ def default_settings(man):
         "studio": {"background": {}, "floor": {}},
         "environment": {"preset": "workshop", "intensity": 1.0, "exposure": 0.0},
         "technical": {"lighting": {"preset": "neutral_technical"}, "explode_scale": 1.0},
-        "materials": {"_review": low, "_how": "parts: {part_id: {material, finish, color, roughness}}; components: {sw_id or label: {...}} wins over parts",
+        "materials": {"_review": low, "_how": "parts: {part_id: {material, finish, color, roughness}}; components: {cad_id or label: {...}} wins over parts; use_source_colors: the CAD colours as base colours unless a choice overrides them",
+                      "use_source_colors": False,
                       "parts": {}, "components": {}},
         "shots": shots,
         "render": {
@@ -154,7 +155,7 @@ def default_settings(man):
 
 def cmd_init(a):
     folder = folder_of(a.target)
-    man = load(rc.path(folder, "manifest"))
+    man = load_manifest(folder)
     p = settings_path(folder)
     if p.exists() and not a.force:
         print(f"{p} exists: kept (it holds the user's choices). Use --force to reset.")
@@ -207,7 +208,7 @@ def contact_sheet(shots, out, title):
 
 def ensure_import(folder):
     man_p = rc.path(folder, "manifest")
-    man = load(man_p)
+    man = load_manifest(folder)
     cad = rc.path(folder, "blender") / f"{man['assembly']}_cad.blend"
     rep = rc.path(folder, "reports") / "import_report.json"
     if not cad.exists() or not rep.exists() or cad.stat().st_mtime < man_p.stat().st_mtime or not load(rep)["pass"]:
@@ -293,7 +294,7 @@ def cmd_preview(a):
                     prev["scenes"].pop(sc)
             prev["note"] = "shots removed only: existing previews carried over, nothing re-rendered"
             sheet = contact_sheet(prev["shots"], rc.path(folder, "previews") / "contact_sheet.png",
-                                  f"{load(rc.path(folder, 'manifest'))['assembly']} previews  ({prev['time']}, settings {h})")
+                                  f"{load_manifest(folder)['assembly']} previews  ({prev['time']}, settings {h})")
             prev["contact_sheet"] = str(sheet) if sheet else None
             prev["final_estimate_s"] = round(estimate_final(folder, prev))
             save(rp0, prev)
@@ -323,7 +324,7 @@ def cmd_preview(a):
         if s["image"]["clipped_pct"] > 8 and s["scene"] != "studio":
             rep["checks"].append({"id": f"exposure.{s['name']}", "pass": True, "warn": True, "note": "large clipped area"})
     sheet = contact_sheet(rep["shots"], rc.path(folder, "previews") / "contact_sheet.png",
-                          f"{load(rc.path(folder, 'manifest'))['assembly']} previews  ({rep['time']}, settings {h})")
+                          f"{load_manifest(folder)['assembly']} previews  ({rep['time']}, settings {h})")
     rep["contact_sheet"] = str(sheet) if sheet else None
     want = {s["name"] for s in load(settings_path(folder))["shots"]}
     rep["partial"] = not want <= {s["name"] for s in rep["shots"]}
@@ -387,7 +388,7 @@ def cmd_final(a):
     lines = [f"# {man['assembly']}: final renders", "",
              f"- Rendered {rep['time']} on {rep['device']['device']} with Blender Cycles; settings {h}, approved {appr['approved_at']} (\"{appr['quote']}\").",
              f"- Scene file: `{pathlib.Path(rep['blend']).relative_to(folder)}` (CAD import: `blender/{man['assembly']}_cad.blend`).",
-             f"- Settings: `render/settings/final_{rep['time']}.json`; source CAD `{man['source_cad']}` (unchanged).",
+             f"- Settings: `render/settings/final_{rep['time']}.json`; source `{man['source']['file']}` via the {man['source']['adapter']} adapter (unchanged).",
              f"- Materials are rendering presets (Principled BSDF), not measured physical data.", "",
              "| Shot | Scene | File | Size | Time |", "|---|---|---|---|---|"]
     for s in rep["shots"]:
@@ -401,6 +402,9 @@ def cmd_status(a):
     folder = folder_of(a.target)
     mp = rc.path(folder, "manifest")
     print("manifest:", mp if mp.exists() else "missing (run export)")
+    if mp.exists():
+        src = load_manifest(folder)["source"]
+        print("source:", src["adapter"], src.get("application", ""), src.get("file", ""))
     ip = rc.path(folder, "reports") / "import_report.json"
     if ip.exists():
         print("import:", "PASS" if load(ip)["pass"] else "FAIL")
@@ -419,15 +423,22 @@ def cmd_status(a):
             print("approval: none")
 
 
-def main():
+def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("hw")
-    p = sub.add_parser("export")
-    p.add_argument("target")
-    p.add_argument("--exploded-from")
+    p = sub.add_parser("export", help="CAD source -> product manifest + part geometry")
+    p.add_argument("target", help="a CAD file (.SLDASM .SLDPRT .FCStd .step .glb .obj .stl ...) or a folder holding one")
+    p.add_argument("--source", choices=("solidworks", "freecad", "file"), help="adapter (default: from the file type)")
+    p.add_argument("--out", help="folder that gets render/ (default: the target folder, or the file's folder)")
+    p.add_argument("--exploded-from", help="folder with assembly.json of a designed exploded assembly")
     p.add_argument("--explode-axis", default="z", choices="xyz")
-    p.add_argument("--ap242", action="store_true")
+    p.add_argument("--ap242", action="store_true", help="SolidWorks: try AP242 (needs an MBD licence)")
+    p.add_argument("--units", default="mm", choices=sorted(manifest_lib.UNIT_TO_M), help="OBJ/STL/PLY: file units")
+    p.add_argument("--up", default="Z", choices=("Z", "Y"), help="OBJ/STL/PLY: file up axis")
+    p.add_argument("--expect-size", help="X,Y,Z overall size in mm (0 = unknown axis), checked after reading a file")
+    p.add_argument("--tol-linear")
+    p.add_argument("--tol-angular")
     p = sub.add_parser("import")
     p.add_argument("target")
     p.add_argument("--tol-linear")
@@ -438,7 +449,7 @@ def main():
         p.add_argument("--force", action="store_true")
         p.add_argument("--shots")
         p.add_argument("--quote")
-    a = ap.parse_args()
+    a = ap.parse_args(argv)
     {"hw": cmd_hw, "export": cmd_export, "import": cmd_import, "init": cmd_init, "preview": cmd_preview,
      "approve": cmd_approve, "final": cmd_final, "status": cmd_status}[a.cmd](a)
 

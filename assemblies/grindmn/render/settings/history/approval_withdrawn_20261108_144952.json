@@ -1,0 +1,16 @@
+{
+ "settings_hash": "47a4f5c53934a0ef",
+ "approved_at": "2026-11-08T14:48:44",
+ "quote": "Approved, render finals",
+ "preview_report": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\render\\reports\\preview_latest.json",
+ "shots": [
+  "hero",
+  "low_angle",
+  "front",
+  "side",
+  "top",
+  "detail",
+  "exploded",
+  "xray"
+ ]
+}

@@ -7,14 +7,17 @@ so never call a render physically accurate.
 ## Resolution order (later wins)
 
 1. **Manifest proposal per part.** The first of these that applies:
-   - the SolidWorks material through `solidworks_material_map`;
+   - the CAD material name through `cad_material_map` (SolidWorks material, FreeCAD `ShapeMaterial`, a glTF/OBJ/STEP
+     material name; placeholders like `mat_0` are ignored);
    - a part-name regex in `name_rules`;
    - the default.
 
-   The proposal records its `source` and `confidence`. If every part has the same SolidWorks material (the template's
+   The proposal records its `source` and `confidence`. If every part has the same CAD material (a template's
    "Steel"), that material is treated as unassigned.
+   `materials.use_source_colors: true` uses each part's CAD colour (`source_color` in the manifest) as its base colour
+   unless a part or component setting gives one. Leave it off for uncoloured models.
 2. `scene.json → materials.parts[<part_id>]`: the part as a whole. Fill it from the requirements.
-3. `scene.json → materials.components[<sw_id or label>]`: one instance (for example one black screw among steel ones).
+3. `scene.json → materials.components[<cad_id or label>]`: one instance (for example one black screw among steel ones).
 
 An assignment can set `material`, `finish`, `color` (sRGB hex) and any Principled field: `roughness`, `metallic`,
 `ior`, `transmission`, `anisotropy`, `coat`, `coat_roughness`, `alpha`, `bump`, `variation`, `brush`.

@@ -26,7 +26,7 @@ frame with `margin` free on the tightest side. The framing report gives `bbox_fi
  "highlight": {"components": ["<id>"], "color": "#FF7A00"}, "hide": [], "isolate": []}
 ```
 
-- `target`: `product`, `region:top|bottom|front|left|right` (that 30 % slab of the bbox), or `component:<sw_id or label>`.
+- `target`: `product`, `region:top|bottom|front|left|right` (that 30 % slab of the bbox), or `component:<cad_id or label>`.
 - The depth-of-field focus is the target centre. Keep f/8 or above for whole-product shots, because at product scale f/2.8 blurs most of the product.
 - Exploded positions come from the manifest:
   - a designed exploded assembly (`--exploded-from`, translation only);

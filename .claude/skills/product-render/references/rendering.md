@@ -33,7 +33,7 @@ with compute capability 3.0, which current Cycles does not support.
 ## Folders (`<folder>/render/`)
 
 ```
-export/step/<asm>.step, export/step/parts/*.step, export/product_manifest.json
+export/product_manifest.json, export/geometry/parts/* (one file per part), export/geometry/<asm>.step | source.*
 blender/<asm>_cad.blend   imported CAD only (rebuilt by `import`)
 blender/<asm>.blend       last preview scene;  blender/<asm>_final.blend  final scene
 previews/<category>/*.png, previews/contact_sheet.png
@@ -42,5 +42,5 @@ settings/scene.json (state), settings/approval.json, settings/history/*, setting
 reports/import_report.json, reports/preview_latest.json, reports/final_latest.json
 ```
 
-The CAD files (`.SLDASM` / `.SLDPRT`) are only read. The `.blend` files and the previews are gitignored (they are
+The CAD files are only read. The `.blend` files and the previews are gitignored (they are
 large and can be rebuilt). The manifest, settings, reports and final renders are kept.

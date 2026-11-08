@@ -94,6 +94,26 @@ def exact_world_bbox(obj):
             Vector([max(v[i] for v in vs) for i in range(3)]))
 
 
+def local_aabb_world(obj):
+    """The mesh's local bbox corners carried through matrix_world, then boxed: the same
+    quantity the adapters compute from (part bbox, transform), so comparing the two checks
+    the transform exactly, whatever the rotation."""
+    me = obj.data
+    lo = [min(v.co[i] for v in me.vertices) for i in range(3)]
+    hi = [max(v.co[i] for v in me.vertices) for i in range(3)]
+    pts = [obj.matrix_world @ Vector((x, y, z)) for x in (lo[0], hi[0]) for y in (lo[1], hi[1]) for z in (lo[2], hi[2])]
+    return (Vector([min(p[i] for p in pts) for i in range(3)]),
+            Vector([max(p[i] for p in pts) for i in range(3)]))
+
+
+def load_manifest(path):
+    """The product manifest as schema 2.0 (older files are upgraded in memory)."""
+    if str(ROOT / "scripts") not in sys.path:
+        sys.path.insert(0, str(ROOT / "scripts"))
+    from render_adapters import common
+    return common.load(path)
+
+
 def collection(name, parent=None):
     c = bpy.data.collections.get(name) or bpy.data.collections.new(name)
     par = parent or bpy.context.scene.collection

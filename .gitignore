@@ -18,5 +18,6 @@ Thumbs.db
 */*/render/blender/
 */*/render/previews/
 */*/render/export/step/
+*/*/render/export/geometry/
 *.blend1
 config/render.local.json

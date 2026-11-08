@@ -1,4 +1,5 @@
 {
-  "_comment": "Copy to render.local.json (gitignored) and set the Blender path for this machine. BLENDER_EXE overrides it.",
-  "blender": "C:/Users/<you>/Tools/blender-5.2.3-windows-x64/blender.exe"
+  "_comment": "Copy to render.local.json (gitignored) and set the paths for this machine. BLENDER_EXE / FREECAD_CMD override them. freecad is only needed to render .FCStd files directly.",
+  "blender": "C:/Users/<you>/Tools/blender-5.2.3-windows-x64/blender.exe",
+  "freecad": "C:/Program Files/FreeCAD 1.0/bin/FreeCADCmd.exe"
 }

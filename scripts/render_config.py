@@ -11,6 +11,8 @@ import json
 import os
 import pathlib
 import shutil
+import subprocess
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 LIB = ROOT / "libraries" / "render"
@@ -44,7 +46,7 @@ def render_dir(folder):
 
 
 LAYOUT = {
-    "step": "export/step",
+    "geometry": "export/geometry",
     "manifest": "export/product_manifest.json",
     "blender": "blender",
     "previews": "previews",
@@ -57,3 +59,23 @@ LAYOUT = {
 
 def path(folder, key):
     return render_dir(folder) / LAYOUT[key]
+
+
+def blender():
+    exe = blender_exe()
+    if exe is None:
+        sys.exit("Blender not found. Set BLENDER_EXE or config/render.local.json (see docs/rendering.md).")
+    return exe
+
+
+def run_blender(script, *args, timeout=None):
+    """Run scripts/blender/<script> headless; echo its [render] lines and errors. Returns (code, output)."""
+    cmd = [str(blender()), "-b", "-noaudio", "--python-exit-code", "1", "--python", str(BLENDER_SCRIPTS / script), "--", *map(str, args)]
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
+    keep = []
+    for line in proc.stdout:
+        if line.startswith("[render]") or "Error" in line or "Traceback" in line or line.startswith("  File") or keep and keep[-1].startswith("  File"):
+            print(line.rstrip(), flush=True)
+        keep.append(line)
+    proc.wait(timeout=timeout)
+    return proc.returncode, "".join(keep)

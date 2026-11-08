@@ -181,24 +181,27 @@ def build(spec):
 
 
 def assign(objects, manifest, settings, library=None):
-    """Assign materials to CAD objects (those with an sw_id). Returns the assignment table."""
+    """Assign materials to CAD objects (those with an cad_id). Returns the assignment table."""
     library = library or U.lib("materials")
     mset = settings.get("materials", {})
     table = []
     for ob in objects:
-        if "sw_id" not in ob:
+        if "cad_id" not in ob:
             continue
-        part = manifest["parts"].get(ob["sw_part"], {})
+        part = manifest["parts"].get(ob["cad_part"], {})
         proposal = part.get("material", {})
-        comp_over = mset.get("components", {}).get(ob["sw_id"]) or mset.get("components", {}).get(ob.get("sw_label", ""))
-        spec = resolve(library, proposal, mset.get("parts", {}).get(ob["sw_part"]), comp_over)
+        comp_over = mset.get("components", {}).get(ob["cad_id"]) or mset.get("components", {}).get(ob.get("cad_label", ""))
+        part_over = mset.get("parts", {}).get(ob["cad_part"])
+        if mset.get("use_source_colors") and part.get("source_color") and not (part_over or {}).get("color")                 and not (comp_over or {}).get("color"):
+            part_over = dict(part_over or {}, color=part["source_color"])  # the CAD colour, unless a choice overrides it
+        spec = resolve(library, proposal, part_over, comp_over)
         mat = build(spec)
         for slot in ob.material_slots:
             slot.link = "OBJECT"
             slot.material = mat
-        src = "component override" if comp_over else ("part setting" if ob["sw_part"] in mset.get("parts", {}) else
+        src = "component override" if comp_over else ("part setting" if ob["cad_part"] in mset.get("parts", {}) else
                                                       proposal.get("source", "default"))
-        table.append({"component": ob["sw_id"], "label": ob.get("sw_label", ""), "part": ob["sw_part"],
+        table.append({"component": ob["cad_id"], "label": ob.get("cad_label", ""), "part": ob["cad_part"],
                       "material": spec["id"], "finish": spec.get("finish"), "color": spec.get("base_color"),
                       "roughness": spec.get("roughness"), "source": src,
                       "confidence": "user/claude" if src in ("component override", "part setting")

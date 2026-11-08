@@ -49,8 +49,8 @@
     "textured":     {"roughness": 0.62, "bump": {"type": "orange_peel", "scale": 0.3, "strength": 0.2}},
     "machined":     {"roughness": 0.22, "anisotropy": 0.4, "bump": {"type": "brushed", "scale": 0.03, "strength": 0.06}}
   },
-  "solidworks_material_map": {
-    "_comment": "SolidWorks material name (substring, case-insensitive) -> library material. First match wins.",
+  "cad_material_map": {
+    "_comment": "CAD material name from any source (SolidWorks material, FreeCAD ShapeMaterial, glTF/OBJ material name), substring, case-insensitive -> library material. First match wins.",
     "6061": "aluminium_raw", "7075": "aluminium_raw", "1060": "aluminium_raw", "aluminum": "aluminium_raw", "aluminium": "aluminium_raw",
     "303": "stainless_steel", "304": "stainless_steel", "316": "stainless_steel", "416": "stainless_steel", "stainless": "stainless_steel",
     "galvanized": "steel_galvanized", "steel": "stainless_steel", "copper": "copper", "brass": "brass",

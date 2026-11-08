@@ -1,59 +1,94 @@
 # Photorealistic rendering: architecture and verified facts
 
-How a SolidWorks product becomes photorealistic images in Blender Cycles. The workflow for the agent is the
-project skill `.claude/skills/product-render` (`/product-render`). This page explains why it is built the way it is
-and records what was verified on this machine (2026-11-08).
+How a 3D CAD model, from any source, becomes photorealistic images in Blender Cycles. The workflow for the agent
+is the project skill `.claude/skills/product-render` (`/product-render`). This page explains why it is built the
+way it is and records what was verified (first on 2026-11-08; the source-neutral adapters later the same day).
 
 ## Architecture
 
 ```
-SolidWorks (authoritative)            .venv Python                      Blender 5.2 (headless)
-.SLDASM/.SLDPRT ──read-only──► render_export.py ──► STEP + manifest ──► bl_import.py ──► <asm>_cad.blend
-                                                                          │ validate      (never edited later)
-                               render_cli.py (orchestrator, approval gate) ▼
-                                 init → settings/scene.json ─────────► bl_scene.py ──► previews / finals
-                                 preview → contact sheet, QC stats       materials, studio, environments,
-                                 approve → approval.json (hash)          cameras, exploded/technical
-                                 final  → only with a valid approval
+CAD source (authoritative)        adapters (scripts/render_adapters)        Blender 5.2 (headless)
+.SLDASM/.SLDPRT ── solidworks.py (COM) ─┐
+.FCStd ─────────── freecad.py ──────────┼─► product package ──────────► bl_import.py ──► <asm>_cad.blend
+   (FreeCADCmd + freecad_dump.py)       │   manifest (schema 2.0)          │ validate      (never edited later)
+.step .glb .obj .stl ─ mesh_file.py ────┘   + geometry/parts/*             ▼
+   .ply .fbx .usd      (bl_ingest.py)                                   bl_scene.py ──► previews / finals
+                                        render_cli.py: init → scene.json,  materials, studio, environments,
+                                        preview, approve (hash), final     cameras, exploded/technical
 ```
 
+- **Adapters are the only source-specific code.** Each turns one CAD source into the same product package: the
+  manifest plus one geometry file per unique part, in part coordinates. Blender, the materials, the scenes, the
+  approval gate and the tests know nothing about SolidWorks or FreeCAD. A new CAD system is one module
+  (`references/sources.md` in the skill: "Adding an adapter"), or no code at all when it can export STEP.
 - **Two skills, one direction.** `model-from-photo` (and the assembly and drawing scripts) own the geometry.
-  `product-render` reads exports and never writes CAD. The CAD skill calls the render skill when images are wanted.
+  `product-render` reads exports and never writes CAD.
 - **One state file.** `render/settings/scene.json` holds every look decision: materials, lighting, environment,
   shots and quality. Previews and finals are both built from it. The approval stores its hash together with the
-  render libraries (materials, lighting, cameras). That makes "the user approved exactly this" checkable, and
-  `final` refuses to run on a mismatch.
-- **Cached geometry.** STEP tessellation runs once (`import`). Each preview opens the cached `_cad.blend` and
-  rebuilds the look, which takes seconds, so iterations stay quick and are deterministic.
-- **Per-part import, manifest placement.** Each unique part is imported from its own STEP, and every instance is an
-  object sharing that mesh with the manifest transform. This gives stable ids (`sw_id` custom properties),
-  repeated instances with separate materials, and exact control over hierarchy and placement. The whole-assembly
-  STEP is still imported once as an independent cross-check.
+  render libraries (materials, lighting, cameras), and `final` refuses to run on a mismatch. Settings key on part
+  ids and component ids/labels, so they survive a re-export and carry across sources that keep the same names.
+- **Cached geometry.** Tessellation and file reading run once (`import`). Each preview opens the cached
+  `_cad.blend` and rebuilds the look, which takes seconds.
+- **Per-part import, manifest placement.** Each unique part is imported once, and every instance is an object
+  sharing that mesh with the manifest transform: stable ids (`cad_id`, `cad_part`, `cad_parent`, `cad_label`
+  custom properties), repeated instances with separate materials, exact control over hierarchy and placement.
+  The whole-product file, when there is one, is imported once more as an independent cross-check.
+- **Geometry formats** (`scripts/blender/bl_formats.py`): `step` (STEP Importer extension), `gltf` (glTF/GLB),
+  `obj`, `stl`, `ply` (need `scale_to_m` and the file's up axis), `fbx`, `usd`. All come out in metres, Z-up.
 
-## Product manifest (`render/export/product_manifest.json`)
+## Product manifest (`render/export/product_manifest.json`, schema 2.0)
+
+Defined and validated in `scripts/render_adapters/common.py` (`new_manifest`, `part_entry`, `component_entry`,
+`finish`, `validate`). Schema 1.0 files (the first SolidWorks-only version) are upgraded in memory by `common.upgrade`.
 
 ```json
-{"schema_version": "1.0", "project": "grindmn", "assembly": "grindmn", "source_cad": ".../grindmn.SLDASM",
+{"schema_version": "2.0", "project": "grindmn", "assembly": "grindmn",
+ "source": {"adapter": "solidworks | freecad | file", "application": "SOLIDWORKS", "application_version": "...",
+            "file": ".../grindmn.SLDASM", "exported": "...", "details": {"step_protocol": "AP214", ...}},
  "units": {"length": "mm", "up_axis": "Z"},
- "step": {"assembly": "export/step/grindmn.step", "schema": "AUTOMOTIVE_DESIGN", "protocol": "AP214", ...},
  "bbox_mm": {"min": [...], "max": [...], "size": [129.0, 68.4, 235.0]},
  "hierarchy": [{"id": "grindmn", "parent": null, "kind": "assembly"}, {"id": "sub-1", "parent": "grindmn", "kind": "subassembly"}],
- "parts": {"grindmn_screw_m3x8": {"step": "export/step/parts/grindmn_screw_m3x8.step", "bbox_mm": {...},
-           "sw_material": "...", "sw_appearance": {...}, "material": {"material": "stainless_steel", "source": "name_rule", "confidence": "low"}}},
+ "parts": {"grindmn_screw_m3x8": {"geometry": {"file": "export/geometry/parts/grindmn_screw_m3x8.step", "format": "step",
+                                               "scale_to_m": null, "up_axis": "Z"},
+           "bbox_mm": {"min": [...], "max": [...]}, "source_material": "", "source_color": "#RRGGBB | null",
+           "material": {"material": "stainless_steel", "source": "name_rule", "confidence": "low"}}},
  "components": [{"id": "grindmn_screw_m3x8-1", "label": "arm_screw_1", "part": "grindmn_screw_m3x8", "parent": "grindmn",
                  "transform": [[1,0,0,-6],[0,1,0,0],[0,0,1,143],[0,0,0,1]], "visible": true, "suppressed": false,
-                 "world_bbox_mm": [[...], [...]]}],
- "exploded": {"method": "from_assembly | auto_axial", "offsets_mm": {"grindmn_screw_m3x8-1": [0, 0, 309.5]}}}
+                 "world_bbox_mm": [[...], [...]], "occurrence": 1, "source": {"sw_path": "..."}}],
+ "geometry": {"assembly": {"file": "export/geometry/grindmn.step", "format": "step"}},
+ "exploded": {"method": "from_assembly | auto_axial", "offsets_mm": {"grindmn_screw_m3x8-1": [0, 0, 309.5]}},
+ "validation": {"reference": "cad_kernel | source_file", "note": "..."}}
 ```
 
-- `id` is the SolidWorks `Name2` (for example `part-2`, or `sub-1/part-1` when nested). It is unique and stays the same while the
-  assembly is not restructured. `label` comes from `assembly.json` where one exists.
-- `transform`: a 4×4 matrix in the column-vector convention, translation in mm, relative to the top assembly. It is
-  converted from `Component2.Transform2.ArrayData`, which is a row-vector rotation with translation in metres.
-- Material proposals: the SolidWorks material through a map, then part-name rules, then a default, each with
-  `source` and `confidence`. Overrides live in scene.json and survive a re-export.
+- Always mm and Z-up; adapters convert. `transform` is a 4×4 matrix in the column-vector convention, translation in
+  mm, relative to the product root. `world_bbox_mm` is the part bbox carried through the transform (the import
+  check compares the same quantity, so it is exact for any rotation).
+- Component ids come from the source: SolidWorks `Name2` (`part-2`, `sub-1/part-1`), the FreeCAD object path
+  (`Assembly/Link001`), or the node path in a STEP/glTF file (`fasteners/screw0`). `label` comes from this repo's
+  `assembly.json` where one exists. `occurrence` is the source's instance number when it has one.
+- `validation.reference` says how strong the import checks are: `cad_kernel` when the CAD system measured the
+  bboxes (SolidWorks, FreeCAD/OpenCASCADE), `source_file` when they come from the file that is imported (the
+  file adapter), in which case `--expect-size` confirms the scale.
+- Material proposals: the CAD material name through `cad_material_map`, then part-name rules, then a default, each
+  with `source` and `confidence`. Overrides live in scene.json and survive a re-export.
 
 ## Verified facts
+
+**Source-neutral path** (2026-11-08):
+- grindmn's assembly STEP through the file adapter gave 24 unique parts and 29 components with bbox
+  129 × 68.4 × 235 mm, identical to the SolidWorks adapter, and every import check passed.
+- The STEP Importer gives each instance its own mesh (no sharing) but keeps it in part coordinates and names
+  repeats `name.001`; instances are therefore rebuilt from base name + vertex/face count + local bbox.
+- A generated glTF with a nested subassembly and three rotated instances of one mesh: 2 parts, 4 components,
+  hierarchy and placement checks pass; the glTF material name "Aluminum 6061" mapped to `aluminium_raw`.
+- An STL with `--units m` was caught by `--expect-size` (1000× too large); with `--units mm` it imported at
+  340 × 600 × 6.35 mm as specified.
+- Blender 5.2 importer options were read from the operators' RNA: `wm.obj_import`/`stl_import`/`ply_import`
+  (`global_scale`, `forward_axis`, `up_axis`), `import_scene.gltf`, `import_scene.fbx`, `wm.usd_import`
+  (`apply_unit_conversion_scale`), `export_scene.gltf` (`export_format`, `use_selection`, `export_yup`).
+- The FreeCAD adapter's host side (manifest building, GuiDocument.xml colours) is unit-tested; the part that runs
+  inside FreeCAD (`freecad_dump.py`) has **not** been run against a real FreeCAD yet (none installed on the
+  development machine). Its fallback, STEP exported from FreeCAD through the file adapter, is the verified path.
 
 **SolidWorks STEP export** (SOLIDWORKS 2025 SP5, values read from `swconst.tlb`):
 - `swUserPreferenceIntegerValue_e.swStepAP` = 75. Plain `SaveAs3` writes AP214 for 214
@@ -85,6 +120,9 @@ capability 3.0), which Cycles does not list (no CUDA or OptiX devices). Renderin
 
 ## Fallback if the STEP Importer is unavailable
 
+Only STEP sources need the extension: glTF, OBJ, STL, PLY, FBX and USD use Blender's built-in importers.
+
+
 1. Check whether the installed Blender is older than 5.1 (the extension's minimum). If it is, install 5.1+ next to it as a portable zip.
 2. Second route (not implemented, so evaluate before use): STEP → glTF with cascadio in a separate Python 3.12 venv
    (`pip install cascadio`, the library the extension wraps), then Blender's built-in glTF importer. It uses the same tessellator,
@@ -104,5 +142,10 @@ None of these is substituted silently. `bl_import.py` stops with an error if the
   Drop licensed local assets in only when the user supplies them.
 - Surface finishes are procedural cues (noise, streaks, layer lines). Knurling, threads and text are rendered only
   when they are modelled in the CAD.
-- The parts carry no SolidWorks appearances, so every material comes from the requirements or from rules. Colours are taken
-  from a STEP only when the part has a real appearance (the importer reads them, and they are recorded as `step_rgb`).
+- CAD colours are recorded per part (`source_color`) but used only with `materials.use_source_colors`; a colour every
+  part shares is treated as a default appearance and dropped. Materials otherwise come from the requirements or rules.
+- The file adapter cannot know the units of OBJ/STL/PLY or prove any file's scale on its own: `--units`, `--up` and
+  `--expect-size` cover that. Mesh formats keep the tessellation they were saved with.
+- The FreeCAD adapter handles Part/PartDesign bodies, App::Part, groups, App::Link (arrays included) and the 1.x
+  Assembly; link scale, configuration tables and external link documents that FreeCAD cannot open are not handled
+  (the bbox check against FreeCAD's own evaluation stops the export when the walk misses something).

@@ -1,9 +1,11 @@
-"""End-to-end test of SolidWorks -> STEP -> manifest -> Blender -> preview -> approval -> final,
-at tiny quality, into a temporary folder (the assembly's own render/ workspace is not touched).
+"""End-to-end test of CAD source -> manifest -> Blender -> preview -> approval -> final,
+at tiny quality, into a temporary folder (the product's own render/ workspace is not touched).
 
     .venv\\Scripts\\python tests\\test_render_e2e.py [assemblies\\grindmn] [--keep] [--no-export DIR]
+    .venv\\Scripts\\python tests\\test_render_e2e.py path\\to\\product.step      (any adapter: .FCStd, .glb, ...)
 
-Needs SolidWorks running (for the export) and Blender + the STEP Importer.
+The adapter follows the target (SolidWorks needs SolidWorks running, FreeCAD needs FreeCAD).
+Blender + the STEP Importer are always needed.
 Exit code 0 only when every step and check passed. Inspect the images it prints, too:
 a pipeline that runs is not yet a pipeline that looks right.
 """
@@ -19,7 +21,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import render_cli as cli  # noqa: E402
 import render_config as rc  # noqa: E402
-import render_export as rx  # noqa: E402
+import render_adapters  # noqa: E402
 
 results = []
 
@@ -42,11 +44,12 @@ def main():
 
     # 1-3 export + manifest
     if not a.no_export:
-        man = rx.run(target, work, exploded if (exploded / "assembly.json").exists() else None)
+        man = render_adapters.export(target, work, exploded_from=exploded if (exploded / "assembly.json").exists() else None)
     else:
-        man = json.loads(rc.path(work, "manifest").read_text())
-    step("export.step_files", all((rc.render_dir(work) / p["step"]).exists() for p in man["parts"].values()),
-         f"{len(man['parts'])} part STEPs, protocol {man['step'].get('protocol')}")
+        man = cli.load_manifest(work)
+    step("export.geometry_files", all((rc.render_dir(work) / p["geometry"]["file"]).exists() for p in man["parts"].values()),
+         f"{len(man['parts'])} part files via the {man['source']['adapter']} adapter ({man['source']['application']})")
+    step("manifest.valid", not render_adapters.common.validate(man))
     ids = [c["id"] for c in man["components"]]
     step("manifest.unique_ids", len(ids) == len(set(ids)), f"{len(ids)} components")
     step("manifest.repeated_instances", len({c["part"] for c in man["components"]}) <= len(ids))
@@ -63,7 +66,8 @@ def main():
     s = json.loads(sp.read_text())
     s["render"]["preview"].update(long_side=240, samples=8)
     s["render"]["final"].update(long_side=320, samples=12)
-    s["shots"] = [sh for sh in s["shots"] if sh["name"] in ("hero", "front", "env_hero", "exploded", "xray")]
+    s["shots"] = [sh for sh in s["shots"] if sh["name"] in ("hero", "front", "exploded", "xray")]
+    s["shots"].append({"name": "env_hero", "scene": "environment", "camera": "environment_hero", "category": "environment"})
     s["shots"].append({"name": "cut", "scene": "technical", "camera": "three_quarter_hero", "category": "technical",
                        "cutaway": {"components": "auto", "axis": "y", "keep": "+"}})
     s["environment"]["preset"] = "laboratory"
@@ -101,7 +105,7 @@ def main():
     step("final.images", all(pathlib.Path(x["file"]).exists() for x in fin["shots"]), f"{len(fin['shots'])} images")
     step("final.blend", pathlib.Path(fin["blend"]).exists())
     step("final.deliverables", (rc.path(work, "final") / "deliverables.md").exists())
-    step("cad.untouched", rx.find_cad(target)[0].exists())
+    step("cad.untouched", target.exists())
 
     failed = [r for r in results if not r[1]]
     print(f"\n{len(results) - len(failed)}/{len(results)} passed; work dir {work}")

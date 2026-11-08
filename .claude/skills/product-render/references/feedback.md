@@ -8,7 +8,7 @@ Material ids and finishes are listed in `materials.md`, lighting in `lighting.md
 | "Make the aluminium more reflective" | `materials.parts.<part>.roughness`: lower it by 0.1 to 0.15 (anodised 0.34 → 0.2), or `"finish": "polished"` for a mirror |
 | "Change the enclosure to matte black" | `materials.parts.<enclosure>`: `{"material": "powder_matte", "color": "#1A1A1C"}` or `"aluminium_anodized_black"` |
 | "Make it brushed" | `"finish": "brushed"` (add `"brush": "linear_x"` for flat stock; the default `radial_z` suits turned parts) |
-| "Only this screw in black" | `materials.components.<sw_id or label>` (it wins over `parts`) |
+| "Only this screw in black" | `materials.components.<cad_id or label>` (it wins over `parts`) |
 | "Use a brighter background" | `studio.background`: `{"type": "gradient", "color": "#FFFFFF", "color2": "#EDEDED"}`; `"solid"` or `"transparent"` (PNG alpha with a shadow catcher) |
 | "Make the lighting softer" | `lighting.softness` 1.5 to 2, `lighting.fill_ratio` 1.3 |
 | "More contrast" / "more dramatic" | `lighting.preset: "dramatic_premium"`, or `fill_ratio` 0.5 and `exposure` -0.3 |

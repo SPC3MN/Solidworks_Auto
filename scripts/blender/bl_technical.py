@@ -17,15 +17,15 @@ def exploded_collection(cad_objs, manifest, scene_coll_name, scale=1.0):
     ex = manifest.get("exploded") or {}
     offs = ex.get("offsets_mm", {})
     root = bpy.data.collections.new(f"CAD_{manifest['assembly']}_exploded")
-    root["sw_role"] = "exploded"
+    root["cad_role"] = "exploded"
     out = []
     for ob in cad_objs:
         dup = ob.copy()  # linked duplicate: same mesh
         dup.name = f"{ob.name}.exploded"
-        off = Vector(offs.get(ob["sw_id"], (0, 0, 0))) * U.MM * scale
+        off = Vector(offs.get(ob["cad_id"], (0, 0, 0))) * U.MM * scale
         dup.matrix_world = ob.matrix_world.copy()
         dup.matrix_world.translation = ob.matrix_world.translation + off
-        dup["explode_offset_mm"] = list(offs.get(ob["sw_id"], (0, 0, 0)))
+        dup["explode_offset_mm"] = list(offs.get(ob["cad_id"], (0, 0, 0)))
         root.objects.link(dup)
         for s_src, s_dup in zip(ob.material_slots, dup.material_slots):
             s_dup.link = "OBJECT"
@@ -35,7 +35,7 @@ def exploded_collection(cad_objs, manifest, scene_coll_name, scale=1.0):
 
 
 def _match(ob, keys):
-    return bool(keys) and (ob.get("sw_id") in keys or ob.get("sw_label") in keys or ob.get("sw_part") in keys)
+    return bool(keys) and (ob.get("cad_id") in keys or ob.get("cad_label") in keys or ob.get("cad_part") in keys)
 
 
 def auto_housing(objs):
@@ -101,7 +101,7 @@ def apply_overrides(objs, shot, settings, product_box):
     xray = tech.get("xray") or []
     if xray == "auto" or xray == ["auto"]:
         h = auto_housing([o for o in objs if not o.hide_render])
-        xray = [h["sw_id"]] if h else []
+        xray = [h["cad_id"]] if h else []
     if xray:
         mat = BM.build(BM.resolve(lib, {"material": "xray_housing"}))
         for ob in objs:
@@ -125,7 +125,7 @@ def apply_overrides(objs, shot, settings, product_box):
         targets = cut["components"]
         if targets in ("auto", ["auto"]):
             h = auto_housing([o for o in objs if not o.hide_render])
-            targets = [h["sw_id"]] if h else []
+            targets = [h["cad_id"]] if h else []
         for ob in objs:
             if _match(ob, targets):
                 for s in ob.material_slots:

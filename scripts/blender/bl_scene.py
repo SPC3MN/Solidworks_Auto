@@ -109,7 +109,7 @@ def main():
         U.log("HW", detect_device())
         return
     quality = args.get("quality", "preview")
-    man = U.load_json(rdir / "export" / "product_manifest.json")
+    man = U.load_manifest(rdir / "export" / "product_manifest.json")
     settings = U.load_json(rdir / "settings" / "scene.json")
     q = settings["render"][quality]
     asm = man["assembly"]
@@ -117,17 +117,17 @@ def main():
     device = detect_device()
     U.log("device", device)
 
-    cad_root = next(c for c in bpy.data.collections if c.get("sw_role") == "cad_root")
-    cad = [o for o in cad_root.all_objects if "sw_id" in o]
+    cad_root = next(c for c in bpy.data.collections if c.get("cad_role") == "cad_root")
+    cad = [o for o in cad_root.all_objects if "cad_id" in o]
     mat_table = BM.assign(cad, man, settings)
     visible = [o for o in cad if not o.hide_render]
     box = (Vector([min(U.exact_world_bbox(o)[0][i] for o in visible) for i in range(3)]),
            Vector([max(U.exact_world_bbox(o)[1][i] for o in visible) for i in range(3)]))
     by_key = {}
     for o in cad:
-        by_key[o["sw_id"]] = o
-        if o.get("sw_label"):
-            by_key[o["sw_label"]] = o
+        by_key[o["cad_id"]] = o
+        if o.get("cad_label"):
+            by_key[o["cad_label"]] = o
 
     shots = settings["shots"]
     if args.get("shots"):
