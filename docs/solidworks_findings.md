@@ -257,3 +257,20 @@ The source-to-simple mapping lives in `assemblies/x8020_map.json`, and the solve
 - The source assemblies differ in up axis: TANK is Y-up and the rig is Z-up (`source_up` in the map).
 - Results: rig 12 216 -> 1 337 faces (9.1x); TANK 6 618 -> 4 394 (most of its parts were already simple, so they were kept).
   Building assemblies of 112 and 321 components takes several minutes, so run them in the background.
+
+## Circular patterns and heavy parts (airmn, 2026-11-08)
+
+- `Part.circular_pattern(name, features, n)`: creates `Axis_Z` once with `InsertAxis2(True)` after selecting
+  Top Plane and Right Plane (their intersection is model Z here), selects it with mark 1 and the seed features
+  (`BODYFEATURE`) with mark 4, then calls `FeatureCircularPattern4(n, 2*pi, False, "NULL", True, True, False)`
+  (geometry pattern, equal spacing). A 12-instance probe removed exactly 12 × the seed volume, and the 133-unit
+  dot-grid band (2128 holes) matched the hand integral.
+- A part with thousands of holes is quick to build but slow to export: the 2512-hole band wrote a 63 MB STEP,
+  and the pipeline's STEP re-import took about 10 minutes. 1969 holes cut from one flat sketch was fine.
+- A zigzag polygon of 960 lines per contour (the pleat pack and comb) builds in under a minute. A mitred offset
+  outline that crosses itself makes `FeatureCut4` return None with no other error.
+- SolidWorks dropped its COM connection once during a batch ("The object invoked has disconnected from its
+  clients"). It came back on its own (a new process), and every later call in that run failed until the
+  script was restarted.
+- `app.GetFirstDocument` and `doc.GetNext` are properties under late binding. Calling them with `()` raises
+  "Member not found".

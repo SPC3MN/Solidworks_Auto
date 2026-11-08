@@ -69,6 +69,8 @@ user's explicit approval of the previews (`render_cli.py approve`, with their wo
 - Extrudes and cuts on planes normal to Z (`axis="z"`, profile coords (x, y)) or
   normal to Y (`axis="y"`, profile coords (x, z)), e.g. connectors that stick out
   sideways. X-normal planes work too (profile coords (y, z)). `Part.sweep` makes round bars along line/arc paths (cables). No revolve or loft yet.
+  `Part.circular_pattern` repeats features about Z (radial hole grids, vents). No sketches on tilted
+  planes yet (angled blades need that extension).
 - Keep profile edges from partly overlapping existing model edges. SolidWorks
   rejects such sketches (see findings).
 - Swept-in sketches aren't dimensioned. Only extrusion depths and shell thickness
