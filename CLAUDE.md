@@ -1,13 +1,16 @@
 # Solidworks_Auto: notes for Claude
 
-SolidWorks 2025 driven over COM from Python (`.venv`, pywin32). Read
+CAD driven from Python through a backend per CAD program: SolidWorks 2025 over COM (`.venv`,
+pywin32) today, FreeCAD next (the user is moving to it; backend not built yet, see
+`.claude/skills/model-from-photo/references/freecad.md`). The workflow and the geometry modules are
+CAD-neutral; only the backend changes. The notes below describe the SolidWorks backend unless they say otherwise. Read
 `docs/architecture.md` for the principles and `docs/solidworks_findings.md` for
 verified API behaviour and gotchas before changing scripts.
 
 Run Python as `.venv\Scripts\python`. Git is at `C:\Program Files\Git\cmd\git.exe`
 (it may not be on PATH in older shells).
 
-## Keep SolidWorks tidy
+## Keep the CAD program tidy
 
 The user does not want lots of open tabs. Close every document a script opens
 once it is no longer needed. Save it first: projects go to their own folders,
