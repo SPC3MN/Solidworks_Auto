@@ -1,0 +1,56 @@
+{
+  "_comment": "Light rigs, all relative to the product. S = product bounding-box diagonal. size = light size in S; az/el in degrees (az 0 = product front (-Y side), positive toward +X); dist in S from the product centre; irradiance E in W/m2 at the product, converted to light power P = E * pi * d^2. kelvin = colour temperature. Every light aims at the product centre. world = ambient fill. background/floor = the default studio set for this rig (settings can override). look = AgX look name.",
+  "presets": {
+    "soft_commercial": {
+      "description": "Bright, soft, low-contrast catalogue light: big key softbox front-left, large fill, overhead softbox, gentle rim.",
+      "lights": [
+        {"name": "Key",  "shape": "RECTANGLE", "size": [1.4, 1.4], "az": -45, "el": 38, "dist": 2.2, "irradiance": 4.2, "kelvin": 5600},
+        {"name": "Fill", "shape": "RECTANGLE", "size": [1.8, 1.8], "az": 60,  "el": 18, "dist": 2.6, "irradiance": 1.6, "kelvin": 5800},
+        {"name": "Top",  "shape": "RECTANGLE", "size": [1.6, 1.1], "az": 180, "el": 70, "dist": 2.0, "irradiance": 1.8, "kelvin": 5600},
+        {"name": "Rim",  "shape": "RECTANGLE", "size": [0.35, 1.6], "az": 155, "el": 28, "dist": 2.0, "irradiance": 3.0, "kelvin": 6200}
+      ],
+      "flags": [
+        {"name": "FlagFront", "size": [0.25, 1.6], "az": 12,  "el": 8,  "dist": 1.6},
+        {"name": "FlagLeft",  "size": [0.5, 1.6],  "az": -100, "el": 10, "dist": 1.8}
+      ],
+      "world": {"color": "#FFFFFF", "strength": 0.08},
+      "background": {"type": "gradient", "color": "#F6F6F6", "color2": "#D9DADC"},
+      "floor": {"type": "sweep", "color": "#ECECEC", "roughness": 0.55},
+      "look": "None", "exposure": 0.0
+    },
+    "dramatic_premium": {
+      "description": "Dark, high-contrast premium look: narrow strip key from the side, two strong rim strips behind, dark glossy floor.",
+      "lights": [
+        {"name": "Key",   "shape": "RECTANGLE", "size": [0.35, 1.6], "az": -70,  "el": 22, "dist": 2.0, "irradiance": 6.0, "kelvin": 5200},
+        {"name": "RimL",  "shape": "RECTANGLE", "size": [0.25, 1.8], "az": 140,  "el": 15, "dist": 1.8, "irradiance": 8.0, "kelvin": 6500},
+        {"name": "RimR",  "shape": "RECTANGLE", "size": [0.25, 1.8], "az": -140, "el": 15, "dist": 1.8, "irradiance": 6.0, "kelvin": 6500},
+        {"name": "Top",   "shape": "DISK",      "size": [0.8, 0.8], "az": 180,  "el": 70, "dist": 2.5, "irradiance": 0.9, "kelvin": 5600}
+      ],
+      "world": {"color": "#000000", "strength": 0.0},
+      "background": {"type": "gradient", "color": "#1C1C1F", "color2": "#0B0B0C"},
+      "floor": {"type": "sweep", "color": "#111113", "roughness": 0.2},
+      "look": "AgX - Medium High Contrast", "exposure": 0.0
+    },
+    "neutral_technical": {
+      "description": "Even, flat, shadow-light illumination for documentation: two big softboxes, a back light and a bright ambient.",
+      "lights": [
+        {"name": "Key",  "shape": "RECTANGLE", "size": [2.0, 2.0], "az": -30, "el": 50, "dist": 2.5, "irradiance": 3.0, "kelvin": 6000},
+        {"name": "Fill", "shape": "RECTANGLE", "size": [2.0, 2.0], "az": 60,  "el": 35, "dist": 2.5, "irradiance": 2.2, "kelvin": 6000},
+        {"name": "Back", "shape": "RECTANGLE", "size": [2.0, 2.0], "az": 180, "el": 40, "dist": 2.5, "irradiance": 1.5, "kelvin": 6000}
+      ],
+      "world": {"color": "#FFFFFF", "strength": 0.6},
+      "background": {"type": "solid", "color": "#EFEFEF"},
+      "floor": {"type": "sweep", "color": "#E6E6E6", "roughness": 0.8},
+      "look": "None", "exposure": 0.0
+    }
+  },
+  "modifiers": {
+    "_comment": "settings.lighting keys applied on top of a preset",
+    "intensity": "multiplies every light and the world (1 = preset)",
+    "softness": "multiplies light sizes (bigger = softer shadows and highlights)",
+    "fill_ratio": "multiplies every light except the key (lower = more contrast)",
+    "warmth_kelvin": "added to every light's kelvin (negative = warmer)",
+    "rotate": "degrees added to every light's azimuth (moves the rig around the product)",
+    "exposure": "film exposure in stops"
+  }
+}

@@ -1,0 +1,1293 @@
+{
+ "pass": true,
+ "seconds": 8.4,
+ "blend": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\render\\blender\\grindmn_cad.blend",
+ "tessellation": {
+  "tol_linear_mm": 0.009999999776482582,
+  "tol_angular_rad": 0.10000000149011612
+ },
+ "importer": "STEP Importer extension (bl_ext.user_default.step_importer)",
+ "triangles_total": 161304,
+ "parts": {
+  "grindmn_bearing_608": {
+   "bodies": 1,
+   "triangles": 3024,
+   "seconds": 0.31,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -11.0,
+     -10.997,
+     -0.0
+    ],
+    [
+     11.0,
+     10.997,
+     7.0
+    ]
+   ]
+  },
+  "grindmn_tube": {
+   "bodies": 1,
+   "triangles": 9132,
+   "seconds": 0.32,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -32.0,
+     -32.0,
+     -0.0
+    ],
+    [
+     32.0,
+     32.0,
+     122.0
+    ]
+   ]
+  },
+  "grindmn_dial": {
+   "bodies": 1,
+   "triangles": 5380,
+   "seconds": 0.43,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -31.7,
+     -31.695,
+     -0.0
+    ],
+    [
+     31.7,
+     31.695,
+     34.5
+    ]
+   ]
+  },
+  "grindmn_shaft": {
+   "bodies": 1,
+   "triangles": 3540,
+   "seconds": 0.11,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -5.0,
+     -4.998,
+     -0.0
+    ],
+    [
+     5.0,
+     4.998,
+     121.0
+    ]
+   ]
+  },
+  "grindmn_outer_burr": {
+   "bodies": 1,
+   "triangles": 1740,
+   "seconds": 0.18,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -27.0,
+     -27.0,
+     -0.0
+    ],
+    [
+     27.0,
+     27.0,
+     20.0
+    ]
+   ]
+  },
+  "grindmn_inner_burr": {
+   "bodies": 1,
+   "triangles": 2840,
+   "seconds": 0.25,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -23.8,
+     -23.795,
+     -0.0
+    ],
+    [
+     23.8,
+     23.795,
+     30.0
+    ]
+   ]
+  },
+  "grindmn_eclip_6": {
+   "bodies": 1,
+   "triangles": 796,
+   "seconds": 0.05,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -6.15,
+     -6.149,
+     -0.0
+    ],
+    [
+     5.619,
+     6.149,
+     0.7
+    ]
+   ]
+  },
+  "grindmn_screw_m4x6": {
+   "bodies": 1,
+   "triangles": 9092,
+   "seconds": 0.13,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -3.8,
+     -3.799,
+     -0.0
+    ],
+    [
+     3.8,
+     3.799,
+     8.2
+    ]
+   ]
+  },
+  "grindmn_crank_hub": {
+   "bodies": 1,
+   "triangles": 2428,
+   "seconds": 0.08,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -9.0,
+     -9.0,
+     -0.0
+    ],
+    [
+     9.0,
+     9.0,
+     19.0
+    ]
+   ]
+  },
+  "grindmn_bridge": {
+   "bodies": 1,
+   "triangles": 2684,
+   "seconds": 0.13,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -22.0,
+     -22.0,
+     -0.0
+    ],
+    [
+     22.0,
+     22.0,
+     8.0
+    ]
+   ]
+  },
+  "grindmn_screw_m3x8": {
+   "bodies": 1,
+   "triangles": 1028,
+   "seconds": 0.07,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -2.75,
+     -2.749,
+     -0.0
+    ],
+    [
+     2.75,
+     2.749,
+     11.0
+    ]
+   ]
+  },
+  "grindmn_bearing_mf105": {
+   "bodies": 1,
+   "triangles": 3528,
+   "seconds": 0.1,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -5.6,
+     -5.598,
+     -0.0
+    ],
+    [
+     5.6,
+     5.598,
+     4.0
+    ]
+   ]
+  },
+  "grindmn_magnet_6x3": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.05,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -3.0,
+     -2.999,
+     -0.0
+    ],
+    [
+     3.0,
+     2.999,
+     3.0
+    ]
+   ]
+  },
+  "grindmn_shoulder_5x30": {
+   "bodies": 1,
+   "triangles": 1532,
+   "seconds": 0.07,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -4.0,
+     -3.999,
+     -0.0
+    ],
+    [
+     4.0,
+     3.999,
+     40.0
+    ]
+   ]
+  },
+  "grindmn_screw_m4x12": {
+   "bodies": 1,
+   "triangles": 9092,
+   "seconds": 0.14,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -3.8,
+     -3.799,
+     -0.0
+    ],
+    [
+     3.8,
+     3.799,
+     14.2
+    ]
+   ]
+  },
+  "grindmn_ball_plunger": {
+   "bodies": 1,
+   "triangles": 6836,
+   "seconds": 0.12,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -2.5,
+     -2.499,
+     -0.0
+    ],
+    [
+     2.5,
+     2.499,
+     5.0
+    ]
+   ]
+  },
+  "grindmn_crank_arm": {
+   "bodies": 1,
+   "triangles": 1912,
+   "seconds": 0.2,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -9.0,
+     -7.0,
+     -0.0
+    ],
+    [
+     91.0,
+     7.0,
+     6.0
+    ]
+   ]
+  },
+  "grindmn_oring_60x2": {
+   "bodies": 1,
+   "triangles": 66156,
+   "seconds": 0.68,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -32.45,
+     -32.45,
+     0.0
+    ],
+    [
+     32.45,
+     32.45,
+     2.0
+    ]
+   ]
+  },
+  "grindmn_catch_cup": {
+   "bodies": 1,
+   "triangles": 18100,
+   "seconds": 0.25,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -34.0,
+     -34.0,
+     -0.0
+    ],
+    [
+     34.0,
+     34.0,
+     74.0
+    ]
+   ]
+  },
+  "grindmn_spacer": {
+   "bodies": 1,
+   "triangles": 1008,
+   "seconds": 0.06,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -5.75,
+     -5.748,
+     -0.0
+    ],
+    [
+     5.75,
+     5.748,
+     2.0
+    ]
+   ]
+  },
+  "grindmn_spring": {
+   "bodies": 1,
+   "triangles": 6148,
+   "seconds": 0.19,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -6.0,
+     -5.998,
+     -0.0
+    ],
+    [
+     6.0,
+     5.998,
+     16.2
+    ]
+   ]
+  },
+  "grindmn_washer_8": {
+   "bodies": 1,
+   "triangles": 1008,
+   "seconds": 0.06,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -8.0,
+     -7.998,
+     -0.0
+    ],
+    [
+     8.0,
+     7.998,
+     1.6
+    ]
+   ]
+  },
+  "grindmn_lid": {
+   "bodies": 1,
+   "triangles": 1784,
+   "seconds": 0.07,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -32.0,
+     -31.995,
+     -0.0
+    ],
+    [
+     32.0,
+     31.995,
+     6.0
+    ]
+   ]
+  },
+  "grindmn_crank_knob": {
+   "bodies": 1,
+   "triangles": 2016,
+   "seconds": 0.07,
+   "step_rgb": [
+    0.5906,
+    0.6376,
+    0.855
+   ],
+   "bbox_mm": [
+    [
+     -10.0,
+     -9.997,
+     -0.0
+    ],
+    [
+     10.0,
+     9.997,
+     28.4
+    ]
+   ]
+  }
+ },
+ "checks": [
+  {
+   "id": "part_bbox.grindmn_bearing_608",
+   "pass": true,
+   "measured": [
+    [
+     -11.0,
+     -10.997,
+     -0.0
+    ],
+    [
+     11.0,
+     10.997,
+     7.0
+    ]
+   ],
+   "expected": [
+    [
+     -11.0,
+     -11.0,
+     0.0
+    ],
+    [
+     11.0,
+     11.0,
+     7.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_tube",
+   "pass": true,
+   "measured": [
+    [
+     -32.0,
+     -32.0,
+     -0.0
+    ],
+    [
+     32.0,
+     32.0,
+     122.0
+    ]
+   ],
+   "expected": [
+    [
+     -32.0,
+     -32.0,
+     0.0
+    ],
+    [
+     32.0,
+     32.0,
+     122.0
+    ]
+   ],
+   "tol_mm": 0.61
+  },
+  {
+   "id": "part_bbox.grindmn_dial",
+   "pass": true,
+   "measured": [
+    [
+     -31.7,
+     -31.695,
+     -0.0
+    ],
+    [
+     31.7,
+     31.695,
+     34.5
+    ]
+   ],
+   "expected": [
+    [
+     -31.7,
+     -31.7,
+     0.0
+    ],
+    [
+     31.7,
+     31.7,
+     34.5
+    ]
+   ],
+   "tol_mm": 0.317
+  },
+  {
+   "id": "part_bbox.grindmn_shaft",
+   "pass": true,
+   "measured": [
+    [
+     -5.0,
+     -4.998,
+     -0.0
+    ],
+    [
+     5.0,
+     4.998,
+     121.0
+    ]
+   ],
+   "expected": [
+    [
+     -5.0,
+     -5.0,
+     0.0
+    ],
+    [
+     5.0,
+     5.0,
+     121.0
+    ]
+   ],
+   "tol_mm": 0.605
+  },
+  {
+   "id": "part_bbox.grindmn_outer_burr",
+   "pass": true,
+   "measured": [
+    [
+     -27.0,
+     -27.0,
+     -0.0
+    ],
+    [
+     27.0,
+     27.0,
+     20.0
+    ]
+   ],
+   "expected": [
+    [
+     -27.0,
+     -27.0,
+     0.0
+    ],
+    [
+     27.0,
+     27.0,
+     20.0
+    ]
+   ],
+   "tol_mm": 0.27
+  },
+  {
+   "id": "part_bbox.grindmn_inner_burr",
+   "pass": true,
+   "measured": [
+    [
+     -23.8,
+     -23.795,
+     -0.0
+    ],
+    [
+     23.8,
+     23.795,
+     30.0
+    ]
+   ],
+   "expected": [
+    [
+     -23.8,
+     -23.8,
+     0.0
+    ],
+    [
+     23.8,
+     23.8,
+     30.0
+    ]
+   ],
+   "tol_mm": 0.238
+  },
+  {
+   "id": "part_bbox.grindmn_eclip_6",
+   "pass": true,
+   "measured": [
+    [
+     -6.15,
+     -6.149,
+     -0.0
+    ],
+    [
+     5.619,
+     6.149,
+     0.7
+    ]
+   ],
+   "expected": [
+    [
+     -6.15,
+     -6.15,
+     0.0
+    ],
+    [
+     5.6189,
+     6.15,
+     0.7
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_screw_m4x6",
+   "pass": true,
+   "measured": [
+    [
+     -3.8,
+     -3.799,
+     -0.0
+    ],
+    [
+     3.8,
+     3.799,
+     8.2
+    ]
+   ],
+   "expected": [
+    [
+     -3.8,
+     -3.8,
+     0.0
+    ],
+    [
+     3.8,
+     3.8,
+     8.2
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_crank_hub",
+   "pass": true,
+   "measured": [
+    [
+     -9.0,
+     -9.0,
+     -0.0
+    ],
+    [
+     9.0,
+     9.0,
+     19.0
+    ]
+   ],
+   "expected": [
+    [
+     -9.0,
+     -9.0,
+     0.0
+    ],
+    [
+     9.0,
+     9.0,
+     19.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_bridge",
+   "pass": true,
+   "measured": [
+    [
+     -22.0,
+     -22.0,
+     -0.0
+    ],
+    [
+     22.0,
+     22.0,
+     8.0
+    ]
+   ],
+   "expected": [
+    [
+     -22.0,
+     -22.0,
+     0.0
+    ],
+    [
+     22.0,
+     22.0,
+     8.0
+    ]
+   ],
+   "tol_mm": 0.22
+  },
+  {
+   "id": "part_bbox.grindmn_screw_m3x8",
+   "pass": true,
+   "measured": [
+    [
+     -2.75,
+     -2.749,
+     -0.0
+    ],
+    [
+     2.75,
+     2.749,
+     11.0
+    ]
+   ],
+   "expected": [
+    [
+     -2.75,
+     -2.75,
+     0.0
+    ],
+    [
+     2.75,
+     2.75,
+     11.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_bearing_mf105",
+   "pass": true,
+   "measured": [
+    [
+     -5.6,
+     -5.598,
+     -0.0
+    ],
+    [
+     5.6,
+     5.598,
+     4.0
+    ]
+   ],
+   "expected": [
+    [
+     -5.6,
+     -5.6,
+     0.0
+    ],
+    [
+     5.6,
+     5.6,
+     4.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_magnet_6x3",
+   "pass": true,
+   "measured": [
+    [
+     -3.0,
+     -2.999,
+     -0.0
+    ],
+    [
+     3.0,
+     2.999,
+     3.0
+    ]
+   ],
+   "expected": [
+    [
+     -3.0,
+     -3.0,
+     0.0
+    ],
+    [
+     3.0,
+     3.0,
+     3.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_shoulder_5x30",
+   "pass": true,
+   "measured": [
+    [
+     -4.0,
+     -3.999,
+     -0.0
+    ],
+    [
+     4.0,
+     3.999,
+     40.0
+    ]
+   ],
+   "expected": [
+    [
+     -4.0,
+     -4.0,
+     0.0
+    ],
+    [
+     4.0,
+     4.0,
+     40.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_screw_m4x12",
+   "pass": true,
+   "measured": [
+    [
+     -3.8,
+     -3.799,
+     -0.0
+    ],
+    [
+     3.8,
+     3.799,
+     14.2
+    ]
+   ],
+   "expected": [
+    [
+     -3.8,
+     -3.8,
+     0.0
+    ],
+    [
+     3.8,
+     3.8,
+     14.2
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_ball_plunger",
+   "pass": true,
+   "measured": [
+    [
+     -2.5,
+     -2.499,
+     -0.0
+    ],
+    [
+     2.5,
+     2.499,
+     5.0
+    ]
+   ],
+   "expected": [
+    [
+     -2.5,
+     -2.5,
+     0.0
+    ],
+    [
+     2.5,
+     2.5,
+     5.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_crank_arm",
+   "pass": true,
+   "measured": [
+    [
+     -9.0,
+     -7.0,
+     -0.0
+    ],
+    [
+     91.0,
+     7.0,
+     6.0
+    ]
+   ],
+   "expected": [
+    [
+     -9.0,
+     -7.0,
+     0.0
+    ],
+    [
+     91.0,
+     7.0,
+     6.0
+    ]
+   ],
+   "tol_mm": 0.5
+  },
+  {
+   "id": "part_bbox.grindmn_oring_60x2",
+   "pass": true,
+   "measured": [
+    [
+     -32.45,
+     -32.45,
+     0.0
+    ],
+    [
+     32.45,
+     32.45,
+     2.0
+    ]
+   ],
+   "expected": [
+    [
+     -32.45,
+     -32.45,
+     -0.0
+    ],
+    [
+     32.45,
+     32.45,
+     2.0
+    ]
+   ],
+   "tol_mm": 0.325
+  },
+  {
+   "id": "part_bbox.grindmn_catch_cup",
+   "pass": true,
+   "measured": [
+    [
+     -34.0,
+     -34.0,
+     -0.0
+    ],
+    [
+     34.0,
+     34.0,
+     74.0
+    ]
+   ],
+   "expected": [
+    [
+     -34.0,
+     -34.0,
+     0.0
+    ],
+    [
+     34.0,
+     34.0,
+     74.0
+    ]
+   ],
+   "tol_mm": 0.37
+  },
+  {
+   "id": "part_bbox.grindmn_spacer",
+   "pass": true,
+   "measured": [
+    [
+     -5.75,
+     -5.748,
+     -0.0
+    ],
+    [
+     5.75,
+     5.748,
+     2.0
+    ]
+   ],
+   "expected": [
+    [
+     -5.75,
+     -5.75,
+     0.0
+    ],
+    [
+     5.75,
+     5.75,
+     2.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_spring",
+   "pass": true,
+   "measured": [
+    [
+     -6.0,
+     -5.998,
+     -0.0
+    ],
+    [
+     6.0,
+     5.998,
+     16.2
+    ]
+   ],
+   "expected": [
+    [
+     -6.0,
+     -6.0,
+     0.0
+    ],
+    [
+     6.0,
+     6.0,
+     16.2
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_washer_8",
+   "pass": true,
+   "measured": [
+    [
+     -8.0,
+     -7.998,
+     -0.0
+    ],
+    [
+     8.0,
+     7.998,
+     1.6
+    ]
+   ],
+   "expected": [
+    [
+     -8.0,
+     -8.0,
+     0.0
+    ],
+    [
+     8.0,
+     8.0,
+     1.6
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.grindmn_lid",
+   "pass": true,
+   "measured": [
+    [
+     -32.0,
+     -31.995,
+     -0.0
+    ],
+    [
+     32.0,
+     31.995,
+     6.0
+    ]
+   ],
+   "expected": [
+    [
+     -32.0,
+     -32.0,
+     0.0
+    ],
+    [
+     32.0,
+     32.0,
+     6.0
+    ]
+   ],
+   "tol_mm": 0.32
+  },
+  {
+   "id": "part_bbox.grindmn_crank_knob",
+   "pass": true,
+   "measured": [
+    [
+     -10.0,
+     -9.997,
+     -0.0
+    ],
+    [
+     10.0,
+     9.997,
+     28.4
+    ]
+   ],
+   "expected": [
+    [
+     -10.0,
+     -10.0,
+     0.0
+    ],
+    [
+     10.0,
+     10.0,
+     28.4
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 29,
+   "placed": 29,
+   "missing": []
+  },
+  {
+   "id": "component_positions",
+   "pass": true,
+   "wrong": [],
+   "checked": 29
+  },
+  {
+   "id": "assembly_bbox",
+   "pass": true,
+   "measured": [
+    129.0,
+    68.4,
+    235.0
+   ],
+   "expected": [
+    129.0,
+    68.4,
+    235.0
+   ],
+   "note": "also proves scale (mm -> m) and Z-up orientation"
+  },
+  {
+   "id": "hierarchy",
+   "pass": true,
+   "nodes": 1
+  },
+  {
+   "id": "crosscheck.assembly_step_bbox",
+   "pass": true,
+   "measured": [
+    129.0,
+    68.4,
+    235.0
+   ],
+   "expected": [
+    129.0,
+    68.4,
+    235.0
+   ]
+  },
+  {
+   "id": "crosscheck.assembly_step_mesh_count",
+   "pass": true,
+   "meshes": 29,
+   "components": 29,
+   "note": "bodies, so >= components for multi-body parts"
+  }
+ ]
+}

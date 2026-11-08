@@ -223,6 +223,14 @@ Never dimension ports (RCA, USB-C, HDMI and so on).
 When the user asks for **machining drawings** of parts they will make, that rule does not apply: use
 the dimensioned-drawing skill's machining section (section view, every seat and step, fits).
 
+## 7c. Photorealistic renders: only when the user asks
+
+The SolidWorks renders in `renders/` are for checking geometry. When the user wants product imagery
+(photoreal, studio, in an environment, exploded), use the `product-render` skill on the promoted part
+(`projects/<name>`) or on the assembly (`assemblies/<name>`). It exports STEP and a manifest, renders previews
+in Blender Cycles, and renders finals only after the user explicitly approves them. Pass the material and finish
+table from `requirements.md` into its `materials.parts`. Never change the CAD to fix a render.
+
 ## 8. Keep SolidWorks tidy
 
 Save and close every document a script opens. Never call `CloseAllDocuments`, and never close documents the user opened. Afterwards, check that no document is left open.

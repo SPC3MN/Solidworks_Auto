@@ -1,0 +1,4 @@
+{
+  "_comment": "Copy to render.local.json (gitignored) and set the Blender path for this machine. BLENDER_EXE overrides it.",
+  "blender": "C:/Users/<you>/Tools/blender-5.2.3-windows-x64/blender.exe"
+}

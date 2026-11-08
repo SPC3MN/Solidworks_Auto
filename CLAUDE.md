@@ -57,6 +57,13 @@ When the user sends a picture of an object to model:
 
 Never claim success without a passing pipeline report in `validation/history/`.
 
+## Photorealistic renders
+
+Product imagery (Blender Cycles: studio, environments, exploded/technical) is the project skill
+`.claude/skills/product-render` (`/product-render`), driven by `scripts/render_cli.py`. Background is in
+`docs/rendering.md`. SolidWorks stays authoritative: Blender only reads STEP exports. Final renders need the
+user's explicit approval of the previews (`render_cli.py approve`, with their words quoted).
+
 ## Library limits (extend swlib.py when a photo needs more)
 
 - Extrudes and cuts on planes normal to Z (`axis="z"`, profile coords (x, y)) or

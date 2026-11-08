@@ -1,0 +1,2435 @@
+{
+ "schema_version": "1.0",
+ "project": "grindmn",
+ "assembly": "grindmn",
+ "source_cad": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\assemblies\\grindmn\\grindmn.SLDASM",
+ "exported": "2026-11-08T12:55:51",
+ "units": {
+  "length": "mm",
+  "up_axis": "Z"
+ },
+ "step": {
+  "assembly": "export/step/grindmn.step",
+  "schema": "AUTOMOTIVE_DESIGN",
+  "protocol": "AP214",
+  "ap242_requested": false,
+  "ap242_fallback_reason": null,
+  "appearances": true
+ },
+ "bbox_mm": {
+  "min": [
+   -34.0,
+   -34.2,
+   -50.5
+  ],
+  "max": [
+   95.0,
+   34.2,
+   184.5
+  ],
+  "size": [
+   129.0,
+   68.4,
+   235.0
+  ]
+ },
+ "hierarchy": [
+  {
+   "id": "grindmn",
+   "parent": null,
+   "kind": "assembly"
+  }
+ ],
+ "parts": {
+  "grindmn_bearing_608": {
+   "part_id": "grindmn_bearing_608",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bearing_608\\design\\grindmn_bearing_608.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -11.0,
+     -11.0,
+     0.0
+    ],
+    "max": [
+     11.0,
+     11.0,
+     7.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_polished",
+    "source": "name_rule",
+    "rule": "bearing",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_bearing_608.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_tube": {
+   "part_id": "grindmn_tube",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_tube\\design\\grindmn_tube.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -32.0,
+     -32.0,
+     0.0
+    ],
+    "max": [
+     32.0,
+     32.0,
+     122.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_anodized",
+    "source": "name_rule",
+    "rule": "enclosure|housing|case|lid|cover|tube|body",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_tube.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_dial": {
+   "part_id": "grindmn_dial",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_dial\\design\\grindmn_dial.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -31.7,
+     -31.7,
+     0.0
+    ],
+    "max": [
+     31.7,
+     31.7,
+     34.5
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_dial.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_shaft": {
+   "part_id": "grindmn_shaft",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_shaft\\design\\grindmn_shaft.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -5.0,
+     -5.0,
+     0.0
+    ],
+    "max": [
+     5.0,
+     5.0,
+     121.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "shaft|axle|burr",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_shaft.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_outer_burr": {
+   "part_id": "grindmn_outer_burr",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_outer_burr\\design\\grindmn_outer_burr.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -27.0,
+     -27.0,
+     0.0
+    ],
+    "max": [
+     27.0,
+     27.0,
+     20.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "shaft|axle|burr",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_outer_burr.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_inner_burr": {
+   "part_id": "grindmn_inner_burr",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_inner_burr\\design\\grindmn_inner_burr.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -23.8,
+     -23.8,
+     0.0
+    ],
+    "max": [
+     23.8,
+     23.8,
+     30.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "shaft|axle|burr",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_inner_burr.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_eclip_6": {
+   "part_id": "grindmn_eclip_6",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_eclip_6\\design\\grindmn_eclip_6.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -6.15,
+     -6.15,
+     0.0
+    ],
+    "max": [
+     5.6189,
+     6.15,
+     0.7
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_eclip_6.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_screw_m4x6": {
+   "part_id": "grindmn_screw_m4x6",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m4x6\\design\\grindmn_screw_m4x6.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -3.8,
+     -3.8,
+     0.0
+    ],
+    "max": [
+     3.8,
+     3.8,
+     8.2
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_screw_m4x6.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_crank_hub": {
+   "part_id": "grindmn_crank_hub",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_hub\\design\\grindmn_crank_hub.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -9.0,
+     -9.0,
+     0.0
+    ],
+    "max": [
+     9.0,
+     9.0,
+     19.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_crank_hub.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_bridge": {
+   "part_id": "grindmn_bridge",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bridge\\design\\grindmn_bridge.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -22.0,
+     -22.0,
+     0.0
+    ],
+    "max": [
+     22.0,
+     22.0,
+     8.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_bridge.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_screw_m3x8": {
+   "part_id": "grindmn_screw_m3x8",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m3x8\\design\\grindmn_screw_m3x8.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -2.75,
+     -2.75,
+     0.0
+    ],
+    "max": [
+     2.75,
+     2.75,
+     11.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_screw_m3x8.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_bearing_mf105": {
+   "part_id": "grindmn_bearing_mf105",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bearing_mf105\\design\\grindmn_bearing_mf105.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -5.6,
+     -5.6,
+     0.0
+    ],
+    "max": [
+     5.6,
+     5.6,
+     4.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_polished",
+    "source": "name_rule",
+    "rule": "bearing",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_bearing_mf105.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_magnet_6x3": {
+   "part_id": "grindmn_magnet_6x3",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_magnet_6x3\\design\\grindmn_magnet_6x3.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -3.0,
+     -3.0,
+     0.0
+    ],
+    "max": [
+     3.0,
+     3.0,
+     3.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "ferrite_magnet",
+    "source": "name_rule",
+    "rule": "magnet",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_magnet_6x3.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_shoulder_5x30": {
+   "part_id": "grindmn_shoulder_5x30",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_shoulder_5x30\\design\\grindmn_shoulder_5x30.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -4.0,
+     -4.0,
+     0.0
+    ],
+    "max": [
+     4.0,
+     4.0,
+     40.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_shoulder_5x30.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_screw_m4x12": {
+   "part_id": "grindmn_screw_m4x12",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m4x12\\design\\grindmn_screw_m4x12.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -3.8,
+     -3.8,
+     0.0
+    ],
+    "max": [
+     3.8,
+     3.8,
+     14.2
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_screw_m4x12.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_ball_plunger": {
+   "part_id": "grindmn_ball_plunger",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_ball_plunger\\design\\grindmn_ball_plunger.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -2.5,
+     -2.5,
+     0.0
+    ],
+    "max": [
+     2.5,
+     2.5,
+     5.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_ball_plunger.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_crank_arm": {
+   "part_id": "grindmn_crank_arm",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_arm\\design\\grindmn_crank_arm.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -9.0,
+     -7.0,
+     0.0
+    ],
+    "max": [
+     91.0,
+     7.0,
+     6.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_crank_arm.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_oring_60x2": {
+   "part_id": "grindmn_oring_60x2",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_oring_60x2\\design\\grindmn_oring_60x2.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -32.45,
+     -32.45,
+     -0.0
+    ],
+    "max": [
+     32.45,
+     32.45,
+     2.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "rubber",
+    "source": "name_rule",
+    "rule": "o_?ring|gasket|seal|grommet|foot|bumper|tire|tyre",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_oring_60x2.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_catch_cup": {
+   "part_id": "grindmn_catch_cup",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_catch_cup\\design\\grindmn_catch_cup.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -34.0,
+     -34.0,
+     0.0
+    ],
+    "max": [
+     34.0,
+     34.0,
+     74.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_catch_cup.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_spacer": {
+   "part_id": "grindmn_spacer",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_spacer\\design\\grindmn_spacer.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -5.75,
+     -5.75,
+     0.0
+    ],
+    "max": [
+     5.75,
+     5.75,
+     2.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_spacer.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_spring": {
+   "part_id": "grindmn_spring",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_spring\\design\\grindmn_spring.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -6.0,
+     -6.0,
+     0.0
+    ],
+    "max": [
+     6.0,
+     6.0,
+     16.2
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_spring.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_washer_8": {
+   "part_id": "grindmn_washer_8",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_washer_8\\design\\grindmn_washer_8.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -8.0,
+     -8.0,
+     0.0
+    ],
+    "max": [
+     8.0,
+     8.0,
+     1.6
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_washer_8.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_lid": {
+   "part_id": "grindmn_lid",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_lid\\design\\grindmn_lid.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -32.0,
+     -32.0,
+     0.0
+    ],
+    "max": [
+     32.0,
+     32.0,
+     6.0
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "aluminium_anodized",
+    "source": "name_rule",
+    "rule": "enclosure|housing|case|lid|cover|tube|body",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_lid.step",
+   "sw_appearance_is_default": true
+  },
+  "grindmn_crank_knob": {
+   "part_id": "grindmn_crank_knob",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_knob\\design\\grindmn_crank_knob.SLDPRT",
+   "bbox_mm": {
+    "min": [
+     -10.0,
+     -10.0,
+     0.0
+    ],
+    "max": [
+     10.0,
+     10.0,
+     28.4
+    ]
+   },
+   "sw_material": "Steel",
+   "sw_appearance": {
+    "rgb": [
+     0.7922,
+     0.8196,
+     0.9333
+    ],
+    "transparency": 0.0
+   },
+   "material": {
+    "material": "pom_black",
+    "source": "name_rule",
+    "rule": "knob|handle|grip",
+    "confidence": "low",
+    "note": "every part has SolidWorks material 'Steel' (template default), ignored"
+   },
+   "step": "export/step/parts/grindmn_crank_knob.step",
+   "sw_appearance_is_default": true
+  }
+ },
+ "components": [
+  {
+   "id": "grindmn_bearing_608-1",
+   "name": "grindmn_bearing_608-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     21.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bearing_608\\design\\grindmn_bearing_608.SLDPRT",
+   "part": "grindmn_bearing_608",
+   "world_bbox_mm": [
+    [
+     -11.0,
+     -11.0,
+     21.0
+    ],
+    [
+     11.0,
+     11.0,
+     28.0
+    ]
+   ],
+   "label": "bearing_lower"
+  },
+  {
+   "id": "grindmn_tube-1",
+   "name": "grindmn_tube-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_tube\\design\\grindmn_tube.SLDPRT",
+   "part": "grindmn_tube",
+   "world_bbox_mm": [
+    [
+     -32.0,
+     -32.0,
+     0.0
+    ],
+    [
+     32.0,
+     32.0,
+     122.0
+    ]
+   ],
+   "label": "grindmn_tube"
+  },
+  {
+   "id": "grindmn_dial-1",
+   "name": "grindmn_dial-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     -6.5
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_dial\\design\\grindmn_dial.SLDPRT",
+   "part": "grindmn_dial",
+   "world_bbox_mm": [
+    [
+     -31.7,
+     -31.7,
+     -6.5
+    ],
+    [
+     31.7,
+     31.7,
+     28.0
+    ]
+   ],
+   "label": "grindmn_dial"
+  },
+  {
+   "id": "grindmn_shaft-1",
+   "name": "grindmn_shaft-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     20.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_shaft\\design\\grindmn_shaft.SLDPRT",
+   "part": "grindmn_shaft",
+   "world_bbox_mm": [
+    [
+     -5.0,
+     -5.0,
+     20.0
+    ],
+    [
+     5.0,
+     5.0,
+     141.0
+    ]
+   ],
+   "label": "grindmn_shaft"
+  },
+  {
+   "id": "grindmn_outer_burr-1",
+   "name": "grindmn_outer_burr-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     30.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_outer_burr\\design\\grindmn_outer_burr.SLDPRT",
+   "part": "grindmn_outer_burr",
+   "world_bbox_mm": [
+    [
+     -27.0,
+     -27.0,
+     30.0
+    ],
+    [
+     27.0,
+     27.0,
+     50.0
+    ]
+   ],
+   "label": "grindmn_outer_burr"
+  },
+  {
+   "id": "grindmn_inner_burr-1",
+   "name": "grindmn_inner_burr-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     31.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_inner_burr\\design\\grindmn_inner_burr.SLDPRT",
+   "part": "grindmn_inner_burr",
+   "world_bbox_mm": [
+    [
+     -23.8,
+     -23.8,
+     31.0
+    ],
+    [
+     23.8,
+     23.8,
+     61.0
+    ]
+   ],
+   "label": "grindmn_inner_burr"
+  },
+  {
+   "id": "grindmn_eclip_6-1",
+   "name": "grindmn_eclip_6-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     61.2
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_eclip_6\\design\\grindmn_eclip_6.SLDPRT",
+   "part": "grindmn_eclip_6",
+   "world_bbox_mm": [
+    [
+     -6.15,
+     -6.15,
+     61.2
+    ],
+    [
+     5.6189,
+     6.15,
+     61.9
+    ]
+   ],
+   "label": "eclip_burr"
+  },
+  {
+   "id": "grindmn_eclip_6-2",
+   "name": "grindmn_eclip_6-2",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     90.5
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_eclip_6\\design\\grindmn_eclip_6.SLDPRT",
+   "part": "grindmn_eclip_6",
+   "world_bbox_mm": [
+    [
+     -6.15,
+     -6.15,
+     90.5
+    ],
+    [
+     5.6189,
+     6.15,
+     91.2
+    ]
+   ],
+   "label": "eclip_spring"
+  },
+  {
+   "id": "grindmn_screw_m4x6-1",
+   "name": "grindmn_screw_m4x6-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     -1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     26.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     40.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m4x6\\design\\grindmn_screw_m4x6.SLDPRT",
+   "part": "grindmn_screw_m4x6",
+   "world_bbox_mm": [
+    [
+     -3.8,
+     26.0,
+     36.2
+    ],
+    [
+     3.8,
+     34.2,
+     43.8
+    ]
+   ],
+   "label": "burr_screw_90"
+  },
+  {
+   "id": "grindmn_crank_hub-1",
+   "name": "grindmn_crank_hub-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     129.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_hub\\design\\grindmn_crank_hub.SLDPRT",
+   "part": "grindmn_crank_hub",
+   "world_bbox_mm": [
+    [
+     -9.0,
+     -9.0,
+     129.0
+    ],
+    [
+     9.0,
+     9.0,
+     148.0
+    ]
+   ],
+   "label": "grindmn_crank_hub"
+  },
+  {
+   "id": "grindmn_bridge-1",
+   "name": "grindmn_bridge-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     111.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bridge\\design\\grindmn_bridge.SLDPRT",
+   "part": "grindmn_bridge",
+   "world_bbox_mm": [
+    [
+     -22.0,
+     -22.0,
+     111.0
+    ],
+    [
+     22.0,
+     22.0,
+     119.0
+    ]
+   ],
+   "label": "grindmn_bridge"
+  },
+  {
+   "id": "grindmn_screw_m3x8-2",
+   "name": "grindmn_screw_m3x8-2",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     6.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     143.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m3x8\\design\\grindmn_screw_m3x8.SLDPRT",
+   "part": "grindmn_screw_m3x8",
+   "world_bbox_mm": [
+    [
+     3.25,
+     -2.75,
+     143.0
+    ],
+    [
+     8.75,
+     2.75,
+     154.0
+    ]
+   ],
+   "label": "arm_screw_2"
+  },
+  {
+   "id": "grindmn_bearing_mf105-2",
+   "name": "grindmn_bearing_mf105-2",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     85.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0,
+     181.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bearing_mf105\\design\\grindmn_bearing_mf105.SLDPRT",
+   "part": "grindmn_bearing_mf105",
+   "world_bbox_mm": [
+    [
+     79.4,
+     -5.6,
+     177.0
+    ],
+    [
+     90.6,
+     5.6,
+     181.0
+    ]
+   ],
+   "label": "knob_bearing_high"
+  },
+  {
+   "id": "grindmn_magnet_6x3-1",
+   "name": "grindmn_magnet_6x3-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     141.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_magnet_6x3\\design\\grindmn_magnet_6x3.SLDPRT",
+   "part": "grindmn_magnet_6x3",
+   "world_bbox_mm": [
+    [
+     -3.0,
+     -3.0,
+     141.0
+    ],
+    [
+     3.0,
+     3.0,
+     144.0
+    ]
+   ],
+   "label": "grindmn_magnet_6x3"
+  },
+  {
+   "id": "grindmn_shoulder_5x30-1",
+   "name": "grindmn_shoulder_5x30-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     85.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     144.5
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_shoulder_5x30\\design\\grindmn_shoulder_5x30.SLDPRT",
+   "part": "grindmn_shoulder_5x30",
+   "world_bbox_mm": [
+    [
+     81.0,
+     -4.0,
+     144.5
+    ],
+    [
+     89.0,
+     4.0,
+     184.5
+    ]
+   ],
+   "label": "grindmn_shoulder_5x30"
+  },
+  {
+   "id": "grindmn_screw_m4x12-1",
+   "name": "grindmn_screw_m4x12-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     0.0,
+     0.0,
+     1.0,
+     20.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     115.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m4x12\\design\\grindmn_screw_m4x12.SLDPRT",
+   "part": "grindmn_screw_m4x12",
+   "world_bbox_mm": [
+    [
+     20.0,
+     -3.8,
+     111.2
+    ],
+    [
+     34.2,
+     3.8,
+     118.8
+    ]
+   ],
+   "label": "bridge_screw"
+  },
+  {
+   "id": "grindmn_ball_plunger-1",
+   "name": "grindmn_ball_plunger-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     0.0,
+     0.0,
+     -1.0,
+     -27.0
+    ],
+    [
+     -1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     22.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_ball_plunger\\design\\grindmn_ball_plunger.SLDPRT",
+   "part": "grindmn_ball_plunger",
+   "world_bbox_mm": [
+    [
+     -32.0,
+     -2.5,
+     19.5
+    ],
+    [
+     -27.0,
+     2.5,
+     24.5
+    ]
+   ],
+   "label": "plunger"
+  },
+  {
+   "id": "grindmn_crank_arm-1",
+   "name": "grindmn_crank_arm-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     145.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_arm\\design\\grindmn_crank_arm.SLDPRT",
+   "part": "grindmn_crank_arm",
+   "world_bbox_mm": [
+    [
+     -9.0,
+     -7.0,
+     145.0
+    ],
+    [
+     91.0,
+     7.0,
+     151.0
+    ]
+   ],
+   "label": "grindmn_crank_arm"
+  },
+  {
+   "id": "grindmn_oring_60x2-1",
+   "name": "grindmn_oring_60x2-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     15.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_oring_60x2\\design\\grindmn_oring_60x2.SLDPRT",
+   "part": "grindmn_oring_60x2",
+   "world_bbox_mm": [
+    [
+     -32.45,
+     -32.45,
+     15.0
+    ],
+    [
+     32.45,
+     32.45,
+     17.0
+    ]
+   ],
+   "label": "grindmn_oring_60x2"
+  },
+  {
+   "id": "grindmn_catch_cup-1",
+   "name": "grindmn_catch_cup-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     -50.5
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_catch_cup\\design\\grindmn_catch_cup.SLDPRT",
+   "part": "grindmn_catch_cup",
+   "world_bbox_mm": [
+    [
+     -34.0,
+     -34.0,
+     -50.5
+    ],
+    [
+     34.0,
+     34.0,
+     23.5
+    ]
+   ],
+   "label": "grindmn_catch_cup"
+  },
+  {
+   "id": "grindmn_spacer-1",
+   "name": "grindmn_spacer-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     109.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_spacer\\design\\grindmn_spacer.SLDPRT",
+   "part": "grindmn_spacer",
+   "world_bbox_mm": [
+    [
+     -5.75,
+     -5.75,
+     109.0
+    ],
+    [
+     5.75,
+     5.75,
+     111.0
+    ]
+   ],
+   "label": "grindmn_spacer"
+  },
+  {
+   "id": "grindmn_screw_m3x8-1",
+   "name": "grindmn_screw_m3x8-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     -6.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     143.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m3x8\\design\\grindmn_screw_m3x8.SLDPRT",
+   "part": "grindmn_screw_m3x8",
+   "world_bbox_mm": [
+    [
+     -8.75,
+     -2.75,
+     143.0
+    ],
+    [
+     -3.25,
+     2.75,
+     154.0
+    ]
+   ],
+   "label": "arm_screw_1"
+  },
+  {
+   "id": "grindmn_spring-1",
+   "name": "grindmn_spring-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     92.8
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_spring\\design\\grindmn_spring.SLDPRT",
+   "part": "grindmn_spring",
+   "world_bbox_mm": [
+    [
+     -6.0,
+     -6.0,
+     92.8
+    ],
+    [
+     6.0,
+     6.0,
+     109.0
+    ]
+   ],
+   "label": "grindmn_spring"
+  },
+  {
+   "id": "grindmn_washer_8-1",
+   "name": "grindmn_washer_8-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     91.2
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_washer_8\\design\\grindmn_washer_8.SLDPRT",
+   "part": "grindmn_washer_8",
+   "world_bbox_mm": [
+    [
+     -8.0,
+     -8.0,
+     91.2
+    ],
+    [
+     8.0,
+     8.0,
+     92.8
+    ]
+   ],
+   "label": "grindmn_washer_8"
+  },
+  {
+   "id": "grindmn_lid-1",
+   "name": "grindmn_lid-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     120.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_lid\\design\\grindmn_lid.SLDPRT",
+   "part": "grindmn_lid",
+   "world_bbox_mm": [
+    [
+     -32.0,
+     -32.0,
+     120.0
+    ],
+    [
+     32.0,
+     32.0,
+     126.0
+    ]
+   ],
+   "label": "grindmn_lid"
+  },
+  {
+   "id": "grindmn_bearing_mf105-1",
+   "name": "grindmn_bearing_mf105-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     85.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     151.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bearing_mf105\\design\\grindmn_bearing_mf105.SLDPRT",
+   "part": "grindmn_bearing_mf105",
+   "world_bbox_mm": [
+    [
+     79.4,
+     -5.6,
+     151.0
+    ],
+    [
+     90.6,
+     5.6,
+     155.0
+    ]
+   ],
+   "label": "knob_bearing_low"
+  },
+  {
+   "id": "grindmn_bearing_608-2",
+   "name": "grindmn_bearing_608-2",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     111.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_bearing_608\\design\\grindmn_bearing_608.SLDPRT",
+   "part": "grindmn_bearing_608",
+   "world_bbox_mm": [
+    [
+     -11.0,
+     -11.0,
+     111.0
+    ],
+    [
+     11.0,
+     11.0,
+     118.0
+    ]
+   ],
+   "label": "bearing_top"
+  },
+  {
+   "id": "grindmn_crank_knob-1",
+   "name": "grindmn_crank_knob-1",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     85.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     151.8
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_crank_knob\\design\\grindmn_crank_knob.SLDPRT",
+   "part": "grindmn_crank_knob",
+   "world_bbox_mm": [
+    [
+     75.0,
+     -10.0,
+     151.8
+    ],
+    [
+     95.0,
+     10.0,
+     180.2
+    ]
+   ],
+   "label": "grindmn_crank_knob"
+  },
+  {
+   "id": "grindmn_screw_m4x6-2",
+   "name": "grindmn_screw_m4x6-2",
+   "parent": "grindmn",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0,
+     -26.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     40.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "suppressed": false,
+   "visible": true,
+   "configuration": "Default",
+   "sw_path": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\grindmn_screw_m4x6\\design\\grindmn_screw_m4x6.SLDPRT",
+   "part": "grindmn_screw_m4x6",
+   "world_bbox_mm": [
+    [
+     -3.8,
+     -34.2,
+     36.2
+    ],
+    [
+     3.8,
+     -26.0,
+     43.8
+    ]
+   ],
+   "label": "burr_screw_270"
+  }
+ ],
+ "exploded": {
+  "method": "from_assembly",
+  "source": "assemblies/grindmn_exploded",
+  "offsets_mm": {
+   "grindmn_bearing_608-1": [
+    0.0,
+    0.0,
+    125.5
+   ],
+   "grindmn_tube-1": [
+    0.0,
+    0.0,
+    197.5
+   ],
+   "grindmn_dial-1": [
+    0.0,
+    0.0,
+    106.5
+   ],
+   "grindmn_shaft-1": [
+    -110.0,
+    0.0,
+    -20.0
+   ],
+   "grindmn_outer_burr-1": [
+    0.0,
+    0.0,
+    135.5
+   ],
+   "grindmn_inner_burr-1": [
+    -110.0,
+    0.0,
+    102.0
+   ],
+   "grindmn_eclip_6-1": [
+    -110.0,
+    0.0,
+    113.8
+   ],
+   "grindmn_eclip_6-2": [
+    -110.0,
+    0.0,
+    97.2
+   ],
+   "grindmn_screw_m4x6-1": [
+    0.0,
+    26.0,
+    197.5
+   ],
+   "grindmn_crank_hub-1": [
+    0.0,
+    0.0,
+    274.5
+   ],
+   "grindmn_bridge-1": [
+    0.0,
+    0.0,
+    220.5
+   ],
+   "grindmn_screw_m3x8-2": [
+    0.0,
+    0.0,
+    309.5
+   ],
+   "grindmn_bearing_mf105-2": [
+    0.0,
+    0.0,
+    331.9
+   ],
+   "grindmn_magnet_6x3-1": [
+    0.0,
+    0.0,
+    247.5
+   ],
+   "grindmn_shoulder_5x30-1": [
+    0.0,
+    0.0,
+    380.4
+   ],
+   "grindmn_screw_m4x12-1": [
+    32.0,
+    0.0,
+    197.5
+   ],
+   "grindmn_ball_plunger-1": [
+    -25.0,
+    0.0,
+    197.5
+   ],
+   "grindmn_crank_arm-1": [
+    0.0,
+    0.0,
+    289.5
+   ],
+   "grindmn_oring_60x2-1": [
+    0.0,
+    0.0,
+    71.0
+   ],
+   "grindmn_catch_cup-1": [
+    0.0,
+    0.0,
+    50.5
+   ],
+   "grindmn_spacer-1": [
+    -110.0,
+    0.0,
+    133.2
+   ],
+   "grindmn_screw_m3x8-1": [
+    0.0,
+    0.0,
+    309.5
+   ],
+   "grindmn_spring-1": [
+    -110.0,
+    0.0,
+    121.2
+   ],
+   "grindmn_washer_8-1": [
+    -110.0,
+    0.0,
+    109.2
+   ],
+   "grindmn_lid-1": [
+    0.0,
+    0.0,
+    250.5
+   ],
+   "grindmn_bearing_mf105-1": [
+    0.0,
+    0.0,
+    301.5
+   ],
+   "grindmn_bearing_608-2": [
+    0.0,
+    0.0,
+    240.5
+   ],
+   "grindmn_crank_knob-1": [
+    0.0,
+    0.0,
+    316.7
+   ],
+   "grindmn_screw_m4x6-2": [
+    -0.0,
+    -26.0,
+    197.5
+   ]
+  },
+  "unmatched": [],
+  "note": "translation only; a rotated component keeps its assembled rotation"
+ },
+ "_notes": [
+  "transform: 4x4, column-vector convention, translation in mm, relative to the top assembly",
+  "component id = SolidWorks Name2 (unique, stable while the assembly is not restructured)",
+  "material = proposal; per-component overrides live in render/settings/scene.json and survive re-export"
+ ]
+}

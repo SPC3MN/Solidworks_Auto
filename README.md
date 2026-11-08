@@ -19,6 +19,11 @@ carries over is the architecture and the lessons from probing that prototype:
 - [docs/solidworks_open_questions.md](docs/solidworks_open_questions.md): things
   to investigate on the Windows machine before writing code.
 
+- [docs/rendering.md](docs/rendering.md): photorealistic product rendering with
+  Blender Cycles (STEP export → manifest → Blender import → studio, environment
+  and exploded scenes → previews → approval → finals); driven by
+  `scripts/render_cli.py` and the `product-render` skill.
+
 - [docs/solidworks_findings.md](docs/solidworks_findings.md): what has been
   verified on the Windows machine so far. A COM probe built and measured test 1,
   a 100×60×30 box.

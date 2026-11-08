@@ -1,0 +1,13 @@
+{
+  "_comment": "Camera presets. az 0 = looking at the product front (camera on the -Y side), positive az moves the camera toward +X; el = degrees above the horizon. Distance is solved so the framed box fits with `margin` (fraction of the frame left free on the tightest side). type PERSP or ORTHO. target: 'product' (whole product), 'region:top|bottom|front|left|right' (that quarter of the bbox), or 'component:<id or label>'. dof.fstop is the real f-number on a 36 mm sensor; omit dof for none.",
+  "presets": {
+    "three_quarter_hero": {"type": "PERSP", "focal_mm": 85, "az": 35, "el": 22, "margin": 0.06, "dof": {"fstop": 8.0}},
+    "low_angle_hero":     {"type": "PERSP", "focal_mm": 50, "az": 25, "el": 6,  "margin": 0.12, "dof": {"fstop": 5.6}},
+    "front_ortho":        {"type": "ORTHO", "az": 0,  "el": 0,  "margin": 0.08},
+    "side_ortho":         {"type": "ORTHO", "az": 90, "el": 0,  "margin": 0.08},
+    "top_ortho":          {"type": "ORTHO", "az": 0,  "el": 90, "margin": 0.08},
+    "detail_closeup":     {"type": "PERSP", "focal_mm": 100, "az": 30, "el": 25, "margin": 0.08, "target": "region:top", "dof": {"fstop": 5.6}},
+    "exploded_hero":      {"type": "PERSP", "focal_mm": 70, "az": 35, "el": 16, "margin": 0.06},
+    "environment_hero":   {"type": "PERSP", "focal_mm": 50, "az": 30, "el": 14, "margin": 0.25, "dof": {"fstop": 4.0}}
+  }
+}

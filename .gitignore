@@ -13,3 +13,10 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Rendering: large, rebuildable intermediates (manifest, settings, reports and finals are kept)
+*/*/render/blender/
+*/*/render/previews/
+*/*/render/export/step/
+*.blend1
+config/render.local.json

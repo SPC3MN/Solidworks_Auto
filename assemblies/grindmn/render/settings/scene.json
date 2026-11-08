@@ -1,0 +1,204 @@
+{
+ "schema_version": "1.0",
+ "_comment": "Scene state for render_cli.py. Edit this to change the look; previews and the approval follow it. Keys starting with _ are notes and do not affect the approval hash.",
+ "lighting": {
+  "preset": "soft_commercial",
+  "intensity": 1.0,
+  "softness": 1.0,
+  "fill_ratio": 1.0,
+  "warmth_kelvin": 0,
+  "rotate": 0,
+  "exposure": 0.0
+ },
+ "studio": {
+  "background": {},
+  "floor": {}
+ },
+ "environment": {
+  "preset": "workshop",
+  "intensity": 1.0,
+  "exposure": 0.0
+ },
+ "technical": {
+  "lighting": {
+   "preset": "neutral_technical"
+  },
+  "explode_scale": 1.0
+ },
+ "materials": {
+  "_review": [],
+  "_how": "parts: {part_id: {material, finish, color, roughness}}; components: {sw_id or label: {...}} wins over parts",
+  "parts": {
+   "grindmn_tube": {
+    "material": "aluminium_anodized",
+    "_src": "req 3.1: 6061-T6 bead blast, clear anodise"
+   },
+   "grindmn_bridge": {
+    "material": "aluminium_anodized",
+    "_src": "req 3.2"
+   },
+   "grindmn_dial": {
+    "material": "stainless_bead_blasted",
+    "_src": "req 3.3: 303 bead blast, passivate"
+   },
+   "grindmn_shaft": {
+    "material": "stainless_steel",
+    "finish": "machined",
+    "_src": "req 3.4: 416, ground seats"
+   },
+   "grindmn_crank_arm": {
+    "material": "aluminium_anodized",
+    "_src": "req 3.5"
+   },
+   "grindmn_crank_hub": {
+    "material": "aluminium_anodized",
+    "_src": "req 3.6"
+   },
+   "grindmn_crank_knob": {
+    "material": "aluminium_anodized",
+    "_src": "req 3.7 (knurl not modelled)"
+   },
+   "grindmn_lid": {
+    "material": "aluminium_anodized",
+    "_src": "req 3.8"
+   },
+   "grindmn_catch_cup": {
+    "material": "aluminium_anodized",
+    "_src": "req 3.9"
+   },
+   "grindmn_spacer": {
+    "material": "stainless_steel",
+    "finish": "machined",
+    "_src": "req 3.10: 303"
+   },
+   "grindmn_outer_burr": {
+    "material": "stainless_steel",
+    "_src": "req 3.11"
+   },
+   "grindmn_inner_burr": {
+    "material": "stainless_steel",
+    "_src": "req 3.11"
+   },
+   "grindmn_bearing_608": {
+    "material": "stainless_polished",
+    "_src": "bought bearing, 2RS seals not modelled"
+   },
+   "grindmn_bearing_mf105": {
+    "material": "stainless_polished",
+    "_src": "bought bearing"
+   },
+   "grindmn_spring": {
+    "material": "stainless_steel",
+    "_src": "req 3.13"
+   },
+   "grindmn_eclip_6": {
+    "material": "stainless_steel",
+    "_src": "req 3.14"
+   },
+   "grindmn_washer_8": {
+    "material": "stainless_steel",
+    "_src": "req 3.15 A2"
+   },
+   "grindmn_screw_m4x6": {
+    "material": "stainless_steel",
+    "_src": "req 3.16 A2"
+   },
+   "grindmn_screw_m4x12": {
+    "material": "stainless_steel",
+    "_src": "req 3.17 A2"
+   },
+   "grindmn_screw_m3x8": {
+    "material": "stainless_steel",
+    "_src": "req 3.18 A2"
+   },
+   "grindmn_shoulder_5x30": {
+    "material": "steel_black_oxide",
+    "_src": "req 3.19: A2 or 12.9 black; black chosen (assumption)"
+   },
+   "grindmn_ball_plunger": {
+    "material": "stainless_steel",
+    "_src": "req 3.21"
+   },
+   "grindmn_oring_60x2": {
+    "material": "rubber",
+    "_src": "req 3.22 NBR"
+   },
+   "grindmn_magnet_6x3": {
+    "material": "ferrite_magnet",
+    "_src": "req 3.23 nickel plated"
+   }
+  },
+  "components": {},
+  "_note": "parts set by Claude from projects/grindmn/requirements.md section 3"
+ },
+ "shots": [
+  {
+   "name": "hero",
+   "scene": "studio",
+   "camera": "three_quarter_hero",
+   "category": "studio"
+  },
+  {
+   "name": "low_angle",
+   "scene": "studio",
+   "camera": "low_angle_hero",
+   "category": "studio"
+  },
+  {
+   "name": "front",
+   "scene": "studio",
+   "camera": "front_ortho",
+   "category": "studio"
+  },
+  {
+   "name": "side",
+   "scene": "studio",
+   "camera": "side_ortho",
+   "category": "studio"
+  },
+  {
+   "name": "top",
+   "scene": "studio",
+   "camera": "top_ortho",
+   "category": "studio"
+  },
+  {
+   "name": "detail",
+   "scene": "studio",
+   "camera": "detail_closeup",
+   "category": "details"
+  },
+  {
+   "name": "exploded",
+   "scene": "technical",
+   "camera": "exploded_hero",
+   "category": "exploded",
+   "exploded": true
+  },
+  {
+   "name": "xray",
+   "scene": "technical",
+   "camera": "three_quarter_hero",
+   "category": "technical",
+   "xray": "auto"
+  }
+ ],
+ "render": {
+  "preview": {
+   "long_side": 800,
+   "samples": 48,
+   "noise_threshold": 0.03,
+   "denoise": true,
+   "format": "PNG"
+  },
+  "final": {
+   "long_side": 2400,
+   "samples": 256,
+   "noise_threshold": 0.01,
+   "denoise": true,
+   "format": "PNG",
+   "color_depth": "16"
+  }
+ },
+ "_note_env": "environment renders removed at the user's request (2026-11-08)"
+}

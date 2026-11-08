@@ -1,0 +1,79 @@
+{
+  "_comment": "Rendering presets for Blender's Principled BSDF, not measured physical data. base_color is sRGB hex (converted to linear in Blender). bump: none | noise | brushed | orange_peel | knurl_fine; scale in mm of the feature size, strength 0..1. variation = amplitude of a low-frequency noise added to roughness, so large faces are not perfectly uniform. A finish overrides some fields of a material (see finishes). Override anything per component in settings/scene.json.",
+  "materials": {
+    "aluminium_raw":          {"name": "Raw aluminium", "category": "metal", "base_color": "#D6D8DA", "metallic": 1.0, "roughness": 0.32, "ior": 1.5, "anisotropy": 0.0, "bump": {"type": "noise", "scale": 0.4, "strength": 0.05}, "variation": 0.06},
+    "aluminium_brushed":      {"name": "Brushed aluminium", "category": "metal", "base_color": "#D3D5D8", "metallic": 1.0, "roughness": 0.28, "ior": 1.5, "anisotropy": 0.75, "bump": {"type": "brushed", "scale": 0.05, "strength": 0.15}, "variation": 0.04},
+    "aluminium_anodized":     {"name": "Clear anodised aluminium (bead blasted)", "category": "metal", "base_color": "#CDCFD2", "metallic": 1.0, "roughness": 0.34, "ior": 1.5, "anisotropy": 0.0, "coat": 0.3, "coat_roughness": 0.12, "bump": {"type": "noise", "scale": 0.08, "strength": 0.08}, "variation": 0.04},
+    "aluminium_anodized_black": {"name": "Black anodised aluminium", "category": "metal", "base_color": "#232427", "metallic": 1.0, "roughness": 0.38, "ior": 1.5, "coat": 0.25, "coat_roughness": 0.3, "bump": {"type": "noise", "scale": 0.08, "strength": 0.06}, "variation": 0.04},
+    "stainless_steel":        {"name": "Stainless steel (satin)", "category": "metal", "base_color": "#C2C3C4", "metallic": 1.0, "roughness": 0.25, "ior": 1.5, "anisotropy": 0.0, "bump": {"type": "noise", "scale": 0.2, "strength": 0.03}, "variation": 0.05},
+    "stainless_polished":     {"name": "Polished stainless steel", "category": "metal", "base_color": "#CFD0D1", "metallic": 1.0, "roughness": 0.07, "ior": 1.5, "bump": {"type": "none"}, "variation": 0.02},
+    "stainless_bead_blasted": {"name": "Bead-blasted stainless steel", "category": "metal", "base_color": "#B9BABB", "metallic": 1.0, "roughness": 0.48, "ior": 1.5, "bump": {"type": "noise", "scale": 0.06, "strength": 0.1}, "variation": 0.04},
+    "steel_galvanized":       {"name": "Galvanised steel", "category": "metal", "base_color": "#B4B8BB", "metallic": 1.0, "roughness": 0.38, "ior": 1.5, "bump": {"type": "noise", "scale": 3.0, "strength": 0.06}, "variation": 0.18},
+    "steel_black_oxide":      {"name": "Black-oxide steel (fasteners)", "category": "metal", "base_color": "#2B2B2D", "metallic": 1.0, "roughness": 0.4, "ior": 1.5, "bump": {"type": "noise", "scale": 0.2, "strength": 0.04}, "variation": 0.05},
+    "chrome":                 {"name": "Chrome / nickel plating", "category": "metal", "base_color": "#E4E5E6", "metallic": 1.0, "roughness": 0.05, "ior": 1.5, "bump": {"type": "none"}, "variation": 0.0},
+    "copper":                 {"name": "Copper", "category": "metal", "base_color": "#E8A27F", "metallic": 1.0, "roughness": 0.22, "ior": 1.5, "bump": {"type": "noise", "scale": 0.2, "strength": 0.03}, "variation": 0.06},
+    "brass":                  {"name": "Brass", "category": "metal", "base_color": "#E3C16F", "metallic": 1.0, "roughness": 0.2, "ior": 1.5, "bump": {"type": "noise", "scale": 0.2, "strength": 0.03}, "variation": 0.06},
+
+    "abs":                    {"name": "ABS (moulded, light texture)", "category": "plastic", "base_color": "#2C2D30", "metallic": 0.0, "roughness": 0.45, "ior": 1.53, "specular": 0.5, "bump": {"type": "orange_peel", "scale": 0.15, "strength": 0.05}, "variation": 0.03},
+    "pla":                    {"name": "PLA (FDM print)", "category": "plastic", "base_color": "#E8E6E1", "metallic": 0.0, "roughness": 0.4, "ior": 1.46, "subsurface": 0.03, "bump": {"type": "layer_lines", "scale": 0.2, "strength": 0.12}, "variation": 0.02},
+    "petg":                   {"name": "PETG (FDM print)", "category": "plastic", "base_color": "#3A3F45", "metallic": 0.0, "roughness": 0.25, "ior": 1.57, "bump": {"type": "layer_lines", "scale": 0.2, "strength": 0.1}, "variation": 0.02},
+    "polycarbonate":          {"name": "Polycarbonate (opaque)", "category": "plastic", "base_color": "#D9DBDD", "metallic": 0.0, "roughness": 0.18, "ior": 1.585, "bump": {"type": "none"}, "variation": 0.02},
+    "acrylic":                {"name": "Acrylic (opaque, gloss)", "category": "plastic", "base_color": "#101012", "metallic": 0.0, "roughness": 0.05, "ior": 1.49, "bump": {"type": "none"}, "variation": 0.0},
+    "nylon":                  {"name": "Nylon PA (SLS / machined)", "category": "plastic", "base_color": "#EDEAE2", "metallic": 0.0, "roughness": 0.6, "ior": 1.53, "subsurface": 0.05, "bump": {"type": "noise", "scale": 0.1, "strength": 0.08}, "variation": 0.03},
+    "pom_black":              {"name": "Acetal / POM black (machined)", "category": "plastic", "base_color": "#18181A", "metallic": 0.0, "roughness": 0.32, "ior": 1.48, "bump": {"type": "none"}, "variation": 0.02},
+    "rubber":                 {"name": "Rubber (NBR / EPDM)", "category": "plastic", "base_color": "#141414", "metallic": 0.0, "roughness": 0.75, "ior": 1.52, "specular": 0.3, "bump": {"type": "noise", "scale": 0.05, "strength": 0.05}, "variation": 0.04},
+    "pcb_green":              {"name": "PCB solder mask (green)", "category": "plastic", "base_color": "#1F5A2E", "metallic": 0.0, "roughness": 0.3, "ior": 1.5, "coat": 0.3, "bump": {"type": "none"}, "variation": 0.02},
+    "wood_walnut":            {"name": "Oiled walnut (procedural grain)", "category": "natural", "base_color": "#5A3A24", "metallic": 0.0, "roughness": 0.45, "ior": 1.5, "bump": {"type": "noise", "scale": 0.5, "strength": 0.05}, "variation": 0.08, "grain": true},
+    "ferrite_magnet":         {"name": "Nickel-plated magnet", "category": "metal", "base_color": "#C8C9CA", "metallic": 1.0, "roughness": 0.12, "ior": 1.5, "bump": {"type": "none"}, "variation": 0.02},
+
+    "powder_matte":           {"name": "Matte powder coat", "category": "coating", "base_color": "#1E1F21", "metallic": 0.0, "roughness": 0.7, "ior": 1.5, "bump": {"type": "orange_peel", "scale": 0.6, "strength": 0.06}, "variation": 0.03},
+    "powder_satin":           {"name": "Satin powder coat", "category": "coating", "base_color": "#1E1F21", "metallic": 0.0, "roughness": 0.42, "ior": 1.5, "bump": {"type": "orange_peel", "scale": 0.6, "strength": 0.08}, "variation": 0.03},
+    "powder_gloss":           {"name": "Gloss powder coat", "category": "coating", "base_color": "#1E1F21", "metallic": 0.0, "roughness": 0.15, "ior": 1.5, "coat": 0.6, "coat_roughness": 0.08, "bump": {"type": "orange_peel", "scale": 0.8, "strength": 0.1}, "variation": 0.02},
+
+    "glass_clear":            {"name": "Clear glass", "category": "transparent", "base_color": "#FFFFFF", "metallic": 0.0, "roughness": 0.0, "ior": 1.52, "transmission": 1.0, "bump": {"type": "none"}, "variation": 0.0},
+    "glass_frosted":          {"name": "Frosted glass", "category": "transparent", "base_color": "#F4F6F7", "metallic": 0.0, "roughness": 0.35, "ior": 1.52, "transmission": 1.0, "bump": {"type": "noise", "scale": 0.05, "strength": 0.05}, "variation": 0.0},
+    "polycarbonate_clear":    {"name": "Clear polycarbonate", "category": "transparent", "base_color": "#F7F8FA", "metallic": 0.0, "roughness": 0.02, "ior": 1.585, "transmission": 1.0, "bump": {"type": "none"}, "variation": 0.0},
+    "acrylic_clear":          {"name": "Clear acrylic", "category": "transparent", "base_color": "#FFFFFF", "metallic": 0.0, "roughness": 0.01, "ior": 1.49, "transmission": 1.0, "bump": {"type": "none"}, "variation": 0.0},
+    "acrylic_frosted":        {"name": "Frosted acrylic", "category": "transparent", "base_color": "#F2F4F5", "metallic": 0.0, "roughness": 0.4, "ior": 1.49, "transmission": 1.0, "bump": {"type": "noise", "scale": 0.05, "strength": 0.04}, "variation": 0.0},
+    "plastic_translucent":    {"name": "Translucent plastic (smoke)", "category": "transparent", "base_color": "#6E7378", "metallic": 0.0, "roughness": 0.2, "ior": 1.5, "transmission": 0.85, "bump": {"type": "none"}, "variation": 0.0},
+    "xray_housing":           {"name": "Technical see-through housing", "category": "transparent", "base_color": "#BFD6E8", "metallic": 0.0, "roughness": 0.15, "ior": 1.0, "transmission": 0.0, "alpha": 0.18, "bump": {"type": "none"}, "variation": 0.0, "_note": "alpha blend without refraction, so internal parts stay undistorted in technical views"}
+  },
+  "finishes": {
+    "_comment": "Applied on top of a material: only the listed fields change.",
+    "matte":        {"roughness": 0.7, "coat": 0.0},
+    "satin":        {"roughness": 0.4},
+    "gloss":        {"roughness": 0.12, "coat": 0.5, "coat_roughness": 0.06},
+    "bead_blasted": {"roughness": 0.48, "anisotropy": 0.0, "bump": {"type": "noise", "scale": 0.06, "strength": 0.1}},
+    "brushed":      {"roughness": 0.28, "anisotropy": 0.75, "bump": {"type": "brushed", "scale": 0.05, "strength": 0.15}},
+    "polished":     {"roughness": 0.06, "anisotropy": 0.0, "bump": {"type": "none"}},
+    "textured":     {"roughness": 0.62, "bump": {"type": "orange_peel", "scale": 0.3, "strength": 0.2}},
+    "machined":     {"roughness": 0.22, "anisotropy": 0.4, "bump": {"type": "brushed", "scale": 0.03, "strength": 0.06}}
+  },
+  "solidworks_material_map": {
+    "_comment": "SolidWorks material name (substring, case-insensitive) -> library material. First match wins.",
+    "6061": "aluminium_raw", "7075": "aluminium_raw", "1060": "aluminium_raw", "aluminum": "aluminium_raw", "aluminium": "aluminium_raw",
+    "303": "stainless_steel", "304": "stainless_steel", "316": "stainless_steel", "416": "stainless_steel", "stainless": "stainless_steel",
+    "galvanized": "steel_galvanized", "steel": "stainless_steel", "copper": "copper", "brass": "brass",
+    "abs": "abs", "pla": "pla", "petg": "petg", "pc ": "polycarbonate", "polycarbonate": "polycarbonate",
+    "acrylic": "acrylic_clear", "pmma": "acrylic_clear", "nylon": "nylon", "acetal": "pom_black", "delrin": "pom_black",
+    "rubber": "rubber", "glass": "glass_clear", "wood": "wood_walnut"
+  },
+  "name_rules": {
+    "_comment": "Part-name regex (case-insensitive) -> library material, used when SolidWorks has no material. Confidence is 'low': Claude should confirm or override from the requirements.",
+    "rules": [
+      ["screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger", "stainless_steel"],
+      ["bearing", "stainless_polished"],
+      ["o_?ring|gasket|seal|grommet|foot|bumper|tire|tyre", "rubber"],
+      ["magnet", "ferrite_magnet"],
+      ["window|lens|glass|clear|transparent", "polycarbonate_clear"],
+      ["acrylic", "acrylic_clear"],
+      ["x8020|1515|1530|3030|extrusion|rail|profile|bracket|gusset|plate", "aluminium_anodized"],
+      ["pcb|board|hat|rpi|dac|pi5|zero", "pcb_green"],
+      ["cable|wire|lead", "rubber"],
+      ["knob|handle|grip", "pom_black"],
+      ["enclosure|housing|case|lid|cover|tube|body", "aluminium_anodized"],
+      ["shaft|axle|burr", "stainless_steel"]
+    ],
+    "default": "aluminium_raw"
+  }
+}
