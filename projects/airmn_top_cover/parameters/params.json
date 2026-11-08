@@ -1,7 +1,10 @@
 {
   "d": 430.0,
-  "hole_d": 100.0,
-  "t": 6.0,
+  "id": 424.0,
+  "h": 167.0,
+  "top_t": 10.0,
+  "nut_cbore_d": 10.0,
+  "nut_cbore_depth": 6.0,
   "rod_r": 209.0,
   "rod_angles": [
     18,

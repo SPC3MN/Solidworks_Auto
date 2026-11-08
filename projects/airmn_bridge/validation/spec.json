@@ -16,7 +16,7 @@
     "tol": 0.05
   },
   "volume": {
-    "expected": 924607.59,
+    "expected": 917567.281,
     "rel_tol": 0.001
   },
   "export.step": {

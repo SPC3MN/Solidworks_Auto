@@ -5,9 +5,8 @@
   "groove_od": 408.0,
   "groove_id": 288.0,
   "groove_depth": 4.0,
-  "band_seat_od": 368.0,
-  "band_seat_id": 358.0,
-  "band_seat_depth": 3.0,
+  "rabbet_id": 424.0,
+  "rabbet_depth": 3.0,
   "rod_r": 209.0,
   "rod_angles": [
     18,

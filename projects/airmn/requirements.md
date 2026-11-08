@@ -13,9 +13,10 @@ unit's axis on the origin.
 | Brief conflict / open point | Decision |
 | --- | --- |
 | Impeller blades 112 wide, but outlet slot 80 and top cap 120 tall | Keep 112 blades; taller slot and top cap (outlet band 162 tall, holes over 119 mm) |
-| 450 pack + 120 top cap = 570, but "about 67 cm" | Thin 20 mm bottom cap. Housing top (lid) at 658, pod top at 810 |
+| 450 pack + 120 top cap = 570, but "about 67 cm" | Thin 20 mm bottom cap. Top cover top at 816 |
 | Tie rods: 3 through the centre sit in the inflow; 3 vs 9 blades gives a tone | 5 M5 rods outside the pack on R209 (5 and 9 share no factor) |
 | Scope | Functional parts + assembly + exploded view. Print-bed sector splits and the pleating jig later |
+| Look (2nd pass) | Clean 430 cylinder: dot-grid band flush with the caps, outside the rods; lid and pod replaced by a full-diameter top cover enclosing the motor |
 
 Consequence of the rods outside: the caps are **430 across, not 400** (rod clears the comb by 4.5 mm).
 
@@ -32,10 +33,10 @@ Consequence of the rods outside: the caps are **430 across, not 400** (rod clear
 | Impeller | 300 OD, 195 eye, 9 flat blades 112 wide, 40° back from radial at the rim, from R100 to the rim | given |
 | Blade | 3 thick, trailing edge tapered to 0.5 over 15, 2.6 tabs 3 deep into slots 3.0 wide in shroud and backplate | given (0.5 TE), rest chosen |
 | Backplate | 300 × 4, integral hub 40 × 20 on the 8 mm shaft, M3 clamp screw | chosen (brief: printed or aluminium hub) |
-| Outlet band | 366 / 360 × 162; holes 7.2 on a 8.57 hex pitch: 133 × 2 columns, 16 rows at 7.42 = 2128 holes, 64 % open over the hole zone | given (7.2, 64 %) |
-| Band to impeller | 30 mm radial gap (band set out from the blade tips) | given rule |
+| Outlet band | 430 / 425 × 162, flush with the caps, 1 mm outside the rods; holes 7.2 on a 8.57 hex pitch: 157 × 2 columns, 16 rows at 7.42 = 2512 holes, 64 % open over the hole zone; seats in 3 mm rabbets (Ø424) in the inlet ring and bridge | given (7.2, 64 %) |
+| Band to impeller | 62 mm radial gap (band set out from the blade tips) | given rule |
 | Bridge | 430 / 350 ring × 12 on the 5 rods, 5 spokes 20 wide, hub 80 × 40 with two 608 seats | chosen |
-| Motor mount | Bracket on 4 silicone grommets 10 / 3.2 × 6 on the bridge hub, motor above it in a foam-lined pod 110 / 100 × 152 | given rule, sizes chosen |
+| Motor mount | Bracket on 4 silicone grommets 10 / 3.2 × 6 on the bridge hub, motor above it inside the top cover 430 / 424 × 167 (10 top, foam liner room above the motor; cooled by plenum air through the bridge openings) | given rule, sizes chosen |
 | Motor | E-S Motor 25 mm gearhead BLDC, 24 V 600 rpm, run at 15 V: Ø25 × 75 body, 4 mm D shaft 12 long, M3 at 17 pitch | **estimated** (no drawing) |
 | Coupling | Jaw coupling Ø20 × 25, bores 8 and 4 | estimated |
 | Shaft | Ø8 × 88 steel, in two 608 bearings (grindmn_bearing_608 reused) | given |
@@ -55,12 +56,11 @@ Consequence of the rods outside: the caps are **430 across, not 400** (rod clear
 | Shroud / blades / backplate | 497 .. 500 / 497 .. 615 / 612 .. 616 (hub to 636) |
 | Shaft | 612 .. 700 |
 | Bridge | 640 .. 652, hub to 680; 608s at 640 and 673 |
-| Lid | 652 .. 658 |
 | Grommets / bracket / coupling / motor | 680 .. 686 / 686 .. 721 / 690 .. 715 / 709 .. 796 |
-| Motor pod | 658 .. 810 |
-| Tie rods | 1 .. 664, nuts 1 .. 5 (in the pockets) and 658 .. 662 |
+| Top cover | 649 .. 816 (sits in the bridge's top rabbet) |
+| Tie rods | 1 .. 815, nuts 1 .. 5 (bottom pockets) and 810 .. 814 (top counterbores) |
 
 ## Left out of this pass
 
 Print-bed sector splits with keys and M3 screws; pleating jig; lid microswitch interlock; felt or foam
-acoustic liner and the pod's foam lining; filter seam overlap; motor wiring; fuse and LED; threads.
+acoustic liner and the top cover's foam lining; filter seam overlap; motor wiring; fuse and LED; threads.

@@ -70,6 +70,11 @@ def rod(d, z0, h, name, op="add"):
     return (name, op, [circle(0, 0, d)], z0, h, v if op == "add" else -v, "z")
 
 
+def rabbet(d_part, d_in, z0, h, name):
+    """Step cut round the outside edge of a Ø d_part disc down to Ø d_in (sketch circle drawn past the edge)."""
+    return (name, "cut", [circle(0, 0, d_part + 2), circle(0, 0, d_in)], z0, h, -(disc(d_part) - disc(d_in)) * h, "z")
+
+
 def bore_step(d, d_prev, z0, h, name):
     return (name, "cut", [circle(0, 0, d)], z0, h, -(disc(d) - disc(d_prev)) * h, "z")
 
@@ -184,8 +189,7 @@ def inlet_ring(p):
         g.append(ring(do, di, z, h, f"Bellmouth{i + 1}"))
         z += h
     g += [ring(p["groove_od"], p["groove_id"], 0, p["groove_depth"], "Comb_groove", "cut"),
-          ring(p["band_seat_od"], p["band_seat_id"], T - p["band_seat_depth"], p["band_seat_depth"], "Band_seat",
-               "cut"),
+          rabbet(D, p["rabbet_id"], T - p["rabbet_depth"], p["rabbet_depth"], "Band_rabbet"),
           holes("Rod_holes", p["rod_hole"], rod_pts(p), 0, T)]
     return g, [D, D, z]
 
@@ -274,7 +278,8 @@ def bridge(p):
          rod(p["bore"], 0, HH, "Bore", "cut"),
          bore_step(p["seat_d"], p["bore"], 0, p["seat_depth"], "Bearing_seat_low"),
          bore_step(p["seat_d"], p["bore"], HH - p["seat_depth"], p["seat_depth"], "Bearing_seat_high"),
-         ring(p["band_seat_od"], p["band_seat_id"], 0, p["band_seat_depth"], "Band_seat", "cut"),
+         rabbet(p["d"], p["rabbet_id"], 0, p["rabbet_depth"], "Band_rabbet"),
+         rabbet(p["d"], p["rabbet_id"], T - p["rabbet_depth"], p["rabbet_depth"], "Cover_rabbet"),
          holes("Rod_holes", p["rod_hole"], rod_pts(p), 0, T),
          holes("Grommet_screws", TAP_M3, gp, HH - p["grommet_screw_depth"], p["grommet_screw_depth"])]
     return g, [p["d"], p["d"], HH]
@@ -296,6 +301,17 @@ def motor_pod(p):
          ("Vent", "cut", [circle(0, z, p["vent_d"])], ro + 0.5 - depth, depth, -v, "x"),
          ("Vents", "pattern", ["Vent"], p["vents"], 0, -(p["vents"] - 1) * v, "z")]
     return g, [Do, Do, H]
+
+
+def top_cover(p):
+    """Top cover: Ø d tube flush with the band, closed top plate; rods end in counterbores in the top."""
+    D, H, tt = p["d"], p["h"], p["top_t"]
+    cb, cd = p["nut_cbore_d"], p["nut_cbore_depth"]
+    g = [rod(D, 0, H, "Body"), rod(p["id"], 0, H - tt, "Cavity", "cut"),
+         holes("Rod_holes", p["rod_hole"], rod_pts(p), H - tt, tt),
+         ("Nut_counterbores", "cut", [circle(x, y, cb) for x, y in rod_pts(p)], H - cd, cd,
+          -len(p["rod_angles"]) * (disc(cb) - disc(p["rod_hole"])) * cd, "z")]
+    return g, [D, D, H]
 
 
 def motor_bracket(p):
@@ -352,7 +368,7 @@ def pd_board(p):
 PARTS = {
     "bottom_cap": bottom_cap, "comb": comb, "pleat_pack": pleat_pack, "gasket": gasket,
     "inlet_ring": inlet_ring, "outlet_band": outlet_band, "blade": blade, "shroud": shroud,
-    "backplate": backplate, "bridge": bridge, "lid": lid, "motor_pod": motor_pod,
+    "backplate": backplate, "bridge": bridge, "top_cover": top_cover,
     "motor_bracket": motor_bracket, "motor": motor, "coupling": coupling, "rod": plain_rod,
     "grommet": grommet, "nut": nut, "pd_board": pd_board,
 }

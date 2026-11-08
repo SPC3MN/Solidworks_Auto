@@ -1,17 +1,13 @@
 {
   "schema_version": "1.0",
-  "project": "airmn_motor_pod",
-  "timestamp": "20261108T124509",
-  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\airmn_motor_pod\\.staging\\20261108T124509\\airmn_motor_pod.SLDPRT",
+  "project": "airmn_tie_rod",
+  "timestamp": "20261108T130625",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\airmn_tie_rod\\.staging\\20261108T130625\\airmn_tie_rod.SLDPRT",
   "status": "pass",
   "params_used": {
-    "od": 110.0,
-    "id": 100.0,
-    "h": 152.0,
-    "top_t": 4.0,
-    "vent_d": 10.0,
-    "vent_z": 15.0,
-    "vents": 4
+    "_kind": "rod",
+    "d": 5.0,
+    "l": 814.0
   },
   "summary": {
     "passed": 9,
@@ -21,11 +17,11 @@
   "components": {
     "Body": {
       "bbox": [
-        110.0,
-        110.0,
-        152.0
+        5.0,
+        5.0,
+        814.0
       ],
-      "volume": 280542.755,
+      "volume": 15982.853,
       "solid_bodies": 1
     }
   },
@@ -34,7 +30,7 @@
       "id": "export.native",
       "category": "export_integrity",
       "status": "pass",
-      "measured": 93751,
+      "measured": 41706,
       "expected": "> 1000 bytes",
       "message": ""
     },
@@ -51,8 +47,8 @@
       "id": "bbox.x",
       "category": "bounding_dimensions",
       "status": "pass",
-      "measured": 110.0,
-      "expected": 110.0,
+      "measured": 5.0,
+      "expected": 5.0,
       "tolerance": 0.05,
       "message": ""
     },
@@ -60,8 +56,8 @@
       "id": "bbox.y",
       "category": "bounding_dimensions",
       "status": "pass",
-      "measured": 110.0,
-      "expected": 110.0,
+      "measured": 5.0,
+      "expected": 5.0,
       "tolerance": 0.05,
       "message": ""
     },
@@ -69,8 +65,8 @@
       "id": "bbox.z",
       "category": "bounding_dimensions",
       "status": "pass",
-      "measured": 152.0,
-      "expected": 152.0,
+      "measured": 814.0,
+      "expected": 814.0,
       "tolerance": 0.05,
       "message": ""
     },
@@ -78,27 +74,27 @@
       "id": "volume",
       "category": "bounding_dimensions",
       "status": "pass",
-      "measured": 280542.755,
-      "expected": 280542.435,
-      "tolerance": 280.542435,
+      "measured": 15982.853,
+      "expected": 15982.853,
+      "tolerance": 15.982852999999999,
       "message": ""
     },
     {
       "id": "export.step.volume",
       "category": "export_integrity",
       "status": "pass",
-      "measured": 280542.628,
-      "expected": 280542.755,
-      "tolerance": 280.542755,
+      "measured": 15982.853,
+      "expected": 15982.853,
+      "tolerance": 15.982852999999999,
       "message": ""
     },
     {
       "id": "export.stl.volume",
       "category": "export_integrity",
       "status": "pass",
-      "measured": 280100.269,
-      "expected": 280542.755,
-      "tolerance": 2805.42755,
+      "measured": 15907.7,
+      "expected": 15982.853,
+      "tolerance": 159.82853,
       "message": ""
     },
     {
@@ -107,7 +103,7 @@
       "status": "pass",
       "measured": true,
       "expected": true,
-      "message": "1056 triangles"
+      "message": "152 triangles"
     }
   ]
 }

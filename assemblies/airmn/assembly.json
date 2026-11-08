@@ -262,19 +262,11 @@
    "label": "bearing_high"
   },
   {
-   "part": "airmn_lid",
+   "part": "airmn_top_cover",
    "at": [
     0,
     0,
-    652.0
-   ]
-  },
-  {
-   "part": "airmn_motor_pod",
-   "at": [
-    0,
-    0,
-    658.0
+    649.0
    ]
   },
   {
@@ -360,7 +352,7 @@
    "at": [
     198.771,
     64.585,
-    658.0
+    810.0
    ],
    "label": "nut_high_1"
   },
@@ -387,7 +379,7 @@
    "at": [
     0.0,
     209.0,
-    658.0
+    810.0
    ],
    "label": "nut_high_2"
   },
@@ -414,7 +406,7 @@
    "at": [
     -198.771,
     64.585,
-    658.0
+    810.0
    ],
    "label": "nut_high_3"
   },
@@ -441,7 +433,7 @@
    "at": [
     -122.847,
     -169.085,
-    658.0
+    810.0
    ],
    "label": "nut_high_4"
   },
@@ -468,17 +460,17 @@
    "at": [
     122.847,
     -169.085,
-    658.0
+    810.0
    ],
    "label": "nut_high_5"
   }
  ],
  "expected": {
-  "_comment": "x, y: caps 430 across; z: feet -5 .. pod top 658 + 152 = 810. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
+  "_comment": "x, y: caps 430 across; z: feet -5 .. top cover 649 + 167 = 816. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
   "bbox": [
    430.0,
    430.0,
-   815.0
+   821.0
   ],
   "allowed_interference": []
  }

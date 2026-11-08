@@ -4,19 +4,19 @@
     "expected": 1
   },
   "bbox.x": {
-    "expected": 110.0,
+    "expected": 430.0,
     "tol": 0.05
   },
   "bbox.y": {
-    "expected": 110.0,
+    "expected": 430.0,
     "tol": 0.05
   },
   "bbox.z": {
-    "expected": 152.0,
+    "expected": 167.0,
     "tol": 0.05
   },
   "volume": {
-    "expected": 280542.435,
+    "expected": 2081197.533,
     "rel_tol": 0.001
   },
   "export.step": {

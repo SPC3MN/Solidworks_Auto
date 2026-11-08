@@ -8,9 +8,8 @@
   "bore": 12.0,
   "seat_d": 22.0,
   "seat_depth": 7.0,
-  "band_seat_od": 368.0,
-  "band_seat_id": 358.0,
-  "band_seat_depth": 3.0,
+  "rabbet_id": 424.0,
+  "rabbet_depth": 3.0,
   "rod_r": 209.0,
   "rod_angles": [
     18,

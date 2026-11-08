@@ -1,22 +1,18 @@
 {
   "schema_version": "1.0",
-  "project": "airmn_lid",
-  "timestamp": "20261108T124448",
-  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\airmn_lid\\.staging\\20261108T124448\\airmn_lid.SLDPRT",
+  "project": "airmn_outlet_band",
+  "timestamp": "20261108T133456",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\airmn_outlet_band\\.staging\\20261108T133456\\airmn_outlet_band.SLDPRT",
   "status": "pass",
   "params_used": {
-    "d": 430.0,
-    "hole_d": 100.0,
-    "t": 6.0,
-    "rod_r": 209.0,
-    "rod_angles": [
-      18,
-      90,
-      162,
-      234,
-      306
-    ],
-    "rod_hole": 5.5
+    "od": 430.0,
+    "id": 425.0,
+    "h": 162.0,
+    "hole_d": 7.2,
+    "units": 157,
+    "rows": 16,
+    "row_z0": 20.0,
+    "row_pitch": 7.42
   },
   "summary": {
     "passed": 9,
@@ -28,9 +24,9 @@
       "bbox": [
         430.0,
         430.0,
-        6.0
+        162.0
       ],
-      "volume": 823484.084,
+      "volume": 288057.398,
       "solid_bodies": 1
     }
   },
@@ -39,7 +35,7 @@
       "id": "export.native",
       "category": "export_integrity",
       "status": "pass",
-      "measured": 58459,
+      "measured": 11234306,
       "expected": "> 1000 bytes",
       "message": ""
     },
@@ -74,8 +70,8 @@
       "id": "bbox.z",
       "category": "bounding_dimensions",
       "status": "pass",
-      "measured": 6.0,
-      "expected": 6.0,
+      "measured": 162.0,
+      "expected": 162.0,
       "tolerance": 0.05,
       "message": ""
     },
@@ -83,27 +79,27 @@
       "id": "volume",
       "category": "bounding_dimensions",
       "status": "pass",
-      "measured": 823484.084,
-      "expected": 823484.084,
-      "tolerance": 823.484084,
+      "measured": 288057.398,
+      "expected": 288202.784,
+      "tolerance": 288.202784,
       "message": ""
     },
     {
       "id": "export.step.volume",
       "category": "export_integrity",
       "status": "pass",
-      "measured": 823484.084,
-      "expected": 823484.084,
-      "tolerance": 823.484084,
+      "measured": 288224.095,
+      "expected": 288057.398,
+      "tolerance": 288.057398,
       "message": ""
     },
     {
       "id": "export.stl.volume",
       "category": "export_integrity",
       "status": "pass",
-      "measured": 822255.44,
-      "expected": 823484.084,
-      "tolerance": 8234.84084,
+      "measured": 289497.548,
+      "expected": 288057.398,
+      "tolerance": 2880.57398,
       "message": ""
     },
     {
@@ -112,7 +108,7 @@
       "status": "pass",
       "measured": true,
       "expected": true,
-      "message": "1272 triangles"
+      "message": "393968 triangles"
     }
   ]
 }
