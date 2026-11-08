@@ -162,12 +162,119 @@ def bottom_cap(p):
 
 
 def comb(p):
+    """Pleat comb; with `beads`, printed in TPU as its own gasket: two sealing rings under the face opposite the
+    slots (the ring then starts at z = bead_h)."""
     D, Di, T = p["od"], p["id"], p["t"]
     outer, inner, area = pleat_band(p, p["slot_w"] / 2)
     sd = p["slot_depth"]
-    g = [ring(D, Di, 0, T, "Ring"),
-         ("Pleat_slots", "cut", [polygon(outer), polygon(inner)], T - sd, sd, -area * sd, "z")]
-    return g, [D, D, T]
+    bh = p.get("bead_h", 0.0)
+    g = [ring(D, Di, bh, T, "Ring"),
+         ("Pleat_slots", "cut", [polygon(outer), polygon(inner)], bh + T - sd, sd, -area * sd, "z")]
+    for i, (do, di) in enumerate(p.get("beads", [])):
+        g.append(ring(do, di, 0, bh, f"Bead{i + 1}"))
+    return g, [D, D, bh + T]
+
+
+def base(p):
+    """Bottom of the unit: plate with printed feet underneath, comb groove on top, M3 screws up into the frame's
+    flange (heads in counterbores underneath), USB-C PD board pocket and cable channel. z = 0 at the feet."""
+    D, T, F = p["d"], p["t"], p["foot_h"]
+    sp = [polar(p["screw_r"], a) for a in p["screw_angles"]]
+    g = [rod(D, F, T, "Plate"),
+         holes("Feet", p["foot_d"], [polar(p["foot_r"], a) for a in p["foot_angles"]], 0, F, op="add"),
+         ring(p["groove_od"], p["groove_id"], F + T - p["groove_depth"], p["groove_depth"], "Comb_groove", "cut"),
+         holes("Frame_screws", p["screw_hole"], sp, F, T)]
+    cb, cd = p["cbore_d"], p["cbore_depth"]
+    g.append(("Screw_counterbores", "cut", [circle(x, y, cb) for x, y in sp], F, cd,
+              -len(sp) * (disc(cb) - disc(p["screw_hole"])) * cd, "z"))
+    px, pl, pw, ph = p["pd_pocket"]["x"], p["pd_pocket"]["l"], p["pd_pocket"]["w"], p["pd_pocket"]["h"]
+    g.append(("PD_pocket", "cut", [rect(px, 0, pl, pw)], F, ph, -pl * pw * ph, "z"))
+    cx0, cw = p["cable_channel"]["x0"], p["cable_channel"]["w"]
+    R, x_end = D / 2, D / 2 + 5
+    pocket_end = px + pl / 2
+    area = integ(lambda y: sq(R * R - y * y) - pocket_end, -cw / 2, cw / 2)
+    g.append(("Cable_channel", "cut", [rect((cx0 + x_end) / 2, 0, x_end - cx0, cw)], F, ph, -area * ph, "z"))
+    return g, [D, D, F + T]
+
+
+def frame(p):
+    """Perforated outer frame round the filter, flush with the fan head: the fan head's top-grid holes wrapped
+    round the wall (hex pitch, columns every half pitch), solid bands at both ends, and an inner flange at the
+    bottom tapped for the base's M3 screws."""
+    Do, Di, H, d = p["od"], p["id"], p["h"], p["hole_d"]
+    ro, ri = Do / 2, Di / 2
+    yb, za, zb = band_layout(p)
+    va, vb = offset_hole_vol(d, 0, ri, ro), offset_hole_vol(d, yb, ri, ro)
+    x0, depth = ro + 0.5, ro - ri + 1.5
+    n = p["units"]
+    g = [ring(Do, Di, 0, H, "Wall"),
+         ring(Di, p["flange_id"], 0, p["flange_h"], "Flange"),
+         holes("Screw_taps", TAP_M3, [polar(p["screw_r"], a) for a in p["screw_angles"]], 0, p["flange_h"])]
+    if not p.get("perforated", True):  # smooth wall for visualisation; the grid is cut only when asked for
+        return g, [Do, Do, H]
+    g += [("Holes_A", "cut", [circle(0, z, d) for z in za], x0 - depth, depth, -len(za) * va, "x"),
+         ("Holes_B", "cut", [circle(yb, z, d) for z in zb], x0 - depth, depth, -len(zb) * vb, "x"),
+         ("Dot_grid", "pattern", ["Holes_A", "Holes_B"], n, 0, -(n - 1) * (len(za) * va + len(zb) * vb), "z")]
+    return g, [Do, Do, H]
+
+
+def fan_head(p):
+    """Everything above and inside the filter's top that lifts off as one: spigot into the frame, inlet flange
+    pressing the top comb's beads, short duct round the rotor, perforated top (the vertical outlet), and the motor
+    cup hanging down into the filter core on flat radial struts. The struts are the flow straightener in front of
+    the rotor (no turning: they take out the swirl and lumps from the pleats); there are no vanes after the rotor.
+    Cup open at the bottom (motor in from below), its top plate is the motor mount. z = 0 at the cup's bottom."""
+    D, zs, S = p["d"], p["spigot_z"], p["spigot_h"]
+    zf = zs + S                      # flange underside = frame rim
+    zd = zf + p["flange_t"]          # duct starts at the flange top
+    ztop = p["top_z"]
+    zt = ztop - p["top_t"]
+    ch, pt = p["cup_h"], p["plate_t"]
+    rh, ri, w, n = p["cup_d"] / 2, p["inlet_d"] / 2, p["strut_t"], p["struts"]
+    z0, z1 = p["strut_z"], zd        # struts run up through the flange opening to the flange top
+    st = [spoke(rh - 1, ri + 1, w, 360 * k / n + 180 / n) for k in range(n)]
+    tip = integ(lambda y: ri + 1 - sq(ri * ri - y * y), -w / 2, w / 2)  # strut ends past R_inlet below the flange
+    sp = [(-p["motor_screw_pitch"] / 2, 0), (p["motor_screw_pitch"] / 2, 0)]
+    cb, cd = p["cbore_d"], p["cbore_depth"]
+    g = [ring(p["spigot_od"], p["spigot_id"], zs, S, "Spigot"),
+         ring(D, p["inlet_d"], zf, p["flange_t"], "Inlet_flange"),
+         ring(D, p["bore"], zd, zt - zd, "Duct_wall"),
+         rod(D, zt, p["top_t"], "Top"),
+         holes("Outlet_grid", p["hole_d"], hex_grid(p["hole_pitch"], p["grid_r"]), zt, p["top_t"]),
+         ring(p["cup_d"], p["cup_id"], 0, ch - pt, "Cup_tube"),
+         rod(p["cup_d"], ch - pt, pt, "Motor_plate"),
+         ("Struts", "add", st, z0, z1 - z0,
+          n * (strip_between(rh, ri, w) * (z1 - z0) + tip * (zf - z0)), "z"),
+         rod(p["shaft_hole"], ch - pt, pt, "Shaft_hole", "cut"),
+         holes("Motor_screws", p["motor_screw_hole"], sp, ch - pt, pt),
+         ("Screw_counterbores", "cut", [circle(x, y, cb) for x, y in sp], ch - cd, cd,
+          -len(sp) * (disc(cb) - disc(p["motor_screw_hole"])) * cd, "z")]
+    return g, [D, D, ztop]
+
+
+def rotor_blade_pts(p, deg):
+    t = p["blade_t"] / 2
+    return rot([(p["hub_d"] / 2 - 1, -t), (p["tip_r"], -t), (p["tip_r"], t), (p["hub_d"] / 2 - 1, t)], deg)
+
+
+def rotor(p):
+    """Axial rotor in one part: hub on the motor's 4 mm shaft (M3 clamp screw near the shaft end)
+    and n flat PLACEHOLDER blades (no pitch yet) from the hub to the tip."""
+    Dh, H, n, t = p["hub_d"], p["h"], p["blades"], p["blade_t"] / 2
+    rh, rt = Dh / 2, p["tip_r"]
+    ri, ro = p["bore"] / 2, rh
+    depth = ro - ri + 1.0
+    blade_area = integ(lambda y: rt - sq(rh * rh - y * y), -t, t)
+    angles = [360 * k / n + 180 / n for k in range(n)]  # clamp screw on +x, between two blades
+    bl = [polygon(rotor_blade_pts(p, a)) for a in angles]
+    g = [rod(Dh, 0, H, "Hub"),
+         ("Blades", "add", bl, 0, H, n * blade_area * H, "z"),
+         rod(p["bore"], 0, H, "Bore", "cut"),
+         ("Clamp_screw", "cut", [circle(0, H - p["clamp_from_top"], TAP_M3)], ro + 0.5 - depth, depth,
+          -offset_hole_vol(TAP_M3, 0, ri, ro), "x")]
+    pts = [q for a in angles for q in rotor_blade_pts(p, a)]
+    xs, ys = [q[0] for q in pts] + [-rh, rh], [q[1] for q in pts] + [-rh, rh]
+    return g, [max(xs) - min(xs), max(ys) - min(ys), H]
 
 
 def pleat_pack(p):
@@ -481,6 +588,7 @@ def pd_board(p):
 
 
 PARTS = {
+    "base": base, "frame": frame, "fan_head": fan_head, "rotor": rotor,
     "bottom_cap": bottom_cap, "comb": comb, "pleat_pack": pleat_pack, "gasket": gasket,
     "inlet_ring": inlet_ring, "outlet_band": outlet_band, "blade": blade, "shroud": shroud,
     "backplate": backplate, "bridge": bridge, "top_cover": top_cover, "spider": spider, "impeller_housing": impeller_housing, "inlet_plate": inlet_plate,

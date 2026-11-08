@@ -1,0 +1,81 @@
+{
+ "assembly": "airmn",
+ "time": "2026-11-08T16:50:02",
+ "pass": true,
+ "backend": "freecad",
+ "freecad_version": "1.1.4",
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 9,
+   "actual": 9
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 430.0,
+   "actual": 430.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 430.0,
+   "actual": 430.0
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 758.0,
+   "actual": 758.0
+  },
+  {
+   "id": "interference airmn_base-1 / comb_low",
+   "pass": true,
+   "pair": [
+    "airmn_base",
+    "airmn_comb"
+   ],
+   "labels": [
+    "airmn_base-1",
+    "comb_low"
+   ],
+   "volume_mm3": 1644.6238,
+   "note": "allowed"
+  },
+  {
+   "id": "interference comb_high / airmn_fan_head-1",
+   "pass": true,
+   "pair": [
+    "airmn_comb",
+    "airmn_fan_head"
+   ],
+   "labels": [
+    "comb_high",
+    "airmn_fan_head-1"
+   ],
+   "volume_mm3": 1644.6238,
+   "note": "allowed"
+  }
+ ],
+ "bbox_mm": [
+  430.0,
+  430.0,
+  758.0
+ ],
+ "bbox_min_mm": [
+  -215.0,
+  -215.0,
+  -5.0
+ ],
+ "files": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn/airmn.FCStd",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn/exports/airmn.step"
+ ],
+ "renders": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn/renders/isometric.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn/renders/top.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn/renders/front.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn/renders/right.png"
+ ]
+}

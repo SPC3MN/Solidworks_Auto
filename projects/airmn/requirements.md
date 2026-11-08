@@ -8,9 +8,74 @@ Geometry: `airmn_parts.py` (one function per part, volumes by hand). Values: `ge
 every `projects/airmn_<part>/` project and both assemblies. Axis: z up, z = 0 at the bottom cap's underside, the
 unit's axis on the origin.
 
-## Current design (5th pass, 2026-11-08): axial fan blowing up
+## Current design (7th pass, 2026-11-08): low fan head, tuned for low noise
 
-Supersedes the plug-fan sections further down (kept as history). Basis: [upflow_feasibility.md](upflow_feasibility.md).
+The owner asked for a smaller fan head with the motor cup down in the filter core, and for the motor mount to
+double as a flow conditioner into the fan, designed for the lowest noise. Changes from the 6th pass below:
+
+- **Motor in the core.** The cup is 100 / 90 × 90, open at the bottom, and the motor goes in from below with its
+  shaft up. The 5 mm plate on top is the motor mount: 2 × M3 from above, in counterbores. The rotor sits 1 mm
+  over the plate, with 6 mm of shaft in the hub. The clamp screw is now 3 mm above the hub's bottom.
+- **Struts are the flow straightener.** There are 11 flat radial struts, 3 × 40, from the cup to the inlet
+  opening. They do not turn the air: they take out the swirl and unevenness from the pleats so the rotor takes in
+  a smooth flow. Their trailing edges, at the flange top, are 50 mm (about 1.25 blade chords) below the rotor.
+- **No outlet vanes.** The outlet vanes from the 6th pass are gone. The leftover swirl costs about 0.1 Pa
+  (upflow estimate), and the top grid takes out part of it.
+- **Grid 40 mm above the rotor.** The fan head is 179 tall (cup bottom to top) and sits 153 above the frame rim,
+  down from 285. The unit is 621 tall plus 5 mm feet, down from 758.
+
+Noise reasoning:
+- **Wake spacing.** No surface sits in a rotor wake within one chord, and the struts' wakes have 1.25 chords to
+  mix out before the rotor.
+- **Tyler–Sofrin counts.** The blade-passing frequency is about 31 Hz (265 rpm × 7). Only plane waves travel in
+  the 404 duct below about 500 Hz, so the interaction tone only escapes where 7n = 11k. The first such tone is the
+  11th harmonic, which is very weak. Five struts would put one at the 5th harmonic.
+- **Gearbox whine.** This is probably the loudest source. Having the motor inside the pleat pack puts the media
+  round it as an absorber.
+
+Not done yet: swept struts (to spread the wake hits) and real cambered blades.
+
+## Superseded design (6th pass, 2026-11-08): simplified, 8 different parts and 9 pieces
+
+The owner asked for a much simpler design (sketches confirmed in the session before modelling). The 5th pass had
+20 different parts and 48 pieces. Changes, each removing parts rather than adding fixes:
+
+- **No tie rods or nuts.** A perforated frame, screwed to the base, holds the filter, and the fan head sits on
+  its top rim. The frame's height sets how much the comb beads are squeezed (0.5 mm at each end).
+- **Comb and gasket in one.** Each comb is printed in TPU with two sealing beads on its outer face. There is no
+  foam tape.
+- **One fan head.** Inlet plate, fan housing, stator and nacelle are one part, lifted off with the rotor and
+  motor inside to change the filter.
+- **Direct drive.** The rotor (hub and 7 blades in one part) clamps straight onto the motor's 4 mm D shaft, and
+  the motor screws into the cup floor (2 × M3, button heads in 2.5 mm counterbores). Shaft, two 608s, coupling,
+  bracket and grommets are gone.
+- **Feet printed into the base.**
+
+| Part | What | z (assembly) |
+| --- | --- | --- |
+| `airmn_base` | 430 × 20 plate, 4 feet Ø20 × 5 underneath, comb groove 408 / 288 × 4, 5 M3 up into the frame flange (counterbores 6.5 × 3.5 underneath), PD pocket and cable channel | −5 .. 20 |
+| `airmn_frame` | 430 / 422 × 453. Holes are 10 mm on an 11.2 hex pitch like the fan head's top: 120 column pairs × 43 rows, solid bands about 18 mm at both ends. Inner flange 422 / 410 × 8 at the bottom with 5 M3 taps on R208 | 20 .. 473 |
+| `airmn_comb` ×2 (TPU) | Ring 406 / 292 × 10, zigzag slot 1.6 × 7, beads 404 / 401 and 297 / 294 × 1 on the outer face | low 15.5 .. 26.5; high (flipped) 462.5 .. 473.5 |
+| `airmn_pleat_pack` | Unchanged | 19.5 .. 469.5 |
+| `airmn_fan_head` | Spigot 421.6 / 412 × 5 into the frame, inlet flange 430 / 286 × 10 on the frame rim and the top beads, duct 404, 8 mm top with the hex grid inside R198. Motor cup 100 / 90: floor 5 (local 72), closed top at local 181. 11 flat placeholder vanes 3 × 60 from the cup to the duct wall | 468 .. 753 |
+| `airmn_rotor` | Hub 100 × 40 (hub ratio 0.25, the lowest that keeps the blade roots working, for low noise), bore 4, M3 clamp 3 below the top (between two blades). 7 flat placeholder blades 3 thick to R200.5 (1.5 mm tip gap; true the printed rotor) | 499 .. 539 |
+| `airmn_motor` | Shaft down, face on the cup floor; 6 mm of shaft in the rotor hub | 533 .. 620 |
+
+Rotor to vanes: 50 mm (more than one blade height). 7 blades against 11 vanes share no factor. Unit height 753
+plus 5 mm feet. Frame material: about 870 cm³ (about 1.1 kg PETG). The webs between holes are 1.2 mm, as in the
+top grid.
+
+Open items and risks:
+- **Shaft engagement.** The motor's 4 mm shaft is *estimated* at 12 mm long, which leaves only 6 mm in the rotor
+  hub. Check against the real motor. If the 400 mm rotor wobbles, add one 608 in the cup floor.
+- **Even squeeze.** The fan head's weight is the only load on the top beads. If a smoke test shows a leak, add a
+  quarter-turn bayonet at the rim.
+- **Still to do:** real angled rotor blades and vanes, motor wires out through a vane, print-bed sector splits
+  for the base, frame and fan head.
+
+## 5th pass (2026-11-08): axial fan blowing up
+
+Superseded by the 6th pass above. It also supersedes the plug-fan sections further down (kept as history). Basis: [upflow_feasibility.md](upflow_feasibility.md).
 The filter (bottom cap, combs, gaskets, pack, feet, PD board) is unchanged.
 
 | Part | What | z |

@@ -1,0 +1,58 @@
+{
+ "assembly": "airmn_exploded",
+ "time": "2026-11-08T17:06:14",
+ "pass": true,
+ "backend": "freecad",
+ "freecad_version": "1.1.4",
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 9,
+   "actual": 9
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 910.0,
+   "actual": 910.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 430.0,
+   "actual": 430.0
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 1043.0,
+   "actual": 1043.0
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  910.0,
+  430.0,
+  1043.0
+ ],
+ "bbox_min_mm": [
+  -695.0,
+  -215.0,
+  0.0
+ ],
+ "files": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn_exploded/airmn_exploded.FCStd",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn_exploded/exports/airmn_exploded.step"
+ ],
+ "renders": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn_exploded/renders/isometric.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn_exploded/renders/top.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn_exploded/renders/front.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/assemblies/airmn_exploded/renders/right.png"
+ ]
+}

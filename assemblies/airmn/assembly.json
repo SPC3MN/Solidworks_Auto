@@ -1,49 +1,13 @@
 {
- "_comment": "airmn bench prototype, assembled. z = 0 at the bottom cap's underside; stack heights in projects/airmn/requirements.md (Layout). Rods on R209 at 18 + 72k deg; blades every 40 deg.",
+ "_comment": "airmn bench prototype, assembled (6th pass: perforated frame, comb-gaskets, one-part fan head). z = 0 at the base plate's underside; stack in projects/airmn/requirements.md.",
  "components": [
   {
-   "part": "airmn_bottom_cap",
+   "part": "airmn_base",
    "at": [
     0,
     0,
-    0.0
+    -5.0
    ]
-  },
-  {
-   "part": "airmn_foot",
-   "at": [
-    120.208,
-    120.208,
-    -5.0
-   ],
-   "label": "foot_1"
-  },
-  {
-   "part": "airmn_foot",
-   "at": [
-    -120.208,
-    120.208,
-    -5.0
-   ],
-   "label": "foot_2"
-  },
-  {
-   "part": "airmn_foot",
-   "at": [
-    -120.208,
-    -120.208,
-    -5.0
-   ],
-   "label": "foot_3"
-  },
-  {
-   "part": "airmn_foot",
-   "at": [
-    120.208,
-    -120.208,
-    -5.0
-   ],
-   "label": "foot_4"
   },
   {
    "part": "airmn_pd_board",
@@ -54,20 +18,19 @@
    ]
   },
   {
-   "part": "airmn_gasket",
+   "part": "airmn_frame",
    "at": [
     0,
     0,
-    16.0
-   ],
-   "label": "gasket_low"
+    20.0
+   ]
   },
   {
    "part": "airmn_comb",
    "at": [
     0,
     0,
-    19.0
+    15.5
    ],
    "label": "comb_low"
   },
@@ -76,7 +39,7 @@
    "at": [
     0,
     0,
-    22.0
+    19.5
    ]
   },
   {
@@ -94,356 +57,59 @@
     -1,
     0,
     0,
-    475.0
+    473.5
    ]
   },
   {
-   "part": "airmn_gasket",
+   "part": "airmn_rotor",
    "at": [
     0,
     0,
-    475.0
-   ],
-   "label": "gasket_high"
-  },
-  {
-   "part": "airmn_inlet_plate",
-   "at": [
-    0,
-    0,
-    474.0
-   ]
-  },
-  {
-   "part": "airmn_fan_housing",
-   "at": [
-    0,
-    0,
-    484.0
-   ]
-  },
-  {
-   "part": "airmn_rotor_hub",
-   "at": [
-    0,
-    0,
-    500.0
-   ]
-  },
-  {
-   "part": "airmn_rotor_blade",
-   "at": [
-    0,
-    0,
-    500.0
-   ],
-   "label": "blade_1"
-  },
-  {
-   "part": "airmn_rotor_blade",
-   "at": [
-    0,
-    0,
-    500.0
-   ],
-   "label": "blade_2",
-   "rot_z": 51.4286
-  },
-  {
-   "part": "airmn_rotor_blade",
-   "at": [
-    0,
-    0,
-    500.0
-   ],
-   "label": "blade_3",
-   "rot_z": 102.8571
-  },
-  {
-   "part": "airmn_rotor_blade",
-   "at": [
-    0,
-    0,
-    500.0
-   ],
-   "label": "blade_4",
-   "rot_z": 154.2857
-  },
-  {
-   "part": "airmn_rotor_blade",
-   "at": [
-    0,
-    0,
-    500.0
-   ],
-   "label": "blade_5",
-   "rot_z": 205.7143
-  },
-  {
-   "part": "airmn_rotor_blade",
-   "at": [
-    0,
-    0,
-    500.0
-   ],
-   "label": "blade_6",
-   "rot_z": 257.1429
-  },
-  {
-   "part": "airmn_rotor_blade",
-   "at": [
-    0,
-    0,
-    500.0
-   ],
-   "label": "blade_7",
-   "rot_z": 308.5714
-  },
-  {
-   "part": "airmn_shaft",
-   "at": [
-    0,
-    0,
-    500.0
-   ]
-  },
-  {
-   "part": "airmn_stator",
-   "at": [
-    0,
-    0,
-    580.0
-   ]
-  },
-  {
-   "part": "grindmn_bearing_608",
-   "at": [
-    0,
-    0,
-    580.0
-   ],
-   "label": "bearing_low"
-  },
-  {
-   "part": "grindmn_bearing_608",
-   "at": [
-    0,
-    0,
-    593.0
-   ],
-   "label": "bearing_high"
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    21.213,
-    21.213,
-    600.0
-   ],
-   "label": "grommet_1"
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    -21.213,
-    21.213,
-    600.0
-   ],
-   "label": "grommet_2"
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    -21.213,
-    -21.213,
-    600.0
-   ],
-   "label": "grommet_3"
-  },
-  {
-   "part": "airmn_grommet",
-   "at": [
-    21.213,
-    -21.213,
-    600.0
-   ],
-   "label": "grommet_4"
-  },
-  {
-   "part": "airmn_motor_bracket",
-   "at": [
-    0,
-    0,
-    606.0
-   ]
-  },
-  {
-   "part": "airmn_coupling",
-   "at": [
-    0,
-    0,
-    610.0
+    533.0
    ]
   },
   {
    "part": "airmn_motor",
-   "at": [
+   "xform": [
+    1,
     0,
     0,
-    629.0
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    539.0
    ]
   },
   {
-   "part": "airmn_nacelle",
+   "part": "airmn_fan_head",
    "at": [
     0,
     0,
-    640.0
+    442.0
    ]
-  },
-  {
-   "part": "airmn_tie_rod",
-   "at": [
-    198.771,
-    64.585,
-    1.0
-   ],
-   "label": "rod_1"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    198.771,
-    64.585,
-    1.0
-   ],
-   "label": "nut_low_1"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    198.771,
-    64.585,
-    749.0
-   ],
-   "label": "nut_high_1"
-  },
-  {
-   "part": "airmn_tie_rod",
-   "at": [
-    0.0,
-    209.0,
-    1.0
-   ],
-   "label": "rod_2"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    0.0,
-    209.0,
-    1.0
-   ],
-   "label": "nut_low_2"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    0.0,
-    209.0,
-    749.0
-   ],
-   "label": "nut_high_2"
-  },
-  {
-   "part": "airmn_tie_rod",
-   "at": [
-    -198.771,
-    64.585,
-    1.0
-   ],
-   "label": "rod_3"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    -198.771,
-    64.585,
-    1.0
-   ],
-   "label": "nut_low_3"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    -198.771,
-    64.585,
-    749.0
-   ],
-   "label": "nut_high_3"
-  },
-  {
-   "part": "airmn_tie_rod",
-   "at": [
-    -122.847,
-    -169.085,
-    1.0
-   ],
-   "label": "rod_4"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    -122.847,
-    -169.085,
-    1.0
-   ],
-   "label": "nut_low_4"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    -122.847,
-    -169.085,
-    749.0
-   ],
-   "label": "nut_high_4"
-  },
-  {
-   "part": "airmn_tie_rod",
-   "at": [
-    122.847,
-    -169.085,
-    1.0
-   ],
-   "label": "rod_5"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    122.847,
-    -169.085,
-    1.0
-   ],
-   "label": "nut_low_5"
-  },
-  {
-   "part": "airmn_nut_m5",
-   "at": [
-    122.847,
-    -169.085,
-    749.0
-   ],
-   "label": "nut_high_5"
   }
  ],
  "expected": {
-  "_comment": "x, y: caps 430 across; z: feet -5 .. fan housing top 484 + 270 = 754. Axial fan (placeholder blades) with the motor in the stator's centre body; the motor group hangs under the inlet ring inside the pack's core. No interference allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal nut bore only touches.",
+  "_comment": "x, y: 430 across; z: feet -5 .. fan head top 621. Only the comb beads overlap (0.5 mm squeeze at the base and under the fan head); every other fit has clearance or only touches.",
   "bbox": [
    430.0,
    430.0,
-   759.0
+   626.0
   ],
-  "allowed_interference": []
+  "allowed_interference": [
+   [
+    "airmn_base",
+    "airmn_comb"
+   ],
+   [
+    "airmn_comb",
+    "airmn_fan_head"
+   ]
+  ]
  }
 }

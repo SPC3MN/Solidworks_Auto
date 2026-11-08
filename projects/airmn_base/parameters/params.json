@@ -1,0 +1,37 @@
+{
+  "d": 430.0,
+  "t": 20.0,
+  "foot_h": 5.0,
+  "foot_d": 20.0,
+  "foot_r": 170.0,
+  "foot_angles": [
+    45,
+    135,
+    225,
+    315
+  ],
+  "groove_od": 408.0,
+  "groove_id": 288.0,
+  "groove_depth": 4.0,
+  "screw_r": 208.0,
+  "screw_angles": [
+    18,
+    90,
+    162,
+    234,
+    306
+  ],
+  "screw_hole": 3.4,
+  "cbore_d": 6.5,
+  "cbore_depth": 3.5,
+  "pd_pocket": {
+    "x": 145.0,
+    "l": 40.0,
+    "w": 30.0,
+    "h": 8.0
+  },
+  "cable_channel": {
+    "x0": 160.0,
+    "w": 12.0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "od": 430.0,
+  "id": 422.0,
+  "h": 453.0,
+  "hole_d": 10.0,
+  "units": 120,
+  "rows": 43,
+  "row_pitch": 9.69948,
+  "row_z0": 22.8,
+  "flange_id": 410.0,
+  "flange_h": 8.0,
+  "screw_r": 208.0,
+  "screw_angles": [
+    18,
+    90,
+    162,
+    234,
+    306
+  ],
+  "perforated": false
+}

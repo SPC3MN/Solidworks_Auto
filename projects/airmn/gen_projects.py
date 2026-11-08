@@ -13,50 +13,36 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 import airmn_parts as ap  # noqa: E402
 
-RODS = {"rod_r": 209.0, "rod_angles": [18, 90, 162, 234, 306], "rod_hole": 5.5}
 PLEAT = {"pleats": 120, "pleat_ro": 200.0, "pleat_ri": 150.0, "fold_flat": 2.0}
-CAP_D = 430.0
+D = 430.0
+SCREWS = {"screw_r": 208.0, "screw_angles": [18, 90, 162, 234, 306]}
+HEX = {"hole_d": 10.0, "hole_pitch": 11.2}
 
 PARTS = {
-    "bottom_cap": ("PETG, printed in sectors", "Closed bottom disc: lower comb groove, M5 rod holes with nut pockets underneath, USB-C PD board pocket and cable channel.", {
-        "d": CAP_D, "t": 20.0, "groove_od": 408.0, "groove_id": 288.0, "groove_depth": 4.0, **RODS,
-        "nut_pocket_d": 10.0, "nut_pocket_depth": 6.0,
+    "base": ("PETG, printed in sectors", "Bottom of the unit: 430 x 20 plate with 4 printed feet, comb groove on top, 5 M3 screws up into the frame flange (counterbored underneath), USB-C PD board pocket and cable channel.", {
+        "d": D, "t": 20.0, "foot_h": 5.0, "foot_d": 20.0, "foot_r": 170.0, "foot_angles": [45, 135, 225, 315],
+        "groove_od": 408.0, "groove_id": 288.0, "groove_depth": 4.0, **SCREWS, "screw_hole": 3.4,
+        "cbore_d": 6.5, "cbore_depth": 3.5,
         "pd_pocket": {"x": 145.0, "l": 40.0, "w": 30.0, "h": 8.0}, "cable_channel": {"x0": 160.0, "w": 12.0}}),
-    "comb": ("PETG", "Pleat comb (one part, used top and bottom): ring with a zigzag slot that holds all 120 pleat folds at even pitch.", {
-        "od": 406.0, "id": 292.0, "t": 10.0, "slot_w": 1.6, "slot_depth": 7.0, **PLEAT}),
+    "frame": ("PETG, printed in sectors", "Perforated frame round the filter, flush with the fan head: 430 / 422 x 453, the top grid's 10 mm holes on an 11.2 hex pitch round the wall (120 column pairs x 43 rows), solid end bands, inner flange 422 / 410 x 8 at the bottom tapped M3 for the base screws.", {
+        "od": D, "id": 422.0, "h": 453.0, "hole_d": 10.0, "units": 120, "rows": 43,
+        "row_pitch": round(11.2 * 3 ** 0.5 / 2, 5), "row_z0": 22.8, "flange_id": 410.0, "flange_h": 8.0, **SCREWS,
+        "perforated": False}),  # smooth for visualisation for now (owner); True cuts the 5160-hole grid
+    "comb": ("TPU 95A (comb and gasket in one)", "Pleat comb and gasket in one, used top and bottom: ring 406 / 292 x 10 with the zigzag slot holding all 120 pleat folds, two sealing beads 1.5 x 1 on the outer face (404 / 401 and 297 / 294).", {
+        "od": 406.0, "id": 292.0, "t": 10.0, "slot_w": 1.6, "slot_depth": 7.0, "bead_h": 1.0,
+        "beads": [[404.0, 401.0], [297.0, 294.0]], **PLEAT}),
     "pleat_pack": ("MERV 13 synthetic roll media", "Pleated filter wall: 120 pleats 50 deep, 0.8 media, 450 tall (seam overlap not modelled).", {
         "h": 450.0, "media_t": 0.8, **PLEAT}),
-    "gasket": ("Closed-cell foam tape", "Comb seal, top and bottom, modelled uncompressed.", {
-        "od": 406.0, "id": 290.0, "t": 3.0}),
-    "inlet_plate": ("PETG", "Top ring of the filter: upper comb groove underneath, M5 rod holes, open to the core; the fan housing sits on it.", {
-        "_kind": "inlet_plate", "d": CAP_D, "id": 286.0, "t": 10.0, "groove_od": 408.0, "groove_id": 288.0,
-        "groove_depth": 4.0, **RODS}),
-    "fan_housing": ("PETG", "Axial-fan duct and lid: 430 OD, 404 bore (3 mm tip gap), tie rods run up through the 13 mm wall, 8 mm top plate with 10 mm holes on a 11.2 hex pitch (72 % open) as the vertical outlet.", {
-        "d": CAP_D, "bore": 404.0, "h": 270.0, "top_t": 8.0, "hole_d": 10.0, "hole_pitch": 11.2, "grid_r": 198.0,
-        "nut_cbore_d": 10.0, "nut_cbore_depth": 5.0, **RODS}),
-    "rotor_hub": ("PETG", "Axial rotor hub 176 x 40 on the 8 mm shaft, M3 clamp screw; flat underside for now.", {
-        "d": 176.0, "h": 40.0, "bore": 8.0}),
-    "rotor_blade": ("PETG", "PLACEHOLDER rotor blade: flat radial plate with no pitch, 7 used; to be replaced by the real angled blade.", {
-        "_kind": "placeholder_blade", "r0": 88.0, "r1": 199.0, "t": 3.0, "h": 40.0}),
-    "stator": ("PETG", "Outlet guide vanes (11, flat placeholders) carrying the motor centre body: ring 403/396 in the duct, hub 180 with a floor holding two 608s and the grommet screws.", {
-        "h": 60.0, "ring_od": 403.0, "ring_id": 396.0, "hub_d": 180.0, "hub_id": 170.0, "floor_t": 20.0,
-        "vanes": 11, "vane_t": 3.0, "bore": 12.0, "seat_d": 22.0, "seat_depth": 7.0,
-        "grommet_r": 30.0, "grommet_angles": [45, 135, 225, 315], "grommet_screw_depth": 8.0}),
-    "nacelle": ("PETG", "Cap over the motor, continuing the stator hub (180 / 170, closed top).", {
-        "d": 180.0, "id": 170.0, "h": 86.0, "top_t": 5.0}),
-    "motor_bracket": ("PETG", "Motor bracket on 4 grommets: flange, tube round the coupling, plate for the motor face.", {
-        "flange_d": 80.0, "flange_t": 5.0, "tube_od": 66.0, "tube_id": 56.0, "tube_h": 25.0, "plate_t": 5.0,
-        "shaft_hole": 12.0, "motor_screw_pitch": 17.0, "motor_screw_hole": 3.2,
-        "grommet_r": 30.0, "grommet_angles": [45, 135, 225, 315], "grommet_hole": 3.4}),
+    "fan_head": ("PETG, printed in sectors", "Everything that lifts off as one, 179 tall: motor cup 100 / 90 (open bottom, 5 mm motor plate on top with the motor's 2 x M3) hanging into the filter core on 11 flat radial struts 3 x 40 (the flow straightener, trailing edges 50 below the rotor), spigot 421.6 / 412 into the frame, inlet flange (opening 286) on the frame rim and the top comb's beads, 404 duct round the rotor, no outlet vanes, 8 mm top with 10 mm holes on an 11.2 hex pitch (72 % open) 40 above the rotor.", {
+        "d": D, "spigot_z": 26.0, "spigot_h": 5.0, "spigot_od": 421.6, "spigot_id": 412.0, "flange_t": 10.0,
+        "inlet_d": 286.0, "bore": 404.0, "top_z": 179.0, "top_t": 8.0, **HEX, "grid_r": 198.0,
+        "cup_d": 100.0, "cup_id": 90.0, "cup_h": 90.0, "plate_t": 5.0,
+        "struts": 11, "strut_t": 3.0, "strut_z": 1.0, "shaft_hole": 6.0, "motor_screw_pitch": 17.0,
+        "motor_screw_hole": 3.4, "cbore_d": 6.0, "cbore_depth": 2.5}),
+    "rotor": ("PETG", "Axial rotor in one part: hub 100 x 40 straight on the motor's 4 mm D shaft (shaft from below; M3 clamp screw 3 above the bottom), 7 flat PLACEHOLDER blades to R200.5 (1.5 mm tip gap), no pitch yet.", {
+        "hub_d": 100.0, "h": 40.0, "bore": 4.0, "clamp_from_top": 37.0, "blades": 7, "blade_t": 3.0, "tip_r": 200.5}),
     "motor": ("Bought: E-S Motor 25 mm gearhead brushless 24 V 600 rpm", "Envelope stand-in: body and 4 mm D shaft (estimated).", {
         "d": 25.0, "body_l": 75.0, "shaft_d": 4.0, "shaft_l": 12.0, "flat": 1.5, "flat_l": 10.0}),
-    "coupling": ("Bought: jaw coupling 4 x 8", "Flexible jaw coupling as one body (spider not modelled).", {
-        "d": 20.0, "l": 25.0, "bore_low": 8.0, "depth_low": 12.0, "bore_high": 4.0, "depth_high": 10.0}),
-    "shaft": ("Steel", "Fan shaft 8 mm, from the rotor hub up through the stator's two 608s into the coupling.", {"_kind": "rod", "d": 8.0, "l": 120.0}),
-    "tie_rod": ("Steel M5 threaded rod (nominal diameter)", "Tie rod, 5 used.", {"_kind": "rod", "d": 5.0, "l": 752.0}),
-    "grommet": ("Silicone", "Motor soft mount, 4 used.", {"od": 10.0, "id": 3.2, "h": 6.0}),
-    "nut_m5": ("Steel", "ISO 4032 M5 nut (hole at nominal 5).", {"_kind": "nut", "af": 8.0, "t": 4.0, "d": 5.0}),
-    "foot": ("Rubber", "Soft foot, 4 used.", {"_kind": "rod", "d": 20.0, "l": 5.0}),
     "pd_board": ("Bought: Adafruit HUSB238 #5807", "Envelope stand-in: PCB and USB-C socket (estimated).", {
         "l": 25.4, "w": 17.8, "t": 1.6, "usbc": {"l": 9.0, "w": 7.5, "h": 3.2, "overhang": 1.6}}),
 }
@@ -121,8 +107,12 @@ def local_bounds(part):
     """Axis-aligned local extents (xmin, xmax, ymin, ymax, zmin, zmax) of a part, by hand."""
     p = PARTS[part][2]
     _, (bx, by, bz) = ap.expected(part, p)
-    if part == "rotor_blade":
-        return p["r0"], p["r1"], -p["t"] / 2, p["t"] / 2, 0, bz
+    if part == "rotor":
+        n = p["blades"]
+        pts = [q for k in range(n) for q in ap.rotor_blade_pts(p, 360 * k / n + 180 / n)]
+        r = p["hub_d"] / 2
+        xs, ys = [q[0] for q in pts] + [-r, r], [q[1] for q in pts] + [-r, r]
+        return min(xs), max(xs), min(ys), max(ys), 0, bz
     if part == "pd_board":
         return -p["l"] / 2, p["l"] / 2 + p["usbc"]["overhang"], -by / 2, by / 2, 0, bz
     return -bx / 2, bx / 2, -by / 2, by / 2, 0, bz
@@ -142,114 +132,68 @@ def extents(comps):
             ca, sa = math.cos(a), math.sin(a)
             t = c["at"]
             pts = [(x * ca - y * sa + t[0], x * sa + y * ca + t[1], z + t[2]) for x, y, z in corners]
-            if part == "rotor_blade" and c.get("rot_z", 0):  # rotated blades stay inside the 199 tip
-                pts = [(max(min(px, 199.1), -199.1), max(min(py, 199.1), -199.1), pz) for px, py, pz in pts]
         for q in pts:
             for i in range(3):
                 lo[i], hi[i] = min(lo[i], q[i]), max(hi[i], q[i])
     return [round(h - l, 2) for l, h in zip(lo, hi)]
 
 
-Z = {"cap": 0.0, "gasket_low": 16.0, "comb_low": 19.0, "pack": 22.0, "comb_high_top": 475.0, "gasket_high": 475.0,
-     "inlet": 474.0, "housing": 484.0, "rotor": 500.0, "shaft": 500.0, "stator": 580.0, "bearing_low": 580.0,
-     "bearing_high": 593.0, "grommets": 600.0, "bracket": 606.0, "coupling": 610.0, "motor": 629.0,
-     "nacelle": 640.0, "nut_low": 1.0, "rod": 1.0, "nut_high": 749.0, "foot": -5.0, "pd": 3.2}
-N_BLADES = 7
+# Stack (z, mm; z = 0 at the base plate's underside). The frame is 1 mm shorter than the uncompressed stack, so
+# each comb's beads are squeezed 0.5 mm: the base groove floor and the fan head's flange overlap them by 0.5.
+SQUEEZE = 0.5
+Z = {"base": -5.0, "pd": 3.2, "frame": 20.0, "comb_low": 16.0 - SQUEEZE}
+Z["pack"] = Z["comb_low"] + 4.0                     # slot floor: bead 1 + ring 10 - slot 7
+Z["comb_high"] = Z["pack"] + 450.0 + 4.0            # flipped: its bead face is the top
+Z["head"] = Z["frame"] + 453.0 - 5.0 - 26.0         # cup bottom; spigot 26 above it, flange on the frame rim
+Z["rotor"] = Z["head"] + 91.0                       # 1 over the motor plate; struts end 50 below
+Z["motor"] = Z["rotor"] + 6.0                       # flipped: shaft end 6 into the hub, face under the plate
+SQUEEZED = [["airmn_base", "airmn_comb"], ["airmn_comb", "airmn_fan_head"]]
 
 
 def assembled():
-    """Axial fan above the filter: rotor (placeholder blades) on the shaft, stator vanes carrying the centre body
-    with the bearings and the motor, all inside the fan housing; air rises from the core and leaves through the top."""
-    rp = [ap.polar(RODS["rod_r"], a) for a in RODS["rod_angles"]]
-    gp = [ap.polar(30.0, a) for a in (45, 135, 225, 315)]
-    c = [comp("bottom_cap", (0, 0, Z["cap"]))]
-    c += [comp("foot", (*ap.polar(170, a), Z["foot"]), f"foot_{i + 1}") for i, a in enumerate((45, 135, 225, 315))]
-    c.append(comp("pd_board", (147.7, 0, Z["pd"])))
-    c += [comp("gasket", (0, 0, Z["gasket_low"]), "gasket_low"), comp("comb", (0, 0, Z["comb_low"]), "comb_low"),
-          comp("pleat_pack", (0, 0, Z["pack"])), comp("comb", (0, 0, Z["comb_high_top"]), "comb_high", flip=True),
-          comp("gasket", (0, 0, Z["gasket_high"]), "gasket_high"), comp("inlet_plate", (0, 0, Z["inlet"])),
-          comp("fan_housing", (0, 0, Z["housing"])), comp("rotor_hub", (0, 0, Z["rotor"]))]
-    c += [comp("rotor_blade", (0, 0, Z["rotor"]), f"blade_{k + 1}", rot_z=round(360.0 * k / N_BLADES, 4))
-          for k in range(N_BLADES)]
-    c += [comp("shaft", (0, 0, Z["shaft"])), comp("stator", (0, 0, Z["stator"]))]
-    c += [{"part": "grindmn_bearing_608", "at": [0, 0, Z["bearing_low"]], "label": "bearing_low"},
-          {"part": "grindmn_bearing_608", "at": [0, 0, Z["bearing_high"]], "label": "bearing_high"}]
-    c += [comp("grommet", (x, y, Z["grommets"]), f"grommet_{i + 1}") for i, (x, y) in enumerate(gp)]
-    c += [comp("motor_bracket", (0, 0, Z["bracket"])), comp("coupling", (0, 0, Z["coupling"])),
-          comp("motor", (0, 0, Z["motor"])), comp("nacelle", (0, 0, Z["nacelle"]))]
-    for i, (x, y) in enumerate(rp):
-        c += [comp("tie_rod", (x, y, Z["rod"]), f"rod_{i + 1}"), comp("nut_m5", (x, y, Z["nut_low"]), f"nut_low_{i + 1}"),
-              comp("nut_m5", (x, y, Z["nut_high"]), f"nut_high_{i + 1}")]
-    return c
+    """Filter in a perforated frame on the base; the fan head (rotor and motor inside) sits on the frame."""
+    return [comp("base", (0, 0, Z["base"])), comp("pd_board", (147.7, 0, Z["pd"])),
+            comp("frame", (0, 0, Z["frame"])), comp("comb", (0, 0, Z["comb_low"]), "comb_low"),
+            comp("pleat_pack", (0, 0, Z["pack"])), comp("comb", (0, 0, Z["comb_high"]), "comb_high", flip=True),
+            comp("rotor", (0, 0, Z["rotor"])), comp("motor", (0, 0, Z["motor"]), flip=True),
+            comp("fan_head", (0, 0, Z["head"]))]
 
 
 def exploded():
-    """Axis stack in fitting order with 40 mm gaps; motor group in a column beside it; rods and nuts round it."""
+    """Axis stack in fitting order with 40 mm gaps; the frame beside it at x = -480, from the pack base."""
     gap, z, c = 40.0, 0.0, []
     def h(part):
         return local_bounds(part)[5]
-    for i, a in enumerate((45, 135, 225, 315)):
-        c.append(comp("foot", (*ap.polar(170, a), z), f"foot_{i + 1}"))
-    c.append(comp("pd_board", (147.7, 0, z + 10)))
-    z += h("foot") + gap
-    seq = [("bottom_cap", None), ("gasket", "gasket_low"), ("comb", "comb_low"), ("pleat_pack", None),
-           ("comb", "comb_high"), ("gasket", "gasket_high"), ("inlet_plate", None), ("rotor_hub", None),
-           ("blades", None), ("stator", None), ("nacelle", None), ("fan_housing", None)]
-    for part, label in seq:
-        if part == "blades":
-            c += [comp("rotor_blade", (0, 0, z), f"blade_{k + 1}", rot_z=round(360.0 * k / N_BLADES, 4))
-                  for k in range(N_BLADES)]
-            z += h("rotor_blade") + gap
-        elif label == "comb_high":
-            c.append(comp("comb", (0, 0, z + h("comb")), label, flip=True))
-            z += h("comb") + gap
+    c.append(comp("pd_board", (147.7, 0, z + 8.2)))
+    for part, label in [("base", None), ("comb", "comb_low"), ("pleat_pack", None), ("comb", "comb_high"),
+                        ("motor", None), ("fan_head", None), ("rotor", None)]:
+        if label == "comb_high" or part == "motor":
+            c.append(comp(part, (0, 0, z + h(part)), label, flip=True))
         else:
             c.append(comp(part, (0, 0, z), label))
-            z += h(part) + gap
-    zp = next(q["at"][2] for q in c if q["part"] == "airmn_pleat_pack")
-    x, zz = -460.0, zp
-    for part in ("bearing_low", "bearing_high", "shaft", "grommets", "motor_bracket", "coupling", "motor"):
-        if part == "grommets":
-            c += [comp("grommet", (x + gx, gy, zz), f"grommet_{i + 1}")
-                  for i, (gx, gy) in enumerate(ap.polar(30, a) for a in (45, 135, 225, 315))]
-            zz += h("grommet") + 25.0
-        elif part.startswith("bearing"):
-            c.append({"part": "grindmn_bearing_608", "at": [x, 0, zz], "label": part})
-            zz += 7.0 + 25.0
-        else:
-            c.append(comp(part, (x, 0, zz)))
-            zz += h(part) + 25.0
-    for i, a in enumerate(RODS["rod_angles"]):
-        px, py = ap.polar(320.0, a)
-        c += [comp("nut_m5", (px, py, 0), f"nut_low_{i + 1}"), comp("tie_rod", (px, py, 24.0), f"rod_{i + 1}"),
-              comp("nut_m5", (px, py, 24.0 + 752.0 + 20.0), f"nut_high_{i + 1}")]
+        if part == "pleat_pack":
+            c.append(comp("frame", (-480.0, 0, z)))
+        z += h(part) + gap
     return c
-
-
-def bearing_aware_extents(comps):
-    plain = [q for q in comps if q["part"].startswith("airmn_")]
-    box = extents(plain)
-    return box  # the 608s (22 x 7) sit inside the bridge or the shaft column, never on the outside
 
 
 def gen_assemblies():
     a = assembled()
     write(ROOT / "assemblies" / "airmn" / "assembly.json", json.dumps({
-        "_comment": "airmn bench prototype, assembled. z = 0 at the bottom cap's underside; stack heights in "
-                    "projects/airmn/requirements.md (Layout). Rods on R209 at 18 + 72k deg; blades every 40 deg.",
+        "_comment": "airmn bench prototype, assembled (6th pass: perforated frame, comb-gaskets, one-part fan "
+                    "head). z = 0 at the base plate's underside; stack in projects/airmn/requirements.md.",
         "components": a,
-        "expected": {"_comment": "x, y: caps 430 across; z: feet -5 .. fan housing top 484 + 270 = 754. Axial fan (placeholder blades) with the motor in the stator's centre body; the motor group hangs under the inlet ring inside the pack's core. No interference "
-                                 "allowed: every hole, groove and slot has clearance, and nominal M5 rod in nominal "
-                                 "nut bore only touches.",
-                     "bbox": bearing_aware_extents(a), "allowed_interference": []}}, indent=1) + "\n")
+        "expected": {"_comment": "x, y: 430 across; z: feet -5 .. fan head top 621. Only the comb beads overlap "
+                                 "(0.5 mm squeeze at the base and under the fan head); every other fit has "
+                                 "clearance or only touches.",
+                     "bbox": extents(a), "allowed_interference": SQUEEZED}}, indent=1) + "\n")
     e = exploded()
     write(ROOT / "assemblies" / "airmn_exploded" / "assembly.json", json.dumps({
-        "_comment": "airmn exploded: housing stack on the axis in fitting order with 40 mm gaps; motor group "
-                    "(608, 608, shaft, grommets, bracket, coupling, motor) at x = -460 from the pack base; "
-                    "rods and nuts on R320 at the rod angles. Extents worked out from each part's spec bbox.",
+        "_comment": "airmn exploded: stack on the axis in fitting order with 40 mm gaps; frame at x = -480 from "
+                    "the pack base. Extents worked out from each part's spec bbox.",
         "components": e,
-        "expected": {"bbox": bearing_aware_extents(e), "allowed_interference": []}}, indent=1) + "\n")
-    print("assembly bbox", bearing_aware_extents(a), "exploded bbox", bearing_aware_extents(e))
+        "expected": {"bbox": extents(e), "allowed_interference": []}}, indent=1) + "\n")
+    print("assembly bbox", extents(a), "exploded bbox", extents(e))
 
 
 if __name__ == "__main__":
