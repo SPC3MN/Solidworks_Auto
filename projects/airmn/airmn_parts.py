@@ -287,6 +287,34 @@ def bridge(p):
     return g, [p["d"], p["d"], HH]
 
 
+def hex_grid(pitch, r_max):
+    """Hole centres on a hex grid (rows along x, row spacing pitch*sin60) within radius r_max."""
+    pts, dy = [], pitch * math.sqrt(3) / 2
+    n = int(r_max / dy) + 1
+    for j in range(-n, n + 1):
+        off = (pitch / 2) * (j % 2)
+        m_ = int(r_max / pitch) + 2
+        for i in range(-m_, m_ + 1):
+            x, y = i * pitch + off, j * dy
+            if math.hypot(x, y) <= r_max:
+                pts.append((x, y))
+    return pts
+
+
+def impeller_housing(p):
+    """Lid round the impeller: solid wall seated in the inlet ring's rabbet, perforated top plate (the outlet,
+    vertical), tie rods ending in nut counterbores in the top."""
+    D, H, tt = p["d"], p["h"], p["top_t"]
+    cb, cd = p["nut_cbore_d"], p["nut_cbore_depth"]
+    grid = hex_grid(p["hole_pitch"], p["grid_r"])
+    g = [rod(D, 0, H, "Body"), rod(p["id"], 0, H - tt, "Cavity", "cut"),
+         holes("Outlet_grid", p["hole_d"], grid, H - tt, tt),
+         holes("Rod_holes", p["rod_hole"], rod_pts(p), H - tt, tt),
+         ("Nut_counterbores", "cut", [circle(x, y, cb) for x, y in rod_pts(p)], H - cd, cd,
+          -len(p["rod_angles"]) * (disc(cb) - disc(p["rod_hole"])) * cd, "z")]
+    return g, [D, D, H]
+
+
 def spider(p):
     """Motor spider under the inlet ring, inside the pack's core: ring screwed up to the inlet ring (its top at
     z = hub_h), 5 spokes, hub with two 608 seats; the motor bracket hangs from the hub's underside on grommets."""
@@ -390,7 +418,7 @@ def pd_board(p):
 PARTS = {
     "bottom_cap": bottom_cap, "comb": comb, "pleat_pack": pleat_pack, "gasket": gasket,
     "inlet_ring": inlet_ring, "outlet_band": outlet_band, "blade": blade, "shroud": shroud,
-    "backplate": backplate, "bridge": bridge, "top_cover": top_cover, "spider": spider,
+    "backplate": backplate, "bridge": bridge, "top_cover": top_cover, "spider": spider, "impeller_housing": impeller_housing,
     "motor_bracket": motor_bracket, "motor": motor, "coupling": coupling, "rod": plain_rod,
     "grommet": grommet, "nut": nut, "pd_board": pd_board,
 }

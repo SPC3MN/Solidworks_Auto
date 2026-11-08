@@ -35,6 +35,14 @@ At the owner's request, to confirm the internal assembly before designing the ex
 Layout of the core group (z): motor 318 .. 405 (shaft to 393), bracket 393 .. 428, coupling 399 .. 424,
 grommets 428 .. 434, spider 434 .. 474 (608s at 434 and 467), shaft 414 .. 636. Unit height: 641 with feet.
 
+## 4th pass: lid round the impeller, perforated top
+
+- `airmn_impeller_housing`: 430 / 425 wall, 173 tall, seated in the inlet ring's rabbet (481 .. 654). Solid round
+  the impeller; the 8 mm top plate carries 1969 holes of 7.2 on a 8.57 hex pitch inside R200 (62 % open over the
+  grid), so the air leaves vertically, away from the inlet. 10 mm clearance over the impeller hub.
+- Tie rods lengthened to 652 (1 .. 653); top nuts sit in Ø10 × 5 counterbores in the housing top.
+- Unit height 654 + 5 mm feet.
+
 ## Main values
 
 | Item | Value | Status |

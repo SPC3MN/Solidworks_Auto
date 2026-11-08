@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "project": "airmn_tie_rod",
+  "timestamp": "20261108T141742",
+  "model_file": "C:\\Users\\admin\\Desktop\\Solidworks_Auto\\projects\\airmn_tie_rod\\.staging\\20261108T141742\\airmn_tie_rod.SLDPRT",
+  "status": "pass",
+  "params_used": {
+    "_kind": "rod",
+    "d": 5.0,
+    "l": 652.0
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        5.0,
+        5.0,
+        652.0
+      ],
+      "volume": 12801.99,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 42502,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 5.0,
+      "expected": 5.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 5.0,
+      "expected": 5.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 652.0,
+      "expected": 652.0,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 12801.99,
+      "expected": 12801.99,
+      "tolerance": 12.80199,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 12801.99,
+      "expected": 12801.99,
+      "tolerance": 12.80199,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 12741.794,
+      "expected": 12801.99,
+      "tolerance": 128.0199,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "152 triangles"
+    }
+  ]
+}
