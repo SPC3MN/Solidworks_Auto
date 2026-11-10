@@ -1,0 +1,330 @@
+{
+ "schema_version": "1.0",
+ "name": "Tray and press-fit lid",
+ "summary": "The board drops into an open tray onto two ledges; a lid with a locating lip presses into the tray's rim.",
+ "architecture": {
+  "mechanism": "board drops in from above; a friction-fit lid lip closes the tray",
+  "layout": "clamshell split horizontally: tray below, lid above",
+  "load_path": "board -> ledges -> tray floor -> desk",
+  "process": "FDM, two flat prints (tray open side up, lid upside down)"
+ },
+ "parts": [
+  {
+   "id": "tray",
+   "name": "Tray",
+   "source": "make",
+   "process": "print",
+   "material": "PLA",
+   "setups": 1,
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "inner_l + 2*wall",
+      "outer_w",
+      "tray_h"
+     ],
+     "r": 2,
+     "at": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "type": "box",
+     "op": "cut",
+     "size": [
+      "inner_l",
+      "inner_w",
+      "tray_h - z_b + poke"
+     ],
+     "at": [
+      0,
+      0,
+      "z_b"
+     ]
+    },
+    {
+     "type": "box",
+     "op": "cut",
+     "size": [
+      "inner_l",
+      "inner_w - 2*rail",
+      "under_h"
+     ],
+     "at": [
+      0,
+      0,
+      "wall"
+     ]
+    },
+    {
+     "type": "box",
+     "op": "cut",
+     "size": [
+      "win_l",
+      "wall + 2",
+      "tray_h - z_b - pcb_t + poke"
+     ],
+     "at": [
+      0,
+      "-(inner_w/2 + wall/2)",
+      "z_b + pcb_t"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lid",
+   "name": "Lid",
+   "source": "make",
+   "process": "print",
+   "material": "PLA",
+   "setups": 1,
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "inner_l + 2*wall",
+      "outer_w",
+      "lid_t"
+     ],
+     "r": 2,
+     "at": [
+      0,
+      0,
+      "tray_h"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      "inner_l - 2*lip_gap",
+      "inner_w - 2*lip_gap",
+      "lip_h"
+     ],
+     "at": [
+      0,
+      0,
+      "tray_h - lip_h"
+     ]
+    },
+    {
+     "type": "box",
+     "op": "cut",
+     "size": [
+      "inner_l - 2*lip_gap - 2*lip_t",
+      "inner_w - 2*lip_gap - 2*lip_t",
+      "lip_h + poke"
+     ],
+     "at": [
+      0,
+      0,
+      "tray_h - lip_h - poke"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "board",
+   "name": "Pi Zero 2 W",
+   "source": "library",
+   "library": "rpi_zero_2w",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "board_l",
+      "board_w",
+      "pcb_t"
+     ],
+     "r": 3,
+     "at": [
+      0,
+      0,
+      "z_b"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      "board_l - 14",
+      "board_w - 8",
+      "comp_h"
+     ],
+     "at": [
+      0,
+      0,
+      "z_b + pcb_t"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      "ports_span",
+      8,
+      "comp_h"
+     ],
+     "at": [
+      0,
+      "-(board_w/2 + conn_over - 4)",
+      "z_b + pcb_t"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "+hole_dx/2",
+      "+hole_dy/2",
+      "z_b - poke"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "+hole_dx/2",
+      "-hole_dy/2",
+      "z_b - poke"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "-hole_dx/2",
+      "+hole_dy/2",
+      "z_b - poke"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "-hole_dx/2",
+      "-hole_dy/2",
+      "z_b - poke"
+     ]
+    }
+   ]
+  }
+ ],
+ "load_path": [
+  {
+   "part": "board",
+   "at": [
+    "-board_l/4",
+    "z_b + pcb_t"
+   ]
+  },
+  {
+   "part": "tray",
+   "at": [
+    "-board_l/4",
+    "wall/2"
+   ]
+  },
+  {
+   "part": "tray",
+   "at": [
+    "-board_l/4",
+    "-4"
+   ]
+  }
+ ],
+ "dims": [
+  {
+   "view": "section",
+   "dir": "h",
+   "a": "-board_l/2",
+   "b": "board_l/2",
+   "at": "-6",
+   "param": "board_l"
+  },
+  {
+   "view": "section",
+   "dir": "v",
+   "a": "tray_h - lip_h",
+   "b": "tray_h",
+   "at": "inner_l/2 + wall + 7",
+   "param": "lip_h"
+  },
+  {
+   "view": "section",
+   "dir": "v",
+   "a": "tray_h",
+   "b": "tray_h + lid_t",
+   "at": "inner_l/2 + wall + 16",
+   "param": "lid_t"
+  },
+  {
+   "view": "top",
+   "dir": "h",
+   "a": "-win_l/2",
+   "b": "win_l/2",
+   "at": "-(outer_w/2 + 6)",
+   "param": "win_l"
+  }
+ ],
+ "fit": [
+  {
+   "id": "ports",
+   "lhs": "z_b + pcb_t + comp_h",
+   "op": "<",
+   "rhs": "tray_h - lip_h",
+   "why": "Lid lip stays above the connectors"
+  },
+  {
+   "id": "drop",
+   "lhs": "ports_span",
+   "op": "<=",
+   "rhs": "win_l",
+   "why": "Connector overhang drops through the open-top port slot"
+  },
+  {
+   "id": "lip",
+   "lhs": "lip_t",
+   "op": ">=",
+   "rhs": "2 * 0.45",
+   "why": "Lip wall is at least two 0.45 perimeters"
+  },
+  {
+   "id": "rails",
+   "lhs": "rail + gap",
+   "op": "<=",
+   "rhs": "edge_clear",
+   "why": "Ledges under the board stay on its bare edge strip"
+  },
+  {
+   "id": "slot",
+   "lhs": "win_l",
+   "op": ">=",
+   "rhs": "ports_span",
+   "why": "Port opening spans HDMI to PWR USB"
+  },
+  {
+   "id": "plug",
+   "lhs": "wall + gap - conn_over",
+   "op": "<=",
+   "rhs": "plug_reach",
+   "why": "A plug's shell reaches its socket through the wall"
+  }
+ ],
+ "costs_vs_A": [
+  "+1 printed part (3 parts against 2)",
+  "+1 print job",
+  "2.2 mm taller, 1.9 mm longer",
+  "the lid can be lost; A has nothing loose"
+ ],
+ "from_inspiration": []
+}

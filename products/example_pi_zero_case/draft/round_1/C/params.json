@@ -1,0 +1,73 @@
+{
+ "board_l": {
+  "value": 65,
+  "src": "given",
+  "note": "Raspberry Pi mechanical drawing"
+ },
+ "board_w": {
+  "value": 30,
+  "src": "given"
+ },
+ "pcb_t": {
+  "value": 1.0,
+  "src": "estimated",
+  "note": "confirm with calipers"
+ },
+ "comp_h": {
+  "value": 3.2,
+  "src": "estimated",
+  "note": "mini-HDMI, the tallest part above the PCB"
+ },
+ "conn_over": {
+  "value": 0.5,
+  "src": "estimated",
+  "note": "connectors overhang the port edge"
+ },
+ "ports_span": {
+  "value": 51.2,
+  "src": "estimated",
+  "note": "HDMI left edge (6.8) to PWR USB right edge (58)"
+ },
+ "hole_dx": {
+  "value": 58,
+  "src": "given"
+ },
+ "hole_dy": {
+  "value": 23,
+  "src": "given"
+ },
+ "hole_d": {
+  "value": 2.75,
+  "src": "given"
+ },
+ "poke": 1,
+ "base_t": 1.2,
+ "post_h": 3.0,
+ "post_d": 5.5,
+ "tap_d": 2.1,
+ "clear_d": 2.9,
+ "cover_t": 1.2,
+ "margin": 1.0,
+ "screw_len": {
+  "value": 10,
+  "src": "given",
+  "note": "ISO 7045 M2.5 x 10 pan head"
+ },
+ "screw_d": {
+  "value": 2.5,
+  "src": "given"
+ },
+ "head_d": {
+  "value": 5.0,
+  "src": "given"
+ },
+ "head_h": {
+  "value": 2.1,
+  "src": "given"
+ },
+ "spacer_h": "comp_h + 0.4",
+ "z_b": "base_t + post_h",
+ "z_c": "z_b + pcb_t + spacer_h",
+ "plate_l": "board_l + 2*margin",
+ "plate_w": "board_w + 2*margin"
+}

@@ -1,0 +1,9 @@
+{
+ "_comment": "Stage 1 of /design. pictures: {file (relative to the product folder), caption, form [], mechanism [], materials []}; summary: the rules carried into the options.",
+ "pictures": [],
+ "summary": {
+  "form": [],
+  "mechanism": [],
+  "materials": []
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "board_l": {
+  "value": 65,
+  "src": "given",
+  "note": "Raspberry Pi mechanical drawing"
+ },
+ "board_w": {
+  "value": 30,
+  "src": "given"
+ },
+ "pcb_t": {
+  "value": 1.0,
+  "src": "estimated",
+  "note": "confirm with calipers"
+ },
+ "comp_h": {
+  "value": 3.2,
+  "src": "estimated",
+  "note": "mini-HDMI, the tallest part above the PCB"
+ },
+ "conn_over": {
+  "value": 0.5,
+  "src": "estimated",
+  "note": "connectors overhang the port edge"
+ },
+ "ports_span": {
+  "value": 51.2,
+  "src": "estimated",
+  "note": "HDMI left edge (6.8) to PWR USB right edge (58)"
+ },
+ "hole_dx": {
+  "value": 58,
+  "src": "given"
+ },
+ "hole_dy": {
+  "value": 23,
+  "src": "given"
+ },
+ "hole_d": {
+  "value": 2.75,
+  "src": "given"
+ },
+ "edge_clear": {
+  "value": 2.0,
+  "src": "estimated",
+  "note": "bare strip under the long edges"
+ },
+ "plug_reach": {
+  "value": 2.0,
+  "src": "estimated",
+  "note": "how far a plug's metal shell stands proud of its overmould"
+ },
+ "gap": 0.3,
+ "wall": 1.6,
+ "rail": 1.2,
+ "under_h": 1.0,
+ "win_l": 53,
+ "poke": 1,
+ "head": 0.3,
+ "inner_l": "board_l + gap",
+ "inner_w": "board_w + 2*gap",
+ "z_b": "wall + under_h",
+ "inner_h": "under_h + pcb_t + comp_h + head",
+ "outer_h": "inner_h + 2*wall",
+ "outer_w": "inner_w + 2*wall"
+}

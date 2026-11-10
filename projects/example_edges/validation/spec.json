@@ -1,0 +1,38 @@
+{
+ "_comment": "Expected values by hand from requirements.md (scripts/handcalc.py holds the formulas), not from a CAD run.",
+ "solid_bodies": {
+  "expected": 1
+ },
+ "bbox.x": {
+  "expected": 40,
+  "tol": 0.05
+ },
+ "bbox.y": {
+  "expected": 30,
+  "tol": 0.05
+ },
+ "bbox.z": {
+  "expected": 10,
+  "tol": 0.05
+ },
+ "volume": {
+  "expected": 11066.91,
+  "rel_tol": 0.0005
+ },
+ "features": {
+  "TopRim": {
+   "expected": -66.378,
+   "rel_tol": 0.005
+  },
+  "HoleMouth": {
+   "expected": -4.058,
+   "rel_tol": 0.01
+  }
+ },
+ "export.step": {
+  "rel_tol": 0.001
+ },
+ "export.stl": {
+  "rel_tol": 0.01
+ }
+}

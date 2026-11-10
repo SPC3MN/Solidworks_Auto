@@ -1,0 +1,90 @@
+{
+ "option": "A",
+ "round": 1,
+ "option_hash": "bb1782784ad81de5",
+ "time": "2026-11-09T22:11:43",
+ "status": "pass",
+ "freecad_version": "1.1.4",
+ "bbox": [
+  66.9,
+  33.8,
+  8.7
+ ],
+ "parts": {
+  "sleeve": {
+   "volume": 8508.104,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    66.9,
+    33.8,
+    8.7
+   ]
+  },
+  "board": {
+   "volume": 6248.436,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    65.0,
+    30.5,
+    4.2
+   ]
+  }
+ },
+ "interference": [],
+ "checks": [
+  {
+   "id": "bbox.x",
+   "ok": true,
+   "message": "3D envelope x is 66.9, the sketch says 66.9"
+  },
+  {
+   "id": "bbox.y",
+   "ok": true,
+   "message": "3D envelope y is 33.8, the sketch says 33.8"
+  },
+  {
+   "id": "bbox.z",
+   "ok": true,
+   "message": "3D envelope z is 8.7, the sketch says 8.7"
+  },
+  {
+   "id": "solid.sleeve",
+   "ok": true,
+   "message": "part sleeve is not a valid solid"
+  },
+  {
+   "id": "solid.board",
+   "ok": true,
+   "message": "part board is not a valid solid"
+  }
+ ],
+ "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/example_pi_zero_case/draft/round_1/A/massing/massing.step",
+ "renders": [
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/example_pi_zero_case/draft/round_1/A/massing/renders/isometric.png",
+   "isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/example_pi_zero_case/draft/round_1/A/massing/renders/front.png",
+   "front"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/example_pi_zero_case/draft/round_1/A/massing/renders/right.png",
+   "right"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/example_pi_zero_case/draft/round_1/A/massing/renders/top.png",
+   "top"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/example_pi_zero_case/draft/round_1/A/massing/renders/section/isometric.png",
+   "section, isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/example_pi_zero_case/draft/round_1/A/massing/renders/section/front.png",
+   "section, front"
+  ]
+ ]
+}

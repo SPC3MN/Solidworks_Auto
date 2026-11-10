@@ -9,6 +9,11 @@ Usage:
 the default). FreeCAD builds model.py with scripts/fc/fclib.py inside FreeCADCmd and the check
 renders come from Blender, since headless FreeCAD has no viewport.
 
+spec.json normally carries a hand-computed "volume". A freeform part (a smooth loft) has none:
+leave it out and give "sections" instead, {"<id>": {"axis": "z", "at": 30, "size": [24, 24],
+"tol": 0.05, "area": 452.39, "area_rel_tol": 0.002}}: the cross-section's extent on the plane's
+two axes, and optionally its area, at stated stations (FreeCAD backend).
+
 --override changes a parameter for this run only (to inject an error, test 7).
 --no-promote checks only: nothing is copied out of .staging/ (sweeps, backend comparisons).
 Every run writes a report to validation/history/. Outputs are copied out of
@@ -136,8 +141,11 @@ def geometry_checks(checks, spec, m):
         s = spec[f"bbox.{axis}"]
         check(checks, f"bbox.{axis}", "bounding_dimensions", m["bbox"][i],
               s["expected"], s["tol"], hint={"param": s.get("param")})
-    check(checks, "volume", "bounding_dimensions", m["volume"],
-          spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
+    if "volume" in spec:
+        check(checks, "volume", "bounding_dimensions", m["volume"],
+              spec["volume"]["expected"], spec["volume"]["rel_tol"], rel=True)
+    elif not spec.get("sections"):
+        raise SystemExit("spec.json needs a hand-computed volume, or sections for a freeform part")
 
 
 def export_checks(checks, spec, m, step_volume, stl):
@@ -152,6 +160,10 @@ def export_checks(checks, spec, m, step_volume, stl):
                        "expected": True, "message": f"{tris} triangles"})
     else:
         check(checks, "export.stl.volume", "export_integrity", None, m["volume"], 0)
+
+
+def _plane_axes(axis):
+    return [k for k in "xyz" if k != axis]
 
 
 def native_check(checks, native):
@@ -169,7 +181,8 @@ def build_freecad(project, params, spec, staging):
     import render_config
     out = pathlib.Path(tempfile.mkdtemp(prefix="fcjob_")) / "job.json"
     job = {"model": str(project / "design" / "model.py"), "params": params, "name": project.name,
-           "staging": str(staging), "features": list(spec.get("features", {})), "out_json": str(out)}
+           "staging": str(staging), "features": list(spec.get("features", {})),
+           "sections": {k: {"axis": v["axis"], "at": v["at"]} for k, v in spec.get("sections", {}).items()}, "out_json": str(out)}
     proc, cmd = freecad_run.run(SCRIPTS / "fc" / "fc_job.py", "FC_JOB", job)
     err = out.with_name(out.name + ".error")
     if err.exists() or not out.exists():
@@ -187,6 +200,12 @@ def build_freecad(project, params, spec, staging):
     for fname, fs in spec.get("features", {}).items():
         check(checks, f"feature.{fname}.volume", "feature_volume", r["features"].get(fname),
               fs["expected"], fs["rel_tol"], rel=True)
+    for sid, ss in spec.get("sections", {}).items():
+        got = r["sections"].get(sid) or {"size": [None, None], "area": None}
+        for want, have, name in zip(ss["size"], got["size"], _plane_axes(ss["axis"])):
+            check(checks, f"section.{sid}.{name}", "section_dimensions", have, want, ss.get("tol", 0.05))
+        if "area" in ss:
+            check(checks, f"section.{sid}.area", "section_dimensions", got["area"], ss["area"], ss.get("area_rel_tol", 0.002), rel=True)
     step = pathlib.Path(r["step"]) if r["step"] else staging / f"{project.name}.step"
     stl = pathlib.Path(r["stl"]) if r["stl"] else None
     export_checks(checks, spec, m, r["step_reopened"] and r["step_reopened"]["volume"], stl)
@@ -200,6 +219,12 @@ def build_freecad(project, params, spec, staging):
 
 
 def run(project, overrides, backend, promote=True):
+    # A product's part (products/<name>/parts/<part>) is built only from its approved draft.
+    if project.parent.name == "parts" and (project.parents[1] / "brief.json").exists():
+        import draft_lib
+        ok, msg = draft_lib.gate(project.parents[1], project.name)
+        if not ok:
+            raise SystemExit(msg)
     params = json.loads((project / "parameters" / "params.json").read_text())
     params.update(overrides)
     spec = json.loads((project / "validation" / "spec.json").read_text())

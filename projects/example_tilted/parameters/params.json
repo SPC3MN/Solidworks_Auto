@@ -1,0 +1,13 @@
+{
+  "length": 60,
+  "width": 40,
+  "height": 20,
+  "hole_d": 8,
+  "hole_angle": 30,
+  "hole_x": -10,
+  "boss_d": 10,
+  "boss_angle": 20,
+  "boss_x": 15,
+  "boss_len": 12,
+  "boss_root": 6
+}

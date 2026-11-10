@@ -1,0 +1,124 @@
+{
+ "option": "C",
+ "round": 1,
+ "hash": "6ffc5f7acd624611",
+ "scorecard": {
+  "parts_total": 7,
+  "parts_unique": 4,
+  "parts_make": 2,
+  "parts_buy": 5,
+  "fasteners": 4,
+  "setups": 2,
+  "processes": [
+   "print"
+  ],
+  "load_path_parts": 2
+ },
+ "envelope_mm": {
+  "bbox_x": 67.0,
+  "bbox_y": 32.0,
+  "bbox_z": 12.1,
+  "parts_total": 7,
+  "parts_make": 2,
+  "parts_buy": 5,
+  "fasteners": 4,
+  "setups": 2
+ },
+ "fit": [
+  {
+   "id": "engage",
+   "lhs_expr": "screw_len - (cover_t + spacer_h + pcb_t)",
+   "rhs_expr": "1.5 * screw_d",
+   "op": ">=",
+   "lhs": 4.2,
+   "rhs": 3.75,
+   "margin": 0.45,
+   "ok": true,
+   "why": "Thread engagement is at least 1.5 × the screw diameter"
+  },
+  {
+   "id": "bottom",
+   "lhs_expr": "screw_len - (cover_t + spacer_h + pcb_t)",
+   "rhs_expr": "z_b",
+   "op": "<=",
+   "lhs": 4.2,
+   "rhs": 4.2,
+   "margin": 0.0,
+   "ok": true,
+   "why": "Screw tip stays inside the base"
+  },
+  {
+   "id": "spacer",
+   "lhs_expr": "spacer_h",
+   "rhs_expr": "comp_h",
+   "op": ">",
+   "lhs": 3.6,
+   "rhs": 3.2,
+   "margin": 0.4,
+   "ok": true,
+   "why": "Cover spacers are taller than the tallest component"
+  },
+  {
+   "id": "pad",
+   "lhs_expr": "post_d",
+   "rhs_expr": "6.0",
+   "op": "<=",
+   "lhs": 5.5,
+   "rhs": 6.0,
+   "margin": 0.5,
+   "ok": true,
+   "why": "Posts stay on the board's Ø6 mounting pads"
+  }
+ ],
+ "requirements": [
+  {
+   "id": "R4",
+   "lhs_expr": "fasteners",
+   "rhs_expr": "0",
+   "op": "<=",
+   "lhs": 4.0,
+   "rhs": 0.0,
+   "margin": 4.0,
+   "ok": false,
+   "why": "Opens without tools",
+   "priority": "should"
+  },
+  {
+   "id": "R5",
+   "lhs_expr": "bbox_x",
+   "rhs_expr": "75",
+   "op": "<=",
+   "lhs": 67.0,
+   "rhs": 75.0,
+   "margin": 8.0,
+   "ok": true,
+   "why": "At most 75 mm long",
+   "priority": "must"
+  },
+  {
+   "id": "R6",
+   "lhs_expr": "bbox_y",
+   "rhs_expr": "40",
+   "op": "<=",
+   "lhs": 32.0,
+   "rhs": 40.0,
+   "margin": 8.0,
+   "ok": true,
+   "why": "At most 40 mm wide",
+   "priority": "must"
+  },
+  {
+   "id": "R7",
+   "lhs_expr": "bbox_z",
+   "rhs_expr": "13",
+   "op": "<=",
+   "lhs": 12.1,
+   "rhs": 13.0,
+   "margin": 0.9,
+   "ok": true,
+   "why": "At most 13 mm tall",
+   "priority": "must"
+  }
+ ],
+ "problems": []
+}

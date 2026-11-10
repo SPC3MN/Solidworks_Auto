@@ -1,0 +1,13 @@
+{
+ "approved_at": "2026-11-09T21:51:38",
+ "quote": "EXAMPLE approval recorded by the skill's author to test the gate; not the owner's words",
+ "round": 1,
+ "option": "A",
+ "option_hash": "bb1782784ad81de5",
+ "brief_hash": "7f6376f48abb8de6",
+ "parts": {
+  "sleeve": "622d720f10b20053",
+  "board": "d67ad56c2c80c52e"
+ },
+ "changed_since_last_approval": null
+}

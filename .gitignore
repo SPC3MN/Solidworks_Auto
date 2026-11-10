@@ -4,6 +4,7 @@
 
 # Unvalidated build output
 projects/*/.staging/
+products/*/parts/*/.staging/
 
 # Python
 __pycache__/

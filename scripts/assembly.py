@@ -255,7 +255,9 @@ def run_freecad(folder):
 
     for c in spec["components"]:
         part = c.get("part")
-        step = ROOT / "projects" / str(part) / "exports" / f"{part}.step"
+        # a product's own parts (products/<name>/parts), then the shared library, then the flat projects
+        homes = [folder.parent / "parts", ROOT / "library", ROOT / "projects"]
+        step = next((s for s in (h / str(part) / "exports" / f"{part}.step" for h in homes) if s.exists()), homes[-1] / str(part))
         if not part or not step.exists():
             check(f"component {part or c.get('file')}", False, note="no promoted STEP (run the pipeline first)")
             continue

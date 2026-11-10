@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "project": "example_loft",
+  "timestamp": "20261109T221803",
+  "model_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/projects/example_loft/.staging/20261109T221803/example_loft.FCStd",
+  "status": "pass",
+  "params_used": {
+    "base_l": 50,
+    "base_w": 40,
+    "top_l": 30,
+    "top_w": 20,
+    "height": 30,
+    "wall": 3
+  },
+  "backend": "freecad",
+  "freecad_version": "1.1.4",
+  "summary": {
+    "passed": 13,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        50.0,
+        40.0,
+        30.0
+      ],
+      "volume": 11520.0,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 3370,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "shape.valid",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 50.0,
+      "expected": 50,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 40.0,
+      "expected": 40,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 30.0,
+      "expected": 30,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 11520.0,
+      "expected": 11520.0,
+      "tolerance": 11.52,
+      "message": ""
+    },
+    {
+      "id": "section.mid.x",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 40.0,
+      "expected": 40,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "section.mid.y",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 30.0,
+      "expected": 30,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "section.mid.area",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 384.0,
+      "expected": 384,
+      "tolerance": 0.768,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 11520.0,
+      "expected": 11520.0,
+      "tolerance": 11.52,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 11520.0,
+      "expected": 11520.0,
+      "tolerance": 115.2,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1664 triangles"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+ "_comment": "Expected values by hand from requirements.md (scripts/handcalc.py holds the formulas), not from a CAD run.",
+ "solid_bodies": {
+  "expected": 1
+ },
+ "bbox.x": {
+  "expected": 40,
+  "tol": 0.05
+ },
+ "bbox.y": {
+  "expected": 40,
+  "tol": 0.05
+ },
+ "bbox.z": {
+  "expected": 80,
+  "tol": 0.05
+ },
+ "sections": {
+  "waist": {
+   "axis": "z",
+   "at": 30,
+   "size": [
+    24,
+    24
+   ],
+   "tol": 0.05,
+   "area": 168.861,
+   "area_rel_tol": 0.003
+  },
+  "shoulder": {
+   "axis": "z",
+   "at": 60,
+   "size": [
+    36,
+    36
+   ],
+   "tol": 0.05,
+   "area": 263.108,
+   "area_rel_tol": 0.003
+  }
+ },
+ "export.step": {
+  "rel_tol": 0.001
+ },
+ "export.stl": {
+  "rel_tol": 0.01
+ }
+}

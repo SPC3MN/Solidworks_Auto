@@ -7,8 +7,8 @@ pywin32) on the Windows machine, and FreeCAD (the user is moving to it). The Fre
 still SolidWorks-only.
 
 **Main goal: the simplest design that works.** Fewer parts, fewer setups, one load path; remove a part rather
-than add a fix. Plan design changes with sketches and get confirmation before modelling (see the
-`model-from-photo` skill). The workflow and the geometry modules are
+than add a fix. Plan design changes with sketches and get confirmation before modelling (the `design`
+skill does this with a recorded approval). The workflow and the geometry modules are
 CAD-neutral; only the backend changes. The notes below describe the SolidWorks backend unless they say otherwise. Read
 `docs/architecture.md` for the principles and `docs/solidworks_findings.md` for
 verified API behaviour and gotchas before changing scripts.
@@ -27,6 +27,16 @@ and scratch or probe parts go to the session scratchpad. The pipeline closes
 its model, the reopened STEP and any failed build. One-off diagnostic scripts
 must close their parts too. Never close or discard documents the user opened
 without asking.
+
+## Designing a new product
+
+A new design, or a change to one, goes through the project skill `.claude/skills/design` (`/design`), driven
+by `scripts/design_cli.py`: a brief (`products/<name>/brief.json`), the design drawn as a to-scale sketch on
+a board (one design by default; several options, A always the simplest, only when the owner asks for them), a
+3D massing, and their recorded approval. `pipeline.py` refuses to build `products/<name>/parts/<part>` without that approval, or
+when the part's parameters differ from the approved draft. `products/example_pi_zero_case` is the worked
+example; `docs/design_skill_plan.md` is the plan and what is still to build. Copying an existing object (a
+board, a bought part) is still the photo workflow below.
 
 ## Photo → model workflow
 
@@ -77,13 +87,18 @@ Product imagery (Blender Cycles: studio, environments, exploded/technical) is th
 `scripts/render_adapters`; the CAD stays authoritative and Blender only reads exports. Final renders need the
 user's explicit approval of the previews (`render_cli.py approve`, with their words quoted).
 
-## Library limits (extend swlib.py when a photo needs more)
+## Library limits (extend the part library when a design needs more)
 
-- Extrudes and cuts on planes normal to Z (`axis="z"`, profile coords (x, y)) or
+- Both backends: extrudes and cuts on planes normal to Z (`axis="z"`, profile coords (x, y)) or
   normal to Y (`axis="y"`, profile coords (x, z)), e.g. connectors that stick out
-  sideways. X-normal planes work too (profile coords (y, z)). `Part.sweep` makes round bars along line/arc paths (cables). No revolve or loft yet.
-  `Part.circular_pattern` repeats features about Z (radial hole grids, vents). No sketches on tilted
-  planes yet (angled blades need that extension).
+  sideways. X-normal planes work too (profile coords (y, z)). `Part.sweep` makes round bars along line/arc paths (cables).
+  `Part.circular_pattern` repeats features about Z (radial hole grids, vents).
+- FreeCAD only (`scripts/fc/fclib.py`, new parts `import fclib`): `revolve`, `loft` (ruled or smooth), `helix`,
+  `chamfer`, sketches on tilted planes (`fclib.plane(...).rotated(...)`), and fillets or chamfers on edges chosen
+  by geometry (`fclib.edges(...)`). `scripts/handcalc.py` has their hand volumes. A freeform part (smooth loft)
+  has no hand volume: its `spec.json` checks `sections` instead. See the FreeCAD reference of `model-from-photo`.
+  Still missing: sweeps of a non-round profile, variable-radius fillets, threads. Hollow a lofted body with a
+  second loft as a cut; `shell` fails on ruled lofts with kinks.
 - Keep profile edges from partly overlapping existing model edges. SolidWorks
   rejects such sketches (see findings).
 - Swept-in sketches aren't dimensioned. Only extrusion depths and shell thickness

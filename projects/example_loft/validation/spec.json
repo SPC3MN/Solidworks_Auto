@@ -1,0 +1,41 @@
+{
+ "_comment": "Expected values by hand from requirements.md (scripts/handcalc.py holds the formulas), not from a CAD run.",
+ "solid_bodies": {
+  "expected": 1
+ },
+ "bbox.x": {
+  "expected": 50,
+  "tol": 0.05
+ },
+ "bbox.y": {
+  "expected": 40,
+  "tol": 0.05
+ },
+ "bbox.z": {
+  "expected": 30,
+  "tol": 0.05
+ },
+ "volume": {
+  "expected": 11520.0,
+  "rel_tol": 0.001
+ },
+ "sections": {
+  "mid": {
+   "axis": "z",
+   "at": 15,
+   "size": [
+    40,
+    30
+   ],
+   "tol": 0.05,
+   "area": 384,
+   "area_rel_tol": 0.002
+  }
+ },
+ "export.step": {
+  "rel_tol": 0.001
+ },
+ "export.stl": {
+  "rel_tol": 0.01
+ }
+}

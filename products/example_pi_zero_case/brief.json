@@ -1,0 +1,106 @@
+{
+ "schema_version": "1.0",
+ "product": "example_pi_zero_case",
+ "title": "Example: Pi Zero 2 W case",
+ "purpose": "EXAMPLE product that exercises the drafting phase; the brief was written by the skill's author, not by the owner. A printed case that protects a Raspberry Pi Zero 2 W on a desk with its ports usable.",
+ "options": 3,
+ "_comment": "Stage 0 of /design. requirements: {id, text, priority must|should|free, provenance given|measured|chosen|estimated, source, check {lhs, op, rhs} (optional, over option parameters and bbox_x/y/z, parts_total, parts_make, parts_buy, fasteners, setups)}. Keys starting with _ are notes. See .claude/skills/design/references/schemas.md.",
+ "defaults": {
+  "goal": "the simplest design that works",
+  "machined": "6061-T6",
+  "printed": "PLA, FDM",
+  "fits": "ISO 286",
+  "general_tolerance": "ISO 2768-mK",
+  "units": "mm"
+ },
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Holds a Raspberry Pi Zero 2 W (65 × 30 board, 4.2 tall, ports on one long edge)",
+   "priority": "must",
+   "provenance": "given",
+   "source": "projects/rpi_zero_2w"
+  },
+  {
+   "id": "R2",
+   "text": "Mini-HDMI and both micro-USB ports usable with the board in the case",
+   "priority": "must",
+   "provenance": "given",
+   "source": "example brief"
+  },
+  {
+   "id": "R3",
+   "text": "Printable in PLA on an FDM printer without supports",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner default"
+  },
+  {
+   "id": "R4",
+   "text": "Opens without tools",
+   "priority": "should",
+   "provenance": "given",
+   "source": "example brief",
+   "check": {
+    "lhs": "fasteners",
+    "op": "<=",
+    "rhs": 0
+   }
+  },
+  {
+   "id": "R5",
+   "text": "At most 75 mm long",
+   "priority": "must",
+   "provenance": "given",
+   "source": "example brief",
+   "check": {
+    "lhs": "bbox_x",
+    "op": "<=",
+    "rhs": 75
+   }
+  },
+  {
+   "id": "R6",
+   "text": "At most 40 mm wide",
+   "priority": "must",
+   "provenance": "given",
+   "source": "example brief",
+   "check": {
+    "lhs": "bbox_y",
+    "op": "<=",
+    "rhs": 40
+   }
+  },
+  {
+   "id": "R7",
+   "text": "At most 13 mm tall",
+   "priority": "must",
+   "provenance": "given",
+   "source": "example brief",
+   "check": {
+    "lhs": "bbox_z",
+    "op": "<=",
+    "rhs": 13
+   }
+  },
+  {
+   "id": "R8",
+   "text": "Wall thickness, clearances and how the case closes",
+   "priority": "free",
+   "provenance": "chosen",
+   "source": "skill decides"
+  }
+ ],
+ "bought_parts": [
+  {
+   "id": "board",
+   "name": "Raspberry Pi Zero 2 W",
+   "part_number": "SC0510",
+   "library": "rpi_zero_2w",
+   "provenance": "given"
+  }
+ ],
+ "conflicts": [],
+ "open_questions": [],
+ "notes": []
+}

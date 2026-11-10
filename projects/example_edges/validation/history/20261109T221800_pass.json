@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "project": "example_edges",
+  "timestamp": "20261109T221800",
+  "model_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/projects/example_edges/.staging/20261109T221800/example_edges.FCStd",
+  "status": "pass",
+  "params_used": {
+    "length": 40,
+    "width": 30,
+    "height": 10,
+    "corner_r": 3,
+    "rim_c": 1,
+    "hole_d": 10,
+    "hole_c": 0.5
+  },
+  "backend": "freecad",
+  "freecad_version": "1.1.4",
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        40.0,
+        30.0,
+        10.0
+      ],
+      "volume": 11066.91,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 4603,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "shape.valid",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 40.0,
+      "expected": 40,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 30.0,
+      "expected": 30,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 10.0,
+      "expected": 10,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 11066.91,
+      "expected": 11066.91,
+      "tolerance": 5.533455,
+      "message": ""
+    },
+    {
+      "id": "feature.TopRim.volume",
+      "category": "feature_volume",
+      "status": "pass",
+      "measured": -66.3773,
+      "expected": -66.378,
+      "tolerance": 0.33189,
+      "message": ""
+    },
+    {
+      "id": "feature.HoleMouth.volume",
+      "category": "feature_volume",
+      "status": "pass",
+      "measured": -4.0576,
+      "expected": -4.058,
+      "tolerance": 0.04058,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 11066.91,
+      "expected": 11066.91,
+      "tolerance": 11.06691,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 11067.719,
+      "expected": 11066.91,
+      "tolerance": 110.6691,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "898 triangles"
+    }
+  ]
+}

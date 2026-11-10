@@ -46,6 +46,62 @@ FreeCAD, not taken from the docs. Machine: Linux Mint 22.3, FreeCAD 1.1.4 (Flatp
 - The native `.FCStd` holds the result as one `Part::Feature` plus a `Params` spreadsheet. It is **not**
   parametric in the GUI yet: a parameter change needs a rerun of `model.py` (as for most swlib features).
 
+## Kernel beyond swlib (2026-11-09)
+
+`fclib` now has ops SolidWorks' `swlib` never had: `plane().rotated()`, `Part.revolve`, `Part.loft`, `Part.helix`,
+`Part.chamfer` and the `edges()` selector. Each was probed in OCCT first, then built into a probe project that
+passes the pipeline against a hand value, and `tests/test_kernel.py` repeats 30 comparisons in one FreeCAD start.
+`scripts/handcalc.py` holds the closed-form volumes; every one matched FreeCAD to 6 significant figures or better.
+
+| Op | Probe project | Hand value | FreeCAD |
+|---|---|---|---|
+| `revolve` (body, V-groove cut, bore cut) | `example_revolve` | 3204 π = 10 065.663 | 10 065.663 |
+| tilted `plane` (30° hole, 20° boss) | `example_tilted` | 47 781.646 | 47 781.646 |
+| ruled `loft` (hopper, hollowed by a loft cut) | `example_loft` | 11 520.000 | 11 520.000 |
+| smooth `loft` (vase through 4 circles) | `example_vase` | none: sections Ø24 and Ø36 | 24.000, 36.000 |
+| `fillet` / `chamfer` by `edges()` | `example_edges` | 11 066.910 | 11 066.910 |
+| `helix` (spring) | `example_spring` | 988.958 | 988.960 |
+
+- **Revolve.** `face.revolve(point, axis, angle)` returns a Solid directly, also when the profile touches the axis
+  and for partial angles; volume is Pappus exactly (arc profiles too: a quarter disc gave a hemisphere to 7 figures).
+  A profile that crosses the axis is refused in `fclib` before OCCT sees it.
+- **Cut profiles should run past the surface they open** (the groove and bore run 1 mm out), so no cut face lies on
+  a body face; the volume is still counted only inside. A loft cut whose end faces were flush with the body's end
+  faces (the hopper) also worked.
+- **Tilted planes.** A `Plane` is an origin, two in-plane unit vectors and a normal; `plane(axis, origin=...)` keeps
+  the usual profile coordinates but measures them from the origin, and `.rotated(about, angle, through=)` pivots
+  it. A hole through a plate at angle θ removes π r² t / cos θ while both mouths stay on the faces; a boss cut
+  obliquely by the face holds π r² × its axial length above the face. Both exact.
+- **Ruled loft** (`OCC.makeLoft(wires, True, True)`) between two parallel sections is a prismatoid:
+  h/6 (A₀ + 4 A_mid + A₁), exact for rectangles and for circles (a frustum). Three ruled sections are two stacked
+  prismatoids. A twisted pair of squares and a rectangle-to-circle loft are valid solids but have no simple hand volume.
+- **Smooth loft** (`ruled=False`) passes through every section exactly (Ø24.000 and Ø36.000 at the vase's
+  stations) but between stations its size is the spline's: the vase measured Ø37.52 at z = 1.5 where a straight
+  line between the neighbouring sections gives Ø39.2. So a freeform part has **no hand volume and no hand size
+  between stations**: its spec drops `volume` and checks `sections` at the stations, and the bbox check is what
+  shows the skin does not bulge past the largest section. Put a station wherever a size matters.
+- **Shelling a loft.** `Part.shell` (`makeThickness`) with the top face open worked on the smooth four-circle loft
+  (one valid solid, 58 729 → 20 031 mm³ at a 2.5 wall) and failed on the same circles lofted ruled, where the skin
+  has kinks (`BRep_API: command not done`). Hollowing with a second loft used as a cut worked in both cases and
+  keeps the wall checkable at the stations, so the probe parts do that.
+- **Sections.** `shape.slice(normal, offset)` returns the section's wires; `FaceMakerBullseye` turns them into a
+  face with holes, whose area and optimal bounding box are what `spec.json` `"sections"` checks.
+- **Edge selection.** A cylinder's seam is a `GeomLine` edge parallel to the axis with only one ancestor face;
+  `edges()` drops every edge with fewer than two faces, otherwise `parallel="z"` would hand the seam to
+  `makeFillet`. After a fillet on a box's vertical edges the top rim is 8 edges (4 lines, 4 arcs) and
+  `edges(on=("z", H))` chamfers all of them in one go.
+- **Fillet and chamfer volumes.** Straight 90° edge: (1 − π/4) r² L and c² L / 2. Circular 90° edge: Pappus with
+  the corner's centroid r (10 − 3π) / (3 (4 − π)) (fillet) or c/3 (chamfer) from the sharp edge, inward for a
+  cylinder's rim and outward for a hole's mouth.
+- **Feature volumes are signed and need independence.** `spec.json` `"features"` measures full − replay-without, so
+  a cut is negative. A feature that later selectors depend on (the corner fillets under the rim chamfer) cannot be
+  measured this way: replaying without it changes the later feature too.
+- **Helix.** `OCC.makeHelix(pitch, height, radius, 0, lefthand)` is one wire; a circle at its start, normal to its
+  tangent, swept with `makePipeShell([circle], True, True)` (Frenet) gives a solid within 2 ppm of
+  π d²/4 × the helix length. The ends are square to the wire, so the height is `height` + d cos α.
+- **Thin round wire in STL.** At the pipeline's 0.05 mm deflection the Ø2 spring's STL is 1.7 % under its volume;
+  `example_spring` allows 2 % for `export.stl`.
+
 ## Parity sweep (2026-11-08)
 
 All **90** projects with a `model.py` and `spec.json` pass their existing specs under `--backend freecad`

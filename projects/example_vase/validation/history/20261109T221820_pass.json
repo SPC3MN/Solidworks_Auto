@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "project": "example_vase",
+  "timestamp": "20261109T221820",
+  "model_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/projects/example_vase/.staging/20261109T221820/example_vase.FCStd",
+  "status": "pass",
+  "params_used": {
+    "d0": 40,
+    "d1": 24,
+    "z1": 30,
+    "d2": 36,
+    "z2": 60,
+    "d3": 30,
+    "height": 80,
+    "wall": 2.5,
+    "floor": 3
+  },
+  "backend": "freecad",
+  "freecad_version": "1.1.4",
+  "summary": {
+    "passed": 15,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        40.0,
+        40.0,
+        80.0
+      ],
+      "volume": 18961.82,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 8551,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "shape.valid",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 40.0,
+      "expected": 40,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 40.0,
+      "expected": 40,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 80.0,
+      "expected": 80,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "section.waist.x",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 24.0,
+      "expected": 24,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "section.waist.y",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 24.0,
+      "expected": 24,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "section.waist.area",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 168.8606,
+      "expected": 168.861,
+      "tolerance": 0.506583,
+      "message": ""
+    },
+    {
+      "id": "section.shoulder.x",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 36.0,
+      "expected": 36,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "section.shoulder.y",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 36.0,
+      "expected": 36,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "section.shoulder.area",
+      "category": "section_dimensions",
+      "status": "pass",
+      "measured": 263.1083,
+      "expected": 263.108,
+      "tolerance": 0.789324,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 18961.82,
+      "expected": 18961.82,
+      "tolerance": 18.96182,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 18945.626,
+      "expected": 18961.82,
+      "tolerance": 189.6182,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "14960 triangles"
+    }
+  ]
+}

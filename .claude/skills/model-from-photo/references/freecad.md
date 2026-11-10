@@ -5,12 +5,41 @@ Status: **part backend built and verified** on FreeCAD 1.1.4 (Linux Flatpak), 20
 `pipeline.py --backend freecad`. Verified behaviour is in [docs/freecad_findings.md](../../../../docs/freecad_findings.md);
 it overrides the mapping below where they differ. Assemblies: `python3 scripts/assembly.py assemblies/<name>
 --backend freecad` (`scripts/fc/fc_assembly.py`) places each part's promoted STEP and checks component count, bbox
-and pairwise interference against `assembly.json`. Not built yet: TechDraw drawings, GUI-parametric `.FCStd` files
+and pairwise interference against `assembly.json`. FreeCAD-only kernel ops (revolve, loft, tilted planes, helix,
+chamfer, edge selection, section checks) are in the next section. Not built yet: TechDraw drawings, GUI-parametric `.FCStd` files
 (the native file holds the result shape plus a `Params` spreadsheet), and the vendor-assembly options
 (`baseline_interference`, `faces_before`, explode lines).
 
 Run: `python3 scripts/pipeline.py projects/<name> --backend freecad` (the default off Windows; `CAD_BACKEND`
 overrides it). Add `--no-promote` to check without copying outputs into `design/` and `exports/`.
+
+## Ops beyond swlib (FreeCAD only, verified 2026-11-09)
+
+New parts `import fclib` directly. Each op has a probe project (`projects/example_*`) and a hand formula in
+`scripts/handcalc.py`; `docs/freecad_findings.md` has the details.
+
+| Op | Call | Hand value |
+|---|---|---|
+| Turn a profile | `part.revolve(name, profiles, about="z", angle=360, at=(0, 0, 0), cut=False)`; profile in (x, z) for about z, (x, y) for about x or y | `handcalc.revolve_volume(points, angle)` |
+| Sketch on any plane | `p = fclib.plane("z", origin=(x, y, z)).rotated("y", 30)`, then `extrude(..., plane=p)` / `cut(..., plane=p)`; profile coordinates are measured from the origin | `handcalc.tilted_hole(d, t, angle)`; an oblique boss holds area × axial length |
+| Loft | `part.loft(name, [(profile, z), ...], ruled=False, cut=False, axis="z")`; a section may also be `(profile, Plane)` | ruled: `handcalc.prismatoid`, `handcalc.frustum`; smooth: none, use sections |
+| Spring / coil | `part.helix(name, d, radius, pitch, height, z=0, left=False)` | `handcalc.helix_volume` |
+| Chamfer | `part.chamfer(name, size, edge_points)` or `select=` | `handcalc.chamfer_edge`, `chamfer_rim` |
+| Pick edges by geometry | `select=fclib.edges(parallel="z", on=("z", 10), radius=5, box=(lo, hi))` on `fillet` and `chamfer`; all given tests must hold | `handcalc.fillet_edge`, `fillet_rim` |
+
+Rules that came out of the probes:
+
+- Run cut profiles 1 mm past the surface they open and count the volume only inside.
+- A turned part is one `revolve` of its half-section; grooves and bores are revolve cuts. This replaces "extrude
+  the solid, then cut every bore" on this backend.
+- **Freeform parts** (a smooth loft, anything without a closed-form volume): leave `volume` out of `spec.json` and
+  give `"sections": {"waist": {"axis": "z", "at": 30, "size": [24, 24], "tol": 0.05, "area": 168.861}}`. `size` is
+  the cross-section's extent on the plane's two axes, `area` is optional. Put a station at every section the loft
+  was built from and wherever else a size matters; between stations nothing is known by hand. Keep the bbox check.
+- Hollow a lofted body with a second loft as a cut (`cut=True`) through stations the wall thickness smaller;
+  `shell` fails on ruled lofts with kinks.
+- `features` volumes are signed (a cut is negative) and only valid for features no later selector depends on.
+- A thin round wire meshes under its volume; give `export.stl` 2 % for springs.
 
 ## Why it fits this workflow
 

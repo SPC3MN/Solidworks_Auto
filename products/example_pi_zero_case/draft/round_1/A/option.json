@@ -1,0 +1,288 @@
+{
+ "schema_version": "1.0",
+ "name": "Slide-in sleeve",
+ "summary": "One printed tube, closed at one end. The board slides in on two ledges; the port slot runs out to the open end so the connectors pass.",
+ "architecture": {
+  "mechanism": "board slides in along its length; the plugged-in cables key it in place",
+  "layout": "one-piece sleeve, open at one short end",
+  "load_path": "board -> ledges -> sleeve floor -> desk",
+  "process": "FDM, printed standing on the closed end, no bridges"
+ },
+ "parts": [
+  {
+   "id": "sleeve",
+   "name": "Sleeve",
+   "source": "make",
+   "process": "print",
+   "material": "PLA",
+   "setups": 1,
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "inner_l + wall",
+      "outer_w",
+      "outer_h"
+     ],
+     "at": [
+      "-wall/2",
+      0,
+      0
+     ]
+    },
+    {
+     "type": "box",
+     "op": "cut",
+     "size": [
+      "inner_l + poke",
+      "inner_w",
+      "inner_h - under_h"
+     ],
+     "at": [
+      "poke/2",
+      0,
+      "z_b"
+     ]
+    },
+    {
+     "type": "box",
+     "op": "cut",
+     "size": [
+      "inner_l + poke",
+      "inner_w - 2*rail",
+      "under_h"
+     ],
+     "at": [
+      "poke/2",
+      0,
+      "wall"
+     ]
+    },
+    {
+     "type": "box",
+     "op": "cut",
+     "size": [
+      "inner_l/2 + win_l/2 + poke",
+      "wall + 2",
+      "comp_h + head"
+     ],
+     "at": [
+      "(inner_l/2 + poke - win_l/2)/2",
+      "-(inner_w/2 + wall/2)",
+      "z_b + pcb_t"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "board",
+   "name": "Pi Zero 2 W",
+   "source": "library",
+   "library": "rpi_zero_2w",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "board_l",
+      "board_w",
+      "pcb_t"
+     ],
+     "r": 3,
+     "at": [
+      0,
+      0,
+      "z_b"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      "board_l - 14",
+      "board_w - 8",
+      "comp_h"
+     ],
+     "at": [
+      0,
+      0,
+      "z_b + pcb_t"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      "ports_span",
+      8,
+      "comp_h"
+     ],
+     "at": [
+      0,
+      "-(board_w/2 + conn_over - 4)",
+      "z_b + pcb_t"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "+hole_dx/2",
+      "+hole_dy/2",
+      "z_b - poke"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "+hole_dx/2",
+      "-hole_dy/2",
+      "z_b - poke"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "-hole_dx/2",
+      "+hole_dy/2",
+      "z_b - poke"
+     ]
+    },
+    {
+     "type": "cyl",
+     "op": "cut",
+     "d": "hole_d",
+     "h": "pcb_t + 2*poke",
+     "at": [
+      "-hole_dx/2",
+      "-hole_dy/2",
+      "z_b - poke"
+     ]
+    }
+   ]
+  }
+ ],
+ "load_path": [
+  {
+   "part": "board",
+   "at": [
+    "-board_l/4",
+    "z_b + pcb_t"
+   ]
+  },
+  {
+   "part": "sleeve",
+   "at": [
+    "-board_l/4",
+    "wall/2"
+   ]
+  },
+  {
+   "part": "sleeve",
+   "at": [
+    "-board_l/4",
+    "-4"
+   ]
+  }
+ ],
+ "dims": [
+  {
+   "view": "section",
+   "dir": "h",
+   "a": "-board_l/2",
+   "b": "board_l/2",
+   "at": "-6",
+   "param": "board_l"
+  },
+  {
+   "view": "section",
+   "dir": "v",
+   "a": 0,
+   "b": "wall",
+   "at": "inner_l/2 + 7",
+   "param": "wall"
+  },
+  {
+   "view": "section",
+   "dir": "v",
+   "a": "z_b",
+   "b": "z_b + pcb_t",
+   "at": "inner_l/2 + 16",
+   "param": "pcb_t"
+  },
+  {
+   "view": "right",
+   "dir": "v",
+   "a": "z_b + pcb_t",
+   "b": "z_b + pcb_t + comp_h + head",
+   "at": "-(outer_w/2 + 6)",
+   "text": "slot 3.5"
+  },
+  {
+   "view": "top",
+   "dir": "v",
+   "a": "-board_w/2",
+   "b": "board_w/2",
+   "at": "inner_l/2 + 7",
+   "param": "board_w"
+  },
+  {
+   "view": "top",
+   "dir": "h",
+   "a": "-win_l/2",
+   "b": "inner_l/2",
+   "at": "-(outer_w/2 + 6)",
+   "text": "port slot, open to the end"
+  }
+ ],
+ "fit": [
+  {
+   "id": "roof",
+   "lhs": "z_b + pcb_t + comp_h",
+   "op": "<",
+   "rhs": "outer_h - wall",
+   "why": "Components clear the roof"
+  },
+  {
+   "id": "length",
+   "lhs": "board_l",
+   "op": "<",
+   "rhs": "inner_l",
+   "why": "Board fits the cavity length"
+  },
+  {
+   "id": "slide",
+   "lhs": "comp_h",
+   "op": "<",
+   "rhs": "comp_h + head",
+   "why": "Connectors pass along the port slot as the board slides in"
+  },
+  {
+   "id": "rails",
+   "lhs": "rail + gap",
+   "op": "<=",
+   "rhs": "edge_clear",
+   "why": "Ledges under the board stay on its bare edge strip"
+  },
+  {
+   "id": "slot",
+   "lhs": "win_l",
+   "op": ">=",
+   "rhs": "ports_span",
+   "why": "Port opening spans HDMI to PWR USB"
+  },
+  {
+   "id": "plug",
+   "lhs": "wall + gap - conn_over",
+   "op": "<=",
+   "rhs": "plug_reach",
+   "why": "A plug's shell reaches its socket through the wall"
+  }
+ ],
+ "from_inspiration": []
+}

@@ -1,0 +1,38 @@
+{
+ "_comment": "Expected values by hand from requirements.md (scripts/handcalc.py holds the formulas), not from a CAD run.",
+ "solid_bodies": {
+  "expected": 1
+ },
+ "bbox.x": {
+  "expected": 30,
+  "tol": 0.05
+ },
+ "bbox.y": {
+  "expected": 30,
+  "tol": 0.05
+ },
+ "bbox.z": {
+  "expected": 25,
+  "tol": 0.05
+ },
+ "volume": {
+  "expected": 10065.663,
+  "rel_tol": 0.001
+ },
+ "features": {
+  "Groove": {
+   "expected": -175.929,
+   "rel_tol": 0.005
+  },
+  "Bore": {
+   "expected": -753.982,
+   "rel_tol": 0.005
+  }
+ },
+ "export.step": {
+  "rel_tol": 0.001
+ },
+ "export.stl": {
+  "rel_tol": 0.01
+ }
+}

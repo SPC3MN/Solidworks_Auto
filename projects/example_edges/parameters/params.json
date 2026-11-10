@@ -1,0 +1,9 @@
+{
+  "length": 40,
+  "width": 30,
+  "height": 10,
+  "corner_r": 3,
+  "rim_c": 1,
+  "hole_d": 10,
+  "hole_c": 0.5
+}

@@ -1,0 +1,146 @@
+{
+ "option": "A",
+ "round": 1,
+ "hash": "bb1782784ad81de5",
+ "scorecard": {
+  "parts_total": 2,
+  "parts_unique": 2,
+  "parts_make": 1,
+  "parts_buy": 1,
+  "fasteners": 0,
+  "setups": 1,
+  "processes": [
+   "print"
+  ],
+  "load_path_parts": 2
+ },
+ "envelope_mm": {
+  "bbox_x": 66.89999999999999,
+  "bbox_y": 33.800000000000004,
+  "bbox_z": 8.7,
+  "parts_total": 2,
+  "parts_make": 1,
+  "parts_buy": 1,
+  "fasteners": 0,
+  "setups": 1
+ },
+ "fit": [
+  {
+   "id": "roof",
+   "lhs_expr": "z_b + pcb_t + comp_h",
+   "rhs_expr": "outer_h - wall",
+   "op": "<",
+   "lhs": 6.8,
+   "rhs": 7.1,
+   "margin": 0.3,
+   "ok": true,
+   "why": "Components clear the roof"
+  },
+  {
+   "id": "length",
+   "lhs_expr": "board_l",
+   "rhs_expr": "inner_l",
+   "op": "<",
+   "lhs": 65.0,
+   "rhs": 65.3,
+   "margin": 0.3,
+   "ok": true,
+   "why": "Board fits the cavity length"
+  },
+  {
+   "id": "slide",
+   "lhs_expr": "comp_h",
+   "rhs_expr": "comp_h + head",
+   "op": "<",
+   "lhs": 3.2,
+   "rhs": 3.5,
+   "margin": 0.3,
+   "ok": true,
+   "why": "Connectors pass along the port slot as the board slides in"
+  },
+  {
+   "id": "rails",
+   "lhs_expr": "rail + gap",
+   "rhs_expr": "edge_clear",
+   "op": "<=",
+   "lhs": 1.5,
+   "rhs": 2.0,
+   "margin": 0.5,
+   "ok": true,
+   "why": "Ledges under the board stay on its bare edge strip"
+  },
+  {
+   "id": "slot",
+   "lhs_expr": "win_l",
+   "rhs_expr": "ports_span",
+   "op": ">=",
+   "lhs": 53.0,
+   "rhs": 51.2,
+   "margin": 1.8,
+   "ok": true,
+   "why": "Port opening spans HDMI to PWR USB"
+  },
+  {
+   "id": "plug",
+   "lhs_expr": "wall + gap - conn_over",
+   "rhs_expr": "plug_reach",
+   "op": "<=",
+   "lhs": 1.4,
+   "rhs": 2.0,
+   "margin": 0.6,
+   "ok": true,
+   "why": "A plug's shell reaches its socket through the wall"
+  }
+ ],
+ "requirements": [
+  {
+   "id": "R4",
+   "lhs_expr": "fasteners",
+   "rhs_expr": "0",
+   "op": "<=",
+   "lhs": 0.0,
+   "rhs": 0.0,
+   "margin": 0.0,
+   "ok": true,
+   "why": "Opens without tools",
+   "priority": "should"
+  },
+  {
+   "id": "R5",
+   "lhs_expr": "bbox_x",
+   "rhs_expr": "75",
+   "op": "<=",
+   "lhs": 66.9,
+   "rhs": 75.0,
+   "margin": 8.1,
+   "ok": true,
+   "why": "At most 75 mm long",
+   "priority": "must"
+  },
+  {
+   "id": "R6",
+   "lhs_expr": "bbox_y",
+   "rhs_expr": "40",
+   "op": "<=",
+   "lhs": 33.8,
+   "rhs": 40.0,
+   "margin": 6.2,
+   "ok": true,
+   "why": "At most 40 mm wide",
+   "priority": "must"
+  },
+  {
+   "id": "R7",
+   "lhs_expr": "bbox_z",
+   "rhs_expr": "13",
+   "op": "<=",
+   "lhs": 8.7,
+   "rhs": 13.0,
+   "margin": 4.3,
+   "ok": true,
+   "why": "At most 13 mm tall",
+   "priority": "must"
+  }
+ ],
+ "problems": []
+}

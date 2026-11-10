@@ -1,0 +1,11 @@
+{
+  "flange_d": 30,
+  "flange_h": 8,
+  "stem_d": 20,
+  "height": 25,
+  "groove_z": 16.5,
+  "groove_w": 3,
+  "groove_depth": 2,
+  "bore_d": 8,
+  "bore_depth": 15
+}

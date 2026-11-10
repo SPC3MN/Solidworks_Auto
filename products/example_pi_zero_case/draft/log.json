@@ -1,0 +1,20 @@
+[
+ {
+  "time": "2026-11-09T21:51:33",
+  "round": 1,
+  "move": "pick",
+  "options": [
+   "A"
+  ],
+  "notes": ""
+ },
+ {
+  "time": "2026-11-09T21:51:38",
+  "round": 1,
+  "move": "approve",
+  "options": [
+   "A"
+  ],
+  "notes": "EXAMPLE approval recorded by the skill's author to test the gate; not the owner's words"
+ }
+]

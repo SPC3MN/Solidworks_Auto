@@ -203,7 +203,8 @@ Fix every overlap. Parts that touch or overlap fuse, and that breaks the exact v
 
 These are about the geometry and its volume arithmetic, so they hold in every backend.
 
-- **Turned parts:** extrude the solid, then cut every bore from z = 0 upward with a single circle.
+- **Turned parts (FreeCAD):** one `revolve` of the half-section, with grooves and bores as revolve cuts (see the
+  FreeCAD reference). On SolidWorks: extrude the solid, then cut every bore from z = 0 upward with a single circle.
   For a step that is wider than a bore already open, cut the circle alone and count only the extra
   annulus in the volume. Never sketch a ring whose inner circle lies exactly on an existing edge.
 - **Radial holes:** cut on an x- or y-normal plane (`axis="x"`, profile (y, z); `axis="y"`, profile (x, z)).
@@ -212,7 +213,7 @@ These are about the geometry and its volume arithmetic, so they hold in every ba
   segment `r²·acos(d/r) − d·√(r²−d²)` or a 1-D integral. Write it in the geometry module, not by trial.
 - **D-bore:** cut the full circle, then add back the segment with a small rectangle extrude.
 - **Rings and tori (O-rings):** sweep a round bar along a circle drawn as 3 arcs of 120° (arcs under 180°).
-- **Spring:** coils as stacked flat rings joined by short links (no helix yet); model it at its installed length.
+- **Spring:** `part.helix` on FreeCAD, at its installed length (on SolidWorks: stacked flat rings joined by short links).
 - **Tapped holes** are modelled at tap-drill size; the screw is modelled at its nominal diameter.
 - **Hole grids round a cylinder** (dot-grid bands, vents): cut one column on the x-normal plane, then pattern
   it about Z (op `"pattern"`: profiles = feature names, z0 = count, volume = (n − 1) × the seed's volume). For a

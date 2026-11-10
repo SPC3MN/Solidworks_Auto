@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "project": "example_revolve",
+  "timestamp": "20261109T221806",
+  "model_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/projects/example_revolve/.staging/20261109T221806/example_revolve.FCStd",
+  "status": "pass",
+  "params_used": {
+    "flange_d": 30,
+    "flange_h": 8,
+    "stem_d": 20,
+    "height": 25,
+    "groove_z": 16.5,
+    "groove_w": 3,
+    "groove_depth": 2,
+    "bore_d": 8,
+    "bore_depth": 15
+  },
+  "backend": "freecad",
+  "freecad_version": "1.1.4",
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        30.0,
+        30.0,
+        25.0
+      ],
+      "volume": 10065.663,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 2953,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "shape.valid",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 30.0,
+      "expected": 30,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 30.0,
+      "expected": 30,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 25.0,
+      "expected": 25,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 10065.663,
+      "expected": 10065.663,
+      "tolerance": 10.065663,
+      "message": ""
+    },
+    {
+      "id": "feature.Groove.volume",
+      "category": "feature_volume",
+      "status": "pass",
+      "measured": -175.9291,
+      "expected": -175.929,
+      "tolerance": 0.879645,
+      "message": ""
+    },
+    {
+      "id": "feature.Bore.volume",
+      "category": "feature_volume",
+      "status": "pass",
+      "measured": -753.9821,
+      "expected": -753.982,
+      "tolerance": 3.76991,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 10065.663,
+      "expected": 10065.663,
+      "tolerance": 10.065663,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 10047.682,
+      "expected": 10065.663,
+      "tolerance": 100.65663,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "1258 triangles"
+    }
+  ]
+}

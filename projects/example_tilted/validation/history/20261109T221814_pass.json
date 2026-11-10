@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "project": "example_tilted",
+  "timestamp": "20261109T221814",
+  "model_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/projects/example_tilted/.staging/20261109T221814/example_tilted.FCStd",
+  "status": "pass",
+  "params_used": {
+    "length": 60,
+    "width": 40,
+    "height": 20,
+    "hole_d": 8,
+    "hole_angle": 30,
+    "hole_x": -10,
+    "boss_d": 10,
+    "boss_angle": 20,
+    "boss_x": 15,
+    "boss_len": 12,
+    "boss_root": 6
+  },
+  "backend": "freecad",
+  "freecad_version": "1.1.4",
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "warnings": 0
+  },
+  "components": {
+    "Body": {
+      "bbox": [
+        60.0,
+        40.0,
+        32.9864
+      ],
+      "volume": 47781.646,
+      "solid_bodies": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "export.native",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 5407,
+      "expected": "> 1000 bytes",
+      "message": ""
+    },
+    {
+      "id": "shape.valid",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": ""
+    },
+    {
+      "id": "solid_bodies",
+      "category": "solid_validity",
+      "status": "pass",
+      "measured": 1,
+      "expected": 1,
+      "tolerance": 0,
+      "message": ""
+    },
+    {
+      "id": "bbox.x",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 60.0,
+      "expected": 60,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.y",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 40.0,
+      "expected": 40,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "bbox.z",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 32.9864,
+      "expected": 32.9864,
+      "tolerance": 0.05,
+      "message": ""
+    },
+    {
+      "id": "volume",
+      "category": "bounding_dimensions",
+      "status": "pass",
+      "measured": 47781.646,
+      "expected": 47781.646,
+      "tolerance": 47.781646,
+      "message": ""
+    },
+    {
+      "id": "feature.TiltHole.volume",
+      "category": "feature_volume",
+      "status": "pass",
+      "measured": -1160.8318,
+      "expected": -1160.832,
+      "tolerance": 5.80416,
+      "message": ""
+    },
+    {
+      "id": "feature.TiltBoss.volume",
+      "category": "feature_volume",
+      "status": "pass",
+      "measured": 942.4776,
+      "expected": 942.478,
+      "tolerance": 4.71239,
+      "message": ""
+    },
+    {
+      "id": "export.step.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 47781.649,
+      "expected": 47781.646,
+      "tolerance": 47.781646,
+      "message": ""
+    },
+    {
+      "id": "export.stl.volume",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": 47781.87,
+      "expected": 47781.646,
+      "tolerance": 477.81646,
+      "message": ""
+    },
+    {
+      "id": "export.stl.watertight",
+      "category": "export_integrity",
+      "status": "pass",
+      "measured": true,
+      "expected": true,
+      "message": "588 triangles"
+    }
+  ]
+}

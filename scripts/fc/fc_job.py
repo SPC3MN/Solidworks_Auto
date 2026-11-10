@@ -3,7 +3,8 @@ the .FCStd, export STEP and STL, reopen the STEP. Started by pipeline.py --backe
 through freecad_run.py, with its arguments as JSON in FC_JOB:
 
   {"model": ".../design/model.py", "params": {...}, "name": "<project>", "staging": "<dir>",
-   "features": ["Feature", "Prefix*", ...], "out_json": "<path>"}
+   "features": ["Feature", "Prefix*", ...], "sections": {"<id>": {"axis": "z", "at": 30}},
+   "out_json": "<path>"}
 
 Writes out_json (measurements for the pipeline's checks), or out_json + ".error" with the
 traceback when the build fails. The pipeline does the spec checks; this script only measures.
@@ -40,6 +41,18 @@ def measure(shape):
             "solid_bodies": len(shape.Solids), "valid": shape.isValid()}
 
 
+def section(shape, axis, at):
+    """Cross-section of the solid by the plane axis = at: its extent along the plane's two
+    axes (in fclib's order: (x, y) for z, (x, z) for y, (y, z) for x), its area and its loops."""
+    wires = shape.slice(fclib.AXES[axis], at)
+    if not wires:
+        return None
+    b = OCC.makeCompound(wires).optimalBoundingBox(True, False)
+    size = [v for k, v in zip("xyz", (b.XLength, b.YLength, b.ZLength)) if k != axis]
+    return {"size": [round(v, 4) for v in size], "loops": len(wires),
+            "area": round(OCC.makeFace(wires, "Part::FaceMakerBullseye").Area, 4)}
+
+
 def load_model(path):
     spec = importlib.util.spec_from_file_location("model", path)
     mod = importlib.util.module_from_spec(spec)
@@ -63,6 +76,8 @@ def main(a):
             [fname] if fname in names else []
         feats[fname] = round(m["volume"] - part.rebuild(group).Volume, 4) if group else None
 
+    sections = {k: section(shape, v["axis"], v["at"]) for k, v in a.get("sections", {}).items()}
+
     native = staging / f"{a['name']}.FCStd"
     part.save(native, a["name"])
 
@@ -75,7 +90,7 @@ def main(a):
     mesh = MeshPart.meshFromShape(Shape=shape, LinearDeflection=0.05, AngularDeflection=0.2, Relative=False)
     mesh.write(str(stl))
 
-    return {"freecad_version": ".".join(App.Version()[:3]), "measure": m, "features": feats,
+    return {"freecad_version": ".".join(App.Version()[:3]), "measure": m, "features": feats, "sections": sections,
             "ops": names, "native": str(native), "step": str(step) if step.exists() else None,
             "stl": str(stl) if stl.exists() else None, "step_reopened": reopened}
 

@@ -1,0 +1,38 @@
+{
+ "_comment": "Expected values by hand from requirements.md (scripts/handcalc.py holds the formulas), not from a CAD run.",
+ "solid_bodies": {
+  "expected": 1
+ },
+ "bbox.x": {
+  "expected": 60,
+  "tol": 0.05
+ },
+ "bbox.y": {
+  "expected": 40,
+  "tol": 0.05
+ },
+ "bbox.z": {
+  "expected": 32.9864,
+  "tol": 0.05
+ },
+ "volume": {
+  "expected": 47781.646,
+  "rel_tol": 0.001
+ },
+ "features": {
+  "TiltHole": {
+   "expected": -1160.832,
+   "rel_tol": 0.005
+  },
+  "TiltBoss": {
+   "expected": 942.478,
+   "rel_tol": 0.005
+  }
+ },
+ "export.step": {
+  "rel_tol": 0.001
+ },
+ "export.stl": {
+  "rel_tol": 0.01
+ }
+}
