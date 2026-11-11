@@ -1,0 +1,143 @@
+FreeCAD Aluminum Enclosure Design Pipeline
+Objective
+Develop a parametric FreeCAD workflow for designing aluminum enclosures made from flat sheet metal that is folded by hand.
+The system should support two primary folding methods:
+	1	Perforated folds: Laser-cut slots or perforations that leave small material bridges along the fold line.
+	2	CNC-machined folds: Partial-depth grooves machined into the aluminum to create controlled folding regions.
+The workflow should allow me to design an enclosure, define its folds, generate manufacturing geometry, preview the folded result, validate the design and export manufacturing files.
+1. Enclosure Design
+Create a parametric enclosure from individual connected panels.
+Support:
+	•	Base, side, front, rear and cover panels.
+	•	Adjustable overall dimensions.
+	•	Adjustable sheet thickness.
+	•	Cutouts, mounting holes and hardware.
+	•	Panel connections and fold locations.
+2. Fold Definition
+Each fold should be an independent parametric feature.
+Properties should include:
+	•	Fold location and axis.
+	•	Connected panels.
+	•	Target fold angle.
+	•	Fold direction.
+	•	Fold sequence.
+	•	Manufacturing method.
+	•	Fold length.
+Keep fold definitions independent of their manufacturing geometry so the folding method can be changed without redesigning the enclosure.
+3. Fold Geometry Generation
+Implement separate generators for the following methods.
+Perforated folds:
+	•	Straight interrupted slots.
+	•	Staggered slots.
+	•	Single-row and multi-row perforations.
+	•	Curved-slit patterns.
+Allow adjustment of slot length, width, spacing, bridge width, end clearance and pattern arrangement.
+CNC-machined folds:
+	•	V-shaped grooves.
+	•	Rounded-bottom grooves.
+	•	Flat-bottom grooves.
+Allow adjustment of groove width, depth, angle, bottom radius and remaining material thickness.
+Hybrid folds:
+	•	Combine CNC grooves with perforated patterns.
+	•	Treat these as experimental until physically tested.
+All generated geometry must remain editable and update automatically when relevant enclosure or material parameters change.
+4. Material and Manufacturing Settings
+Create configurable material profiles containing:
+	•	Aluminum alloy and temper.
+	•	Sheet thickness.
+	•	Mechanical properties.
+	•	Rolling direction.
+	•	Manufacturing limitations.
+	•	Experimentally validated fold geometries.
+Start with 1.0 mm 5052-H32 aluminum as an experimental baseline. Do not assume that any fold geometry is mechanically safe without testing.
+Include manufacturing settings for laser kerf, minimum feature size, CNC tool diameters, machining tolerances and minimum remaining material thickness.
+5. Flat Pattern Generation
+Generate an accurate flat pattern containing:
+	•	Panel outlines.
+	•	Mounting holes and cutouts.
+	•	Perforated fold geometry.
+	•	CNC groove locations.
+	•	Alignment features.
+	•	Manufacturing annotations.
+Separate manufacturing operations into DXF layers:
+	•	CUT_THROUGH
+	•	FOLD_PERFORATION
+	•	CNC_GROOVE
+	•	ENGRAVING
+	•	REFERENCE
+	•	FOLD_DIRECTION
+Export the flat pattern as DXF. Keep CNC machining geometry separate from laser-cut geometry.
+6. Folded Assembly Preview
+Generate a 3D preview of the finished enclosure by rotating panels around their defined fold axes.
+Support:
+	•	Final folded configuration.
+	•	Adjustable fold angles.
+	•	Sequential folding.
+	•	Exploded views.
+	•	Panel interference detection.
+Rigid-panel transformations are sufficient. Nonlinear material deformation simulation is not required.
+7. Design Validation
+Automatically check:
+	•	Panel connectivity.
+	•	Fold locations and angles.
+	•	Perforation and bridge dimensions.
+	•	Remaining material thickness.
+	•	Slot-end geometry.
+	•	CNC tool accessibility.
+	•	Panel interference.
+	•	Fold sequence feasibility.
+	•	Flat-pattern integrity.
+Clearly distinguish between geometrically valid, manufacturable and experimentally validated designs.
+8. Export
+Support exporting:
+	•	DXF flat patterns.
+	•	STEP folded models.
+	•	Editable FreeCAD files.
+	•	PDF manufacturing drawings.
+	•	BOM and hardware lists.
+	•	CNC CAM projects where applicable.
+Use FreeCAD Path or a compatible CAM workflow for CNC operations. Automated toolpath generation can be implemented later.
+9. FreeCAD Implementation
+Build the system using FreeCAD Python scripting, preferably as a modular workbench or macro.
+Organize the document tree into:
+	•	Parameters
+	•	Material Profiles
+	•	Manufacturing Profiles
+	•	Panels
+	•	Folds
+	•	Flat Pattern
+	•	Folded Preview
+	•	Validation
+	•	Export
+Keep geometry generation, visualization, validation and export as separate modules.
+Use editable FreeCAD properties rather than hardcoded values wherever possible.
+10. Development Priorities
+Implement in this order:
+Initial release
+	1	Parametric panel construction.
+	2	Fold-line definition.
+	3	Straight interrupted-slot generator.
+	4	Adjustable slot and bridge dimensions.
+	5	Flat-pattern generation.
+	6	DXF export.
+	7	Folded 3D preview.
+	8	Basic geometry validation.
+Second release
+	1	Advanced perforation patterns.
+	2	Curved slits.
+	3	CNC groove generation.
+	4	Hybrid folding.
+	5	Material profiles.
+Third release
+	1	CNC CAM integration.
+	2	Advanced manufacturing validation.
+	3	Manufacturing drawings.
+	4	Assembly instructions.
+	5	Experimentally validated design rules.
+11. Important Engineering Considerations
+These folds are intended for controlled, one-time forming, not repeated hinge movement.
+Do not assume conventional sheet-metal bend calculations accurately predict the behavior of perforated or CNC-machined folding regions.
+Design the system so that fold geometries can be experimentally tested and their results stored in material-specific manufacturing profiles.
+The most important architectural requirement is that the enclosure, fold definition and manufacturing method remain independent. I should be able to change a fold from perforated to CNC-machined without rebuilding the enclosure.
+Expected Result
+A reusable FreeCAD pipeline for designing hand-folded aluminum enclosures, generating flat patterns, previewing folded assemblies and preparing manufacturing files. The system should be modular enough to support different enclosure designs and folding techniques without requiring changes to its underlying architecture.
