@@ -149,3 +149,29 @@ svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f
        f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
 Path(__file__).with_name("lcd35_views.svg").write_text(svg, encoding="utf-8")
 print("wrote", Path(__file__).with_name("lcd35_views.svg"))
+
+# ---- Waveshare 3.5in DSI LCD (E), 640 x 480, from Waveshare's 2D drawing (2025-11-28).
+# x along 77 (seen from the front), y = 0 at the glass, z up (65). Back-side parts are placed from the drawing (~).
+dsi = [
+    B("cover lens 77.27 × 63.51", -0.135, 0, 65 - 63.51, 77.135, 7.3, 65, "glass"),
+    B("viewing area 70.67 × 53.27", 3.3 - 0.135, -0.05, 65 - 2.55 - 53.27, 3.3 - 0.135 + 70.67, 0, 65 - 2.55, "lit"),
+    B("PCB 77 × 65", 0, 7.3, 0, 77, 8.9, 65, "pcb"),
+    B("FPC tail", 18, 0, -0.6, 60, 1.2, 65 - 63.51, "black"),
+    *[CY("M2.5 standoff hole", 1, (x, z), 1.35, 8.9, 12.9, "brass") for x in (77 - 15.6, 77 - 15.6 - 58) for z in (65 - 12.3, 65 - 12.3 - 49)],
+    B("15-pin DSI connector (Pi 4) ~", 14, 8.9, 18, 44, 12.9, 24, "white"),
+    B("22-pin DSI1 connector (Pi 5) ~", 1, 8.9, 21, 5.5, 12.9, 44, "white"),
+    B("I2C / power connector ~", 59, 8.9, 26, 66, 12.9, 33, "white"),
+]
+body, y = [f'<text x="10" y="28" class="ut">Waveshare 3.5in DSI LCD (E)</text>'], 38
+x, row_h = 10, 0
+for v in VIEWS:
+    g, W, H = view_svg(dsi, v, [])
+    body.append(f'<g transform="translate({x:.0f},{y:.0f})">{g}</g>')
+    x += max(W, 150) + 12
+    row_h = max(row_h, H)
+width, y = x, y + row_h + 16
+svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f}" width="{width:.0f}" height="{y:.0f}">'
+       '<style>text{font-family:sans-serif}.ut{font-size:16px;font-weight:700}.vt{font-size:11px;font-weight:600}.dm{font-size:11px;fill:#333}</style>'
+       f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
+Path(__file__).with_name("lcd35_dsi_views.svg").write_text(svg, encoding="utf-8")
+print("wrote", Path(__file__).with_name("lcd35_dsi_views.svg"))
