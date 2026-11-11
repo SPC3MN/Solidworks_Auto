@@ -167,6 +167,14 @@ Run straight through; stop only for a conflict that needs the owner's decision.
 Offer, and do only what the owner chooses: photoreal renders (`product-render` skill, its own approval gate),
 manufacturing drawings, the design record, or a revision (back to stage 2 with notes).
 
+## Hand-folded sheet parts
+
+When the design is an aluminium enclosure or bracket cut flat and folded by hand, make it a folded part: read
+[references/folded-sheet.md](references/folded-sheet.md) first. In short: the part points at a `sheet.json`
+(panels, folds, recipes), the board shows its flat pattern, and after approval `sheet_cli.py build` writes the
+DXF and the folded model. Every fold is UNTESTED until a coupon of its recipe has held; say so on the board and
+in every report, and offer the coupon sheet before the owner cuts a real part.
+
 ## Not built yet
 
 - Draft bodies are box, cyl, revolve and prism only: a lofted or sculpted form is sketched and massed as its

@@ -1,0 +1,430 @@
+{
+ "_comment": "A hand-folded sheet part (scripts/sheet_lib.py). Written by sheet_cli.py template tray; edit freely. Panels, folds and recipes are independent: change a fold's recipe without touching the panels.",
+ "name": "example_folded_tray",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "dims": "outside",
+ "params": {
+  "L": {
+   "value": 120.0,
+   "src": "given"
+  },
+  "W": {
+   "value": 80.0,
+   "src": "given"
+  },
+  "H": {
+   "value": 30.0,
+   "src": "given"
+  },
+  "hinge": {
+   "value": 0.5,
+   "src": "estimated",
+   "note": "bridges bend at mid-thickness until a coupon says otherwise"
+  },
+  "allow": {
+   "value": 0.0,
+   "src": "estimated",
+   "note": "flat length taken by a fold; 0 until measured"
+  },
+  "corner": {
+   "value": 0.3,
+   "src": "chosen",
+   "note": "clearance between neighbouring walls at a corner"
+  },
+  "bl": "L - 2*hinge*t - allow",
+  "bw": "W - 2*hinge*t - allow",
+  "wh": "H - 2*hinge*t - allow",
+  "inset": "(1 - hinge)*t + corner",
+  "fw": {
+   "value": 10.0,
+   "src": "given"
+  },
+  "hole_d": {
+   "value": 3.4,
+   "src": "chosen",
+   "note": "M3 clearance"
+  },
+  "fin": "fw + t + corner"
+ },
+ "panels": [
+  {
+   "id": "base",
+   "name": "Base",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bl",
+     0
+    ],
+    [
+     "bl",
+     "bw"
+    ],
+    [
+     0,
+     "bw"
+    ]
+   ]
+  },
+  {
+   "id": "front",
+   "name": "Front wall",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bl - 2*inset",
+     0
+    ],
+    [
+     "bl - 2*inset",
+     "wh"
+    ],
+    [
+     0,
+     "wh"
+    ]
+   ]
+  },
+  {
+   "id": "front_flange",
+   "name": "Front flange",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bl - 2*inset - 2*fin",
+     0
+    ],
+    [
+     "bl - 2*inset - 2*fin",
+     "fw"
+    ],
+    [
+     0,
+     "fw"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bl - 2*inset - 2*fin)*0.2",
+      "fw/2"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bl - 2*inset - 2*fin)*0.8",
+      "fw/2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "right",
+   "name": "Right wall",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bw - 2*inset",
+     0
+    ],
+    [
+     "bw - 2*inset",
+     "wh"
+    ],
+    [
+     0,
+     "wh"
+    ]
+   ]
+  },
+  {
+   "id": "right_flange",
+   "name": "Right flange",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bw - 2*inset - 2*fin",
+     0
+    ],
+    [
+     "bw - 2*inset - 2*fin",
+     "fw"
+    ],
+    [
+     0,
+     "fw"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bw - 2*inset - 2*fin)*0.2",
+      "fw/2"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bw - 2*inset - 2*fin)*0.8",
+      "fw/2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rear",
+   "name": "Rear wall",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bl - 2*inset",
+     0
+    ],
+    [
+     "bl - 2*inset",
+     "wh"
+    ],
+    [
+     0,
+     "wh"
+    ]
+   ]
+  },
+  {
+   "id": "rear_flange",
+   "name": "Rear flange",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bl - 2*inset - 2*fin",
+     0
+    ],
+    [
+     "bl - 2*inset - 2*fin",
+     "fw"
+    ],
+    [
+     0,
+     "fw"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bl - 2*inset - 2*fin)*0.2",
+      "fw/2"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bl - 2*inset - 2*fin)*0.8",
+      "fw/2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "left",
+   "name": "Left wall",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bw - 2*inset",
+     0
+    ],
+    [
+     "bw - 2*inset",
+     "wh"
+    ],
+    [
+     0,
+     "wh"
+    ]
+   ]
+  },
+  {
+   "id": "left_flange",
+   "name": "Left flange",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bw - 2*inset - 2*fin",
+     0
+    ],
+    [
+     "bw - 2*inset - 2*fin",
+     "fw"
+    ],
+    [
+     0,
+     "fw"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bw - 2*inset - 2*fin)*0.2",
+      "fw/2"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "hole_d",
+     "at": [
+      "(bw - 2*inset - 2*fin)*0.8",
+      "fw/2"
+     ]
+    }
+   ]
+  }
+ ],
+ "folds": [
+  {
+   "id": "f_front",
+   "parent": "base",
+   "parent_edge": 0,
+   "child": "front",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_front_flange",
+   "parent": "front",
+   "parent_edge": 2,
+   "child": "front_flange",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_right",
+   "parent": "base",
+   "parent_edge": 1,
+   "child": "right",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_right_flange",
+   "parent": "right",
+   "parent_edge": 2,
+   "child": "right_flange",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_rear",
+   "parent": "base",
+   "parent_edge": 2,
+   "child": "rear",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_rear_flange",
+   "parent": "rear",
+   "parent_edge": 2,
+   "child": "rear_flange",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_left",
+   "parent": "base",
+   "parent_edge": 3,
+   "child": "left",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_left_flange",
+   "parent": "left",
+   "parent_edge": 2,
+   "child": "left_flange",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold"
+  }
+ ],
+ "recipes": {
+  "fold": {
+   "_comment": "A starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
+   "method": "slots",
+   "slot_length": 8.0,
+   "slot_width": 0.5,
+   "bridge": 1.5,
+   "end_clearance": 2.0,
+   "hinge": "hinge",
+   "allowance": "allow"
+  }
+ },
+ "hardware": [
+  {
+   "name": "M3 screw",
+   "qty": 8
+  }
+ ]
+}

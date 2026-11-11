@@ -1,0 +1,10 @@
+{
+ "_comment": "Material profiles for hand-folded sheet (scripts/sheet_lib.py). 'tested' holds coupon results written by sheet_cli.py record; a fold recipe counts as experimentally validated only when it matches a tested entry whose result is 'held'. Mechanical values are typical handbook figures, not measured on the owner's stock.",
+ "5052-H32_1.0": {
+  "alloy": "5052", "temper": "H32", "thickness": 1.0,
+  "yield_mpa": 193, "uts_mpa": 228, "elongation_pct": 12,
+  "grain": "unknown",
+  "status": "experimental baseline: no fold geometry has been tested",
+  "tested": []
+ }
+}

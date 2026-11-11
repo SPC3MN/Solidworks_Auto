@@ -116,6 +116,9 @@ bold when its parameter is given or measured, and italic with `~` when estimated
 
 Count every part that has to exist, including standard hardware. Leaving parts out to make A look simple defeats the scorecard.
 
+A hand-folded sheet part has `"sheet": "<file in this folder>"` and optional `"at": [x, y, z]` instead of `bodies`;
+see [folded-sheet.md](folded-sheet.md).
+
 ### Bodies
 
 Axes: z up. The section is the plane y = `section_y`, seen from −y, so lay the product out with its main axis in

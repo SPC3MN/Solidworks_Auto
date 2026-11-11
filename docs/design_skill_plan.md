@@ -205,3 +205,9 @@ Not done in this step:
 - Sweeps of a non-round profile, variable-radius fillets and threads. `shell` works on a smooth loft but not on a
   ruled one with kinks; lofted bodies are hollowed with a second loft as a cut.
 - The existing projects were not rewritten to use the new ops.
+
+## 11. Folded sheet as a process (planned 2026-11-11)
+
+Hand-folded aluminium enclosures (perforated or grooved fold lines, flat-pattern DXF, folded preview, coupons)
+are a process inside `/design`: see `docs/folded_enclosure_plan.md`. Release 1 (slots, DXF, folded model, coupons)
+was built on 2026-11-11; nothing has been cut or tested.

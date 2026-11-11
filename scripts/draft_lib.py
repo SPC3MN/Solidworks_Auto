@@ -386,7 +386,14 @@ def load_option(folder):
         seen.add(pid)
         if p.get("source") not in SOURCES:
             raise DraftError(f"option {oid}, part {pid}: source must be one of {SOURCES}")
-        bodies = [resolve_body(b, names, f"option {oid}, part {pid}, body {n}") for n, b in enumerate(p.get("bodies", []))]
+        sheet = None
+        if p.get("sheet"):      # a hand-folded sheet part: its folded panels are its bodies
+            import sheet_lib
+            sheet = sheet_lib.load_sheet(folder / p["sheet"], names)
+            bodies = sheet_lib.draft_bodies(sheet, [evaluate(v, names) for v in p.get("at", [0, 0, 0])])
+            p = {"process": "fold", "material": sheet["material"], "setups": len(sheet["folds"]), **p}
+        else:
+            bodies = [resolve_body(b, names, f"option {oid}, part {pid}, body {n}") for n, b in enumerate(p.get("bodies", []))]
         ops = [b["op"] for b in bodies]
         if not bodies or ops[0] != "add" or ops != sorted(ops):
             raise DraftError(f"option {oid}, part {pid}: list every add body before the cuts (a cut applies to the whole part)")
@@ -397,7 +404,8 @@ def load_option(folder):
         parts.append({"id": pid, "name": p.get("name", pid), "source": p["source"], "process": p.get("process", ""),
                       "material": p.get("material", ""), "qty": qty, "setups": int(p.get("setups", 1)),
                       "fastener": bool(p.get("fastener", False)), "library": p.get("library"),
-                      "bodies": bodies, "instances": inst})
+                      "bodies": bodies, "instances": inst, "sheet": sheet, "sheet_file": p.get("sheet"),
+                      "sheet_hash": digest(strip_notes(load_json(folder / p["sheet"]))) if sheet else None})
     for pid in raw.get("load_path", []):
         if (pid["part"] if isinstance(pid, dict) else pid) not in seen:
             raise DraftError(f"option {oid}: load_path names an unknown part {pid!r}")
@@ -413,9 +421,10 @@ def load_option(folder):
     opt["derived"] = {"bbox_x": hi[0] - lo[0], "bbox_y": hi[1] - lo[1], "bbox_z": hi[2] - lo[2],
                       **{k: opt["scorecard"][k] for k in ("parts_total", "parts_make", "parts_buy", "fasteners", "setups")}}
     opt["fit_results"] = [run_check(f, {**names, **opt["derived"]}, f"option {oid}, fit {f.get('id')}") for f in opt["fit"]]
-    opt["part_hashes"] = {p["id"]: digest(_rounded({k: p[k] for k in ("source", "process", "material", "qty", "bodies", "instances")}))
-                          for p in parts}
-    opt["hash"] = digest([{k: v for k, v in raw.items() if k != "id"}, {k: [v["expr"], v["src"]] for k, v in params.items()}])
+    opt["part_hashes"] = {p["id"]: digest(_rounded({k: p[k] for k in ("source", "process", "material", "qty", "bodies", "instances")
+                                                    + (("sheet_hash",) if p["sheet"] else ())})) for p in parts}
+    opt["hash"] = digest([{k: v for k, v in raw.items() if k != "id"}, {k: [v["expr"], v["src"]] for k, v in params.items()}]
+                         + [p["sheet_hash"] for p in parts if p["sheet"]])
     return opt
 
 
@@ -520,6 +529,15 @@ def gate(product, part=None):
     # The part's own parameters may add detail, but a value it shares with the draft must be the approved one.
     pp = product / "parts" / part / "parameters" / "params.json"
     mine = load_json(pp) if pp.exists() else {}
+    sp = product / "parts" / part / "sheet.json"      # a folded sheet part keeps its parameters in its definition
+    if sp.exists():
+        # The recipe (how a fold is made) may change at this stage; the panels and folds may not.
+        ap_file = next((x["sheet_file"] for x in opt["parts"] if x["id"] == part and x["sheet_file"]), None)
+        same = ap_file and all(strip_notes(load_json(sp)).get(k) == strip_notes(load_json(product / "draft" / "approved" / ap_file)).get(k)
+                               for k in ("panels", "folds"))
+        if not same:
+            return False, f"NOT APPROVED: the panels or folds of part '{part}' differ from the approved draft. Change them through a new round."
+        mine = {**mine, **{k: (v.get("value") if isinstance(v, dict) else v) for k, v in load_json(sp).get("params", {}).items()}}
     drift = sorted(k for k, v in mine.items() if k in opt["names"] and isinstance(v, (int, float)) and abs(v - opt["names"][k]) > 1e-9)
     if drift:
         return False, (f"NOT APPROVED: part '{part}' uses {', '.join(f'{k} = {mine[k]:g}' for k in drift)}, but the approved draft says "

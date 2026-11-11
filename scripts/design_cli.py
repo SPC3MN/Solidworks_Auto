@@ -411,6 +411,16 @@ def cmd_params(a):
     opt = D.load_option(product / "draft" / "approved")
     if a.part not in opt["part_hashes"]:
         sys.exit(f"part '{a.part}' is not in the approved draft ({', '.join(opt['part_hashes'])})")
+    part = next(p for p in opt["parts"] if p["id"] == a.part)
+    if part["sheet"]:       # a folded sheet part: its definition, with the approved values written in
+        raw = D.load_json(product / "draft" / "approved" / part["sheet_file"])
+        for k, v in raw.get("params", {}).items():
+            if k in opt["names"]:
+                raw["params"][k] = {**v, "value": opt["names"][k]} if isinstance(v, dict) else opt["names"][k]
+        out = product / "parts" / a.part / "sheet.json"
+        save(out, raw)
+        print(f"{out}\nnext: python3 scripts/sheet_cli.py build {out.parent}")
+        return
     out = product / "parts" / a.part / "parameters" / "params.json"
     have = D.load_json(out) if out.exists() else {}
     extra = {k: v for k, v in have.items() if k not in opt["names"] and not k.startswith("_")}

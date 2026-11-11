@@ -1,0 +1,174 @@
+{
+ "_comment": "Cut coupons.dxf, fold each strip by hand to the target angle with the engraved end (leg A) held flat, then record each result with sheet_cli.py record. Leg lengths are measured on the outside, from the strip's end to the far face of the other leg.",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "thickness": 1.0,
+ "strip": [
+  40.0,
+  60.0
+ ],
+ "coupons": [
+  {
+   "id": "01",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 4.0,
+    "slot_width": 0.5,
+    "bridge": 1.0,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 7,
+   "cut_length": 28.0,
+   "bridge_total": 12.0,
+   "bridge_share": 0.3,
+   "end_uncut": 3.0,
+   "flags": []
+  },
+  {
+   "id": "02",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 8.0,
+    "slot_width": 0.5,
+    "bridge": 1.0,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 4,
+   "cut_length": 32.0,
+   "bridge_total": 8.0,
+   "bridge_share": 0.2,
+   "end_uncut": 2.5,
+   "flags": []
+  },
+  {
+   "id": "03",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 12.0,
+    "slot_width": 0.5,
+    "bridge": 1.0,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 2,
+   "cut_length": 24.0,
+   "bridge_total": 16.0,
+   "bridge_share": 0.4,
+   "end_uncut": 7.5,
+   "flags": []
+  },
+  {
+   "id": "04",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 4.0,
+    "slot_width": 0.5,
+    "bridge": 1.5,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 6,
+   "cut_length": 24.0,
+   "bridge_total": 16.0,
+   "bridge_share": 0.4,
+   "end_uncut": 4.25,
+   "flags": []
+  },
+  {
+   "id": "05",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 8.0,
+    "slot_width": 0.5,
+    "bridge": 1.5,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 3,
+   "cut_length": 24.0,
+   "bridge_total": 16.0,
+   "bridge_share": 0.4,
+   "end_uncut": 6.5,
+   "flags": []
+  },
+  {
+   "id": "06",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 12.0,
+    "slot_width": 0.5,
+    "bridge": 1.5,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 2,
+   "cut_length": 24.0,
+   "bridge_total": 16.0,
+   "bridge_share": 0.4,
+   "end_uncut": 7.25,
+   "flags": []
+  },
+  {
+   "id": "07",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 4.0,
+    "slot_width": 0.5,
+    "bridge": 2.0,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 6,
+   "cut_length": 24.0,
+   "bridge_total": 16.0,
+   "bridge_share": 0.4,
+   "end_uncut": 3.0,
+   "flags": []
+  },
+  {
+   "id": "08",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 8.0,
+    "slot_width": 0.5,
+    "bridge": 2.0,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 3,
+   "cut_length": 24.0,
+   "bridge_total": 16.0,
+   "bridge_share": 0.4,
+   "end_uncut": 6.0,
+   "flags": []
+  },
+  {
+   "id": "09",
+   "recipe": {
+    "method": "slots",
+    "slot_length": 12.0,
+    "slot_width": 0.5,
+    "bridge": 2.0,
+    "end_clearance": 2.0
+   },
+   "fold_length": 40.0,
+   "flat_length": 60.0,
+   "slots": 2,
+   "cut_length": 24.0,
+   "bridge_total": 16.0,
+   "bridge_share": 0.4,
+   "end_uncut": 7.0,
+   "flags": []
+  }
+ ]
+}

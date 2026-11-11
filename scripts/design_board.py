@@ -175,13 +175,26 @@ def _massing(o):
     return "".join(out)
 
 
+def _flats(o):
+    """The flat pattern of every hand-folded sheet part of the option."""
+    out = []
+    for p in o["parts"]:
+        if p.get("sheet"):
+            import sheet_draw
+            import sheet_lib
+            mark = ' <span class="bad">Untested folds: no coupon has held for this recipe yet.</span>' if sheet_lib.untested(p["sheet"]) else ""
+            out.append(f'<h4>Flat pattern: {E(p["name"])}</h4><p class="mut">{len(p["sheet"]["folds"])} folds by hand, '
+                       f'{E(p["sheet"]["material"])}.{mark}</p><div class="sketch">{sheet_draw.flat_svg(p["sheet"], uid="flat" + o["id"] + p["id"])}</div>')
+    return "".join(out)
+
+
 def _option(o, svg, single):
     out = [f'<section class="opt" id="opt-{E(o["id"])}"><h3>{E(o["id"])} · {E(o["name"])} '
            + ('<span class="tag base">simplest baseline</span>' if o["id"] == "A" and not single else "")
            + (f'<span class="tag">merged from {E(", ".join(o["merged_from"]))}</span>' if o["merged_from"] else "") + "</h3>",
            f'<p>{E(o["summary"])}</p><dl class="arch">'
            + "".join(f'<dt>{k.replace("_", " ").capitalize()}</dt><dd>{E(str(o["architecture"][k]))}</dd>' for k in ("mechanism", "layout", "load_path", "process"))
-           + f'</dl><div class="sketch">{svg}</div><div class="cols"><div><h4>Fit and stack-up</h4>']
+           + f'</dl><div class="sketch">{svg}</div>' + _flats(o) + '<div class="cols"><div><h4>Fit and stack-up</h4>']
     if o["fit_results"]:
         out.append('<div class="scroll"><table><tr><th>Check</th><th>Arithmetic</th><th class="n">Result</th><th class="n">Margin</th></tr>')
         for r in o["fit_results"]:

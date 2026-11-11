@@ -38,6 +38,15 @@ when the part's parameters differ from the approved draft. `products/example_pi_
 example; `docs/design_skill_plan.md` is the plan and what is still to build. Copying an existing object (a
 board, a bought part) is still the photo workflow below.
 
+## Hand-folded sheet parts
+
+Aluminium enclosures cut flat and folded by hand along perforated lines: `scripts/sheet_cli.py` (`template`,
+`check`, `build`, `coupons`, `record`) on a `sheet.json` of panels, folds and recipes, which stay independent.
+`build` writes a layered DXF, the folded STEP and a report with three separate verdicts (geometrically valid,
+manufacturable, experimentally validated). No fold counts as tested without a recorded coupon; untested outputs
+are marked UNTESTED. Inside `/design` it is a part with a `sheet` (see the skill's `references/folded-sheet.md`).
+Plan: `docs/folded_enclosure_plan.md`. Example: `projects/example_folded_tray`.
+
 ## Photo → model workflow
 
 The full, refined process (photos *and* part numbers, builder choice, detail

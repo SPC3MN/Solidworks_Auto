@@ -1,0 +1,14 @@
+{
+ "_comment": "Manufacturing profiles (scripts/sheet_lib.py). Lengths in mm. A design is 'manufacturable' only against the profile it names.",
+ "generic_untested": {
+  "status": "PLACEHOLDERS: conservative guesses, not taken from any machine or service. Replace when the cutting route is chosen.",
+  "kerf": 0.2,
+  "min_slot_width": 0.5,
+  "allow_slit": true,
+  "min_bridge": 1.0,
+  "min_end_clearance": 1.5,
+  "min_web": 1.5,
+  "min_hole_d": 1.0,
+  "min_flange": 6.0
+ }
+}
