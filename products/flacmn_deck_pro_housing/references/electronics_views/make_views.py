@@ -123,3 +123,29 @@ svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f
        f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
 Path(__file__).with_name("electronics_views.svg").write_text(svg, encoding="utf-8")
 print("wrote", Path(__file__).with_name("electronics_views.svg"))
+
+# ---- Waveshare 3.5in HDMI LCD (projects/lcd_35_hdmi): x along 85.42, y = 0 at the HDMI edge, z up from the PCB underside
+lcd35 = [
+    B("PCB", 0, 0, 0, 85.42, 55.92, 1.6, "pcb"),
+    B("LCD + touch", (85.42 - 80.5) / 2, 0.5, 1.6, (85.42 + 80.5) / 2, 55.42, 5.8, "glass"),
+    B("lit area 73.44 × 48.96", 42.71 - 36.72, 27.96 - 24.48, 5.8, 42.71 + 36.72, 27.96 + 24.48, 5.85, "lit"),
+    B("26-pin GPIO socket", 7.1 - 1.27, 52.5 - 2.54, -8.5, 7.1 - 1.27 + 33.02, 52.5 + 2.54, 0, "black"),
+    B("HDMI", 32 - 7.5, -0.5, -5.6, 32 + 7.5, 11, 0, "metal"),
+    B("3.5 mm jack", 53.5 - 3, 0, -5, 53.5 + 3, 12, 0, "black"),
+    CY("jack nose", 1, (53.5, -2.5), 2.5, -2.5, 0, "black"),
+]
+body, y, width = [], 10, 0
+body.append(f'<text x="10" y="{y + 18}" class="ut">Waveshare 3.5in HDMI LCD</text>')
+y += 28
+x, row_h = 10, 0
+for v in VIEWS:
+    g, W, H = view_svg(lcd35, v, [])
+    body.append(f'<g transform="translate({x:.0f},{y:.0f})">{g}</g>')
+    x += max(W, 150) + 12
+    row_h = max(row_h, H)
+width, y = x, y + row_h + 16
+svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f}" width="{width:.0f}" height="{y:.0f}">'
+       '<style>text{font-family:sans-serif}.ut{font-size:16px;font-weight:700}.vt{font-size:11px;font-weight:600}.dm{font-size:11px;fill:#333}</style>'
+       f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
+Path(__file__).with_name("lcd35_views.svg").write_text(svg, encoding="utf-8")
+print("wrote", Path(__file__).with_name("lcd35_views.svg"))
