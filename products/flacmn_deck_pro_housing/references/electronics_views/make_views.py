@@ -1,5 +1,5 @@
 """Six orthographic views (to scale, mm) of the deck's electronics, for arranging them in the housing.
-Writes electronics_views.html next to this file. Sizes as in the brief and the repo models; ~ = estimate."""
+Writes electronics_views.svg next to this file. Sizes as in the brief and the repo models; ~ = estimate."""
 from pathlib import Path
 
 C = {"pcb": "#3f7d4f", "metal": "#b9bfc6", "black": "#2a2b2e", "brass": "#c9a64a", "glass": "#1d2a3a",
@@ -39,7 +39,7 @@ def view_svg(items, v, labels):
         return pad + ((val - lo[h]) if hs > 0 else (hi[h] - val)) * S
     def Y(val):
         return pad + ((hi[vv] - val) if vs > 0 else (val - lo[vv])) * S
-    out = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" width="{W:.0f}" height="{H:.0f}">']
+    out = []
     order = sorted(zip(items, bbs), key=lambda p: (p[1][d + 3] if ds > 0 else -p[1][d]))
     for it, b in order:
         col = C[it[3]]
@@ -53,15 +53,11 @@ def view_svg(items, v, labels):
             y0, y1 = sorted((Y(b[vv]), Y(b[vv + 3])))
             rx = 1.5 if it[0] == "cyl" else 0
             out.append(f'<rect x="{x0:.1f}" y="{y0:.1f}" width="{x1-x0:.1f}" height="{y1-y0:.1f}" rx="{rx}" fill="{col}" stroke="#111" stroke-width=".6"><title>{it[1]}</title></rect>')
-    for name, p in labels:
-        if p[d] is None:
-            continue
-        out.append(f'<text x="{X(p[h]):.1f}" y="{Y(p[vv]):.1f}" class="lb">{name}</text>')
     # overall dimensions
     out.append(f'<text x="{W/2:.0f}" y="{H-6:.0f}" class="dm" text-anchor="middle">{hi[h]-lo[h]:.1f}</text>')
     out.append(f'<text x="8" y="{H/2:.0f}" class="dm" transform="rotate(-90 8 {H/2:.0f})" text-anchor="middle">{hi[vv]-lo[vv]:.1f}</text>')
-    out.append("</svg>")
-    return f'<figure><figcaption>{title}</figcaption>{"".join(out)}</figure>'
+    out.insert(0, f'<text x="{pad}" y="14" class="vt">{title}</text>')
+    return "".join(out), W, H
 
 # ---- Pi 4 + DAC Pro, Pi frame: x along 85 (microSD end x = 0, USB/Ethernet end x = 85), y = 0 at the USB-C side, z up from the Pi PCB underside
 zt, zd = 1.4, 1.4 + 9.0
@@ -109,25 +105,21 @@ enc = [
 ]
 enc_labels = [("shaft", (0, 0, 30)), ("pins", (0, -12, -2))]
 
-def section(title, note, items, labels):
-    figs = "".join(view_svg(items, v, labels) for v in VIEWS)
-    return f'<section><h2>{title}</h2><p>{note}</p><div class="grid">{figs}</div></section>'
-
-html = f"""<!doctype html><html><head><meta charset="utf-8"><title>Deck electronics views</title>
-<style>
-body{{font:14px system-ui,sans-serif;background:#f4f4f2;color:#222;margin:16px}}
-h1{{font-size:20px}} h2{{font-size:17px;margin:28px 0 4px}} p{{margin:2px 0 10px;color:#555}}
-.grid{{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}}
-figure{{margin:0;background:#fff;border:1px solid #ddd;padding:6px}} figcaption{{font-weight:600;font-size:13px}}
-.lb{{font-size:10px;fill:#c03030;font-weight:600}} .dm{{font-size:11px;fill:#333}}
-svg{{max-width:100%;height:auto}}
-</style></head><body>
-<h1>flacmn deck pro: electronics, six views each</h1>
-<p>All to the same scale (3.2 px/mm), overall size in mm under and beside each view. Grey = metal shells, black = plastic,
-brass = standoffs and RCA barrels, blue = the screen's lit area. "~" marks an estimate; hover a shape for its name.</p>
-{section("Raspberry Pi 4 + DAC Pro (one unit)", "Pi frame: microSD end at the left in Top/Front, USB/Ethernet at the right; USB-C, RCA and headphone jack all on the front (−Y) long side. DAC Pro on 9 mm standoffs. Height ~29 to the top of the RCA block.", stack, stack_labels)}
-{section("Waveshare 2″ LCD module", "58 × 35 module; glass face toward −Y (Front view = what you see through the window). Thickness and connector are estimates.", screen, screen_labels)}
-{section("Bourns PEC11R encoder", "Body 12.5 × 13.4 × 6.6 (~), M7 bushing 7 long, Ø6 shaft 20 above the bushing (cut to length). Encoder pins on −Y, switch pins on +Y.", enc, enc_labels)}
-</body></html>"""
-Path(__file__).with_name("electronics_views.html").write_text(html, encoding="utf-8")
-print("wrote", Path(__file__).with_name("electronics_views.html"))
+units = [("Raspberry Pi 4 + DAC Pro", stack), ("Waveshare 2in LCD module", screen), ("Bourns PEC11R encoder", enc)]
+body, y, width = [], 10, 0
+for title, items in units:
+    body.append(f'<text x="10" y="{y + 18}" class="ut">{title}</text>')
+    y += 28
+    x, row_h = 10, 0
+    for v in VIEWS:
+        g, W, H = view_svg(items, v, [])
+        body.append(f'<g transform="translate({x:.0f},{y:.0f})">{g}</g>')
+        x += max(W, 150) + 12
+        row_h = max(row_h, H)
+    width = max(width, x)
+    y += row_h + 16
+svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f}" width="{width:.0f}" height="{y:.0f}">'
+       '<style>text{font-family:sans-serif}.ut{font-size:16px;font-weight:700}.vt{font-size:11px;font-weight:600}.dm{font-size:11px;fill:#333}</style>'
+       f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
+Path(__file__).with_name("electronics_views.svg").write_text(svg, encoding="utf-8")
+print("wrote", Path(__file__).with_name("electronics_views.svg"))
