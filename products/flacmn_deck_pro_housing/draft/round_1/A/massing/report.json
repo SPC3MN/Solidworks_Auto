@@ -1,0 +1,411 @@
+{
+ "option": "A",
+ "round": 1,
+ "option_hash": "f39f17d9dd3d8890",
+ "time": "2026-11-11T15:13:28",
+ "status": "pass",
+ "freecad_version": "1.1.4",
+ "bbox": [
+  115.15,
+  107.8,
+  50.0
+ ],
+ "parts": {
+  "tray": {
+   "volume": 15660.19,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    90.9,
+    81.0,
+    44.8
+   ]
+  },
+  "cover": {
+   "volume": 14823.0,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    93.5,
+    81.0,
+    46.0
+   ]
+  },
+  "pi4": {
+   "volume": 23306.8,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    87.7,
+    56.0,
+    17.4
+   ]
+  },
+  "dac": {
+   "volume": 12379.979,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    65.0,
+    65.25,
+    14.6
+   ]
+  },
+  "jumpers": {
+   "volume": 4207.5,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    51.0,
+    5.0,
+    16.5
+   ]
+  },
+  "standoff": {
+   "volume": 58.905,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    5.0,
+    5.0,
+    3.0
+   ]
+  },
+  "pad": {
+   "volume": 675.0,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    15.0,
+    15.0,
+    3.0
+   ]
+  },
+  "screen": {
+   "volume": 22330.0,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    58.0,
+    11.0,
+    35.0
+   ]
+  },
+  "enc_front": {
+   "volume": 2285.511,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    12.5,
+    31.1,
+    13.4
+   ]
+  },
+  "enc_side": {
+   "volume": 2285.511,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    31.1,
+    12.5,
+    13.4
+   ]
+  },
+  "knob_front": {
+   "volume": 7363.108,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    25.0,
+    15.0,
+    25.0
+   ]
+  },
+  "knob_side": {
+   "volume": 7363.108,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    15.0,
+    25.0,
+    25.0
+   ]
+  },
+  "feet": {
+   "volume": 314.159,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    10.0,
+    10.0,
+    4.0
+   ]
+  },
+  "screw_m3": {
+   "volume": 42.104,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    1.65,
+    5.7,
+    5.7
+   ]
+  },
+  "clinch_nut": {
+   "volume": 48.255,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    1.5,
+    6.4,
+    6.4
+   ]
+  },
+  "screw_pi": {
+   "volume": 23.856,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    4.5,
+    4.5,
+    1.5
+   ]
+  },
+  "screw_dac": {
+   "volume": 23.856,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    4.5,
+    4.5,
+    1.5
+   ]
+  },
+  "screen_fix": {
+   "volume": 13.609,
+   "solids": 1,
+   "valid": true,
+   "bbox": [
+    3.8,
+    1.2,
+    3.8
+   ]
+  }
+ },
+ "interference": [
+  {
+   "pair": [
+    "dac",
+    "tray"
+   ],
+   "labels": [
+    "tray",
+    "dac"
+   ],
+   "volume_mm3": 100.531
+  },
+  {
+   "pair": [
+    "enc_front",
+    "tray"
+   ],
+   "labels": [
+    "tray",
+    "enc_front"
+   ],
+   "volume_mm3": 28.2743
+  },
+  {
+   "pair": [
+    "cover",
+    "enc_side"
+   ],
+   "labels": [
+    "cover",
+    "enc_side"
+   ],
+   "volume_mm3": 28.2743
+  },
+  {
+   "pair": [
+    "enc_front",
+    "knob_front"
+   ],
+   "labels": [
+    "enc_front",
+    "knob_front"
+   ],
+   "volume_mm3": 424.115
+  },
+  {
+   "pair": [
+    "enc_side",
+    "knob_side"
+   ],
+   "labels": [
+    "enc_side",
+    "knob_side"
+   ],
+   "volume_mm3": 424.115
+  }
+ ],
+ "checks": [
+  {
+   "id": "bbox.x",
+   "ok": true,
+   "message": "3D envelope x is 115.15, the sketch says 115.15"
+  },
+  {
+   "id": "bbox.y",
+   "ok": true,
+   "message": "3D envelope y is 107.8, the sketch says 107.8"
+  },
+  {
+   "id": "bbox.z",
+   "ok": true,
+   "message": "3D envelope z is 50, the sketch says 50"
+  },
+  {
+   "id": "solid.tray",
+   "ok": true,
+   "message": "part tray is not a valid solid"
+  },
+  {
+   "id": "solid.cover",
+   "ok": true,
+   "message": "part cover is not a valid solid"
+  },
+  {
+   "id": "solid.pi4",
+   "ok": true,
+   "message": "part pi4 is not a valid solid"
+  },
+  {
+   "id": "solid.dac",
+   "ok": true,
+   "message": "part dac is not a valid solid"
+  },
+  {
+   "id": "solid.jumpers",
+   "ok": true,
+   "message": "part jumpers is not a valid solid"
+  },
+  {
+   "id": "solid.standoff",
+   "ok": true,
+   "message": "part standoff is not a valid solid"
+  },
+  {
+   "id": "solid.pad",
+   "ok": true,
+   "message": "part pad is not a valid solid"
+  },
+  {
+   "id": "solid.screen",
+   "ok": true,
+   "message": "part screen is not a valid solid"
+  },
+  {
+   "id": "solid.enc_front",
+   "ok": true,
+   "message": "part enc_front is not a valid solid"
+  },
+  {
+   "id": "solid.enc_side",
+   "ok": true,
+   "message": "part enc_side is not a valid solid"
+  },
+  {
+   "id": "solid.knob_front",
+   "ok": true,
+   "message": "part knob_front is not a valid solid"
+  },
+  {
+   "id": "solid.knob_side",
+   "ok": true,
+   "message": "part knob_side is not a valid solid"
+  },
+  {
+   "id": "solid.feet",
+   "ok": true,
+   "message": "part feet is not a valid solid"
+  },
+  {
+   "id": "solid.screw_m3",
+   "ok": true,
+   "message": "part screw_m3 is not a valid solid"
+  },
+  {
+   "id": "solid.clinch_nut",
+   "ok": true,
+   "message": "part clinch_nut is not a valid solid"
+  },
+  {
+   "id": "solid.screw_pi",
+   "ok": true,
+   "message": "part screw_pi is not a valid solid"
+  },
+  {
+   "id": "solid.screw_dac",
+   "ok": true,
+   "message": "part screw_dac is not a valid solid"
+  },
+  {
+   "id": "solid.screen_fix",
+   "ok": true,
+   "message": "part screen_fix is not a valid solid"
+  },
+  {
+   "id": "interference.dac/tray",
+   "ok": true,
+   "message": "dac and tray overlap by 100.531 mm³"
+  },
+  {
+   "id": "interference.enc_front/tray",
+   "ok": true,
+   "message": "enc_front and tray overlap by 28.2743 mm³"
+  },
+  {
+   "id": "interference.cover/enc_side",
+   "ok": true,
+   "message": "cover and enc_side overlap by 28.2743 mm³"
+  },
+  {
+   "id": "interference.enc_front/knob_front",
+   "ok": true,
+   "message": "enc_front and knob_front overlap by 424.115 mm³"
+  },
+  {
+   "id": "interference.enc_side/knob_side",
+   "ok": true,
+   "message": "enc_side and knob_side overlap by 424.115 mm³"
+  }
+ ],
+ "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_1/A/massing/massing.step",
+ "renders": [
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_1/A/massing/renders/isometric.png",
+   "isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_1/A/massing/renders/front.png",
+   "front"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_1/A/massing/renders/right.png",
+   "right"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_1/A/massing/renders/top.png",
+   "top"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_1/A/massing/renders/section/isometric.png",
+   "section, isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_1/A/massing/renders/section/front.png",
+   "section, front"
+  ]
+ ]
+}

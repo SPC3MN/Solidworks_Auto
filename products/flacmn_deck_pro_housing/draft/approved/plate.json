@@ -1,0 +1,369 @@
+{
+ "_comment": "flacmn deck pro base plate: carries the Pi stack; lifts into the shell from below. Round 4.",
+ "name": "plate",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "dims": "outside",
+ "params": {
+  "t": {
+   "value": 1.0,
+   "src": "given",
+   "note": "5052-H32 1.0, the only material profile"
+  },
+  "hinge": {
+   "value": 0.5,
+   "src": "estimated",
+   "note": "bridges bend at mid-thickness until a coupon says otherwise"
+  },
+  "allow": {
+   "value": 0.0,
+   "src": "estimated",
+   "note": "flat length taken by a fold; 0 until measured"
+  },
+  "corner": {
+   "value": 0.3,
+   "src": "chosen",
+   "note": "gap between neighbouring walls at a corner"
+  },
+  "gap": {
+   "value": 0.3,
+   "src": "chosen",
+   "note": "plate edge to wall inner face"
+  },
+  "rim": {
+   "value": 3.5,
+   "src": "given",
+   "note": "owner 2026-11-11: knob = height - 7 (3.5 rim in 1 mm folded sheet)"
+  },
+  "H": {
+   "value": 46.0,
+   "src": "given",
+   "note": "owner: 46 tall"
+  },
+  "knob_d": "H - 2*rim",
+  "knob_h": {
+   "value": 5.0,
+   "src": "given",
+   "note": "owner: 5 thick, flush"
+  },
+  "knob_clear": 0.5,
+  "knob_hole": "knob_d + 2*knob_clear",
+  "W": {
+   "value": 104.0,
+   "src": "chosen",
+   "note": "side encoder body beside the Pi's microSD end"
+  },
+  "D": {
+   "value": 83.0,
+   "src": "chosen",
+   "note": "outside depth: screen zone + left flange + Pi + recessed rear sockets"
+  },
+  "pcb_l": {
+   "value": 85.0,
+   "src": "given"
+  },
+  "pcb_w": {
+   "value": 56.0,
+   "src": "given"
+  },
+  "pcb_t": {
+   "value": 1.4,
+   "src": "given"
+  },
+  "jack_oh": {
+   "value": 2.7,
+   "src": "estimated",
+   "note": "USB/Ethernet past the Pi's PCB edge"
+  },
+  "usbc_oh": {
+   "value": 1.2,
+   "src": "estimated",
+   "note": "USB-C and micro-HDMI past the PCB edge"
+  },
+  "sd_oh": {
+   "value": 2.5,
+   "src": "estimated",
+   "note": "microSD card past the PCB edge"
+  },
+  "h_so": {
+   "value": 3.0,
+   "src": "chosen",
+   "note": "M2.5 standoff under the Pi = thermal pad gap"
+  },
+  "h_hat": {
+   "value": 9.0,
+   "src": "given",
+   "note": "DAC Pro standoffs"
+  },
+  "hat_t": {
+   "value": 1.6,
+   "src": "given"
+  },
+  "hat_l": {
+   "value": 65.0,
+   "src": "given"
+  },
+  "hat_w": {
+   "value": 56.5,
+   "src": "given"
+  },
+  "jumper_h": {
+   "value": 14.0,
+   "src": "estimated",
+   "note": "Dupont housing on the pass-through header"
+  },
+  "wire_bend": {
+   "value": 6.0,
+   "src": "estimated",
+   "note": "jumper wire bend above the housing"
+  },
+  "rca_len": {
+   "value": 9.0,
+   "src": "given",
+   "note": "projects/rpi_dac_pro: barrels past the HAT edge"
+  },
+  "sock_recess": {
+   "value": 1.0,
+   "src": "chosen",
+   "note": "socket tips stop this far inside the rear wall"
+  },
+  "px0": "t + gap + jack_oh",
+  "px1": "px0 + pcb_l",
+  "py1": "D - t - sock_recess - rca_len",
+  "py0": "py1 - pcb_w",
+  "zp": "t + h_so",
+  "zpt": "zp + pcb_t",
+  "zh": "zpt + h_hat",
+  "zht": "zh + hat_t",
+  "rca_x1": "px1 - 18.36",
+  "rca_x2": "px1 - 32.98",
+  "rca_z": "zht + 6.5",
+  "rca_hole": {
+   "value": 13.0,
+   "src": "estimated",
+   "note": "RCA plug shell passes; check with your leads"
+  },
+  "jack_x": "px1 - 51.8",
+  "jack_z": "zht + 3",
+  "jack_hole": {
+   "value": 10.0,
+   "src": "estimated",
+   "note": "slim 3.5 mm plug body passes"
+  },
+  "usbc_x": "px1 - 11.2",
+  "usbc_z": "zpt + 1.6",
+  "usbc_w": {
+   "value": 13.0,
+   "src": "estimated",
+   "note": "USB-C overmold passes"
+  },
+  "usbc_h": {
+   "value": 7.5,
+   "src": "estimated"
+  },
+  "eth_y": "py1 - 45.75",
+  "usb3_y": "py1 - 27",
+  "usb2_y": "py1 - 9",
+  "eth_w": 16.5,
+  "eth_h": 14.5,
+  "usb_w": 15.5,
+  "usb_h": 16.5,
+  "jack_z0": "zpt - 0.5",
+  "scr_l": {
+   "value": 58.0,
+   "src": "given"
+  },
+  "scr_h": {
+   "value": 35.0,
+   "src": "given"
+  },
+  "scr_d": {
+   "value": 11.0,
+   "src": "estimated",
+   "note": "module ~5 + its connector ~6"
+  },
+  "win_w": {
+   "value": 42.0,
+   "src": "given"
+  },
+  "win_h": {
+   "value": 32.0,
+   "src": "given"
+  },
+  "win_x": "(encF_x - knob_d/2)/2",
+  "scr_z": "H/2",
+  "enc_w": {
+   "value": 12.5,
+   "src": "estimated"
+  },
+  "enc_h": {
+   "value": 13.4,
+   "src": "estimated"
+  },
+  "enc_d": {
+   "value": 10.1,
+   "src": "estimated",
+   "note": "body 6.6 + pins"
+  },
+  "enc_hole": {
+   "value": 7.4,
+   "src": "given"
+  },
+  "enc_tab_r": {
+   "value": 7.5,
+   "src": "estimated",
+   "note": "anti-turn tab offset"
+  },
+  "enc_tab_d": 2.4,
+  "bush_out": {
+   "value": 6.0,
+   "src": "estimated",
+   "note": "bushing 7 past the body, less the tab"
+  },
+  "encF_x": "W - rim - knob_d/2",
+  "encF_z": "H/2",
+  "encS_y": "D/2",
+  "encS_z": "H/2",
+  "cap_back": "bush_out + knob_clear",
+  "cap_front": "cap_back + knob_h",
+  "fw": 8.0,
+  "fl_left": 13.0,
+  "fl_right": 20.0,
+  "nut_hole": {
+   "value": 4.22,
+   "src": "given",
+   "note": "PEM CLS-M3-0 mounting hole"
+  },
+  "screw_hole": 3.4,
+  "wifi_x0": 45.0,
+  "wifi_x1": 80.0,
+  "wifi_y0": 22.0,
+  "wifi_y1": 28.0,
+  "feet_h": {
+   "value": 4.0,
+   "src": "estimated"
+  },
+  "feet_d": 10.0,
+  "soc_x": "px1 - 29",
+  "soc_y": "py1 - 32",
+  "tw": "W - 2*hinge*t - allow",
+  "td": "D - 2*hinge*t - allow",
+  "inset": "(1 - hinge)*t + corner",
+  "fwid": "tw - 2*inset",
+  "swid": "td - 2*inset",
+  "wl": "H - 2*t - allow",
+  "ly_left_hole": "inset + 1 + fl_left/2",
+  "ly_right_hole": "td - inset - 1 - fl_right/2",
+  "o": "t + gap",
+  "plw": "W - 2*(t + gap)",
+  "pld": "D - 2*(t + gap)"
+ },
+ "panels": [
+  {
+   "id": "plate",
+   "name": "Base plate",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "plw",
+     0
+    ],
+    [
+     "plw",
+     "pld"
+    ],
+    [
+     0,
+     "pld"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 3.5) - o",
+      "(py1 - 3.5) - o"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 3.5) - o",
+      "(py1 - 52.5) - o"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 61.5) - o",
+      "(py1 - 3.5) - o"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 61.5) - o",
+      "(py1 - 52.5) - o"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "screw_hole",
+     "at": [
+      "(hinge*t + fw/2) - o",
+      "(hinge*t + ly_left_hole) - o"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "screw_hole",
+     "at": [
+      "(W - hinge*t - fw/2) - o",
+      "(hinge*t + ly_right_hole) - o"
+     ]
+    },
+    {
+     "type": "rect",
+     "size": [
+      "wifi_x1 - wifi_x0",
+      "wifi_y1 - wifi_y0"
+     ],
+     "at": [
+      "((wifi_x0 + wifi_x1)/2) - o",
+      "((wifi_y0 + wifi_y1)/2) - o"
+     ]
+    }
+   ]
+  }
+ ],
+ "folds": [],
+ "recipes": {
+  "fold": {
+   "_comment": "Starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
+   "method": "slots",
+   "slot_length": 8.0,
+   "slot_width": 0.5,
+   "bridge": 1.5,
+   "end_clearance": 2.0,
+   "hinge": "hinge",
+   "allowance": "allow"
+  }
+ },
+ "hardware": [
+  {
+   "name": "M3 x 6 low-head screw (plate to shell flanges, from below)",
+   "qty": 2
+  },
+  {
+   "name": "M2.5 x 6 screw (Pi, from below)",
+   "qty": 4
+  }
+ ]
+}

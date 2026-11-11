@@ -1,0 +1,715 @@
+{
+ "schema_version": "1.0",
+ "sheet": "shell",
+ "timestamp": "20261111T165036",
+ "freecad_version": "1.1.4",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "manufacturing_status": "PLACEHOLDERS: conservative guesses, not taken from any machine or service. Replace when the cutting route is chosen.",
+ "verdicts": {
+  "geometrically valid": true,
+  "manufacturable": true,
+  "experimentally validated": false
+ },
+ "untested": true,
+ "blank_mm": [
+  207.0,
+  170.0,
+  1.0
+ ],
+ "flat_area_mm2": 22061.179,
+ "folded_envelope_mm": [
+  104.0,
+  83.0,
+  45.0
+ ],
+ "volume_mm3": 22061.179,
+ "folds": [
+  {
+   "id": "f_front",
+   "parent": "top",
+   "child": "front",
+   "angle": 90.0,
+   "direction": "down",
+   "sequence": 2,
+   "recipe": "fold",
+   "length": 101.4,
+   "slots": 10,
+   "cut_length": 80.0,
+   "bridge_total": 21.4,
+   "bridge_share": 0.211,
+   "end_uncut": 3.95
+  },
+  {
+   "id": "f_right",
+   "parent": "top",
+   "child": "right",
+   "angle": 90.0,
+   "direction": "down",
+   "sequence": 2,
+   "recipe": "fold",
+   "length": 80.4,
+   "slots": 8,
+   "cut_length": 64.0,
+   "bridge_total": 16.4,
+   "bridge_share": 0.204,
+   "end_uncut": 2.95
+  },
+  {
+   "id": "f_rear",
+   "parent": "top",
+   "child": "rear",
+   "angle": 90.0,
+   "direction": "down",
+   "sequence": 2,
+   "recipe": "fold",
+   "length": 101.4,
+   "slots": 10,
+   "cut_length": 80.0,
+   "bridge_total": 21.4,
+   "bridge_share": 0.211,
+   "end_uncut": 3.95
+  },
+  {
+   "id": "f_left",
+   "parent": "top",
+   "child": "left",
+   "angle": 90.0,
+   "direction": "down",
+   "sequence": 2,
+   "recipe": "fold",
+   "length": 80.4,
+   "slots": 8,
+   "cut_length": 64.0,
+   "bridge_total": 16.4,
+   "bridge_share": 0.204,
+   "end_uncut": 2.95
+  },
+  {
+   "id": "f_left_flange",
+   "parent": "left",
+   "child": "left_flange",
+   "angle": 90.0,
+   "direction": "down",
+   "sequence": 1,
+   "recipe": "fold",
+   "length": 13.0,
+   "slots": 1,
+   "cut_length": 8.0,
+   "bridge_total": 5.0,
+   "bridge_share": 0.3846,
+   "end_uncut": 2.5
+  },
+  {
+   "id": "f_right_flange",
+   "parent": "right",
+   "child": "right_flange",
+   "angle": 90.0,
+   "direction": "down",
+   "sequence": 1,
+   "recipe": "fold",
+   "length": 20.0,
+   "slots": 1,
+   "cut_length": 8.0,
+   "bridge_total": 12.0,
+   "bridge_share": 0.6,
+   "end_uncut": 6.0
+  }
+ ],
+ "bom": [
+  {
+   "name": "5052-H32 sheet, 1 mm",
+   "qty": 1,
+   "blank_mm": [
+    207.0,
+    170.0
+   ]
+  },
+  {
+   "name": "PEM CLS-M3-0 clinch nut (flanges, pressed from inside)",
+   "qty": 2
+  }
+ ],
+ "checks": [
+  {
+   "id": "feature.front.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.front.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 0: 5.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.front.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 1: 17.80 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.1.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 1: hole Ø7.4 (minimum 1)"
+  },
+  {
+   "id": "feature.front.2.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 2 lies inside the panel"
+  },
+  {
+   "id": "feature.front.2.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 2: 13.80 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.2.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 2: hole Ø2.4 (minimum 1)"
+  },
+  {
+   "id": "feature.rear.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel rear, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.rear.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel rear, feature 0: 14.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.rear.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel rear, feature 0: hole Ø13 (minimum 1)"
+  },
+  {
+   "id": "feature.rear.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel rear, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.rear.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel rear, feature 1: 14.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.rear.1.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel rear, feature 1: hole Ø13 (minimum 1)"
+  },
+  {
+   "id": "feature.rear.2.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel rear, feature 2 lies inside the panel"
+  },
+  {
+   "id": "feature.rear.2.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel rear, feature 2: 12.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.rear.2.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel rear, feature 2: hole Ø10 (minimum 1)"
+  },
+  {
+   "id": "feature.rear.3.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel rear, feature 3 lies inside the panel"
+  },
+  {
+   "id": "feature.rear.3.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel rear, feature 3: 1.75 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.left.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel left, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.left.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel left, feature 0: 3.40 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.left.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel left, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.left.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel left, feature 1: 3.40 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.left.2.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel left, feature 2 lies inside the panel"
+  },
+  {
+   "id": "feature.left.2.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel left, feature 2: 3.40 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.right.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel right, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.right.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel right, feature 0: 17.80 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.right.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel right, feature 0: hole Ø7.4 (minimum 1)"
+  },
+  {
+   "id": "feature.right.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel right, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.right.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel right, feature 1: 13.80 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.right.1.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel right, feature 1: hole Ø2.4 (minimum 1)"
+  },
+  {
+   "id": "feature.left_flange.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel left_flange, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.left_flange.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel left_flange, feature 0: 1.89 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.left_flange.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel left_flange, feature 0: hole Ø4.22 (minimum 1)"
+  },
+  {
+   "id": "feature.right_flange.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel right_flange, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.right_flange.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel right_flange, feature 0: 1.89 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.right_flange.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel right_flange, feature 0: hole Ø4.22 (minimum 1)"
+  },
+  {
+   "id": "fold.f_front.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_front: angle 90°"
+  },
+  {
+   "id": "fold.f_front.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_front: 10 slots on 101.4 mm, 21 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_front.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_front: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_front.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_front: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_front.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_front: 3.95 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_front.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_front: panel front is 44.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_front.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_front: nearest hole or cutout is 6.50 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_front.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_front: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_right.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_right: angle 90°"
+  },
+  {
+   "id": "fold.f_right.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_right: 8 slots on 80.4 mm, 20 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_right.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_right.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_right.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: 2.95 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_right.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: panel right is 44.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_right.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: nearest hole or cutout is 13.80 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_right.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_right: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_rear.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_rear: angle 90°"
+  },
+  {
+   "id": "fold.f_rear.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_rear: 10 slots on 101.4 mm, 21 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_rear.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_rear: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_rear.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_rear: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_rear.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_rear: 3.95 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_rear.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_rear: panel rear is 44.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_rear.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_rear: nearest hole or cutout is 16.50 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_rear.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_rear: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_left.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_left: angle 90°"
+  },
+  {
+   "id": "fold.f_left.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_left: 8 slots on 80.4 mm, 20 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_left.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_left.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_left.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: 2.95 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_left.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: panel left is 44.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_left.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: nearest hole or cutout is 24.10 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_left.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_left: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_left_flange.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_left_flange: angle 90°"
+  },
+  {
+   "id": "fold.f_left_flange.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_left_flange: 1 slots on 13 mm, 38 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_left_flange.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left_flange: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_left_flange.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left_flange: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_left_flange.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left_flange: 2.50 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_left_flange.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left_flange: panel left_flange is 8.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_left_flange.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left_flange: nearest hole or cutout is 1.89 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_left_flange.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_left_flange: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_right_flange.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_right_flange: angle 90°"
+  },
+  {
+   "id": "fold.f_right_flange.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_right_flange: 1 slots on 20 mm, 60 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_right_flange.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right_flange: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_right_flange.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right_flange: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_right_flange.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right_flange: 6.00 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_right_flange.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right_flange: panel right_flange is 8.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_right_flange.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right_flange: nearest hole or cutout is 1.89 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_right_flange.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_right_flange: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "flat.overlap",
+   "level": "geometric",
+   "ok": true,
+   "message": "panels do not overlap in the flat pattern"
+  },
+  {
+   "id": "flat.one_piece",
+   "level": "geometric",
+   "ok": true,
+   "message": "the flat pattern is 1 piece(s)"
+  },
+  {
+   "id": "folded.bbox",
+   "level": "geometric",
+   "ok": true,
+   "message": "the kernel's folded envelope equals the arithmetic's"
+  },
+  {
+   "id": "folded.interference",
+   "level": "geometric",
+   "ok": true,
+   "message": "no folded panels collide"
+  },
+  {
+   "id": "sequence.1",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 1 can be carried out"
+  },
+  {
+   "id": "sequence.2",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 2 can be carried out"
+  },
+  {
+   "id": "flat.dxf_readback",
+   "level": "geometric",
+   "ok": true,
+   "message": "the DXF reads back with the same entities per layer and the blank's extent ({'CUT_THROUGH': 15, 'FOLD_PERFORATION': 38, 'FOLD_DIRECTION': 18, 'REFERENCE': 35})"
+  }
+ ],
+ "files": {
+  "dxf": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/flat/shell_UNTESTED.dxf",
+  "svg": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/flat/shell.svg",
+  "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/folded/shell.step",
+  "fcstd": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/shell.FCStd"
+ },
+ "renders": [
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/isometric.png",
+   "isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/front.png",
+   "front"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/right.png",
+   "right"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/top.png",
+   "top"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/sequence_1/isometric.png",
+   "after step 1"
+  ]
+ ]
+}

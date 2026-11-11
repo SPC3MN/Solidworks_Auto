@@ -1,0 +1,304 @@
+{
+ "schema_version": "1.0",
+ "product": "flacmn_deck_pro_housing",
+ "title": "flacmn deck pro housing",
+ "purpose": "Housing for the flacmn deck pro hi-fi shelf music player: Raspberry Pi 4 + DAC Pro stack, a small screen and two encoder knobs, line out at the rear.",
+ "options": 1,
+ "_comment": "Stage 0 of /design. options: how many designs to draw per round; 1 unless the owner asks for options. requirements: {id, text, priority must|should|free, provenance given|measured|chosen|estimated, source, check {lhs, op, rhs} (optional, over option parameters and bbox_x/y/z, parts_total, parts_make, parts_buy, fasteners, setups)}. Keys starting with _ are notes. See .claude/skills/design/references/schemas.md.",
+ "defaults": {
+  "goal": "the simplest design that works",
+  "machined": "6061-T6",
+  "printed": "PETG, FDM (brief: PETG or ASA near the Pi; PLA softens at 55-60 C)",
+  "fits": "ISO 286",
+  "general_tolerance": "ISO 2768-mK",
+  "units": "mm"
+ },
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Holds a Raspberry Pi 4 B with the DAC Pro on 9 mm standoffs above it (stack ~85 x 56 x 35) on 4 M2.5 posts, 58 x 49 pattern",
+   "priority": "must",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R2",
+   "text": "Front face: screen on the left, one encoder knob to its right",
+   "priority": "must",
+   "provenance": "given",
+   "source": "references/Housing_Plan.pdf (owner, 2026-11-11)"
+  },
+  {
+   "id": "R3",
+   "text": "Right side face (seen from the front): the second encoder knob",
+   "priority": "must",
+   "provenance": "given",
+   "source": "references/Housing_Plan.pdf (owner, 2026-11-11)"
+  },
+  {
+   "id": "R4",
+   "text": "Rear face: the inputs and outputs (the plan leaves the rear layout to the designer)",
+   "priority": "should",
+   "provenance": "given",
+   "source": "references/Housing_Plan.pdf (owner, 2026-11-11)"
+  },
+  {
+   "id": "R5",
+   "text": "Use the boards' own sockets; add panel-mount extensions only where a socket cannot reach the rear",
+   "priority": "should",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R6",
+   "text": "Openings: power USB-C, 2 x RCA line out, Ethernet, 4 x USB-A (music drive in one); headphone jack and status LED optional",
+   "priority": "must",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R7",
+   "text": "No openings for HDMI or a power button",
+   "priority": "must",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R8",
+   "text": "microSD stays in the Pi's slot; reachable through a wall slot or an easy-to-remove lid",
+   "priority": "must",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R9",
+   "text": "Sheds 8-10 W with no fan; under ~70 C after 30 min of converting (thermal pad to aluminium, or heatsink + 10-15 cm2 vents low and high)",
+   "priority": "must",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R10",
+   "text": "Wi-Fi gets out (plastic housing, or a plastic window over the antenna, or Ethernet only)",
+   "priority": "should",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R11",
+   "text": "Encoder walls thin enough for the M7 nut to catch on the 7 mm bushing (wall <= ~4 at the knobs)",
+   "priority": "must",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R12",
+   "text": "Knob caps 5 thick, diameter = deck height - 7 (39 at 46 tall); they slide over the encoder shafts that protrude through small wall cut-outs",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 3 push-back)"
+  },
+  {
+   "id": "R13",
+   "text": "RCA and headphone leads short and away from the USB-C power lead",
+   "priority": "should",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R14",
+   "text": "Rubber feet: stands still and air passes underneath",
+   "priority": "must",
+   "provenance": "given",
+   "source": "docs/briefs/flacmn_deck_pro_housing.md (owner, 2026-11-11)"
+  },
+  {
+   "id": "R15",
+   "text": "Fewest parts and fastenings that do all of the above",
+   "priority": "should",
+   "provenance": "given",
+   "source": "owner standing rule"
+  },
+  {
+   "id": "R16",
+   "text": "Wall thickness, joint and fastening method, exact knob and screen positions within the plan",
+   "priority": "free",
+   "provenance": "chosen",
+   "source": "designer decides"
+  },
+  {
+   "id": "R17",
+   "text": "Screen: Waveshare 2in SPI LCD (58 x 35 module, window ~42 x 32), wired to the GPIO; no HDMI",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (gap questions)"
+  },
+  {
+   "id": "R18",
+   "text": "Power USB-C, 2 x RCA and headphone jack out the rear on the boards' own sockets; USB x4 and Ethernet out the left side; no panel-mount add-ons",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (gap questions)"
+  },
+  {
+   "id": "R19",
+   "text": "Hand-folded aluminium sheet; processor heat to the aluminium through a thermal pad, no vents",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (gap questions)"
+  },
+  {
+   "id": "R20",
+   "text": "Wi-Fi: a plastic window over the Pi's antenna, or Ethernet only",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (gap questions)"
+  },
+  {
+   "id": "R21",
+   "text": "No balanced-out openings or reserved room",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (gap questions)"
+  },
+  {
+   "id": "R22",
+   "text": "Nothing protrudes from the top, front, rear or sides except the encoder shafts and their knob caps; feet and screw heads on the underside are allowed",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 3 push-back)"
+  },
+  {
+   "id": "R23",
+   "text": "As few screws as possible",
+   "priority": "should",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 2 push-back)"
+  }
+ ],
+ "bought_parts": [
+  {
+   "id": "pi4",
+   "name": "Raspberry Pi 4 Model B",
+   "part_number": "SC0193",
+   "library": null,
+   "provenance": "given",
+   "_note": "no model yet; build from the Raspberry Pi mechanical drawing"
+  },
+  {
+   "id": "dac",
+   "name": "Raspberry Pi DAC Pro",
+   "part_number": "SC2077",
+   "library": "rpi_dac_pro",
+   "provenance": "given"
+  },
+  {
+   "id": "screen",
+   "name": "Waveshare 2in LCD Module",
+   "part_number": "17344",
+   "library": null,
+   "provenance": "given",
+   "_note": "no model yet; 58 x 35 outline, ~4-5 thick (estimate)"
+  },
+  {
+   "id": "encoder",
+   "name": "Bourns PEC11R-4220F-S0024 x 2",
+   "part_number": "PEC11R-4220F-S0024",
+   "library": "encoder_pec11r",
+   "provenance": "given"
+  },
+  {
+   "id": "standoff",
+   "name": "M2.5 standoffs",
+   "part_number": "",
+   "library": "standoff_m25",
+   "provenance": "given"
+  },
+  {
+   "id": "feet",
+   "name": "Rubber feet x 4",
+   "part_number": "",
+   "library": null,
+   "provenance": "chosen"
+  }
+ ],
+ "conflicts": [
+  {
+   "text": "No face takes every socket without an add-on: USB-C power, the DAC Pro RCA and headphone sockets are on the Pi's long side; USB and Ethernet are on its short edge. Either the USB/Ethernet edge goes to a side wall, or the rear needs a USB-C extension plus RCA/jack panel sockets wired to the DAC headers.",
+   "resolution": "owner: power, RCA and headphones out the rear on their own sockets; USB x4 and Ethernet out the left side; no add-ons (2026-11-11)"
+  },
+  {
+   "text": "3.5in HDMI screen: the Pi 4's two micro-HDMI sockets are on the same long side as USB-C, directly under the DAC Pro's RCA sockets. A cable plug there (25-35 mm with its bend, ~10 even with a flat FPC adapter) stops that side from reaching the rear wall, so with the 3.5in screen the RCA and power cannot use their own sockets at the rear. The 2in SPI screen (jumpers to the GPIO) has no such cable.",
+   "resolution": "owner: size for the 2in SPI screen now; no HDMI (2026-11-11)"
+  },
+  {
+   "text": "Pi 4 microSD is on the short edge opposite USB/Ethernet. If USB/Ethernet faces the left wall, the SD edge faces the right wall, where the side knob is; a wall slot only works if the Pi spans wall to wall, otherwise the base must come off.",
+   "resolution": "designer: follows from the layout; solved in the round (wall slot if the Pi spans wall to wall, else removable base)"
+  },
+  {
+   "text": "Housing_Plan.pdf is an arrangement, not to scale: the knob circles are drawn ~3/4 of the face height, a 25 mm knob is far smaller. Positions are taken from it; sizes from the parts.",
+   "resolution": "designer: arrangement from the plan, sizes from the parts (2026-11-11)"
+  },
+  {
+   "text": "Flush knobs: a 2 mm rim (knob = height - 4, chosen 2026-11-11) leaves ~0.3-1.2 mm of 1 mm sheet above and below the knob opening, next to the folds. Hand-folded 1 mm sheet needs ~3.5 mm: knob = height - 7.",
+   "resolution": "owner: knob 39 at 46 tall (3.5 rim) (2026-11-11)"
+  }
+ ],
+ "open_questions": [
+  {
+   "question": "Screen: 2in SPI or 3.5in HDMI (owner decides after testing the 2in)",
+   "answer": "2in SPI for now (owner, 2026-11-11)"
+  },
+  {
+   "question": "Knob caps: style and diameter (allow 25)",
+   "answer": "5 thick, diameter = deck height (owner, 2026-11-11)"
+  },
+  {
+   "question": "Stack height with the DAC Pro: measure",
+   "answer": null
+  },
+  {
+   "question": "Confirm the DAC Pro RCA/jack face the Pi's USB-C long side",
+   "answer": null
+  },
+  {
+   "question": "Pi 4 Wi-Fi antenna position (for a metal housing)",
+   "answer": null
+  },
+  {
+   "question": "Balanced out: openings now or room for later",
+   "answer": "leave out (owner, 2026-11-11)"
+  }
+ ],
+ "notes": [
+  {
+   "round": 1,
+   "time": "2026-11-11T15:17:55",
+   "text": "I want the buttons to only be 5mm  thck and I want their diameter to be equal to the height of the deck, otherwise move forward with the design",
+   "options": []
+  },
+  {
+   "round": 2,
+   "time": "2026-11-11T16:26:10",
+   "text": "I want the buttons flush to the surface of the volume and i don't want anthing protruding",
+   "options": []
+  },
+  {
+   "round": 2,
+   "text": "owner (gap answers to the flush push-back): knob = height - 4; feet on the underside are fine. Also: I also want as few screws as possible",
+   "source": "owner, 2026-11-11"
+  },
+  {
+   "round": 3,
+   "time": "2026-11-11T16:41:49",
+   "text": "the cutout doesn't need to surround the whole dial. Have a small cutout for the encoder and the button will slide over the protruding encoder",
+   "options": []
+  }
+ ],
+ "_designer_notes": [
+  "Round 3: heat goes from the Pi underside through a 3 mm pad into the base plate, which is the exposed underside between the feet.",
+  "Round 3: Wi-Fi window is a 35 x 6 slot in the base plate under the Pi's antenna corner; Ethernet is the fallback.",
+  "Round 3: microSD is reached by removing the 2 base screws and lowering the plate.",
+  "Every fold uses an UNTESTED slot recipe; coupons before cutting."
+ ]
+}

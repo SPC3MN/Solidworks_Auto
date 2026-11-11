@@ -1,0 +1,441 @@
+{
+ "_comment": "flacmn deck pro cover: top, left side (USB x4 + Ethernet), right side (side knob, microSD/Wi-Fi slot). Generated for draft round 1.",
+ "name": "cover",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "dims": "outside",
+ "params": {
+  "t": {
+   "value": 1.0,
+   "src": "given",
+   "note": "5052-H32 1.0, the only tested-route material profile"
+  },
+  "hinge": {
+   "value": 0.5,
+   "src": "estimated",
+   "note": "bridges bend at mid-thickness until a coupon says otherwise"
+  },
+  "allow": {
+   "value": 0.0,
+   "src": "estimated",
+   "note": "flat length taken by a fold; 0 until measured"
+  },
+  "gap": {
+   "value": 0.3,
+   "src": "chosen",
+   "note": "cover side to tray clearance"
+  },
+  "W": 107.0,
+  "D": {
+   "value": 81.0,
+   "src": "chosen",
+   "note": "outside depth: screen zone + slide-in travel + Pi + USB-C overhang"
+  },
+  "H": {
+   "value": 46.0,
+   "src": "chosen",
+   "note": "outside height without feet: jumper wires on the DAC header"
+  },
+  "pcb_l": {
+   "value": 85.0,
+   "src": "given"
+  },
+  "pcb_w": {
+   "value": 56.0,
+   "src": "given"
+  },
+  "pcb_t": {
+   "value": 1.4,
+   "src": "given"
+  },
+  "jack_oh": {
+   "value": 2.7,
+   "src": "estimated",
+   "note": "USB/Ethernet past the Pi's PCB edge"
+  },
+  "usbc_oh": {
+   "value": 1.2,
+   "src": "estimated",
+   "note": "USB-C and micro-HDMI past the PCB edge"
+  },
+  "sd_oh": {
+   "value": 2.5,
+   "src": "estimated",
+   "note": "microSD card past the PCB edge"
+  },
+  "h_so": {
+   "value": 3.0,
+   "src": "chosen",
+   "note": "M2.5 standoff under the Pi = thermal pad gap"
+  },
+  "h_hat": {
+   "value": 9.0,
+   "src": "given",
+   "note": "DAC Pro standoffs"
+  },
+  "hat_t": {
+   "value": 1.6,
+   "src": "given"
+  },
+  "hat_l": {
+   "value": 65.0,
+   "src": "given"
+  },
+  "hat_w": {
+   "value": 56.5,
+   "src": "given"
+  },
+  "hat_parts": {
+   "value": 2.0,
+   "src": "estimated",
+   "note": "small parts on the DAC Pro at the SD end"
+  },
+  "jumper_h": {
+   "value": 14.0,
+   "src": "estimated",
+   "note": "Dupont housing on the pass-through header"
+  },
+  "wire_bend": {
+   "value": 6.0,
+   "src": "estimated",
+   "note": "jumper wire bend above the housing"
+  },
+  "rca_len": {
+   "value": 9.0,
+   "src": "given",
+   "note": "projects/rpi_dac_pro: barrels past the HAT edge"
+  },
+  "px0": 4.0,
+  "px1": 89.0,
+  "py1": 78.8,
+  "py0": 22.799999999999997,
+  "zp": 4.0,
+  "zpt": 5.4,
+  "zh": 14.4,
+  "zht": 16.0,
+  "slide": 8.299999999999997,
+  "rca_x1": 70.64,
+  "rca_x2": 56.02,
+  "rca_z": 22.5,
+  "rca_hole": 8.6,
+  "jack_x": 37.2,
+  "jack_z": 19.0,
+  "jack_hole": 6.5,
+  "usbc_x": 77.8,
+  "usbc_z": 7.0,
+  "usbc_w": 11.0,
+  "usbc_h": 5.5,
+  "eth_y": 33.05,
+  "usb3_y": 51.8,
+  "usb2_y": 69.8,
+  "eth_w": 16.5,
+  "eth_h": 14.5,
+  "usb_w": 15.5,
+  "usb_h": 16.5,
+  "jack_z0": 4.9,
+  "scr_l": {
+   "value": 58.0,
+   "src": "given"
+  },
+  "scr_h": {
+   "value": 35.0,
+   "src": "given"
+  },
+  "scr_d": {
+   "value": 11.0,
+   "src": "estimated",
+   "note": "module ~5 + its connector ~6"
+  },
+  "scr_x0": 5.0,
+  "scr_z": 23.0,
+  "win_w": {
+   "value": 42.0,
+   "src": "given"
+  },
+  "win_h": {
+   "value": 32.0,
+   "src": "given"
+  },
+  "win_x": 34.0,
+  "scr_hole_dx": {
+   "value": 53.0,
+   "src": "estimated"
+  },
+  "scr_hole_dz": {
+   "value": 30.0,
+   "src": "estimated"
+  },
+  "enc_w": {
+   "value": 12.5,
+   "src": "estimated"
+  },
+  "enc_h": {
+   "value": 13.4,
+   "src": "estimated"
+  },
+  "enc_d": {
+   "value": 10.1,
+   "src": "estimated",
+   "note": "body 6.6 + pins"
+  },
+  "enc_hole": {
+   "value": 7.4,
+   "src": "given"
+  },
+  "enc_tab_r": {
+   "value": 7.5,
+   "src": "estimated",
+   "note": "anti-turn tab offset"
+  },
+  "enc_tab_d": 2.4,
+  "encF_x": 81.0,
+  "encF_z": 23.0,
+  "encS_y": 40.5,
+  "encS_z": 23.0,
+  "knob_d": {
+   "value": 46.0,
+   "src": "given",
+   "note": "owner: diameter = deck height"
+  },
+  "knob_h": {
+   "value": 5.0,
+   "src": "given",
+   "note": "owner: 5 thick"
+  },
+  "bush_out": {
+   "value": 6.0,
+   "src": "estimated",
+   "note": "bushing 7 past the body, less the wall"
+  },
+  "knob_gap": 0.5,
+  "slot_y0": 22.0,
+  "slot_y1": 60.0,
+  "slot_z0": 2.5,
+  "slot_z1": 10.5,
+  "tab_w": 10.0,
+  "tab_h": 12.0,
+  "nut_hole": {
+   "value": 4.22,
+   "src": "given",
+   "note": "PEM CLS-M3-0 mounting hole"
+  },
+  "screw_hole": 3.4,
+  "top_gap": 0.2,
+  "feet_h": {
+   "value": 4.0,
+   "src": "estimated"
+  },
+  "feet_d": 10.0,
+  "soc_x": 60.0,
+  "soc_y": 46.8,
+  "cw": "W - 2*hinge*t - allow",
+  "sh": "H - hinge*t - allow"
+ },
+ "panels": [
+  {
+   "id": "top",
+   "name": "Top",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "cw",
+     0
+    ],
+    [
+     "cw",
+     "D"
+    ],
+    [
+     0,
+     "D"
+    ]
+   ],
+   "features": []
+  },
+  {
+   "id": "left",
+   "name": "Left side",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "D",
+     0
+    ],
+    [
+     "D",
+     "sh"
+    ],
+    [
+     0,
+     "sh"
+    ]
+   ],
+   "features": [
+    {
+     "type": "rect",
+     "size": [
+      "eth_w",
+      "eth_h"
+     ],
+     "at": [
+      "eth_y",
+      "H - hinge*t - (jack_z0 + eth_h/2)"
+     ]
+    },
+    {
+     "type": "rect",
+     "size": [
+      "usb_w",
+      "usb_h"
+     ],
+     "at": [
+      "usb3_y",
+      "H - hinge*t - (jack_z0 + usb_h/2)"
+     ]
+    },
+    {
+     "type": "rect",
+     "size": [
+      "usb_w",
+      "usb_h"
+     ],
+     "at": [
+      "usb2_y",
+      "H - hinge*t - (jack_z0 + usb_h/2)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "screw_hole",
+     "at": [
+      "0.5 + tab_w/2",
+      "H - hinge*t - (H - t - top_gap - tab_h/2)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "screw_hole",
+     "at": [
+      "D - 0.5 - tab_w/2",
+      "H - hinge*t - (H - t - top_gap - tab_h/2)"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "right",
+   "name": "Right side",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "D",
+     0
+    ],
+    [
+     "D",
+     "sh"
+    ],
+    [
+     0,
+     "sh"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "enc_hole",
+     "at": [
+      "D - (encS_y)",
+      "H - hinge*t - (encS_z)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "enc_tab_d",
+     "at": [
+      "D - (encS_y)",
+      "H - hinge*t - (encS_z + enc_tab_r)"
+     ]
+    },
+    {
+     "type": "rect",
+     "size": [
+      "slot_y1 - slot_y0",
+      "slot_z1 - slot_z0"
+     ],
+     "at": [
+      "D - ((slot_y0 + slot_y1)/2)",
+      "H - hinge*t - ((slot_z0 + slot_z1)/2)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "screw_hole",
+     "at": [
+      "D - (0.5 + tab_w/2)",
+      "H - hinge*t - (H - t - top_gap - tab_h/2)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "screw_hole",
+     "at": [
+      "D - (D - 0.5 - tab_w/2)",
+      "H - hinge*t - (H - t - top_gap - tab_h/2)"
+     ]
+    }
+   ]
+  }
+ ],
+ "folds": [
+  {
+   "id": "f_right",
+   "parent": "top",
+   "parent_edge": 1,
+   "child": "right",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "down",
+   "sequence": 1,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_left",
+   "parent": "top",
+   "parent_edge": 3,
+   "child": "left",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "down",
+   "sequence": 1,
+   "recipe": "fold"
+  }
+ ],
+ "recipes": {
+  "fold": {
+   "_comment": "Starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
+   "method": "slots",
+   "slot_length": 8.0,
+   "slot_width": 0.5,
+   "bridge": 1.5,
+   "end_clearance": 2.0,
+   "hinge": "hinge",
+   "allowance": "allow"
+  }
+ },
+ "hardware": [
+  {
+   "name": "M3 x 6 button screw",
+   "qty": 4
+  }
+ ]
+}

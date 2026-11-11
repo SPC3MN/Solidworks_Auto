@@ -1,0 +1,663 @@
+{
+ "_comment": "flacmn deck pro tray: base, front wall (screen + front knob), rear wall (USB-C, RCA, jack). Generated for draft round 1.",
+ "name": "tray",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "dims": "outside",
+ "params": {
+  "t": {
+   "value": 1.0,
+   "src": "given",
+   "note": "5052-H32 1.0, the only tested-route material profile"
+  },
+  "hinge": {
+   "value": 0.5,
+   "src": "estimated",
+   "note": "bridges bend at mid-thickness until a coupon says otherwise"
+  },
+  "allow": {
+   "value": 0.0,
+   "src": "estimated",
+   "note": "flat length taken by a fold; 0 until measured"
+  },
+  "gap": {
+   "value": 0.3,
+   "src": "chosen",
+   "note": "cover side to tray clearance"
+  },
+  "W": "encF_x + knob_d/2 + 3",
+  "D": {
+   "value": 81.0,
+   "src": "chosen",
+   "note": "outside depth: screen zone + slide-in travel + Pi + USB-C overhang"
+  },
+  "H": {
+   "value": 46.0,
+   "src": "chosen",
+   "note": "outside height without feet: jumper wires on the DAC header"
+  },
+  "pcb_l": {
+   "value": 85.0,
+   "src": "given"
+  },
+  "pcb_w": {
+   "value": 56.0,
+   "src": "given"
+  },
+  "pcb_t": {
+   "value": 1.4,
+   "src": "given"
+  },
+  "jack_oh": {
+   "value": 2.7,
+   "src": "estimated",
+   "note": "USB/Ethernet past the Pi's PCB edge"
+  },
+  "usbc_oh": {
+   "value": 1.2,
+   "src": "estimated",
+   "note": "USB-C and micro-HDMI past the PCB edge"
+  },
+  "sd_oh": {
+   "value": 2.5,
+   "src": "estimated",
+   "note": "microSD card past the PCB edge"
+  },
+  "h_so": {
+   "value": 3.0,
+   "src": "chosen",
+   "note": "M2.5 standoff under the Pi = thermal pad gap"
+  },
+  "h_hat": {
+   "value": 9.0,
+   "src": "given",
+   "note": "DAC Pro standoffs"
+  },
+  "hat_t": {
+   "value": 1.6,
+   "src": "given"
+  },
+  "hat_l": {
+   "value": 65.0,
+   "src": "given"
+  },
+  "hat_w": {
+   "value": 56.5,
+   "src": "given"
+  },
+  "hat_parts": {
+   "value": 2.0,
+   "src": "estimated",
+   "note": "small parts on the DAC Pro at the SD end"
+  },
+  "jumper_h": {
+   "value": 14.0,
+   "src": "estimated",
+   "note": "Dupont housing on the pass-through header"
+  },
+  "wire_bend": {
+   "value": 6.0,
+   "src": "estimated",
+   "note": "jumper wire bend above the housing"
+  },
+  "rca_len": {
+   "value": 9.0,
+   "src": "given",
+   "note": "projects/rpi_dac_pro: barrels past the HAT edge"
+  },
+  "px0": "t + gap + jack_oh",
+  "px1": "px0 + pcb_l",
+  "py1": "D - t - usbc_oh",
+  "py0": "py1 - pcb_w",
+  "zp": "t + h_so",
+  "zpt": "zp + pcb_t",
+  "zh": "zpt + h_hat",
+  "zht": "zh + hat_t",
+  "slide": "py1 + rca_len - (D - t) + 0.5",
+  "rca_x1": "px1 - 18.36",
+  "rca_x2": "px1 - 32.98",
+  "rca_z": "zht + 6.5",
+  "rca_hole": 8.6,
+  "jack_x": "px1 - 51.8",
+  "jack_z": "zht + 3",
+  "jack_hole": 6.5,
+  "usbc_x": "px1 - 11.2",
+  "usbc_z": "zpt + 1.6",
+  "usbc_w": 11.0,
+  "usbc_h": 5.5,
+  "eth_y": "py1 - 45.75",
+  "usb3_y": "py1 - 27",
+  "usb2_y": "py1 - 9",
+  "eth_w": 16.5,
+  "eth_h": 14.5,
+  "usb_w": 15.5,
+  "usb_h": 16.5,
+  "jack_z0": "zpt - 0.5",
+  "scr_l": {
+   "value": 58.0,
+   "src": "given"
+  },
+  "scr_h": {
+   "value": 35.0,
+   "src": "given"
+  },
+  "scr_d": {
+   "value": 11.0,
+   "src": "estimated",
+   "note": "module ~5 + its connector ~6"
+  },
+  "scr_x0": 5.0,
+  "scr_z": "H/2",
+  "win_w": {
+   "value": 42.0,
+   "src": "given"
+  },
+  "win_h": {
+   "value": 32.0,
+   "src": "given"
+  },
+  "win_x": "scr_x0 + scr_l/2",
+  "scr_hole_dx": {
+   "value": 53.0,
+   "src": "estimated"
+  },
+  "scr_hole_dz": {
+   "value": 30.0,
+   "src": "estimated"
+  },
+  "enc_w": {
+   "value": 12.5,
+   "src": "estimated"
+  },
+  "enc_h": {
+   "value": 13.4,
+   "src": "estimated"
+  },
+  "enc_d": {
+   "value": 10.1,
+   "src": "estimated",
+   "note": "body 6.6 + pins"
+  },
+  "enc_hole": {
+   "value": 7.4,
+   "src": "given"
+  },
+  "enc_tab_r": {
+   "value": 7.5,
+   "src": "estimated",
+   "note": "anti-turn tab offset"
+  },
+  "enc_tab_d": 2.4,
+  "encF_x": "win_x + win_w/2 + 3 + knob_d/2",
+  "encF_z": "H/2",
+  "encS_y": "D/2",
+  "encS_z": "H/2",
+  "knob_d": {
+   "value": "H",
+   "src": "given",
+   "note": "owner: diameter = deck height"
+  },
+  "knob_h": {
+   "value": 5.0,
+   "src": "given",
+   "note": "owner: 5 thick"
+  },
+  "bush_out": {
+   "value": 6.0,
+   "src": "estimated",
+   "note": "bushing 7 past the body, less the wall"
+  },
+  "knob_gap": 0.5,
+  "slot_y0": 22.0,
+  "slot_y1": 60.0,
+  "slot_z0": 2.5,
+  "slot_z1": 10.5,
+  "tab_w": 10.0,
+  "tab_h": 12.0,
+  "nut_hole": {
+   "value": 4.22,
+   "src": "given",
+   "note": "PEM CLS-M3-0 mounting hole"
+  },
+  "screw_hole": 3.4,
+  "top_gap": 0.2,
+  "feet_h": {
+   "value": 4.0,
+   "src": "estimated"
+  },
+  "feet_d": 10.0,
+  "soc_x": "px1 - 29",
+  "soc_y": "py1 - 32",
+  "bw": "W - 2*t - 2*gap",
+  "bd": "D - 2*hinge*t - allow",
+  "wh": "H - t - top_gap - hinge*t - allow",
+  "x_off": "t + gap",
+  "inset": "(1 - hinge)*t",
+  "ww": "bw - 2*inset"
+ },
+ "panels": [
+  {
+   "id": "base",
+   "name": "Base",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "bw",
+     0
+    ],
+    [
+     "bw",
+     "bd"
+    ],
+    [
+     0,
+     "bd"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "px1 - 3.5 - x_off",
+      "py1 - 3.5 - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "px1 - 3.5 - x_off",
+      "py1 - 52.5 - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "px1 - 61.5 - x_off",
+      "py1 - 3.5 - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "px1 - 61.5 - x_off",
+      "py1 - 52.5 - hinge*t"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "name": "Front wall",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "ww",
+     0
+    ],
+    [
+     "ww",
+     "wh"
+    ],
+    [
+     0,
+     "wh"
+    ]
+   ],
+   "features": [
+    {
+     "type": "rect",
+     "size": [
+      "win_w",
+      "win_h"
+     ],
+     "at": [
+      "bw - inset - (win_x - x_off)",
+      "(scr_z) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.4,
+     "at": [
+      "bw - inset - (win_x + -1*scr_hole_dx/2 - x_off)",
+      "(scr_z + -1*scr_hole_dz/2) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.4,
+     "at": [
+      "bw - inset - (win_x + -1*scr_hole_dx/2 - x_off)",
+      "(scr_z + 1*scr_hole_dz/2) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.4,
+     "at": [
+      "bw - inset - (win_x + 1*scr_hole_dx/2 - x_off)",
+      "(scr_z + -1*scr_hole_dz/2) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.4,
+     "at": [
+      "bw - inset - (win_x + 1*scr_hole_dx/2 - x_off)",
+      "(scr_z + 1*scr_hole_dz/2) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "enc_hole",
+     "at": [
+      "bw - inset - (encF_x - x_off)",
+      "(encF_z) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "enc_tab_d",
+     "at": [
+      "bw - inset - (encF_x - x_off)",
+      "(encF_z + enc_tab_r) - hinge*t"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rear",
+   "name": "Rear wall",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "ww",
+     0
+    ],
+    [
+     "ww",
+     "wh"
+    ],
+    [
+     0,
+     "wh"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "rca_hole",
+     "at": [
+      "(rca_x1) - x_off - inset",
+      "(rca_z) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "rca_hole",
+     "at": [
+      "(rca_x2) - x_off - inset",
+      "(rca_z) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "jack_hole",
+     "at": [
+      "(jack_x) - x_off - inset",
+      "(jack_z) - hinge*t"
+     ]
+    },
+    {
+     "type": "slot",
+     "length": "usbc_w",
+     "width": "usbc_h",
+     "angle": 0,
+     "at": [
+      "(usbc_x) - x_off - inset",
+      "(usbc_z) - hinge*t"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "front_tab_a",
+   "name": "front tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_h",
+     0
+    ],
+    [
+     "tab_h",
+     "tab_w"
+    ],
+    [
+     0,
+     "tab_w"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_h/2",
+      "tab_w/2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "front_tab_b",
+   "name": "front tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_h",
+     0
+    ],
+    [
+     "tab_h",
+     "tab_w"
+    ],
+    [
+     0,
+     "tab_w"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_h/2",
+      "tab_w/2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rear_tab_a",
+   "name": "rear tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_h",
+     0
+    ],
+    [
+     "tab_h",
+     "tab_w"
+    ],
+    [
+     0,
+     "tab_w"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_h/2",
+      "tab_w/2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rear_tab_b",
+   "name": "rear tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_h",
+     0
+    ],
+    [
+     "tab_h",
+     "tab_w"
+    ],
+    [
+     0,
+     "tab_w"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_h/2",
+      "tab_w/2"
+     ]
+    }
+   ]
+  }
+ ],
+ "folds": [
+  {
+   "id": "f_front",
+   "parent": "base",
+   "parent_edge": 0,
+   "child": "front",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_rear",
+   "parent": "base",
+   "parent_edge": 2,
+   "child": "rear",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_front_tab_a",
+   "parent": "front",
+   "parent_edge": 1,
+   "child": "front_tab_a",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold",
+   "offset": "wh - tab_h"
+  },
+  {
+   "id": "f_front_tab_b",
+   "parent": "front",
+   "parent_edge": 3,
+   "child": "front_tab_b",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold",
+   "offset": 0
+  },
+  {
+   "id": "f_rear_tab_a",
+   "parent": "rear",
+   "parent_edge": 1,
+   "child": "rear_tab_a",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold",
+   "offset": "wh - tab_h"
+  },
+  {
+   "id": "f_rear_tab_b",
+   "parent": "rear",
+   "parent_edge": 3,
+   "child": "rear_tab_b",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold",
+   "offset": 0
+  }
+ ],
+ "recipes": {
+  "fold": {
+   "_comment": "Starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
+   "method": "slots",
+   "slot_length": 8.0,
+   "slot_width": 0.5,
+   "bridge": 1.5,
+   "end_clearance": 2.0,
+   "hinge": "hinge",
+   "allowance": "allow"
+  }
+ },
+ "hardware": [
+  {
+   "name": "PEM CLS-M3-0 clinch nut (in the tabs, from inside)",
+   "qty": 4
+  },
+  {
+   "name": "M2.5 x 6 screw (Pi, from below)",
+   "qty": 4
+  },
+  {
+   "name": "M2 x 6 screw + nut + 2.5 spacer (screen)",
+   "qty": 4
+  }
+ ]
+}

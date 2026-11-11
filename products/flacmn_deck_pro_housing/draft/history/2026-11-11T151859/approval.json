@@ -1,0 +1,29 @@
+{
+ "approved_at": "2026-11-11T15:18:59",
+ "quote": "I want the buttons to only be 5mm  thck and I want their diameter to be equal to the height of the deck, otherwise move forward with the design",
+ "round": 2,
+ "option": "A",
+ "option_hash": "653dd2752df0edab",
+ "brief_hash": "329b43bd2b111110",
+ "parts": {
+  "tray": "56610323a9de0118",
+  "cover": "b5db761ec07edfee",
+  "pi4": "a214e613b039aa22",
+  "dac": "6624f3ccbe8f5180",
+  "jumpers": "12af52c0f8300b92",
+  "standoff": "f05d70dbd3bd53d0",
+  "pad": "9e8f1a6744298573",
+  "screen": "a32a263077f7e431",
+  "enc_front": "0cbc3d94a8ecb4a2",
+  "enc_side": "d4a0e82fd661a67d",
+  "knob_front": "ff0db76a41a231cc",
+  "knob_side": "eb206af1d9db611d",
+  "feet": "d48706ca12ed458d",
+  "screw_m3": "7cfe3bad3fd3ee12",
+  "clinch_nut": "7d5638223ec3163c",
+  "screw_pi": "4f4041f3c468a2a1",
+  "screw_dac": "1ac51b68c12c317c",
+  "screen_fix": "b015b01f883cf912"
+ },
+ "changed_since_last_approval": null
+}

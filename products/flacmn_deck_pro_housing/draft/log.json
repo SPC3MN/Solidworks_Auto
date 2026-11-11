@@ -1,0 +1,41 @@
+[
+ {
+  "time": "2026-11-11T15:17:55",
+  "round": 1,
+  "move": "pushback",
+  "options": [],
+  "notes": "I want the buttons to only be 5mm  thck and I want their diameter to be equal to the height of the deck, otherwise move forward with the design"
+ },
+ {
+  "time": "2026-11-11T15:18:59",
+  "round": 2,
+  "move": "approve",
+  "options": [
+   "A"
+  ],
+  "notes": "I want the buttons to only be 5mm  thck and I want their diameter to be equal to the height of the deck, otherwise move forward with the design"
+ },
+ {
+  "time": "2026-11-11T16:26:10",
+  "round": 2,
+  "move": "pushback",
+  "options": [],
+  "notes": "I want the buttons flush to the surface of the volume and i don't want anthing protruding"
+ },
+ {
+  "time": "2026-11-11T16:41:49",
+  "round": 3,
+  "move": "pushback",
+  "options": [],
+  "notes": "the cutout doesn't need to surround the whole dial. Have a small cutout for the encoder and the button will slide over the protruding encoder"
+ },
+ {
+  "time": "2026-11-11T16:50:31",
+  "round": 4,
+  "move": "approve",
+  "options": [
+   "A"
+  ],
+  "notes": "Approved, build it"
+ }
+]

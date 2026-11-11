@@ -1,0 +1,801 @@
+{
+ "quality": "preview",
+ "time": "20261111T165549",
+ "settings_hash": "00bb2d215ee170ab",
+ "device": {
+  "device": "GPU",
+  "backend": "OPTIX",
+  "gpus": [
+   "NVIDIA GeForce GTX 1650 SUPER"
+  ]
+ },
+ "blend": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/blender/deck_out.blend",
+ "product_bbox_mm": [
+  115.5,
+  94.5,
+  50.0
+ ],
+ "scenes": {
+  "studio": {
+   "lighting": "soft_commercial",
+   "lights": [
+    "Studio_Key",
+    "Studio_Fill",
+    "Studio_Top",
+    "Studio_Rim",
+    "Studio_FlagFront",
+    "Studio_FlagLeft"
+   ],
+   "background": {
+    "type": "gradient",
+    "color": "#F6F6F6",
+    "color2": "#D9DADC"
+   },
+   "floor": {
+    "type": "sweep",
+    "color": "#ECECEC",
+    "roughness": 0.55
+   },
+   "look": "None",
+   "exposure": 0.0,
+   "floor_object": "Studio_Sweep"
+  },
+  "technical": {
+   "lighting": "neutral_technical",
+   "lights": [
+    "Studio_Key.001",
+    "Studio_Fill.001",
+    "Studio_Back"
+   ],
+   "background": {
+    "type": "solid",
+    "color": "#EFEFEF"
+   },
+   "floor": {
+    "type": "sweep",
+    "color": "#E6E6E6",
+    "roughness": 0.8
+   },
+   "look": "None",
+   "exposure": 0.0,
+   "floor_object": "Studio_Sweep.001",
+   "explode_method": "auto_axial"
+  }
+ },
+ "materials": [
+  {
+   "component": "clinch_nut_1",
+   "label": "",
+   "part": "clinch_nut_1",
+   "material": "stainless_steel",
+   "finish": null,
+   "color": "#C2C3C4",
+   "roughness": 0.25,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "clinch_nut_2",
+   "label": "",
+   "part": "clinch_nut_2",
+   "material": "stainless_steel",
+   "finish": null,
+   "color": "#C2C3C4",
+   "roughness": 0.25,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "dac",
+   "label": "",
+   "part": "dac",
+   "material": "pcb_green",
+   "finish": null,
+   "color": "#1F5A2E",
+   "roughness": 0.3,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "enc_front",
+   "label": "",
+   "part": "enc_front",
+   "material": "stainless_steel",
+   "finish": null,
+   "color": "#C2C3C4",
+   "roughness": 0.25,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "enc_side",
+   "label": "",
+   "part": "enc_side",
+   "material": "stainless_steel",
+   "finish": null,
+   "color": "#C2C3C4",
+   "roughness": 0.25,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "feet_1",
+   "label": "",
+   "part": "feet_1",
+   "material": "rubber",
+   "finish": null,
+   "color": "#1A1A1C",
+   "roughness": 0.75,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "feet_2",
+   "label": "",
+   "part": "feet_2",
+   "material": "rubber",
+   "finish": null,
+   "color": "#1A1A1C",
+   "roughness": 0.75,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "feet_3",
+   "label": "",
+   "part": "feet_3",
+   "material": "rubber",
+   "finish": null,
+   "color": "#1A1A1C",
+   "roughness": 0.75,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "feet_4",
+   "label": "",
+   "part": "feet_4",
+   "material": "rubber",
+   "finish": null,
+   "color": "#1A1A1C",
+   "roughness": 0.75,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "jumpers",
+   "label": "",
+   "part": "jumpers",
+   "material": "abs",
+   "finish": null,
+   "color": "#1A1A1C",
+   "roughness": 0.45,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "knob_front",
+   "label": "",
+   "part": "knob_front",
+   "material": "aluminium_anodized_black",
+   "finish": null,
+   "color": "#232427",
+   "roughness": 0.38,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "knob_side",
+   "label": "",
+   "part": "knob_side",
+   "material": "aluminium_anodized_black",
+   "finish": null,
+   "color": "#232427",
+   "roughness": 0.38,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "pad",
+   "label": "",
+   "part": "pad",
+   "material": "rubber",
+   "finish": null,
+   "color": "#8A8F96",
+   "roughness": 0.75,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "pi4",
+   "label": "",
+   "part": "pi4",
+   "material": "pcb_green",
+   "finish": null,
+   "color": "#1F5A2E",
+   "roughness": 0.3,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "plate",
+   "label": "",
+   "part": "plate",
+   "material": "aluminium_anodized",
+   "finish": null,
+   "color": "#CDCFD2",
+   "roughness": 0.34,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screen",
+   "label": "",
+   "part": "screen",
+   "material": "glass_clear",
+   "finish": null,
+   "color": "#101214",
+   "roughness": 0.05,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_dac_1",
+   "label": "",
+   "part": "screw_dac_1",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_dac_2",
+   "label": "",
+   "part": "screw_dac_2",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_dac_3",
+   "label": "",
+   "part": "screw_dac_3",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_dac_4",
+   "label": "",
+   "part": "screw_dac_4",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_m3_1",
+   "label": "",
+   "part": "screw_m3_1",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_m3_2",
+   "label": "",
+   "part": "screw_m3_2",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_pi_1",
+   "label": "",
+   "part": "screw_pi_1",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_pi_2",
+   "label": "",
+   "part": "screw_pi_2",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_pi_3",
+   "label": "",
+   "part": "screw_pi_3",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "screw_pi_4",
+   "label": "",
+   "part": "screw_pi_4",
+   "material": "steel_black_oxide",
+   "finish": null,
+   "color": "#2B2B2D",
+   "roughness": 0.4,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "shell",
+   "label": "",
+   "part": "shell",
+   "material": "aluminium_anodized",
+   "finish": null,
+   "color": "#CDCFD2",
+   "roughness": 0.34,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "standoff_1",
+   "label": "",
+   "part": "standoff_1",
+   "material": "brass",
+   "finish": null,
+   "color": "#E3C16F",
+   "roughness": 0.2,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "standoff_2",
+   "label": "",
+   "part": "standoff_2",
+   "material": "brass",
+   "finish": null,
+   "color": "#E3C16F",
+   "roughness": 0.2,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "standoff_3",
+   "label": "",
+   "part": "standoff_3",
+   "material": "brass",
+   "finish": null,
+   "color": "#E3C16F",
+   "roughness": 0.2,
+   "source": "part setting",
+   "confidence": "user/claude"
+  },
+  {
+   "component": "standoff_4",
+   "label": "",
+   "part": "standoff_4",
+   "material": "brass",
+   "finish": null,
+   "color": "#E3C16F",
+   "roughness": 0.2,
+   "source": "part setting",
+   "confidence": "user/claude"
+  }
+ ],
+ "shots": [
+  {
+   "name": "hero",
+   "scene": "studio",
+   "category": "studio",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/hero.png",
+   "seconds": 7.5,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "PERSP",
+    "focal_mm": 85,
+    "az": 35,
+    "el": 22,
+    "margin": 0.06,
+    "target": null,
+    "dof": {
+     "fstop": 22
+    }
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     0.06,
+     0.929
+    ],
+    "frame_y": [
+     0.168,
+     0.751
+    ],
+    "bbox_fill": 0.506,
+    "cropped": false
+   },
+   "image": {
+    "mean": 167.6,
+    "clipped_pct": 0.0,
+    "crushed_pct": 0.0
+   }
+  },
+  {
+   "name": "low_angle",
+   "scene": "studio",
+   "category": "studio",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/low_angle.png",
+   "seconds": 5.7,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "PERSP",
+    "focal_mm": 50,
+    "az": 25,
+    "el": 6,
+    "margin": 0.12,
+    "target": null,
+    "dof": {
+     "fstop": 22
+    }
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     0.12,
+     0.834
+    ],
+    "frame_y": [
+     0.3,
+     0.627
+    ],
+    "bbox_fill": 0.234,
+    "cropped": false
+   },
+   "image": {
+    "mean": 160.1,
+    "clipped_pct": 0.0,
+    "crushed_pct": 0.05
+   }
+  },
+  {
+   "name": "front",
+   "scene": "studio",
+   "category": "studio",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/front.png",
+   "seconds": 5.4,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "ORTHO",
+    "focal_mm": null,
+    "az": 0,
+    "el": 0,
+    "margin": 0.04,
+    "target": null,
+    "dof": null
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     0.04,
+     0.96
+    ],
+    "frame_y": [
+     -0.0,
+     0.398
+    ],
+    "bbox_fill": 0.366,
+    "cropped": false
+   },
+   "image": {
+    "mean": 127.6,
+    "clipped_pct": 0.0,
+    "crushed_pct": 2.56
+   }
+  },
+  {
+   "name": "side",
+   "scene": "studio",
+   "category": "studio",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/side.png",
+   "seconds": 5.4,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "ORTHO",
+    "focal_mm": null,
+    "az": 90,
+    "el": 0,
+    "margin": 0.04,
+    "target": null,
+    "dof": null
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     0.04,
+     0.96
+    ],
+    "frame_y": [
+     0.0,
+     0.487
+    ],
+    "bbox_fill": 0.448,
+    "cropped": false
+   },
+   "image": {
+    "mean": 139.9,
+    "clipped_pct": 0.0,
+    "crushed_pct": 0.06
+   }
+  },
+  {
+   "name": "top",
+   "scene": "studio",
+   "category": "studio",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/top.png",
+   "seconds": 5.4,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "ORTHO",
+    "focal_mm": null,
+    "az": 0,
+    "el": 90,
+    "margin": 0.08,
+    "target": null,
+    "dof": null
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     0.08,
+     0.92
+    ],
+    "frame_y": [
+     0.156,
+     0.844
+    ],
+    "bbox_fill": 0.577,
+    "cropped": false
+   },
+   "image": {
+    "mean": 186.8,
+    "clipped_pct": 0.0,
+    "crushed_pct": 0.0
+   }
+  },
+  {
+   "name": "rear",
+   "scene": "studio",
+   "category": "studio",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/rear.png",
+   "seconds": 5.7,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "PERSP",
+    "focal_mm": 85,
+    "az": 215,
+    "el": 20,
+    "margin": 0.06,
+    "target": null,
+    "dof": {
+     "fstop": 22
+    }
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     0.06,
+     0.929
+    ],
+    "frame_y": [
+     0.18,
+     0.74
+    ],
+    "bbox_fill": 0.487,
+    "cropped": false
+   },
+   "image": {
+    "mean": 187.9,
+    "clipped_pct": 0.0,
+    "crushed_pct": 0.28
+   }
+  },
+  {
+   "name": "detail",
+   "scene": "studio",
+   "category": "details",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/details/detail.png",
+   "seconds": 6.5,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "PERSP",
+    "focal_mm": 100,
+    "az": -25,
+    "el": 15,
+    "margin": 0.15,
+    "target": "component:knob_front",
+    "dof": {
+     "fstop": 16
+    }
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     -0.989,
+     0.993
+    ],
+    "frame_y": [
+     -0.167,
+     0.999
+    ],
+    "bbox_fill": 0.992,
+    "cropped": true
+   },
+   "image": {
+    "mean": 134.6,
+    "clipped_pct": 2.37,
+    "crushed_pct": 0.0
+   }
+  },
+  {
+   "name": "exploded",
+   "scene": "technical",
+   "category": "exploded",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/exploded/exploded.png",
+   "seconds": 6.9,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "PERSP",
+    "focal_mm": 70,
+    "az": 35,
+    "el": 16,
+    "margin": 0.06,
+    "target": null,
+    "dof": {
+     "fstop": 22
+    }
+   },
+   "exploded": true,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     0.098,
+     0.89
+    ],
+    "frame_y": [
+     0.06,
+     0.832
+    ],
+    "bbox_fill": 0.611,
+    "cropped": false
+   },
+   "image": {
+    "mean": 164.4,
+    "clipped_pct": 0.0,
+    "crushed_pct": 0.0
+   }
+  },
+  {
+   "name": "xray",
+   "scene": "technical",
+   "category": "technical",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/technical/xray.png",
+   "seconds": 7.0,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "PERSP",
+    "focal_mm": 85,
+    "az": 35,
+    "el": 22,
+    "margin": 0.06,
+    "target": null,
+    "dof": {
+     "fstop": 22
+    }
+   },
+   "exploded": false,
+   "overrides": {
+    "xray": [
+     "shell"
+    ]
+   },
+   "framing": {
+    "frame_x": [
+     0.06,
+     0.929
+    ],
+    "frame_y": [
+     0.168,
+     0.751
+    ],
+    "bbox_fill": 0.506,
+    "cropped": false
+   },
+   "image": {
+    "mean": 179.5,
+    "clipped_pct": 0.0,
+    "crushed_pct": 0.0
+   }
+  }
+ ],
+ "checks": [
+  {
+   "id": "materials.confidence",
+   "pass": true,
+   "warn": false,
+   "low_confidence": []
+  },
+  {
+   "id": "grounded",
+   "pass": true,
+   "note": "floor/support top placed at the product's lowest point",
+   "product_min_z_mm": -4.0
+  }
+ ],
+ "render_settings": {
+  "long_side": 800,
+  "samples": 48,
+  "noise_threshold": 0.03,
+  "denoise": true,
+  "format": "PNG"
+ },
+ "contact_sheet": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/contact_sheet.png",
+ "partial": false,
+ "final_estimate_s": 1598
+}

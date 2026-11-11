@@ -1,0 +1,228 @@
+{
+ "schema_version": "1.0",
+ "sheet": "plate",
+ "timestamp": "20261111T165039",
+ "freecad_version": "1.1.4",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "manufacturing_status": "PLACEHOLDERS: conservative guesses, not taken from any machine or service. Replace when the cutting route is chosen.",
+ "verdicts": {
+  "geometrically valid": true,
+  "manufacturable": true,
+  "experimentally validated": true
+ },
+ "untested": false,
+ "blank_mm": [
+  101.4,
+  80.4,
+  1.0
+ ],
+ "flat_area_mm2": 7897.9808,
+ "folded_envelope_mm": [
+  101.4,
+  80.4,
+  1.0
+ ],
+ "volume_mm3": 7897.9808,
+ "folds": [],
+ "bom": [
+  {
+   "name": "5052-H32 sheet, 1 mm",
+   "qty": 1,
+   "blank_mm": [
+    101.4,
+    80.4
+   ]
+  },
+  {
+   "name": "M3 x 6 low-head screw (plate to shell flanges, from below)",
+   "qty": 2
+  },
+  {
+   "name": "M2.5 x 6 screw (Pi, from below)",
+   "qty": 4
+  }
+ ],
+ "checks": [
+  {
+   "id": "feature.plate.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel plate, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.plate.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 0: 11.75 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.plate.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 0: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.plate.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel plate, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.plate.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 1: 15.75 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.plate.1.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 1: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.plate.2.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel plate, feature 2 lies inside the panel"
+  },
+  {
+   "id": "feature.plate.2.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 2: 11.75 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.plate.2.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 2: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.plate.3.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel plate, feature 3 lies inside the panel"
+  },
+  {
+   "id": "feature.plate.3.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 3: 16.75 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.plate.3.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 3: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.plate.4.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel plate, feature 4 lies inside the panel"
+  },
+  {
+   "id": "feature.plate.4.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 4: 1.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.plate.4.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 4: hole Ø3.4 (minimum 1)"
+  },
+  {
+   "id": "feature.plate.5.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel plate, feature 5 lies inside the panel"
+  },
+  {
+   "id": "feature.plate.5.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 5: 1.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.plate.5.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 5: hole Ø3.4 (minimum 1)"
+  },
+  {
+   "id": "feature.plate.6.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel plate, feature 6 lies inside the panel"
+  },
+  {
+   "id": "feature.plate.6.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel plate, feature 6: 20.70 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "flat.overlap",
+   "level": "geometric",
+   "ok": true,
+   "message": "panels do not overlap in the flat pattern"
+  },
+  {
+   "id": "flat.one_piece",
+   "level": "geometric",
+   "ok": true,
+   "message": "the flat pattern is 1 piece(s)"
+  },
+  {
+   "id": "folded.bbox",
+   "level": "geometric",
+   "ok": true,
+   "message": "the kernel's folded envelope equals the arithmetic's"
+  },
+  {
+   "id": "folded.interference",
+   "level": "geometric",
+   "ok": true,
+   "message": "no folded panels collide"
+  },
+  {
+   "id": "sequence.0",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 0 can be carried out"
+  },
+  {
+   "id": "flat.dxf_readback",
+   "level": "geometric",
+   "ok": true,
+   "message": "the DXF reads back with the same entities per layer and the blank's extent ({'CUT_THROUGH': 8})"
+  }
+ ],
+ "files": {
+  "dxf": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/flat/plate.dxf",
+  "svg": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/flat/plate.svg",
+  "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/folded/plate.step",
+  "fcstd": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/plate.FCStd"
+ },
+ "renders": [
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/renders/isometric.png",
+   "isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/renders/front.png",
+   "front"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/renders/right.png",
+   "right"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/plate/renders/top.png",
+   "top"
+  ]
+ ]
+}
