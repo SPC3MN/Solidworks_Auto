@@ -1,4 +1,4 @@
-"""Assemble a render STEP of the approved round-10 deck: the built shell and back plate (with their openings),
+"""Assemble a render STEP of the approved round-11 deck: the built shell and back plate (with their openings),
 the Pi 4 + DAC Pro and the 5in screen split by material, and the round-9 massing bodies of everything else
 (encoders, knob caps, feet, screws, nuts). Run with FreeCADCmd."""
 import os
@@ -6,7 +6,7 @@ import FreeCAD as App, Part, Import
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROD = os.path.dirname(HERE)
-MASS = os.path.join(PROD, "draft", "round_10", "A", "massing", "massing.step")
+MASS = os.path.join(PROD, "draft", "round_11", "A", "massing", "massing.step")
 V = App.Vector
 # sheet parts are built flat-root; stand them up: sheet (x, y, z) -> (x, z, -y), then move into place
 PARTS = {"shell": ((0.5, 0.0, 88.0), os.path.join(PROD, "parts", "shell", "folded", "shell.step")),

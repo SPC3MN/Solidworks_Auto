@@ -93,10 +93,10 @@
   },
   {
    "id": "R12",
-   "text": "Knob caps ~57 and ~35 diameter, 13 thick, 1 mm proud of the front face on the 15 mm encoder shafts (shaft tip at the cap face)",
+   "text": "Knob caps ~57 and ~35 diameter, 8 thick, 1 mm proud of the front face; the 15 mm encoder shafts are cut to 9 mm past the front face so they end at the cap face",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (round 8 push-back)"
+   "source": "owner, 2026-11-11 (round 10 push-back)"
   },
   {
    "id": "R13",
@@ -387,6 +387,12 @@
    "round": 9,
    "time": "2026-11-11T22:35:38",
    "text": "see the updated layout svg. I want to add the mn logo to the front as cut holes / make sure it is centered horizontally on the small knob (answers: smaller dots, Ø1.8; rear rectangles are only drawing)",
+   "options": []
+  },
+  {
+   "round": 10,
+   "time": "2026-11-11T22:39:02",
+   "text": "make the knobs thinner as well, cut the encoder chaft if needed (answer: 8 mm)",
    "options": []
   }
  ],

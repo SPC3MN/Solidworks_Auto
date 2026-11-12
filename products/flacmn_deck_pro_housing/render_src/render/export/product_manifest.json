@@ -7,7 +7,7 @@
   "application": "STEP file",
   "application_version": "",
   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
-  "exported": "2026-11-11T22:37:28",
+  "exported": "2026-11-11T22:40:35",
   "details": {
    "format": "step",
    "units_assumed": null,
@@ -23,7 +23,7 @@
  "bbox_mm": {
   "min": [
    0.0,
-   -14.0,
+   -9.0,
    -6.0
   ],
   "max": [
@@ -33,7 +33,7 @@
   ],
   "size": [
    241.0,
-   117.5,
+   112.5,
    94.5
   ]
  },
@@ -326,7 +326,7 @@
     "min": [
      148.25,
      -50.95,
-     -13.0
+     -8.0
     ],
     "max": [
      160.75,
@@ -355,7 +355,7 @@
     "min": [
      202.05,
      -63.6,
-     -13.0
+     -8.0
     ],
     "max": [
      214.55,
@@ -529,7 +529,7 @@
     "min": [
      126.0,
      -72.75,
-     -14.0
+     -9.0
     ],
     "max": [
      183.0,
@@ -559,7 +559,7 @@
     "min": [
      190.8,
      -74.4,
-     -14.0
+     -9.0
     ],
     "max": [
      225.8,
@@ -1917,7 +1917,7 @@
    "world_bbox_mm": [
     [
      148.25,
-     -13.0,
+     -8.0,
      37.55
     ],
     [
@@ -1929,7 +1929,7 @@
    "world_bbox_exact_mm": [
     [
      148.25,
-     -13.0,
+     -8.0,
      37.55
     ],
     [
@@ -1979,7 +1979,7 @@
    "world_bbox_mm": [
     [
      202.05,
-     -13.0,
+     -8.0,
      50.2
     ],
     [
@@ -1991,7 +1991,7 @@
    "world_bbox_exact_mm": [
     [
      202.05,
-     -13.0,
+     -8.0,
      50.2
     ],
     [
@@ -2351,7 +2351,7 @@
    "world_bbox_mm": [
     [
      126.0,
-     -14.0,
+     -9.0,
      15.75
     ],
     [
@@ -2363,7 +2363,7 @@
    "world_bbox_exact_mm": [
     [
      126.0,
-     -14.0,
+     -9.0,
      15.75
     ],
     [
@@ -2413,7 +2413,7 @@
    "world_bbox_mm": [
     [
      190.8,
-     -14.0,
+     -9.0,
      39.4
     ],
     [
@@ -2425,7 +2425,7 @@
    "world_bbox_exact_mm": [
     [
      190.8,
-     -14.0,
+     -9.0,
      39.4
     ],
     [
@@ -4222,7 +4222,7 @@
   "note": "expected sizes were measured from the imported file itself: the import checks prove the round trip and placement, not the scale",
   "expected_size_mm": [
    241.0,
-   117.5,
+   112.5,
    94.5
   ],
   "size_check": "pass"

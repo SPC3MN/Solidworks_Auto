@@ -249,9 +249,9 @@
   "note": "owner's layout, true scale"
  },
  "knob_h": {
-  "value": 13.0,
+  "value": 8.0,
   "src": "given",
-  "note": "owner 2026-11-11: shaft tip at the cap face"
+  "note": "owner 2026-11-11: thinner caps, shafts cut"
  },
  "kb_x": {
   "value": 154.5,
@@ -303,9 +303,9 @@
   "note": "bushing past the panel"
  },
  "shaft_out": {
-  "value": 14.0,
-  "src": "given",
-  "note": "PEC11R-4215F: 15 above the body top, less the 1 mm panel"
+  "value": 9.0,
+  "src": "chosen",
+  "note": "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"
  },
  "logo_p": {
   "value": 2.857,

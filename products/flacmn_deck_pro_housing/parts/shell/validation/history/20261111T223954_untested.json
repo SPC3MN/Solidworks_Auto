@@ -1,0 +1,1993 @@
+{
+ "schema_version": "1.0",
+ "sheet": "shell",
+ "timestamp": "20261111T223954",
+ "freecad_version": "1.1.4",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "manufacturing_status": "PLACEHOLDERS: conservative guesses, not taken from any machine or service. Replace when the cutting route is chosen.",
+ "verdicts": {
+  "geometrically valid": true,
+  "manufacturable": true,
+  "experimentally validated": false
+ },
+ "untested": true,
+ "blank_mm": [
+  437.0,
+  308.5,
+  1.0
+ ],
+ "flat_area_mm2": 78287.0971,
+ "folded_envelope_mm": [
+  241.0,
+  88.5,
+  99.5
+ ],
+ "volume_mm3": 78287.0971,
+ "folds": [
+  {
+   "id": "f_top",
+   "parent": "front",
+   "child": "top",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold",
+   "length": 238.4,
+   "slots": 24,
+   "cut_length": 192.0,
+   "bridge_total": 46.4,
+   "bridge_share": 0.1946,
+   "end_uncut": 5.95
+  },
+  {
+   "id": "f_floor",
+   "parent": "front",
+   "child": "floor",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold",
+   "length": 238.4,
+   "slots": 24,
+   "cut_length": 192.0,
+   "bridge_total": 46.4,
+   "bridge_share": 0.1946,
+   "end_uncut": 5.95
+  },
+  {
+   "id": "f_left",
+   "parent": "front",
+   "child": "left",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 3,
+   "recipe": "fold",
+   "length": 87.5,
+   "slots": 8,
+   "cut_length": 64.0,
+   "bridge_total": 23.5,
+   "bridge_share": 0.2686,
+   "end_uncut": 6.5
+  },
+  {
+   "id": "f_right",
+   "parent": "front",
+   "child": "right",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 4,
+   "recipe": "fold",
+   "length": 87.5,
+   "slots": 8,
+   "cut_length": 64.0,
+   "bridge_total": 23.5,
+   "bridge_share": 0.2686,
+   "end_uncut": 6.5
+  },
+  {
+   "id": "f_tab_t1",
+   "parent": "top",
+   "child": "tab_t1",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "length": 16.0,
+   "slots": 1,
+   "cut_length": 8.0,
+   "bridge_total": 8.0,
+   "bridge_share": 0.5,
+   "end_uncut": 4.0
+  },
+  {
+   "id": "f_tab_t2",
+   "parent": "top",
+   "child": "tab_t2",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "length": 16.0,
+   "slots": 1,
+   "cut_length": 8.0,
+   "bridge_total": 8.0,
+   "bridge_share": 0.5,
+   "end_uncut": 4.0
+  },
+  {
+   "id": "f_tab_b1",
+   "parent": "floor",
+   "child": "tab_b1",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "length": 16.0,
+   "slots": 1,
+   "cut_length": 8.0,
+   "bridge_total": 8.0,
+   "bridge_share": 0.5,
+   "end_uncut": 4.0
+  },
+  {
+   "id": "f_tab_b2",
+   "parent": "floor",
+   "child": "tab_b2",
+   "angle": 90.0,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "length": 16.0,
+   "slots": 1,
+   "cut_length": 8.0,
+   "bridge_total": 8.0,
+   "bridge_share": 0.5,
+   "end_uncut": 4.0
+  }
+ ],
+ "bom": [
+  {
+   "name": "5052-H32 sheet, 1 mm",
+   "qty": 1,
+   "blank_mm": [
+    437.0,
+    308.5
+   ]
+  },
+  {
+   "name": "PEM CLS-M3-0 clinch nut (back tabs, pressed from inside)",
+   "qty": 4
+  }
+ ],
+ "checks": [
+  {
+   "id": "feature.front.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.front.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 0: 7.75 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.front.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 1: 40.05 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.1.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 1: hole Ø7.4 (minimum 1)"
+  },
+  {
+   "id": "feature.front.2.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 2 lies inside the panel"
+  },
+  {
+   "id": "feature.front.2.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 2: 35.05 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.2.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 2: hole Ø2.4 (minimum 1)"
+  },
+  {
+   "id": "feature.front.3.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 3 lies inside the panel"
+  },
+  {
+   "id": "feature.front.3.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 3: 27.40 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.3.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 3: hole Ø7.4 (minimum 1)"
+  },
+  {
+   "id": "feature.front.4.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 4 lies inside the panel"
+  },
+  {
+   "id": "feature.front.4.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 4: 22.40 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.4.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 4: hole Ø2.4 (minimum 1)"
+  },
+  {
+   "id": "feature.front.5.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 5 lies inside the panel"
+  },
+  {
+   "id": "feature.front.5.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 5: 29.90 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.5.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 5: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.6.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 6 lies inside the panel"
+  },
+  {
+   "id": "feature.front.6.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 6: 29.90 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.6.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 6: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.7.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 7 lies inside the panel"
+  },
+  {
+   "id": "feature.front.7.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 7: 29.90 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.7.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 7: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.8.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 8 lies inside the panel"
+  },
+  {
+   "id": "feature.front.8.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 8: 29.90 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.8.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 8: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.9.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 9 lies inside the panel"
+  },
+  {
+   "id": "feature.front.9.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 9: 29.90 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.9.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 9: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.10.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 10 lies inside the panel"
+  },
+  {
+   "id": "feature.front.10.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 10: 29.90 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.10.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 10: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.11.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 11 lies inside the panel"
+  },
+  {
+   "id": "feature.front.11.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 11: 24.16 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.11.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 11: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.12.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 12 lies inside the panel"
+  },
+  {
+   "id": "feature.front.12.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 12: 18.44 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.12.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 12: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.13.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 13 lies inside the panel"
+  },
+  {
+   "id": "feature.front.13.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 13: 15.59 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.13.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 13: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.14.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 14 lies inside the panel"
+  },
+  {
+   "id": "feature.front.14.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 14: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.14.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 14: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.15.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 15 lies inside the panel"
+  },
+  {
+   "id": "feature.front.15.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 15: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.15.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 15: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.16.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 16 lies inside the panel"
+  },
+  {
+   "id": "feature.front.16.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 16: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.16.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 16: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.17.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 17 lies inside the panel"
+  },
+  {
+   "id": "feature.front.17.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 17: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.17.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 17: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.18.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 18 lies inside the panel"
+  },
+  {
+   "id": "feature.front.18.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 18: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.18.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 18: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.19.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 19 lies inside the panel"
+  },
+  {
+   "id": "feature.front.19.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 19: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.19.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 19: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.20.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 20 lies inside the panel"
+  },
+  {
+   "id": "feature.front.20.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 20: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.20.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 20: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.21.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 21 lies inside the panel"
+  },
+  {
+   "id": "feature.front.21.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 21: 27.04 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.21.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 21: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.22.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 22 lies inside the panel"
+  },
+  {
+   "id": "feature.front.22.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 22: 24.16 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.22.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 22: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.23.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 23 lies inside the panel"
+  },
+  {
+   "id": "feature.front.23.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 23: 21.30 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.23.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 23: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.24.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 24 lies inside the panel"
+  },
+  {
+   "id": "feature.front.24.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 24: 18.44 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.24.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 24: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.25.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 25 lies inside the panel"
+  },
+  {
+   "id": "feature.front.25.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 25: 15.59 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.25.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 25: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.26.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 26 lies inside the panel"
+  },
+  {
+   "id": "feature.front.26.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 26: 12.73 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.26.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 26: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.27.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 27 lies inside the panel"
+  },
+  {
+   "id": "feature.front.27.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 27: 24.19 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.27.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 27: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.28.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 28 lies inside the panel"
+  },
+  {
+   "id": "feature.front.28.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 28: 24.19 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.28.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 28: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.29.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 29 lies inside the panel"
+  },
+  {
+   "id": "feature.front.29.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 29: 24.19 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.29.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 29: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.30.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 30 lies inside the panel"
+  },
+  {
+   "id": "feature.front.30.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 30: 24.19 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.30.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 30: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.31.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 31 lies inside the panel"
+  },
+  {
+   "id": "feature.front.31.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 31: 24.19 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.31.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 31: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.32.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 32 lies inside the panel"
+  },
+  {
+   "id": "feature.front.32.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 32: 24.19 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.32.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 32: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.33.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 33 lies inside the panel"
+  },
+  {
+   "id": "feature.front.33.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 33: 24.16 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.33.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 33: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.34.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 34 lies inside the panel"
+  },
+  {
+   "id": "feature.front.34.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 34: 21.30 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.34.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 34: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.35.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 35 lies inside the panel"
+  },
+  {
+   "id": "feature.front.35.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 35: 15.59 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.35.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 35: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.36.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 36 lies inside the panel"
+  },
+  {
+   "id": "feature.front.36.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 36: 12.73 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.36.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 36: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.37.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 37 lies inside the panel"
+  },
+  {
+   "id": "feature.front.37.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 37: 21.33 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.37.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 37: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.38.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 38 lies inside the panel"
+  },
+  {
+   "id": "feature.front.38.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 38: 21.33 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.38.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 38: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.39.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 39 lies inside the panel"
+  },
+  {
+   "id": "feature.front.39.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 39: 21.33 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.39.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 39: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.40.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 40 lies inside the panel"
+  },
+  {
+   "id": "feature.front.40.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 40: 21.33 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.40.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 40: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.41.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 41 lies inside the panel"
+  },
+  {
+   "id": "feature.front.41.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 41: 21.33 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.41.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 41: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.42.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 42 lies inside the panel"
+  },
+  {
+   "id": "feature.front.42.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 42: 21.33 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.42.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 42: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.43.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 43 lies inside the panel"
+  },
+  {
+   "id": "feature.front.43.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 43: 21.33 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.43.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 43: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.44.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 44 lies inside the panel"
+  },
+  {
+   "id": "feature.front.44.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 44: 21.30 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.44.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 44: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.45.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 45 lies inside the panel"
+  },
+  {
+   "id": "feature.front.45.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 45: 15.59 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.45.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 45: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.46.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 46 lies inside the panel"
+  },
+  {
+   "id": "feature.front.46.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 46: 12.73 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.46.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 46: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.47.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 47 lies inside the panel"
+  },
+  {
+   "id": "feature.front.47.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 47: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.47.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 47: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.48.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 48 lies inside the panel"
+  },
+  {
+   "id": "feature.front.48.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 48: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.48.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 48: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.49.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 49 lies inside the panel"
+  },
+  {
+   "id": "feature.front.49.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 49: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.49.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 49: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.50.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 50 lies inside the panel"
+  },
+  {
+   "id": "feature.front.50.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 50: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.50.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 50: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.51.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 51 lies inside the panel"
+  },
+  {
+   "id": "feature.front.51.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 51: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.51.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 51: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.52.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 52 lies inside the panel"
+  },
+  {
+   "id": "feature.front.52.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 52: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.52.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 52: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.53.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 53 lies inside the panel"
+  },
+  {
+   "id": "feature.front.53.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 53: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.53.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 53: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.54.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 54 lies inside the panel"
+  },
+  {
+   "id": "feature.front.54.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 54: 18.47 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.54.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 54: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.55.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 55 lies inside the panel"
+  },
+  {
+   "id": "feature.front.55.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 55: 15.59 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.55.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 55: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.56.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 56 lies inside the panel"
+  },
+  {
+   "id": "feature.front.56.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 56: 12.73 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.56.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 56: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.57.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 57 lies inside the panel"
+  },
+  {
+   "id": "feature.front.57.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 57: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.57.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 57: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.58.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 58 lies inside the panel"
+  },
+  {
+   "id": "feature.front.58.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 58: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.58.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 58: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.59.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 59 lies inside the panel"
+  },
+  {
+   "id": "feature.front.59.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 59: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.59.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 59: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.60.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 60 lies inside the panel"
+  },
+  {
+   "id": "feature.front.60.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 60: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.60.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 60: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.61.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 61 lies inside the panel"
+  },
+  {
+   "id": "feature.front.61.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 61: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.61.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 61: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.62.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 62 lies inside the panel"
+  },
+  {
+   "id": "feature.front.62.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 62: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.62.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 62: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.63.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 63 lies inside the panel"
+  },
+  {
+   "id": "feature.front.63.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 63: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.63.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 63: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.64.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 64 lies inside the panel"
+  },
+  {
+   "id": "feature.front.64.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 64: 15.62 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.64.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 64: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.65.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 65 lies inside the panel"
+  },
+  {
+   "id": "feature.front.65.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 65: 15.59 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.65.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 65: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.front.66.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel front, feature 66 lies inside the panel"
+  },
+  {
+   "id": "feature.front.66.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 66: 12.73 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.front.66.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel front, feature 66: hole Ø1.8 (minimum 1)"
+  },
+  {
+   "id": "feature.floor.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel floor, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.floor.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 0: 7.25 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.floor.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 0: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.floor.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel floor, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.floor.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 1: 7.25 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.floor.1.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 1: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.floor.2.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel floor, feature 2 lies inside the panel"
+  },
+  {
+   "id": "feature.floor.2.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 2: 11.55 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.floor.2.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 2: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.floor.3.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel floor, feature 3 lies inside the panel"
+  },
+  {
+   "id": "feature.floor.3.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 3: 35.05 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.floor.3.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel floor, feature 3: hole Ø2.9 (minimum 1)"
+  },
+  {
+   "id": "feature.tab_t1.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel tab_t1, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.tab_t1.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_t1, feature 0: 2.89 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.tab_t1.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_t1, feature 0: hole Ø4.22 (minimum 1)"
+  },
+  {
+   "id": "feature.tab_t2.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel tab_t2, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.tab_t2.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_t2, feature 0: 2.89 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.tab_t2.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_t2, feature 0: hole Ø4.22 (minimum 1)"
+  },
+  {
+   "id": "feature.tab_b1.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel tab_b1, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.tab_b1.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_b1, feature 0: 2.89 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.tab_b1.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_b1, feature 0: hole Ø4.22 (minimum 1)"
+  },
+  {
+   "id": "feature.tab_b2.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel tab_b2, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.tab_b2.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_b2, feature 0: 2.89 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.tab_b2.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel tab_b2, feature 0: hole Ø4.22 (minimum 1)"
+  },
+  {
+   "id": "fold.f_top.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_top: angle 90°"
+  },
+  {
+   "id": "fold.f_top.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_top: 24 slots on 238.4 mm, 19 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_top.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_top: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_top.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_top: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_top.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_top: 5.95 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_top.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_top: panel top is 98.5 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_top.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_top: nearest hole or cutout is 7.75 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_top.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_top: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_floor.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_floor: angle 90°"
+  },
+  {
+   "id": "fold.f_floor.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_floor: 24 slots on 238.4 mm, 19 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_floor.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_floor: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_floor.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_floor: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_floor.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_floor: 5.95 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_floor.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_floor: panel floor is 98.5 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_floor.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_floor: nearest hole or cutout is 12.95 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_floor.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_floor: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_left.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_left: angle 90°"
+  },
+  {
+   "id": "fold.f_left.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_left: 8 slots on 87.5 mm, 27 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_left.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_left.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_left.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: 6.50 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_left.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: panel left is 98.5 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_left.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_left: nearest hole or cutout is 10.85 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_left.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_left: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_right.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_right: angle 90°"
+  },
+  {
+   "id": "fold.f_right.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_right: 8 slots on 87.5 mm, 27 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_right.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_right.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_right.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: 6.50 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_right.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: panel right is 98.5 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_right.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_right: nearest hole or cutout is 12.73 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_right.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_right: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_tab_t1.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_t1: angle 90°"
+  },
+  {
+   "id": "fold.f_tab_t1.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_t1: 1 slots on 16 mm, 50 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_tab_t1.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t1: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_tab_t1.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t1: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_tab_t1.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t1: 4.00 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_tab_t1.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t1: panel tab_t1 is 12.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_tab_t1.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t1: nearest hole or cutout is 4.89 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_tab_t1.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_tab_t1: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_tab_t2.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_t2: angle 90°"
+  },
+  {
+   "id": "fold.f_tab_t2.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_t2: 1 slots on 16 mm, 50 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_tab_t2.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t2: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_tab_t2.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t2: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_tab_t2.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t2: 4.00 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_tab_t2.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t2: panel tab_t2 is 12.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_tab_t2.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_t2: nearest hole or cutout is 4.89 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_tab_t2.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_tab_t2: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_tab_b1.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_b1: angle 90°"
+  },
+  {
+   "id": "fold.f_tab_b1.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_b1: 1 slots on 16 mm, 50 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_tab_b1.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b1: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_tab_b1.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b1: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_tab_b1.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b1: 4.00 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_tab_b1.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b1: panel tab_b1 is 12.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_tab_b1.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b1: nearest hole or cutout is 4.89 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_tab_b1.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_tab_b1: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "fold.f_tab_b2.angle",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_b2: angle 90°"
+  },
+  {
+   "id": "fold.f_tab_b2.pattern",
+   "level": "geometric",
+   "ok": true,
+   "message": "fold f_tab_b2: 1 slots on 16 mm, 50 % of the line left as bridges"
+  },
+  {
+   "id": "fold.f_tab_b2.slot_width",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b2: slot width 0.5 (minimum 0.5)"
+  },
+  {
+   "id": "fold.f_tab_b2.bridge",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b2: bridge 1.5 (minimum 1)"
+  },
+  {
+   "id": "fold.f_tab_b2.end",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b2: 4.00 uncut at each end (minimum 1.5)"
+  },
+  {
+   "id": "fold.f_tab_b2.grip",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b2: panel tab_b2 is 12.0 deep from the fold (minimum to grip 6)"
+  },
+  {
+   "id": "fold.f_tab_b2.features",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "fold f_tab_b2: nearest hole or cutout is 4.89 from the fold line (minimum 1.75)"
+  },
+  {
+   "id": "fold.f_tab_b2.tested",
+   "level": "experimental",
+   "ok": false,
+   "message": "fold f_tab_b2: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+  },
+  {
+   "id": "flat.overlap",
+   "level": "geometric",
+   "ok": true,
+   "message": "panels do not overlap in the flat pattern"
+  },
+  {
+   "id": "flat.one_piece",
+   "level": "geometric",
+   "ok": true,
+   "message": "the flat pattern is 1 piece(s)"
+  },
+  {
+   "id": "folded.bbox",
+   "level": "geometric",
+   "ok": true,
+   "message": "the kernel's folded envelope equals the arithmetic's"
+  },
+  {
+   "id": "folded.interference",
+   "level": "geometric",
+   "ok": true,
+   "message": "no folded panels collide"
+  },
+  {
+   "id": "sequence.0",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 0 can be carried out"
+  },
+  {
+   "id": "sequence.1",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 1 can be carried out"
+  },
+  {
+   "id": "sequence.2",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 2 can be carried out"
+  },
+  {
+   "id": "sequence.3",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 3 can be carried out"
+  },
+  {
+   "id": "sequence.4",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 4 can be carried out"
+  },
+  {
+   "id": "flat.dxf_readback",
+   "level": "geometric",
+   "ok": true,
+   "message": "the DXF reads back with the same entities per layer and the blank's extent ({'CUT_THROUGH': 76, 'FOLD_PERFORATION': 68, 'FOLD_DIRECTION': 24, 'REFERENCE': 37})"
+  }
+ ],
+ "files": {
+  "dxf": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/flat/shell_UNTESTED.dxf",
+  "svg": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/flat/shell.svg",
+  "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/folded/shell.step",
+  "fcstd": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/shell.FCStd"
+ },
+ "renders": [
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/isometric.png",
+   "isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/front.png",
+   "front"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/right.png",
+   "right"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/top.png",
+   "top"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/sequence_0/isometric.png",
+   "after step 0"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/sequence_1/isometric.png",
+   "after step 1"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/sequence_2/isometric.png",
+   "after step 2"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/shell/renders/sequence_3/isometric.png",
+   "after step 3"
+  ]
+ ]
+}

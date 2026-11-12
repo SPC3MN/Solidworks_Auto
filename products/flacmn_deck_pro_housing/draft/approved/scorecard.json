@@ -1,7 +1,7 @@
 {
  "option": "A",
- "round": 10,
- "hash": "4c9ba53f7261bf4b",
+ "round": 11,
+ "hash": "60c01bd64be26a75",
  "scorecard": {
   "parts_total": 35,
   "parts_unique": 17,
@@ -17,7 +17,7 @@
  },
  "envelope_mm": {
   "bbox_x": 241.0,
-  "bbox_y": 117.5,
+  "bbox_y": 112.5,
   "bbox_z": 94.5,
   "parts_total": 35,
   "parts_make": 2,
@@ -273,8 +273,8 @@
    "lhs_expr": "shaft_out",
    "rhs_expr": "knob_gap + knob_h",
    "op": "<=",
-   "lhs": 14.0,
-   "rhs": 14.0,
+   "lhs": 9.0,
+   "rhs": 9.0,
    "margin": 0.0,
    "ok": true,
    "why": "15 mm shaft ends at or inside the cap face"
@@ -289,6 +289,17 @@
    "margin": 1.0,
    "ok": true,
    "why": "Cap face within 1 mm of the shaft tip (full engagement)"
+  },
+  {
+   "id": "shaft_grip",
+   "lhs_expr": "shaft_out - bush_out",
+   "rhs_expr": "3",
+   "op": ">=",
+   "lhs": 3.0,
+   "rhs": 3.0,
+   "margin": 0.0,
+   "ok": true,
+   "why": "Cap grips at least 3 mm of shaft past the bushing (with an M3 set screw onto the D-flat)"
   },
   {
    "id": "logo_web",

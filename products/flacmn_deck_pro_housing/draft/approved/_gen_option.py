@@ -1,4 +1,4 @@
-"""Write round-10 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
+"""Write round-11 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
 
 From the owner's layout (references/electronics_views/flacmn_deck_layout.svg, scaled to true size) and the
 round-5 push-back: Shell: the front face in the centre, with the top, bottom and both sides folding back from
@@ -63,12 +63,12 @@ params = {
     "va_w": P(109.0, "given"), "va_h": P(65.8, "given"), "va_l": P(5.85, "given"), "va_top": P(3.1, "given"),
     "lens_x0": P(6.0, "given", LAY), "lens_z0": "(H - lens_h)/2",
     # encoders and knob caps
-    "kb_d": P(57.0, "given", LAY), "ks_d": P(35.0, "given", LAY), "knob_h": P(13.0, "given", "owner 2026-11-11: shaft tip at the cap face"),
+    "kb_d": P(57.0, "given", LAY), "ks_d": P(35.0, "given", LAY), "knob_h": P(8.0, "given", "owner 2026-11-11: thinner caps, shafts cut"),
     "kb_x": P(154.5, "given", LAY), "kb_z": "H/2", "ks_x": P(208.3, "given", LAY), "ks_z": P(56.9, "given", LAY),
     "knob_gap": P(1.0, "chosen", "cap back face to the front face"),
     "enc_w": P(12.5, "estimated"), "enc_h": P(13.4, "estimated"), "enc_d": P(10.1, "estimated", "body 6.6 + pins"),
     "enc_hole": P(7.4, "given"), "enc_tab_r": P(7.5, "estimated", "anti-turn tab offset"), "enc_tab_d": 2.4,
-    "bush_out": P(6.0, "estimated", "bushing past the panel"), "shaft_out": P(14.0, "given", "PEC11R-4215F: 15 above the body top, less the 1 mm panel"),
+    "bush_out": P(6.0, "estimated", "bushing past the panel"), "shaft_out": P(9.0, "chosen", "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"),
     # 'mn' logo: dot holes through the front face (flacmn_deck_layout.svg 1ee76f3, true scale)
     "logo_p": P(2.857, "given", LAY), "logo_dot": P(1.8, "given", "owner: smaller dots, 1.06 web"),
     "logo_cx": P("ks_x", "given", "owner: centred horizontally on the small knob"),
@@ -161,7 +161,7 @@ def encoder(x, z, d, pid, name):
             box("enc_w", "enc_d", "enc_h", x, "t + enc_d/2", f"{z} - enc_h/2"),
             cyl(7, "bush_out + t", "y", [x, "-bush_out", z]),
             cyl(6, "knob_gap + knob_h - bush_out - 1", "y", [x, "-(knob_gap + knob_h - 1)", z])]},
-        {"id": f"knob_{pid}", "name": f"Knob cap, {name} (Ø{d} x 13, counterbored over the nut)", "source": "buy", "bodies": [
+        {"id": f"knob_{pid}", "name": f"Knob cap, {name} (Ø{d} x 8, counterbored over the nut, M3 set screw onto the D-flat)", "source": "buy", "bodies": [
             cyl(d, "knob_h", "y", [x, "-(knob_gap + knob_h)", z])]}]
 
 parts = [
@@ -208,7 +208,7 @@ option = {
                 "face in the centre with the top, floor and both sides folded back from it, and two tabs folded in "
                 "at the back of the top and two at the back of the floor (8 folds). A flat back plate (no folds) "
                 "takes four ISO 4762 M3 x 8 from the back face into clinch nuts in the tabs. The 5in DSI screen is "
-                "taped behind the front face; both encoders nut into it and the Ø57 x 13 and Ø35 x 13 caps sit proud on the "
+                "taped behind the front face; both encoders nut into it and the Ø57 x 8 and Ø35 x 8 caps sit proud on the "
                 "shafts. The Pi + DAC sit on the floor at the back right; USB and Ethernet cords thread out through "
                 "three cut-outs in the back plate."),
     "architecture": {
@@ -266,6 +266,8 @@ option = {
          "why": "15 mm shaft ends at or inside the cap face"},
         {"id": "shaft_engages", "lhs": "knob_gap + knob_h - shaft_out", "op": "<=", "rhs": 1,
          "why": "Cap face within 1 mm of the shaft tip (full engagement)"},
+        {"id": "shaft_grip", "lhs": "shaft_out - bush_out", "op": ">=", "rhs": 3,
+         "why": "Cap grips at least 3 mm of shaft past the bushing (with an M3 set screw onto the D-flat)"},
         {"id": "logo_web", "lhs": "logo_p - logo_dot", "op": ">=", "rhs": "t",
          "why": "Logo webs at least one sheet thickness"},
         {"id": "logo_vs_knob", "lhs": "logo_top + logo_dot/2 + 2", "op": "<=", "rhs": "ks_z - ks_d/2",

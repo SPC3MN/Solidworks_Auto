@@ -115,5 +115,21 @@
    "A"
   ],
   "notes": "Approved, build it"
+ },
+ {
+  "time": "2026-11-11T22:39:02",
+  "round": 10,
+  "move": "pushback",
+  "options": [],
+  "notes": "make the knobs thinner as well, cut the encoder chaft if needed (answer: 8 mm)"
+ },
+ {
+  "time": "2026-11-11T22:39:44",
+  "round": 11,
+  "move": "approve",
+  "options": [
+   "A"
+  ],
+  "notes": "Approved, build it"
  }
 ]

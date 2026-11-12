@@ -1,6 +1,6 @@
 {
  "quality": "preview",
- "time": "20261111T223831",
+ "time": "20261111T224139",
  "settings_hash": "608f10c31f7d3e45",
  "device": {
   "device": "GPU",
@@ -12,7 +12,7 @@
  "blend": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/blender/deck_out.blend",
  "product_bbox_mm": [
   241.0,
-  117.5,
+  112.5,
   94.5
  ],
  "scenes": {
@@ -543,7 +543,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/hero.png",
-   "seconds": 7.5,
+   "seconds": 7.7,
    "resolution": [
     800,
     800
@@ -563,18 +563,18 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     0.083,
+     0.085,
      0.94
     ],
     "frame_y": [
      0.185,
      0.747
     ],
-    "bbox_fill": 0.482,
+    "bbox_fill": 0.48,
     "cropped": false
    },
    "image": {
-    "mean": 171.4,
+    "mean": 171.6,
     "clipped_pct": 0.0,
     "crushed_pct": 0.0
    }
@@ -584,7 +584,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/low_angle.png",
-   "seconds": 5.7,
+   "seconds": 5.8,
    "resolution": [
     800,
     800
@@ -605,17 +605,17 @@
    "framing": {
     "frame_x": [
      0.12,
-     0.876
+     0.88
     ],
     "frame_y": [
-     0.298,
-     0.635
+     0.297,
+     0.636
     ],
-    "bbox_fill": 0.255,
+    "bbox_fill": 0.258,
     "cropped": false
    },
    "image": {
-    "mean": 159.5,
+    "mean": 159.3,
     "clipped_pct": 0.0,
     "crushed_pct": 0.1
    }
@@ -625,7 +625,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/front.png",
-   "seconds": 3.3,
+   "seconds": 3.4,
    "resolution": [
     800,
     450
@@ -647,16 +647,16 @@
      0.94
     ],
     "frame_y": [
-     -0.0,
+     0.0,
      0.613
     ],
     "bbox_fill": 0.54,
     "cropped": false
    },
    "image": {
-    "mean": 116.0,
+    "mean": 116.3,
     "clipped_pct": 0.0,
-    "crushed_pct": 4.62
+    "crushed_pct": 4.6
    }
   },
   {
@@ -664,7 +664,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/side.png",
-   "seconds": 5.5,
+   "seconds": 5.8,
    "resolution": [
     800,
     800
@@ -687,13 +687,13 @@
     ],
     "frame_y": [
      0.0,
-     0.563
+     0.588
     ],
-    "bbox_fill": 0.394,
+    "bbox_fill": 0.412,
     "cropped": false
    },
    "image": {
-    "mean": 159.4,
+    "mean": 160.9,
     "clipped_pct": 0.0,
     "crushed_pct": 0.01
    }
@@ -703,7 +703,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/top.png",
-   "seconds": 5.4,
+   "seconds": 5.3,
    "resolution": [
     800,
     800
@@ -725,14 +725,14 @@
      0.92
     ],
     "frame_y": [
-     0.295,
-     0.705
+     0.304,
+     0.696
     ],
-    "bbox_fill": 0.344,
+    "bbox_fill": 0.329,
     "cropped": false
    },
    "image": {
-    "mean": 190.9,
+    "mean": 191.5,
     "clipped_pct": 0.0,
     "crushed_pct": 0.0
    }
@@ -742,7 +742,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/rear.png",
-   "seconds": 6.1,
+   "seconds": 6.0,
    "resolution": [
     800,
     800
@@ -762,20 +762,20 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     0.083,
+     0.086,
      0.94
     ],
     "frame_y": [
-     0.194,
-     0.737
+     0.195,
+     0.738
     ],
-    "bbox_fill": 0.465,
+    "bbox_fill": 0.464,
     "cropped": false
    },
    "image": {
-    "mean": 189.2,
+    "mean": 189.1,
     "clipped_pct": 0.0,
-    "crushed_pct": 0.5
+    "crushed_pct": 0.49
    }
   },
   {
@@ -803,20 +803,20 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     -0.831,
-     1.085
+     -0.869,
+     1.087
     ],
     "frame_y": [
-     -0.097,
-     0.945
+     -0.104,
+     0.952
     ],
-    "bbox_fill": 0.945,
+    "bbox_fill": 0.952,
     "cropped": true
    },
    "image": {
-    "mean": 129.1,
-    "clipped_pct": 1.96,
-    "crushed_pct": 0.54
+    "mean": 129.3,
+    "clipped_pct": 2.0,
+    "crushed_pct": 0.68
    }
   },
   {
@@ -824,7 +824,7 @@
    "scene": "technical",
    "category": "exploded",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/exploded/exploded.png",
-   "seconds": 6.5,
+   "seconds": 6.4,
    "resolution": [
     800,
     800
@@ -844,18 +844,18 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     0.157,
-     0.863
+     0.159,
+     0.862
     ],
     "frame_y": [
      0.06,
-     0.859
+     0.861
     ],
-    "bbox_fill": 0.564,
+    "bbox_fill": 0.563,
     "cropped": false
    },
    "image": {
-    "mean": 177.3,
+    "mean": 177.2,
     "clipped_pct": 0.0,
     "crushed_pct": 0.0
    }
@@ -865,7 +865,7 @@
    "scene": "technical",
    "category": "technical",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/technical/xray.png",
-   "seconds": 8.1,
+   "seconds": 8.3,
    "resolution": [
     800,
     800
@@ -889,18 +889,18 @@
    },
    "framing": {
     "frame_x": [
-     0.083,
+     0.085,
      0.94
     ],
     "frame_y": [
      0.185,
      0.747
     ],
-    "bbox_fill": 0.482,
+    "bbox_fill": 0.48,
     "cropped": false
    },
    "image": {
-    "mean": 178.7,
+    "mean": 178.8,
     "clipped_pct": 0.0,
     "crushed_pct": 0.0
    }
@@ -929,5 +929,5 @@
  },
  "contact_sheet": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/contact_sheet.png",
  "partial": false,
- "final_estimate_s": 1575
+ "final_estimate_s": 1593
 }
