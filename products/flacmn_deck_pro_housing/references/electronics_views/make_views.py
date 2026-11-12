@@ -222,3 +222,30 @@ svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f
        f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
 Path(__file__).with_name("lcd4_square_dsi_views.svg").write_text(svg, encoding="utf-8")
 print("wrote", Path(__file__).with_name("lcd4_square_dsi_views.svg"))
+
+# ---- Waveshare 5inch DSI LCD, 800 x 480, from Waveshare's 2D drawing. x along 121 (seen from the front), y = 0 at
+# the glass, z up (76). Lens + LCD 5.4, back of PCB 9.0, parts to 13.0. Back-side connectors scaled off the drawing (~).
+w5 = [
+    B("lens 120.7 × 77.2 (TP + LCD 5.4)", 0.15, 0, -0.6, 120.85, 5.4, 76.6, "glass"),
+    B("viewing area 109 × 65.8", 6.0, -0.05, 73.5 - 65.8, 115.0, 0, 73.5, "lit"),
+    B("frame", 1, 5.4, 1, 120, 7.4, 75, "black"),
+    B("PCB 121 × 76", 0, 7.4, 0, 121, 9.0, 76, "pcb"),
+    *[CY("M2.5 hole, 113 × 68", 1, (x, z), 1.25, 9.0, 13.0, "brass") for x in (4, 117) for z in (4, 72)],
+    *[CY("M2.5 Pi standoff, 58 × 49", 1, (x, z), 1.25, 9.0, 13.0, "brass") for x in (37.4, 95.4) for z in (13.5, 62.5)],
+    B("15-pin DSI FFC (Pi 4) ~", 22.7, 9.0, 24, 48.4, 13.0, 45, "white"),
+    B("22-pin DSI1 (Pi 5) ~", 11, 9.0, 27, 17, 13.0, 47, "white"),
+    B("I2C / power connector ~", 98, 9.0, 28, 105, 13.0, 34, "white"),
+]
+body, y = [f'<text x="10" y="28" class="ut">Waveshare 5inch DSI LCD, 800 × 480</text>'], 38
+x, row_h = 10, 0
+for v in VIEWS:
+    g, W, H = view_svg(w5, v, [])
+    body.append(f'<g transform="translate({x:.0f},{y:.0f})">{g}</g>')
+    x += max(W, 150) + 12
+    row_h = max(row_h, H)
+width, y = x, y + row_h + 16
+svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f}" width="{width:.0f}" height="{y:.0f}">'
+       '<style>text{font-family:sans-serif}.ut{font-size:16px;font-weight:700}.vt{font-size:11px;font-weight:600}.dm{font-size:11px;fill:#333}</style>'
+       f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
+Path(__file__).with_name("lcd5_dsi_views.svg").write_text(svg, encoding="utf-8")
+print("wrote", Path(__file__).with_name("lcd5_dsi_views.svg"))
