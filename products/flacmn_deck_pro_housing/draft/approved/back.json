@@ -313,6 +313,27 @@
    "src": "given",
    "note": "PEC11R-4215F: 15 above the body top, less the 1 mm panel"
   },
+  "logo_p": {
+   "value": 2.857,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "logo_dot": {
+   "value": 1.8,
+   "src": "given",
+   "note": "owner: smaller dots, 1.06 web"
+  },
+  "logo_cx": {
+   "value": "ks_x",
+   "src": "given",
+   "note": "owner: centred horizontally on the small knob"
+  },
+  "logo_top": {
+   "value": 31.3,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "logo_cols": 14,
   "feet_h": {
    "value": 6.0,
    "src": "chosen",

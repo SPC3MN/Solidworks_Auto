@@ -313,6 +313,27 @@
    "src": "given",
    "note": "PEC11R-4215F: 15 above the body top, less the 1 mm panel"
   },
+  "logo_p": {
+   "value": 2.857,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "logo_dot": {
+   "value": 1.8,
+   "src": "given",
+   "note": "owner: smaller dots, 1.06 web"
+  },
+  "logo_cx": {
+   "value": "ks_x",
+   "src": "given",
+   "note": "owner: centred horizontally on the small knob"
+  },
+  "logo_top": {
+   "value": 31.3,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "logo_cols": 14,
   "feet_h": {
    "value": 6.0,
    "src": "chosen",
@@ -392,6 +413,502 @@
      "at": [
       "(ks_x) - hinge*t",
       "H - hinge*t - (ks_z + enc_tab_r)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (0 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (2 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (3 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (4 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (5 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (6 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (9 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (11 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (12 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 0*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (0 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (1 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (2 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (3 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (4 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (5 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (6 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (7 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (9 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (10 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (11 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (12 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (13 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 1*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (0 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (1 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (3 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (4 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (6 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (7 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (9 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (10 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (12 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (13 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 2*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (0 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (1 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (3 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (4 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (6 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (7 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (9 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (10 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (12 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (13 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 3*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (0 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (1 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (3 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (4 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (6 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (7 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (9 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (10 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (12 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (13 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 4*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (0 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (1 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (3 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (4 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (6 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (7 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (9 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (10 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (12 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "logo_dot",
+     "at": [
+      "(logo_cx + (13 - (logo_cols - 1)/2)*logo_p) - hinge*t",
+      "H - hinge*t - (logo_top - 5*logo_p)"
      ]
     }
    ]

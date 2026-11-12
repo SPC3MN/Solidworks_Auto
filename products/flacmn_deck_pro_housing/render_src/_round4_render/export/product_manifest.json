@@ -1,0 +1,3654 @@
+{
+ "schema_version": "2.0",
+ "project": "render_src",
+ "assembly": "deck_out",
+ "source": {
+  "adapter": "file",
+  "application": "STEP file",
+  "application_version": "",
+  "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+  "exported": "2026-11-11T16:56:21",
+  "details": {
+   "format": "step",
+   "units_assumed": null,
+   "up_axis_assumed": null,
+   "read_with": "Blender 5.2.3 LTS",
+   "copy": "export/geometry/source.step"
+  }
+ },
+ "units": {
+  "length": "mm",
+  "up_axis": "Z"
+ },
+ "bbox_mm": {
+  "min": [
+   0.0,
+   -11.5,
+   -4.0
+  ],
+  "max": [
+   115.5,
+   83.0,
+   46.0
+  ],
+  "size": [
+   115.5,
+   94.5,
+   50.0
+  ]
+ },
+ "hierarchy": [
+  {
+   "id": "deck_out",
+   "parent": null,
+   "kind": "assembly"
+  }
+ ],
+ "parts": {
+  "clinch_nut_1": {
+   "part_id": "clinch_nut_1",
+   "geometry": {
+    "file": "export/geometry/parts/clinch_nut_1.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     1.3,
+     -3.5,
+     5.601
+    ],
+    "max": [
+     7.7,
+     -2.0,
+     11.999
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "clinch_nut_2": {
+   "part_id": "clinch_nut_2",
+   "geometry": {
+    "file": "export/geometry/parts/clinch_nut_2.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     96.3,
+     -3.5,
+     67.501
+    ],
+    "max": [
+     102.7,
+     -2.0,
+     73.899
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "dac_jack": {
+   "part_id": "dac_jack",
+   "geometry": {
+    "file": "export/geometry/parts/dac_jack.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     33.2,
+     -22.0,
+     60.0
+    ],
+    "max": [
+     41.2,
+     -16.0,
+     74.5
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "pcb_green",
+    "source": "name_rule",
+    "rule": "pcb|board|hat|rpi|dac|pi5|zero",
+    "confidence": "low"
+   }
+  },
+  "dac_pcb": {
+   "part_id": "dac_pcb",
+   "geometry": {
+    "file": "export/geometry/parts/dac_pcb.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     24.0,
+     -16.0,
+     15.75
+    ],
+    "max": [
+     89.0,
+     -14.4,
+     72.25
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "pcb_green",
+    "source": "name_rule",
+    "rule": "pcb|board|hat|rpi|dac|pi5|zero",
+    "confidence": "low"
+   }
+  },
+  "dac_rca_barrels": {
+   "part_id": "dac_rca_barrels",
+   "geometry": {
+    "file": "export/geometry/parts/dac_rca_barrels.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     52.0212,
+     -26.5,
+     72.0
+    ],
+    "max": [
+     74.6388,
+     -18.5,
+     81.0
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "pcb_green",
+    "source": "name_rule",
+    "rule": "pcb|board|hat|rpi|dac|pi5|zero",
+    "confidence": "low"
+   }
+  },
+  "dac_rca_housing": {
+   "part_id": "dac_rca_housing",
+   "geometry": {
+    "file": "export/geometry/parts/dac_rca_housing.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     49.4,
+     -29.0,
+     58.0
+    ],
+    "max": [
+     77.0,
+     -16.0,
+     72.0
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "pcb_green",
+    "source": "name_rule",
+    "rule": "pcb|board|hat|rpi|dac|pi5|zero",
+    "confidence": "low"
+   }
+  },
+  "enc_front": {
+   "part_id": "enc_front",
+   "geometry": {
+    "file": "export/geometry/parts/enc_front.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     74.75,
+     -29.7,
+     -11.5
+    ],
+    "max": [
+     87.25,
+     -16.3,
+     11.1
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "enc_side": {
+   "part_id": "enc_side",
+   "geometry": {
+    "file": "export/geometry/parts/enc_side.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     92.9,
+     -29.7,
+     35.25
+    ],
+    "max": [
+     115.5,
+     -16.3,
+     47.75
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "feet_1": {
+   "part_id": "feet_1",
+   "geometry": {
+    "file": "export/geometry/parts/feet_1.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     9.0,
+     -0.0,
+     7.0016
+    ],
+    "max": [
+     19.0,
+     4.0,
+     16.9984
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "feet_2": {
+   "part_id": "feet_2",
+   "geometry": {
+    "file": "export/geometry/parts/feet_2.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     91.0,
+     -0.0,
+     7.0016
+    ],
+    "max": [
+     101.0,
+     4.0,
+     16.9984
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "feet_3": {
+   "part_id": "feet_3",
+   "geometry": {
+    "file": "export/geometry/parts/feet_3.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     9.0,
+     -0.0,
+     55.0016
+    ],
+    "max": [
+     19.0,
+     4.0,
+     64.9984
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "feet_4": {
+   "part_id": "feet_4",
+   "geometry": {
+    "file": "export/geometry/parts/feet_4.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     91.0,
+     -0.0,
+     55.0016
+    ],
+    "max": [
+     101.0,
+     4.0,
+     64.9984
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "jumpers": {
+   "part_id": "jumpers",
+   "geometry": {
+    "file": "export/geometry/parts/jumpers.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     31.0,
+     -32.5,
+     17.0
+    ],
+    "max": [
+     82.0,
+     -16.0,
+     22.0
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "knob_front": {
+   "part_id": "knob_front",
+   "geometry": {
+    "file": "export/geometry/parts/knob_front.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     61.5012,
+     -42.5,
+     -11.5
+    ],
+    "max": [
+     100.4988,
+     -3.505,
+     -6.5
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "pom_black",
+    "source": "name_rule",
+    "rule": "knob|handle|grip",
+    "confidence": "low"
+   }
+  },
+  "knob_side": {
+   "part_id": "knob_side",
+   "geometry": {
+    "file": "export/geometry/parts/knob_side.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     110.5,
+     -42.5,
+     22.0012
+    ],
+    "max": [
+     115.5,
+     -3.505,
+     60.9988
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "pom_black",
+    "source": "name_rule",
+    "rule": "knob|handle|grip",
+    "confidence": "low"
+   }
+  },
+  "pad": {
+   "part_id": "pad",
+   "geometry": {
+    "file": "export/geometry/parts/pad.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     52.5,
+     -4.0,
+     32.5
+    ],
+    "max": [
+     67.5,
+     -1.0,
+     47.5
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "pi4_ethernet": {
+   "part_id": "pi4_ethernet",
+   "geometry": {
+    "file": "export/geometry/parts/pi4_ethernet.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     1.3,
+     -18.9,
+     18.25
+    ],
+    "max": [
+     21.4,
+     -5.4,
+     34.25
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "pi4_pcb": {
+   "part_id": "pi4_pcb",
+   "geometry": {
+    "file": "export/geometry/parts/pi4_pcb.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     4.0,
+     -5.4,
+     16.0
+    ],
+    "max": [
+     89.0,
+     -4.0,
+     72.0
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "pcb_green",
+    "source": "name_rule",
+    "rule": "pcb|board|hat|rpi|dac|pi5|zero",
+    "confidence": "low"
+   }
+  },
+  "pi4_usb": {
+   "part_id": "pi4_usb",
+   "geometry": {
+    "file": "export/geometry/parts/pi4_usb.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     1.3,
+     -21.4,
+     37.75
+    ],
+    "max": [
+     21.4,
+     -5.4,
+     70.25
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "pi4_usbc": {
+   "part_id": "pi4_usbc",
+   "geometry": {
+    "file": "export/geometry/parts/pi4_usbc.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     73.3,
+     -8.6,
+     66.0
+    ],
+    "max": [
+     82.3,
+     -5.4,
+     73.2
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "plate": {
+   "part_id": "plate",
+   "geometry": {
+    "file": "export/geometry/parts/plate.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "max": [
+     101.4,
+     -0.0,
+     80.4
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_anodized",
+    "source": "name_rule",
+    "rule": "x8020|1515|1530|3030|extrusion|rail|profile|bracket|gusset|plate",
+    "confidence": "low"
+   }
+  },
+  "screen": {
+   "part_id": "screen",
+   "geometry": {
+    "file": "export/geometry/parts/screen.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     1.75,
+     -40.5,
+     1.0
+    ],
+    "max": [
+     59.75,
+     -5.5,
+     12.0
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "screw_dac_1": {
+   "part_id": "screw_dac_1",
+   "geometry": {
+    "file": "export/geometry/parts/screw_dac_1.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     83.25,
+     -17.5,
+     66.2507
+    ],
+    "max": [
+     87.75,
+     -16.0,
+     70.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_dac_2": {
+   "part_id": "screw_dac_2",
+   "geometry": {
+    "file": "export/geometry/parts/screw_dac_2.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     83.25,
+     -17.5,
+     17.2507
+    ],
+    "max": [
+     87.75,
+     -16.0,
+     21.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_dac_3": {
+   "part_id": "screw_dac_3",
+   "geometry": {
+    "file": "export/geometry/parts/screw_dac_3.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     25.25,
+     -17.5,
+     66.2507
+    ],
+    "max": [
+     29.75,
+     -16.0,
+     70.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_dac_4": {
+   "part_id": "screw_dac_4",
+   "geometry": {
+    "file": "export/geometry/parts/screw_dac_4.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     25.25,
+     -17.5,
+     17.2507
+    ],
+    "max": [
+     29.75,
+     -16.0,
+     21.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_m3_1": {
+   "part_id": "screw_m3_1",
+   "geometry": {
+    "file": "export/geometry/parts/screw_m3_1.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     1.75,
+     -0.0,
+     6.0509
+    ],
+    "max": [
+     7.25,
+     1.0,
+     11.5491
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_m3_2": {
+   "part_id": "screw_m3_2",
+   "geometry": {
+    "file": "export/geometry/parts/screw_m3_2.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     96.75,
+     -0.0,
+     67.9509
+    ],
+    "max": [
+     102.25,
+     1.0,
+     73.4491
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_pi_1": {
+   "part_id": "screw_pi_1",
+   "geometry": {
+    "file": "export/geometry/parts/screw_pi_1.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     83.25,
+     -0.0,
+     66.2507
+    ],
+    "max": [
+     87.75,
+     1.0,
+     70.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_pi_2": {
+   "part_id": "screw_pi_2",
+   "geometry": {
+    "file": "export/geometry/parts/screw_pi_2.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     83.25,
+     -0.0,
+     17.2507
+    ],
+    "max": [
+     87.75,
+     1.0,
+     21.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_pi_3": {
+   "part_id": "screw_pi_3",
+   "geometry": {
+    "file": "export/geometry/parts/screw_pi_3.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     25.25,
+     -0.0,
+     66.2507
+    ],
+    "max": [
+     29.75,
+     1.0,
+     70.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "screw_pi_4": {
+   "part_id": "screw_pi_4",
+   "geometry": {
+    "file": "export/geometry/parts/screw_pi_4.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     25.25,
+     -0.0,
+     17.2507
+    ],
+    "max": [
+     29.75,
+     1.0,
+     21.7493
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "stainless_steel",
+    "source": "name_rule",
+    "rule": "screw|bolt|nut|washer|fastener|eclip|circlip|retain|pin_|dowel|spring|plunger",
+    "confidence": "low"
+   }
+  },
+  "shell": {
+   "part_id": "shell",
+   "geometry": {
+    "file": "export/geometry/parts/shell.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     -0.5,
+     -1.0,
+     -0.5
+    ],
+    "max": [
+     103.5,
+     44.0,
+     82.5
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "standoff_1": {
+   "part_id": "standoff_1",
+   "geometry": {
+    "file": "export/geometry/parts/standoff_1.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     83.0,
+     -4.0,
+     66.0008
+    ],
+    "max": [
+     88.0,
+     -1.0,
+     70.9992
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "standoff_2": {
+   "part_id": "standoff_2",
+   "geometry": {
+    "file": "export/geometry/parts/standoff_2.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     83.0,
+     -4.0,
+     17.0008
+    ],
+    "max": [
+     88.0,
+     -1.0,
+     21.9992
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "standoff_3": {
+   "part_id": "standoff_3",
+   "geometry": {
+    "file": "export/geometry/parts/standoff_3.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     25.0,
+     -4.0,
+     66.0008
+    ],
+    "max": [
+     30.0,
+     -1.0,
+     70.9992
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  },
+  "standoff_4": {
+   "part_id": "standoff_4",
+   "geometry": {
+    "file": "export/geometry/parts/standoff_4.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     25.0,
+     -4.0,
+     17.0008
+    ],
+    "max": [
+     30.0,
+     -1.0,
+     21.9992
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
+    "confidence": "low"
+   }
+  }
+ },
+ "components": [
+  {
+   "id": "clinch_nut_1",
+   "name": "clinch_nut_1",
+   "parent": "deck_out",
+   "part": "clinch_nut_1",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "clinch_nut_1"
+   },
+   "world_bbox_mm": [
+    [
+     1.3,
+     5.601,
+     2.0
+    ],
+    [
+     7.7,
+     11.999,
+     3.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     1.3,
+     5.601,
+     2.0
+    ],
+    [
+     7.7,
+     11.999,
+     3.5
+    ]
+   ]
+  },
+  {
+   "id": "clinch_nut_2",
+   "name": "clinch_nut_2",
+   "parent": "deck_out",
+   "part": "clinch_nut_2",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "clinch_nut_2"
+   },
+   "world_bbox_mm": [
+    [
+     96.3,
+     67.501,
+     2.0
+    ],
+    [
+     102.7,
+     73.899,
+     3.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     96.3,
+     67.501,
+     2.0
+    ],
+    [
+     102.7,
+     73.899,
+     3.5
+    ]
+   ]
+  },
+  {
+   "id": "dac_jack",
+   "name": "dac_jack",
+   "parent": "deck_out",
+   "part": "dac_jack",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "dac_jack"
+   },
+   "world_bbox_mm": [
+    [
+     33.2,
+     60.0,
+     16.0
+    ],
+    [
+     41.2,
+     74.5,
+     22.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     33.2,
+     60.0,
+     16.0
+    ],
+    [
+     41.2,
+     74.5,
+     22.0
+    ]
+   ]
+  },
+  {
+   "id": "dac_pcb",
+   "name": "dac_pcb",
+   "parent": "deck_out",
+   "part": "dac_pcb",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "dac_pcb"
+   },
+   "world_bbox_mm": [
+    [
+     24.0,
+     15.75,
+     14.4
+    ],
+    [
+     89.0,
+     72.25,
+     16.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     24.0,
+     15.75,
+     14.4
+    ],
+    [
+     89.0,
+     72.25,
+     16.0
+    ]
+   ]
+  },
+  {
+   "id": "dac_rca_barrels",
+   "name": "dac_rca_barrels",
+   "parent": "deck_out",
+   "part": "dac_rca_barrels",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "dac_rca_barrels"
+   },
+   "world_bbox_mm": [
+    [
+     52.0212,
+     72.0,
+     18.5
+    ],
+    [
+     74.6388,
+     81.0,
+     26.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     52.0212,
+     72.0,
+     18.5
+    ],
+    [
+     74.6388,
+     81.0,
+     26.5
+    ]
+   ]
+  },
+  {
+   "id": "dac_rca_housing",
+   "name": "dac_rca_housing",
+   "parent": "deck_out",
+   "part": "dac_rca_housing",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "dac_rca_housing"
+   },
+   "world_bbox_mm": [
+    [
+     49.4,
+     58.0,
+     16.0
+    ],
+    [
+     77.0,
+     72.0,
+     29.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     49.4,
+     58.0,
+     16.0
+    ],
+    [
+     77.0,
+     72.0,
+     29.0
+    ]
+   ]
+  },
+  {
+   "id": "enc_front",
+   "name": "enc_front",
+   "parent": "deck_out",
+   "part": "enc_front",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "enc_front"
+   },
+   "world_bbox_mm": [
+    [
+     74.75,
+     -11.5,
+     16.3
+    ],
+    [
+     87.25,
+     11.1,
+     29.7
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     74.75,
+     -11.5,
+     16.3
+    ],
+    [
+     87.25,
+     11.1,
+     29.7
+    ]
+   ]
+  },
+  {
+   "id": "enc_side",
+   "name": "enc_side",
+   "parent": "deck_out",
+   "part": "enc_side",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "enc_side"
+   },
+   "world_bbox_mm": [
+    [
+     92.9,
+     35.25,
+     16.3
+    ],
+    [
+     115.5,
+     47.75,
+     29.7
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     92.9,
+     35.25,
+     16.3
+    ],
+    [
+     115.5,
+     47.75,
+     29.7
+    ]
+   ]
+  },
+  {
+   "id": "feet_1",
+   "name": "feet_1",
+   "parent": "deck_out",
+   "part": "feet_1",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "feet_1"
+   },
+   "world_bbox_mm": [
+    [
+     9.0,
+     7.0016,
+     -4.0
+    ],
+    [
+     19.0,
+     16.9984,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     9.0,
+     7.0016,
+     -4.0
+    ],
+    [
+     19.0,
+     16.9984,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "feet_2",
+   "name": "feet_2",
+   "parent": "deck_out",
+   "part": "feet_2",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "feet_2"
+   },
+   "world_bbox_mm": [
+    [
+     91.0,
+     7.0016,
+     -4.0
+    ],
+    [
+     101.0,
+     16.9984,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     91.0,
+     7.0016,
+     -4.0
+    ],
+    [
+     101.0,
+     16.9984,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "feet_3",
+   "name": "feet_3",
+   "parent": "deck_out",
+   "part": "feet_3",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "feet_3"
+   },
+   "world_bbox_mm": [
+    [
+     9.0,
+     55.0016,
+     -4.0
+    ],
+    [
+     19.0,
+     64.9984,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     9.0,
+     55.0016,
+     -4.0
+    ],
+    [
+     19.0,
+     64.9985,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "feet_4",
+   "name": "feet_4",
+   "parent": "deck_out",
+   "part": "feet_4",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "feet_4"
+   },
+   "world_bbox_mm": [
+    [
+     91.0,
+     55.0016,
+     -4.0
+    ],
+    [
+     101.0,
+     64.9984,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     91.0,
+     55.0016,
+     -4.0
+    ],
+    [
+     101.0,
+     64.9985,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "jumpers",
+   "name": "jumpers",
+   "parent": "deck_out",
+   "part": "jumpers",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "jumpers"
+   },
+   "world_bbox_mm": [
+    [
+     31.0,
+     17.0,
+     16.0
+    ],
+    [
+     82.0,
+     22.0,
+     32.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     31.0,
+     17.0,
+     16.0
+    ],
+    [
+     82.0,
+     22.0,
+     32.5
+    ]
+   ]
+  },
+  {
+   "id": "knob_front",
+   "name": "knob_front",
+   "parent": "deck_out",
+   "part": "knob_front",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "knob_front"
+   },
+   "world_bbox_mm": [
+    [
+     61.5012,
+     -11.5,
+     3.505
+    ],
+    [
+     100.4988,
+     -6.5,
+     42.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     61.5012,
+     -11.5,
+     3.505
+    ],
+    [
+     100.4988,
+     -6.5,
+     42.5
+    ]
+   ]
+  },
+  {
+   "id": "knob_side",
+   "name": "knob_side",
+   "parent": "deck_out",
+   "part": "knob_side",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "knob_side"
+   },
+   "world_bbox_mm": [
+    [
+     110.5,
+     22.0012,
+     3.505
+    ],
+    [
+     115.5,
+     60.9988,
+     42.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     110.5,
+     22.0013,
+     3.505
+    ],
+    [
+     115.5,
+     60.9988,
+     42.5
+    ]
+   ]
+  },
+  {
+   "id": "pad",
+   "name": "pad",
+   "parent": "deck_out",
+   "part": "pad",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "pad"
+   },
+   "world_bbox_mm": [
+    [
+     52.5,
+     32.5,
+     1.0
+    ],
+    [
+     67.5,
+     47.5,
+     4.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     52.5,
+     32.5,
+     1.0
+    ],
+    [
+     67.5,
+     47.5,
+     4.0
+    ]
+   ]
+  },
+  {
+   "id": "pi4_ethernet",
+   "name": "pi4_ethernet",
+   "parent": "deck_out",
+   "part": "pi4_ethernet",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "pi4_ethernet"
+   },
+   "world_bbox_mm": [
+    [
+     1.3,
+     18.25,
+     5.4
+    ],
+    [
+     21.4,
+     34.25,
+     18.9
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     1.3,
+     18.25,
+     5.4
+    ],
+    [
+     21.4,
+     34.25,
+     18.9
+    ]
+   ]
+  },
+  {
+   "id": "pi4_pcb",
+   "name": "pi4_pcb",
+   "parent": "deck_out",
+   "part": "pi4_pcb",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "pi4_pcb"
+   },
+   "world_bbox_mm": [
+    [
+     4.0,
+     16.0,
+     4.0
+    ],
+    [
+     89.0,
+     72.0,
+     5.4
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     4.0,
+     16.0,
+     4.0
+    ],
+    [
+     89.0,
+     72.0,
+     5.4
+    ]
+   ]
+  },
+  {
+   "id": "pi4_usb",
+   "name": "pi4_usb",
+   "parent": "deck_out",
+   "part": "pi4_usb",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "pi4_usb"
+   },
+   "world_bbox_mm": [
+    [
+     1.3,
+     37.75,
+     5.4
+    ],
+    [
+     21.4,
+     70.25,
+     21.4
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     1.3,
+     37.75,
+     5.4
+    ],
+    [
+     21.4,
+     70.25,
+     21.4
+    ]
+   ]
+  },
+  {
+   "id": "pi4_usbc",
+   "name": "pi4_usbc",
+   "parent": "deck_out",
+   "part": "pi4_usbc",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "pi4_usbc"
+   },
+   "world_bbox_mm": [
+    [
+     73.3,
+     66.0,
+     5.4
+    ],
+    [
+     82.3,
+     73.2,
+     8.6
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     73.3,
+     66.0,
+     5.4
+    ],
+    [
+     82.3,
+     73.2,
+     8.6
+    ]
+   ]
+  },
+  {
+   "id": "plate",
+   "name": "plate",
+   "parent": "deck_out",
+   "part": "plate",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     1.3
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     1.3
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "plate"
+   },
+   "world_bbox_mm": [
+    [
+     1.3,
+     1.3,
+     -0.0
+    ],
+    [
+     102.7,
+     81.7,
+     1.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     1.3,
+     1.3,
+     -0.0
+    ],
+    [
+     102.7,
+     81.7,
+     1.0
+    ]
+   ]
+  },
+  {
+   "id": "screen",
+   "name": "screen",
+   "parent": "deck_out",
+   "part": "screen",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screen"
+   },
+   "world_bbox_mm": [
+    [
+     1.75,
+     1.0,
+     5.5
+    ],
+    [
+     59.75,
+     12.0,
+     40.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     1.75,
+     1.0,
+     5.5
+    ],
+    [
+     59.75,
+     12.0,
+     40.5
+    ]
+   ]
+  },
+  {
+   "id": "screw_dac_1",
+   "name": "screw_dac_1",
+   "parent": "deck_out",
+   "part": "screw_dac_1",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_dac_1"
+   },
+   "world_bbox_mm": [
+    [
+     83.25,
+     66.2507,
+     16.0
+    ],
+    [
+     87.75,
+     70.7493,
+     17.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     83.25,
+     66.2507,
+     16.0
+    ],
+    [
+     87.75,
+     70.7493,
+     17.5
+    ]
+   ]
+  },
+  {
+   "id": "screw_dac_2",
+   "name": "screw_dac_2",
+   "parent": "deck_out",
+   "part": "screw_dac_2",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_dac_2"
+   },
+   "world_bbox_mm": [
+    [
+     83.25,
+     17.2507,
+     16.0
+    ],
+    [
+     87.75,
+     21.7493,
+     17.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     83.25,
+     17.2507,
+     16.0
+    ],
+    [
+     87.75,
+     21.7493,
+     17.5
+    ]
+   ]
+  },
+  {
+   "id": "screw_dac_3",
+   "name": "screw_dac_3",
+   "parent": "deck_out",
+   "part": "screw_dac_3",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_dac_3"
+   },
+   "world_bbox_mm": [
+    [
+     25.25,
+     66.2507,
+     16.0
+    ],
+    [
+     29.75,
+     70.7493,
+     17.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     25.25,
+     66.2507,
+     16.0
+    ],
+    [
+     29.75,
+     70.7493,
+     17.5
+    ]
+   ]
+  },
+  {
+   "id": "screw_dac_4",
+   "name": "screw_dac_4",
+   "parent": "deck_out",
+   "part": "screw_dac_4",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_dac_4"
+   },
+   "world_bbox_mm": [
+    [
+     25.25,
+     17.2507,
+     16.0
+    ],
+    [
+     29.75,
+     21.7493,
+     17.5
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     25.25,
+     17.2507,
+     16.0
+    ],
+    [
+     29.75,
+     21.7493,
+     17.5
+    ]
+   ]
+  },
+  {
+   "id": "screw_m3_1",
+   "name": "screw_m3_1",
+   "parent": "deck_out",
+   "part": "screw_m3_1",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_m3_1"
+   },
+   "world_bbox_mm": [
+    [
+     1.75,
+     6.0509,
+     -1.0
+    ],
+    [
+     7.25,
+     11.5491,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     1.75,
+     6.0509,
+     -1.0
+    ],
+    [
+     7.25,
+     11.5491,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "screw_m3_2",
+   "name": "screw_m3_2",
+   "parent": "deck_out",
+   "part": "screw_m3_2",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_m3_2"
+   },
+   "world_bbox_mm": [
+    [
+     96.75,
+     67.9509,
+     -1.0
+    ],
+    [
+     102.25,
+     73.4491,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     96.75,
+     67.9509,
+     -1.0
+    ],
+    [
+     102.25,
+     73.4491,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "screw_pi_1",
+   "name": "screw_pi_1",
+   "parent": "deck_out",
+   "part": "screw_pi_1",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_pi_1"
+   },
+   "world_bbox_mm": [
+    [
+     83.25,
+     66.2507,
+     -1.0
+    ],
+    [
+     87.75,
+     70.7493,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     83.25,
+     66.2507,
+     -1.0
+    ],
+    [
+     87.75,
+     70.7493,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "screw_pi_2",
+   "name": "screw_pi_2",
+   "parent": "deck_out",
+   "part": "screw_pi_2",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_pi_2"
+   },
+   "world_bbox_mm": [
+    [
+     83.25,
+     17.2507,
+     -1.0
+    ],
+    [
+     87.75,
+     21.7493,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     83.25,
+     17.2507,
+     -1.0
+    ],
+    [
+     87.75,
+     21.7493,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "screw_pi_3",
+   "name": "screw_pi_3",
+   "parent": "deck_out",
+   "part": "screw_pi_3",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_pi_3"
+   },
+   "world_bbox_mm": [
+    [
+     25.25,
+     66.2507,
+     -1.0
+    ],
+    [
+     29.75,
+     70.7493,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     25.25,
+     66.2507,
+     -1.0
+    ],
+    [
+     29.75,
+     70.7493,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "screw_pi_4",
+   "name": "screw_pi_4",
+   "parent": "deck_out",
+   "part": "screw_pi_4",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "screw_pi_4"
+   },
+   "world_bbox_mm": [
+    [
+     25.25,
+     17.2507,
+     -1.0
+    ],
+    [
+     29.75,
+     21.7493,
+     -0.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     25.25,
+     17.2507,
+     -1.0
+    ],
+    [
+     29.75,
+     21.7493,
+     -0.0
+    ]
+   ]
+  },
+  {
+   "id": "shell",
+   "name": "shell",
+   "parent": "deck_out",
+   "part": "shell",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.5
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.5
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     45.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "shell"
+   },
+   "world_bbox_mm": [
+    [
+     0.0,
+     0.0,
+     1.0
+    ],
+    [
+     104.0,
+     83.0,
+     46.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     0.0,
+     0.0,
+     1.0
+    ],
+    [
+     104.0,
+     83.0,
+     46.0
+    ]
+   ]
+  },
+  {
+   "id": "standoff_1",
+   "name": "standoff_1",
+   "parent": "deck_out",
+   "part": "standoff_1",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "standoff_1"
+   },
+   "world_bbox_mm": [
+    [
+     83.0,
+     66.0008,
+     1.0
+    ],
+    [
+     88.0,
+     70.9992,
+     4.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     83.0,
+     66.0008,
+     1.0
+    ],
+    [
+     88.0,
+     70.9992,
+     4.0
+    ]
+   ]
+  },
+  {
+   "id": "standoff_2",
+   "name": "standoff_2",
+   "parent": "deck_out",
+   "part": "standoff_2",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "standoff_2"
+   },
+   "world_bbox_mm": [
+    [
+     83.0,
+     17.0008,
+     1.0
+    ],
+    [
+     88.0,
+     21.9992,
+     4.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     83.0,
+     17.0008,
+     1.0
+    ],
+    [
+     88.0,
+     21.9992,
+     4.0
+    ]
+   ]
+  },
+  {
+   "id": "standoff_3",
+   "name": "standoff_3",
+   "parent": "deck_out",
+   "part": "standoff_3",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "standoff_3"
+   },
+   "world_bbox_mm": [
+    [
+     25.0,
+     66.0008,
+     1.0
+    ],
+    [
+     30.0,
+     70.9992,
+     4.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     25.0,
+     66.0008,
+     1.0
+    ],
+    [
+     30.0,
+     70.9992,
+     4.0
+    ]
+   ]
+  },
+  {
+   "id": "standoff_4",
+   "name": "standoff_4",
+   "parent": "deck_out",
+   "part": "standoff_4",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "standoff_4"
+   },
+   "world_bbox_mm": [
+    [
+     25.0,
+     17.0008,
+     1.0
+    ],
+    [
+     30.0,
+     21.9992,
+     4.0
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     25.0,
+     17.0008,
+     1.0
+    ],
+    [
+     30.0,
+     21.9992,
+     4.0
+    ]
+   ]
+  }
+ ],
+ "geometry": {
+  "assembly": {
+   "file": "export/geometry/source.step",
+   "format": "step",
+   "scale_to_m": null,
+   "up_axis": "Z"
+  }
+ },
+ "exploded": {
+  "method": "auto_axial",
+  "axis": "z",
+  "gap_mm": 5.0,
+  "anchor": "shell",
+  "offsets_mm": {
+   "clinch_nut_1": [
+    0.0,
+    0.0,
+    -40.0
+   ],
+   "clinch_nut_2": [
+    0.0,
+    0.0,
+    -40.0
+   ],
+   "dac_jack": [
+    0.0,
+    0.0,
+    -5.0
+   ],
+   "dac_pcb": [
+    0.0,
+    0.0,
+    -15.0
+   ],
+   "dac_rca_barrels": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "dac_rca_housing": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "enc_front": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "enc_side": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "feet_1": [
+    0.0,
+    0.0,
+    -55.0
+   ],
+   "feet_2": [
+    0.0,
+    0.0,
+    -55.0
+   ],
+   "feet_3": [
+    0.0,
+    0.0,
+    -55.0
+   ],
+   "feet_4": [
+    0.0,
+    0.0,
+    -55.0
+   ],
+   "jumpers": [
+    0.0,
+    0.0,
+    5.0
+   ],
+   "knob_front": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "knob_side": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "pad": [
+    0.0,
+    0.0,
+    -40.0
+   ],
+   "pi4_ethernet": [
+    0.0,
+    0.0,
+    -25.0
+   ],
+   "pi4_pcb": [
+    0.0,
+    0.0,
+    -35.0
+   ],
+   "pi4_usb": [
+    0.0,
+    0.0,
+    -20.0
+   ],
+   "pi4_usbc": [
+    0.0,
+    0.0,
+    -30.0
+   ],
+   "plate": [
+    0.0,
+    0.0,
+    -45.0
+   ],
+   "screen": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "screw_dac_1": [
+    0.0,
+    0.0,
+    -10.0
+   ],
+   "screw_dac_2": [
+    0.0,
+    0.0,
+    -10.0
+   ],
+   "screw_dac_3": [
+    0.0,
+    0.0,
+    -10.0
+   ],
+   "screw_dac_4": [
+    0.0,
+    0.0,
+    -10.0
+   ],
+   "screw_m3_1": [
+    0.0,
+    0.0,
+    -50.0
+   ],
+   "screw_m3_2": [
+    0.0,
+    0.0,
+    -50.0
+   ],
+   "screw_pi_1": [
+    0.0,
+    0.0,
+    -50.0
+   ],
+   "screw_pi_2": [
+    0.0,
+    0.0,
+    -50.0
+   ],
+   "screw_pi_3": [
+    0.0,
+    0.0,
+    -50.0
+   ],
+   "screw_pi_4": [
+    0.0,
+    0.0,
+    -50.0
+   ],
+   "shell": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "standoff_1": [
+    0.0,
+    0.0,
+    -40.0
+   ],
+   "standoff_2": [
+    0.0,
+    0.0,
+    -40.0
+   ],
+   "standoff_3": [
+    0.0,
+    0.0,
+    -40.0
+   ],
+   "standoff_4": [
+    0.0,
+    0.0,
+    -40.0
+   ]
+  }
+ },
+ "validation": {
+  "reference": "source_file",
+  "note": "expected sizes were measured from the imported file itself: the import checks prove the round trip and placement, not the scale",
+  "expected_size_mm": [
+   115.5,
+   94.5,
+   50.0
+  ],
+  "size_check": "pass"
+ },
+ "_notes": [
+  "transform: 4x4, column-vector convention, translation in mm, relative to the product root",
+  "component id: stable id from the CAD source (SolidWorks Name2, FreeCAD object path, STEP node path)",
+  "material: a proposal; per-part and per-component choices live in render/settings/scene.json and survive re-export"
+ ]
+}

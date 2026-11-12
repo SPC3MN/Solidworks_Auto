@@ -1,8 +1,8 @@
 {
  "option": "A",
- "round": 9,
- "option_hash": "3c947ff2e3cb583f",
- "time": "2026-11-11T22:18:13",
+ "round": 10,
+ "option_hash": "4c9ba53f7261bf4b",
+ "time": "2026-11-11T22:36:03",
  "status": "pass",
  "freecad_version": "1.1.4",
  "bbox": [
@@ -350,30 +350,30 @@
    "message": "enc_small and knob_small overlap by 390.343 mm³"
   }
  ],
- "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/massing.step",
+ "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_10/A/massing/massing.step",
  "renders": [
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/isometric.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_10/A/massing/renders/isometric.png",
    "isometric"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/front.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_10/A/massing/renders/front.png",
    "front"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/right.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_10/A/massing/renders/right.png",
    "right"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/top.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_10/A/massing/renders/top.png",
    "top"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/section/isometric.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_10/A/massing/renders/section/isometric.png",
    "section, isometric"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/section/front.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_10/A/massing/renders/section/front.png",
    "section, front"
   ]
  ]

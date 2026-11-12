@@ -1,4 +1,4 @@
-"""Write round-9 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
+"""Write round-10 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
 
 From the owner's layout (references/electronics_views/flacmn_deck_layout.svg, scaled to true size) and the
 round-5 push-back: Shell: the front face in the centre, with the top, bottom and both sides folding back from
@@ -69,11 +69,23 @@ params = {
     "enc_w": P(12.5, "estimated"), "enc_h": P(13.4, "estimated"), "enc_d": P(10.1, "estimated", "body 6.6 + pins"),
     "enc_hole": P(7.4, "given"), "enc_tab_r": P(7.5, "estimated", "anti-turn tab offset"), "enc_tab_d": 2.4,
     "bush_out": P(6.0, "estimated", "bushing past the panel"), "shaft_out": P(14.0, "given", "PEC11R-4215F: 15 above the body top, less the 1 mm panel"),
+    # 'mn' logo: dot holes through the front face (flacmn_deck_layout.svg 1ee76f3, true scale)
+    "logo_p": P(2.857, "given", LAY), "logo_dot": P(1.8, "given", "owner: smaller dots, 1.06 web"),
+    "logo_cx": P("ks_x", "given", "owner: centred horizontally on the small knob"),
+    "logo_top": P(31.3, "given", LAY), "logo_cols": 14,
     "feet_h": P(6.0, "chosen", "taller than the screw heads under the floor"), "feet_d": 10.0,
     "foot_y": 25.0,
     "soc_x": "px1 - 29", "soc_y": "py1 - 32",
 }
 
+LOGO = ["#.#####..#.##.",
+        "########.#####",
+        "##.##.##.##.##",
+        "##.##.##.##.##",
+        "##.##.##.##.##",
+        "##.##.##.##.##"]
+logo_dots = [(f"logo_cx + ({c} - (logo_cols - 1)/2)*logo_p", f"logo_top - {r}*logo_p")
+             for r, row in enumerate(LOGO) for c, ch in enumerate(row) if ch == "#"]
 rect = lambda w, h: [[0, 0], [w, 0], [w, h], [0, h]]
 recipes = {"fold": {"_comment": "Starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
                     "method": "slots", "slot_length": 8.0, "slot_width": 0.5, "bridge": 1.5,
@@ -96,7 +108,8 @@ shell = {
         {"id": "front", "name": "Front face", "outline": rect("fw", "fh"), "features": [
             {"type": "rect", "size": ["va_w + 1", "va_h + 1"], "at": [sx(f"{va_x0} + va_w/2"), sy(f"{va_z1} - va_h/2")]},
             circ("enc_hole", sx("kb_x"), sy("kb_z")), circ("enc_tab_d", sx("kb_x"), sy("kb_z + enc_tab_r")),
-            circ("enc_hole", sx("ks_x"), sy("ks_z")), circ("enc_tab_d", sx("ks_x"), sy("ks_z + enc_tab_r"))]},
+            circ("enc_hole", sx("ks_x"), sy("ks_z")), circ("enc_tab_d", sx("ks_x"), sy("ks_z + enc_tab_r")),
+            *[circ("logo_dot", sx(x), sy(z)) for x, z in logo_dots]]},
         {"id": "top", "name": "Top", "outline": rect("lw", "fl_l")},
         {"id": "floor", "name": "Floor", "outline": rect("lw", "fl_l"), "features": [
             *[circ(2.9, f"{sx(x)} - inset", fv(y)) for x, y in pi_holes]]},
@@ -253,6 +266,14 @@ option = {
          "why": "15 mm shaft ends at or inside the cap face"},
         {"id": "shaft_engages", "lhs": "knob_gap + knob_h - shaft_out", "op": "<=", "rhs": 1,
          "why": "Cap face within 1 mm of the shaft tip (full engagement)"},
+        {"id": "logo_web", "lhs": "logo_p - logo_dot", "op": ">=", "rhs": "t",
+         "why": "Logo webs at least one sheet thickness"},
+        {"id": "logo_vs_knob", "lhs": "logo_top + logo_dot/2 + 2", "op": "<=", "rhs": "ks_z - ks_d/2",
+         "why": "Logo clear below the small cap"},
+        {"id": "logo_vs_right", "lhs": "logo_cx + (logo_cols - 1)/2*logo_p + logo_dot/2 + 3", "op": "<=", "rhs": "W - t",
+         "why": "Logo clear of the right fold"},
+        {"id": "logo_vs_floor", "lhs": "t + 3", "op": "<=", "rhs": "logo_top - 5*logo_p - logo_dot/2",
+         "why": "Logo clear of the floor fold"},
         {"id": "nut_catches", "lhs": "t + 2.5", "op": "<=", "rhs": 7, "why": "Encoder bushing takes the tab, washer and M7 nut"},
     ],
     "allowed_interference": [

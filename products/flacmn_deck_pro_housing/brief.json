@@ -214,6 +214,13 @@
    "priority": "must",
    "provenance": "given",
    "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
+  },
+  {
+   "id": "R29",
+   "text": "'mn' logo cut through the front face as a dot pattern (14 x 6 grid, 2.86 pitch, from flacmn_deck_layout.svg 1ee76f3), centred horizontally on the small knob, top row at z 31.3; dots Ø1.8 so the webs stay >= 1 mm",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 9 push-back + answers)"
   }
  ],
  "bought_parts": [
@@ -374,6 +381,12 @@
    "round": 8,
    "time": "2026-11-11T22:18:03",
    "text": "Make caps 13 mm thick (so the 15 mm PEC11R-4215F shaft ends at the cap face)",
+   "options": []
+  },
+  {
+   "round": 9,
+   "time": "2026-11-11T22:35:38",
+   "text": "see the updated layout svg. I want to add the mn logo to the front as cut holes / make sure it is centered horizontally on the small knob (answers: smaller dots, Ø1.8; rear rectangles are only drawing)",
    "options": []
   }
  ],

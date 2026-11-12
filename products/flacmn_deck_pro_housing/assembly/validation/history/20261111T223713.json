@@ -1,0 +1,58 @@
+{
+ "assembly": "assembly",
+ "time": "2026-11-11T22:37:13",
+ "pass": true,
+ "backend": "freecad",
+ "freecad_version": "1.1.4",
+ "checks": [
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 6,
+   "actual": 6
+  },
+  {
+   "id": "bbox.x",
+   "pass": true,
+   "expected": 241.0,
+   "actual": 241.0
+  },
+  {
+   "id": "bbox.y",
+   "pass": true,
+   "expected": 114.5,
+   "actual": 114.5
+  },
+  {
+   "id": "bbox.z",
+   "pass": true,
+   "expected": 88.5,
+   "actual": 88.5
+  },
+  {
+   "id": "interference",
+   "pass": true,
+   "note": "none found"
+  }
+ ],
+ "bbox_mm": [
+  241.0,
+  114.5,
+  88.5
+ ],
+ "bbox_min_mm": [
+  -0.0,
+  -14.0,
+  -0.0
+ ],
+ "files": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/assembly/assembly.FCStd",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/assembly/exports/assembly.step"
+ ],
+ "renders": [
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/assembly/renders/isometric.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/assembly/renders/top.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/assembly/renders/front.png",
+  "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/assembly/renders/right.png"
+ ]
+}

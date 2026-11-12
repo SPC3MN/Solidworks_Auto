@@ -798,6 +798,34 @@
    "why": "Cap face within 1 mm of the shaft tip (full engagement)"
   },
   {
+   "id": "logo_web",
+   "lhs": "logo_p - logo_dot",
+   "op": ">=",
+   "rhs": "t",
+   "why": "Logo webs at least one sheet thickness"
+  },
+  {
+   "id": "logo_vs_knob",
+   "lhs": "logo_top + logo_dot/2 + 2",
+   "op": "<=",
+   "rhs": "ks_z - ks_d/2",
+   "why": "Logo clear below the small cap"
+  },
+  {
+   "id": "logo_vs_right",
+   "lhs": "logo_cx + (logo_cols - 1)/2*logo_p + logo_dot/2 + 3",
+   "op": "<=",
+   "rhs": "W - t",
+   "why": "Logo clear of the right fold"
+  },
+  {
+   "id": "logo_vs_floor",
+   "lhs": "t + 3",
+   "op": "<=",
+   "rhs": "logo_top - 5*logo_p - logo_dot/2",
+   "why": "Logo clear of the floor fold"
+  },
+  {
    "id": "nut_catches",
    "lhs": "t + 2.5",
    "op": "<=",

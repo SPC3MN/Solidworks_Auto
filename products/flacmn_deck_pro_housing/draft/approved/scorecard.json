@@ -1,7 +1,7 @@
 {
  "option": "A",
- "round": 9,
- "hash": "3c947ff2e3cb583f",
+ "round": 10,
+ "hash": "4c9ba53f7261bf4b",
  "scorecard": {
   "parts_total": 35,
   "parts_unique": 17,
@@ -289,6 +289,50 @@
    "margin": 1.0,
    "ok": true,
    "why": "Cap face within 1 mm of the shaft tip (full engagement)"
+  },
+  {
+   "id": "logo_web",
+   "lhs_expr": "logo_p - logo_dot",
+   "rhs_expr": "t",
+   "op": ">=",
+   "lhs": 1.057,
+   "rhs": 1.0,
+   "margin": 0.057,
+   "ok": true,
+   "why": "Logo webs at least one sheet thickness"
+  },
+  {
+   "id": "logo_vs_knob",
+   "lhs_expr": "logo_top + logo_dot/2 + 2",
+   "rhs_expr": "ks_z - ks_d/2",
+   "op": "<=",
+   "lhs": 34.2,
+   "rhs": 39.4,
+   "margin": 5.2,
+   "ok": true,
+   "why": "Logo clear below the small cap"
+  },
+  {
+   "id": "logo_vs_right",
+   "lhs_expr": "logo_cx + (logo_cols - 1)/2*logo_p + logo_dot/2 + 3",
+   "rhs_expr": "W - t",
+   "op": "<=",
+   "lhs": 230.7705,
+   "rhs": 240.0,
+   "margin": 9.2295,
+   "ok": true,
+   "why": "Logo clear of the right fold"
+  },
+  {
+   "id": "logo_vs_floor",
+   "lhs_expr": "t + 3",
+   "rhs_expr": "logo_top - 5*logo_p - logo_dot/2",
+   "op": "<=",
+   "lhs": 4.0,
+   "rhs": 16.115,
+   "margin": 12.115,
+   "ok": true,
+   "why": "Logo clear of the floor fold"
   },
   {
    "id": "nut_catches",

@@ -99,5 +99,21 @@
    "A"
   ],
   "notes": "Approved"
+ },
+ {
+  "time": "2026-11-11T22:35:38",
+  "round": 9,
+  "move": "pushback",
+  "options": [],
+  "notes": "see the updated layout svg. I want to add the mn logo to the front as cut holes / make sure it is centered horizontally on the small knob (answers: smaller dots, Ø1.8; rear rectangles are only drawing)"
+ },
+ {
+  "time": "2026-11-11T22:36:53",
+  "round": 10,
+  "move": "approve",
+  "options": [
+   "A"
+  ],
+  "notes": "Approved, build it"
  }
 ]

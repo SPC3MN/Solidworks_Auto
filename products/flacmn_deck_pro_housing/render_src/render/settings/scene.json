@@ -30,27 +30,60 @@
   "_how": "parts: {part_id: {material, finish, color, roughness}}; components: {cad_id or label: {...}} wins over parts; use_source_colors: the CAD colours as base colours unless a choice overrides them",
   "use_source_colors": false,
   "parts": {
-   "shell": {
-    "material": "aluminium_anodized",
-    "_src": "5052-H32 sheet (brief); clear bead-blast anodise assumed (finish not chosen yet)"
+   "clinch_nut_1": {
+    "material": "stainless_steel",
+    "_src": "PEM clinch nuts"
    },
-   "plate": {
-    "material": "aluminium_anodized",
-    "_src": "5052-H32 sheet (brief); assumed (finish not chosen yet)"
+   "clinch_nut_2": {
+    "material": "stainless_steel",
+    "_src": "PEM clinch nuts"
    },
-   "knob_front": {
-    "material": "aluminium_anodized_black",
-    "_src": "knob caps 39 x 5; material assumed (finish not chosen yet)"
+   "clinch_nut_3": {
+    "material": "stainless_steel",
+    "_src": "PEM clinch nuts"
    },
-   "knob_side": {
-    "material": "aluminium_anodized_black",
-    "_src": "knob caps 39 x 5; material assumed (finish not chosen yet)"
+   "clinch_nut_4": {
+    "material": "stainless_steel",
+    "_src": "PEM clinch nuts"
    },
-   "screen": {
-    "material": "glass_clear",
-    "color": "#101214",
-    "roughness": 0.05,
-    "_src": "LCD glass, screen off (assumed)"
+   "dac_jack": {
+    "material": "abs",
+    "color": "#1A1A1C",
+    "_src": "3.5 mm jack"
+   },
+   "dac_pcb": {
+    "material": "pcb_green",
+    "_src": "DAC Pro board"
+   },
+   "dac_rca_barrels": {
+    "material": "brass",
+    "finish": "polished",
+    "_src": "gold-plated RCA barrels (assumed)"
+   },
+   "dac_rca_housing": {
+    "material": "abs",
+    "color": "#1A1A1C",
+    "_src": "RCA block"
+   },
+   "feet_1": {
+    "material": "rubber",
+    "color": "#1A1A1C",
+    "_src": "rubber feet"
+   },
+   "feet_2": {
+    "material": "rubber",
+    "color": "#1A1A1C",
+    "_src": "rubber feet"
+   },
+   "feet_3": {
+    "material": "rubber",
+    "color": "#1A1A1C",
+    "_src": "rubber feet"
+   },
+   "feet_4": {
+    "material": "rubber",
+    "color": "#1A1A1C",
+    "_src": "rubber feet"
    },
    "jumpers": {
     "material": "abs",
@@ -62,110 +95,14 @@
     "color": "#8A8F96",
     "_src": "thermal pad"
    },
-   "enc_front": {
-    "material": "stainless_steel",
-    "_src": "encoder bushing/shaft"
-   },
-   "enc_side": {
-    "material": "stainless_steel",
-    "_src": "encoder bushing/shaft"
-   },
-   "feet_1": {
-    "material": "rubber",
-    "color": "#1A1A1C",
-    "_src": "rubber feet"
-   },
-   "standoff_1": {
-    "material": "brass",
-    "_src": "M2.5 standoffs"
-   },
-   "screw_pi_1": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "screw_dac_1": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "feet_2": {
-    "material": "rubber",
-    "color": "#1A1A1C",
-    "_src": "rubber feet"
-   },
-   "standoff_2": {
-    "material": "brass",
-    "_src": "M2.5 standoffs"
-   },
-   "screw_pi_2": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "screw_dac_2": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "feet_3": {
-    "material": "rubber",
-    "color": "#1A1A1C",
-    "_src": "rubber feet"
-   },
-   "standoff_3": {
-    "material": "brass",
-    "_src": "M2.5 standoffs"
-   },
-   "screw_pi_3": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "screw_dac_3": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "feet_4": {
-    "material": "rubber",
-    "color": "#1A1A1C",
-    "_src": "rubber feet"
-   },
-   "standoff_4": {
-    "material": "brass",
-    "_src": "M2.5 standoffs"
-   },
-   "screw_pi_4": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "screw_dac_4": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "screw_m3_1": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "clinch_nut_1": {
-    "material": "stainless_steel",
-    "_src": "PEM clinch nuts"
-   },
-   "screw_m3_2": {
-    "material": "steel_black_oxide",
-    "_src": "screws"
-   },
-   "clinch_nut_2": {
-    "material": "stainless_steel",
-    "_src": "PEM clinch nuts"
-   },
-   "pi4_pcb": {
-    "material": "pcb_green",
-    "_src": "Raspberry Pi 4 board"
-   },
-   "dac_pcb": {
-    "material": "pcb_green",
-    "_src": "DAC Pro board"
-   },
    "pi4_ethernet": {
     "material": "stainless_steel",
     "finish": "satin",
     "_src": "RJ45 shield"
+   },
+   "pi4_pcb": {
+    "material": "pcb_green",
+    "_src": "Raspberry Pi 4 board"
    },
    "pi4_usb": {
     "material": "stainless_steel",
@@ -177,20 +114,110 @@
     "finish": "satin",
     "_src": "USB-C shell"
    },
-   "dac_rca_housing": {
-    "material": "abs",
-    "color": "#1A1A1C",
-    "_src": "RCA block"
+   "screw_dac_1": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
    },
-   "dac_rca_barrels": {
+   "screw_dac_2": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
+   },
+   "screw_dac_3": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
+   },
+   "screw_dac_4": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
+   },
+   "screw_pi_1": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
+   },
+   "screw_pi_2": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
+   },
+   "screw_pi_3": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
+   },
+   "screw_pi_4": {
+    "material": "steel_black_oxide",
+    "_src": "screws"
+   },
+   "shell": {
+    "material": "aluminium_anodized",
+    "_src": "5052-H32 sheet (brief); clear bead-blast anodise assumed (finish not chosen yet)"
+   },
+   "standoff_1": {
     "material": "brass",
-    "finish": "polished",
-    "_src": "gold-plated RCA barrels (assumed)"
+    "_src": "M2.5 standoffs"
    },
-   "dac_jack": {
+   "standoff_2": {
+    "material": "brass",
+    "_src": "M2.5 standoffs"
+   },
+   "standoff_3": {
+    "material": "brass",
+    "_src": "M2.5 standoffs"
+   },
+   "standoff_4": {
+    "material": "brass",
+    "_src": "M2.5 standoffs"
+   },
+   "back": {
+    "material": "aluminium_anodized",
+    "_src": "5052-H32 sheet (brief); clear bead-blast anodise assumed (finish not chosen yet)"
+   },
+   "knob_big": {
+    "material": "aluminium_anodized_black",
+    "_src": "knob caps \u00d857/\u00d835 x 13; material assumed (bought or machined not chosen)"
+   },
+   "knob_small": {
+    "material": "aluminium_anodized_black",
+    "_src": "knob caps \u00d857/\u00d835 x 13; material assumed (bought or machined not chosen)"
+   },
+   "enc_big": {
+    "material": "stainless_steel",
+    "_src": "encoder bushing/shaft"
+   },
+   "enc_small": {
+    "material": "stainless_steel",
+    "_src": "encoder bushing/shaft"
+   },
+   "screw_back_1": {
+    "material": "steel_black_oxide",
+    "_src": "ISO 4762 M3 x 8 socket head"
+   },
+   "screw_back_2": {
+    "material": "steel_black_oxide",
+    "_src": "ISO 4762 M3 x 8 socket head"
+   },
+   "screw_back_3": {
+    "material": "steel_black_oxide",
+    "_src": "ISO 4762 M3 x 8 socket head"
+   },
+   "screw_back_4": {
+    "material": "steel_black_oxide",
+    "_src": "ISO 4762 M3 x 8 socket head"
+   },
+   "screen_glass": {
+    "material": "glass_clear",
+    "color": "#101214",
+    "roughness": 0.05,
+    "_src": "LCD cover glass, screen off (assumed)"
+   },
+   "screen_panel": {
     "material": "abs",
-    "color": "#1A1A1C",
-    "_src": "3.5 mm jack"
+    "color": "#0B0C0E",
+    "roughness": 0.3,
+    "_src": "LCD panel behind the glass, off"
+   },
+   "screen_board": {
+    "material": "abs",
+    "color": "#1E5631",
+    "_src": "screen PCB (green solder mask)"
    }
   },
   "components": {}
@@ -224,8 +251,9 @@
    "camera": "front_ortho",
    "category": "studio",
    "camera_overrides": {
-    "margin": 0.04
-   }
+    "margin": 0.06
+   },
+   "aspect": "16:9"
   },
   {
    "name": "side",
@@ -233,7 +261,7 @@
    "camera": "side_ortho",
    "category": "studio",
    "camera_overrides": {
-    "margin": 0.04
+    "margin": 0.15
    }
   },
   {
@@ -255,7 +283,7 @@
      "fstop": 22
     }
    },
-   "_note": "rear and left: plug openings and USB/Ethernet windows"
+   "_note": "rear: socket openings, cord cut-outs and the 4 M3 screws"
   },
   {
    "name": "detail",
@@ -263,12 +291,12 @@
    "camera": "detail_closeup",
    "category": "details",
    "camera_overrides": {
-    "target": "component:knob_front",
+    "target": "component:knob_big",
     "az": -25,
     "el": 15,
-    "margin": 0.15,
+    "margin": 0.25,
     "dof": {
-     "fstop": 16
+     "fstop": 22
     }
    }
   },

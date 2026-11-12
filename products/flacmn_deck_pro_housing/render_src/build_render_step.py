@@ -1,13 +1,17 @@
-"""Assemble a render STEP of the approved round-4 deck: the built shell and plate (with their openings)
-plus the massing bodies of everything else. Run with FreeCADCmd."""
+"""Assemble a render STEP of the approved round-10 deck: the built shell and back plate (with their openings),
+the Pi 4 + DAC Pro and the 5in screen split by material, and the round-9 massing bodies of everything else
+(encoders, knob caps, feet, screws, nuts). Run with FreeCADCmd."""
 import os
 import FreeCAD as App, Part, Import
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROD = os.path.dirname(HERE)
-MASS = os.path.join(PROD, "draft", "round_4", "A", "massing", "massing.step")
-PARTS = {"shell": ((0.5, 0.5, 45.0), os.path.join(PROD, "parts", "shell", "folded", "shell.step")),
-         "plate": ((1.3, 1.3, 0.0), os.path.join(PROD, "parts", "plate", "folded", "plate.step"))}
+MASS = os.path.join(PROD, "draft", "round_10", "A", "massing", "massing.step")
+V = App.Vector
+# sheet parts are built flat-root; stand them up: sheet (x, y, z) -> (x, z, -y), then move into place
+PARTS = {"shell": ((0.5, 0.0, 88.0), os.path.join(PROD, "parts", "shell", "folded", "shell.step")),
+         "back": ((1.3, 99.5, 87.2), os.path.join(PROD, "parts", "back", "folded", "back.step"))}
+SKIP = ("shell", "back", "pi4", "dac", "screen", "jumpers", "pad")
 
 doc = App.newDocument("deck_render")
 Import.insert(MASS, doc.Name)
@@ -15,20 +19,23 @@ objs = []
 for o in list(doc.Objects):
     if o.TypeId != "Part::Feature" or o.Shape.isNull() or not o.Shape.Solids:
         continue
-    if o.Label.split("-")[0] in PARTS or o.Label.split("-")[0] in ("pi4", "dac") or o.Label.startswith("fc_massing"):
+    if o.Label.split("-")[0] in SKIP or o.Label.startswith("fc_massing"):
         continue
     objs.append((o.Label, o.Shape.copy()))
 out = App.newDocument("deck_out")
 for name, (off, path) in PARTS.items():
     s = Part.read(path)
-    s.translate(App.Vector(*off))
+    s.rotate(V(0, 0, 0), V(1, 0, 0), -90)
+    s.translate(V(*off))
     out.addObject("Part::Feature", name).Shape = s
-# Pi 4 and DAC Pro split by material (positions from the approved round-4 parameters)
-V = App.Vector
+
 def box(x0, y0, z0, x1, y1, z1):
     return Part.makeBox(x1 - x0, y1 - y0, z1 - z0, V(x0, y0, z0))
-px0, px1, py0, py1, zp, zpt, zh, zht = 4.0, 89.0, 16.0, 72.0, 4.0, 5.4, 14.4, 16.0
+# Pi 4 and DAC Pro (round-9 parameters: USB/Ethernet end toward -x, sockets to the back)
+px0, px1, py0, py1, zp, zpt, zh, zht = 149.5, 234.5, 33.5, 89.5, 4.0, 5.4, 14.4, 16.0
 eth_y, usb3_y, usb2_y = py1 - 45.75, py1 - 27, py1 - 9
+# Waveshare 5in DSI: lens 120.7 x 77.2 x 5.4 at x 6, centred in height; VA 109 x 65.8 (5.85 left, 3.1 top)
+lx0, lz0 = 6.0, (88.5 - 77.2) / 2
 objs += [
     ("pi4_pcb", box(px0, py0, zp, px1, py1, zpt)),
     ("pi4_ethernet", box(px0 - 2.7, eth_y - 8, zpt, px0 + 17.4, eth_y + 8, zpt + 13.5)),
@@ -41,6 +48,11 @@ objs += [
                         Part.makeCylinder(4, 9, V(px1 - 32.98, py1, zht + 6.5), V(0, 1, 0)))),
     ("dac_jack", box(px1 - 51.8 - 4, py1 - 12, zht, px1 - 51.8 + 4, py1, zht + 6).fuse(
                  Part.makeCylinder(2.5, 2.5, V(px1 - 51.8, py1, zht + 3), V(0, 1, 0)))),
+    ("jumpers", box(px1 - 58, py0 + 1, zht, px1 - 7, py0 + 6, zht + 16.5)),
+    ("pad", box(px1 - 29 - 7.5, py1 - 32 - 7.5, 1.0, px1 - 29 + 7.5, py1 - 32 + 7.5, zp)),
+    ("screen_glass", box(lx0, 1.0, lz0, lx0 + 120.7, 1.6, lz0 + 77.2)),
+    ("screen_panel", box(lx0, 1.6, lz0, lx0 + 120.7, 6.4, lz0 + 77.2)),
+    ("screen_board", box(lx0 - 0.15, 6.4, (88.5 - 76) / 2, lx0 + 120.85, 14.0, (88.5 + 76) / 2)),
 ]
 for label, s in objs:
     out.addObject("Part::Feature", label).Shape = s

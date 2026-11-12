@@ -1,0 +1,1852 @@
+{
+ "pass": true,
+ "seconds": 0.9,
+ "blend": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/blender/deck_out_cad.blend",
+ "source": "file",
+ "validation_reference": "source_file",
+ "tessellation": {
+  "tol_linear_mm": 0.009999999776482582,
+  "tol_angular_rad": 0.10000000149011612
+ },
+ "formats": [
+  "gltf",
+  "step"
+ ],
+ "triangles_total": 23112,
+ "parts": {
+  "clinch_nut_1": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.06,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     1.3,
+     -3.5,
+     5.601
+    ],
+    [
+     7.7,
+     -2.0,
+     11.999
+    ]
+   ]
+  },
+  "clinch_nut_2": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.01,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     96.3,
+     -3.5,
+     67.501
+    ],
+    [
+     102.7,
+     -2.0,
+     73.899
+    ]
+   ]
+  },
+  "dac_jack": {
+   "bodies": 1,
+   "triangles": 516,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     33.2,
+     -22.0,
+     60.0
+    ],
+    [
+     41.2,
+     -16.0,
+     74.5
+    ]
+   ]
+  },
+  "dac_pcb": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     24.0,
+     -16.0,
+     15.75
+    ],
+    [
+     89.0,
+     -14.4,
+     72.25
+    ]
+   ]
+  },
+  "dac_rca_barrels": {
+   "bodies": 1,
+   "triangles": 1000,
+   "seconds": 0.01,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     52.021,
+     -26.5,
+     72.0
+    ],
+    [
+     74.639,
+     -18.5,
+     81.0
+    ]
+   ]
+  },
+  "dac_rca_housing": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     49.4,
+     -29.0,
+     58.0
+    ],
+    [
+     77.0,
+     -16.0,
+     72.0
+    ]
+   ]
+  },
+  "enc_front": {
+   "bodies": 1,
+   "triangles": 1020,
+   "seconds": 0.01,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     74.75,
+     -29.7,
+     -11.5
+    ],
+    [
+     87.25,
+     -16.3,
+     11.1
+    ]
+   ]
+  },
+  "enc_side": {
+   "bodies": 1,
+   "triangles": 1020,
+   "seconds": 0.01,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     92.9,
+     -29.7,
+     35.25
+    ],
+    [
+     115.5,
+     -16.3,
+     47.75
+    ]
+   ]
+  },
+  "feet_1": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     9.0,
+     -0.0,
+     7.002
+    ],
+    [
+     19.0,
+     4.0,
+     16.998
+    ]
+   ]
+  },
+  "feet_2": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     91.0,
+     -0.0,
+     7.002
+    ],
+    [
+     101.0,
+     4.0,
+     16.998
+    ]
+   ]
+  },
+  "feet_3": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.01,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     9.0,
+     -0.0,
+     55.002
+    ],
+    [
+     19.0,
+     4.0,
+     64.998
+    ]
+   ]
+  },
+  "feet_4": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     91.0,
+     -0.0,
+     55.002
+    ],
+    [
+     101.0,
+     4.0,
+     64.998
+    ]
+   ]
+  },
+  "jumpers": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     31.0,
+     -32.5,
+     17.0
+    ],
+    [
+     82.0,
+     -16.0,
+     22.0
+    ]
+   ]
+  },
+  "knob_front": {
+   "bodies": 1,
+   "triangles": 552,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     61.501,
+     -42.5,
+     -11.5
+    ],
+    [
+     100.499,
+     -3.505,
+     -6.5
+    ]
+   ]
+  },
+  "knob_side": {
+   "bodies": 1,
+   "triangles": 552,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     110.5,
+     -42.5,
+     22.001
+    ],
+    [
+     115.5,
+     -3.505,
+     60.999
+    ]
+   ]
+  },
+  "pad": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     52.5,
+     -4.0,
+     32.5
+    ],
+    [
+     67.5,
+     -1.0,
+     47.5
+    ]
+   ]
+  },
+  "pi4_ethernet": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     1.3,
+     -18.9,
+     18.25
+    ],
+    [
+     21.4,
+     -5.4,
+     34.25
+    ]
+   ]
+  },
+  "pi4_pcb": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     4.0,
+     -5.4,
+     16.0
+    ],
+    [
+     89.0,
+     -4.0,
+     72.0
+    ]
+   ]
+  },
+  "pi4_usb": {
+   "bodies": 1,
+   "triangles": 24,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     1.3,
+     -21.4,
+     37.75
+    ],
+    [
+     21.4,
+     -5.4,
+     70.25
+    ]
+   ]
+  },
+  "pi4_usbc": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     73.3,
+     -8.6,
+     66.0
+    ],
+    [
+     82.3,
+     -5.4,
+     73.2
+    ]
+   ]
+  },
+  "plate": {
+   "bodies": 1,
+   "triangles": 3080,
+   "seconds": 0.02,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     101.4,
+     -0.0,
+     80.4
+    ]
+   ]
+  },
+  "screen": {
+   "bodies": 1,
+   "triangles": 12,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     1.75,
+     -40.5,
+     1.0
+    ],
+    [
+     59.75,
+     -5.5,
+     12.0
+    ]
+   ]
+  },
+  "screw_dac_1": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     83.25,
+     -17.5,
+     66.251
+    ],
+    [
+     87.75,
+     -16.0,
+     70.749
+    ]
+   ]
+  },
+  "screw_dac_2": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     83.25,
+     -17.5,
+     17.251
+    ],
+    [
+     87.75,
+     -16.0,
+     21.749
+    ]
+   ]
+  },
+  "screw_dac_3": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     25.25,
+     -17.5,
+     66.251
+    ],
+    [
+     29.75,
+     -16.0,
+     70.749
+    ]
+   ]
+  },
+  "screw_dac_4": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     25.25,
+     -17.5,
+     17.251
+    ],
+    [
+     29.75,
+     -16.0,
+     21.749
+    ]
+   ]
+  },
+  "screw_m3_1": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     1.75,
+     -0.0,
+     6.051
+    ],
+    [
+     7.25,
+     1.0,
+     11.549
+    ]
+   ]
+  },
+  "screw_m3_2": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     96.75,
+     -0.0,
+     67.951
+    ],
+    [
+     102.25,
+     1.0,
+     73.449
+    ]
+   ]
+  },
+  "screw_pi_1": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     83.25,
+     -0.0,
+     66.251
+    ],
+    [
+     87.75,
+     1.0,
+     70.749
+    ]
+   ]
+  },
+  "screw_pi_2": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     83.25,
+     -0.0,
+     17.251
+    ],
+    [
+     87.75,
+     1.0,
+     21.749
+    ]
+   ]
+  },
+  "screw_pi_3": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     25.25,
+     -0.0,
+     66.251
+    ],
+    [
+     29.75,
+     1.0,
+     70.749
+    ]
+   ]
+  },
+  "screw_pi_4": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     25.25,
+     -0.0,
+     17.251
+    ],
+    [
+     29.75,
+     1.0,
+     21.749
+    ]
+   ]
+  },
+  "shell": {
+   "bodies": 1,
+   "triangles": 5252,
+   "seconds": 0.03,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     -0.5,
+     -1.0,
+     -0.5
+    ],
+    [
+     103.5,
+     44.0,
+     82.5
+    ]
+   ]
+  },
+  "standoff_1": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.01,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     83.0,
+     -4.0,
+     66.001
+    ],
+    [
+     88.0,
+     -1.0,
+     70.999
+    ]
+   ]
+  },
+  "standoff_2": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     83.0,
+     -4.0,
+     17.001
+    ],
+    [
+     88.0,
+     -1.0,
+     21.999
+    ]
+   ]
+  },
+  "standoff_3": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     25.0,
+     -4.0,
+     66.001
+    ],
+    [
+     30.0,
+     -1.0,
+     70.999
+    ]
+   ]
+  },
+  "standoff_4": {
+   "bodies": 1,
+   "triangles": 500,
+   "seconds": 0.0,
+   "file_rgb": null,
+   "format": "gltf",
+   "bbox_mm": [
+    [
+     25.0,
+     -4.0,
+     17.001
+    ],
+    [
+     30.0,
+     -1.0,
+     21.999
+    ]
+   ]
+  }
+ },
+ "checks": [
+  {
+   "id": "part_bbox.clinch_nut_1",
+   "pass": true,
+   "measured": [
+    [
+     1.3,
+     -3.5,
+     5.601
+    ],
+    [
+     7.7,
+     -2.0,
+     11.999
+    ]
+   ],
+   "expected": [
+    [
+     1.3,
+     -3.5,
+     5.601
+    ],
+    [
+     7.7,
+     -2.0,
+     11.999
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.clinch_nut_2",
+   "pass": true,
+   "measured": [
+    [
+     96.3,
+     -3.5,
+     67.501
+    ],
+    [
+     102.7,
+     -2.0,
+     73.899
+    ]
+   ],
+   "expected": [
+    [
+     96.3,
+     -3.5,
+     67.501
+    ],
+    [
+     102.7,
+     -2.0,
+     73.899
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.dac_jack",
+   "pass": true,
+   "measured": [
+    [
+     33.2,
+     -22.0,
+     60.0
+    ],
+    [
+     41.2,
+     -16.0,
+     74.5
+    ]
+   ],
+   "expected": [
+    [
+     33.2,
+     -22.0,
+     60.0
+    ],
+    [
+     41.2,
+     -16.0,
+     74.5
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.dac_pcb",
+   "pass": true,
+   "measured": [
+    [
+     24.0,
+     -16.0,
+     15.75
+    ],
+    [
+     89.0,
+     -14.4,
+     72.25
+    ]
+   ],
+   "expected": [
+    [
+     24.0,
+     -16.0,
+     15.75
+    ],
+    [
+     89.0,
+     -14.4,
+     72.25
+    ]
+   ],
+   "tol_mm": 0.325
+  },
+  {
+   "id": "part_bbox.dac_rca_barrels",
+   "pass": true,
+   "measured": [
+    [
+     52.021,
+     -26.5,
+     72.0
+    ],
+    [
+     74.639,
+     -18.5,
+     81.0
+    ]
+   ],
+   "expected": [
+    [
+     52.0212,
+     -26.5,
+     72.0
+    ],
+    [
+     74.6388,
+     -18.5,
+     81.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.dac_rca_housing",
+   "pass": true,
+   "measured": [
+    [
+     49.4,
+     -29.0,
+     58.0
+    ],
+    [
+     77.0,
+     -16.0,
+     72.0
+    ]
+   ],
+   "expected": [
+    [
+     49.4,
+     -29.0,
+     58.0
+    ],
+    [
+     77.0,
+     -16.0,
+     72.0
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.enc_front",
+   "pass": true,
+   "measured": [
+    [
+     74.75,
+     -29.7,
+     -11.5
+    ],
+    [
+     87.25,
+     -16.3,
+     11.1
+    ]
+   ],
+   "expected": [
+    [
+     74.75,
+     -29.7,
+     -11.5
+    ],
+    [
+     87.25,
+     -16.3,
+     11.1
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.enc_side",
+   "pass": true,
+   "measured": [
+    [
+     92.9,
+     -29.7,
+     35.25
+    ],
+    [
+     115.5,
+     -16.3,
+     47.75
+    ]
+   ],
+   "expected": [
+    [
+     92.9,
+     -29.7,
+     35.25
+    ],
+    [
+     115.5,
+     -16.3,
+     47.75
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.feet_1",
+   "pass": true,
+   "measured": [
+    [
+     9.0,
+     -0.0,
+     7.002
+    ],
+    [
+     19.0,
+     4.0,
+     16.998
+    ]
+   ],
+   "expected": [
+    [
+     9.0,
+     -0.0,
+     7.0016
+    ],
+    [
+     19.0,
+     4.0,
+     16.9984
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.feet_2",
+   "pass": true,
+   "measured": [
+    [
+     91.0,
+     -0.0,
+     7.002
+    ],
+    [
+     101.0,
+     4.0,
+     16.998
+    ]
+   ],
+   "expected": [
+    [
+     91.0,
+     -0.0,
+     7.0016
+    ],
+    [
+     101.0,
+     4.0,
+     16.9984
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.feet_3",
+   "pass": true,
+   "measured": [
+    [
+     9.0,
+     -0.0,
+     55.002
+    ],
+    [
+     19.0,
+     4.0,
+     64.998
+    ]
+   ],
+   "expected": [
+    [
+     9.0,
+     -0.0,
+     55.0016
+    ],
+    [
+     19.0,
+     4.0,
+     64.9984
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.feet_4",
+   "pass": true,
+   "measured": [
+    [
+     91.0,
+     -0.0,
+     55.002
+    ],
+    [
+     101.0,
+     4.0,
+     64.998
+    ]
+   ],
+   "expected": [
+    [
+     91.0,
+     -0.0,
+     55.0016
+    ],
+    [
+     101.0,
+     4.0,
+     64.9984
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.jumpers",
+   "pass": true,
+   "measured": [
+    [
+     31.0,
+     -32.5,
+     17.0
+    ],
+    [
+     82.0,
+     -16.0,
+     22.0
+    ]
+   ],
+   "expected": [
+    [
+     31.0,
+     -32.5,
+     17.0
+    ],
+    [
+     82.0,
+     -16.0,
+     22.0
+    ]
+   ],
+   "tol_mm": 0.255
+  },
+  {
+   "id": "part_bbox.knob_front",
+   "pass": true,
+   "measured": [
+    [
+     61.501,
+     -42.5,
+     -11.5
+    ],
+    [
+     100.499,
+     -3.505,
+     -6.5
+    ]
+   ],
+   "expected": [
+    [
+     61.5012,
+     -42.5,
+     -11.5
+    ],
+    [
+     100.4988,
+     -3.505,
+     -6.5
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.knob_side",
+   "pass": true,
+   "measured": [
+    [
+     110.5,
+     -42.5,
+     22.001
+    ],
+    [
+     115.5,
+     -3.505,
+     60.999
+    ]
+   ],
+   "expected": [
+    [
+     110.5,
+     -42.5,
+     22.0012
+    ],
+    [
+     115.5,
+     -3.505,
+     60.9988
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.pad",
+   "pass": true,
+   "measured": [
+    [
+     52.5,
+     -4.0,
+     32.5
+    ],
+    [
+     67.5,
+     -1.0,
+     47.5
+    ]
+   ],
+   "expected": [
+    [
+     52.5,
+     -4.0,
+     32.5
+    ],
+    [
+     67.5,
+     -1.0,
+     47.5
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.pi4_ethernet",
+   "pass": true,
+   "measured": [
+    [
+     1.3,
+     -18.9,
+     18.25
+    ],
+    [
+     21.4,
+     -5.4,
+     34.25
+    ]
+   ],
+   "expected": [
+    [
+     1.3,
+     -18.9,
+     18.25
+    ],
+    [
+     21.4,
+     -5.4,
+     34.25
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.pi4_pcb",
+   "pass": true,
+   "measured": [
+    [
+     4.0,
+     -5.4,
+     16.0
+    ],
+    [
+     89.0,
+     -4.0,
+     72.0
+    ]
+   ],
+   "expected": [
+    [
+     4.0,
+     -5.4,
+     16.0
+    ],
+    [
+     89.0,
+     -4.0,
+     72.0
+    ]
+   ],
+   "tol_mm": 0.425
+  },
+  {
+   "id": "part_bbox.pi4_usb",
+   "pass": true,
+   "measured": [
+    [
+     1.3,
+     -21.4,
+     37.75
+    ],
+    [
+     21.4,
+     -5.4,
+     70.25
+    ]
+   ],
+   "expected": [
+    [
+     1.3,
+     -21.4,
+     37.75
+    ],
+    [
+     21.4,
+     -5.4,
+     70.25
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.pi4_usbc",
+   "pass": true,
+   "measured": [
+    [
+     73.3,
+     -8.6,
+     66.0
+    ],
+    [
+     82.3,
+     -5.4,
+     73.2
+    ]
+   ],
+   "expected": [
+    [
+     73.3,
+     -8.6,
+     66.0
+    ],
+    [
+     82.3,
+     -5.4,
+     73.2
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.plate",
+   "pass": true,
+   "measured": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     101.4,
+     -0.0,
+     80.4
+    ]
+   ],
+   "expected": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     101.4,
+     -0.0,
+     80.4
+    ]
+   ],
+   "tol_mm": 0.507
+  },
+  {
+   "id": "part_bbox.screen",
+   "pass": true,
+   "measured": [
+    [
+     1.75,
+     -40.5,
+     1.0
+    ],
+    [
+     59.75,
+     -5.5,
+     12.0
+    ]
+   ],
+   "expected": [
+    [
+     1.75,
+     -40.5,
+     1.0
+    ],
+    [
+     59.75,
+     -5.5,
+     12.0
+    ]
+   ],
+   "tol_mm": 0.29
+  },
+  {
+   "id": "part_bbox.screw_dac_1",
+   "pass": true,
+   "measured": [
+    [
+     83.25,
+     -17.5,
+     66.251
+    ],
+    [
+     87.75,
+     -16.0,
+     70.749
+    ]
+   ],
+   "expected": [
+    [
+     83.25,
+     -17.5,
+     66.2507
+    ],
+    [
+     87.75,
+     -16.0,
+     70.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_dac_2",
+   "pass": true,
+   "measured": [
+    [
+     83.25,
+     -17.5,
+     17.251
+    ],
+    [
+     87.75,
+     -16.0,
+     21.749
+    ]
+   ],
+   "expected": [
+    [
+     83.25,
+     -17.5,
+     17.2507
+    ],
+    [
+     87.75,
+     -16.0,
+     21.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_dac_3",
+   "pass": true,
+   "measured": [
+    [
+     25.25,
+     -17.5,
+     66.251
+    ],
+    [
+     29.75,
+     -16.0,
+     70.749
+    ]
+   ],
+   "expected": [
+    [
+     25.25,
+     -17.5,
+     66.2507
+    ],
+    [
+     29.75,
+     -16.0,
+     70.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_dac_4",
+   "pass": true,
+   "measured": [
+    [
+     25.25,
+     -17.5,
+     17.251
+    ],
+    [
+     29.75,
+     -16.0,
+     21.749
+    ]
+   ],
+   "expected": [
+    [
+     25.25,
+     -17.5,
+     17.2507
+    ],
+    [
+     29.75,
+     -16.0,
+     21.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_m3_1",
+   "pass": true,
+   "measured": [
+    [
+     1.75,
+     -0.0,
+     6.051
+    ],
+    [
+     7.25,
+     1.0,
+     11.549
+    ]
+   ],
+   "expected": [
+    [
+     1.75,
+     -0.0,
+     6.0509
+    ],
+    [
+     7.25,
+     1.0,
+     11.5491
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_m3_2",
+   "pass": true,
+   "measured": [
+    [
+     96.75,
+     -0.0,
+     67.951
+    ],
+    [
+     102.25,
+     1.0,
+     73.449
+    ]
+   ],
+   "expected": [
+    [
+     96.75,
+     -0.0,
+     67.9509
+    ],
+    [
+     102.25,
+     1.0,
+     73.4491
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_pi_1",
+   "pass": true,
+   "measured": [
+    [
+     83.25,
+     -0.0,
+     66.251
+    ],
+    [
+     87.75,
+     1.0,
+     70.749
+    ]
+   ],
+   "expected": [
+    [
+     83.25,
+     -0.0,
+     66.2507
+    ],
+    [
+     87.75,
+     1.0,
+     70.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_pi_2",
+   "pass": true,
+   "measured": [
+    [
+     83.25,
+     -0.0,
+     17.251
+    ],
+    [
+     87.75,
+     1.0,
+     21.749
+    ]
+   ],
+   "expected": [
+    [
+     83.25,
+     -0.0,
+     17.2507
+    ],
+    [
+     87.75,
+     1.0,
+     21.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_pi_3",
+   "pass": true,
+   "measured": [
+    [
+     25.25,
+     -0.0,
+     66.251
+    ],
+    [
+     29.75,
+     1.0,
+     70.749
+    ]
+   ],
+   "expected": [
+    [
+     25.25,
+     -0.0,
+     66.2507
+    ],
+    [
+     29.75,
+     1.0,
+     70.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.screw_pi_4",
+   "pass": true,
+   "measured": [
+    [
+     25.25,
+     -0.0,
+     17.251
+    ],
+    [
+     29.75,
+     1.0,
+     21.749
+    ]
+   ],
+   "expected": [
+    [
+     25.25,
+     -0.0,
+     17.2507
+    ],
+    [
+     29.75,
+     1.0,
+     21.7493
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.shell",
+   "pass": true,
+   "measured": [
+    [
+     -0.5,
+     -1.0,
+     -0.5
+    ],
+    [
+     103.5,
+     44.0,
+     82.5
+    ]
+   ],
+   "expected": [
+    [
+     -0.5,
+     -1.0,
+     -0.5
+    ],
+    [
+     103.5,
+     44.0,
+     82.5
+    ]
+   ],
+   "tol_mm": 0.52
+  },
+  {
+   "id": "part_bbox.standoff_1",
+   "pass": true,
+   "measured": [
+    [
+     83.0,
+     -4.0,
+     66.001
+    ],
+    [
+     88.0,
+     -1.0,
+     70.999
+    ]
+   ],
+   "expected": [
+    [
+     83.0,
+     -4.0,
+     66.0008
+    ],
+    [
+     88.0,
+     -1.0,
+     70.9992
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.standoff_2",
+   "pass": true,
+   "measured": [
+    [
+     83.0,
+     -4.0,
+     17.001
+    ],
+    [
+     88.0,
+     -1.0,
+     21.999
+    ]
+   ],
+   "expected": [
+    [
+     83.0,
+     -4.0,
+     17.0008
+    ],
+    [
+     88.0,
+     -1.0,
+     21.9992
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.standoff_3",
+   "pass": true,
+   "measured": [
+    [
+     25.0,
+     -4.0,
+     66.001
+    ],
+    [
+     30.0,
+     -1.0,
+     70.999
+    ]
+   ],
+   "expected": [
+    [
+     25.0,
+     -4.0,
+     66.0008
+    ],
+    [
+     30.0,
+     -1.0,
+     70.9992
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "part_bbox.standoff_4",
+   "pass": true,
+   "measured": [
+    [
+     25.0,
+     -4.0,
+     17.001
+    ],
+    [
+     30.0,
+     -1.0,
+     21.999
+    ]
+   ],
+   "expected": [
+    [
+     25.0,
+     -4.0,
+     17.0008
+    ],
+    [
+     30.0,
+     -1.0,
+     21.9992
+    ]
+   ],
+   "tol_mm": 0.2
+  },
+  {
+   "id": "components",
+   "pass": true,
+   "expected": 37,
+   "placed": 37,
+   "missing": []
+  },
+  {
+   "id": "component_positions",
+   "pass": true,
+   "wrong": [],
+   "checked": 37
+  },
+  {
+   "id": "assembly_bbox",
+   "pass": true,
+   "measured": [
+    115.5,
+    94.5,
+    50.0
+   ],
+   "expected": [
+    115.5,
+    94.5,
+    50.0
+   ],
+   "reference": "source_file",
+   "note": "also proves scale (mm -> m) and Z-up when the reference is the CAD kernel"
+  },
+  {
+   "id": "hierarchy",
+   "pass": true,
+   "nodes": 1
+  },
+  {
+   "id": "crosscheck.assembly_bbox",
+   "pass": true,
+   "measured": [
+    115.5,
+    94.5,
+    50.0
+   ],
+   "expected": [
+    115.5,
+    94.5,
+    50.0
+   ],
+   "file": "export/geometry/source.step"
+  },
+  {
+   "id": "crosscheck.assembly_mesh_count",
+   "pass": true,
+   "meshes": 37,
+   "components": 37,
+   "note": "bodies, so >= components for multi-body parts"
+  }
+ ]
+}
