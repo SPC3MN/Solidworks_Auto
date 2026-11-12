@@ -217,10 +217,17 @@
   },
   {
    "id": "R29",
-   "text": "'mn' logo cut through the front face as a dot pattern (14 x 6 grid, 2.86 pitch, from flacmn_deck_layout.svg 1ee76f3), centred horizontally on the small knob, top row at z 31.3; dots Ø1.8 so the webs stay >= 1 mm",
+   "text": "flacmn logo (references/flacmn-charcoal.svg, fill + its 0.18 stroke on 'flac') painted on the front face, not cut: 40 mm wide, bottom right, 8 mm from the right and bottom edges; satin charcoal",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (round 9 push-back + answers)"
+   "source": "owner, 2026-11-11 (logo variants: 'flacmn bottom right')"
+  },
+  {
+   "id": "R30",
+   "text": "Knob caps charcoal, the logo's #2E2E33",
+   "priority": "should",
+   "provenance": "given",
+   "source": "owner, 2026-11-11"
   }
  ],
  "bought_parts": [
@@ -394,6 +401,17 @@
    "time": "2026-11-11T22:39:02",
    "text": "make the knobs thinner as well, cut the encoder chaft if needed (answer: 8 mm)",
    "options": []
+  },
+  {
+   "round": 11,
+   "time": "2026-11-11T22:45:16",
+   "text": "instead of machining the holes just apply them as a paint at the correct scale.",
+   "options": []
+  },
+  {
+   "round": 12,
+   "text": "instead of just the mn put the flacmn logo just pushed to the repo, and make the knobs the same charcoal color ... -> flacmn bottom right",
+   "source": "owner, 2026-11-11"
   }
  ],
  "_designer_notes": [

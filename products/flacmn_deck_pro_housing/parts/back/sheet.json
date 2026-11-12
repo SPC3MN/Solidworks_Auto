@@ -313,27 +313,19 @@
    "src": "chosen",
    "note": "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"
   },
-  "logo_p": {
-   "value": 2.857,
+  "logo_w": {
+   "value": 40.0,
    "src": "given",
-   "note": "owner's layout, true scale"
+   "note": "owner: flacmn bottom right"
   },
-  "logo_dot": {
-   "value": 1.8,
-   "src": "given",
-   "note": "owner: smaller dots, 1.06 web"
+  "logo_h": 11.54090215347086,
+  "logo_x1": 233.0,
+  "logo_z0": 8.0,
+  "paint_t": {
+   "value": 0.05,
+   "src": "estimated",
+   "note": "paint film"
   },
-  "logo_cx": {
-   "value": 208.3,
-   "src": "given",
-   "note": "owner: centred horizontally on the small knob"
-  },
-  "logo_top": {
-   "value": 31.3,
-   "src": "given",
-   "note": "owner's layout, true scale"
-  },
-  "logo_cols": 14.0,
   "feet_h": {
    "value": 6.0,
    "src": "chosen",

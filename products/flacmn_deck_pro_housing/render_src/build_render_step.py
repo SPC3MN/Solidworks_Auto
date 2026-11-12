@@ -1,4 +1,4 @@
-"""Assemble a render STEP of the approved round-11 deck: the built shell and back plate (with their openings),
+"""Assemble a render STEP of the approved round-12 deck: the built shell and back plate (with their openings),
 the Pi 4 + DAC Pro and the 5in screen split by material, and the round-9 massing bodies of everything else
 (encoders, knob caps, feet, screws, nuts). Run with FreeCADCmd."""
 import os
@@ -6,12 +6,12 @@ import FreeCAD as App, Part, Import
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROD = os.path.dirname(HERE)
-MASS = os.path.join(PROD, "draft", "round_11", "A", "massing", "massing.step")
+MASS = os.path.join(PROD, "draft", "round_12", "A", "massing", "massing.step")
 V = App.Vector
 # sheet parts are built flat-root; stand them up: sheet (x, y, z) -> (x, z, -y), then move into place
 PARTS = {"shell": ((0.5, 0.0, 88.0), os.path.join(PROD, "parts", "shell", "folded", "shell.step")),
          "back": ((1.3, 99.5, 87.2), os.path.join(PROD, "parts", "back", "folded", "back.step"))}
-SKIP = ("shell", "back", "pi4", "dac", "screen", "jumpers", "pad")
+SKIP = ("logo", "shell", "back", "pi4", "dac", "screen", "jumpers", "pad")
 
 doc = App.newDocument("deck_render")
 Import.insert(MASS, doc.Name)
@@ -54,6 +54,20 @@ objs += [
     ("screen_panel", box(lx0, 1.6, lz0, lx0 + 120.7, 6.4, lz0 + 77.2)),
     ("screen_board", box(lx0 - 0.15, 6.4, (88.5 - 76) / 2, lx0 + 120.85, 14.0, (88.5 + 76) / 2)),
 ]
+# flacmn logo (round 12): the owner's SVG fill plus its 0.18 stroke on "flac", 40 wide, 8 from the right and bottom
+import importSVG
+ldoc = App.newDocument("logo")
+importSVG.insert(os.path.join(PROD, "references", "flacmn-charcoal.svg"), ldoc.Name)
+edges = [e for o in ldoc.Objects if hasattr(o, "Shape") for e in o.Shape.Edges]
+face = Part.makeFace([w for w in (Part.Wire(x) for x in Part.sortEdges(edges)) if w.isClosed()], "Part::FaceMakerBullseye")
+face = Part.Compound([f.makeOffset2D(0.09, join=0) if f.BoundBox.XMax < 13.5 else f for f in face.Faces])
+App.closeDocument(ldoc.Name)
+bb = face.BoundBox
+m = App.Matrix(); m.move(V(-bb.XMax, -bb.YMin, 0)); face = face.transformGeometry(m)
+face.scale(40.0 / bb.XLength)
+face.rotate(V(0, 0, 0), V(1, 0, 0), 90)
+face.translate(V(241.0 - 8.0, 0, 8.0))
+objs.append(("logo", Part.Compound([f.extrude(V(0, -0.05, 0)) for f in face.Faces])))
 for label, s in objs:
     out.addObject("Part::Feature", label).Shape = s
 dst = os.path.join(HERE, "deck.step")

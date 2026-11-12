@@ -1,12 +1,12 @@
 {
  "option": "A",
- "round": 11,
- "hash": "60c01bd64be26a75",
+ "round": 12,
+ "hash": "6501b08204d35641",
  "scorecard": {
-  "parts_total": 35,
-  "parts_unique": 17,
+  "parts_total": 36,
+  "parts_unique": 18,
   "parts_make": 2,
-  "parts_buy": 33,
+  "parts_buy": 34,
   "fasteners": 20,
   "setups": 8,
   "processes": [
@@ -19,9 +19,9 @@
   "bbox_x": 241.0,
   "bbox_y": 112.5,
   "bbox_z": 94.5,
-  "parts_total": 35,
+  "parts_total": 36,
   "parts_make": 2,
-  "parts_buy": 33,
+  "parts_buy": 34,
   "fasteners": 20,
   "setups": 8
  },
@@ -302,48 +302,26 @@
    "why": "Cap grips at least 3 mm of shaft past the bushing (with an M3 set screw onto the D-flat)"
   },
   {
-   "id": "logo_web",
-   "lhs_expr": "logo_p - logo_dot",
-   "rhs_expr": "t",
-   "op": ">=",
-   "lhs": 1.057,
-   "rhs": 1.0,
-   "margin": 0.057,
-   "ok": true,
-   "why": "Logo webs at least one sheet thickness"
-  },
-  {
    "id": "logo_vs_knob",
-   "lhs_expr": "logo_top + logo_dot/2 + 2",
+   "lhs_expr": "logo_z0 + logo_h + 2",
    "rhs_expr": "ks_z - ks_d/2",
    "op": "<=",
-   "lhs": 34.2,
+   "lhs": 21.5409,
    "rhs": 39.4,
-   "margin": 5.2,
+   "margin": 17.8591,
    "ok": true,
    "why": "Logo clear below the small cap"
   },
   {
-   "id": "logo_vs_right",
-   "lhs_expr": "logo_cx + (logo_cols - 1)/2*logo_p + logo_dot/2 + 3",
-   "rhs_expr": "W - t",
+   "id": "logo_vs_big_knob",
+   "lhs_expr": "kb_x + kb_d/2 + 2",
+   "rhs_expr": "logo_x1 - logo_w",
    "op": "<=",
-   "lhs": 230.7705,
-   "rhs": 240.0,
-   "margin": 9.2295,
+   "lhs": 185.0,
+   "rhs": 193.0,
+   "margin": 8.0,
    "ok": true,
-   "why": "Logo clear of the right fold"
-  },
-  {
-   "id": "logo_vs_floor",
-   "lhs_expr": "t + 3",
-   "rhs_expr": "logo_top - 5*logo_p - logo_dot/2",
-   "op": "<=",
-   "lhs": 4.0,
-   "rhs": 16.115,
-   "margin": 12.115,
-   "ok": true,
-   "why": "Logo clear of the floor fold"
+   "why": "Logo clear of the large cap"
   },
   {
    "id": "nut_catches",

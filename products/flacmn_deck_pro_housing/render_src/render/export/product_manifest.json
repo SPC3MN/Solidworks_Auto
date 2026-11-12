@@ -7,7 +7,7 @@
   "application": "STEP file",
   "application_version": "",
   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
-  "exported": "2026-11-11T22:40:35",
+  "exported": "2026-11-11T23:06:53",
   "details": {
    "format": "step",
    "units_assumed": null,
@@ -574,6 +574,35 @@
     "material": "pom_black",
     "source": "name_rule",
     "rule": "knob|handle|grip",
+    "confidence": "low"
+   }
+  },
+  "logo": {
+   "part_id": "logo",
+   "geometry": {
+    "file": "export/geometry/parts/logo.glb",
+    "format": "gltf",
+    "scale_to_m": null,
+    "up_axis": "Z"
+   },
+   "bbox_mm": {
+    "min": [
+     193.0,
+     -18.7532,
+     -0.05
+    ],
+    "max": [
+     233.0,
+     -8.0002,
+     0.0
+    ]
+   },
+   "source_material": "",
+   "source_color": null,
+   "source_path": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+   "material": {
+    "material": "aluminium_raw",
+    "source": "default",
     "confidence": "low"
    }
   },
@@ -2436,6 +2465,68 @@
    ]
   },
   {
+   "id": "logo",
+   "name": "logo",
+   "parent": "deck_out",
+   "part": "logo",
+   "transform": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "visible": true,
+   "suppressed": false,
+   "source": {
+    "step_source_file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/deck.step",
+    "step_node_path": "logo"
+   },
+   "world_bbox_mm": [
+    [
+     193.0,
+     -0.05,
+     8.0002
+    ],
+    [
+     233.0,
+     0.0,
+     18.7532
+    ]
+   ],
+   "world_bbox_exact_mm": [
+    [
+     193.0,
+     -0.05,
+     8.0002
+    ],
+    [
+     233.0,
+     0.0,
+     18.7532
+    ]
+   ]
+  },
+  {
    "id": "pad",
    "name": "pad",
    "parent": "deck_out",
@@ -4090,6 +4181,11 @@
     0.0,
     6.6
    ],
+   "logo": [
+    0.0,
+    0.0,
+    0.0
+   ],
    "pad": [
     0.0,
     0.0,
@@ -4215,7 +4311,8 @@
     0.0,
     -66.0
    ]
-  }
+  },
+  "_note_logo": "the painted logo moves with the shell"
  },
  "validation": {
   "reference": "source_file",

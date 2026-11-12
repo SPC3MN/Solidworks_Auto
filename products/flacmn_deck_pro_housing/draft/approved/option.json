@@ -298,7 +298,7 @@
   },
   {
    "id": "knob_big",
-   "name": "Knob cap, large (Ø57 x 8, counterbored over the nut, M3 set screw onto the D-flat)",
+   "name": "Knob cap, large (Ø57 x 8, charcoal, counterbored over the nut, M3 set screw onto the D-flat)",
    "source": "buy",
    "bodies": [
     {
@@ -359,7 +359,7 @@
   },
   {
    "id": "knob_small",
-   "name": "Knob cap, small (Ø35 x 8, counterbored over the nut, M3 set screw onto the D-flat)",
+   "name": "Knob cap, small (Ø35 x 8, charcoal, counterbored over the nut, M3 set screw onto the D-flat)",
    "source": "buy",
    "bodies": [
     {
@@ -371,6 +371,26 @@
       "ks_x",
       "-(knob_gap + knob_h)",
       "ks_z"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "logo",
+   "name": "flacmn logo, satin charcoal paint (artwork: references/flacmn-charcoal.svg; envelope shown)",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "logo_w",
+      "paint_t",
+      "logo_h"
+     ],
+     "at": [
+      "logo_x1 - logo_w/2",
+      "-paint_t/2",
+      "logo_z0"
      ]
     }
    ]
@@ -805,32 +825,18 @@
    "why": "Cap grips at least 3 mm of shaft past the bushing (with an M3 set screw onto the D-flat)"
   },
   {
-   "id": "logo_web",
-   "lhs": "logo_p - logo_dot",
-   "op": ">=",
-   "rhs": "t",
-   "why": "Logo webs at least one sheet thickness"
-  },
-  {
    "id": "logo_vs_knob",
-   "lhs": "logo_top + logo_dot/2 + 2",
+   "lhs": "logo_z0 + logo_h + 2",
    "op": "<=",
    "rhs": "ks_z - ks_d/2",
    "why": "Logo clear below the small cap"
   },
   {
-   "id": "logo_vs_right",
-   "lhs": "logo_cx + (logo_cols - 1)/2*logo_p + logo_dot/2 + 3",
+   "id": "logo_vs_big_knob",
+   "lhs": "kb_x + kb_d/2 + 2",
    "op": "<=",
-   "rhs": "W - t",
-   "why": "Logo clear of the right fold"
-  },
-  {
-   "id": "logo_vs_floor",
-   "lhs": "t + 3",
-   "op": "<=",
-   "rhs": "logo_top - 5*logo_p - logo_dot/2",
-   "why": "Logo clear of the floor fold"
+   "rhs": "logo_x1 - logo_w",
+   "why": "Logo clear of the large cap"
   },
   {
    "id": "nut_catches",

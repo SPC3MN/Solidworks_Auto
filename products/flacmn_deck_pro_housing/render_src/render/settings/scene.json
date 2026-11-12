@@ -171,12 +171,14 @@
     "_src": "5052-H32 sheet (brief); clear bead-blast anodise assumed (finish not chosen yet)"
    },
    "knob_big": {
-    "material": "aluminium_anodized_black",
-    "_src": "knob caps \u00d857/\u00d835 x 13; material assumed (bought or machined not chosen)"
+    "material": "aluminium_anodized",
+    "color": "#2E2E33",
+    "_src": "owner: knobs the logo's charcoal #2E2E33 (R30)"
    },
    "knob_small": {
-    "material": "aluminium_anodized_black",
-    "_src": "knob caps \u00d857/\u00d835 x 13; material assumed (bought or machined not chosen)"
+    "material": "aluminium_anodized",
+    "color": "#2E2E33",
+    "_src": "owner: knobs the logo's charcoal #2E2E33 (R30)"
    },
    "enc_big": {
     "material": "stainless_steel",
@@ -218,6 +220,12 @@
     "material": "abs",
     "color": "#1E5631",
     "_src": "screen PCB (green solder mask)"
+   },
+   "logo": {
+    "material": "abs",
+    "color": "#1E1E22",
+    "roughness": 0.3,
+    "_src": "flacmn logo, satin charcoal paint, darker so it reads as the SVG's #2E2E33 (R29)"
    }
   },
   "components": {}
@@ -319,6 +327,22 @@
    "category": "technical",
    "xray": "auto",
    "camera_overrides": {
+    "dof": {
+     "fstop": 22
+    }
+   }
+  },
+  {
+   "name": "logo",
+   "scene": "studio",
+   "camera": "detail_closeup",
+   "category": "details",
+   "aspect": "16:9",
+   "camera_overrides": {
+    "target": "component:logo",
+    "az": 0,
+    "el": 0,
+    "margin": 0.15,
     "dof": {
      "fstop": 22
     }

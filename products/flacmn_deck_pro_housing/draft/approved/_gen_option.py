@@ -1,4 +1,4 @@
-"""Write round-11 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
+"""Write round-12 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
 
 From the owner's layout (references/electronics_views/flacmn_deck_layout.svg, scaled to true size) and the
 round-5 push-back: Shell: the front face in the centre, with the top, bottom and both sides folding back from
@@ -69,23 +69,14 @@ params = {
     "enc_w": P(12.5, "estimated"), "enc_h": P(13.4, "estimated"), "enc_d": P(10.1, "estimated", "body 6.6 + pins"),
     "enc_hole": P(7.4, "given"), "enc_tab_r": P(7.5, "estimated", "anti-turn tab offset"), "enc_tab_d": 2.4,
     "bush_out": P(6.0, "estimated", "bushing past the panel"), "shaft_out": P(9.0, "chosen", "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"),
-    # 'mn' logo: dot holes through the front face (flacmn_deck_layout.svg 1ee76f3, true scale)
-    "logo_p": P(2.857, "given", LAY), "logo_dot": P(1.8, "given", "owner: smaller dots, 1.06 web"),
-    "logo_cx": P("ks_x", "given", "owner: centred horizontally on the small knob"),
-    "logo_top": P(31.3, "given", LAY), "logo_cols": 14,
+    # flacmn logo painted on the front face (references/flacmn-charcoal.svg: 24.94 x 7.20 incl. the 0.18 stroke)
+    "logo_w": P(40.0, "given", "owner: flacmn bottom right"), "logo_h": "logo_w*7.195878/24.940435",
+    "logo_x1": "W - 8", "logo_z0": 8.0, "paint_t": P(0.05, "estimated", "paint film"),
     "feet_h": P(6.0, "chosen", "taller than the screw heads under the floor"), "feet_d": 10.0,
     "foot_y": 25.0,
     "soc_x": "px1 - 29", "soc_y": "py1 - 32",
 }
 
-LOGO = ["#.#####..#.##.",
-        "########.#####",
-        "##.##.##.##.##",
-        "##.##.##.##.##",
-        "##.##.##.##.##",
-        "##.##.##.##.##"]
-logo_dots = [(f"logo_cx + ({c} - (logo_cols - 1)/2)*logo_p", f"logo_top - {r}*logo_p")
-             for r, row in enumerate(LOGO) for c, ch in enumerate(row) if ch == "#"]
 rect = lambda w, h: [[0, 0], [w, 0], [w, h], [0, h]]
 recipes = {"fold": {"_comment": "Starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
                     "method": "slots", "slot_length": 8.0, "slot_width": 0.5, "bridge": 1.5,
@@ -109,7 +100,7 @@ shell = {
             {"type": "rect", "size": ["va_w + 1", "va_h + 1"], "at": [sx(f"{va_x0} + va_w/2"), sy(f"{va_z1} - va_h/2")]},
             circ("enc_hole", sx("kb_x"), sy("kb_z")), circ("enc_tab_d", sx("kb_x"), sy("kb_z + enc_tab_r")),
             circ("enc_hole", sx("ks_x"), sy("ks_z")), circ("enc_tab_d", sx("ks_x"), sy("ks_z + enc_tab_r")),
-            *[circ("logo_dot", sx(x), sy(z)) for x, z in logo_dots]]},
+            ]},
         {"id": "top", "name": "Top", "outline": rect("lw", "fl_l")},
         {"id": "floor", "name": "Floor", "outline": rect("lw", "fl_l"), "features": [
             *[circ(2.9, f"{sx(x)} - inset", fv(y)) for x, y in pi_holes]]},
@@ -161,7 +152,7 @@ def encoder(x, z, d, pid, name):
             box("enc_w", "enc_d", "enc_h", x, "t + enc_d/2", f"{z} - enc_h/2"),
             cyl(7, "bush_out + t", "y", [x, "-bush_out", z]),
             cyl(6, "knob_gap + knob_h - bush_out - 1", "y", [x, "-(knob_gap + knob_h - 1)", z])]},
-        {"id": f"knob_{pid}", "name": f"Knob cap, {name} (Ø{d} x 8, counterbored over the nut, M3 set screw onto the D-flat)", "source": "buy", "bodies": [
+        {"id": f"knob_{pid}", "name": f"Knob cap, {name} (Ø{d} x 8, charcoal, counterbored over the nut, M3 set screw onto the D-flat)", "source": "buy", "bodies": [
             cyl(d, "knob_h", "y", [x, "-(knob_gap + knob_h)", z])]}]
 
 parts = [
@@ -189,6 +180,8 @@ parts = [
         box("scr_pcb_w", "scr_d - lens_t", "scr_pcb_h", "lens_x0 + lens_w/2", "t + lens_t + (scr_d - lens_t)/2", "(H - scr_pcb_h)/2")]},
     *encoder("kb_x", "kb_z", 57, "big", "large"),
     *encoder("ks_x", "ks_z", 35, "small", "small"),
+    {"id": "logo", "name": "flacmn logo, satin charcoal paint (artwork: references/flacmn-charcoal.svg; envelope shown)", "source": "buy",
+     "bodies": [box("logo_w", "paint_t", "logo_h", "logo_x1 - logo_w/2", "-paint_t/2", "logo_z0")]},
     {"id": "feet", "name": "Rubber foot", "source": "buy",
      "bodies": [cyl("feet_d", "feet_h", "z", [0, 0, "-feet_h"])], "instances": [[x, y, 0] for x, y in feet]},
     {"id": "screw_back", "name": "ISO 4762 M3 x 8 (from the back)", "source": "library", "library": "grindmn_screw_m3x8", "fastener": True,
@@ -268,14 +261,10 @@ option = {
          "why": "Cap face within 1 mm of the shaft tip (full engagement)"},
         {"id": "shaft_grip", "lhs": "shaft_out - bush_out", "op": ">=", "rhs": 3,
          "why": "Cap grips at least 3 mm of shaft past the bushing (with an M3 set screw onto the D-flat)"},
-        {"id": "logo_web", "lhs": "logo_p - logo_dot", "op": ">=", "rhs": "t",
-         "why": "Logo webs at least one sheet thickness"},
-        {"id": "logo_vs_knob", "lhs": "logo_top + logo_dot/2 + 2", "op": "<=", "rhs": "ks_z - ks_d/2",
+        {"id": "logo_vs_knob", "lhs": "logo_z0 + logo_h + 2", "op": "<=", "rhs": "ks_z - ks_d/2",
          "why": "Logo clear below the small cap"},
-        {"id": "logo_vs_right", "lhs": "logo_cx + (logo_cols - 1)/2*logo_p + logo_dot/2 + 3", "op": "<=", "rhs": "W - t",
-         "why": "Logo clear of the right fold"},
-        {"id": "logo_vs_floor", "lhs": "t + 3", "op": "<=", "rhs": "logo_top - 5*logo_p - logo_dot/2",
-         "why": "Logo clear of the floor fold"},
+        {"id": "logo_vs_big_knob", "lhs": "kb_x + kb_d/2 + 2", "op": "<=", "rhs": "logo_x1 - logo_w",
+         "why": "Logo clear of the large cap"},
         {"id": "nut_catches", "lhs": "t + 2.5", "op": "<=", "rhs": 7, "why": "Encoder bushing takes the tab, washer and M7 nut"},
     ],
     "allowed_interference": [
