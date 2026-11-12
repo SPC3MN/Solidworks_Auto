@@ -1,0 +1,110 @@
+{
+ "name": "assembly",
+ "description": "flacmn deck pro, round 8 as built: folded shell and flat back plate (sheet STEPs), DAC Pro, both PEC11R encoders, and the Raspberry Pi 5 model standing in for the Pi 4 (same 85 x 56 board, holes and port edges; USB/Ethernet stack order differs). Not modelled yet: the 5in DSI screen, knob caps, standoffs, screws.",
+ "_frames": "World: x right, y back from the front face, z up. Sheet parts are stood up (sheet (x, y, z) -> (x, z, -y)): xform rows are the images of the part's x, y, z axes, then the translation. Pi and DAC turned 180 deg about z (USB/Ethernet to -x, sockets to the back). Encoders: shaft (+z) to -y, body top against the front face's inner side (y = t).",
+ "components": [
+  {
+   "part": "shell",
+   "xform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    1,
+    0,
+    0.5,
+    0,
+    88.0
+   ]
+  },
+  {
+   "part": "back",
+   "xform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    1,
+    0,
+    1.3,
+    99.5,
+    87.2
+   ]
+  },
+  {
+   "part": "rpi5",
+   "at": [
+    234.5,
+    89.5,
+    4.0
+   ],
+   "rot_z": 180
+  },
+  {
+   "part": "rpi_dac_pro",
+   "at": [
+    234.5,
+    89.75,
+    14.4
+   ],
+   "rot_z": 180
+  },
+  {
+   "part": "encoder_pec11r",
+   "label": "encoder_big",
+   "xform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    -1,
+    0,
+    154.5,
+    7.6,
+    44.25
+   ]
+  },
+  {
+   "part": "encoder_pec11r",
+   "label": "encoder_small",
+   "xform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    -1,
+    0,
+    208.3,
+    7.6,
+    56.9
+   ]
+  }
+ ],
+ "expected": {
+  "_comment": "Envelope: the shell's 241 x 88.5 in x and z; in y from the encoder shaft tips to the back plate's outer face 100.5. Shaft tip: body top at y = 1, shaft 20 above the body top (encoder_pec11r requirements; its 31.1 bbox includes 4.5 of pins below the body) -> y = 1 - 20 = -19.",
+  "bbox": [
+   241.0,
+   119.5,
+   88.5
+  ],
+  "allowed_interference": [
+   [
+    "rpi5",
+    "rpi_dac_pro",
+    "GPIO header in the DAC Pro's socket"
+   ]
+  ]
+ }
+}
