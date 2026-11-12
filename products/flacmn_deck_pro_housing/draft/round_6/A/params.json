@@ -1,0 +1,315 @@
+{
+ "t": {
+  "value": 1.0,
+  "src": "given",
+  "note": "5052-H32 1.0, the only material profile"
+ },
+ "hinge": {
+  "value": 0.5,
+  "src": "estimated",
+  "note": "bridges bend at mid-thickness until a coupon says otherwise"
+ },
+ "allow": {
+  "value": 0.0,
+  "src": "estimated",
+  "note": "flat length taken by a fold; 0 until measured"
+ },
+ "corner": {
+  "value": 0.3,
+  "src": "chosen",
+  "note": "gap where the bottom meets the right side"
+ },
+ "gap": {
+  "value": 0.3,
+  "src": "chosen",
+  "note": "back plate edge to shell inner face"
+ },
+ "W": {
+  "value": 241.0,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "H": {
+  "value": 88.5,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "D": {
+  "value": 100.5,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "fl": {
+  "value": 10.0,
+  "src": "chosen",
+  "note": "flange depth: CLS-M3-0 needs 4.8 to the edge"
+ },
+ "inset": {
+  "value": 1.5,
+  "src": "chosen",
+  "note": "side flanges stop short of the top/bottom flanges"
+ },
+ "po": "t + gap + hinge*t",
+ "pw": "W - 2*po",
+ "ph": "H - 2*t - 2*hinge*t - allow",
+ "ry": "D - hinge*t - fl/2",
+ "scr_x_top": "W/2",
+ "scr_x_bot": {
+  "value": "W/2",
+  "src": "chosen",
+  "note": "inside the back flange segment"
+ },
+ "nut_hole": {
+  "value": 4.22,
+  "src": "given",
+  "note": "PEM CLS-M3-0 mounting hole"
+ },
+ "screw_hole": 3.4,
+ "head_d": {
+  "value": 5.5,
+  "src": "given",
+  "note": "projects/grindmn_screw_m3x8"
+ },
+ "head_h": {
+  "value": 3.0,
+  "src": "given",
+  "note": "projects/grindmn_screw_m3x8"
+ },
+ "bfl_x0": 12.0,
+ "bfl_x1": 132.0,
+ "pcb_l": {
+  "value": 85.0,
+  "src": "given"
+ },
+ "pcb_w": {
+  "value": 56.0,
+  "src": "given"
+ },
+ "pcb_t": {
+  "value": 1.4,
+  "src": "given"
+ },
+ "jack_oh": {
+  "value": 2.7,
+  "src": "estimated",
+  "note": "USB/Ethernet past the Pi's PCB edge"
+ },
+ "sd_oh": {
+  "value": 2.5,
+  "src": "estimated",
+  "note": "microSD card past the PCB edge"
+ },
+ "h_so": {
+  "value": 3.0,
+  "src": "chosen",
+  "note": "M2.5 standoff under the Pi = thermal pad gap"
+ },
+ "h_hat": {
+  "value": 9.0,
+  "src": "given",
+  "note": "DAC Pro standoffs"
+ },
+ "hat_t": {
+  "value": 1.6,
+  "src": "given"
+ },
+ "hat_l": {
+  "value": 65.0,
+  "src": "given"
+ },
+ "hat_w": {
+  "value": 56.5,
+  "src": "given"
+ },
+ "jumper_h": {
+  "value": 14.0,
+  "src": "estimated",
+  "note": "Dupont housing on the pass-through header (encoder wires)"
+ },
+ "wire_bend": {
+  "value": 6.0,
+  "src": "estimated"
+ },
+ "rca_len": {
+  "value": 9.0,
+  "src": "given",
+  "note": "projects/rpi_dac_pro: barrels past the HAT edge"
+ },
+ "sock_recess": {
+  "value": 1.0,
+  "src": "chosen",
+  "note": "socket tips stop this far inside the back panel"
+ },
+ "px1": "W - 2*t - sd_oh - 2",
+ "px0": "px1 - pcb_l",
+ "py1": "D - t - sock_recess - rca_len",
+ "py0": "py1 - pcb_w",
+ "zp": "t + h_so",
+ "zpt": "zp + pcb_t",
+ "zh": "zpt + h_hat",
+ "zht": "zh + hat_t",
+ "rca_x1": "px1 - 18.36",
+ "rca_x2": "px1 - 32.98",
+ "rca_z": "zht + 6.5",
+ "rca_hole": {
+  "value": 13.0,
+  "src": "estimated",
+  "note": "RCA plug shell passes"
+ },
+ "jack_x": "px1 - 51.8",
+ "jack_z": "zht + 3",
+ "jack_hole": {
+  "value": 10.0,
+  "src": "estimated"
+ },
+ "usbc_x": "px1 - 11.2",
+ "usbc_z": "zpt + 1.6",
+ "usbc_w": {
+  "value": 13.0,
+  "src": "estimated",
+  "note": "USB-C overmold passes"
+ },
+ "usbc_h": {
+  "value": 7.5,
+  "src": "estimated"
+ },
+ "cord_z": 26.0,
+ "cord_l": {
+  "value": 24.0,
+  "src": "estimated",
+  "note": "plug overmold passes"
+ },
+ "eth_slot": {
+  "value": 18.0,
+  "src": "estimated",
+  "note": "RJ45 plug with boot passes"
+ },
+ "usb_slot": {
+  "value": 12.0,
+  "src": "estimated",
+  "note": "USB-A plug passes"
+ },
+ "cord1_x": 30.0,
+ "cord2_x": 62.0,
+ "cord3_x": 94.0,
+ "lens_w": {
+  "value": 120.7,
+  "src": "given"
+ },
+ "lens_h": {
+  "value": 77.2,
+  "src": "given"
+ },
+ "lens_t": {
+  "value": 5.4,
+  "src": "given"
+ },
+ "scr_pcb_w": {
+  "value": 121.0,
+  "src": "given"
+ },
+ "scr_pcb_h": {
+  "value": 76.0,
+  "src": "given"
+ },
+ "scr_d": {
+  "value": 13.0,
+  "src": "given",
+  "note": "lens to the back parts"
+ },
+ "va_w": {
+  "value": 109.0,
+  "src": "given"
+ },
+ "va_h": {
+  "value": 65.8,
+  "src": "given"
+ },
+ "va_l": {
+  "value": 5.85,
+  "src": "given"
+ },
+ "va_top": {
+  "value": 3.1,
+  "src": "given"
+ },
+ "lens_x0": {
+  "value": 6.0,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "lens_z0": "(H - lens_h)/2",
+ "kb_d": {
+  "value": 57.0,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "ks_d": {
+  "value": 35.0,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "knob_h": {
+  "value": 10.5,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "kb_x": {
+  "value": 154.5,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "kb_z": "H/2",
+ "ks_x": {
+  "value": 208.3,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "ks_z": {
+  "value": 56.9,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "knob_gap": {
+  "value": 1.0,
+  "src": "chosen",
+  "note": "cap back face to the front face"
+ },
+ "enc_w": {
+  "value": 12.5,
+  "src": "estimated"
+ },
+ "enc_h": {
+  "value": 13.4,
+  "src": "estimated"
+ },
+ "enc_d": {
+  "value": 10.1,
+  "src": "estimated",
+  "note": "body 6.6 + pins"
+ },
+ "enc_hole": {
+  "value": 7.4,
+  "src": "given"
+ },
+ "enc_tab_r": {
+  "value": 7.5,
+  "src": "estimated",
+  "note": "anti-turn tab offset"
+ },
+ "enc_tab_d": 2.4,
+ "bush_out": {
+  "value": 6.0,
+  "src": "estimated",
+  "note": "bushing past the panel"
+ },
+ "feet_h": {
+  "value": 6.0,
+  "src": "chosen",
+  "note": "taller than the screw heads under the floor"
+ },
+ "feet_d": 10.0,
+ "foot_y": 25.0,
+ "soc_x": "px1 - 29",
+ "soc_y": "py1 - 32"
+}

@@ -390,7 +390,8 @@ def load_option(folder):
         if p.get("sheet"):      # a hand-folded sheet part: its folded panels are its bodies
             import sheet_lib
             sheet = sheet_lib.load_sheet(folder / p["sheet"], names)
-            bodies = sheet_lib.draft_bodies(sheet, [evaluate(v, names) for v in p.get("at", [0, 0, 0])])
+            bodies = sheet_lib.draft_bodies(sheet, [evaluate(v, names) for v in p.get("at", [0, 0, 0])],
+                                            stand=bool(p.get("stand")))
             p = {"process": "fold", "material": sheet["material"], "setups": len(sheet["folds"]), **p}
         else:
             bodies = [resolve_body(b, names, f"option {oid}, part {pid}, body {n}") for n, b in enumerate(p.get("bodies", []))]

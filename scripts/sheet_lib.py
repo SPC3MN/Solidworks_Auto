@@ -302,11 +302,15 @@ def folded_bbox(sheet, angles=None):
     return [min(q[k] for q in pts) for k in range(3)], [max(q[k] for q in pts) for k in range(3)]
 
 
-def draft_bodies(sheet, at=(0.0, 0.0, 0.0)):
+def draft_bodies(sheet, at=(0.0, 0.0, 0.0), stand=False):
     """The folded panels as /design draft bodies (prisms), so a folded part can sit in an option.
-    Only panels that end up square to the model axes can be drafted."""
+    Only panels that end up square to the model axes can be drafted. `stand` turns the part +90 degrees
+    about x (sheet (x, y, z) -> (x, z, -y)), so a root panel laid flat becomes an upright face at y = 0
+    with its folds running toward +y."""
     bodies = []
+    turn = (lambda q: (q[0], q[2], -q[1])) if stand else (lambda q: tuple(q))
     for pid, (bottom, top) in folded_vertices(sheet).items():
+        bottom, top = [turn(q) for q in bottom], [turn(q) for q in top]
         nrm = [top[0][k] - bottom[0][k] for k in range(3)]
         k = max(range(3), key=lambda i: abs(nrm[i]))
         if abs(abs(nrm[k]) - sheet["t"]) > 1e-6:

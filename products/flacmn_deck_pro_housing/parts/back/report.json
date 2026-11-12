@@ -1,0 +1,274 @@
+{
+ "schema_version": "1.0",
+ "sheet": "back",
+ "timestamp": "20261111T221214",
+ "freecad_version": "1.1.4",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "manufacturing_status": "PLACEHOLDERS: conservative guesses, not taken from any machine or service. Replace when the cutting route is chosen.",
+ "verdicts": {
+  "geometrically valid": true,
+  "manufacturable": true,
+  "experimentally validated": true
+ },
+ "untested": false,
+ "blank_mm": [
+  238.4,
+  85.9,
+  1.0
+ ],
+ "flat_area_mm2": 19136.1465,
+ "folded_envelope_mm": [
+  238.4,
+  85.9,
+  1.0
+ ],
+ "volume_mm3": 19136.1465,
+ "folds": [],
+ "bom": [
+  {
+   "name": "5052-H32 sheet, 1 mm",
+   "qty": 1,
+   "blank_mm": [
+    238.4,
+    85.9
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "id": "feature.back.0.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 0 lies inside the panel"
+  },
+  {
+   "id": "feature.back.0.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 0: 4.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.0.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 0: hole Ø3.4 (minimum 1)"
+  },
+  {
+   "id": "feature.back.1.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 1 lies inside the panel"
+  },
+  {
+   "id": "feature.back.1.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 1: 4.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.1.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 1: hole Ø3.4 (minimum 1)"
+  },
+  {
+   "id": "feature.back.2.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 2 lies inside the panel"
+  },
+  {
+   "id": "feature.back.2.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 2: 4.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.2.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 2: hole Ø3.4 (minimum 1)"
+  },
+  {
+   "id": "feature.back.3.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 3 lies inside the panel"
+  },
+  {
+   "id": "feature.back.3.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 3: 4.50 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.3.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 3: hole Ø3.4 (minimum 1)"
+  },
+  {
+   "id": "feature.back.4.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 4 lies inside the panel"
+  },
+  {
+   "id": "feature.back.4.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 4: 14.70 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.4.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 4: hole Ø13 (minimum 1)"
+  },
+  {
+   "id": "feature.back.5.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 5 lies inside the panel"
+  },
+  {
+   "id": "feature.back.5.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 5: 14.70 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.5.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 5: hole Ø13 (minimum 1)"
+  },
+  {
+   "id": "feature.back.6.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 6 lies inside the panel"
+  },
+  {
+   "id": "feature.back.6.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 6: 12.70 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.6.size",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 6: hole Ø10 (minimum 1)"
+  },
+  {
+   "id": "feature.back.7.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 7 lies inside the panel"
+  },
+  {
+   "id": "feature.back.7.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 7: 1.95 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.8.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 8 lies inside the panel"
+  },
+  {
+   "id": "feature.back.8.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 8: 15.70 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.9.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 9 lies inside the panel"
+  },
+  {
+   "id": "feature.back.9.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 9: 18.70 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "feature.back.10.inside",
+   "level": "geometric",
+   "ok": true,
+   "message": "panel back, feature 10 lies inside the panel"
+  },
+  {
+   "id": "feature.back.10.web",
+   "level": "manufacturable",
+   "ok": true,
+   "message": "panel back, feature 10: 18.70 of material to the panel edge (minimum 1.5)"
+  },
+  {
+   "id": "flat.overlap",
+   "level": "geometric",
+   "ok": true,
+   "message": "panels do not overlap in the flat pattern"
+  },
+  {
+   "id": "flat.one_piece",
+   "level": "geometric",
+   "ok": true,
+   "message": "the flat pattern is 1 piece(s)"
+  },
+  {
+   "id": "folded.bbox",
+   "level": "geometric",
+   "ok": true,
+   "message": "the kernel's folded envelope equals the arithmetic's"
+  },
+  {
+   "id": "folded.interference",
+   "level": "geometric",
+   "ok": true,
+   "message": "no folded panels collide"
+  },
+  {
+   "id": "sequence.0",
+   "level": "geometric",
+   "ok": true,
+   "message": "folding step 0 can be carried out"
+  },
+  {
+   "id": "flat.dxf_readback",
+   "level": "geometric",
+   "ok": true,
+   "message": "the DXF reads back with the same entities per layer and the blank's extent ({'CUT_THROUGH': 12})"
+  }
+ ],
+ "files": {
+  "dxf": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/flat/back.dxf",
+  "svg": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/flat/back.svg",
+  "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/folded/back.step",
+  "fcstd": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/back.FCStd"
+ },
+ "renders": [
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/renders/isometric.png",
+   "isometric"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/renders/front.png",
+   "front"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/renders/right.png",
+   "right"
+  ],
+  [
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/parts/back/renders/top.png",
+   "top"
+  ]
+ ]
+}

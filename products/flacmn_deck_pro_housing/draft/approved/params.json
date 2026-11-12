@@ -17,40 +17,64 @@
  "corner": {
   "value": 0.3,
   "src": "chosen",
-  "note": "gap between neighbouring walls at a corner"
+  "note": "gap where the bottom meets the right side"
  },
  "gap": {
   "value": 0.3,
   "src": "chosen",
-  "note": "plate edge to wall inner face"
+  "note": "back plate edge to shell inner face"
  },
- "rim": {
-  "value": 3.5,
+ "W": {
+  "value": 241.0,
   "src": "given",
-  "note": "owner 2026-11-11: knob = height - 7 (3.5 rim in 1 mm folded sheet)"
+  "note": "owner's layout, true scale"
  },
  "H": {
-  "value": 46.0,
+  "value": 88.5,
   "src": "given",
-  "note": "owner: 46 tall"
- },
- "knob_d": "H - 2*rim",
- "knob_h": {
-  "value": 5.0,
-  "src": "given",
-  "note": "owner: 5 thick, flush"
- },
- "knob_clear": 0.5,
- "knob_hole": "knob_d + 2*knob_clear",
- "W": {
-  "value": 104.0,
-  "src": "chosen",
-  "note": "side encoder body beside the Pi's microSD end"
+  "note": "owner's layout, true scale"
  },
  "D": {
-  "value": 83.0,
+  "value": 100.5,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "pw": "W - 2*(t + gap)",
+ "ph": "H - 2*(t + gap)",
+ "tab_w": {
+  "value": 16.0,
   "src": "chosen",
-  "note": "outside depth: screen zone + left flange + Pi + recessed rear sockets"
+  "note": "clinch nut + 3 mm each side"
+ },
+ "tab_h": {
+  "value": 12.0,
+  "src": "chosen",
+  "note": "nut centre 7 from the fold"
+ },
+ "nut_v": 7.0,
+ "tx1": 40.0,
+ "tx2": "W - 40",
+ "bx1": 40.0,
+ "bx2": {
+  "value": 124.0,
+  "src": "chosen",
+  "note": "floor tab clear of the Pi's USB/Ethernet end"
+ },
+ "nut_hole": {
+  "value": 4.22,
+  "src": "given",
+  "note": "PEM CLS-M3-0 mounting hole"
+ },
+ "screw_hole": 3.4,
+ "head_d": {
+  "value": 5.5,
+  "src": "given",
+  "note": "projects/grindmn_screw_m3x8"
+ },
+ "head_h": {
+  "value": 3.0,
+  "src": "given",
+  "note": "projects/grindmn_screw_m3x8"
  },
  "pcb_l": {
   "value": 85.0,
@@ -68,11 +92,6 @@
   "value": 2.7,
   "src": "estimated",
   "note": "USB/Ethernet past the Pi's PCB edge"
- },
- "usbc_oh": {
-  "value": 1.2,
-  "src": "estimated",
-  "note": "USB-C and micro-HDMI past the PCB edge"
  },
  "sd_oh": {
   "value": 2.5,
@@ -104,12 +123,11 @@
  "jumper_h": {
   "value": 14.0,
   "src": "estimated",
-  "note": "Dupont housing on the pass-through header"
+  "note": "Dupont housing on the pass-through header (encoder wires)"
  },
  "wire_bend": {
   "value": 6.0,
-  "src": "estimated",
-  "note": "jumper wire bend above the housing"
+  "src": "estimated"
  },
  "rca_len": {
   "value": 9.0,
@@ -119,10 +137,10 @@
  "sock_recess": {
   "value": 1.0,
   "src": "chosen",
-  "note": "socket tips stop this far inside the rear wall"
+  "note": "socket tips stop this far inside the back panel"
  },
- "px0": "t + gap + jack_oh",
- "px1": "px0 + pcb_l",
+ "px1": "W - 2*t - sd_oh - 2",
+ "px0": "px1 - pcb_l",
  "py1": "D - t - sock_recess - rca_len",
  "py0": "py1 - pcb_w",
  "zp": "t + h_so",
@@ -135,14 +153,13 @@
  "rca_hole": {
   "value": 13.0,
   "src": "estimated",
-  "note": "RCA plug shell passes; check with your leads"
+  "note": "RCA plug shell passes"
  },
  "jack_x": "px1 - 51.8",
  "jack_z": "zht + 3",
  "jack_hole": {
   "value": 10.0,
-  "src": "estimated",
-  "note": "slim 3.5 mm plug body passes"
+  "src": "estimated"
  },
  "usbc_x": "px1 - 11.2",
  "usbc_z": "zpt + 1.6",
@@ -155,37 +172,108 @@
   "value": 7.5,
   "src": "estimated"
  },
- "eth_y": "py1 - 45.75",
- "usb3_y": "py1 - 27",
- "usb2_y": "py1 - 9",
- "eth_w": 16.5,
- "eth_h": 14.5,
- "usb_w": 15.5,
- "usb_h": 16.5,
- "jack_z0": "zpt - 0.5",
- "scr_l": {
-  "value": 58.0,
+ "cord_z": 26.0,
+ "cord_l": {
+  "value": 24.0,
+  "src": "estimated",
+  "note": "plug overmold passes"
+ },
+ "eth_slot": {
+  "value": 18.0,
+  "src": "estimated",
+  "note": "RJ45 plug with boot passes"
+ },
+ "usb_slot": {
+  "value": 12.0,
+  "src": "estimated",
+  "note": "USB-A plug passes"
+ },
+ "cord1_x": 30.0,
+ "cord2_x": 62.0,
+ "cord3_x": 94.0,
+ "lens_w": {
+  "value": 120.7,
   "src": "given"
  },
- "scr_h": {
-  "value": 35.0,
+ "lens_h": {
+  "value": 77.2,
+  "src": "given"
+ },
+ "lens_t": {
+  "value": 5.4,
+  "src": "given"
+ },
+ "scr_pcb_w": {
+  "value": 121.0,
+  "src": "given"
+ },
+ "scr_pcb_h": {
+  "value": 76.0,
   "src": "given"
  },
  "scr_d": {
-  "value": 11.0,
-  "src": "estimated",
-  "note": "module ~5 + its connector ~6"
+  "value": 13.0,
+  "src": "given",
+  "note": "lens to the back parts"
  },
- "win_w": {
-  "value": 42.0,
+ "va_w": {
+  "value": 109.0,
   "src": "given"
  },
- "win_h": {
-  "value": 32.0,
+ "va_h": {
+  "value": 65.8,
   "src": "given"
  },
- "win_x": "(encF_x - knob_d/2)/2",
- "scr_z": "H/2",
+ "va_l": {
+  "value": 5.85,
+  "src": "given"
+ },
+ "va_top": {
+  "value": 3.1,
+  "src": "given"
+ },
+ "lens_x0": {
+  "value": 6.0,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "lens_z0": "(H - lens_h)/2",
+ "kb_d": {
+  "value": 57.0,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "ks_d": {
+  "value": 35.0,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "knob_h": {
+  "value": 10.5,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "kb_x": {
+  "value": 154.5,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "kb_z": "H/2",
+ "ks_x": {
+  "value": 208.3,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "ks_z": {
+  "value": 56.9,
+  "src": "given",
+  "note": "owner's layout, true scale"
+ },
+ "knob_gap": {
+  "value": 1.0,
+  "src": "chosen",
+  "note": "cap back face to the front face"
+ },
  "enc_w": {
   "value": 12.5,
   "src": "estimated"
@@ -212,40 +300,15 @@
  "bush_out": {
   "value": 6.0,
   "src": "estimated",
-  "note": "bushing 7 past the body, less the tab"
+  "note": "bushing past the panel"
  },
- "encF_x": "W - rim - knob_d/2",
- "encF_z": "H/2",
- "encS_y": "D/2",
- "encS_z": "H/2",
- "cap_back": "bush_out + knob_clear",
- "cap_front": "cap_back + knob_h",
- "fw": 8.0,
- "fl_left": 13.0,
- "fl_right": 20.0,
- "nut_hole": {
-  "value": 4.22,
-  "src": "given",
-  "note": "PEM CLS-M3-0 mounting hole"
- },
- "screw_hole": 3.4,
- "wifi_x0": 45.0,
- "wifi_x1": 80.0,
- "wifi_y0": 22.0,
- "wifi_y1": 28.0,
  "feet_h": {
-  "value": 4.0,
-  "src": "estimated"
+  "value": 6.0,
+  "src": "chosen",
+  "note": "taller than the screw heads under the floor"
  },
  "feet_d": 10.0,
+ "foot_y": 25.0,
  "soc_x": "px1 - 29",
- "soc_y": "py1 - 32",
- "tw": "W - 2*hinge*t - allow",
- "td": "D - 2*hinge*t - allow",
- "inset": "(1 - hinge)*t + corner",
- "fwid": "tw - 2*inset",
- "swid": "td - 2*inset",
- "wl": "H - 2*t - allow",
- "ly_left_hole": "inset + 1 + fl_left/2",
- "ly_right_hole": "td - inset - 1 - fl_right/2"
+ "soc_y": "py1 - 32"
 }

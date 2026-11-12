@@ -23,17 +23,17 @@
   },
   {
    "id": "R2",
-   "text": "Front face: screen on the left, one encoder knob to its right",
+   "text": "Front face: 5in screen on the left; a large knob (~57) and a small knob (~35) to its right, as in flacmn_deck_layout.svg",
    "priority": "must",
    "provenance": "given",
-   "source": "references/Housing_Plan.pdf (owner, 2026-11-11)"
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
   },
   {
    "id": "R3",
-   "text": "Right side face (seen from the front): the second encoder knob",
+   "text": "No knob on the side faces (both knobs on the front)",
    "priority": "must",
    "provenance": "given",
-   "source": "references/Housing_Plan.pdf (owner, 2026-11-11)"
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
   },
   {
    "id": "R4",
@@ -93,10 +93,10 @@
   },
   {
    "id": "R12",
-   "text": "Knob caps 5 thick, diameter = deck height - 7 (39 at 46 tall); they slide over the encoder shafts that protrude through small wall cut-outs",
+   "text": "Knob caps ~57 and ~35 diameter, ~10.5 thick, proud of the front face on the encoder shafts (scaled from the layout)",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (round 3 push-back)"
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
   },
   {
    "id": "R13",
@@ -121,24 +121,24 @@
   },
   {
    "id": "R16",
-   "text": "Wall thickness, joint and fastening method, exact knob and screen positions within the plan",
+   "text": "Wall thickness, flange size, screw positions, exact sizes within the layout",
    "priority": "free",
    "provenance": "chosen",
    "source": "designer decides"
   },
   {
    "id": "R17",
-   "text": "Screen: Waveshare 2in SPI LCD (58 x 35 module, window ~42 x 32), wired to the GPIO; no HDMI",
+   "text": "Screen: Waveshare 5inch DSI LCD (lens 120.7 x 77.2, VA 109 x 65.8, 13 deep), DSI ribbon to the Pi; held by VHB",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (gap questions)"
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
   },
   {
    "id": "R18",
-   "text": "Power USB-C, 2 x RCA and headphone jack out the rear on the boards' own sockets; USB x4 and Ethernet out the left side; no panel-mount add-ons",
+   "text": "Power USB-C, 2 x RCA and headphone jack out the back panel on the boards' own sockets; USB and Ethernet cords plug into the Pi inside and thread out through cut-outs in the back panel",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (gap questions)"
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
   },
   {
    "id": "R19",
@@ -163,10 +163,10 @@
   },
   {
    "id": "R22",
-   "text": "Nothing protrudes from the top, front, rear or sides except the encoder shafts and their knob caps; feet and screw heads on the underside are allowed",
+   "text": "Nothing protrudes except the knob caps, the M3 socket-head screw heads and the feet",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (round 3 push-back)"
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
   },
   {
    "id": "R23",
@@ -174,6 +174,46 @@
    "priority": "should",
    "provenance": "given",
    "source": "owner, 2026-11-11 (round 2 push-back)"
+  },
+  {
+   "id": "R24",
+   "text": "Construction: one folded shell (front face in the centre; top, floor and sides fold back) with folded tabs at the back of the top and floor; a flat, unbent back plate fixed by 4 M3 screws entering from the back face into the tabs",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 6 push-back)"
+  },
+  {
+   "id": "R25",
+   "text": "Fasteners: conventional hex-socket screws from the library: ISO 4762 M3 x 8 socket head (projects/grindmn_screw_m3x8)",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers); the owner's 'vault' read as this repo's screw part"
+  },
+  {
+   "id": "R26",
+   "text": "Rear plate removable: take it off, plug the cords in, thread them through its cut-outs, refit it",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 5 push-back)"
+  },
+  {
+   "id": "R27",
+   "text": "Envelope ~241 W x 88.5 H x 100.5 D (owner's layout at true scale; the pasted electronics were at 0.847)",
+   "priority": "should",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)",
+   "check": {
+    "lhs": "bbox_x",
+    "op": "<=",
+    "rhs": 242
+   }
+  },
+  {
+   "id": "R28",
+   "text": "Pi 4 + DAC Pro flat on the floor at the back right; USB/Ethernet ports face the free space behind the screen",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-11 (round 5: flacmn_deck_layout.svg + answers)"
   }
  ],
  "bought_parts": [
@@ -194,11 +234,11 @@
   },
   {
    "id": "screen",
-   "name": "Waveshare 2in LCD Module",
-   "part_number": "17344",
+   "name": "Waveshare 5inch DSI LCD (800 x 480)",
+   "part_number": "5inch DSI LCD",
    "library": null,
    "provenance": "given",
-   "_note": "no model yet; 58 x 35 outline, ~4-5 thick (estimate)"
+   "_note": "references/electronics_views/lcd5_dsi_views.svg, from Waveshare's 2D drawing"
   },
   {
    "id": "encoder",
@@ -220,6 +260,13 @@
    "part_number": "",
    "library": null,
    "provenance": "chosen"
+  },
+  {
+   "id": "screw_m3",
+   "name": "ISO 4762 M3 x 8 socket head",
+   "part_number": "ISO 4762 M3x8",
+   "library": "projects/grindmn_screw_m3x8",
+   "provenance": "given"
   }
  ],
  "conflicts": [
@@ -268,6 +315,10 @@
   {
    "question": "Balanced out: openings now or room for later",
    "answer": "leave out (owner, 2026-11-11)"
+  },
+  {
+   "question": "Knob caps: bought or machined (57 x 10.5 with a counterbore over the nut)",
+   "answer": null
   }
  ],
  "notes": [
@@ -292,6 +343,30 @@
    "round": 3,
    "time": "2026-11-11T16:41:49",
    "text": "the cutout doesn't need to surround the whole dial. Have a small cutout for the encoder and the button will slide over the protruding encoder",
+   "options": []
+  },
+  {
+   "round": 4,
+   "time": "2026-11-11T21:24:34",
+   "text": "restart the design from this base (flacmn_deck_layout.svg, commit e22ecdf)",
+   "options": []
+  },
+  {
+   "round": 5,
+   "time": "2026-11-11T22:03:47",
+   "text": "I no longer want the front to mount separately. I want the bent portion to be made up of the front face in the center, and the sides, top and bottom bending backwards. Then I want the rear plate to mount to the rear using m3",
+   "options": []
+  },
+  {
+   "round": 6,
+   "time": "2026-11-11T22:07:42",
+   "text": "I want there to be 4 m3 screws to enter from the back face and I want the back plate to have no bending, add folded tabs to the top and bottom pieces",
+   "options": []
+  },
+  {
+   "round": 7,
+   "time": "2026-11-11T22:11:23",
+   "text": "designer correction after build: the folded tabs put the nuts 0.5 mm nearer the top and floor than the back plate's screw holes; move the holes to match (owner approved round 7: 'Approved, build it')",
    "options": []
   }
  ],
