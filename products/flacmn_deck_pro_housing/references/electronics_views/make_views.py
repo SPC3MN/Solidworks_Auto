@@ -199,3 +199,26 @@ svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f
        f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
 Path(__file__).with_name("lcd4_square_views.svg").write_text(svg, encoding="utf-8")
 print("wrote", Path(__file__).with_name("lcd4_square_views.svg"))
+
+# ---- VIEWE 4.0in square MIPI DSI 720 x 720 (dtoverlay=viewe-mipi-4inch), capacitive I2C touch on the same FPC.
+# Outline 84 × 84 and active area 71.93 × 71.93 from VIEWE's square-display table; thickness and FPC estimated (~).
+# x along 84.3 (seen from the front), y = 0 at the glass, z up. Bare panel: no mounting holes, held by VHB.
+dsq = [
+    B("touch lens 84 × 84", 0, 0, 0, 84, 1.1, 84, "glass"),
+    B("active area 71.93 × 71.93", 6.035, -0.05, 6.035, 77.965, 0, 77.965, "lit"),
+    B("LCD panel ~", 1, 1.1, 1, 83, 3.6, 83, "black"),
+    B("22-pin DSI FPC (video + touch + power) ~", 34, 3.6, -40, 50, 3.8, 1, "brass"),
+]
+body, y = [f'<text x="10" y="28" class="ut">VIEWE 4in square 720 × 720 MIPI DSI</text>'], 38
+x, row_h = 10, 0
+for v in VIEWS:
+    g, W, H = view_svg(dsq, v, [])
+    body.append(f'<g transform="translate({x:.0f},{y:.0f})">{g}</g>')
+    x += max(W, 150) + 12
+    row_h = max(row_h, H)
+width, y = x, y + row_h + 16
+svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {y:.0f}" width="{width:.0f}" height="{y:.0f}">'
+       '<style>text{font-family:sans-serif}.ut{font-size:16px;font-weight:700}.vt{font-size:11px;font-weight:600}.dm{font-size:11px;fill:#333}</style>'
+       f'<rect width="100%" height="100%" fill="#fff"/>{"".join(body)}</svg>')
+Path(__file__).with_name("lcd4_square_dsi_views.svg").write_text(svg, encoding="utf-8")
+print("wrote", Path(__file__).with_name("lcd4_square_dsi_views.svg"))
