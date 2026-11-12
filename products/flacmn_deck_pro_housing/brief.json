@@ -242,10 +242,11 @@
   },
   {
    "id": "encoder",
-   "name": "Bourns PEC11R-4220F-S0024 x 2",
-   "part_number": "PEC11R-4220F-S0024",
-   "library": "encoder_pec11r",
-   "provenance": "given"
+   "name": "Bourns PEC11R-4215F-S0024 x 2 (15 mm shaft)",
+   "part_number": "PEC11R-4215F-S0024",
+   "library": "encoder_pec11r_15",
+   "provenance": "given",
+   "_note": "owner 2026-11-11: 15 mm shafts, so the shaft ends inside the 10.5 mm caps"
   },
   {
    "id": "standoff",

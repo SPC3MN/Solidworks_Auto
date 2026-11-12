@@ -1,6 +1,6 @@
 {
  "name": "assembly",
- "description": "flacmn deck pro, round 8 as built: folded shell and flat back plate (sheet STEPs), DAC Pro, both PEC11R encoders, and the Raspberry Pi 5 model standing in for the Pi 4 (same 85 x 56 board, holes and port edges; USB/Ethernet stack order differs). Not modelled yet: the 5in DSI screen, knob caps, standoffs, screws.",
+ "description": "flacmn deck pro, round 8 as built: folded shell and flat back plate (sheet STEPs), DAC Pro, both PEC11R-4215F encoders (15 mm shafts), and the Raspberry Pi 5 model standing in for the Pi 4 (same 85 x 56 board, holes and port edges; USB/Ethernet stack order differs). Not modelled yet: the 5in DSI screen, knob caps, standoffs, screws.",
  "_frames": "World: x right, y back from the front face, z up. Sheet parts are stood up (sheet (x, y, z) -> (x, z, -y)): xform rows are the images of the part's x, y, z axes, then the translation. Pi and DAC turned 180 deg about z (USB/Ethernet to -x, sockets to the back). Encoders: shaft (+z) to -y, body top against the front face's inner side (y = t).",
  "components": [
   {
@@ -56,7 +56,7 @@
    "rot_z": 180
   },
   {
-   "part": "encoder_pec11r",
+   "part": "encoder_pec11r_15",
    "label": "encoder_big",
    "xform": [
     1,
@@ -74,7 +74,7 @@
    ]
   },
   {
-   "part": "encoder_pec11r",
+   "part": "encoder_pec11r_15",
    "label": "encoder_small",
    "xform": [
     1,
@@ -93,10 +93,10 @@
   }
  ],
  "expected": {
-  "_comment": "Envelope: the shell's 241 x 88.5 in x and z; in y from the encoder shaft tips to the back plate's outer face 100.5. Shaft tip: body top at y = 1, shaft 20 above the body top (encoder_pec11r requirements; its 31.1 bbox includes 4.5 of pins below the body) -> y = 1 - 20 = -19.",
+  "_comment": "Envelope: the shell's 241 x 88.5 in x and z; in y from the encoder shaft tips to the back plate's outer face 100.5. Shaft tip: body top at y = 1, PEC11R-4215F shaft 15 above the body top -> y = 1 - 15 = -14. The draft's caps (1 mm off the face, 10.5 thick) end at y = -11.5, so the tip stands 2.5 past the cap face: open.",
   "bbox": [
    241.0,
-   119.5,
+   114.5,
    88.5
   ],
   "allowed_interference": [
