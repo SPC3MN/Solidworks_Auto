@@ -83,5 +83,21 @@
    "A"
   ],
   "notes": "Approved, build it"
+ },
+ {
+  "time": "2026-11-11T22:18:03",
+  "round": 8,
+  "move": "pushback",
+  "options": [],
+  "notes": "Make caps 13 mm thick (so the 15 mm PEC11R-4215F shaft ends at the cap face)"
+ },
+ {
+  "time": "2026-11-11T22:19:22",
+  "round": 9,
+  "move": "approve",
+  "options": [
+   "A"
+  ],
+  "notes": "Approved"
  }
 ]

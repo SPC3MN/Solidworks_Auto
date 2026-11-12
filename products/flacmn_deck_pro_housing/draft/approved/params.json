@@ -249,9 +249,9 @@
   "note": "owner's layout, true scale"
  },
  "knob_h": {
-  "value": 10.5,
+  "value": 13.0,
   "src": "given",
-  "note": "owner's layout, true scale"
+  "note": "owner 2026-11-11: shaft tip at the cap face"
  },
  "kb_x": {
   "value": 154.5,
@@ -301,6 +301,11 @@
   "value": 6.0,
   "src": "estimated",
   "note": "bushing past the panel"
+ },
+ "shaft_out": {
+  "value": 14.0,
+  "src": "given",
+  "note": "PEC11R-4215F: 15 above the body top, less the 1 mm panel"
  },
  "feet_h": {
   "value": 6.0,

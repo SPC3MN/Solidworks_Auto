@@ -1,0 +1,320 @@
+{
+ "option": "A",
+ "round": 9,
+ "hash": "3c947ff2e3cb583f",
+ "scorecard": {
+  "parts_total": 35,
+  "parts_unique": 17,
+  "parts_make": 2,
+  "parts_buy": 33,
+  "fasteners": 20,
+  "setups": 8,
+  "processes": [
+   "fold",
+   "laser"
+  ],
+  "load_path_parts": 3
+ },
+ "envelope_mm": {
+  "bbox_x": 241.0,
+  "bbox_y": 117.5,
+  "bbox_z": 94.5,
+  "parts_total": 35,
+  "parts_make": 2,
+  "parts_buy": 33,
+  "fasteners": 20,
+  "setups": 8
+ },
+ "fit": [
+  {
+   "id": "jumpers_roof",
+   "lhs_expr": "zht + 2.5 + jumper_h + wire_bend",
+   "rhs_expr": "H - 2*t - 1.5",
+   "op": "<=",
+   "lhs": 38.5,
+   "rhs": 85.0,
+   "margin": 46.5,
+   "ok": true,
+   "why": "Encoder wires clear the top flange's nut"
+  },
+  {
+   "id": "rear_recessed",
+   "lhs_expr": "py1 + rca_len",
+   "rhs_expr": "D - t - 0.5",
+   "op": "<=",
+   "lhs": 98.5,
+   "rhs": 99.0,
+   "margin": 0.5,
+   "ok": true,
+   "why": "RCA barrels stop inside the back panel"
+  },
+  {
+   "id": "rca_web",
+   "lhs_expr": "rca_x1 - rca_x2 - rca_hole",
+   "rhs_expr": "1.5",
+   "op": ">=",
+   "lhs": 1.62,
+   "rhs": 1.5,
+   "margin": 0.12,
+   "ok": true,
+   "why": "Web between the RCA openings"
+  },
+  {
+   "id": "usbc_under_rca",
+   "lhs_expr": "usbc_z + usbc_h/2 + 3",
+   "rhs_expr": "rca_z - rca_hole/2",
+   "op": "<=",
+   "lhs": 13.75,
+   "rhs": 16.0,
+   "margin": 2.25,
+   "ok": true,
+   "why": "USB-C and RCA openings keep a 3 mm web"
+  },
+  {
+   "id": "tab_vs_pi",
+   "lhs_expr": "bx2 + tab_w/2 + 2",
+   "rhs_expr": "px0 - jack_oh",
+   "op": "<=",
+   "lhs": 134.0,
+   "rhs": 146.8,
+   "margin": 12.8,
+   "ok": true,
+   "why": "Floor tab clear of the Pi"
+  },
+  {
+   "id": "top_tab_vs_jumpers",
+   "lhs_expr": "zht + 2.5 + jumper_h + wire_bend",
+   "rhs_expr": "H - t - tab_h",
+   "op": "<=",
+   "lhs": 38.5,
+   "rhs": 75.5,
+   "margin": 37.0,
+   "ok": true,
+   "why": "Encoder wires stay under the top tabs"
+  },
+  {
+   "id": "cords_above_tabs",
+   "lhs_expr": "t + tab_h + 1",
+   "rhs_expr": "cord_z - eth_slot/2",
+   "op": "<=",
+   "lhs": 14.0,
+   "rhs": 17.0,
+   "margin": 3.0,
+   "ok": true,
+   "why": "Cord cut-outs clear the floor tabs"
+  },
+  {
+   "id": "cords_apart",
+   "lhs_expr": "cord2_x - cord1_x - cord_l",
+   "rhs_expr": "6",
+   "op": ">=",
+   "lhs": 8.0,
+   "rhs": 6.0,
+   "margin": 2.0,
+   "ok": true,
+   "why": "Webs between the cord cut-outs"
+  },
+  {
+   "id": "cords_left_of_pi",
+   "lhs_expr": "cord3_x + cord_l/2 + 10",
+   "rhs_expr": "px0 - jack_oh",
+   "op": "<=",
+   "lhs": 116.0,
+   "rhs": 146.8,
+   "margin": 30.8,
+   "ok": true,
+   "why": "Cord cut-outs in the free space, clear of the Pi"
+  },
+  {
+   "id": "sd_vs_wall",
+   "lhs_expr": "px1 + sd_oh + 1",
+   "rhs_expr": "W - t",
+   "op": "<=",
+   "lhs": 238.0,
+   "rhs": 240.0,
+   "margin": 2.0,
+   "ok": true,
+   "why": "microSD clears the right side"
+  },
+  {
+   "id": "rca_vs_plate",
+   "lhs_expr": "py1 + rca_len",
+   "rhs_expr": "D - t",
+   "op": "<=",
+   "lhs": 98.5,
+   "rhs": 99.5,
+   "margin": 1.0,
+   "ok": true,
+   "why": "RCA barrels stop at the back plate"
+  },
+  {
+   "id": "va_vs_knob",
+   "lhs_expr": "lens_x0 + va_l + va_w + 1",
+   "rhs_expr": "kb_x - kb_d/2",
+   "op": "<=",
+   "lhs": 121.85,
+   "rhs": 126.0,
+   "margin": 4.15,
+   "ok": true,
+   "why": "Large cap leaves the viewing area clear"
+  },
+  {
+   "id": "knobs_apart",
+   "lhs_expr": "kb_x + kb_d/2 + 3",
+   "rhs_expr": "ks_x - ks_d/2",
+   "op": "<=",
+   "lhs": 186.0,
+   "rhs": 190.8,
+   "margin": 4.8,
+   "ok": true,
+   "why": "Caps 3 mm apart"
+  },
+  {
+   "id": "small_knob_in_face",
+   "lhs_expr": "ks_x + ks_d/2",
+   "rhs_expr": "W - 3",
+   "op": "<=",
+   "lhs": 225.8,
+   "rhs": 238.0,
+   "margin": 12.2,
+   "ok": true,
+   "why": "Small cap inside the face"
+  },
+  {
+   "id": "big_knob_in_face",
+   "lhs_expr": "kb_z + kb_d/2",
+   "rhs_expr": "H - 3",
+   "op": "<=",
+   "lhs": 72.75,
+   "rhs": 85.5,
+   "margin": 12.75,
+   "ok": true,
+   "why": "Large cap inside the face height"
+  },
+  {
+   "id": "small_knob_top",
+   "lhs_expr": "ks_z + ks_d/2",
+   "rhs_expr": "H - 3",
+   "op": "<=",
+   "lhs": 74.4,
+   "rhs": 85.5,
+   "margin": 11.1,
+   "ok": true,
+   "why": "Small cap inside the face height"
+  },
+  {
+   "id": "enc_vs_screen",
+   "lhs_expr": "lens_x0 + scr_pcb_w + 1",
+   "rhs_expr": "kb_x - enc_w/2",
+   "op": "<=",
+   "lhs": 128.0,
+   "rhs": 148.25,
+   "margin": 20.25,
+   "ok": true,
+   "why": "Large encoder body clears the screen board"
+  },
+  {
+   "id": "enc_vs_pi",
+   "lhs_expr": "t + enc_d + 1",
+   "rhs_expr": "py0",
+   "op": "<=",
+   "lhs": 12.1,
+   "rhs": 33.5,
+   "margin": 21.4,
+   "ok": true,
+   "why": "Encoders in front of the Pi"
+  },
+  {
+   "id": "screen_vs_floor",
+   "lhs_expr": "lens_z0",
+   "rhs_expr": "t + 1",
+   "op": ">=",
+   "lhs": 5.65,
+   "rhs": 2.0,
+   "margin": 3.65,
+   "ok": true,
+   "why": "Screen clears the floor"
+  },
+  {
+   "id": "screen_vs_top",
+   "lhs_expr": "lens_z0 + lens_h",
+   "rhs_expr": "H - t - 1",
+   "op": "<=",
+   "lhs": 82.85,
+   "rhs": 86.5,
+   "margin": 3.65,
+   "ok": true,
+   "why": "Screen clears the top"
+  },
+  {
+   "id": "screen_vs_side",
+   "lhs_expr": "lens_x0",
+   "rhs_expr": "t + 1",
+   "op": ">=",
+   "lhs": 6.0,
+   "rhs": 2.0,
+   "margin": 4.0,
+   "ok": true,
+   "why": "Screen clears the left side"
+  },
+  {
+   "id": "feet_vs_heads",
+   "lhs_expr": "head_h + 1",
+   "rhs_expr": "feet_h",
+   "op": "<=",
+   "lhs": 4.0,
+   "rhs": 6.0,
+   "margin": 2.0,
+   "ok": true,
+   "why": "Feet stand taller than the screw heads"
+  },
+  {
+   "id": "shaft_in_cap",
+   "lhs_expr": "shaft_out",
+   "rhs_expr": "knob_gap + knob_h",
+   "op": "<=",
+   "lhs": 14.0,
+   "rhs": 14.0,
+   "margin": 0.0,
+   "ok": true,
+   "why": "15 mm shaft ends at or inside the cap face"
+  },
+  {
+   "id": "shaft_engages",
+   "lhs_expr": "knob_gap + knob_h - shaft_out",
+   "rhs_expr": "1",
+   "op": "<=",
+   "lhs": 0.0,
+   "rhs": 1.0,
+   "margin": 1.0,
+   "ok": true,
+   "why": "Cap face within 1 mm of the shaft tip (full engagement)"
+  },
+  {
+   "id": "nut_catches",
+   "lhs_expr": "t + 2.5",
+   "rhs_expr": "7",
+   "op": "<=",
+   "lhs": 3.5,
+   "rhs": 7.0,
+   "margin": 3.5,
+   "ok": true,
+   "why": "Encoder bushing takes the tab, washer and M7 nut"
+  }
+ ],
+ "requirements": [
+  {
+   "id": "R27",
+   "lhs_expr": "bbox_x",
+   "rhs_expr": "242",
+   "op": "<=",
+   "lhs": 241.0,
+   "rhs": 242.0,
+   "margin": 1.0,
+   "ok": true,
+   "why": "Envelope ~241 W x 88.5 H x 100.5 D (owner's layout at true scale; the pasted electronics were at 0.847)",
+   "priority": "should"
+  }
+ ],
+ "problems": []
+}

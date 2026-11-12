@@ -1,13 +1,13 @@
 {
  "option": "A",
- "round": 8,
- "option_hash": "b4f6ee12805d731c",
- "time": "2026-11-11T22:11:29",
+ "round": 9,
+ "option_hash": "3c947ff2e3cb583f",
+ "time": "2026-11-11T22:18:13",
  "status": "pass",
  "freecad_version": "1.1.4",
  "bbox": [
   241.0,
-  115.0,
+  117.5,
   94.5
  ],
  "parts": {
@@ -92,42 +92,42 @@
    ]
   },
   "enc_big": {
-   "volume": 2088.376,
+   "volume": 2159.062,
    "solids": 1,
    "valid": true,
    "bbox": [
     12.5,
-    21.6,
+    24.1,
     13.4
    ]
   },
   "knob_big": {
-   "volume": 26793.466,
+   "volume": 33172.862,
    "solids": 1,
    "valid": true,
    "bbox": [
     57.0,
-    10.5,
+    13.0,
     57.0
    ]
   },
   "enc_small": {
-   "volume": 2088.376,
+   "volume": 2159.062,
    "solids": 1,
    "valid": true,
    "bbox": [
     12.5,
-    21.6,
+    24.1,
     13.4
    ]
   },
   "knob_small": {
-   "volume": 10102.184,
+   "volume": 12507.466,
    "solids": 1,
    "valid": true,
    "bbox": [
     35.0,
-    10.5,
+    13.0,
     35.0
    ]
   },
@@ -214,7 +214,7 @@
     "enc_big",
     "knob_big"
    ],
-   "volume_mm3": 319.6571
+   "volume_mm3": 390.3429
   },
   {
    "pair": [
@@ -225,7 +225,7 @@
     "enc_small",
     "knob_small"
    ],
-   "volume_mm3": 319.6571
+   "volume_mm3": 390.3429
   }
  ],
  "checks": [
@@ -237,7 +237,7 @@
   {
    "id": "bbox.y",
    "ok": true,
-   "message": "3D envelope y is 115, the sketch says 115"
+   "message": "3D envelope y is 117.5, the sketch says 117.5"
   },
   {
    "id": "bbox.z",
@@ -342,38 +342,38 @@
   {
    "id": "interference.enc_big/knob_big",
    "ok": true,
-   "message": "enc_big and knob_big overlap by 319.657 mm³"
+   "message": "enc_big and knob_big overlap by 390.343 mm³"
   },
   {
    "id": "interference.enc_small/knob_small",
    "ok": true,
-   "message": "enc_small and knob_small overlap by 319.657 mm³"
+   "message": "enc_small and knob_small overlap by 390.343 mm³"
   }
  ],
- "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_8/A/massing/massing.step",
+ "step": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/massing.step",
  "renders": [
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_8/A/massing/renders/isometric.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/isometric.png",
    "isometric"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_8/A/massing/renders/front.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/front.png",
    "front"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_8/A/massing/renders/right.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/right.png",
    "right"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_8/A/massing/renders/top.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/top.png",
    "top"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_8/A/massing/renders/section/isometric.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/section/isometric.png",
    "section, isometric"
   ],
   [
-   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_8/A/massing/renders/section/front.png",
+   "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/draft/round_9/A/massing/renders/section/front.png",
    "section, front"
   ]
  ]

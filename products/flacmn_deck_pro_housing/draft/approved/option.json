@@ -1,7 +1,7 @@
 {
  "schema_version": "1.0",
  "name": "Folded shell with back tabs + flat back plate",
- "summary": "Round 7, from the owner's layout at true scale (241 x 88.5 x 100.5). One folded shell: the front face in the centre with the top, floor and both sides folded back from it, and two tabs folded in at the back of the top and two at the back of the floor (8 folds). A flat back plate (no folds) takes four ISO 4762 M3 x 8 from the back face into clinch nuts in the tabs. The 5in DSI screen is taped behind the front face; both encoders nut into it and the Ø57 and Ø35 caps sit proud on the shafts. The Pi + DAC sit on the floor at the back right; USB and Ethernet cords thread out through three cut-outs in the back plate.",
+ "summary": "Round 7, from the owner's layout at true scale (241 x 88.5 x 100.5). One folded shell: the front face in the centre with the top, floor and both sides folded back from it, and two tabs folded in at the back of the top and two at the back of the floor (8 folds). A flat back plate (no folds) takes four ISO 4762 M3 x 8 from the back face into clinch nuts in the tabs. The 5in DSI screen is taped behind the front face; both encoders nut into it and the Ø57 x 13 and Ø35 x 13 caps sit proud on the shafts. The Pi + DAC sit on the floor at the back right; USB and Ethernet cords thread out through three cut-outs in the back plate.",
  "architecture": {
   "mechanism": "flat back plate screwed into the shell's tabs from behind; encoders nutted into the front face; Pi on standoffs on the floor; caps pushed on",
   "layout": "screen left, knobs right on the front; Pi flat at the back right, sockets to the back, USB/Ethernet into the free space; cords out the back panel",
@@ -298,7 +298,7 @@
   },
   {
    "id": "knob_big",
-   "name": "Knob cap, large (Ø57 x 10.5, counterbored over the nut)",
+   "name": "Knob cap, large (Ø57 x 13, counterbored over the nut)",
    "source": "buy",
    "bodies": [
     {
@@ -359,7 +359,7 @@
   },
   {
    "id": "knob_small",
-   "name": "Knob cap, small (Ø35 x 10.5, counterbored over the nut)",
+   "name": "Knob cap, small (Ø35 x 13, counterbored over the nut)",
    "source": "buy",
    "bodies": [
     {
@@ -782,6 +782,20 @@
    "op": "<=",
    "rhs": "feet_h",
    "why": "Feet stand taller than the screw heads"
+  },
+  {
+   "id": "shaft_in_cap",
+   "lhs": "shaft_out",
+   "op": "<=",
+   "rhs": "knob_gap + knob_h",
+   "why": "15 mm shaft ends at or inside the cap face"
+  },
+  {
+   "id": "shaft_engages",
+   "lhs": "knob_gap + knob_h - shaft_out",
+   "op": "<=",
+   "rhs": 1,
+   "why": "Cap face within 1 mm of the shaft tip (full engagement)"
   },
   {
    "id": "nut_catches",

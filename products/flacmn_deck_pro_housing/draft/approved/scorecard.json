@@ -1,7 +1,7 @@
 {
  "option": "A",
- "round": 8,
- "hash": "b4f6ee12805d731c",
+ "round": 9,
+ "hash": "3c947ff2e3cb583f",
  "scorecard": {
   "parts_total": 35,
   "parts_unique": 17,
@@ -17,7 +17,7 @@
  },
  "envelope_mm": {
   "bbox_x": 241.0,
-  "bbox_y": 115.0,
+  "bbox_y": 117.5,
   "bbox_z": 94.5,
   "parts_total": 35,
   "parts_make": 2,
@@ -267,6 +267,28 @@
    "margin": 2.0,
    "ok": true,
    "why": "Feet stand taller than the screw heads"
+  },
+  {
+   "id": "shaft_in_cap",
+   "lhs_expr": "shaft_out",
+   "rhs_expr": "knob_gap + knob_h",
+   "op": "<=",
+   "lhs": 14.0,
+   "rhs": 14.0,
+   "margin": 0.0,
+   "ok": true,
+   "why": "15 mm shaft ends at or inside the cap face"
+  },
+  {
+   "id": "shaft_engages",
+   "lhs_expr": "knob_gap + knob_h - shaft_out",
+   "rhs_expr": "1",
+   "op": "<=",
+   "lhs": 0.0,
+   "rhs": 1.0,
+   "margin": 1.0,
+   "ok": true,
+   "why": "Cap face within 1 mm of the shaft tip (full engagement)"
   },
   {
    "id": "nut_catches",

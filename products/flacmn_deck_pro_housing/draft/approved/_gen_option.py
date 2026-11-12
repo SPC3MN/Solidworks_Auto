@@ -1,4 +1,4 @@
-"""Write round-8 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
+"""Write round-9 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
 
 From the owner's layout (references/electronics_views/flacmn_deck_layout.svg, scaled to true size) and the
 round-5 push-back: Shell: the front face in the centre, with the top, bottom and both sides folding back from
@@ -63,12 +63,12 @@ params = {
     "va_w": P(109.0, "given"), "va_h": P(65.8, "given"), "va_l": P(5.85, "given"), "va_top": P(3.1, "given"),
     "lens_x0": P(6.0, "given", LAY), "lens_z0": "(H - lens_h)/2",
     # encoders and knob caps
-    "kb_d": P(57.0, "given", LAY), "ks_d": P(35.0, "given", LAY), "knob_h": P(10.5, "given", LAY),
+    "kb_d": P(57.0, "given", LAY), "ks_d": P(35.0, "given", LAY), "knob_h": P(13.0, "given", "owner 2026-11-11: shaft tip at the cap face"),
     "kb_x": P(154.5, "given", LAY), "kb_z": "H/2", "ks_x": P(208.3, "given", LAY), "ks_z": P(56.9, "given", LAY),
     "knob_gap": P(1.0, "chosen", "cap back face to the front face"),
     "enc_w": P(12.5, "estimated"), "enc_h": P(13.4, "estimated"), "enc_d": P(10.1, "estimated", "body 6.6 + pins"),
     "enc_hole": P(7.4, "given"), "enc_tab_r": P(7.5, "estimated", "anti-turn tab offset"), "enc_tab_d": 2.4,
-    "bush_out": P(6.0, "estimated", "bushing past the panel"),
+    "bush_out": P(6.0, "estimated", "bushing past the panel"), "shaft_out": P(14.0, "given", "PEC11R-4215F: 15 above the body top, less the 1 mm panel"),
     "feet_h": P(6.0, "chosen", "taller than the screw heads under the floor"), "feet_d": 10.0,
     "foot_y": 25.0,
     "soc_x": "px1 - 29", "soc_y": "py1 - 32",
@@ -148,7 +148,7 @@ def encoder(x, z, d, pid, name):
             box("enc_w", "enc_d", "enc_h", x, "t + enc_d/2", f"{z} - enc_h/2"),
             cyl(7, "bush_out + t", "y", [x, "-bush_out", z]),
             cyl(6, "knob_gap + knob_h - bush_out - 1", "y", [x, "-(knob_gap + knob_h - 1)", z])]},
-        {"id": f"knob_{pid}", "name": f"Knob cap, {name} (Ø{d} x 10.5, counterbored over the nut)", "source": "buy", "bodies": [
+        {"id": f"knob_{pid}", "name": f"Knob cap, {name} (Ø{d} x 13, counterbored over the nut)", "source": "buy", "bodies": [
             cyl(d, "knob_h", "y", [x, "-(knob_gap + knob_h)", z])]}]
 
 parts = [
@@ -195,7 +195,7 @@ option = {
                 "face in the centre with the top, floor and both sides folded back from it, and two tabs folded in "
                 "at the back of the top and two at the back of the floor (8 folds). A flat back plate (no folds) "
                 "takes four ISO 4762 M3 x 8 from the back face into clinch nuts in the tabs. The 5in DSI screen is "
-                "taped behind the front face; both encoders nut into it and the Ø57 and Ø35 caps sit proud on the "
+                "taped behind the front face; both encoders nut into it and the Ø57 x 13 and Ø35 x 13 caps sit proud on the "
                 "shafts. The Pi + DAC sit on the floor at the back right; USB and Ethernet cords thread out through "
                 "three cut-outs in the back plate."),
     "architecture": {
@@ -249,6 +249,10 @@ option = {
         {"id": "screen_vs_side", "lhs": "lens_x0", "op": ">=", "rhs": "t + 1",
          "why": "Screen clears the left side"},
         {"id": "feet_vs_heads", "lhs": "head_h + 1", "op": "<=", "rhs": "feet_h", "why": "Feet stand taller than the screw heads"},
+        {"id": "shaft_in_cap", "lhs": "shaft_out", "op": "<=", "rhs": "knob_gap + knob_h",
+         "why": "15 mm shaft ends at or inside the cap face"},
+        {"id": "shaft_engages", "lhs": "knob_gap + knob_h - shaft_out", "op": "<=", "rhs": 1,
+         "why": "Cap face within 1 mm of the shaft tip (full engagement)"},
         {"id": "nut_catches", "lhs": "t + 2.5", "op": "<=", "rhs": 7, "why": "Encoder bushing takes the tab, washer and M7 nut"},
     ],
     "allowed_interference": [
