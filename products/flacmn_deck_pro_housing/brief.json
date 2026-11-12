@@ -93,10 +93,10 @@
   },
   {
    "id": "R12",
-   "text": "Knob caps ~57 and ~35 diameter, 8 thick, 1 mm proud of the front face; the 15 mm encoder shafts are cut to 9 mm past the front face so they end at the cap face",
+   "text": "Knob caps ~57 and ~35 diameter, 10 thick, 1 mm proud of the front face; the 15 mm encoder shafts are cut to 11 mm past the front face so they end at the cap face",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (round 10 push-back)"
+   "source": "owner, 2026-11-11 ('make them 10 mm')"
   },
   {
    "id": "R13",
@@ -217,17 +217,24 @@
   },
   {
    "id": "R29",
-   "text": "flacmn logo (references/flacmn-charcoal.svg, fill + its 0.18 stroke on 'flac') painted on the front face, not cut: 40 mm wide, bottom right, 8 mm from the right and bottom edges; satin charcoal",
+   "text": "'mn' dot logo (14 x 6 grid) painted satin charcoal on the front face, bottom right: 18 mm wide (~7.6 tall), 8 mm from the right edge and bottom edge (measured on the face)",
    "priority": "must",
    "provenance": "given",
-   "source": "owner, 2026-11-11 (logo variants: 'flacmn bottom right')"
+   "source": "owner, 2026-11-11 (round 13 push-back + answers)"
   },
   {
    "id": "R30",
-   "text": "Knob caps charcoal, the logo's #2E2E33",
+   "text": "Large cap: machined aluminium, fine shallow straight knurl round the circumference, chamfered front edge. Small cap: smooth plastic #4357AD, no dimple",
    "priority": "should",
    "provenance": "given",
-   "source": "owner, 2026-11-11"
+   "source": "owner, 2026-11-11 (knob trials)"
+  },
+  {
+   "id": "R31",
+   "text": "Front face leans back 15 degrees; the base keeps its 241 x 100.5 footprint, the top is shorter (~77 deep); screen, knobs and logo lie on the tilted face",
+   "priority": "must",
+   "provenance": "given",
+   "source": "owner, 2026-11-12 ('go back to the last fold and make the lean 15 degrees')"
   }
  ],
  "bought_parts": [
@@ -412,6 +419,48 @@
    "round": 12,
    "text": "instead of just the mn put the flacmn logo just pushed to the repo, and make the knobs the same charcoal color ... -> flacmn bottom right",
    "source": "owner, 2026-11-11"
+  },
+  {
+   "round": 12,
+   "time": "2026-11-11T23:19:06",
+   "text": "I want to go back to the mn logo, and I want the caps to have textured circumference and I want the large one to be #F6F4EE and try a render of the small knob at #4357AD and #F4B73E / ridged circumference",
+   "options": []
+  },
+  {
+   "round": 13,
+   "text": "try again but make the large knob knurled aluminum and the small knob smooth plastic / keep blue for the plastic knob but do a criss cross knurl on the aluminum and chamfer the front edge. Also add an shallow rounded indent on the blue knob",
+   "source": "owner, 2026-11-11"
+  },
+  {
+   "round": 13,
+   "text": "make the knurl shallower and bring it back toi the straIGHT KNURL and increase the umber of groovess, make the knobs 10% thicker and get rid of the dimple on the plastic button.",
+   "source": "owner, 2026-11-11"
+  },
+  {
+   "round": 13,
+   "text": "make them 10 mm",
+   "source": "owner, 2026-11-11"
+  },
+  {
+   "round": 13,
+   "time": "2026-11-11T23:45:00",
+   "text": "make the mn smaller and have the front face lean back 10 degrees (answers: keep the base, top shorter; mn 18 mm wide)",
+   "options": []
+  },
+  {
+   "round": 14,
+   "text": "increase to 20 degree",
+   "source": "owner, 2026-11-11"
+  },
+  {
+   "round": 14,
+   "text": "also increase the diameter of the folds (answer: R3)",
+   "source": "owner, 2026-11-11"
+  },
+  {
+   "round": 14,
+   "text": "go back to the last fold and make the lean 15 degrees",
+   "source": "owner, 2026-11-12"
   }
  ],
  "_designer_notes": [

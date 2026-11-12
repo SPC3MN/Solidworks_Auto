@@ -102,15 +102,41 @@ def main(a):
     folds = {f["id"]: f for f in a["folds"]}
     joined = {tuple(sorted(pair)) for pair in a["connected"]}
 
+    def move(s, fid, ang):
+        """Move a shape by one fold (see sheet_lib.fold_move): a sharp fold turns about its hinge line, a
+        rounded one slides the panel back by the band and turns it about the bend axis."""
+        f = folds[fid]
+        if abs(ang) <= 1e-12:
+            return
+        if f["radius"] > 0:
+            fr = min(1.0, abs(ang / f["angle"])) if f["angle"] else 0.0
+            s.translate(V(-f["n"][0] * f["a"] * fr, -f["n"][1] * f["a"] * fr, 0))
+            s.rotate(V(f["s"][0], f["s"][1], f["c_z"]), V(f["d"][0], f["d"][1], 0), ang)
+        else:
+            s.rotate(V(f["m0"][0], f["m0"][1], f["hinge_z"]), V(f["d"][0], f["d"][1], 0), ang)
+
     def folded(angles):
         res = {}
         for pid, s in solids.items():
             s = s.copy()
             for fid in a["chain"][pid]:
-                f = folds[fid]
-                if abs(angles.get(fid, 0.0)) > 1e-12:
-                    s.rotate(V(f["m0"][0], f["m0"][1], f["hinge_z"]), V(f["d"][0], f["d"][1], 0), angles[fid])
+                move(s, fid, angles.get(fid, 0.0))
             res[pid] = s
+        return res
+
+    def bends(angles):
+        """The rounded folds' bands, revolved round their bend axes and carried by the folds above."""
+        res = {}
+        for f in a["folds"]:
+            ang = angles.get(f["id"], 0.0)
+            if f["radius"] <= 0 or abs(ang) <= 1e-9:
+                continue
+            S_, E_ = f["s"], f["e"]
+            fc = OCC.Face(OCC.makePolygon([V(S_[0], S_[1], 0), V(E_[0], E_[1], 0), V(E_[0], E_[1], t), V(S_[0], S_[1], t), V(S_[0], S_[1], 0)]))
+            b = fc.revolve(V(S_[0], S_[1], f["c_z"]), V(f["d"][0], f["d"][1], 0), ang)
+            for fid in f["chain_above"]:
+                move(b, fid, angles.get(fid, 0.0))
+            res["bend_" + f["id"]] = b
         return res
 
     def clashes(shapes):
@@ -128,6 +154,7 @@ def main(a):
     for n, st in enumerate(a["states"]):
         shapes = folded(st["angles"])
         states.append({"label": st["label"], "sequence": st["sequence"], "interference": clashes(shapes)})
+        shapes = {**shapes, **bends(st["angles"])}   # the bands join their panels, so they are kept out of the clash check
         last = n == len(a["states"]) - 1
         if st["done"] and not last:
             path = out / f"sequence_{st['sequence']}.stl"

@@ -92,12 +92,14 @@ def _job(sheet, out_dir, text):
         c, r = S.fold_entities(sheet, f)
         cuts += c
         relief += r
-    zones = [[f["s"], f["e"], f["e2"], f["s2"]] for f in sheet["folds"] if sheet["recipes"][f["recipe"]]["allowance"] > 0]
+    zones = [[f["s"], f["e"], f["e2"], f["s2"]] for f in sheet["folds"] if f["a"] > 0]
     return {
         "name": sheet["name"], "t": sheet["t"], "out_dir": str(out_dir),
         "panels": [{"id": pid, "flat": p["flat"], "cuts": p["flat_features"]} for pid, p in sheet["panels"].items()],
         "zones": zones, "reliefs": relief, "perforations": cuts,
         "folds": [{"id": f["id"], "m0": f["m0"], "m1": f["m1"], "d": f["d"], "hinge_z": f["hinge_z"],
+                   "s": f["s"], "e": f["e"], "n": f["n"], "a": f["a"], "radius": f["radius"], "c_z": f["c_z"],
+                   "angle": f["angle"], "parent": f["parent"], "chain_above": [g["id"] for g in S.chain(sheet, f["parent"])],
                    "label": f'{f["parent"]} to {f["child"]}, {f["direction"]} {f["angle"]:g} deg, step {f["sequence"]}, recipe {f["recipe"]}'}
                   for f in sheet["folds"]],
         "chain": {pid: [f["id"] for f in S.chain(sheet, pid)] for pid in sheet["panels"]},

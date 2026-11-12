@@ -32,7 +32,18 @@ UNIT = [V(1, 0, 0), V(0, 1, 0), V(0, 0, 1)]
 
 
 def solid(b):
+    s = _solid(b)
+    if "rot" in b:
+        r = b["rot"]
+        s.rotate(V(*r["about"]), UNIT[AX[r["axis"]]], r["deg"])
+    return s
+
+
+def _solid(b):
     at, t = b["at"], b["type"]
+    if t == "slab":
+        pts = [V(*[at[k] + q[k] for k in range(3)]) for q in b["base"]]
+        return OCC.Face(OCC.makePolygon(pts + [pts[0]])).extrude(V(*b["vec"]))
     if t == "box":
         sx, sy, sz = b["size"]
         return _prism("z", at[2], [fclib.rect(at[0], at[1], sx, sy, b["r"])], sz)

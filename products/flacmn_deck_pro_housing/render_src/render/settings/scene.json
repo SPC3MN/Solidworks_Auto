@@ -171,14 +171,15 @@
     "_src": "5052-H32 sheet (brief); clear bead-blast anodise assumed (finish not chosen yet)"
    },
    "knob_big": {
-    "material": "aluminium_anodized",
-    "color": "#2E2E33",
-    "_src": "owner: knobs the logo's charcoal #2E2E33 (R30)"
+    "material": "aluminium_raw",
+    "finish": "machined",
+    "_src": "owner: large cap, fine shallow straight knurl (180 x 0.25), 1 mm front chamfer, 10 thick"
    },
    "knob_small": {
-    "material": "aluminium_anodized",
-    "color": "#2E2E33",
-    "_src": "owner: knobs the logo's charcoal #2E2E33 (R30)"
+    "material": "polycarbonate",
+    "color": "#4357AD",
+    "roughness": 0.25,
+    "_src": "owner: small cap, smooth blue plastic #4357AD, 10 thick"
    },
    "enc_big": {
     "material": "stainless_steel",
@@ -225,7 +226,7 @@
     "material": "abs",
     "color": "#1E1E22",
     "roughness": 0.3,
-    "_src": "flacmn logo, satin charcoal paint, darker so it reads as the SVG's #2E2E33 (R29)"
+    "_src": "mn logo, satin charcoal paint, 18 mm wide"
    }
   },
   "components": {}
@@ -343,6 +344,21 @@
     "az": 0,
     "el": 0,
     "margin": 0.15,
+    "dof": {
+     "fstop": 22
+    }
+   }
+  },
+  {
+   "name": "knobs",
+   "scene": "studio",
+   "camera": "detail_closeup",
+   "category": "details",
+   "camera_overrides": {
+    "target": "component:knob_big",
+    "az": -30,
+    "el": 25,
+    "margin": 0.05,
     "dof": {
      "fstop": 22
     }

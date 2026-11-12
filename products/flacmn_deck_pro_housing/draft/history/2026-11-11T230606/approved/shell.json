@@ -1,0 +1,775 @@
+{
+ "_comment": "flacmn deck pro shell: front face with the top, floor and sides folded back from it. Round 6.",
+ "name": "shell",
+ "material": "5052-H32_1.0",
+ "manufacturing": "generic_untested",
+ "dims": "outside",
+ "params": {
+  "t": {
+   "value": 1.0,
+   "src": "given",
+   "note": "5052-H32 1.0, the only material profile"
+  },
+  "hinge": {
+   "value": 0.5,
+   "src": "estimated",
+   "note": "bridges bend at mid-thickness until a coupon says otherwise"
+  },
+  "allow": {
+   "value": 0.0,
+   "src": "estimated",
+   "note": "flat length taken by a fold; 0 until measured"
+  },
+  "corner": {
+   "value": 0.3,
+   "src": "chosen",
+   "note": "gap where the bottom meets the right side"
+  },
+  "gap": {
+   "value": 0.3,
+   "src": "chosen",
+   "note": "back plate edge to shell inner face"
+  },
+  "W": {
+   "value": 241.0,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "H": {
+   "value": 88.5,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "D": {
+   "value": 100.5,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "pw": "W - 2*(t + gap)",
+  "ph": "H - 2*(t + gap)",
+  "tab_w": {
+   "value": 16.0,
+   "src": "chosen",
+   "note": "clinch nut + 3 mm each side"
+  },
+  "tab_h": {
+   "value": 12.0,
+   "src": "chosen",
+   "note": "nut centre 7 from the fold"
+  },
+  "nut_v": 7.0,
+  "tx1": 40.0,
+  "tx2": "W - 40",
+  "bx1": 40.0,
+  "bx2": {
+   "value": 124.0,
+   "src": "chosen",
+   "note": "floor tab clear of the Pi's USB/Ethernet end"
+  },
+  "nut_hole": {
+   "value": 4.22,
+   "src": "given",
+   "note": "PEM CLS-M3-0 mounting hole"
+  },
+  "screw_hole": 3.4,
+  "head_d": {
+   "value": 5.5,
+   "src": "given",
+   "note": "projects/grindmn_screw_m3x8"
+  },
+  "head_h": {
+   "value": 3.0,
+   "src": "given",
+   "note": "projects/grindmn_screw_m3x8"
+  },
+  "pcb_l": {
+   "value": 85.0,
+   "src": "given"
+  },
+  "pcb_w": {
+   "value": 56.0,
+   "src": "given"
+  },
+  "pcb_t": {
+   "value": 1.4,
+   "src": "given"
+  },
+  "jack_oh": {
+   "value": 2.7,
+   "src": "estimated",
+   "note": "USB/Ethernet past the Pi's PCB edge"
+  },
+  "sd_oh": {
+   "value": 2.5,
+   "src": "estimated",
+   "note": "microSD card past the PCB edge"
+  },
+  "h_so": {
+   "value": 3.0,
+   "src": "chosen",
+   "note": "M2.5 standoff under the Pi = thermal pad gap"
+  },
+  "h_hat": {
+   "value": 9.0,
+   "src": "given",
+   "note": "DAC Pro standoffs"
+  },
+  "hat_t": {
+   "value": 1.6,
+   "src": "given"
+  },
+  "hat_l": {
+   "value": 65.0,
+   "src": "given"
+  },
+  "hat_w": {
+   "value": 56.5,
+   "src": "given"
+  },
+  "jumper_h": {
+   "value": 14.0,
+   "src": "estimated",
+   "note": "Dupont housing on the pass-through header (encoder wires)"
+  },
+  "wire_bend": {
+   "value": 6.0,
+   "src": "estimated"
+  },
+  "rca_len": {
+   "value": 9.0,
+   "src": "given",
+   "note": "projects/rpi_dac_pro: barrels past the HAT edge"
+  },
+  "sock_recess": {
+   "value": 1.0,
+   "src": "chosen",
+   "note": "socket tips stop this far inside the back panel"
+  },
+  "px1": "W - 2*t - sd_oh - 2",
+  "px0": "px1 - pcb_l",
+  "py1": "D - t - sock_recess - rca_len",
+  "py0": "py1 - pcb_w",
+  "zp": "t + h_so",
+  "zpt": "zp + pcb_t",
+  "zh": "zpt + h_hat",
+  "zht": "zh + hat_t",
+  "rca_x1": "px1 - 18.36",
+  "rca_x2": "px1 - 32.98",
+  "rca_z": "zht + 6.5",
+  "rca_hole": {
+   "value": 13.0,
+   "src": "estimated",
+   "note": "RCA plug shell passes"
+  },
+  "jack_x": "px1 - 51.8",
+  "jack_z": "zht + 3",
+  "jack_hole": {
+   "value": 10.0,
+   "src": "estimated"
+  },
+  "usbc_x": "px1 - 11.2",
+  "usbc_z": "zpt + 1.6",
+  "usbc_w": {
+   "value": 13.0,
+   "src": "estimated",
+   "note": "USB-C overmold passes"
+  },
+  "usbc_h": {
+   "value": 7.5,
+   "src": "estimated"
+  },
+  "cord_z": 26.0,
+  "cord_l": {
+   "value": 24.0,
+   "src": "estimated",
+   "note": "plug overmold passes"
+  },
+  "eth_slot": {
+   "value": 18.0,
+   "src": "estimated",
+   "note": "RJ45 plug with boot passes"
+  },
+  "usb_slot": {
+   "value": 12.0,
+   "src": "estimated",
+   "note": "USB-A plug passes"
+  },
+  "cord1_x": 30.0,
+  "cord2_x": 62.0,
+  "cord3_x": 94.0,
+  "lens_w": {
+   "value": 120.7,
+   "src": "given"
+  },
+  "lens_h": {
+   "value": 77.2,
+   "src": "given"
+  },
+  "lens_t": {
+   "value": 5.4,
+   "src": "given"
+  },
+  "scr_pcb_w": {
+   "value": 121.0,
+   "src": "given"
+  },
+  "scr_pcb_h": {
+   "value": 76.0,
+   "src": "given"
+  },
+  "scr_d": {
+   "value": 13.0,
+   "src": "given",
+   "note": "lens to the back parts"
+  },
+  "va_w": {
+   "value": 109.0,
+   "src": "given"
+  },
+  "va_h": {
+   "value": 65.8,
+   "src": "given"
+  },
+  "va_l": {
+   "value": 5.85,
+   "src": "given"
+  },
+  "va_top": {
+   "value": 3.1,
+   "src": "given"
+  },
+  "lens_x0": {
+   "value": 6.0,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "lens_z0": "(H - lens_h)/2",
+  "kb_d": {
+   "value": 57.0,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "ks_d": {
+   "value": 35.0,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "knob_h": {
+   "value": 8.0,
+   "src": "given",
+   "note": "owner 2026-11-11: thinner caps, shafts cut"
+  },
+  "kb_x": {
+   "value": 154.5,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "kb_z": "H/2",
+  "ks_x": {
+   "value": 208.3,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "ks_z": {
+   "value": 56.9,
+   "src": "given",
+   "note": "owner's layout, true scale"
+  },
+  "knob_gap": {
+   "value": 1.0,
+   "src": "chosen",
+   "note": "cap back face to the front face"
+  },
+  "enc_w": {
+   "value": 12.5,
+   "src": "estimated"
+  },
+  "enc_h": {
+   "value": 13.4,
+   "src": "estimated"
+  },
+  "enc_d": {
+   "value": 10.1,
+   "src": "estimated",
+   "note": "body 6.6 + pins"
+  },
+  "enc_hole": {
+   "value": 7.4,
+   "src": "given"
+  },
+  "enc_tab_r": {
+   "value": 7.5,
+   "src": "estimated",
+   "note": "anti-turn tab offset"
+  },
+  "enc_tab_d": 2.4,
+  "bush_out": {
+   "value": 6.0,
+   "src": "estimated",
+   "note": "bushing past the panel"
+  },
+  "shaft_out": {
+   "value": 9.0,
+   "src": "chosen",
+   "note": "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"
+  },
+  "logo_w": {
+   "value": 40.0,
+   "src": "given",
+   "note": "owner: flacmn bottom right"
+  },
+  "logo_h": "logo_w*7.195878/24.940435",
+  "logo_x1": "W - 8",
+  "logo_z0": 8.0,
+  "paint_t": {
+   "value": 0.05,
+   "src": "estimated",
+   "note": "paint film"
+  },
+  "feet_h": {
+   "value": 6.0,
+   "src": "chosen",
+   "note": "taller than the screw heads under the floor"
+  },
+  "feet_d": 10.0,
+  "foot_y": 25.0,
+  "soc_x": "px1 - 29",
+  "soc_y": "py1 - 32",
+  "fw": "W - 2*hinge*t",
+  "fh": "H - 2*hinge*t",
+  "inset": "(1 - hinge)*t + corner",
+  "fl_l": "D - t - 2*hinge*t - allow",
+  "lw": "fw - 2*inset"
+ },
+ "panels": [
+  {
+   "id": "front",
+   "name": "Front face",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "fw",
+     0
+    ],
+    [
+     "fw",
+     "fh"
+    ],
+    [
+     0,
+     "fh"
+    ]
+   ],
+   "features": [
+    {
+     "type": "rect",
+     "size": [
+      "va_w + 1",
+      "va_h + 1"
+     ],
+     "at": [
+      "(lens_x0 + va_l + va_w/2) - hinge*t",
+      "H - hinge*t - (lens_z0 + lens_h - va_top - va_h/2)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "enc_hole",
+     "at": [
+      "(kb_x) - hinge*t",
+      "H - hinge*t - (kb_z)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "enc_tab_d",
+     "at": [
+      "(kb_x) - hinge*t",
+      "H - hinge*t - (kb_z + enc_tab_r)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "enc_hole",
+     "at": [
+      "(ks_x) - hinge*t",
+      "H - hinge*t - (ks_z)"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": "enc_tab_d",
+     "at": [
+      "(ks_x) - hinge*t",
+      "H - hinge*t - (ks_z + enc_tab_r)"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "top",
+   "name": "Top",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "lw",
+     0
+    ],
+    [
+     "lw",
+     "fl_l"
+    ],
+    [
+     0,
+     "fl_l"
+    ]
+   ]
+  },
+  {
+   "id": "floor",
+   "name": "Floor",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "lw",
+     0
+    ],
+    [
+     "lw",
+     "fl_l"
+    ],
+    [
+     0,
+     "fl_l"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 3.5) - hinge*t - inset",
+      "(py1 - 3.5) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 3.5) - hinge*t - inset",
+      "(py1 - 52.5) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 61.5) - hinge*t - inset",
+      "(py1 - 3.5) - hinge*t"
+     ]
+    },
+    {
+     "type": "circle",
+     "d": 2.9,
+     "at": [
+      "(px1 - 61.5) - hinge*t - inset",
+      "(py1 - 52.5) - hinge*t"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "left",
+   "name": "Left side",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "fh",
+     0
+    ],
+    [
+     "fh",
+     "fl_l"
+    ],
+    [
+     0,
+     "fl_l"
+    ]
+   ]
+  },
+  {
+   "id": "right",
+   "name": "Right side",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "fh",
+     0
+    ],
+    [
+     "fh",
+     "fl_l"
+    ],
+    [
+     0,
+     "fl_l"
+    ]
+   ]
+  },
+  {
+   "id": "tab_t1",
+   "name": "Back tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_w",
+     0
+    ],
+    [
+     "tab_w",
+     "tab_h"
+    ],
+    [
+     0,
+     "tab_h"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_w/2",
+      "nut_v"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tab_t2",
+   "name": "Back tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_w",
+     0
+    ],
+    [
+     "tab_w",
+     "tab_h"
+    ],
+    [
+     0,
+     "tab_h"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_w/2",
+      "nut_v"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tab_b1",
+   "name": "Back tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_w",
+     0
+    ],
+    [
+     "tab_w",
+     "tab_h"
+    ],
+    [
+     0,
+     "tab_h"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_w/2",
+      "nut_v"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tab_b2",
+   "name": "Back tab",
+   "outline": [
+    [
+     0,
+     0
+    ],
+    [
+     "tab_w",
+     0
+    ],
+    [
+     "tab_w",
+     "tab_h"
+    ],
+    [
+     0,
+     "tab_h"
+    ]
+   ],
+   "features": [
+    {
+     "type": "circle",
+     "d": "nut_hole",
+     "at": [
+      "tab_w/2",
+      "nut_v"
+     ]
+    }
+   ]
+  }
+ ],
+ "folds": [
+  {
+   "id": "f_top",
+   "parent": "front",
+   "parent_edge": 0,
+   "child": "top",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 1,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_floor",
+   "parent": "front",
+   "parent_edge": 2,
+   "child": "floor",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 2,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_left",
+   "parent": "front",
+   "parent_edge": 3,
+   "child": "left",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 3,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_right",
+   "parent": "front",
+   "parent_edge": 1,
+   "child": "right",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 4,
+   "recipe": "fold"
+  },
+  {
+   "id": "f_tab_t1",
+   "parent": "top",
+   "parent_edge": 2,
+   "child": "tab_t1",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "offset": "lw - (fw - inset - (tx1) - hinge*t + 2*hinge*t) - tab_w/2"
+  },
+  {
+   "id": "f_tab_t2",
+   "parent": "top",
+   "parent_edge": 2,
+   "child": "tab_t2",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "offset": "lw - (fw - inset - (tx2) - hinge*t + 2*hinge*t) - tab_w/2"
+  },
+  {
+   "id": "f_tab_b1",
+   "parent": "floor",
+   "parent_edge": 2,
+   "child": "tab_b1",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "offset": "lw - ((bx1) - hinge*t - inset) - tab_w/2"
+  },
+  {
+   "id": "f_tab_b2",
+   "parent": "floor",
+   "parent_edge": 2,
+   "child": "tab_b2",
+   "child_edge": 0,
+   "angle": 90,
+   "direction": "up",
+   "sequence": 0,
+   "recipe": "fold",
+   "offset": "lw - ((bx2) - hinge*t - inset) - tab_w/2"
+  }
+ ],
+ "recipes": {
+  "fold": {
+   "_comment": "Starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
+   "method": "slots",
+   "slot_length": 8.0,
+   "slot_width": 0.5,
+   "bridge": 1.5,
+   "end_clearance": 2.0,
+   "hinge": "hinge",
+   "allowance": "allow"
+  }
+ },
+ "hardware": [
+  {
+   "name": "PEM CLS-M3-0 clinch nut (back tabs, pressed from inside)",
+   "qty": 4
+  }
+ ]
+}

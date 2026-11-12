@@ -1,7 +1,7 @@
 {
  "schema_version": "1.0",
  "sheet": "shell",
- "timestamp": "20261111T230617",
+ "timestamp": "20261112T001732",
  "freecad_version": "1.1.4",
  "material": "5052-H32_1.0",
  "manufacturing": "generic_untested",
@@ -13,23 +13,23 @@
  },
  "untested": true,
  "blank_mm": [
-  437.0,
-  308.5,
+  430.64,
+  287.638,
   1.0
  ],
- "flat_area_mm2": 78444.8679,
+ "flat_area_mm2": 71606.9116,
  "folded_envelope_mm": [
   241.0,
-  88.5,
-  99.5
+  111.025,
+  95.884
  ],
- "volume_mm3": 78444.8679,
+ "volume_mm3": 71606.9116,
  "folds": [
   {
    "id": "f_top",
    "parent": "front",
    "child": "top",
-   "angle": 90.0,
+   "angle": 75.0,
    "direction": "up",
    "sequence": 1,
    "recipe": "fold",
@@ -44,7 +44,7 @@
    "id": "f_floor",
    "parent": "front",
    "child": "floor",
-   "angle": 90.0,
+   "angle": 105.0,
    "direction": "up",
    "sequence": 2,
    "recipe": "fold",
@@ -63,12 +63,12 @@
    "direction": "up",
    "sequence": 3,
    "recipe": "fold",
-   "length": 87.5,
-   "slots": 8,
-   "cut_length": 64.0,
-   "bridge_total": 23.5,
-   "bridge_share": 0.2686,
-   "end_uncut": 6.5
+   "length": 90.587,
+   "slots": 9,
+   "cut_length": 72.0,
+   "bridge_total": 18.5867,
+   "bridge_share": 0.2052,
+   "end_uncut": 3.2933
   },
   {
    "id": "f_right",
@@ -78,12 +78,12 @@
    "direction": "up",
    "sequence": 4,
    "recipe": "fold",
-   "length": 87.5,
-   "slots": 8,
-   "cut_length": 64.0,
-   "bridge_total": 23.5,
-   "bridge_share": 0.2686,
-   "end_uncut": 6.5
+   "length": 90.587,
+   "slots": 9,
+   "cut_length": 72.0,
+   "bridge_total": 18.5867,
+   "bridge_share": 0.2052,
+   "end_uncut": 3.2933
   },
   {
    "id": "f_tab_t1",
@@ -151,8 +151,8 @@
    "name": "5052-H32 sheet, 1 mm",
    "qty": 1,
    "blank_mm": [
-    437.0,
-    308.5
+    430.6,
+    287.6
    ]
   },
   {
@@ -171,7 +171,7 @@
    "id": "feature.front.0.web",
    "level": "manufacturable",
    "ok": true,
-   "message": "panel front, feature 0: 7.75 of material to the panel edge (minimum 1.5)"
+   "message": "panel front, feature 0: 9.43 of material to the panel edge (minimum 1.5)"
   },
   {
    "id": "feature.front.1.inside",
@@ -183,7 +183,7 @@
    "id": "feature.front.1.web",
    "level": "manufacturable",
    "ok": true,
-   "message": "panel front, feature 1: 40.05 of material to the panel edge (minimum 1.5)"
+   "message": "panel front, feature 1: 41.46 of material to the panel edge (minimum 1.5)"
   },
   {
    "id": "feature.front.1.size",
@@ -201,7 +201,7 @@
    "id": "feature.front.2.web",
    "level": "manufacturable",
    "ok": true,
-   "message": "panel front, feature 2: 35.05 of material to the panel edge (minimum 1.5)"
+   "message": "panel front, feature 2: 36.73 of material to the panel edge (minimum 1.5)"
   },
   {
    "id": "feature.front.2.size",
@@ -219,7 +219,7 @@
    "id": "feature.front.3.web",
    "level": "manufacturable",
    "ok": true,
-   "message": "panel front, feature 3: 27.40 of material to the panel edge (minimum 1.5)"
+   "message": "panel front, feature 3: 28.50 of material to the panel edge (minimum 1.5)"
   },
   {
    "id": "feature.front.3.size",
@@ -237,7 +237,7 @@
    "id": "feature.front.4.web",
    "level": "manufacturable",
    "ok": true,
-   "message": "panel front, feature 4: 22.40 of material to the panel edge (minimum 1.5)"
+   "message": "panel front, feature 4: 25.64 of material to the panel edge (minimum 1.5)"
   },
   {
    "id": "feature.front.4.size",
@@ -291,7 +291,7 @@
    "id": "feature.floor.2.web",
    "level": "manufacturable",
    "ok": true,
-   "message": "panel floor, feature 2: 11.55 of material to the panel edge (minimum 1.5)"
+   "message": "panel floor, feature 2: 11.45 of material to the panel edge (minimum 1.5)"
   },
   {
    "id": "feature.floor.2.size",
@@ -309,7 +309,7 @@
    "id": "feature.floor.3.web",
    "level": "manufacturable",
    "ok": true,
-   "message": "panel floor, feature 3: 35.05 of material to the panel edge (minimum 1.5)"
+   "message": "panel floor, feature 3: 34.90 of material to the panel edge (minimum 1.5)"
   },
   {
    "id": "feature.floor.3.size",
@@ -393,7 +393,7 @@
    "id": "fold.f_top.angle",
    "level": "geometric",
    "ok": true,
-   "message": "fold f_top: angle 90°"
+   "message": "fold f_top: angle 75°"
   },
   {
    "id": "fold.f_top.pattern",
@@ -423,25 +423,25 @@
    "id": "fold.f_top.grip",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_top: panel top is 98.5 deep from the fold (minimum to grip 6)"
+   "message": "fold f_top: panel top is 74.8 deep from the fold (minimum to grip 6)"
   },
   {
    "id": "fold.f_top.features",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_top: nearest hole or cutout is 7.75 from the fold line (minimum 1.75)"
+   "message": "fold f_top: nearest hole or cutout is 9.43 from the fold line (minimum 1.75)"
   },
   {
    "id": "fold.f_top.tested",
    "level": "experimental",
    "ok": false,
-   "message": "fold f_top: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+   "message": "fold f_top: recipe fold has no passing coupon in 5052-H32_1.0 at 75°"
   },
   {
    "id": "fold.f_floor.angle",
    "level": "geometric",
    "ok": true,
-   "message": "fold f_floor: angle 90°"
+   "message": "fold f_floor: angle 105°"
   },
   {
    "id": "fold.f_floor.pattern",
@@ -471,19 +471,19 @@
    "id": "fold.f_floor.grip",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_floor: panel floor is 98.5 deep from the fold (minimum to grip 6)"
+   "message": "fold f_floor: panel floor is 98.2 deep from the fold (minimum to grip 6)"
   },
   {
    "id": "fold.f_floor.features",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_floor: nearest hole or cutout is 12.95 from the fold line (minimum 1.75)"
+   "message": "fold f_floor: nearest hole or cutout is 14.36 from the fold line (minimum 1.75)"
   },
   {
    "id": "fold.f_floor.tested",
    "level": "experimental",
    "ok": false,
-   "message": "fold f_floor: recipe fold has no passing coupon in 5052-H32_1.0 at 90°"
+   "message": "fold f_floor: recipe fold has no passing coupon in 5052-H32_1.0 at 105°"
   },
   {
    "id": "fold.f_left.angle",
@@ -495,7 +495,7 @@
    "id": "fold.f_left.pattern",
    "level": "geometric",
    "ok": true,
-   "message": "fold f_left: 8 slots on 87.5 mm, 27 % of the line left as bridges"
+   "message": "fold f_left: 9 slots on 90.5867 mm, 21 % of the line left as bridges"
   },
   {
    "id": "fold.f_left.slot_width",
@@ -513,13 +513,13 @@
    "id": "fold.f_left.end",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_left: 6.50 uncut at each end (minimum 1.5)"
+   "message": "fold f_left: 3.29 uncut at each end (minimum 1.5)"
   },
   {
    "id": "fold.f_left.grip",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_left: panel left is 98.5 deep from the fold (minimum to grip 6)"
+   "message": "fold f_left: panel left is 95.3 deep from the fold (minimum to grip 6)"
   },
   {
    "id": "fold.f_left.features",
@@ -543,7 +543,7 @@
    "id": "fold.f_right.pattern",
    "level": "geometric",
    "ok": true,
-   "message": "fold f_right: 8 slots on 87.5 mm, 27 % of the line left as bridges"
+   "message": "fold f_right: 9 slots on 90.5867 mm, 21 % of the line left as bridges"
   },
   {
    "id": "fold.f_right.slot_width",
@@ -561,13 +561,13 @@
    "id": "fold.f_right.end",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_right: 6.50 uncut at each end (minimum 1.5)"
+   "message": "fold f_right: 3.29 uncut at each end (minimum 1.5)"
   },
   {
    "id": "fold.f_right.grip",
    "level": "manufacturable",
    "ok": true,
-   "message": "fold f_right: panel right is 98.5 deep from the fold (minimum to grip 6)"
+   "message": "fold f_right: panel right is 95.3 deep from the fold (minimum to grip 6)"
   },
   {
    "id": "fold.f_right.features",
@@ -831,7 +831,7 @@
    "id": "flat.dxf_readback",
    "level": "geometric",
    "ok": true,
-   "message": "the DXF reads back with the same entities per layer and the blank's extent ({'CUT_THROUGH': 14, 'FOLD_PERFORATION': 68, 'FOLD_DIRECTION': 24, 'REFERENCE': 37})"
+   "message": "the DXF reads back with the same entities per layer and the blank's extent ({'CUT_THROUGH': 14, 'FOLD_PERFORATION': 70, 'FOLD_DIRECTION': 24, 'REFERENCE': 37})"
   }
  ],
  "files": {

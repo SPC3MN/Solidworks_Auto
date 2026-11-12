@@ -147,5 +147,28 @@
    "A"
   ],
   "notes": "Approved, build it"
+ },
+ {
+  "time": "2026-11-11T23:19:06",
+  "round": 12,
+  "move": "pushback",
+  "options": [],
+  "notes": "I want to go back to the mn logo, and I want the caps to have textured circumference and I want the large one to be #F6F4EE and try a render of the small knob at #4357AD and #F4B73E / ridged circumference"
+ },
+ {
+  "time": "2026-11-11T23:45:00",
+  "round": 13,
+  "move": "pushback",
+  "options": [],
+  "notes": "make the mn smaller and have the front face lean back 10 degrees (answers: keep the base, top shorter; mn 18 mm wide)"
+ },
+ {
+  "time": "2026-11-12T00:17:22",
+  "round": 14,
+  "move": "approve",
+  "options": [
+   "A"
+  ],
+  "notes": "Approved, build it"
  }
 ]

@@ -208,6 +208,8 @@ def _place(sheet):
                 raise SheetError(f"fold {f['id']}: the child's edge ({L:g}) does not fit on the parent's edge ({lp:g}) at offset {off:g}")
             d = [(p1[0] - p0[0]) / lp, (p1[1] - p0[1]) / lp]
             n, a = [d[1], -d[0]], rec["allowance"]                    # n points out of the parent
+            if rec["radius"] > 0:   # a rounded fold: the band that bends, measured at the hinge layer
+                a = (rec["radius"] + rec["hinge"] * t) * math.radians(f["angle"])
             S = [p0[0] + d[0] * off, p0[1] + d[1] * off]
             E = [S[0] + d[0] * L, S[1] + d[1] * L]
             S2, E2 = [S[0] + n[0] * a, S[1] + n[1] * a], [E[0] + n[0] * a, E[1] + n[1] * a]
@@ -215,7 +217,8 @@ def _place(sheet):
             c, s = math.cos(ang), math.sin(ang)
             ch["xf"] = (c, s, E2[0] - (c * c0[0] - s * c0[1]), E2[1] - (s * c0[0] + c * c0[1]))
             up = f["direction"] == "up"
-            f.update(length=L, d=d, n=n, s=S, e=E, s2=S2, e2=E2,
+            f.update(length=L, d=d, n=n, s=S, e=E, s2=S2, e2=E2, a=a, radius=rec["radius"],
+                     c_z=(t + rec["radius"]) if up else -rec["radius"],
                      m0=[S[0] + n[0] * a / 2, S[1] + n[1] * a / 2], m1=[E[0] + n[0] * a / 2, E[1] + n[1] * a / 2],
                      hinge_z=(rec["hinge"] if up else 1 - rec["hinge"]) * t, signed=-f["angle"] if up else f["angle"])
     sheet["folds"] = order
@@ -235,8 +238,16 @@ def _place(sheet):
 def fold_entities(sheet, f):
     """(perforation entities, relief circles) of one fold, in flat-pattern coordinates."""
     rec, cuts = sheet["recipes"][f["recipe"]], []
-    at = lambda s: [f["m0"][0] + f["d"][0] * s, f["m0"][1] + f["d"][1] * s]  # noqa: E731
-    for sc, sl in FP.generate(f["length"], rec):
+    for off, row in FP.rows(f["length"], rec):
+        cuts += _row_entities(f, rec, off, row)
+    relief = [{"kind": "circle", "c": list(p), "r": rec["relief_d"] / 2} for p in (f["m0"], f["m1"])] if rec["relief_d"] > 0 else []
+    return cuts, relief
+
+
+def _row_entities(f, rec, off, row):
+    cuts = []
+    at = lambda s: [f["m0"][0] + f["d"][0] * s + f["n"][0] * off, f["m0"][1] + f["d"][1] * s + f["n"][1] * off]  # noqa: E731
+    for sc, sl in row:
         w = rec["slot_width"]
         if w <= 0:
             cuts.append({"kind": "line", "a": at(sc - sl / 2), "b": at(sc + sl / 2)})
@@ -244,8 +255,7 @@ def fold_entities(sheet, f):
             cuts.append({"kind": "circle", "c": at(sc), "r": w / 2})
         else:
             cuts.append({"kind": "stadium", "a": at(sc - (sl - w) / 2), "b": at(sc + (sl - w) / 2), "w": w})
-    relief = [{"kind": "circle", "c": list(p), "r": rec["relief_d"] / 2} for p in (f["m0"], f["m1"])] if rec["relief_d"] > 0 else []
-    return cuts, relief
+    return cuts
 
 
 def flat_extent(sheet):
@@ -281,30 +291,64 @@ def chain(sheet, pid):
     return out
 
 
+def fold_move(f, pts, ang):
+    """Points of the panels beyond fold f, moved by f at angle `ang` (flat-pattern frame). A sharp fold
+    turns them about the hinge line; a rounded fold rolls them round the bend: the band (width a) is
+    taken up by the arc, so the panel slides back by a and turns about the bend axis."""
+    u = [f["d"][0], f["d"][1], 0.0]
+    if f.get("radius", 0) > 0:
+        fr = abs(ang / f["angle"]) if f["angle"] else 0.0
+        pts = [[q[0] - f["n"][0] * f["a"] * fr, q[1] - f["n"][1] * f["a"] * fr, q[2]] for q in pts] if fr < 1 - 1e-12 else \
+              [[q[0] - f["n"][0] * f["a"], q[1] - f["n"][1] * f["a"], q[2]] for q in pts]
+        return [rot3(q, [f["s"][0], f["s"][1], f["c_z"]], u, ang) for q in pts]
+    return [rot3(q, [f["m0"][0], f["m0"][1], f["hinge_z"]], u, ang) for q in pts]
+
+
+def place_points(sheet, pts, folds, angles):
+    for f in folds:
+        pts = fold_move(f, pts, angles.get(f["id"], 0.0))
+    return pts
+
+
 def folded_vertices(sheet, angles=None):
     """{panel id: (bottom-face points, top-face points)} in 3D after folding."""
     angles = final_angles(sheet) if angles is None else angles
     out = {}
     for pid, p in sheet["panels"].items():
-        faces = []
-        for z in (0.0, sheet["t"]):
-            pts = [[q[0], q[1], z] for q in p["flat"]]
-            for f in chain(sheet, pid):
-                o, u = [f["m0"][0], f["m0"][1], f["hinge_z"]], [f["d"][0], f["d"][1], 0.0]
-                pts = [rot3(q, o, u, angles.get(f["id"], 0.0)) for q in pts]
-            faces.append(pts)
-        out[pid] = tuple(faces)
+        out[pid] = tuple(place_points(sheet, [[q[0], q[1], z] for q in p["flat"]], chain(sheet, pid), angles)
+                         for z in (0.0, sheet["t"]))
     return out
+
+
+def bend_segments(sheet, f, angles=None, k=6):
+    """A rounded fold's bend after folding: (k quadrilateral cross-sections stepped along the arc, each 4
+    points at the fold's start, and the vector along the fold that sweeps them over its length)."""
+    angles = final_angles(sheet) if angles is None else angles
+    ang, t = angles.get(f["id"], 0.0), sheet["t"]
+    u, c = [f["d"][0], f["d"][1], 0.0], [f["s"][0], f["s"][1], f["c_z"]]
+    ring = lambda phi: [rot3([f["s"][0], f["s"][1], z], c, u, phi) for z in (0.0, t)]  # noqa: E731
+    above = chain(sheet, f["parent"])
+    segs = []
+    for i in range(k):
+        a0, a1 = ang * i / k, ang * (i + 1) / k
+        q = ring(a0) + ring(a1)[::-1]
+        segs.append(place_points(sheet, q, above, angles))
+    s0, s1 = place_points(sheet, [[f["s"][0], f["s"][1], 0.0], [f["e"][0], f["e"][1], 0.0]], above, angles)
+    return segs, [s1[m] - s0[m] for m in range(3)]
 
 
 def folded_bbox(sheet, angles=None):
     pts = [q for bottom, top in folded_vertices(sheet, angles).values() for q in bottom + top]
+    for f in sheet["folds"]:       # rounded folds: the bend's arc, finely stepped (chord error < 0.01 mm)
+        if f.get("radius", 0) > 0:
+            segs, vec = bend_segments(sheet, f, angles, k=48)
+            pts += [q for seg in segs for q in seg] + [[q[m] + vec[m] for m in range(3)] for seg in segs for q in seg]
     return [min(q[k] for q in pts) for k in range(3)], [max(q[k] for q in pts) for k in range(3)]
 
 
 def draft_bodies(sheet, at=(0.0, 0.0, 0.0), stand=False):
-    """The folded panels as /design draft bodies (prisms), so a folded part can sit in an option.
-    Only panels that end up square to the model axes can be drafted. `stand` turns the part +90 degrees
+    """The folded panels as /design draft bodies, so a folded part can sit in an option: a prism for a
+    panel square to the model axes, a slab (a plate in any orientation) for one folded off-square. `stand` turns the part +90 degrees
     about x (sheet (x, y, z) -> (x, z, -y)), so a root panel laid flat becomes an upright face at y = 0
     with its folds running toward +y."""
     bodies = []
@@ -313,13 +357,20 @@ def draft_bodies(sheet, at=(0.0, 0.0, 0.0), stand=False):
         bottom, top = [turn(q) for q in bottom], [turn(q) for q in top]
         nrm = [top[0][k] - bottom[0][k] for k in range(3)]
         k = max(range(3), key=lambda i: abs(nrm[i]))
-        if abs(abs(nrm[k]) - sheet["t"]) > 1e-6:
-            raise SheetError(f"panel {pid} is not square to the model axes after folding: a draft can only show folds in 90 degree steps")
+        if abs(abs(nrm[k]) - sheet["t"]) > 1e-6:  # folded off-square: a flat plate in any orientation
+            bodies.append({"type": "slab", "op": "add", "at": list(at), "base": [list(q) for q in bottom], "vec": nrm})
+            continue
         i, j = [x for x in range(3) if x != k]
         origin = [0.0, 0.0, 0.0]
         origin[k] = min(bottom[0][k], top[0][k]) + at[k]
         bodies.append({"type": "prism", "op": "add", "axis": "xyz"[k], "h": sheet["t"], "at": origin,
                        "profile": [(q[i] + at[i], q[j] + at[j]) for q in bottom]})
+    for f in sheet["folds"]:  # rounded folds: the bend as slabs stepped round the arc
+        if f.get("radius", 0) > 0:
+            segs, vec = bend_segments(sheet, f)
+            vec = turn(vec)
+            for seg in segs:
+                bodies.append({"type": "slab", "op": "add", "at": list(at), "base": [list(turn(q)) for q in seg], "vec": list(vec)})
     return bodies
 
 

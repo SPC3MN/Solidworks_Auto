@@ -140,11 +140,94 @@ def resolve_body(b, names, what):
         out.update(profile=_poly(b["profile"], names, what), h=num(b["h"]), axis=b.get("axis", "z"))
         if out["h"] <= 0:
             raise DraftError(f"{what}: prism needs h > 0")
+    elif t == "slab":
+        out.update(base=[[num(v) for v in q] for q in b["base"]], vec=[num(v) for v in b["vec"]])
+        if len(out["base"]) < 3 or any(len(q) != 3 for q in out["base"]) or len(out["vec"]) != 3:
+            raise DraftError(f"{what}: slab needs a base of 3+ [x, y, z] points (relative to at) and a vec [x, y, z]")
     else:
-        raise DraftError(f"{what}: unknown body type {t!r} (box, cyl, revolve, prism)")
+        raise DraftError(f"{what}: unknown body type {t!r} (box, cyl, revolve, prism, slab)")
     if out.get("axis", "z") not in AX:
         raise DraftError(f"{what}: axis must be x, y or z")
+    if "rot" in b:
+        r = b["rot"]
+        out["rot"] = {"axis": r.get("axis", "x"), "deg": num(r["deg"]), "about": [num(v) for v in r.get("about", [0, 0, 0])]}
+        if out["rot"]["axis"] not in AX:
+            raise DraftError(f"{what}: rot axis must be x, y or z")
     return out
+
+
+# ---------------------------------------------------------------- tilted bodies
+# A body with "rot" (turned about an axis-parallel line through `about`, absolute) or a "slab" (a flat
+# convex plate in any orientation, e.g. a sheet panel folded off-square) is drawn from a point cloud:
+# its silhouette and its section are convex hulls, exact for the convex bodies used here.
+
+def is_free(body):
+    return body["type"] == "slab" or "rot" in body
+
+
+def _turn(p, rot):
+    a = AX[rot["axis"]]
+    i, j = [k for k in range(3) if k != a]
+    c, s_ = math.cos(math.radians(rot["deg"])), math.sin(math.radians(rot["deg"]))
+    q = [p[k] - rot["about"][k] for k in range(3)]
+    out = list(q)
+    out[i], out[j] = c * q[i] - s_ * q[j], s_ * q[i] + c * q[j]
+    return [out[k] + rot["about"][k] for k in range(3)]
+
+
+def cloud(body, n=48):
+    """Points spanning the body (its convex hull is the body for convex bodies), after any rot."""
+    at, t = body["at"], body["type"]
+    if t == "slab":
+        base = [[at[k] + q[k] for k in range(3)] for q in body["base"]]
+        pts = base + [[q[k] + body["vec"][k] for k in range(3)] for q in base]
+    elif t == "box":
+        sx, sy, sz = body["size"]
+        pts = [[at[0] + dx * sx / 2, at[1] + dy * sy / 2, at[2] + dz * sz] for dx in (-1, 1) for dy in (-1, 1) for dz in (0, 1)]
+    else:
+        a = AX[body["axis"]]
+        i, j = _plane(body["axis"])
+        if t == "cyl":
+            rings = [(body["d"] / 2, 0.0), (body["d"] / 2, body["h"])]
+        elif t == "revolve":
+            rings = [(r, tt) for r, tt in body["profile"]]
+        else:
+            rings = None
+        pts = []
+        if rings is not None:
+            for r, tt in rings:
+                for m in range(n):
+                    q = list(at)
+                    q[i] += r * math.cos(2 * math.pi * m / n)
+                    q[j] += r * math.sin(2 * math.pi * m / n)
+                    q[a] += tt
+                    pts.append(q)
+        else:
+            for u, v in body["profile"]:
+                for hh in (0.0, body["h"]):
+                    q = list(at)
+                    q[i] += u
+                    q[j] += v
+                    q[a] += hh
+                    pts.append(q)
+    return [_turn(p, body["rot"]) for p in pts] if "rot" in body else pts
+
+
+def _hull(pts):
+    pts = sorted(set((round(u, 9), round(v, 9)) for u, v in pts))
+    if len(pts) < 3:
+        return pts
+    cross = lambda o, a, b: (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])  # noqa: E731
+    lower, upper = [], []
+    for p in pts:
+        while len(lower) >= 2 and cross(lower[-2], lower[-1], p) <= 0:
+            lower.pop()
+        lower.append(p)
+    for p in reversed(pts):
+        while len(upper) >= 2 and cross(upper[-2], upper[-1], p) <= 0:
+            upper.pop()
+        upper.append(p)
+    return lower[:-1] + upper[:-1]
 
 
 def _plane(axis):
@@ -157,6 +240,9 @@ def moved(body, offset):
 
 
 def bbox3(body):
+    if is_free(body):
+        pts = cloud(body)
+        return [min(p[k] for p in pts) for k in range(3)], [max(p[k] for p in pts) for k in range(3)]
     at, t = body["at"], body["type"]
     if t == "box":
         sx, sy, sz = body["size"]
@@ -248,6 +334,8 @@ def _uv(view_normal, body_axis):
 def outline(body, normal):
     """(silhouette shape, hidden shapes) of a body seen along `normal`."""
     i, j = _plane(normal)
+    if is_free(body):
+        return [("poly", _hull([(p[i], p[j]) for p in cloud(body)]))], []
     at, t = body["at"], body["type"]
     cu, cv = at[i], at[j]
     lo, hi = bbox3(body)
@@ -287,6 +375,16 @@ def section(body, s):
     lo, hi = bbox3(body)
     if not lo[1] - 1e-9 <= s <= hi[1] + 1e-9:
         return None
+    if is_free(body):  # the convex cut: where segments between cloud points cross the plane
+        pts = cloud(body, n=24)
+        cut = [(p[0], p[2]) for p in pts if abs(p[1] - s) < 1e-9]
+        for m, p in enumerate(pts):
+            for q in pts[m + 1:]:
+                if (p[1] - s) * (q[1] - s) < 0:
+                    f = (s - p[1]) / (q[1] - p[1])
+                    cut.append((p[0] + f * (q[0] - p[0]), p[2] + f * (q[2] - p[2])))
+        h = _hull(cut)
+        return [[("poly", h)]] if len(h) >= 3 else None
     if t == "box":
         return [[_rect(lo[0], lo[2], hi[0], hi[2])]]
     ax = body["axis"]
@@ -395,6 +493,10 @@ def load_option(folder):
             p = {"process": "fold", "material": sheet["material"], "setups": len(sheet["folds"]), **p}
         else:
             bodies = [resolve_body(b, names, f"option {oid}, part {pid}, body {n}") for n, b in enumerate(p.get("bodies", []))]
+        if p.get("rot"):        # the whole part turned about an axis-parallel line (e.g. a face leaning back)
+            r = p["rot"]
+            rot = {"axis": r.get("axis", "x"), "deg": evaluate(r["deg"], names), "about": [evaluate(v, names) for v in r.get("about", [0, 0, 0])]}
+            bodies = [dict(b, rot=rot) for b in bodies]
         ops = [b["op"] for b in bodies]
         if not bodies or ops[0] != "add" or ops != sorted(ops):
             raise DraftError(f"option {oid}, part {pid}: list every add body before the cuts (a cut applies to the whole part)")

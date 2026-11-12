@@ -18,10 +18,19 @@
    "sheet": "shell.json",
    "stand": true,
    "at": [
-    "hinge*t",
+    "sb90",
     0,
-    "H - hinge*t"
-   ]
+    "Hf - sbt"
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
   },
   {
    "id": "back",
@@ -248,10 +257,19 @@
      "at": [
       "lens_x0 + lens_w/2",
       "t + lens_t + (scr_d - lens_t)/2",
-      "(H - scr_pcb_h)/2"
+      "(Hf - scr_pcb_h)/2"
      ]
     }
-   ]
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
   },
   {
    "id": "enc_big",
@@ -294,11 +312,20 @@
       "kb_z"
      ]
     }
-   ]
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
   },
   {
    "id": "knob_big",
-   "name": "Knob cap, large (Ø57 x 8, charcoal, counterbored over the nut, M3 set screw onto the D-flat)",
+   "name": "Knob cap, large (Ø57 x 10, machined aluminium, fine straight knurl, 1 mm front chamfer, counterbored over the nut, M3 set screw)",
    "source": "buy",
    "bodies": [
     {
@@ -312,7 +339,16 @@
       "kb_z"
      ]
     }
-   ]
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
   },
   {
    "id": "enc_small",
@@ -355,11 +391,20 @@
       "ks_z"
      ]
     }
-   ]
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
   },
   {
    "id": "knob_small",
-   "name": "Knob cap, small (Ø35 x 8, charcoal, counterbored over the nut, M3 set screw onto the D-flat)",
+   "name": "Knob cap, small (Ø35 x 10, smooth plastic #4357AD, counterbored over the nut, M3 set screw)",
    "source": "buy",
    "bodies": [
     {
@@ -373,11 +418,20 @@
       "ks_z"
      ]
     }
-   ]
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
   },
   {
    "id": "logo",
-   "name": "flacmn logo, satin charcoal paint (artwork: references/flacmn-charcoal.svg; envelope shown)",
+   "name": "'mn' dot logo, satin charcoal paint (14 x 6 grid; envelope shown)",
    "source": "buy",
    "bodies": [
     {
@@ -393,7 +447,16 @@
       "logo_z0"
      ]
     }
-   ]
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
   },
   {
    "id": "feet",
@@ -458,22 +521,22 @@
     [
      "tx1",
      0,
-     "H - hinge*t - nut_v"
+     "H - sb90 - nut_v"
     ],
     [
      "tx2",
      0,
-     "H - hinge*t - nut_v"
+     "H - sb90 - nut_v"
     ],
     [
      "bx1",
      0,
-     "hinge*t + nut_v"
+     "sb90 + nut_v"
     ],
     [
      "bx2",
      0,
-     "hinge*t + nut_v"
+     "sb90 + nut_v"
     ]
    ]
   },
@@ -499,22 +562,22 @@
     [
      "tx1",
      0,
-     "H - hinge*t - nut_v"
+     "H - sb90 - nut_v"
     ],
     [
      "tx2",
      0,
-     "H - hinge*t - nut_v"
+     "H - sb90 - nut_v"
     ],
     [
      "bx1",
      0,
-     "hinge*t + nut_v"
+     "sb90 + nut_v"
     ],
     [
      "bx2",
      0,
-     "hinge*t + nut_v"
+     "sb90 + nut_v"
     ]
    ]
   },
@@ -688,12 +751,12 @@
    "id": "top_tab_vs_jumpers",
    "lhs": "zht + 2.5 + jumper_h + wire_bend",
    "op": "<=",
-   "rhs": "H - t - tab_h",
+   "rhs": "H - sb90 - tab_h",
    "why": "Encoder wires stay under the top tabs"
   },
   {
    "id": "cords_above_tabs",
-   "lhs": "t + tab_h + 1",
+   "lhs": "sb90 + tab_h + 1",
    "op": "<=",
    "rhs": "cord_z - eth_slot/2",
    "why": "Cord cut-outs clear the floor tabs"
@@ -751,14 +814,14 @@
    "id": "big_knob_in_face",
    "lhs": "kb_z + kb_d/2",
    "op": "<=",
-   "rhs": "H - 3",
+   "rhs": "Hf - 3",
    "why": "Large cap inside the face height"
   },
   {
    "id": "small_knob_top",
    "lhs": "ks_z + ks_d/2",
    "op": "<=",
-   "rhs": "H - 3",
+   "rhs": "Hf - 3",
    "why": "Small cap inside the face height"
   },
   {
@@ -786,7 +849,7 @@
    "id": "screen_vs_top",
    "lhs": "lens_z0 + lens_h",
    "op": "<=",
-   "rhs": "H - t - 1",
+   "rhs": "Hf - t - 1",
    "why": "Screen clears the top"
   },
   {
@@ -847,6 +910,11 @@
   }
  ],
  "allowed_interference": [
+  [
+   "clinch_nut",
+   "shell",
+   "nut clinched into the tab"
+  ],
   [
    "dac",
    "jumpers",

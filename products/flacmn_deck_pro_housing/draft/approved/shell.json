@@ -45,6 +45,18 @@
    "src": "given",
    "note": "owner's layout, true scale"
   },
+  "lean": {
+   "value": 15.0,
+   "src": "given",
+   "note": "owner: front face leans back 15 deg, base kept"
+  },
+  "Hf": "H/cos(lean*pi/180)",
+  "top_d": "D - H*tan(lean*pi/180)",
+  "rb": {
+   "value": 0.0,
+   "src": "given",
+   "note": "owner: back to the sharp perforated folds (R3 tried and dropped)"
+  },
   "pw": "W - 2*(t + gap)",
   "ph": "H - 2*(t + gap)",
   "tab_w": {
@@ -57,7 +69,11 @@
    "src": "chosen",
    "note": "nut centre 7 from the fold"
   },
-  "nut_v": 7.0,
+  "nut_v": {
+   "value": 7.0,
+   "src": "chosen",
+   "note": "nut centre 7 from the fold"
+  },
   "tx1": 40.0,
   "tx2": "W - 40",
   "bx1": 40.0,
@@ -243,7 +259,7 @@
    "src": "given",
    "note": "owner's layout, true scale"
   },
-  "lens_z0": "(H - lens_h)/2",
+  "lens_z0": "(Hf - lens_h)/2",
   "kb_d": {
    "value": 57.0,
    "src": "given",
@@ -255,16 +271,16 @@
    "note": "owner's layout, true scale"
   },
   "knob_h": {
-   "value": 8.0,
+   "value": 10.0,
    "src": "given",
-   "note": "owner 2026-11-11: thinner caps, shafts cut"
+   "note": "owner 2026-11-11: make them 10 mm"
   },
   "kb_x": {
    "value": 154.5,
    "src": "given",
    "note": "owner's layout, true scale"
   },
-  "kb_z": "H/2",
+  "kb_z": "Hf/2",
   "ks_x": {
    "value": 208.3,
    "src": "given",
@@ -309,22 +325,36 @@
    "note": "bushing past the panel"
   },
   "shaft_out": {
-   "value": 9.0,
+   "value": 11.0,
    "src": "chosen",
-   "note": "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"
+   "note": "PEC11R-4215F cut 3 mm: 12 above the body top, less the 1 mm panel"
   },
-  "logo_w": {
-   "value": 40.0,
+  "logo_p": {
+   "value": 1.295,
    "src": "given",
-   "note": "owner: flacmn bottom right"
+   "note": "owner: mn 18 mm wide"
   },
-  "logo_h": "logo_w*7.195878/24.940435",
+  "logo_dot": "0.9*logo_p",
+  "logo_w": "13*logo_p + logo_dot",
+  "logo_h": "5*logo_p + logo_dot",
   "logo_x1": "W - 8",
   "logo_z0": 8.0,
   "paint_t": {
    "value": 0.05,
    "src": "estimated",
    "note": "paint film"
+  },
+  "knurl_n": {
+   "value": 180,
+   "src": "chosen"
+  },
+  "knurl_d": {
+   "value": 0.25,
+   "src": "chosen"
+  },
+  "cap_cham": {
+   "value": 1.0,
+   "src": "chosen"
   },
   "feet_h": {
    "value": 6.0,
@@ -335,11 +365,27 @@
   "foot_y": 25.0,
   "soc_x": "px1 - 29",
   "soc_y": "py1 - 32",
-  "fw": "W - 2*hinge*t",
-  "fh": "H - 2*hinge*t",
-  "inset": "(1 - hinge)*t + corner",
-  "fl_l": "D - t - 2*hinge*t - allow",
-  "lw": "fw - 2*inset"
+  "sb90": "rb + hinge*t",
+  "sbt": "(rb + hinge*t)*tan((90 - lean)*pi/360)",
+  "sbf": "(rb + hinge*t)*tan((90 + lean)*pi/360)",
+  "ca": "cos(lean*pi/180)",
+  "sa": "sin(lean*pi/180)",
+  "ta": "tan(lean*pi/180)",
+  "fw": "W - 2*sb90",
+  "fh": "Hf - sbt - sbf",
+  "flare": "sb90 - t - gap",
+  "fl_top": "D - t - 0.1 - sb90 - (H*ta + sbt)",
+  "fl_floor": "D - t - 0.1 - sb90 - sbf",
+  "zC": "sb90*ta",
+  "zF": "Hf + sb90*ta",
+  "zbB": "0",
+  "ztB": "H",
+  "yB": "D - t - gap",
+  "yD": "ca*yB - sa*zbB",
+  "zD": "sa*yB + ca*zbB",
+  "yE": "ca*yB - sa*ztB",
+  "zE": "sa*yB + ca*ztB",
+  "inset": "(1 - hinge)*t + corner"
  },
  "panels": [
   {
@@ -371,40 +417,40 @@
       "va_h + 1"
      ],
      "at": [
-      "(lens_x0 + va_l + va_w/2) - hinge*t",
-      "H - hinge*t - (lens_z0 + lens_h - va_top - va_h/2)"
+      "(lens_x0 + va_l + va_w/2) - sb90",
+      "Hf - sbt - (lens_z0 + lens_h - va_top - va_h/2)"
      ]
     },
     {
      "type": "circle",
      "d": "enc_hole",
      "at": [
-      "(kb_x) - hinge*t",
-      "H - hinge*t - (kb_z)"
+      "(kb_x) - sb90",
+      "Hf - sbt - (kb_z)"
      ]
     },
     {
      "type": "circle",
      "d": "enc_tab_d",
      "at": [
-      "(kb_x) - hinge*t",
-      "H - hinge*t - (kb_z + enc_tab_r)"
+      "(kb_x) - sb90",
+      "Hf - sbt - (kb_z + enc_tab_r)"
      ]
     },
     {
      "type": "circle",
      "d": "enc_hole",
      "at": [
-      "(ks_x) - hinge*t",
-      "H - hinge*t - (ks_z)"
+      "(ks_x) - sb90",
+      "Hf - sbt - (ks_z)"
      ]
     },
     {
      "type": "circle",
      "d": "enc_tab_d",
      "at": [
-      "(ks_x) - hinge*t",
-      "H - hinge*t - (ks_z + enc_tab_r)"
+      "(ks_x) - sb90",
+      "Hf - sbt - (ks_z + enc_tab_r)"
      ]
     }
    ]
@@ -418,16 +464,16 @@
      0
     ],
     [
-     "lw",
+     "fw - 2*inset",
      0
     ],
     [
-     "lw",
-     "fl_l"
+     "fw - 2*inset",
+     "fl_top"
     ],
     [
      0,
-     "fl_l"
+     "fl_top"
     ]
    ]
   },
@@ -440,16 +486,16 @@
      0
     ],
     [
-     "lw",
+     "fw - 2*inset",
      0
     ],
     [
-     "lw",
-     "fl_l"
+     "fw - 2*inset",
+     "fl_floor"
     ],
     [
      0,
-     "fl_l"
+     "fl_floor"
     ]
    ],
    "features": [
@@ -457,32 +503,32 @@
      "type": "circle",
      "d": 2.9,
      "at": [
-      "(px1 - 3.5) - hinge*t - inset",
-      "(py1 - 3.5) - hinge*t"
+      "((px1 - 3.5) - sb90) - inset",
+      "(py1 - 3.5) - sbf"
      ]
     },
     {
      "type": "circle",
      "d": 2.9,
      "at": [
-      "(px1 - 3.5) - hinge*t - inset",
-      "(py1 - 52.5) - hinge*t"
+      "((px1 - 3.5) - sb90) - inset",
+      "(py1 - 52.5) - sbf"
      ]
     },
     {
      "type": "circle",
      "d": 2.9,
      "at": [
-      "(px1 - 61.5) - hinge*t - inset",
-      "(py1 - 3.5) - hinge*t"
+      "((px1 - 61.5) - sb90) - inset",
+      "(py1 - 3.5) - sbf"
      ]
     },
     {
      "type": "circle",
      "d": 2.9,
      "at": [
-      "(px1 - 61.5) - hinge*t - inset",
-      "(py1 - 52.5) - hinge*t"
+      "((px1 - 61.5) - sb90) - inset",
+      "(py1 - 52.5) - sbf"
      ]
     }
    ]
@@ -500,12 +546,20 @@
      0
     ],
     [
-     "fh",
-     "fl_l"
+     "Hf - sbt - (zC)",
+     0
     ],
     [
-     0,
-     "fl_l"
+     "Hf - sbt - (zD)",
+     "(yD) - sb90"
+    ],
+    [
+     "Hf - sbt - (zE)",
+     "(yE) - sb90"
+    ],
+    [
+     "Hf - sbt - (zF)",
+     0
     ]
    ]
   },
@@ -522,12 +576,20 @@
      0
     ],
     [
-     "fh",
-     "fl_l"
+     "(zF) - sbf",
+     0
     ],
     [
-     0,
-     "fl_l"
+     "(zE) - sbf",
+     "(yE) - sb90"
+    ],
+    [
+     "(zD) - sbf",
+     "(yD) - sb90"
+    ],
+    [
+     "(zC) - sbf",
+     0
     ]
    ]
   },
@@ -667,7 +729,7 @@
    "parent_edge": 0,
    "child": "top",
    "child_edge": 0,
-   "angle": 90,
+   "angle": "90 - lean",
    "direction": "up",
    "sequence": 1,
    "recipe": "fold"
@@ -678,7 +740,7 @@
    "parent_edge": 2,
    "child": "floor",
    "child_edge": 0,
-   "angle": 90,
+   "angle": "90 + lean",
    "direction": "up",
    "sequence": 2,
    "recipe": "fold"
@@ -715,7 +777,7 @@
    "direction": "up",
    "sequence": 0,
    "recipe": "fold",
-   "offset": "lw - (fw - inset - (tx1) - hinge*t + 2*hinge*t) - tab_w/2"
+   "offset": "fw - 2*inset - ((fw - ((tx1) - sb90)) - inset) - tab_w/2"
   },
   {
    "id": "f_tab_t2",
@@ -727,7 +789,7 @@
    "direction": "up",
    "sequence": 0,
    "recipe": "fold",
-   "offset": "lw - (fw - inset - (tx2) - hinge*t + 2*hinge*t) - tab_w/2"
+   "offset": "fw - 2*inset - ((fw - ((tx2) - sb90)) - inset) - tab_w/2"
   },
   {
    "id": "f_tab_b1",
@@ -739,7 +801,7 @@
    "direction": "up",
    "sequence": 0,
    "recipe": "fold",
-   "offset": "lw - ((bx1) - hinge*t - inset) - tab_w/2"
+   "offset": "fw - 2*inset - (((bx1) - sb90) - inset) - tab_w/2"
   },
   {
    "id": "f_tab_b2",
@@ -751,7 +813,7 @@
    "direction": "up",
    "sequence": 0,
    "recipe": "fold",
-   "offset": "lw - ((bx2) - hinge*t - inset) - tab_w/2"
+   "offset": "fw - 2*inset - (((bx2) - sb90) - inset) - tab_w/2"
   }
  ],
  "recipes": {
@@ -763,7 +825,10 @@
    "bridge": 1.5,
    "end_clearance": 2.0,
    "hinge": "hinge",
-   "allowance": "allow"
+   "allowance": "allow",
+   "radius": "rb",
+   "rows": 1,
+   "row_pitch": 0.0
   }
  },
  "hardware": [

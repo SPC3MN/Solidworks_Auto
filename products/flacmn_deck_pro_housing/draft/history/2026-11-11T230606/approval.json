@@ -1,0 +1,33 @@
+{
+ "approved_at": "2026-11-11T23:06:06",
+ "quote": "Approved, build it",
+ "round": 12,
+ "option": "A",
+ "option_hash": "6501b08204d35641",
+ "brief_hash": "99aa23d0272d785f",
+ "parts": {
+  "shell": "d5099599eb1ba136",
+  "back": "e3763ea7edc1c24b",
+  "pi4": "5f7979d2fbbdf8c8",
+  "dac": "104ddc2d2a73ad80",
+  "jumpers": "eef0f8a011f44e42",
+  "standoff": "69cbc0ed2fdffbe7",
+  "pad": "5e8ea3aba913f1e7",
+  "screen": "674895c4fea787ee",
+  "enc_big": "6bee916fd80e0923",
+  "knob_big": "a24ef77c4e2290a5",
+  "enc_small": "d47a3cf1fa45eb64",
+  "knob_small": "2319d8753bd953df",
+  "logo": "b4236c7eada3e44c",
+  "feet": "1804e8e515b94ac5",
+  "screw_back": "1aaccbb0b00a1812",
+  "clinch_nut": "4eaaf3990cfc9889",
+  "screw_pi": "b7aefefa54efa4de",
+  "screw_dac": "c41a7f697dc6275d"
+ },
+ "changed_since_last_approval": [
+  "back",
+  "logo",
+  "shell"
+ ]
+}

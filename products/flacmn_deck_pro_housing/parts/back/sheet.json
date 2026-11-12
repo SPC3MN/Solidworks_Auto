@@ -45,6 +45,18 @@
    "src": "given",
    "note": "owner's layout, true scale"
   },
+  "lean": {
+   "value": 15.0,
+   "src": "given",
+   "note": "owner: front face leans back 15 deg, base kept"
+  },
+  "Hf": 91.62194196629235,
+  "top_d": 76.78649646984564,
+  "rb": {
+   "value": 0.0,
+   "src": "given",
+   "note": "owner: back to the sharp perforated folds (R3 tried and dropped)"
+  },
   "pw": 238.4,
   "ph": 85.9,
   "tab_w": {
@@ -57,7 +69,11 @@
    "src": "chosen",
    "note": "nut centre 7 from the fold"
   },
-  "nut_v": 7.0,
+  "nut_v": {
+   "value": 7.0,
+   "src": "chosen",
+   "note": "nut centre 7 from the fold"
+  },
   "tx1": 40.0,
   "tx2": 201.0,
   "bx1": 40.0,
@@ -243,7 +259,7 @@
    "src": "given",
    "note": "owner's layout, true scale"
   },
-  "lens_z0": 5.649999999999999,
+  "lens_z0": 7.210970983146176,
   "kb_d": {
    "value": 57.0,
    "src": "given",
@@ -255,16 +271,16 @@
    "note": "owner's layout, true scale"
   },
   "knob_h": {
-   "value": 8.0,
+   "value": 10.0,
    "src": "given",
-   "note": "owner 2026-11-11: thinner caps, shafts cut"
+   "note": "owner 2026-11-11: make them 10 mm"
   },
   "kb_x": {
    "value": 154.5,
    "src": "given",
    "note": "owner's layout, true scale"
   },
-  "kb_z": 44.25,
+  "kb_z": 45.81097098314618,
   "ks_x": {
    "value": 208.3,
    "src": "given",
@@ -309,22 +325,36 @@
    "note": "bushing past the panel"
   },
   "shaft_out": {
-   "value": 9.0,
+   "value": 11.0,
    "src": "chosen",
-   "note": "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"
+   "note": "PEC11R-4215F cut 3 mm: 12 above the body top, less the 1 mm panel"
   },
-  "logo_w": {
-   "value": 40.0,
+  "logo_p": {
+   "value": 1.295,
    "src": "given",
-   "note": "owner: flacmn bottom right"
+   "note": "owner: mn 18 mm wide"
   },
-  "logo_h": 11.54090215347086,
+  "logo_dot": 1.1655,
+  "logo_w": 18.000500000000002,
+  "logo_h": 7.640499999999999,
   "logo_x1": 233.0,
   "logo_z0": 8.0,
   "paint_t": {
    "value": 0.05,
    "src": "estimated",
    "note": "paint film"
+  },
+  "knurl_n": {
+   "value": 180.0,
+   "src": "chosen"
+  },
+  "knurl_d": {
+   "value": 0.25,
+   "src": "chosen"
+  },
+  "cap_cham": {
+   "value": 1.0,
+   "src": "chosen"
   },
   "feet_h": {
    "value": 6.0,
@@ -334,7 +364,12 @@
   "feet_d": 10.0,
   "foot_y": 25.0,
   "soc_x": 205.5,
-  "soc_y": 57.5
+  "soc_y": 57.5,
+  "sb90": {
+   "value": "rb + hinge*t",
+   "src": "chosen",
+   "note": "detail: the shell's sharp-fold setback (round 14 shell sp.sb90), needed by the tab-nut hole heights"
+  }
  },
  "panels": [
   {
@@ -364,7 +399,7 @@
      "d": "screw_hole",
      "at": [
       "(tx1) - t - gap",
-      "H - t - gap - (H - hinge*t - nut_v)"
+      "H - t - gap - (H - sb90 - nut_v)"
      ]
     },
     {
@@ -372,7 +407,7 @@
      "d": "screw_hole",
      "at": [
       "(tx2) - t - gap",
-      "H - t - gap - (H - hinge*t - nut_v)"
+      "H - t - gap - (H - sb90 - nut_v)"
      ]
     },
     {
@@ -380,7 +415,7 @@
      "d": "screw_hole",
      "at": [
       "(bx1) - t - gap",
-      "H - t - gap - (hinge*t + nut_v)"
+      "H - t - gap - (sb90 + nut_v)"
      ]
     },
     {
@@ -388,7 +423,7 @@
      "d": "screw_hole",
      "at": [
       "(bx2) - t - gap",
-      "H - t - gap - (hinge*t + nut_v)"
+      "H - t - gap - (sb90 + nut_v)"
      ]
     },
     {
@@ -468,7 +503,10 @@
    "bridge": 1.5,
    "end_clearance": 2.0,
    "hinge": "hinge",
-   "allowance": "allow"
+   "allowance": "allow",
+   "radius": "rb",
+   "rows": 1,
+   "row_pitch": 0.0
   }
  },
  "hardware": []

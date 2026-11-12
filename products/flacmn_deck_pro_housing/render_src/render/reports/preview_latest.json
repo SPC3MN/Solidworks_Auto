@@ -1,7 +1,7 @@
 {
  "quality": "preview",
- "time": "20261111T230943",
- "settings_hash": "7df36a2c0286cd6d",
+ "time": "20261112T002318",
+ "settings_hash": "b149fb5abaef9b4b",
  "device": {
   "device": "GPU",
   "backend": "OPTIX",
@@ -12,7 +12,7 @@
  "blend": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/blender/deck_out.blend",
  "product_bbox_mm": [
   241.0,
-  112.5,
+  109.39,
   94.5
  ],
  "scenes": {
@@ -243,10 +243,10 @@
    "component": "knob_big",
    "label": "",
    "part": "knob_big",
-   "material": "aluminium_anodized",
-   "finish": null,
-   "color": "#2E2E33",
-   "roughness": 0.34,
+   "material": "aluminium_raw",
+   "finish": "machined",
+   "color": "#D6D8DA",
+   "roughness": 0.22,
    "source": "part setting",
    "confidence": "user/claude"
   },
@@ -254,10 +254,10 @@
    "component": "knob_small",
    "label": "",
    "part": "knob_small",
-   "material": "aluminium_anodized",
+   "material": "polycarbonate",
    "finish": null,
-   "color": "#2E2E33",
-   "roughness": 0.34,
+   "color": "#4357AD",
+   "roughness": 0.25,
    "source": "part setting",
    "confidence": "user/claude"
   },
@@ -554,7 +554,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/hero.png",
-   "seconds": 7.6,
+   "seconds": 10.1,
    "resolution": [
     800,
     800
@@ -574,20 +574,20 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     0.085,
+     0.087,
      0.94
     ],
     "frame_y": [
-     0.185,
+     0.186,
      0.747
     ],
-    "bbox_fill": 0.48,
+    "bbox_fill": 0.479,
     "cropped": false
    },
    "image": {
-    "mean": 172.1,
+    "mean": 169.5,
     "clipped_pct": 0.0,
-    "crushed_pct": 0.0
+    "crushed_pct": 0.14
    }
   },
   {
@@ -595,7 +595,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/low_angle.png",
-   "seconds": 5.7,
+   "seconds": 6.9,
    "resolution": [
     800,
     800
@@ -615,20 +615,20 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     0.12,
+     0.122,
      0.88
     ],
     "frame_y": [
-     0.297,
-     0.636
+     0.298,
+     0.637
     ],
-    "bbox_fill": 0.258,
+    "bbox_fill": 0.257,
     "cropped": false
    },
    "image": {
-    "mean": 159.6,
+    "mean": 166.5,
     "clipped_pct": 0.0,
-    "crushed_pct": 0.09
+    "crushed_pct": 0.11
    }
   },
   {
@@ -636,7 +636,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/front.png",
-   "seconds": 3.5,
+   "seconds": 3.6,
    "resolution": [
     800,
     450
@@ -658,16 +658,16 @@
      0.94
     ],
     "frame_y": [
-     0.0,
+     -0.0,
      0.613
     ],
     "bbox_fill": 0.54,
     "cropped": false
    },
    "image": {
-    "mean": 116.5,
+    "mean": 122.1,
     "clipped_pct": 0.0,
-    "crushed_pct": 4.54
+    "crushed_pct": 6.93
    }
   },
   {
@@ -675,7 +675,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/side.png",
-   "seconds": 5.7,
+   "seconds": 6.1,
    "resolution": [
     800,
     800
@@ -698,13 +698,13 @@
     ],
     "frame_y": [
      0.0,
-     0.588
+     0.605
     ],
-    "bbox_fill": 0.412,
+    "bbox_fill": 0.423,
     "cropped": false
    },
    "image": {
-    "mean": 161.0,
+    "mean": 162.9,
     "clipped_pct": 0.0,
     "crushed_pct": 0.01
    }
@@ -714,7 +714,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/top.png",
-   "seconds": 5.4,
+   "seconds": 6.4,
    "resolution": [
     800,
     800
@@ -736,16 +736,16 @@
      0.92
     ],
     "frame_y": [
-     0.304,
-     0.696
+     0.309,
+     0.691
     ],
-    "bbox_fill": 0.329,
+    "bbox_fill": 0.32,
     "cropped": false
    },
    "image": {
-    "mean": 191.6,
+    "mean": 192.3,
     "clipped_pct": 0.0,
-    "crushed_pct": 0.01
+    "crushed_pct": 0.0
    }
   },
   {
@@ -753,7 +753,7 @@
    "scene": "studio",
    "category": "studio",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/studio/rear.png",
-   "seconds": 5.8,
+   "seconds": 6.6,
    "resolution": [
     800,
     800
@@ -773,20 +773,20 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     0.086,
+     0.087,
      0.94
     ],
     "frame_y": [
      0.195,
      0.738
     ],
-    "bbox_fill": 0.464,
+    "bbox_fill": 0.463,
     "cropped": false
    },
    "image": {
-    "mean": 189.1,
+    "mean": 189.8,
     "clipped_pct": 0.0,
-    "crushed_pct": 0.52
+    "crushed_pct": 0.59
    }
   },
   {
@@ -794,7 +794,7 @@
    "scene": "studio",
    "category": "details",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/details/detail.png",
-   "seconds": 6.5,
+   "seconds": 8.0,
    "resolution": [
     800,
     800
@@ -814,20 +814,20 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     -0.869,
-     1.087
+     -0.758,
+     1.076
     ],
     "frame_y": [
-     -0.104,
-     0.952
+     -0.089,
+     0.911
     ],
-    "bbox_fill": 0.952,
+    "bbox_fill": 0.911,
     "cropped": true
    },
    "image": {
-    "mean": 131.5,
-    "clipped_pct": 2.0,
-    "crushed_pct": 0.61
+    "mean": 133.5,
+    "clipped_pct": 1.48,
+    "crushed_pct": 12.21
    }
   },
   {
@@ -835,7 +835,7 @@
    "scene": "technical",
    "category": "exploded",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/exploded/exploded.png",
-   "seconds": 6.5,
+   "seconds": 7.8,
    "resolution": [
     800,
     800
@@ -855,18 +855,18 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     0.159,
-     0.862
+     0.218,
+     0.797
     ],
     "frame_y": [
      0.06,
-     0.861
+     0.884
     ],
-    "bbox_fill": 0.563,
+    "bbox_fill": 0.477,
     "cropped": false
    },
    "image": {
-    "mean": 177.5,
+    "mean": 183.4,
     "clipped_pct": 0.0,
     "crushed_pct": 0.0
    }
@@ -876,7 +876,7 @@
    "scene": "technical",
    "category": "technical",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/technical/xray.png",
-   "seconds": 8.0,
+   "seconds": 10.3,
    "resolution": [
     800,
     800
@@ -900,18 +900,18 @@
    },
    "framing": {
     "frame_x": [
-     0.085,
+     0.087,
      0.94
     ],
     "frame_y": [
-     0.185,
+     0.186,
      0.747
     ],
-    "bbox_fill": 0.48,
+    "bbox_fill": 0.479,
     "cropped": false
    },
    "image": {
-    "mean": 179.1,
+    "mean": 180.8,
     "clipped_pct": 0.0,
     "crushed_pct": 0.0
    }
@@ -921,7 +921,7 @@
    "scene": "studio",
    "category": "details",
    "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/details/logo.png",
-   "seconds": 4.9,
+   "seconds": 6.6,
    "resolution": [
     800,
     450
@@ -941,20 +941,61 @@
    "overrides": {},
    "framing": {
     "frame_x": [
-     -3.45,
-     1.019
+     -9.296,
+     1.243
     ],
     "frame_y": [
-     -0.139,
-     2.977
+     -0.855,
+     6.492
     ],
     "bbox_fill": 1,
     "cropped": true
    },
    "image": {
-    "mean": 129.6,
+    "mean": 108.8,
     "clipped_pct": 0.0,
-    "crushed_pct": 0.35
+    "crushed_pct": 0.0
+   }
+  },
+  {
+   "name": "knobs",
+   "scene": "studio",
+   "category": "details",
+   "file": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/details/knobs.png",
+   "seconds": 8.5,
+   "resolution": [
+    800,
+    800
+   ],
+   "camera": {
+    "type": "PERSP",
+    "focal_mm": 100,
+    "az": -30,
+    "el": 25,
+    "margin": 0.05,
+    "target": "component:knob_big",
+    "dof": {
+     "fstop": 22
+    }
+   },
+   "exploded": false,
+   "overrides": {},
+   "framing": {
+    "frame_x": [
+     -2.078,
+     1.411
+    ],
+    "frame_y": [
+     -0.812,
+     1.274
+    ],
+    "bbox_fill": 1,
+    "cropped": true
+   },
+   "image": {
+    "mean": 132.8,
+    "clipped_pct": 0.0,
+    "crushed_pct": 5.62
    }
   }
  ],
@@ -981,5 +1022,5 @@
  },
  "contact_sheet": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/previews/contact_sheet.png",
  "partial": false,
- "final_estimate_s": 1716
+ "final_estimate_s": 2330
 }

@@ -1,7 +1,7 @@
 {
  "name": "assembly",
- "description": "flacmn deck pro, round 8 as built: folded shell and flat back plate (sheet STEPs), DAC Pro, both PEC11R-4215F encoders (shafts cut to 10 mm), and the Raspberry Pi 5 model standing in for the Pi 4 (same 85 x 56 board, holes and port edges; USB/Ethernet stack order differs). Not modelled yet: the 5in DSI screen, knob caps, standoffs, screws.",
- "_frames": "World: x right, y back from the front face, z up. Sheet parts are stood up (sheet (x, y, z) -> (x, z, -y)): xform rows are the images of the part's x, y, z axes, then the translation. Pi and DAC turned 180 deg about z (USB/Ethernet to -x, sockets to the back). Encoders: shaft (+z) to -y, body top against the front face's inner side (y = t).",
+ "description": "flacmn deck pro, round 14 as built: folded shell (front leaning back 15 deg) and flat back plate, DAC Pro, both PEC11R-4215F encoders (shafts cut to 12 mm, for 10 mm caps), and the Raspberry Pi 5 model standing in for the Pi 4. Not modelled: the 5in DSI screen, knob caps, standoffs, screws.",
+ "_frames": "World: x right, y back from the front face, z up. Sheet parts are stood up (sheet (x, y, z) -> (x, z, -y)): xform rows are the images of the part's x, y, z axes, then the translation. Pi and DAC turned 180 deg about z (USB/Ethernet to -x, sockets to the back). Encoders: shaft (+z) to -y, body top against the front face's inner side (y = t). Round 14: the shell and encoders are laid out with the face upright (face frame) and turned -15 deg about x through y = z = 0.",
  "components": [
   {
    "part": "shell",
@@ -10,14 +10,14 @@
     0,
     0,
     0,
+    -0.258819,
+    -0.965926,
     0,
-    -1,
-    0,
-    1,
-    0,
+    0.965926,
+    -0.258819,
     0.5,
-    0,
-    88.0
+    23.614204,
+    88.12941
    ]
   },
   {
@@ -56,47 +56,47 @@
    "rot_z": 180
   },
   {
-   "part": "encoder_pec11r_15_cut",
+   "part": "encoder_pec11r_15_cut12",
    "label": "encoder_big",
    "xform": [
     1,
     0,
     0,
     0,
+    0.258819,
+    0.965926,
     0,
-    1,
-    0,
-    -1,
-    0,
+    -0.965926,
+    0.258819,
     154.5,
-    7.6,
-    44.25
+    19.197788,
+    42.282975
    ]
   },
   {
-   "part": "encoder_pec11r_15_cut",
+   "part": "encoder_pec11r_15_cut12",
    "label": "encoder_small",
    "xform": [
     1,
     0,
     0,
     0,
+    0.258819,
+    0.965926,
     0,
-    1,
-    0,
-    -1,
-    0,
+    -0.965926,
+    0.258819,
     208.3,
-    7.6,
-    56.9
+    22.06784,
+    52.994155
    ]
   }
  ],
  "expected": {
-  "_comment": "Envelope: the shell's 241 x 88.5 in x and z; in y from the cut encoder shaft tips to the back plate's outer face 100.5. Shaft tip: body top at y = 1, shaft cut to 10 above the body top -> y = -9, flush with the 8 mm caps' faces (1 mm off the front face + 8).",
+  "_comment": "Envelope: 241 x 88.5 (shell). Depth 100.331: from the shell's front bottom (the 105 deg fold's hinge corner sits at y = 0.169, the draft's shell bbox gives the same 0.17) to the back plate's outer face at 100.5. The encoder shafts end behind the face line (tips at face-frame y = -11 lean back to y > 0).",
   "bbox": [
    241.0,
-   109.5,
+   100.331,
    88.5
   ],
   "allowed_interference": [

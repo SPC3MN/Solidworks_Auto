@@ -1,0 +1,19 @@
+{
+ "settings_hash": "b149fb5abaef9b4b",
+ "approved_at": "2026-11-12T00:23:27",
+ "quote": "when youre done do the final renders",
+ "preview_report": "/home/alec/Desktop/Auto_Model/Solidworks_Auto/products/flacmn_deck_pro_housing/render_src/render/reports/preview_latest.json",
+ "shots": [
+  "hero",
+  "low_angle",
+  "front",
+  "side",
+  "top",
+  "rear",
+  "detail",
+  "exploded",
+  "xray",
+  "logo",
+  "knobs"
+ ]
+}

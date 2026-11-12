@@ -8,10 +8,15 @@ slots, and the uncut length at each end, are the bridges that bend.
     recipe = {"method": "slots", "slot_length": 8, "slot_width": 0.5, "bridge": 1.5, "end_clearance": 2}
 
 slot_width 0 means a single laser pass (a slit one kerf wide).
+
+A rounded fold (`radius` > 0, the inside bend radius) needs a band of material to bend: `rows` rows of
+slots `row_pitch` apart across the band, every other row shifted half a slot period so the bridges of
+one row sit against slots of the next. sheet_lib works out the band width from the radius and angle.
 """
 
 METHODS = ("slots",)
-DEFAULTS = {"slots": {"slot_width": 0.0, "end_clearance": 0.0, "hinge": 0.5, "allowance": 0.0, "relief_d": 0.0}}
+DEFAULTS = {"slots": {"slot_width": 0.0, "end_clearance": 0.0, "hinge": 0.5, "allowance": 0.0, "relief_d": 0.0,
+                      "radius": 0.0, "rows": 1, "row_pitch": 0.0}}
 REQUIRED = {"slots": ("slot_length", "bridge")}
 
 
@@ -29,6 +34,23 @@ def slots(length, r):
 
 def generate(length, recipe):
     return {"slots": slots}[recipe["method"]](length, recipe)
+
+
+def rows(length, recipe):
+    """[(offset across the fold line, [(centre s, slot length), ...]), ...]: one entry per row. Odd rows
+    are shifted half a period and keep only the slots that stay inside the end clearances."""
+    base, n = generate(length, recipe), int(recipe.get("rows", 1))
+    half, out = (recipe["slot_length"] + recipe["bridge"]) / 2, []
+    lo, hi = recipe["end_clearance"], length - recipe["end_clearance"]
+    for k in range(n):
+        off = (k - (n - 1) / 2) * recipe.get("row_pitch", 0.0)
+        if k % 2:
+            row = [(c + sgn * half, sl) for c, sl in base for sgn in ((-1, 1) if c == base[-1][0] else (-1,))]
+            row = [(c, sl) for c, sl in row if c - sl / 2 >= lo - 1e-9 and c + sl / 2 <= hi + 1e-9]
+        else:
+            row = list(base)
+        out.append((off, row))
+    return out
 
 
 def summary(length, recipe):

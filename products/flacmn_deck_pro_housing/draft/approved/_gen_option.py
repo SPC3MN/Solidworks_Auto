@@ -1,4 +1,4 @@
-"""Write round-12 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
+"""Write round-14 option A of flacmn_deck_pro_housing: params.json, option.json, shell.json, back.json.
 
 From the owner's layout (references/electronics_views/flacmn_deck_layout.svg, scaled to true size) and the
 round-5 push-back: Shell: the front face in the centre, with the top, bottom and both sides folding back from
@@ -27,10 +27,15 @@ params = {
     "corner": P(0.3, "chosen", "gap where the bottom meets the right side"),
     "gap": P(0.3, "chosen", "back plate edge to shell inner face"),
     "W": P(241.0, "given", LAY), "H": P(88.5, "given", LAY), "D": P(100.5, "given", LAY),
+    # round 14: the front face leans back; the face-mounted parts are laid out on the face ("face frame":
+    # as if the face stood upright, height Hf) and turned with it about the bottom front edge (y = z = 0)
+    "lean": P(15.0, "given", "owner: front face leans back 15 deg, base kept"),
+    "Hf": "H/cos(lean*pi/180)", "top_d": "D - H*tan(lean*pi/180)",
+    "rb": P(0.0, "given", "owner: back to the sharp perforated folds (R3 tried and dropped)"),
     # end panels and their flanges
     "pw": "W - 2*(t + gap)", "ph": "H - 2*(t + gap)",
     "tab_w": P(16.0, "chosen", "clinch nut + 3 mm each side"), "tab_h": P(12.0, "chosen", "nut centre 7 from the fold"),
-    "nut_v": 7.0,
+    "nut_v": P(7.0, "chosen", "nut centre 7 from the fold"),
     "tx1": 40.0, "tx2": "W - 40", "bx1": 40.0, "bx2": P(124.0, "chosen", "floor tab clear of the Pi's USB/Ethernet end"),
     "nut_hole": P(4.22, "given", "PEM CLS-M3-0 mounting hole"), "screw_hole": 3.4,
     "head_d": P(5.5, "given", "projects/grindmn_screw_m3x8"), "head_h": P(3.0, "given", "projects/grindmn_screw_m3x8"),
@@ -61,36 +66,65 @@ params = {
     "lens_w": P(120.7, "given"), "lens_h": P(77.2, "given"), "lens_t": P(5.4, "given"),
     "scr_pcb_w": P(121.0, "given"), "scr_pcb_h": P(76.0, "given"), "scr_d": P(13.0, "given", "lens to the back parts"),
     "va_w": P(109.0, "given"), "va_h": P(65.8, "given"), "va_l": P(5.85, "given"), "va_top": P(3.1, "given"),
-    "lens_x0": P(6.0, "given", LAY), "lens_z0": "(H - lens_h)/2",
+    "lens_x0": P(6.0, "given", LAY), "lens_z0": "(Hf - lens_h)/2",
     # encoders and knob caps
-    "kb_d": P(57.0, "given", LAY), "ks_d": P(35.0, "given", LAY), "knob_h": P(8.0, "given", "owner 2026-11-11: thinner caps, shafts cut"),
-    "kb_x": P(154.5, "given", LAY), "kb_z": "H/2", "ks_x": P(208.3, "given", LAY), "ks_z": P(56.9, "given", LAY),
+    "kb_d": P(57.0, "given", LAY), "ks_d": P(35.0, "given", LAY), "knob_h": P(10.0, "given", "owner 2026-11-11: make them 10 mm"),
+    "kb_x": P(154.5, "given", LAY), "kb_z": "Hf/2", "ks_x": P(208.3, "given", LAY), "ks_z": P(56.9, "given", LAY),
     "knob_gap": P(1.0, "chosen", "cap back face to the front face"),
     "enc_w": P(12.5, "estimated"), "enc_h": P(13.4, "estimated"), "enc_d": P(10.1, "estimated", "body 6.6 + pins"),
     "enc_hole": P(7.4, "given"), "enc_tab_r": P(7.5, "estimated", "anti-turn tab offset"), "enc_tab_d": 2.4,
-    "bush_out": P(6.0, "estimated", "bushing past the panel"), "shaft_out": P(9.0, "chosen", "PEC11R-4215F cut 5 mm: 10 above the body top, less the 1 mm panel"),
-    # flacmn logo painted on the front face (references/flacmn-charcoal.svg: 24.94 x 7.20 incl. the 0.18 stroke)
-    "logo_w": P(40.0, "given", "owner: flacmn bottom right"), "logo_h": "logo_w*7.195878/24.940435",
+    "bush_out": P(6.0, "estimated", "bushing past the panel"), "shaft_out": P(11.0, "chosen", "PEC11R-4215F cut 3 mm: 12 above the body top, less the 1 mm panel"),
+    # 'mn' dot logo painted on the front face (owner's 14 x 6 grid), bottom right
+    "logo_p": P(1.295, "given", "owner: mn 18 mm wide"), "logo_dot": "0.9*logo_p",
+    "logo_w": "13*logo_p + logo_dot", "logo_h": "5*logo_p + logo_dot",
     "logo_x1": "W - 8", "logo_z0": 8.0, "paint_t": P(0.05, "estimated", "paint film"),
+    # caps: large machined aluminium, fine straight knurl (180 grooves, 0.25 deep) and a 1 x 45 deg front chamfer;
+    # small smooth plastic #4357AD
+    "knurl_n": P(180, "chosen"), "knurl_d": P(0.25, "chosen"), "cap_cham": P(1.0, "chosen"),
     "feet_h": P(6.0, "chosen", "taller than the screw heads under the floor"), "feet_d": 10.0,
     "foot_y": 25.0,
     "soc_x": "px1 - 29", "soc_y": "py1 - 32",
 }
 
+LEAN = {"axis": "x", "deg": "-lean", "about": [0, 0, 0]}   # the face and everything on it lean back together
 rect = lambda w, h: [[0, 0], [w, 0], [w, h], [0, h]]
 recipes = {"fold": {"_comment": "Starting guess for 1.0 mm 5052-H32. UNTESTED until a coupon holds.",
                     "method": "slots", "slot_length": 8.0, "slot_width": 0.5, "bridge": 1.5,
-                    "end_clearance": 2.0, "hinge": "hinge", "allowance": "allow"}}
+                    "end_clearance": 2.0, "hinge": "hinge", "allowance": "allow",
+                    "radius": "rb", "rows": 1, "row_pitch": 0.0}}
 circ = lambda d, u, v: {"type": "circle", "d": d, "at": [u, v]}
 
-# ---- shell: the front face is the root, laid flat; the top, floor and sides fold back from it
-sp = {"fw": "W - 2*hinge*t", "fh": "H - 2*hinge*t", "inset": "(1 - hinge)*t + corner", "fl_l": "D - t - 2*hinge*t - allow", "lw": "fw - 2*inset"}
-sx = lambda x: f"({x}) - hinge*t"                     # world x -> sheet x of the front face
-sy = lambda z: f"H - hinge*t - ({z})"                 # world z -> sheet y of the front face
-fv = lambda y: f"({y}) - hinge*t"                     # world y -> v on a flap (distance from its fold)
+# ---- shell: the front face is the root, laid flat; the top, floor and sides fold back from it on R3 bends.
+# Setbacks (outer virtual corner to where the bend starts): (rb + t)*tan(bend/2); the top bends 90 - lean, the
+# floor 90 + lean, the sides 90. Face frame: the front upright (y back, z up), the top and floor rising at the lean.
+sp = {"sb90": "rb + hinge*t", "sbt": "(rb + hinge*t)*tan((90 - lean)*pi/360)", "sbf": "(rb + hinge*t)*tan((90 + lean)*pi/360)",
+      "ca": "cos(lean*pi/180)", "sa": "sin(lean*pi/180)", "ta": "tan(lean*pi/180)",
+      "fw": "W - 2*sb90", "fh": "Hf - sbt - sbf", "flare": "sb90 - t - gap",
+      "fl_top": "D - t - 0.1 - sb90 - (H*ta + sbt)", "fl_floor": "D - t - 0.1 - sb90 - sbf",
+      # side outline corners, face frame (y, z): on the front edge line y = sb90, and at the back plate
+      # rounded folds: the sides fit between the floor's top face and the top's underside (the top and floor
+      # flare over them); sharp folds: the sides run the full outside height and the top and floor sit between
+      **({"zC": "sb90*ta + t/ca + gap", "zF": "Hf + sb90*ta - t/ca - gap", "zbB": "t + gap", "ztB": "H - t - gap"}
+         if params["rb"]["value"] > 0 else
+         {"zC": "sb90*ta", "zF": "Hf + sb90*ta", "zbB": "0", "ztB": "H"}),
+      "yB": "D - t - gap",
+      "yD": "ca*yB - sa*zbB", "zD": "sa*yB + ca*zbB", "yE": "ca*yB - sa*ztB", "zE": "sa*yB + ca*ztB"}
+sx = lambda x: f"({x}) - sb90"                        # world x -> sheet x of the front face
+sy = lambda z: f"Hf - sbt - ({z})"                    # face-frame z -> sheet y of the front face
+lu = lambda z: f"Hf - sbt - ({z})"                    # face-frame z -> u on the left side (from the top)
+ru = lambda z: f"({z}) - sbf"                         # face-frame z -> u on the right side (from the bottom)
+sv = lambda y: f"({y}) - sb90"                        # face-frame y -> v on a side
 pi_holes = [(f"px1 - {hx}", f"py1 - {hy}") for hx in (3.5, 61.5) for hy in (3.5, 52.5)]
 feet = [(14, "foot_y"), ("W - 14", "foot_y"), (14, "D - foot_y"), ("W - 14", "D - foot_y")]
 va_x0, va_z1 = "lens_x0 + va_l", "lens_z0 + lens_h - va_top"
+ROUND = params["rb"]["value"] > 0
+if ROUND:   # rounded folds: the top and floor flare out past their bends over the sides; far edge = edge 3
+    flared = lambda L: [[0, 0], ["fw", 0], ["fw + flare", 0.5], ["fw + flare", L], ["-flare", L], ["-flare", 0.5]]
+    far_edge, far_len, fu = 3, "fw + flare", lambda x: x
+else:       # sharp folds: the top and floor are inset between the full-height sides; far edge = edge 2
+    sp["inset"] = "(1 - hinge)*t + corner"
+    flared = lambda L: rect("fw - 2*inset", L)
+    far_edge, far_len, fu = 2, "fw - 2*inset", lambda x: f"({x}) - inset"
 shell = {
     "_comment": "flacmn deck pro shell: front face with the top, floor and sides folded back from it. Round 6.",
     "name": "shell", "material": "5052-H32_1.0", "manufacturing": "generic_untested", "dims": "outside",
@@ -101,24 +135,26 @@ shell = {
             circ("enc_hole", sx("kb_x"), sy("kb_z")), circ("enc_tab_d", sx("kb_x"), sy("kb_z + enc_tab_r")),
             circ("enc_hole", sx("ks_x"), sy("ks_z")), circ("enc_tab_d", sx("ks_x"), sy("ks_z + enc_tab_r")),
             ]},
-        {"id": "top", "name": "Top", "outline": rect("lw", "fl_l")},
-        {"id": "floor", "name": "Floor", "outline": rect("lw", "fl_l"), "features": [
-            *[circ(2.9, f"{sx(x)} - inset", fv(y)) for x, y in pi_holes]]},
-        {"id": "left", "name": "Left side", "outline": rect("fh", "fl_l")},
-        {"id": "right", "name": "Right side", "outline": rect("fh", "fl_l")},
+        # top and floor flare out past their bends to meet the sides (the corners above the bends stay open)
+        {"id": "top", "name": "Top", "outline": flared("fl_top")},
+        {"id": "floor", "name": "Floor", "outline": flared("fl_floor"), "features": [
+            *[circ(2.9, fu(sx(x)), f"({y}) - sbf") for x, y in pi_holes]]},
+        # sides: from the floor's top face to the top's underside, front edge to the back plate (face frame)
+        {"id": "left", "name": "Left side", "outline": [[0, 0], ["fh", 0], [lu("zC"), 0], [lu("zD"), sv("yD")], [lu("zE"), sv("yE")], [lu("zF"), 0]]},
+        {"id": "right", "name": "Right side", "outline": [[0, 0], ["fh", 0], [ru("zF"), 0], [ru("zE"), sv("yE")], [ru("zD"), sv("yD")], [ru("zC"), 0]]},
         *[{"id": tid, "name": "Back tab", "outline": rect("tab_w", "tab_h"), "features": [circ("nut_hole", "tab_w/2", "nut_v")]}
           for tid in ("tab_t1", "tab_t2", "tab_b1", "tab_b2")],
     ],
     "folds": [
-        {"id": "f_top", "parent": "front", "parent_edge": 0, "child": "top", "child_edge": 0, "angle": 90, "direction": "up", "sequence": 1, "recipe": "fold"},
-        {"id": "f_floor", "parent": "front", "parent_edge": 2, "child": "floor", "child_edge": 0, "angle": 90, "direction": "up", "sequence": 2, "recipe": "fold"},
+        {"id": "f_top", "parent": "front", "parent_edge": 0, "child": "top", "child_edge": 0, "angle": "90 - lean", "direction": "up", "sequence": 1, "recipe": "fold"},
+        {"id": "f_floor", "parent": "front", "parent_edge": 2, "child": "floor", "child_edge": 0, "angle": "90 + lean", "direction": "up", "sequence": 2, "recipe": "fold"},
         {"id": "f_left", "parent": "front", "parent_edge": 3, "child": "left", "child_edge": 0, "angle": 90, "direction": "up", "sequence": 3, "recipe": "fold"},
         {"id": "f_right", "parent": "front", "parent_edge": 1, "child": "right", "child_edge": 0, "angle": 90, "direction": "up", "sequence": 4, "recipe": "fold"},
-        # tabs on the far edge (edge 2 runs from u = lw back to 0): offset = lw - u_centre - tab_w/2
-        *[{"id": f"f_{tid}", "parent": par, "parent_edge": 2, "child": tid, "child_edge": 0, "angle": 90, "direction": "up",
-           "sequence": 0, "recipe": "fold", "offset": f"lw - ({uc}) - tab_w/2"}
-          for tid, par, uc in (("tab_t1", "top", f"fw - inset - {sx('tx1')} + 2*hinge*t"), ("tab_t2", "top", f"fw - inset - {sx('tx2')} + 2*hinge*t"),
-                               ("tab_b1", "floor", f"{sx('bx1')} - inset"), ("tab_b2", "floor", f"{sx('bx2')} - inset"))]],
+        # tabs on the far edge (it runs from the far end of the flap back to u = 0): offset = its length - u_centre - tab_w/2
+        *[{"id": f"f_{tid}", "parent": par, "parent_edge": far_edge, "child": tid, "child_edge": 0, "angle": 90, "direction": "up",
+           "sequence": 0, "recipe": "fold", "offset": f"{far_len} - ({uc}) - tab_w/2"}
+          for tid, par, uc in (("tab_t1", "top", fu(f"fw - ({sx('tx1')})")), ("tab_t2", "top", fu(f"fw - ({sx('tx2')})")),
+                               ("tab_b1", "floor", fu(sx("bx1"))), ("tab_b2", "floor", fu(sx("bx2"))))]],
     "recipes": recipes,
     "hardware": [{"name": "PEM CLS-M3-0 clinch nut (back tabs, pressed from inside)", "qty": 4}],
 }
@@ -126,7 +162,7 @@ shell = {
 # ---- back plate: flat, no folds; stood up behind the tabs. Sheet (x, y) = (x - t - gap, H - t - gap - z)
 bu = lambda x: f"({x}) - t - gap"
 bv = lambda z: f"H - t - gap - ({z})"
-tab_nuts = [("tx1", "H - hinge*t - nut_v"), ("tx2", "H - hinge*t - nut_v"), ("bx1", "hinge*t + nut_v"), ("bx2", "hinge*t + nut_v")]   # nut centres as folded (checked on the built shell)
+tab_nuts = [("tx1", "H - sb90 - nut_v"), ("tx2", "H - sb90 - nut_v"), ("bx1", "sb90 + nut_v"), ("bx2", "sb90 + nut_v")]   # nut centres as folded (checked on the built shell)
 back = {
     "_comment": "flacmn deck pro back plate: flat, no folds; 4 M3 x 8 from the back into the shell's tabs. Round 7.",
     "name": "back", "material": "5052-H32_1.0", "manufacturing": "generic_untested", "dims": "outside",
@@ -151,13 +187,14 @@ def encoder(x, z, d, pid, name):
         {"id": f"enc_{pid}", "name": f"PEC11R encoder, {name} (nut outside the panel)", "source": "library", "library": "encoder_pec11r", "bodies": [
             box("enc_w", "enc_d", "enc_h", x, "t + enc_d/2", f"{z} - enc_h/2"),
             cyl(7, "bush_out + t", "y", [x, "-bush_out", z]),
-            cyl(6, "knob_gap + knob_h - bush_out - 1", "y", [x, "-(knob_gap + knob_h - 1)", z])]},
-        {"id": f"knob_{pid}", "name": f"Knob cap, {name} (Ø{d} x 8, charcoal, counterbored over the nut, M3 set screw onto the D-flat)", "source": "buy", "bodies": [
-            cyl(d, "knob_h", "y", [x, "-(knob_gap + knob_h)", z])]}]
+            cyl(6, "knob_gap + knob_h - bush_out - 1", "y", [x, "-(knob_gap + knob_h - 1)", z])], "rot": LEAN},
+        {"id": f"knob_{pid}", "name": (f"Knob cap, {name} (Ø{d} x 10, machined aluminium, fine straight knurl, 1 mm front chamfer, counterbored over the nut, M3 set screw)" if pid == "big"
+          else f"Knob cap, {name} (Ø{d} x 10, smooth plastic #4357AD, counterbored over the nut, M3 set screw)"), "source": "buy", "bodies": [
+            cyl(d, "knob_h", "y", [x, "-(knob_gap + knob_h)", z])], "rot": LEAN}]
 
 parts = [
     {"id": "shell", "name": "Shell (front, top, floor, sides)", "source": "make", "process": "fold", "material": "5052-H32 1.0",
-     "sheet": "shell.json", "stand": True, "at": ["hinge*t", 0, "H - hinge*t"]},
+     "sheet": "shell.json", "stand": True, "at": ["sb90", 0, "Hf - sbt"], "rot": LEAN},
     {"id": "back", "name": "Back plate (flat, removable)", "source": "make", "process": "laser", "material": "5052-H32 1.0",
      "sheet": "back.json", "stand": True, "at": ["t + gap", "D - t", "H - t - gap"]},
     {"id": "pi4", "name": "Raspberry Pi 4 B", "source": "buy", "bodies": [
@@ -177,11 +214,11 @@ parts = [
         box(15, 15, "h_so", "soc_x", "soc_y", "t")]},
     {"id": "screen", "name": "Waveshare 5inch DSI LCD (VHB to the front panel)", "source": "buy", "bodies": [
         box("lens_w", "lens_t", "lens_h", "lens_x0 + lens_w/2", "t + lens_t/2", "lens_z0"),
-        box("scr_pcb_w", "scr_d - lens_t", "scr_pcb_h", "lens_x0 + lens_w/2", "t + lens_t + (scr_d - lens_t)/2", "(H - scr_pcb_h)/2")]},
+        box("scr_pcb_w", "scr_d - lens_t", "scr_pcb_h", "lens_x0 + lens_w/2", "t + lens_t + (scr_d - lens_t)/2", "(Hf - scr_pcb_h)/2")], "rot": LEAN},
     *encoder("kb_x", "kb_z", 57, "big", "large"),
     *encoder("ks_x", "ks_z", 35, "small", "small"),
-    {"id": "logo", "name": "flacmn logo, satin charcoal paint (artwork: references/flacmn-charcoal.svg; envelope shown)", "source": "buy",
-     "bodies": [box("logo_w", "paint_t", "logo_h", "logo_x1 - logo_w/2", "-paint_t/2", "logo_z0")]},
+    {"id": "logo", "name": "'mn' dot logo, satin charcoal paint (14 x 6 grid; envelope shown)", "source": "buy",
+     "bodies": [box("logo_w", "paint_t", "logo_h", "logo_x1 - logo_w/2", "-paint_t/2", "logo_z0")], "rot": LEAN},
     {"id": "feet", "name": "Rubber foot", "source": "buy",
      "bodies": [cyl("feet_d", "feet_h", "z", [0, 0, "-feet_h"])], "instances": [[x, y, 0] for x, y in feet]},
     {"id": "screw_back", "name": "ISO 4762 M3 x 8 (from the back)", "source": "library", "library": "grindmn_screw_m3x8", "fastener": True,
@@ -228,9 +265,9 @@ option = {
          "why": "USB-C and RCA openings keep a 3 mm web"},
         {"id": "tab_vs_pi", "lhs": "bx2 + tab_w/2 + 2", "op": "<=", "rhs": "px0 - jack_oh",
          "why": "Floor tab clear of the Pi"},
-        {"id": "top_tab_vs_jumpers", "lhs": "zht + 2.5 + jumper_h + wire_bend", "op": "<=", "rhs": "H - t - tab_h",
+        {"id": "top_tab_vs_jumpers", "lhs": "zht + 2.5 + jumper_h + wire_bend", "op": "<=", "rhs": "H - sb90 - tab_h",
          "why": "Encoder wires stay under the top tabs"},
-        {"id": "cords_above_tabs", "lhs": "t + tab_h + 1", "op": "<=", "rhs": "cord_z - eth_slot/2",
+        {"id": "cords_above_tabs", "lhs": "sb90 + tab_h + 1", "op": "<=", "rhs": "cord_z - eth_slot/2",
          "why": "Cord cut-outs clear the floor tabs"},
         {"id": "cords_apart", "lhs": "cord2_x - cord1_x - cord_l", "op": ">=", "rhs": 6, "why": "Webs between the cord cut-outs"},
         {"id": "cords_left_of_pi", "lhs": "cord3_x + cord_l/2 + 10", "op": "<=", "rhs": "px0 - jack_oh",
@@ -243,14 +280,14 @@ option = {
          "why": "Large cap leaves the viewing area clear"},
         {"id": "knobs_apart", "lhs": "kb_x + kb_d/2 + 3", "op": "<=", "rhs": "ks_x - ks_d/2", "why": "Caps 3 mm apart"},
         {"id": "small_knob_in_face", "lhs": "ks_x + ks_d/2", "op": "<=", "rhs": "W - 3", "why": "Small cap inside the face"},
-        {"id": "big_knob_in_face", "lhs": "kb_z + kb_d/2", "op": "<=", "rhs": "H - 3", "why": "Large cap inside the face height"},
-        {"id": "small_knob_top", "lhs": "ks_z + ks_d/2", "op": "<=", "rhs": "H - 3", "why": "Small cap inside the face height"},
+        {"id": "big_knob_in_face", "lhs": "kb_z + kb_d/2", "op": "<=", "rhs": "Hf - 3", "why": "Large cap inside the face height"},
+        {"id": "small_knob_top", "lhs": "ks_z + ks_d/2", "op": "<=", "rhs": "Hf - 3", "why": "Small cap inside the face height"},
         {"id": "enc_vs_screen", "lhs": "lens_x0 + scr_pcb_w + 1", "op": "<=", "rhs": "kb_x - enc_w/2",
          "why": "Large encoder body clears the screen board"},
         {"id": "enc_vs_pi", "lhs": "t + enc_d + 1", "op": "<=", "rhs": "py0", "why": "Encoders in front of the Pi"},
         {"id": "screen_vs_floor", "lhs": "lens_z0", "op": ">=", "rhs": "t + 1",
          "why": "Screen clears the floor"},
-        {"id": "screen_vs_top", "lhs": "lens_z0 + lens_h", "op": "<=", "rhs": "H - t - 1",
+        {"id": "screen_vs_top", "lhs": "lens_z0 + lens_h", "op": "<=", "rhs": "Hf - t - 1",
          "why": "Screen clears the top"},
         {"id": "screen_vs_side", "lhs": "lens_x0", "op": ">=", "rhs": "t + 1",
          "why": "Screen clears the left side"},
@@ -268,6 +305,7 @@ option = {
         {"id": "nut_catches", "lhs": "t + 2.5", "op": "<=", "rhs": 7, "why": "Encoder bushing takes the tab, washer and M7 nut"},
     ],
     "allowed_interference": [
+        ["clinch_nut", "shell", "nut clinched into the tab"],
         ["dac", "jumpers", "wires on the pass-through header"],
         ["pi4", "standoff", "standoffs under the PCB"],
         ["pad", "pi4", "pad compressed under the PCB"],
@@ -285,6 +323,6 @@ option = {
 }
 
 OUT.mkdir(parents=True, exist_ok=True)
-for name, data in (("params.json", params), ("option.json", option), ("shell.json", shell), ("back.json", back)):
+for name, data in (("params.json", {**params, **sp}), ("option.json", option), ("shell.json", shell), ("back.json", back)):
     (OUT / name).write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
 print("wrote", OUT)

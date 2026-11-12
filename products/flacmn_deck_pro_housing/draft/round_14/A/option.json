@@ -1,0 +1,972 @@
+{
+ "schema_version": "1.0",
+ "name": "Folded shell with back tabs + flat back plate",
+ "summary": "Round 7, from the owner's layout at true scale (241 x 88.5 x 100.5). One folded shell: the front face in the centre with the top, floor and both sides folded back from it, and two tabs folded in at the back of the top and two at the back of the floor (8 folds). A flat back plate (no folds) takes four ISO 4762 M3 x 8 from the back face into clinch nuts in the tabs. The 5in DSI screen is taped behind the front face; both encoders nut into it and the Ø57 x 8 and Ø35 x 8 caps sit proud on the shafts. The Pi + DAC sit on the floor at the back right; USB and Ethernet cords thread out through three cut-outs in the back plate.",
+ "architecture": {
+  "mechanism": "flat back plate screwed into the shell's tabs from behind; encoders nutted into the front face; Pi on standoffs on the floor; caps pushed on",
+  "layout": "screen left, knobs right on the front; Pi flat at the back right, sockets to the back, USB/Ethernet into the free space; cords out the back panel",
+  "load_path": "knobs -> front face -> shell -> feet -> shelf",
+  "process": "laser-cut flat; shell 8 hand folds on perforated lines (UNTESTED recipe); back plate flat; clinch nuts pressed"
+ },
+ "parts": [
+  {
+   "id": "shell",
+   "name": "Shell (front, top, floor, sides)",
+   "source": "make",
+   "process": "fold",
+   "material": "5052-H32 1.0",
+   "sheet": "shell.json",
+   "stand": true,
+   "at": [
+    "sb90",
+    0,
+    "Hf - sbt"
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "back",
+   "name": "Back plate (flat, removable)",
+   "source": "make",
+   "process": "laser",
+   "material": "5052-H32 1.0",
+   "sheet": "back.json",
+   "stand": true,
+   "at": [
+    "t + gap",
+    "D - t",
+    "H - t - gap"
+   ]
+  },
+  {
+   "id": "pi4",
+   "name": "Raspberry Pi 4 B",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "pcb_l",
+      "pcb_w",
+      "pcb_t"
+     ],
+     "at": [
+      "px0 + pcb_l/2",
+      "py0 + pcb_w/2",
+      "zp"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      "17.4 + jack_oh",
+      53,
+      16
+     ],
+     "at": [
+      "px0 - jack_oh + (17.4 + jack_oh)/2",
+      "py0 + 28",
+      "zpt"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dac",
+   "name": "Raspberry Pi DAC Pro",
+   "source": "library",
+   "library": "rpi_dac_pro",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "hat_l",
+      "hat_w",
+      "hat_t"
+     ],
+     "at": [
+      "px1 - hat_l/2",
+      "py1 - hat_w/2 + 0.25",
+      "zh"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      27.6,
+      14,
+      13
+     ],
+     "at": [
+      "px1 - 25.8",
+      "py1 - 7",
+      "zht"
+     ]
+    },
+    {
+     "type": "cyl",
+     "d": 8,
+     "h": "rca_len",
+     "axis": "y",
+     "at": [
+      "rca_x1",
+      "py1",
+      "rca_z"
+     ]
+    },
+    {
+     "type": "cyl",
+     "d": 8,
+     "h": "rca_len",
+     "axis": "y",
+     "at": [
+      "rca_x2",
+      "py1",
+      "rca_z"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      8,
+      12,
+      6
+     ],
+     "at": [
+      "jack_x",
+      "py1 - 6",
+      "zht"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jumpers",
+   "name": "Encoder wires on the pass-through header",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      51,
+      5,
+      "2.5 + jumper_h"
+     ],
+     "at": [
+      "px1 - 32.5",
+      "py0 + 3.5",
+      "zht"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "standoff",
+   "name": "M2.5 standoff 3 mm (Pi)",
+   "source": "buy",
+   "fastener": true,
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": 5,
+     "h": "h_so",
+     "axis": "z",
+     "at": [
+      0,
+      0,
+      "t"
+     ]
+    }
+   ],
+   "instances": [
+    [
+     "px1 - 3.5",
+     "py1 - 3.5",
+     0
+    ],
+    [
+     "px1 - 3.5",
+     "py1 - 52.5",
+     0
+    ],
+    [
+     "px1 - 61.5",
+     "py1 - 3.5",
+     0
+    ],
+    [
+     "px1 - 61.5",
+     "py1 - 52.5",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "pad",
+   "name": "Thermal pad 15 x 15 x 3 under the processor",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      15,
+      15,
+      "h_so"
+     ],
+     "at": [
+      "soc_x",
+      "soc_y",
+      "t"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "screen",
+   "name": "Waveshare 5inch DSI LCD (VHB to the front panel)",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "lens_w",
+      "lens_t",
+      "lens_h"
+     ],
+     "at": [
+      "lens_x0 + lens_w/2",
+      "t + lens_t/2",
+      "lens_z0"
+     ]
+    },
+    {
+     "type": "box",
+     "size": [
+      "scr_pcb_w",
+      "scr_d - lens_t",
+      "scr_pcb_h"
+     ],
+     "at": [
+      "lens_x0 + lens_w/2",
+      "t + lens_t + (scr_d - lens_t)/2",
+      "(Hf - scr_pcb_h)/2"
+     ]
+    }
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "enc_big",
+   "name": "PEC11R encoder, large (nut outside the panel)",
+   "source": "library",
+   "library": "encoder_pec11r",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "enc_w",
+      "enc_d",
+      "enc_h"
+     ],
+     "at": [
+      "kb_x",
+      "t + enc_d/2",
+      "kb_z - enc_h/2"
+     ]
+    },
+    {
+     "type": "cyl",
+     "d": 7,
+     "h": "bush_out + t",
+     "axis": "y",
+     "at": [
+      "kb_x",
+      "-bush_out",
+      "kb_z"
+     ]
+    },
+    {
+     "type": "cyl",
+     "d": 6,
+     "h": "knob_gap + knob_h - bush_out - 1",
+     "axis": "y",
+     "at": [
+      "kb_x",
+      "-(knob_gap + knob_h - 1)",
+      "kb_z"
+     ]
+    }
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "knob_big",
+   "name": "Knob cap, large (Ø57 x 10, machined aluminium, fine straight knurl, 1 mm front chamfer, counterbored over the nut, M3 set screw)",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": 57,
+     "h": "knob_h",
+     "axis": "y",
+     "at": [
+      "kb_x",
+      "-(knob_gap + knob_h)",
+      "kb_z"
+     ]
+    }
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "enc_small",
+   "name": "PEC11R encoder, small (nut outside the panel)",
+   "source": "library",
+   "library": "encoder_pec11r",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "enc_w",
+      "enc_d",
+      "enc_h"
+     ],
+     "at": [
+      "ks_x",
+      "t + enc_d/2",
+      "ks_z - enc_h/2"
+     ]
+    },
+    {
+     "type": "cyl",
+     "d": 7,
+     "h": "bush_out + t",
+     "axis": "y",
+     "at": [
+      "ks_x",
+      "-bush_out",
+      "ks_z"
+     ]
+    },
+    {
+     "type": "cyl",
+     "d": 6,
+     "h": "knob_gap + knob_h - bush_out - 1",
+     "axis": "y",
+     "at": [
+      "ks_x",
+      "-(knob_gap + knob_h - 1)",
+      "ks_z"
+     ]
+    }
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "knob_small",
+   "name": "Knob cap, small (Ø35 x 10, smooth plastic #4357AD, counterbored over the nut, M3 set screw)",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": 35,
+     "h": "knob_h",
+     "axis": "y",
+     "at": [
+      "ks_x",
+      "-(knob_gap + knob_h)",
+      "ks_z"
+     ]
+    }
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "logo",
+   "name": "'mn' dot logo, satin charcoal paint (14 x 6 grid; envelope shown)",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "box",
+     "size": [
+      "logo_w",
+      "paint_t",
+      "logo_h"
+     ],
+     "at": [
+      "logo_x1 - logo_w/2",
+      "-paint_t/2",
+      "logo_z0"
+     ]
+    }
+   ],
+   "rot": {
+    "axis": "x",
+    "deg": "-lean",
+    "about": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "feet",
+   "name": "Rubber foot",
+   "source": "buy",
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": "feet_d",
+     "h": "feet_h",
+     "axis": "z",
+     "at": [
+      0,
+      0,
+      "-feet_h"
+     ]
+    }
+   ],
+   "instances": [
+    [
+     14,
+     "foot_y",
+     0
+    ],
+    [
+     "W - 14",
+     "foot_y",
+     0
+    ],
+    [
+     14,
+     "D - foot_y",
+     0
+    ],
+    [
+     "W - 14",
+     "D - foot_y",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "screw_back",
+   "name": "ISO 4762 M3 x 8 (from the back)",
+   "source": "library",
+   "library": "grindmn_screw_m3x8",
+   "fastener": true,
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": "head_d",
+     "h": "head_h",
+     "axis": "y",
+     "at": [
+      0,
+      "D",
+      0
+     ]
+    }
+   ],
+   "instances": [
+    [
+     "tx1",
+     0,
+     "H - sb90 - nut_v"
+    ],
+    [
+     "tx2",
+     0,
+     "H - sb90 - nut_v"
+    ],
+    [
+     "bx1",
+     0,
+     "sb90 + nut_v"
+    ],
+    [
+     "bx2",
+     0,
+     "sb90 + nut_v"
+    ]
+   ]
+  },
+  {
+   "id": "clinch_nut",
+   "name": "PEM CLS-M3-0 clinch nut (back tabs)",
+   "source": "buy",
+   "fastener": true,
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": 6.4,
+     "h": 1.5,
+     "axis": "y",
+     "at": [
+      0,
+      "D - 2*t - 1.5",
+      0
+     ]
+    }
+   ],
+   "instances": [
+    [
+     "tx1",
+     0,
+     "H - sb90 - nut_v"
+    ],
+    [
+     "tx2",
+     0,
+     "H - sb90 - nut_v"
+    ],
+    [
+     "bx1",
+     0,
+     "sb90 + nut_v"
+    ],
+    [
+     "bx2",
+     0,
+     "sb90 + nut_v"
+    ]
+   ]
+  },
+  {
+   "id": "screw_pi",
+   "name": "M2.5 x 6 screw (Pi, from below)",
+   "source": "buy",
+   "fastener": true,
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": 4.5,
+     "h": 1.0,
+     "axis": "z",
+     "at": [
+      0,
+      0,
+      -1.0
+     ]
+    }
+   ],
+   "instances": [
+    [
+     "px1 - 3.5",
+     "py1 - 3.5",
+     0
+    ],
+    [
+     "px1 - 3.5",
+     "py1 - 52.5",
+     0
+    ],
+    [
+     "px1 - 61.5",
+     "py1 - 3.5",
+     0
+    ],
+    [
+     "px1 - 61.5",
+     "py1 - 52.5",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "screw_dac",
+   "name": "M2.5 screw (DAC Pro kit, on top)",
+   "source": "buy",
+   "fastener": true,
+   "bodies": [
+    {
+     "type": "cyl",
+     "d": 4.5,
+     "h": 1.5,
+     "axis": "z",
+     "at": [
+      0,
+      0,
+      "zht"
+     ]
+    }
+   ],
+   "instances": [
+    [
+     "px1 - 3.5",
+     "py1 - 3.5",
+     0
+    ],
+    [
+     "px1 - 3.5",
+     "py1 - 52.5",
+     0
+    ],
+    [
+     "px1 - 61.5",
+     "py1 - 3.5",
+     0
+    ],
+    [
+     "px1 - 61.5",
+     "py1 - 52.5",
+     0
+    ]
+   ]
+  }
+ ],
+ "load_path": [
+  "knob_big",
+  "shell",
+  "feet"
+ ],
+ "dims": [
+  {
+   "view": "top",
+   "dir": "h",
+   "a": 0,
+   "b": "W",
+   "at": "D + 10",
+   "param": "W"
+  },
+  {
+   "view": "top",
+   "dir": "v",
+   "a": 0,
+   "b": "D",
+   "at": "W + 10",
+   "param": "D"
+  },
+  {
+   "view": "section",
+   "dir": "v",
+   "a": 0,
+   "b": "H",
+   "at": "W + 10",
+   "param": "H"
+  },
+  {
+   "view": "top",
+   "dir": "h",
+   "a": "kb_x - kb_d/2",
+   "b": "kb_x + kb_d/2",
+   "at": -16,
+   "param": "kb_d"
+  },
+  {
+   "view": "top",
+   "dir": "h",
+   "a": "ks_x - ks_d/2",
+   "b": "ks_x + ks_d/2",
+   "at": -16,
+   "param": "ks_d"
+  }
+ ],
+ "fit": [
+  {
+   "id": "jumpers_roof",
+   "lhs": "zht + 2.5 + jumper_h + wire_bend",
+   "op": "<=",
+   "rhs": "H - 2*t - 1.5",
+   "why": "Encoder wires clear the top flange's nut"
+  },
+  {
+   "id": "rear_recessed",
+   "lhs": "py1 + rca_len",
+   "op": "<=",
+   "rhs": "D - t - 0.5",
+   "why": "RCA barrels stop inside the back panel"
+  },
+  {
+   "id": "rca_web",
+   "lhs": "rca_x1 - rca_x2 - rca_hole",
+   "op": ">=",
+   "rhs": 1.5,
+   "why": "Web between the RCA openings"
+  },
+  {
+   "id": "usbc_under_rca",
+   "lhs": "usbc_z + usbc_h/2 + 3",
+   "op": "<=",
+   "rhs": "rca_z - rca_hole/2",
+   "why": "USB-C and RCA openings keep a 3 mm web"
+  },
+  {
+   "id": "tab_vs_pi",
+   "lhs": "bx2 + tab_w/2 + 2",
+   "op": "<=",
+   "rhs": "px0 - jack_oh",
+   "why": "Floor tab clear of the Pi"
+  },
+  {
+   "id": "top_tab_vs_jumpers",
+   "lhs": "zht + 2.5 + jumper_h + wire_bend",
+   "op": "<=",
+   "rhs": "H - sb90 - tab_h",
+   "why": "Encoder wires stay under the top tabs"
+  },
+  {
+   "id": "cords_above_tabs",
+   "lhs": "sb90 + tab_h + 1",
+   "op": "<=",
+   "rhs": "cord_z - eth_slot/2",
+   "why": "Cord cut-outs clear the floor tabs"
+  },
+  {
+   "id": "cords_apart",
+   "lhs": "cord2_x - cord1_x - cord_l",
+   "op": ">=",
+   "rhs": 6,
+   "why": "Webs between the cord cut-outs"
+  },
+  {
+   "id": "cords_left_of_pi",
+   "lhs": "cord3_x + cord_l/2 + 10",
+   "op": "<=",
+   "rhs": "px0 - jack_oh",
+   "why": "Cord cut-outs in the free space, clear of the Pi"
+  },
+  {
+   "id": "sd_vs_wall",
+   "lhs": "px1 + sd_oh + 1",
+   "op": "<=",
+   "rhs": "W - t",
+   "why": "microSD clears the right side"
+  },
+  {
+   "id": "rca_vs_plate",
+   "lhs": "py1 + rca_len",
+   "op": "<=",
+   "rhs": "D - t",
+   "why": "RCA barrels stop at the back plate"
+  },
+  {
+   "id": "va_vs_knob",
+   "lhs": "lens_x0 + va_l + va_w + 1",
+   "op": "<=",
+   "rhs": "kb_x - kb_d/2",
+   "why": "Large cap leaves the viewing area clear"
+  },
+  {
+   "id": "knobs_apart",
+   "lhs": "kb_x + kb_d/2 + 3",
+   "op": "<=",
+   "rhs": "ks_x - ks_d/2",
+   "why": "Caps 3 mm apart"
+  },
+  {
+   "id": "small_knob_in_face",
+   "lhs": "ks_x + ks_d/2",
+   "op": "<=",
+   "rhs": "W - 3",
+   "why": "Small cap inside the face"
+  },
+  {
+   "id": "big_knob_in_face",
+   "lhs": "kb_z + kb_d/2",
+   "op": "<=",
+   "rhs": "Hf - 3",
+   "why": "Large cap inside the face height"
+  },
+  {
+   "id": "small_knob_top",
+   "lhs": "ks_z + ks_d/2",
+   "op": "<=",
+   "rhs": "Hf - 3",
+   "why": "Small cap inside the face height"
+  },
+  {
+   "id": "enc_vs_screen",
+   "lhs": "lens_x0 + scr_pcb_w + 1",
+   "op": "<=",
+   "rhs": "kb_x - enc_w/2",
+   "why": "Large encoder body clears the screen board"
+  },
+  {
+   "id": "enc_vs_pi",
+   "lhs": "t + enc_d + 1",
+   "op": "<=",
+   "rhs": "py0",
+   "why": "Encoders in front of the Pi"
+  },
+  {
+   "id": "screen_vs_floor",
+   "lhs": "lens_z0",
+   "op": ">=",
+   "rhs": "t + 1",
+   "why": "Screen clears the floor"
+  },
+  {
+   "id": "screen_vs_top",
+   "lhs": "lens_z0 + lens_h",
+   "op": "<=",
+   "rhs": "Hf - t - 1",
+   "why": "Screen clears the top"
+  },
+  {
+   "id": "screen_vs_side",
+   "lhs": "lens_x0",
+   "op": ">=",
+   "rhs": "t + 1",
+   "why": "Screen clears the left side"
+  },
+  {
+   "id": "feet_vs_heads",
+   "lhs": "head_h + 1",
+   "op": "<=",
+   "rhs": "feet_h",
+   "why": "Feet stand taller than the screw heads"
+  },
+  {
+   "id": "shaft_in_cap",
+   "lhs": "shaft_out",
+   "op": "<=",
+   "rhs": "knob_gap + knob_h",
+   "why": "15 mm shaft ends at or inside the cap face"
+  },
+  {
+   "id": "shaft_engages",
+   "lhs": "knob_gap + knob_h - shaft_out",
+   "op": "<=",
+   "rhs": 1,
+   "why": "Cap face within 1 mm of the shaft tip (full engagement)"
+  },
+  {
+   "id": "shaft_grip",
+   "lhs": "shaft_out - bush_out",
+   "op": ">=",
+   "rhs": 3,
+   "why": "Cap grips at least 3 mm of shaft past the bushing (with an M3 set screw onto the D-flat)"
+  },
+  {
+   "id": "logo_vs_knob",
+   "lhs": "logo_z0 + logo_h + 2",
+   "op": "<=",
+   "rhs": "ks_z - ks_d/2",
+   "why": "Logo clear below the small cap"
+  },
+  {
+   "id": "logo_vs_big_knob",
+   "lhs": "kb_x + kb_d/2 + 2",
+   "op": "<=",
+   "rhs": "logo_x1 - logo_w",
+   "why": "Logo clear of the large cap"
+  },
+  {
+   "id": "nut_catches",
+   "lhs": "t + 2.5",
+   "op": "<=",
+   "rhs": 7,
+   "why": "Encoder bushing takes the tab, washer and M7 nut"
+  }
+ ],
+ "allowed_interference": [
+  [
+   "clinch_nut",
+   "shell",
+   "nut clinched into the tab"
+  ],
+  [
+   "dac",
+   "jumpers",
+   "wires on the pass-through header"
+  ],
+  [
+   "pi4",
+   "standoff",
+   "standoffs under the PCB"
+  ],
+  [
+   "pad",
+   "pi4",
+   "pad compressed under the PCB"
+  ],
+  [
+   "pad",
+   "shell",
+   "pad compressed on the floor"
+  ],
+  [
+   "standoff",
+   "shell",
+   "standoffs on the floor"
+  ],
+  [
+   "enc_big",
+   "shell",
+   "bushing through the Ø7.4 hole"
+  ],
+  [
+   "enc_small",
+   "shell",
+   "bushing through the Ø7.4 hole"
+  ],
+  [
+   "enc_big",
+   "knob_big",
+   "shaft and nut in the cap's counterbore"
+  ],
+  [
+   "enc_small",
+   "knob_small",
+   "shaft and nut in the cap's counterbore"
+  ],
+  [
+   "screw_pi",
+   "shell",
+   "screw head under the floor"
+  ]
+ ],
+ "costs_vs_A": [],
+ "from_inspiration": [],
+ "section_y": "(py0 + py1)/2"
+}
